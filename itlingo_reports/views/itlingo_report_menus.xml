@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="itlingo_menu_reports"
+              name="Reports"
+              parent="itlingo_organizations.itlingo_menu_root"
+              sequence="60"/>
+
+    <menuitem id="itlingo_menu_burndown"
+              name="Burndown Chart"
+              parent="itlingo_menu_reports"
+              action="itlingo_burndown_report_action"
+              sequence="10"/>
+
+    <menuitem id="itlingo_menu_velocity"
+              name="Velocity Chart"
+              parent="itlingo_menu_reports"
+              action="itlingo_velocity_report_action"
+              sequence="20"/>
+
+    <menuitem id="itlingo_menu_export_backlog"
+              name="Export Backlog"
+              parent="itlingo_menu_reports"
+              action="backlog_export_wizard_action"
+              sequence="30"/>
+
+    <menuitem id="itlingo_menu_import_backlog"
+              name="Import Backlog"
+              parent="itlingo_menu_reports"
+              action="backlog_import_wizard_action"
+              sequence="40"/>
+
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Add document stat button to project form -->
+    <record id="project_project_view_form_inherit_docs" model="ir.ui.view">
+        <field name="name">project.project.form.inherit.itlingo.docs</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" icon="fa-file-text-o"
+                        name="%(itlingo_document_action)d"
+                        type="action"
+                        context="{'default_project_id': id, 'search_default_project_id': id}">
+                    <field name="document_count" widget="statinfo" string="Documents"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

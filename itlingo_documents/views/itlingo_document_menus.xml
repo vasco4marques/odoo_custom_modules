@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="itlingo_menu_documents"
+              name="Documents"
+              parent="itlingo_organizations.itlingo_menu_root"
+              sequence="40"/>
+
+    <menuitem id="itlingo_menu_documents_list"
+              name="All Documents"
+              parent="itlingo_menu_documents"
+              action="itlingo_document_action"
+              sequence="10"/>
+
+    <menuitem id="itlingo_menu_libraries"
+              name="Libraries"
+              parent="itlingo_menu_documents"
+              action="itlingo_library_action"
+              sequence="20"/>
+
+    <!-- Configuration sub-menu -->
+    <menuitem id="itlingo_menu_documents_config"
+              name="Configuration"
+              parent="itlingo_menu_documents"
+              sequence="90"/>
+
+    <menuitem id="itlingo_menu_document_types"
+              name="Document Types"
+              parent="itlingo_menu_documents_config"
+              action="itlingo_document_type_action"
+              sequence="10"/>
+
+    <menuitem id="itlingo_menu_document_templates"
+              name="Templates"
+              parent="itlingo_menu_documents_config"
+              action="itlingo_document_template_action"
+              sequence="20"/>
+
+</odoo>

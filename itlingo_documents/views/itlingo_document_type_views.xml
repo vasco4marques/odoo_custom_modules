@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="itlingo_document_type_view_tree" model="ir.ui.view">
+        <field name="name">itlingo.document.type.tree</field>
+        <field name="model">itlingo.document.type</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="short_name"/>
+                <field name="name"/>
+                <field name="type_code"/>
+                <field name="subtype"/>
+                <field name="extension_file"/>
+                <field name="template_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="itlingo_document_type_view_form" model="ir.ui.view">
+        <field name="name">itlingo.document.type.form</field>
+        <field name="model">itlingo.document.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="short_name"/>
+                            <field name="type_code"/>
+                        </group>
+                        <group>
+                            <field name="subtype"/>
+                            <field name="extension_file"/>
+                            <field name="template_id"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_document_type_action" model="ir.actions.act_window">
+        <field name="name">Document Types</field>
+        <field name="res_model">itlingo.document.type</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>

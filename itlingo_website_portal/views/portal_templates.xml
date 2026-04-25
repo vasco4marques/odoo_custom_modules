@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Breadcrumb entries -->
+    <template id="portal_layout" name="Portal layout: ITLingo menu entries"
+              inherit_id="portal.portal_breadcrumbs" priority="50">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'organizations'" class="breadcrumb-item active">
+                Organizations
+            </li>
+            <li t-if="page_name == 'organization_new'" class="breadcrumb-item">
+                <a href="/my/organizations">Organizations</a>
+            </li>
+            <li t-if="page_name == 'organization_new'" class="breadcrumb-item active">
+                New
+            </li>
+            <li t-if="organization_hub" class="breadcrumb-item">
+                <a href="/my/organizations">Organizations</a>
+            </li>
+            <li t-if="organization_hub" class="breadcrumb-item">
+                <a t-attf-href="/my/organizations/#{organization.id}"><t t-out="organization.name"/></a>
+            </li>
+            <li t-if="page_name == 'organization_stats'" class="breadcrumb-item active">Statistics</li>
+            <li t-if="page_name == 'organization_workspaces'" class="breadcrumb-item active">Workspaces</li>
+            <li t-if="page_name == 'organization_analytics'" class="breadcrumb-item active">Analytics</li>
+            <li t-if="page_name == 'organization_documentation'" class="breadcrumb-item active">Documentation</li>
+            <li t-if="page_name == 'organization_documentation_new'" class="breadcrumb-item">
+                <a t-attf-href="/my/organizations/#{organization.id}/documentation">Documentation</a>
+            </li>
+            <li t-if="page_name == 'organization_documentation_new'" class="breadcrumb-item active">New document</li>
+            <li t-if="page_name == 'organization_users'" class="breadcrumb-item active">Users</li>
+            <li t-if="page_name == 'organization_settings'" class="breadcrumb-item active">Settings</li>
+            <li t-if="page_name == 'workspaces'" class="breadcrumb-item active">
+                Workspaces
+            </li>
+            <li t-if="page_name == 'workspace_new'" class="breadcrumb-item">
+                <a href="/my/workspaces">Workspaces</a>
+            </li>
+            <li t-if="page_name == 'workspace_new'" class="breadcrumb-item active">
+                New
+            </li>
+            <li t-if="page_name == 'workspace_detail'" class="breadcrumb-item">
+                <a href="/my/workspaces">Workspaces</a>
+            </li>
+            <li t-if="page_name == 'workspace_detail'" class="breadcrumb-item active text-truncate">
+                <t t-out="project.name"/>
+            </li>
+            <li t-if="page_name == 'invitations'" class="breadcrumb-item active">
+                Invitations
+            </li>
+            <li t-if="page_name == 'sprints'" class="breadcrumb-item">
+                <a href="/my/workspaces">Workspaces</a>
+            </li>
+            <li t-if="page_name == 'sprints'" class="breadcrumb-item active">
+                Sprints
+            </li>
+            <li t-if="page_name == 'sprint_detail'" class="breadcrumb-item">
+                <a href="/my/workspaces">Workspaces</a>
+            </li>
+            <li t-if="page_name == 'sprint_detail'" class="breadcrumb-item">
+                <a t-attf-href="/my/workspaces/#{project.id}"><t t-out="project.name"/></a>
+            </li>
+            <li t-if="page_name == 'sprint_detail'" class="breadcrumb-item">
+                <a t-attf-href="/my/workspaces/#{project.id}/sprint-backlog">Sprint backlog</a>
+            </li>
+            <li t-if="page_name == 'sprint_detail'" class="breadcrumb-item active text-truncate">
+                <t t-out="sprint.name"/>
+            </li>
+            <li t-if="page_name == 'backlog'" class="breadcrumb-item">
+                <a href="/my/workspaces">Workspaces</a>
+            </li>
+            <li t-if="page_name == 'backlog'" class="breadcrumb-item active">
+                Backlog
+            </li>
+            <li t-if="page_name == 'backlog_item_detail'" class="breadcrumb-item">
+                <a href="/my/workspaces">Workspaces</a>
+            </li>
+            <li t-if="page_name == 'backlog_item_detail'" class="breadcrumb-item">
+                <a t-attf-href="/my/workspaces/#{project.id}"><t t-out="project.name"/></a>
+            </li>
+            <li t-if="page_name == 'backlog_item_detail'" class="breadcrumb-item">
+                <a t-attf-href="/my/workspaces/#{project.id}/product-backlog">Product backlog</a>
+            </li>
+            <li t-if="page_name == 'backlog_item_detail'" class="breadcrumb-item active text-truncate">
+                <t t-out="item.name"/>
+            </li>
+        </xpath>
+    </template>
+
+    <!-- Portal home cards -->
+    <template id="portal_my_home" name="ITLingo Portal Home"
+              customize_show="True" inherit_id="portal.portal_my_home" priority="50">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="before">
+            <t t-set="portal_service_category_enable" t-value="True"/>
+        </xpath>
+        <div id="portal_service_category" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="icon" t-value="'/web/static/img/company.svg'"/>
+                <t t-set="title">Organizations</t>
+                <t t-set="url" t-value="'/my/organizations'"/>
+                <t t-set="text">View and manage your organizations</t>
+                <t t-set="placeholder_count" t-value="'organization_count'"/>
+            </t>
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="icon" t-value="'/web/static/img/folder.svg'"/>
+                <t t-set="title">Workspaces</t>
+                <t t-set="url" t-value="'/my/workspaces'"/>
+                <t t-set="text">Access your project workspaces</t>
+                <t t-set="placeholder_count" t-value="'workspace_count'"/>
+            </t>
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="icon" t-value="'/web/static/img/mail.svg'"/>
+                <t t-set="title">Invitations</t>
+                <t t-set="url" t-value="'/my/invitations'"/>
+                <t t-set="text">Pending invitations to organizations and workspaces</t>
+                <t t-set="placeholder_count" t-value="'invitation_count'"/>
+            </t>
+        </div>
+    </template>
+
+</odoo>

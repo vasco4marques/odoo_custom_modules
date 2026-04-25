@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+    <record id="demo_notif_1" model="itlingo.notification">
+        <field name="user_id" ref="base.user_admin"/>
+        <field name="notification_type">system</field>
+        <field name="title">Welcome to ITLingo Cloud</field>
+        <field name="body">&lt;p&gt;Your ITLingo Cloud environment is ready.&lt;/p&gt;</field>
+    </record>
+
+    <record id="demo_notif_2" model="itlingo.notification">
+        <field name="user_id" ref="base.user_admin"/>
+        <field name="notification_type">invite</field>
+        <field name="title">New organization invitation</field>
+        <field name="body">&lt;p&gt;You've been invited to join &lt;b&gt;TechCorp&lt;/b&gt;.&lt;/p&gt;</field>
+        <field name="res_model">itlingo.organization</field>
+        <field name="res_id" ref="itlingo_organizations.demo_org_techcorp"/>
+    </record>
+
+</data>
+</odoo>

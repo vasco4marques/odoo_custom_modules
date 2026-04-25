@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+      Legacy cleanup previously used <delete> on website.menu / website.page.
+      ORM unlink() raises MissingError when view_id points to a deleted ir.ui.view.
+
+      All removal is done in hooks (pre_init_hook / post_init_hook) and post-migrate
+      via SQL — see itlingo_website_portal.hooks.run_website_remove_defaults_sql.
+    -->
+    <data noupdate="0">
+    </data>
+</odoo>

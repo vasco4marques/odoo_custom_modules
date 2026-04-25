@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Top-level menu -->
+    <menuitem id="itlingo_menu_root"
+              name="ITLingo"
+              web_icon="itlingo_organizations,static/description/icon.png"
+              sequence="100"/>
+
+    <!-- Organizations sub-menu -->
+    <menuitem id="itlingo_menu_organizations"
+              name="Organizations"
+              parent="itlingo_menu_root"
+              sequence="10"/>
+
+    <menuitem id="itlingo_menu_organizations_list"
+              name="Organizations"
+              parent="itlingo_menu_organizations"
+              action="itlingo_organization_action"
+              sequence="10"/>
+
+    <menuitem id="itlingo_menu_organization_roles"
+              name="Organization Roles"
+              parent="itlingo_menu_organizations"
+              action="itlingo_organization_role_action"
+              sequence="20"/>
+
+</odoo>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+    <record id="doc_type_rsl" model="itlingo.document.type">
+        <field name="type_code">rsl</field>
+        <field name="short_name">RSL</field>
+        <field name="name">Requirements Specification Language</field>
+        <field name="extension_file">.rsl</field>
+    </record>
+
+    <record id="doc_type_psl" model="itlingo.document.type">
+        <field name="type_code">psl</field>
+        <field name="short_name">PSL</field>
+        <field name="name">Process Specification Language</field>
+        <field name="extension_file">.psl</field>
+    </record>
+
+    <record id="doc_type_tsl" model="itlingo.document.type">
+        <field name="type_code">tsl</field>
+        <field name="short_name">TSL</field>
+        <field name="name">Test Specification Language</field>
+        <field name="extension_file">.tsl</field>
+    </record>
+
+    <record id="doc_type_report" model="itlingo.document.type">
+        <field name="type_code">report</field>
+        <field name="short_name">RPT</field>
+        <field name="name">Report</field>
+        <field name="extension_file">.pdf</field>
+    </record>
+
+    <record id="doc_type_specification" model="itlingo.document.type">
+        <field name="type_code">specification</field>
+        <field name="short_name">SPEC</field>
+        <field name="name">Specification Document</field>
+        <field name="extension_file">.docx</field>
+    </record>
+
+    <record id="doc_type_manual" model="itlingo.document.type">
+        <field name="type_code">manual</field>
+        <field name="short_name">MAN</field>
+        <field name="name">Manual</field>
+        <field name="extension_file">.pdf</field>
+    </record>
+
+</data>
+</odoo>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Sprint List -->
+    <template id="portal_sprints" name="Sprints">
+        <t t-call="portal.portal_layout">
+            <h3 class="mt-3">
+                Sprints -
+                <a t-attf-href="/my/workspaces/#{project.id}"><t t-out="project.name"/></a>
+            </h3>
+
+            <t t-if="not sprints">
+                <div class="alert alert-info" role="alert">
+                    No sprints have been created for this workspace yet.
+                </div>
+            </t>
+
+            <t t-if="sprints">
+                <table class="table table-sm mt-3">
+                    <thead>
+                        <tr>
+                            <th>Sprint</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th>Status</th>
+                            <th>Items</th>
+                            <th>Story Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="sprints" t-as="sprint">
+                            <td>
+                                <a t-attf-href="/my/sprints/#{project.id}/#{sprint.id}">
+                                    <t t-out="sprint.name"/>
+                                </a>
+                            </td>
+                            <td><t t-out="sprint.start_date or '-'"/></td>
+                            <td><t t-out="sprint.end_date or '-'"/></td>
+                            <td>
+                                <span t-attf-class="badge #{
+                                    sprint.state == 'executing' and 'bg-success' or
+                                    sprint.state == 'closed' and 'bg-secondary' or
+                                    sprint.state == 'canceled' and 'bg-danger' or 'bg-info'
+                                }">
+                                    <t t-out="sprint.state"/>
+                                </span>
+                            </td>
+                            <td><t t-out="sprint.backlog_item_count"/></td>
+                            <td>
+                                <t t-out="sprint.completed_story_points"/> / <t t-out="sprint.total_story_points"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </t>
+        </t>
+    </template>
+
+    <!-- Sprint Detail -->
+    <template id="portal_sprint_detail" name="Sprint Detail">
+        <t t-call="itlingo_website_portal.portal_workspace_hub_shell">
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="card-header d-flex align-items-center">
+                    <h3 class="mb-0 flex-grow-1"><t t-out="sprint.name"/></h3>
+                    <span t-attf-class="badge #{
+                        sprint.state == 'executing' and 'bg-success' or
+                        sprint.state == 'closed' and 'bg-secondary' or
+                        sprint.state == 'canceled' and 'bg-danger' or 'bg-info'
+                    } ms-2">
+                        <t t-out="sprint.state"/>
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <strong>Project:</strong>
+                                <a t-attf-href="/my/workspaces/#{project.id}">
+                                    <t t-out="project.name"/>
+                                </a>
+                            </p>
+                            <p><strong>Start:</strong> <t t-out="sprint.start_date or '-'"/></p>
+                            <p><strong>End:</strong> <t t-out="sprint.end_date or '-'"/></p>
+                            <p t-if="sprint.actual_end">
+                                <strong>Actual End:</strong> <t t-out="sprint.actual_end"/>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <strong>Story Points:</strong>
+                                <t t-out="sprint.completed_story_points"/> / <t t-out="sprint.total_story_points"/>
+                            </p>
+                            <p t-if="sprint.goal">
+                                <strong>Goal:</strong> <t t-out="sprint.goal"/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backlog Items in Sprint -->
+            <div class="card mt-3" t-if="backlog_items">
+                <div class="card-header">
+                    <h5 class="mb-0">Backlog Items (<t t-out="len(backlog_items)"/>)</h5>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table table-sm mb-0">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>SP</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="backlog_items" t-as="item">
+                                <td class="text-muted"><t t-out="item.identifier"/></td>
+                                <td><t t-out="item.name"/></td>
+                                <td><t t-out="item.item_type"/></td>
+                                <td><t t-out="item.story_points"/></td>
+                                <td><t t-out="item.priority"/></td>
+                                <td>
+                                    <span t-attf-class="badge #{
+                                        item.status == 'done' and 'bg-success' or
+                                        item.status == 'in_progress' and 'bg-primary' or
+                                        item.status == 'canceled' and 'bg-danger' or 'bg-secondary'
+                                    }">
+                                        <t t-out="item.status"/>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tasks in Sprint -->
+            <div class="card mt-3" t-if="tasks">
+                <div class="card-header">
+                    <h5 class="mb-0">Tasks (<t t-out="len(tasks)"/>)</h5>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table table-sm mb-0">
+                        <thead>
+                            <tr>
+                                <th>Task</th>
+                                <th>Assigned To</th>
+                                <th>Type</th>
+                                <th>State</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="tasks" t-as="task">
+                                <td><t t-out="task.name"/></td>
+                                <td>
+                                    <t t-foreach="task.user_ids" t-as="u">
+                                        <span class="badge bg-light text-dark me-1"><t t-out="u.name"/></span>
+                                    </t>
+                                </td>
+                                <td><t t-out="task.task_type or '-'"/></td>
+                                <td><t t-out="task.state"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

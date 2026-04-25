@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+    <record id="mail_template_itlingo_invitation" model="mail.template">
+        <field name="name">ITLingo: Invitation Notification</field>
+        <field name="model_id" ref="model_itlingo_notification"/>
+        <field name="subject">{{ object.title }}</field>
+        <field name="body_html"><![CDATA[
+<p>Hello {{ object.user_id.name }},</p>
+<p>{{ object.body }}</p>
+<p>Log in to your ITLingo portal to respond.</p>
+<p>Best regards,<br/>ITLingo Cloud</p>
+        ]]></field>
+        <field name="email_from">{{ (object.create_uid.email_formatted) }}</field>
+        <field name="email_to">{{ object.user_id.email }}</field>
+        <field name="auto_delete" eval="True"/>
+    </record>
+
+</data>
+</odoo>

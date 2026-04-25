@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="itlingo_document_view_tree" model="ir.ui.view">
+        <field name="name">itlingo.document.tree</field>
+        <field name="model">itlingo.document</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="document_type_id"/>
+                <field name="version"/>
+                <field name="project_id" optional="show"/>
+                <field name="organization_id" optional="show"/>
+                <field name="creator_id"/>
+                <field name="status" widget="badge"
+                       decoration-info="status == 'draft'"
+                       decoration-warning="status == 'in_review'"
+                       decoration-success="status == 'approved'"
+                       decoration-primary="status == 'published'"
+                       decoration-muted="status == 'archived'"/>
+                <field name="creation_date"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="itlingo_document_view_form" model="ir.ui.view">
+        <field name="name">itlingo.document.form</field>
+        <field name="model">itlingo.document</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_submit_review" string="Submit for Review"
+                            type="object" class="btn-primary"
+                            invisible="status != 'draft'"/>
+                    <button name="action_approve" string="Approve"
+                            type="object" class="btn-success"
+                            invisible="status != 'in_review'"/>
+                    <button name="action_publish" string="Publish"
+                            type="object" class="btn-primary"
+                            invisible="status != 'approved'"/>
+                    <button name="action_archive" string="Archive"
+                            type="object" class="btn-warning"
+                            invisible="status in ('draft', 'archived')"/>
+                    <button name="action_reset_draft" string="Reset to Draft"
+                            type="object"
+                            invisible="status == 'draft'"/>
+                    <field name="status" widget="statusbar"
+                           statusbar_visible="draft,in_review,approved,published"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Document Name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="document_type_id"/>
+                            <field name="template_id"/>
+                            <field name="version"/>
+                        </group>
+                        <group>
+                            <field name="project_id"/>
+                            <field name="organization_id"/>
+                            <field name="backlog_item_id"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="document_file" filename="file_name"/>
+                            <field name="file_name" invisible="1"/>
+                            <field name="file_size" string="Size"/>
+                        </group>
+                        <group>
+                            <field name="creator_id"/>
+                            <field name="creation_date"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Libraries" name="libraries">
+                            <field name="library_ids">
+                                <list editable="bottom">
+                                    <field name="library_id"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_document_view_kanban" model="ir.ui.view">
+        <field name="name">itlingo.document.kanban</field>
+        <field name="model">itlingo.document</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="status">
+                <templates>
+                    <t t-name="card">
+                        <field name="name" class="fw-bold"/>
+                        <div class="text-muted small mt-1">
+                            <field name="document_type_id"/> | v<field name="version"/>
+                        </div>
+                        <div class="mt-1" t-if="record.project_id.value">
+                            <field name="project_id"/>
+                        </div>
+                        <div class="mt-1 text-muted small">
+                            <field name="creator_id"/> - <field name="creation_date"/>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="itlingo_document_view_search" model="ir.ui.view">
+        <field name="name">itlingo.document.search</field>
+        <field name="model">itlingo.document</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="project_id"/>
+                <field name="organization_id"/>
+                <field name="document_type_id"/>
+                <filter name="draft" string="Draft"
+                        domain="[('status', '=', 'draft')]"/>
+                <filter name="in_review" string="In Review"
+                        domain="[('status', '=', 'in_review')]"/>
+                <filter name="approved" string="Approved"
+                        domain="[('status', '=', 'approved')]"/>
+                <filter name="published" string="Published"
+                        domain="[('status', '=', 'published')]"/>
+                <separator/>
+                <group name="group_by">
+                    <filter name="group_status" string="Status"
+                            context="{'group_by': 'status'}"/>
+                    <filter name="group_type" string="Type"
+                            context="{'group_by': 'document_type_id'}"/>
+                    <filter name="group_project" string="Project"
+                            context="{'group_by': 'project_id'}"/>
+                    <filter name="group_org" string="Organization"
+                            context="{'group_by': 'organization_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="itlingo_document_action" model="ir.actions.act_window">
+        <field name="name">Documents</field>
+        <field name="res_model">itlingo.document</field>
+        <field name="view_mode">list,kanban,form</field>
+        <field name="search_view_id" ref="itlingo_document_view_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Upload your first document
+            </p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="itlingo_action_workspace_projects" model="ir.actions.act_window">
+        <field name="name">Workspaces</field>
+        <field name="res_model">project.project</field>
+        <field name="view_mode">list,kanban,form</field>
+        <field name="search_view_id" ref="project.view_project_project_filter"/>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a workspace project and link it to an organization on the form.
+            </p>
+        </field>
+    </record>
+
+    <!-- Workspaces sub-menu under ITLingo root -->
+    <menuitem id="itlingo_menu_workspaces"
+              name="Workspaces"
+              parent="itlingo_organizations.itlingo_menu_root"
+              sequence="20"/>
+
+    <menuitem id="itlingo_menu_workspace_projects"
+              name="Workspaces"
+              parent="itlingo_menu_workspaces"
+              action="itlingo_action_workspace_projects"
+              sequence="5"/>
+
+    <menuitem id="itlingo_menu_workspace_roles"
+              name="Workspace Roles"
+              parent="itlingo_menu_workspaces"
+              action="itlingo_project_role_action"
+              sequence="10"/>
+
+</odoo>

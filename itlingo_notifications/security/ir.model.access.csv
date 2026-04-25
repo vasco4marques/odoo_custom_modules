@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_itlingo_notification_user,itlingo.notification.user,model_itlingo_notification,base.group_user,1,1,1,0
+access_itlingo_notification_portal,itlingo.notification.portal,model_itlingo_notification,base.group_portal,1,1,0,0
+access_itlingo_notification_admin,itlingo.notification.admin,model_itlingo_notification,itlingo_organizations.group_itlingo_admin,1,1,1,1
+access_itlingo_message_user,itlingo.message.user,model_itlingo_message,base.group_user,1,1,1,0
+access_itlingo_message_portal,itlingo.message.portal,model_itlingo_message,base.group_portal,1,1,1,0
+access_itlingo_message_admin,itlingo.message.admin,model_itlingo_message,itlingo_organizations.group_itlingo_admin,1,1,1,1

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="itlingo_menu_integration"
+              name="Integration"
+              parent="itlingo_organizations.itlingo_menu_root"
+              sequence="70"/>
+
+    <menuitem id="itlingo_menu_integration_tokens"
+              name="API Tokens"
+              parent="itlingo_menu_integration"
+              action="itlingo_integration_token_action"
+              sequence="10"/>
+
+    <menuitem id="itlingo_menu_integration_settings"
+              name="Settings"
+              parent="itlingo_menu_integration"
+              action="itlingo_integration_settings_open"
+              sequence="90"
+              groups="itlingo_organizations.group_itlingo_admin"/>
+
+</odoo>

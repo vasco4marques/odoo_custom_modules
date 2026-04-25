@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="itlingo_integration_settings_view_form" model="ir.ui.view">
+        <field name="name">itlingo.integration.settings.form</field>
+        <field name="model">itlingo.integration.settings</field>
+        <field name="arch" type="xml">
+            <form create="false" delete="false" duplicate="false">
+                <sheet>
+                    <group>
+                        <group string="Security">
+                            <field name="encryption_key" password="True"/>
+                        </group>
+                        <group string="ITOI Connection">
+                            <field name="itoi_url"/>
+                            <field name="api_base_url"/>
+                            <field name="token_expiry_hours"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_integration_settings_open" model="ir.actions.server">
+        <field name="name">Integration Settings</field>
+        <field name="model_id" ref="model_itlingo_integration_settings"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_settings()</field>
+    </record>
+
+</odoo>

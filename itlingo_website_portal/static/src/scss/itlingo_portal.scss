@@ -1,0 +1,113 @@
+/* ITLingo Portal custom styles — see /UI.md */
+
+:root {
+    --itlingo-portal-accent: #0d6efd;
+    --itlingo-portal-page-tint: #f4f6fb;
+    --itlingo-portal-radius: 0.75rem;
+    --itlingo-portal-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.06);
+}
+
+.itlingo-portal-page--tint {
+    background-color: var(--itlingo-portal-page-tint);
+}
+
+.itlingo-portal-filter-card {
+    box-shadow: var(--itlingo-portal-shadow);
+}
+
+.itlingo-org-hub {
+    max-width: 100%;
+
+    &__sidebar {
+        border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    &__nav-link {
+        color: #495057;
+        font-size: 0.9375rem;
+        padding: 0.5rem 0.75rem;
+
+        &:hover {
+            background-color: rgba(13, 110, 253, 0.06);
+            color: var(--itlingo-portal-accent);
+        }
+
+        &.active {
+            background-color: rgba(13, 110, 253, 0.12);
+            color: var(--itlingo-portal-accent);
+            font-weight: 600;
+        }
+    }
+
+    &__title {
+        font-size: 0.8125rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #212529;
+    }
+
+    &__main {
+        min-height: 12rem;
+    }
+}
+
+.itlingo-kpi-card {
+    box-shadow: var(--itlingo-portal-shadow);
+
+    &__label {
+        color: #6c757d;
+        font-size: 0.6875rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 0.35rem;
+    }
+
+    &__value {
+        font-size: 2.35rem;
+        font-weight: 700;
+        line-height: 1.1;
+        color: #212529;
+    }
+}
+
+@media (min-width: 1200px) {
+    .itlingo-kpi-card__value {
+        font-size: 2.75rem;
+    }
+}
+
+.o_portal_my_home {
+    .o_portal_category {
+        .o_portal_index_card {
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
+
+/* Sprint and backlog tables in portal */
+.itlingo-portal-table {
+    th {
+        white-space: nowrap;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+    }
+}
+
+.itlingo-ws-chart-canvas {
+    max-height: 260px;
+}
+
+/* Homepage hero styling */
+.s_cover {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}

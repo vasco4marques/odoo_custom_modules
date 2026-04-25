@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_itlingo_organization_member,itlingo.organization.member,model_itlingo_organization,group_itlingo_member,1,0,0,0
+access_itlingo_organization_manager,itlingo.organization.manager,model_itlingo_organization,group_itlingo_manager,1,1,1,1
+access_itlingo_organization_role_member,itlingo.organization.role.member,model_itlingo_organization_role,group_itlingo_member,1,0,0,0
+access_itlingo_organization_role_manager,itlingo.organization.role.manager,model_itlingo_organization_role,group_itlingo_manager,1,1,1,1
+access_itlingo_organization_portal,itlingo.organization.portal,model_itlingo_organization,base.group_portal,1,0,0,0
+access_itlingo_organization_role_portal,itlingo.organization.role.portal,model_itlingo_organization_role,base.group_portal,1,1,0,0

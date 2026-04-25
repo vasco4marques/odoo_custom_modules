@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="portal_organization_new" name="New Organization">
+        <t t-call="portal.portal_layout">
+            <div class="container py-3">
+                <h3>Create organization</h3>
+                <div t-if="error.get('name')" class="alert alert-danger" role="alert">
+                    <t t-out="error['name']"/>
+                </div>
+                <form action="/my/organizations/new" method="post" class="mt-3">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <div class="mb-3">
+                        <label class="form-label" for="org_name">Name</label>
+                        <input type="text" class="form-control" name="name" id="org_name" required="required"
+                               t-att-value="form.get('name') or ''"/>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="organization_type">Type</label>
+                        <select class="form-select" name="organization_type" id="organization_type">
+                            <option value="private">Private</option>
+                            <option value="public">Public</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="activity_type">Activity</label>
+                        <select class="form-select" name="activity_type" id="activity_type">
+                            <option value="it">IT</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="finance">Finance</option>
+                            <option value="education">Education</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                    <a href="/my/organizations" class="btn btn-link">Cancel</a>
+                </form>
+            </div>
+        </t>
+    </template>
+
+</odoo>

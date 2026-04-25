@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="itlingo_menu_notifications"
+              name="Notifications"
+              parent="itlingo_organizations.itlingo_menu_root"
+              sequence="50"/>
+
+    <menuitem id="itlingo_menu_notifications_list"
+              name="All Notifications"
+              parent="itlingo_menu_notifications"
+              action="itlingo_notification_action"
+              sequence="10"/>
+
+    <menuitem id="itlingo_menu_messages_list"
+              name="Messages"
+              parent="itlingo_menu_notifications"
+              action="itlingo_message_action"
+              sequence="20"/>
+
+</odoo>

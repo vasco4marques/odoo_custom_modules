@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_itlingo_project_role_member,itlingo.project.role.member,model_itlingo_project_role,itlingo_organizations.group_itlingo_member,1,0,0,0
+access_itlingo_project_role_manager,itlingo.project.role.manager,model_itlingo_project_role,itlingo_organizations.group_itlingo_manager,1,1,1,1
+access_itlingo_project_role_portal,itlingo.project.role.portal,model_itlingo_project_role,base.group_portal,1,1,0,0

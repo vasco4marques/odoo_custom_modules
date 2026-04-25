@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Portal home card -->
+    <template id="portal_my_home_documents"
+              name="Portal Documents"
+              inherit_id="portal.portal_my_home"
+              priority="60">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="icon" t-value="'/itlingo_documents/static/description/icon.png'"/>
+                <t t-set="title">Documents</t>
+                <t t-set="url" t-value="'/my/documents'"/>
+                <t t-set="text">Browse workspace documents</t>
+                <t t-set="count" t-value="document_count"/>
+                <t t-set="placeholder_count" t-value="'document_count'"/>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Document list -->
+    <template id="portal_my_documents" name="My Documents">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Documents</t>
+            </t>
+            <div class="mb-3">
+                <a href="/my/workspaces" class="btn btn-outline-primary">My workspaces</a>
+            </div>
+            <t t-if="not documents">
+                <div class="alert alert-info" role="alert">
+                    No documents found.
+                </div>
+            </t>
+            <div class="table-responsive">
+                <table class="table table-hover" t-if="documents">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Version</th>
+                                <th>Workspace</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="documents" t-as="doc">
+                                <tr>
+                                    <td>
+                                        <a t-attf-href="/my/documents/#{doc.id}">
+                                            <t t-out="doc.name"/>
+                                        </a>
+                                    </td>
+                                    <td><t t-out="doc.document_type_id.name or '-'"/></td>
+                                    <td><t t-out="doc.version"/></td>
+                                    <td><t t-out="doc.project_id.name or '-'"/></td>
+                                    <td>
+                                        <span t-attf-class="badge rounded-pill
+                                            #{'text-bg-secondary' if doc.status == 'draft'
+                                              else 'text-bg-warning' if doc.status == 'in_review'
+                                              else 'text-bg-success' if doc.status == 'approved'
+                                              else 'text-bg-primary' if doc.status == 'published'
+                                              else 'text-bg-dark'}">
+                                            <t t-out="doc.status"/>
+                                        </span>
+                                    </td>
+                                    <td><t t-out="doc.creation_date" t-options='{"widget": "date"}'/></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            <div t-if="documents and pager" class="o_portal_pager text-center">
+                    <t t-call="portal.pager"/>
+                </div>
+        </t>
+    </template>
+
+    <!-- Document detail -->
+    <template id="portal_document_detail" name="Document Detail">
+        <t t-call="portal.portal_layout">
+            <t t-set="o_portal_fullwidth_alert" groups="itlingo_organizations.group_itlingo_manager">
+                <t t-call="portal.portal_back_in_edit_mode">
+                    <t t-set="backend_url"
+                       t-value="'/odoo/itlingo-documents/%s' % document.id"/>
+                </t>
+            </t>
+
+            <div class="card mt-3">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3 class="mb-0"><t t-out="document.name"/></h3>
+                    <span t-attf-class="badge rounded-pill
+                        #{'text-bg-secondary' if document.status == 'draft'
+                          else 'text-bg-warning' if document.status == 'in_review'
+                          else 'text-bg-success' if document.status == 'approved'
+                          else 'text-bg-primary' if document.status == 'published'
+                          else 'text-bg-dark'}">
+                        <t t-out="document.status"/>
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <dl>
+                                <dt>Type</dt>
+                                <dd><t t-out="document.document_type_id.name or 'N/A'"/></dd>
+                                <dt>Version</dt>
+                                <dd><t t-out="document.version"/></dd>
+                                <dt>Creator</dt>
+                                <dd><t t-out="document.creator_id.name"/></dd>
+                                <dt>Created</dt>
+                                <dd><t t-out="document.creation_date" t-options='{"widget": "datetime"}'/></dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <dl>
+                                <dt>Workspace</dt>
+                                <dd><t t-out="document.project_id.name or 'N/A'"/></dd>
+                                <dt>Organization</dt>
+                                <dd><t t-out="document.organization_id.name or 'N/A'"/></dd>
+                                <dt>Backlog Item</dt>
+                                <dd><t t-out="document.backlog_item_id.display_name or 'N/A'"/></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div t-if="document.document_file" class="mt-3">
+                        <a t-attf-href="/web/content/#{document.id}?model=itlingo.document&amp;field=document_file&amp;filename_field=file_name&amp;download=true"
+                           class="btn btn-primary">
+                            <i class="fa fa-download"/> Download File
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <t t-call="portal.message_thread">
+                    <t t-set="object" t-value="document"/>
+                </t>
+            </div>
+        </t>
+    </template>
+
+</odoo>

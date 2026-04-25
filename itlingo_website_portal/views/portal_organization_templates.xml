@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Organization list -->
+    <template id="portal_my_organizations" name="My Organizations">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Organizations</t>
+            </t>
+            <div t-if="org_list_error == 'org_delete_has_workspaces'" class="alert alert-danger" role="alert">
+                You cannot delete an organization that still has workspaces. Remove or reassign workspaces first.
+            </div>
+            <div t-if="org_list_message == 'org_deleted'" class="alert alert-success" role="alert">
+                The organization was deleted.
+            </div>
+            <div t-if="is_platform_admin" class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                <a href="/my/organizations/new" class="btn btn-primary">New organization</a>
+            </div>
+            <div class="card itlingo-portal-filter-card shadow-sm border-0 rounded-3 mb-4">
+                <div class="card-body">
+                    <p class="text-muted small text-uppercase fw-semibold mb-3">Organization filters</p>
+                    <form method="get" action="/my/organizations" class="row g-3 align-items-end">
+                        <div class="col-md-4 col-lg-3">
+                            <label class="form-label small text-muted mb-1" for="org_filter_name">Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0"><i class="fa fa-search text-muted"/></span>
+                                <input type="search" class="form-control border-start-0 bg-light" id="org_filter_name"
+                                       name="name" t-att-value="filters.get('name') or ''" placeholder="Name"/>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <span class="form-label small text-muted d-block mb-1">Privacy</span>
+                            <div class="d-flex flex-wrap gap-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="privacy_private" value="1"
+                                           id="privacy_private" t-att-checked="filters.get('privacy_private')"/>
+                                    <label class="form-check-label" for="privacy_private">Private</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="privacy_public" value="1"
+                                           id="privacy_public" t-att-checked="filters.get('privacy_public')"/>
+                                    <label class="form-check-label" for="privacy_public">Public</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <span class="form-label small text-muted d-block mb-1">Type</span>
+                            <div class="d-flex flex-wrap gap-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="state_active" value="1"
+                                           id="state_active" t-att-checked="filters.get('state_active')"/>
+                                    <label class="form-check-label" for="state_active">Active</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="state_suspended" value="1"
+                                           id="state_suspended" t-att-checked="filters.get('state_suspended')"/>
+                                    <label class="form-check-label" for="state_suspended">Suspended</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 d-flex flex-wrap gap-2">
+                            <a href="/my/organizations" class="btn btn-outline-secondary">Clear filters</a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa fa-search me-1"/>Filter
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <t t-if="not organizations">
+                <div class="alert alert-warning" role="alert">
+                    You are not a member of any organization yet, or no organizations match your filters.
+                </div>
+            </t>
+            <t t-if="organizations" t-call="portal.portal_table">
+                <thead>
+                    <tr>
+                        <th>Organization</th>
+                        <th>Your Role</th>
+                        <th>Privacy</th>
+                        <th>Activity Type</th>
+                        <th>Status</th>
+                        <th class="text-end">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="organizations" t-as="org">
+                        <t t-set="role" t-value="role_map.get(org.id)"/>
+                        <td>
+                            <a t-attf-href="/my/organizations/#{org.id}">
+                                <t t-out="org.name"/>
+                            </a>
+                        </td>
+                        <td>
+                            <span t-if="role" class="badge bg-info text-dark">
+                                <t t-out="dict(role._fields['role'].selection).get(role.role)"/>
+                            </span>
+                        </td>
+                        <td>
+                            <span class="badge bg-secondary">
+                                <t t-out="dict(org._fields['organization_type'].selection).get(org.organization_type)"/>
+                            </span>
+                        </td>
+                        <td>
+                            <t t-out="dict(org._fields['activity_type'].selection).get(org.activity_type)"/>
+                        </td>
+                        <td>
+                            <span t-if="role" class="badge bg-success">
+                                <t t-out="dict(role._fields['state'].selection).get(role.state)"/>
+                            </span>
+                        </td>
+                        <td class="text-end text-nowrap">
+                            <a t-attf-href="/my/organizations/#{org.id}/documentation"
+                               class="btn btn-sm btn-link text-primary p-1"
+                               title="Documentation" aria-label="Documentation">
+                                <i class="fa fa-file-text-o fa-lg"/>
+                            </a>
+                            <a t-attf-href="/my/organizations/#{org.id}/users"
+                               class="btn btn-sm btn-link text-primary p-1"
+                               title="Users" aria-label="Users">
+                                <i class="fa fa-users fa-lg"/>
+                            </a>
+                            <t t-if="is_platform_admin and role and role.role == 'org_manager'">
+                                <form t-attf-action="/my/organizations/#{org.id}/delete" method="post" class="d-inline">
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                    <button type="submit" class="btn btn-sm btn-link text-danger p-1"
+                                            title="Delete organization" aria-label="Delete organization"
+                                            onclick="return confirm('Delete this organization? This cannot be undone.');">
+                                        <i class="fa fa-trash fa-lg"/>
+                                    </button>
+                                </form>
+                            </t>
+                        </td>
+                    </tr>
+                </tbody>
+            </t>
+            <div t-if="pager" class="o_portal_pager text-center mt-3">
+                <t t-call="portal.pager"/>
+            </div>
+        </t>
+    </template>
+
+    <!-- Shared hub chrome (sidebar + main); slot 0 = inner content -->
+    <template id="portal_organization_hub_shell" name="Organization hub shell">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title" t-value="organization.name"/>
+            </t>
+            <div class="itlingo-portal-page--tint rounded-3 p-3 p-lg-4">
+                <div class="row g-4 itlingo-org-hub">
+                    <aside class="col-lg-3">
+                        <nav class="itlingo-org-hub__sidebar nav flex-column rounded-3 shadow-sm bg-white p-2" aria-label="Organization sections">
+                            <a t-attf-href="/my/organizations/#{organization.id}"
+                               t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'stats' and 'active' or ''}">
+                                <i class="fa fa-bar-chart fa-fw me-2" aria-hidden="true"/>Statistics
+                            </a>
+                            <a t-attf-href="/my/organizations/#{organization.id}/workspaces"
+                               t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'workspaces' and 'active' or ''}">
+                                <i class="fa fa-th-large fa-fw me-2" aria-hidden="true"/>Workspaces
+                            </a>
+                            <a t-attf-href="/my/organizations/#{organization.id}/analytics"
+                               t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'analytics' and 'active' or ''}">
+                                <i class="fa fa-line-chart fa-fw me-2" aria-hidden="true"/>Analytics
+                            </a>
+                            <a t-attf-href="/my/organizations/#{organization.id}/documentation"
+                               t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'documentation' and 'active' or ''}">
+                                <i class="fa fa-file-text-o fa-fw me-2" aria-hidden="true"/>Documentation
+                            </a>
+                            <a t-attf-href="/my/organizations/#{organization.id}/users"
+                               t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'users' and 'active' or ''}">
+                                <i class="fa fa-users fa-fw me-2" aria-hidden="true"/>Users
+                            </a>
+                            <a t-if="user_role.role == 'org_manager'"
+                               t-attf-href="/my/organizations/#{organization.id}/settings"
+                               t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'settings' and 'active' or ''}">
+                                <i class="fa fa-cog fa-fw me-2" aria-hidden="true"/>Settings
+                            </a>
+                        </nav>
+                    </aside>
+                    <div class="col-lg-9 itlingo-org-hub__main">
+                        <h1 class="itlingo-org-hub__title mb-4"><t t-out="organization.name"/></h1>
+                        <t t-out="0"/>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Statistics (default org landing) -->
+    <template id="portal_organization_hub_stats" name="Organization statistics">
+        <t t-call="itlingo_website_portal.portal_organization_hub_shell">
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <div class="card itlingo-kpi-card border-0 shadow-sm rounded-3 h-100">
+                        <div class="card-body">
+                            <div class="itlingo-kpi-card__label">Users</div>
+                            <div class="itlingo-kpi-card__value"><t t-out="kpi_users"/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card itlingo-kpi-card border-0 shadow-sm rounded-3 h-100">
+                        <div class="card-body">
+                            <div class="itlingo-kpi-card__label">Active projects</div>
+                            <div class="itlingo-kpi-card__value"><t t-out="kpi_active_projects"/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card itlingo-kpi-card border-0 shadow-sm rounded-3 h-100">
+                        <div class="card-body">
+                            <div class="itlingo-kpi-card__label">Canceled projects</div>
+                            <div class="itlingo-kpi-card__value"><t t-out="kpi_canceled_projects"/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card itlingo-kpi-card border-0 shadow-sm rounded-3 h-100">
+                        <div class="card-body">
+                            <div class="itlingo-kpi-card__label">Completed projects</div>
+                            <div class="itlingo-kpi-card__value"><t t-out="kpi_completed_projects"/></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Workspaces -->
+    <template id="portal_organization_hub_workspaces" name="Organization workspaces">
+        <t t-call="itlingo_website_portal.portal_organization_hub_shell">
+            <div class="d-flex flex-wrap gap-2 mb-3" t-if="user_role.role == 'org_manager'">
+                <a t-attf-href="/my/workspaces/new?organization_id=#{organization.id}"
+                   class="btn btn-primary">New workspace</a>
+            </div>
+            <t t-if="not projects">
+                <p class="text-muted">No workspaces in this organization yet.</p>
+            </t>
+            <div t-if="projects" class="card border-0 shadow-sm rounded-3">
+                <div class="card-body p-0">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Workspace</th>
+                                <th>Methodology</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="projects" t-as="proj">
+                                <td>
+                                    <a t-attf-href="/my/workspaces/#{proj.id}">
+                                        <t t-out="proj.name"/>
+                                    </a>
+                                </td>
+                                <td>
+                                    <t t-if="proj.methodology">
+                                        <t t-out="dict(proj._fields['methodology'].selection).get(proj.methodology)"/>
+                                    </t>
+                                    <t t-else="">—</t>
+                                </td>
+                                <td>
+                                    <span class="badge bg-secondary">
+                                        <t t-if="proj.business_status">
+                                            <t t-out="dict(proj._fields['business_status'].selection).get(proj.business_status)"/>
+                                        </t>
+                                        <t t-else="">—</t>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Analytics (phase 1: workspace summary) -->
+    <template id="portal_organization_hub_analytics" name="Organization analytics">
+        <t t-call="itlingo_website_portal.portal_organization_hub_shell">
+            <p class="text-muted mb-3">
+                Per-workspace burndown and velocity are available from each workspace in the backend.
+                Open a workspace below for sprint and backlog activity in the portal.
+            </p>
+            <t t-if="not projects">
+                <p class="text-muted">No workspaces to analyze yet.</p>
+            </t>
+            <div t-if="projects" class="card border-0 shadow-sm rounded-3">
+                <div class="card-body p-0">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Workspace</th>
+                                <th>Business status</th>
+                                <th/>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="projects" t-as="proj">
+                                <td><t t-out="proj.name"/></td>
+                                <td>
+                                    <span class="badge bg-secondary">
+                                        <t t-if="proj.business_status">
+                                            <t t-out="dict(proj._fields['business_status'].selection).get(proj.business_status)"/>
+                                        </t>
+                                        <t t-else="">—</t>
+                                    </span>
+                                </td>
+                                <td class="text-end">
+                                    <a t-attf-href="/my/workspaces/#{proj.id}" class="btn btn-sm btn-outline-primary">Open</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Documentation -->
+    <template id="portal_organization_hub_documentation" name="Organization documentation">
+        <t t-call="itlingo_website_portal.portal_organization_hub_shell">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3" t-if="can_upload_org_documents">
+                <a t-attf-href="/my/organizations/#{organization.id}/documentation/new"
+                   class="btn btn-primary">Add document</a>
+            </div>
+            <t t-if="not documents">
+                <p class="text-muted">No documents linked to this organization yet.</p>
+            </t>
+            <div t-if="documents" class="card border-0 shadow-sm rounded-3">
+                <div class="card-body p-0">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Name</th>
+                                <th>Status</th>
+                                <th>Version</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="documents" t-as="doc">
+                                <td>
+                                    <a t-attf-href="/my/documents/#{doc.id}">
+                                        <t t-out="doc.name"/>
+                                    </a>
+                                </td>
+                                <td>
+                                    <span class="badge bg-secondary">
+                                        <t t-out="dict(doc._fields['status'].selection).get(doc.status)"/>
+                                    </span>
+                                </td>
+                                <td><t t-out="doc.version or '-'"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- New organization document -->
+    <template id="portal_organization_hub_documentation_new" name="Organization documentation new">
+        <t t-call="itlingo_website_portal.portal_organization_hub_shell">
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="card-body">
+                    <div t-if="error.get('_form')" class="alert alert-danger" role="alert">
+                        <t t-out="error['_form']"/>
+                    </div>
+                    <form t-attf-action="/my/organizations/#{organization.id}/documentation/new"
+                          method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <div class="mb-3">
+                            <label class="form-label" for="doc_new_name">Name</label>
+                            <input type="text" class="form-control" id="doc_new_name" name="name" required=""
+                                   t-att-value="form.get('name') or ''"/>
+                            <div t-if="error.get('name')" class="text-danger small mt-1"><t t-out="error['name']"/></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="doc_new_type">Document type</label>
+                            <select class="form-select" id="doc_new_type" name="document_type_id">
+                                <option value="">—</option>
+                                <t t-foreach="doc_types" t-as="dt">
+                                    <option t-att-value="dt.id"
+                                            t-att-selected="str(form.get('document_type_id') or '') == str(dt.id)">
+                                        <t t-out="dt.name"/>
+                                    </option>
+                                </t>
+                            </select>
+                            <div t-if="error.get('document_type_id')" class="text-danger small mt-1"><t t-out="error['document_type_id']"/></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="doc_new_file">File</label>
+                            <input type="file" class="form-control" id="doc_new_file" name="document_file"/>
+                            <div class="form-text">Optional for a draft; you can attach a file later from the backend if needed.</div>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary">Create</button>
+                            <a t-attf-href="/my/organizations/#{organization.id}/documentation" class="btn btn-outline-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Users -->
+    <template id="portal_organization_hub_users" name="Organization users">
+        <t t-call="itlingo_website_portal.portal_organization_hub_shell">
+            <div t-if="org_users_message == 'invite_sent'" class="alert alert-success" role="alert">
+                Invitation created. The user will see it under My Invitations.
+            </div>
+            <div t-if="org_users_message == 'role_updated'" class="alert alert-success" role="alert">
+                Role updated.
+            </div>
+            <div t-if="org_users_message == 'member_removed'" class="alert alert-success" role="alert">
+                Member removed from the organization.
+            </div>
+            <div t-if="org_users_error == 'invite_email_required'" class="alert alert-danger" role="alert">
+                Enter an email address to invite.
+            </div>
+            <div t-if="org_users_error == 'invite_user_not_found'" class="alert alert-danger" role="alert">
+                No user found with that email. The person must have an account (sign up first).
+            </div>
+            <div t-if="org_users_error == 'invite_already_member'" class="alert alert-danger" role="alert">
+                This user already has a role in the organization.
+            </div>
+            <div t-if="org_users_error == 'invite_bad_role'" class="alert alert-danger" role="alert">
+                Invalid role for invitation.
+            </div>
+            <div t-if="org_users_error == 'last_manager'" class="alert alert-danger" role="alert">
+                The organization must keep at least one organization manager.
+            </div>
+            <div t-if="org_users_error == 'role_invalid'" class="alert alert-danger" role="alert">
+                Invalid role.
+            </div>
+            <div t-if="org_users_error in ('role_not_accepted', 'remove_not_accepted')" class="alert alert-danger" role="alert">
+                That membership is not active.
+            </div>
+            <div t-if="can_manage_org_users" class="card border-0 shadow-sm rounded-3 mb-4">
+                <div class="card-body">
+                    <h3 class="h6 mb-3">Invite member</h3>
+                    <form t-attf-action="/my/organizations/#{organization.id}/users/invite" method="post" class="row g-3 align-items-end">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <div class="col-md-5">
+                            <label class="form-label" for="invite_email">Email (login)</label>
+                            <input type="email" class="form-control" id="invite_email" name="email" required="" placeholder="user@example.com"/>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label" for="invite_role">Role</label>
+                            <select class="form-select" id="invite_role" name="role">
+                                <option value="org_member">Org Member</option>
+                                <option value="doc_manager">Document Manager</option>
+                                <option value="org_manager">Org Manager</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-primary w-100">Send invitation</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="card-header bg-white border-0 pt-3 pb-0">
+                    <h2 class="h6 mb-0">Members (<t t-out="len(members)"/>)</h2>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0 align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>User</th>
+                                    <th>Role</th>
+                                    <th t-if="can_manage_org_users" class="text-end">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="members" t-as="member">
+                                    <td><t t-out="member.user_id.name"/></td>
+                                    <td>
+                                        <t t-if="not can_manage_org_users">
+                                            <span class="badge bg-info text-dark">
+                                                <t t-out="dict(member._fields['role'].selection).get(member.role)"/>
+                                            </span>
+                                        </t>
+                                        <form t-if="can_manage_org_users"
+                                              t-attf-action="/my/organizations/#{organization.id}/users/#{member.id}/role"
+                                              method="post" class="d-flex flex-wrap gap-2 align-items-center">
+                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                            <select class="form-select form-select-sm" style="min-width: 10rem;" name="role">
+                                                <t t-foreach="member._fields['role'].selection" t-as="sel">
+                                                    <option t-att-value="sel[0]"
+                                                            t-att-selected="member.role == sel[0]">
+                                                        <t t-out="sel[1]"/>
+                                                    </option>
+                                                </t>
+                                            </select>
+                                            <button type="submit" class="btn btn-sm btn-outline-primary">Update</button>
+                                        </form>
+                                    </td>
+                                    <td t-if="can_manage_org_users" class="text-end">
+                                        <form t-attf-action="/my/organizations/#{organization.id}/users/#{member.id}/remove"
+                                              method="post" class="d-inline"
+                                              onsubmit="return confirm('Remove this member from the organization?');">
+                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                            <button type="submit" class="btn btn-sm btn-outline-danger">Remove</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Settings -->
+    <template id="portal_organization_hub_settings" name="Organization settings">
+        <t t-call="itlingo_website_portal.portal_organization_hub_shell">
+            <div t-if="settings_message" class="alert alert-success" role="alert">
+                <t t-out="settings_message"/>
+            </div>
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="card-body">
+                    <form method="post" t-attf-action="/my/organizations/#{organization.id}/settings">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <div class="mb-3">
+                            <label class="form-label" for="org_settings_name">Name</label>
+                            <input type="text" class="form-control" id="org_settings_name" name="name" required=""
+                                   t-att-value="form.get('name') if form else organization.name"/>
+                            <div t-if="error.get('name')" class="text-danger small mt-1"><t t-out="error['name']"/></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="org_settings_privacy">Privacy</label>
+                            <select class="form-select" id="org_settings_privacy" name="organization_type">
+                                <option value="private" t-att-selected="(form.get('organization_type') if form else organization.organization_type) == 'private'">Private</option>
+                                <option value="public" t-att-selected="(form.get('organization_type') if form else organization.organization_type) == 'public'">Public</option>
+                            </select>
+                            <div t-if="error.get('organization_type')" class="text-danger small mt-1"><t t-out="error['organization_type']"/></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="org_settings_activity">Activity type</label>
+                            <select class="form-select" id="org_settings_activity" name="activity_type">
+                                <t t-foreach="activity_type_selection" t-as="act">
+                                    <option t-att-value="act['value']"
+                                            t-att-selected="(form.get('activity_type') if form else organization.activity_type) == act['value']">
+                                        <t t-out="act['label']"/>
+                                    </option>
+                                </t>
+                            </select>
+                            <div t-if="error.get('activity_type')" class="text-danger small mt-1"><t t-out="error['activity_type']"/></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="org_settings_country">Country</label>
+                            <select class="form-select" id="org_settings_country" name="country_id">
+                                <option value="">—</option>
+                                <t t-foreach="countries" t-as="country">
+                                    <option t-att-value="country.id"
+                                            t-att-selected="country.id == country_selection_id">
+                                        <t t-out="country.name"/>
+                                    </option>
+                                </t>
+                            </select>
+                            <div t-if="error.get('country_id')" class="text-danger small mt-1"><t t-out="error['country_id']"/></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Admin-only: Suspend / Activate -->
+            <div t-if="is_platform_admin" class="card border-0 shadow-sm rounded-3 mt-4">
+                <div class="card-header bg-white border-0 pt-3 pb-0">
+                    <h2 class="h6 mb-0">Administration</h2>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted small">
+                        Current status:
+                        <span t-attf-class="badge #{organization.state == 'active' and 'bg-success' or 'bg-warning'}">
+                            <t t-out="dict(organization._fields['state'].selection).get(organization.state)"/>
+                        </span>
+                    </p>
+                    <t t-if="organization.state == 'active'">
+                        <form t-attf-action="/my/organizations/#{organization.id}/suspend" method="post" class="d-inline">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            <button type="submit" class="btn btn-warning"
+                                    onclick="return confirm('Suspend this organization? Members will still see it but it will be marked as suspended.');">
+                                Suspend organization
+                            </button>
+                        </form>
+                    </t>
+                    <t t-if="organization.state == 'suspended'">
+                        <form t-attf-action="/my/organizations/#{organization.id}/activate" method="post" class="d-inline">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            <button type="submit" class="btn btn-success">
+                                Activate organization
+                            </button>
+                        </form>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>
