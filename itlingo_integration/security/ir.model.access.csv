@@ -1,4 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_itlingo_integration_settings_admin,itlingo.integration.settings.admin,model_itlingo_integration_settings,itlingo_organizations.group_itlingo_admin,1,1,1,1
-access_itlingo_integration_token_user,itlingo.integration.token.user,model_itlingo_integration_token,base.group_user,1,1,1,0
+access_itlingo_integration_token_member,itlingo.integration.token.member,model_itlingo_integration_token,itlingo_organizations.group_itlingo_member,1,1,1,0
+access_itlingo_integration_token_portal,itlingo.integration.token.portal,model_itlingo_integration_token,base.group_portal,1,1,1,0
 access_itlingo_integration_token_admin,itlingo.integration.token.admin,model_itlingo_integration_token,itlingo_organizations.group_itlingo_admin,1,1,1,1

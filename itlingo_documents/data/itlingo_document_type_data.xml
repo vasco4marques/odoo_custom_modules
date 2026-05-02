@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<data noupdate="1">
+<data noupdate="0">
 
     <record id="doc_type_rsl" model="itlingo.document.type">
         <field name="type_code">rsl</field>

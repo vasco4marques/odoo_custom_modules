@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<data noupdate="1">
+<data noupdate="0">
 
     <record id="demo_doc_1" model="itlingo.document">
         <field name="name">Requirements Document v1</field>

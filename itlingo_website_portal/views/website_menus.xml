@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<data noupdate="1">
+<data noupdate="0">
 
     <!-- Logged-in only: portal routes (internal + portal users) -->
     <record id="menu_itlingo_organizations" model="website.menu">
