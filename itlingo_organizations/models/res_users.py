@@ -13,10 +13,13 @@ class ResUsers(models.Model):
         )
         if not itlingo_member:
             return users
-        portal_group = self.env.ref('base.group_portal')
         for user in users:
-            if portal_group in user.groups_id and itlingo_member not in user.groups_id:
-                user.sudo().write({
-                    'groups_id': [(4, itlingo_member.id)],
-                })
+            if user.has_group('base.group_portal') \
+                    and not user.has_group('itlingo_organizations.group_itlingo_member'):
+                self.env.cr.execute(
+                    "INSERT INTO res_groups_users_rel (gid, uid) "
+                    "VALUES (%s, %s) ON CONFLICT DO NOTHING",
+                    (itlingo_member.id, user.id),
+                )
+        self.env.registry.clear_cache()
         return users

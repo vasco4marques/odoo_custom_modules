@@ -10,6 +10,10 @@ from odoo.addons.portal.controllers.portal import CustomerPortal, pager
 
 class ITLingoPortal(CustomerPortal):
 
+    @route(['/my', '/my/home'], type='http', auth='user', website=True)
+    def home(self, **kw):
+        return request.redirect('/')
+
     def _is_platform_admin(self):
         return request.env.user.has_group(
             'itlingo_organizations.group_itlingo_admin',

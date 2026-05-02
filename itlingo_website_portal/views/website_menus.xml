@@ -19,12 +19,7 @@
         <field name="group_ids" eval="[(6, 0, [ref('base.group_user'), ref('base.group_portal')])]"/>
     </record>
 
-    <record id="menu_itlingo_portal" model="website.menu">
-        <field name="name">My Portal</field>
-        <field name="url">/my</field>
-        <field name="parent_id" ref="website.main_menu"/>
-        <field name="sequence">50</field>
-    </record>
+    <delete model="website.menu" id="menu_itlingo_portal"/>
 
 </data>
 </odoo>
