@@ -9,7 +9,7 @@ for the ITLingo Cloud platform.
     """,
     'author': 'ITLingo',
     'website': 'https://itlingo.ist.utl.pt',
-    'depends': ['base', 'contacts', 'mail', 'portal', 'project', 'auth_signup'],
+    'depends': ['base', 'contacts', 'mail', 'portal', 'auth_signup'],
     'data': [
         'security/itlingo_security.xml',
         'security/ir.model.access.csv',

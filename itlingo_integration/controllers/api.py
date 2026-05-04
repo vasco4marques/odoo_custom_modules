@@ -135,54 +135,6 @@ class ITLingoIntegrationAPI(http.Controller):
 
         return Response(json.dumps(data), content_type='application/json')
 
-    @http.route('/api/itlingo/v1/projects/<int:project_id>/backlog',
-                type='http', auth='none', methods=['GET'], csrf=False)
-    def api_project_backlog(self, project_id, **kw):
-        payload, error_resp = self._validate_bearer_token()
-        if error_resp:
-            return error_resp
-
-        items = request.env['itlingo.backlog.item'].sudo().search([
-            ('project_id', '=', project_id),
-        ])
-
-        data = [{
-            'id': item.id,
-            'identifier': item.identifier,
-            'name': item.name,
-            'item_type': item.item_type,
-            'story_points': item.story_points,
-            'priority': item.priority,
-            'status': item.status,
-            'sprint_id': item.sprint_id.id if item.sprint_id else None,
-            'sprint_name': item.sprint_id.name if item.sprint_id else None,
-        } for item in items]
-
-        return Response(json.dumps(data), content_type='application/json')
-
-    @http.route('/api/itlingo/v1/projects/<int:project_id>/sprints',
-                type='http', auth='none', methods=['GET'], csrf=False)
-    def api_project_sprints(self, project_id, **kw):
-        payload, error_resp = self._validate_bearer_token()
-        if error_resp:
-            return error_resp
-
-        sprints = request.env['itlingo.sprint'].sudo().search([
-            ('project_id', '=', project_id),
-        ])
-
-        data = [{
-            'id': s.id,
-            'name': s.name,
-            'state': s.state,
-            'start_date': str(s.start_date) if s.start_date else None,
-            'end_date': str(s.end_date) if s.end_date else None,
-            'total_story_points': s.total_story_points,
-            'completed_story_points': s.completed_story_points,
-        } for s in sprints]
-
-        return Response(json.dumps(data), content_type='application/json')
-
     @http.route('/api/itlingo/v1/token/generate', type='http', auth='user',
                 methods=['POST'], csrf=False)
     def api_generate_token(self, **kw):

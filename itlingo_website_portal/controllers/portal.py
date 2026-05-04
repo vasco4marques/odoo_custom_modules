@@ -1,9 +1,7 @@
 import base64
-import json
 
 from odoo import _, http
 from odoo.exceptions import AccessError, MissingError, UserError
-from odoo.fields import Domain
 from odoo.http import request, route
 from odoo.addons.portal.controllers.portal import CustomerPortal, pager
 
@@ -12,6 +10,68 @@ class ITLingoPortal(CustomerPortal):
 
     @route(['/my', '/my/home'], type='http', auth='user', website=True)
     def home(self, **kw):
+        return request.redirect('/')
+
+    # ──────────────────────────────────────────────
+    # Welcome: post-registration org creation
+    # ──────────────────────────────────────────────
+
+    @route('/welcome/create-organization', type='http', auth='user',
+           website=True, methods=['GET', 'POST'])
+    def welcome_create_organization(self, **post):
+        user = request.env.user
+        if not user.org_setup_pending:
+            return request.redirect('/')
+
+        values = self._prepare_portal_layout_values()
+        values.update({'form': {}, 'error': {}})
+
+        allowed_types = {'private', 'public'}
+        allowed_activity = {
+            'it', 'marketing', 'consulting', 'finance', 'education', 'other',
+        }
+
+        if request.httprequest.method == 'POST':
+            if post.get('skip'):
+                user.sudo().org_setup_pending = False
+                return request.redirect('/')
+
+            name = (post.get('name') or '').strip()
+            org_type = post.get('organization_type') or 'private'
+            activity = post.get('activity_type') or 'it'
+            values['form'] = dict(post)
+
+            if not name:
+                values['error']['name'] = _('Name is required.')
+            elif org_type not in allowed_types:
+                values['error']['name'] = _('Invalid organization type.')
+            elif activity not in allowed_activity:
+                values['error']['name'] = _('Invalid activity type.')
+            else:
+                Org = request.env['itlingo.organization'].sudo()
+                Role = request.env['itlingo.organization.role'].sudo()
+                org = Org.create({
+                    'name': name,
+                    'organization_type': org_type,
+                    'activity_type': activity,
+                })
+                Role.create({
+                    'organization_id': org.id,
+                    'user_id': user.id,
+                    'role': 'org_manager',
+                    'state': 'accepted',
+                })
+                user.sudo().org_setup_pending = False
+                return request.redirect('/')
+
+        return request.render(
+            'itlingo_website_portal.portal_welcome_create_organization', values,
+        )
+
+    @route('/welcome/skip-organization', type='http', auth='user',
+           website=True, methods=['POST'])
+    def welcome_skip_organization(self, **post):
+        request.env.user.sudo().org_setup_pending = False
         return request.redirect('/')
 
     def _is_platform_admin(self):
@@ -128,7 +188,7 @@ class ITLingoPortal(CustomerPortal):
 
     # Workspace list filters (GET)
     _WS_ROLE_FILTER_KEYS = (
-        'ws_manager', 'product_manager', 'sprint_manager', 'doc_manager', 'ws_member',
+        'ws_manager', 'doc_manager', 'ws_member',
     )
 
     def _portal_ws_list_role_keys_from_params(self, params):
@@ -496,27 +556,6 @@ class ITLingoPortal(CustomerPortal):
             values,
         )
 
-    @route('/my/organizations/<int:org_id>/analytics',
-           type='http', auth='user', website=True)
-    def portal_organization_analytics(self, org_id, **kw):
-        org, user_role = self._portal_org_access(org_id)
-        projects = request.env['project.project'].sudo().search([
-            ('organization_id', '=', org_id),
-        ], order='name')
-        values = self._prepare_portal_layout_values()
-        values.update({
-            'organization': org,
-            'user_role': user_role,
-            'projects': projects,
-            'page_name': 'organization_analytics',
-            'organization_hub': True,
-            'org_hub_page': 'analytics',
-        })
-        return request.render(
-            'itlingo_website_portal.portal_organization_hub_analytics',
-            values,
-        )
-
     @route('/my/organizations/<int:org_id>/documentation',
            type='http', auth='user', website=True)
     def portal_organization_documentation(self, org_id, **kw):
@@ -722,8 +761,6 @@ class ITLingoPortal(CustomerPortal):
             'filters': {
                 'name': name_q,
                 'role_ws_manager': params.get('role_ws_manager') == '1',
-                'role_product_manager': params.get('role_product_manager') == '1',
-                'role_sprint_manager': params.get('role_sprint_manager') == '1',
                 'role_doc_manager': params.get('role_doc_manager') == '1',
                 'role_ws_member': params.get('role_ws_member') == '1',
             },
@@ -977,7 +1014,6 @@ class ITLingoPortal(CustomerPortal):
             'wizard_mode': 'edit',
             'form': {},
             'error': {},
-            'backlog_items': self._portal_workspace_hub_backlog_items(project_id),
             'members': self._portal_workspace_hub_members(project_id),
         })
         if request.httprequest.method == 'POST':
@@ -1072,25 +1108,6 @@ class ITLingoPortal(CustomerPortal):
             ('role', '=', 'ws_manager'),
         ])
 
-    def _portal_workspace_focus_sprint(self, project_id):
-        Sprint = request.env['itlingo.sprint'].sudo()
-        focus = Sprint.search([
-            ('project_id', '=', project_id),
-            ('state', '=', 'executing'),
-        ], limit=1, order='id desc')
-        if not focus:
-            focus = Sprint.search([
-                ('project_id', '=', project_id),
-                ('state', '=', 'closed'),
-            ], limit=1, order='end_date desc, id desc')
-        return focus
-
-    def _portal_workspace_hub_backlog_items(self, project_id):
-        """Recordset of project backlog items; never None (templates may use len(backlog_items))."""
-        return request.env['itlingo.backlog.item'].sudo().search([
-            ('project_id', '=', project_id),
-        ])
-
     def _portal_workspace_hub_members(self, project_id):
         """Accepted workspace roles; never None (templates may use len(members))."""
         return request.env['itlingo.project.role'].sudo().search([
@@ -1098,78 +1115,11 @@ class ITLingoPortal(CustomerPortal):
             ('state', '=', 'accepted'),
         ])
 
-    def _portal_workspace_chart_payload(self, project_id):
-        """JSON string for Chart.js (burndown, burnup, tasks by sprint)."""
-        if 'itlingo.burndown.report' not in request.env:
-            return None
-        focus = self._portal_workspace_focus_sprint(project_id)
-        Burndown = request.env['itlingo.burndown.report'].sudo()
-        rows = Burndown.browse()
-        if focus:
-            rows = Burndown.search([
-                ('project_id', '=', project_id),
-                ('sprint_id', '=', focus.id),
-            ], order='day asc')
-
-        labels_bd = []
-        remaining = []
-        completed_snap = []
-        for r in rows:
-            labels_bd.append(r.day.isoformat() if r.day else '')
-            remaining.append(float(r.remaining_story_points or 0))
-            completed_snap.append(float(r.completed_story_points or 0))
-
-        n = len(remaining)
-        ideal = []
-        if n > 0:
-            start_r = remaining[0]
-            for i in range(n):
-                if n == 1:
-                    ideal.append(0.0)
-                else:
-                    ideal.append(max(0.0, start_r * (1 - i / (n - 1))))
-
-        Sprint = request.env['itlingo.sprint'].sudo()
-        sprints = Sprint.search([('project_id', '=', project_id)], order='sequence, id')
-        sprint_labels = [s.name for s in sprints]
-        sprint_tasks = [len(s.task_ids) for s in sprints]
-
-        if not focus and not sprint_labels:
-            return None
-
-        burn_labels = labels_bd
-        burn_vals = list(completed_snap)
-        if not burn_labels and focus and focus.start_date:
-            burn_labels = [focus.start_date.isoformat()]
-            burn_vals = [0.0]
-
-        payload = {
-            'focusSprint': focus.name if focus else None,
-            'burndown': {
-                'labels': labels_bd,
-                'remaining': remaining,
-                'ideal': ideal,
-            },
-            'burnup': {
-                'labels': burn_labels,
-                'values': burn_vals,
-            },
-            'tasksBySprint': {
-                'labels': sprint_labels,
-                'counts': sprint_tasks,
-            },
-            'projectId': project_id,
-        }
-        return json.dumps(payload)
-
     @route('/my/workspaces/<int:project_id>', type='http', auth='user', website=True)
     def portal_workspace_detail(self, project_id, **kw):
         project, user_role = self._portal_ws_access(project_id)
         params = request.params
 
-        focus = self._portal_workspace_focus_sprint(project_id)
-        Sprint = request.env['itlingo.sprint'].sudo()
-        sprints = Sprint.search([('project_id', '=', project_id)], order='id desc')
         values = self._prepare_portal_layout_values()
         values.update({
             'project': project,
@@ -1179,11 +1129,6 @@ class ITLingoPortal(CustomerPortal):
             'ws_error': params.get('error'),
             'ws_message': params.get('message'),
             'page_name': 'workspace_detail',
-            'focus_sprint_name': focus.name if focus else None,
-            'chart_json': self._portal_workspace_chart_payload(project_id),
-            # Stale DB views may still reference len(sprints); always pass a recordset.
-            'sprints': sprints,
-            'backlog_items': self._portal_workspace_hub_backlog_items(project_id),
             'members': self._portal_workspace_hub_members(project_id),
         })
         return request.render('itlingo_website_portal.portal_workspace_detail', values)
@@ -1207,47 +1152,8 @@ class ITLingoPortal(CustomerPortal):
             'ws_error': params.get('error'),
             'ws_message': params.get('message'),
             'page_name': 'workspace_users',
-            'backlog_items': self._portal_workspace_hub_backlog_items(project_id),
         })
         return request.render('itlingo_website_portal.portal_workspace_users', values)
-
-    @route('/my/workspaces/<int:project_id>/analytics', type='http', auth='user', website=True)
-    def portal_workspace_analytics(self, project_id, **kw):
-        project, user_role = self._portal_ws_access(project_id)
-        params = request.params
-        Backlog = request.env['itlingo.backlog.item'].sudo()
-        kpi_open = Backlog.search_count([
-            ('project_id', '=', project_id),
-            ('status', 'not in', ('done', 'canceled')),
-        ])
-        Sprint = request.env['itlingo.sprint'].sudo()
-        kpi_sprints = Sprint.search_count([('project_id', '=', project_id)])
-        exec_sprint = Sprint.search([
-            ('project_id', '=', project_id),
-            ('state', '=', 'executing'),
-        ], limit=1)
-        sp_sum = 0.0
-        if exec_sprint:
-            sp_sum = sum(exec_sprint.backlog_item_ids.mapped('story_points'))
-        focus = self._portal_workspace_focus_sprint(project_id)
-        values = self._prepare_portal_layout_values()
-        values.update({
-            'project': project,
-            'user_role': user_role,
-            'workspace_hub': True,
-            'workspace_hub_page': 'analytics',
-            'page_name': 'workspace_analytics',
-            'focus_sprint_name': focus.name if focus else None,
-            'chart_json': self._portal_workspace_chart_payload(project_id),
-            'kpi_open_backlog': kpi_open,
-            'kpi_sprint_count': kpi_sprints,
-            'kpi_active_sprint_points': sp_sum,
-            'ws_error': params.get('error'),
-            'ws_message': params.get('message'),
-            'backlog_items': self._portal_workspace_hub_backlog_items(project_id),
-            'members': self._portal_workspace_hub_members(project_id),
-        })
-        return request.render('itlingo_website_portal.portal_workspace_analytics', values)
 
     def _portal_ws_user_redirect(self, project_id, error=None, message=None):
         base = f'/my/workspaces/{project_id}/users'
@@ -1271,7 +1177,7 @@ class ITLingoPortal(CustomerPortal):
         to_users = post.get('redirect_users') == '1'
         email = (post.get('email') or '').strip()
         role_key = post.get('role') or 'ws_member'
-        allowed_roles = {'ws_manager', 'product_manager', 'sprint_manager', 'doc_manager', 'ws_member'}
+        allowed_roles = {'ws_manager', 'doc_manager', 'ws_member'}
         if role_key not in allowed_roles:
             if to_users:
                 return self._portal_ws_user_redirect(project_id, error='invite_bad_role')
@@ -1339,7 +1245,7 @@ class ITLingoPortal(CustomerPortal):
                 f'/my/workspaces/{project_id}?error=role_not_accepted',
             )
         new_role = (post.get('role') or '').strip()
-        allowed_roles = {'ws_manager', 'product_manager', 'sprint_manager', 'doc_manager', 'ws_member'}
+        allowed_roles = {'ws_manager', 'doc_manager', 'ws_member'}
         if new_role not in allowed_roles:
             if to_users:
                 return self._portal_ws_user_redirect(project_id, error='role_invalid')
@@ -1404,179 +1310,8 @@ class ITLingoPortal(CustomerPortal):
         )
 
     # ──────────────────────────────────────────────
-    # Workspace hub: backlog, sprints, documentation, placeholders
+    # Workspace hub: documentation, placeholders
     # ──────────────────────────────────────────────
-
-    _BACKLOG_STATUS_KEYS = ('new', 'ready', 'in_progress', 'done', 'canceled')
-    _BACKLOG_PRIORITY_KEYS = ('vhi', 'hi', 'med', 'lo')
-
-    def _portal_backlog_filter_domain(self, project_id, params):
-        name_q = (params.get('name') or '').strip()
-        domain = [('project_id', '=', project_id)]
-        if name_q:
-            domain = Domain.AND([
-                domain,
-                ['|', ('name', 'ilike', f'%{name_q}%'), ('identifier', 'ilike', f'%{name_q}%')],
-            ])
-        statuses = [
-            s for s in self._BACKLOG_STATUS_KEYS
-            if params.get(f'status_{s}') == '1'
-        ]
-        if statuses:
-            domain = Domain.AND([domain, [('status', 'in', statuses)]])
-        priorities = [
-            p for p in self._BACKLOG_PRIORITY_KEYS
-            if params.get(f'priority_{p}') == '1'
-        ]
-        if priorities:
-            domain = Domain.AND([domain, [('priority', 'in', priorities)]])
-        return domain, name_q
-
-    def _portal_backlog_filter_url_args(self, params, name_q):
-        url_args = {}
-        if name_q:
-            url_args['name'] = name_q
-        for s in self._BACKLOG_STATUS_KEYS:
-            if params.get(f'status_{s}') == '1':
-                url_args[f'status_{s}'] = '1'
-        for p in self._BACKLOG_PRIORITY_KEYS:
-            if params.get(f'priority_{p}') == '1':
-                url_args[f'priority_{p}'] = '1'
-        return url_args
-
-    @route('/my/workspaces/<int:project_id>/product-backlog', type='http', auth='user', website=True)
-    def portal_workspace_product_backlog(self, project_id, **kw):
-        project, user_role = self._portal_ws_access(project_id)
-        params = request.params
-        Item = request.env['itlingo.backlog.item'].sudo()
-        domain, name_q = self._portal_backlog_filter_domain(project_id, params)
-        url_args = self._portal_backlog_filter_url_args(params, name_q)
-        items = Item.search(domain, order='sequence, priority desc')
-        values = self._prepare_portal_layout_values()
-        values.update({
-            'project': project,
-            'user_role': user_role,
-            'workspace_hub': True,
-            'workspace_hub_page': 'product_backlog',
-            'can_manage_backlog': user_role.role in ('ws_manager', 'product_manager'),
-            'backlog_items': items,
-            'page_name': 'workspace_product_backlog',
-            'filters': {
-                'name': name_q,
-                **{f'status_{s}': params.get(f'status_{s}') == '1' for s in self._BACKLOG_STATUS_KEYS},
-                **{f'priority_{p}': params.get(f'priority_{p}') == '1' for p in self._BACKLOG_PRIORITY_KEYS},
-            },
-            'backlog_url_args': url_args,
-            'members': self._portal_workspace_hub_members(project_id),
-        })
-        return request.render(
-            'itlingo_website_portal.portal_workspace_product_backlog',
-            values,
-        )
-
-    @route('/my/workspaces/<int:project_id>/sprint-backlog', type='http', auth='user', website=True)
-    def portal_workspace_sprint_backlog(self, project_id, **kw):
-        project, user_role = self._portal_ws_access(project_id)
-        Sprint = request.env['itlingo.sprint'].sudo()
-        executing = Sprint.search([
-            ('project_id', '=', project_id),
-            ('state', '=', 'executing'),
-        ], limit=1)
-        if executing:
-            return request.redirect(
-                f'/my/sprints/{project_id}/{executing.id}',
-            )
-        can_create = user_role.role in ('ws_manager', 'sprint_manager')
-        values = self._prepare_portal_layout_values()
-        values.update({
-            'project': project,
-            'user_role': user_role,
-            'workspace_hub': True,
-            'workspace_hub_page': 'sprint_backlog',
-            'page_name': 'workspace_sprint_backlog',
-            'can_create_sprint': can_create,
-            'form': {},
-            'error': {},
-            'backlog_items': self._portal_workspace_hub_backlog_items(project_id),
-            'members': self._portal_workspace_hub_members(project_id),
-        })
-        return request.render(
-            'itlingo_website_portal.portal_workspace_sprint_backlog',
-            values,
-        )
-
-    @route(
-        '/my/workspaces/<int:project_id>/sprints/new',
-        type='http', auth='user', website=True, methods=['POST'],
-    )
-    def portal_workspace_sprint_create(self, project_id, **post):
-        project, user_role = self._portal_ws_access(project_id)
-        if user_role.role not in ('ws_manager', 'sprint_manager'):
-            raise AccessError(_('Only workspace or sprint managers can create sprints.'))
-        name = (post.get('name') or '').strip()
-        goal = (post.get('goal') or '').strip()
-        Sprint = request.env['itlingo.sprint'].sudo()
-        values = {'form': dict(post), 'error': {}}
-        if not name:
-            err = {'name': _('Sprint name is required.')}
-        else:
-            err = {}
-        if err:
-            values = self._prepare_portal_layout_values()
-            values.update({
-                'project': project,
-                'user_role': user_role,
-                'workspace_hub': True,
-                'workspace_hub_page': 'sprint_backlog',
-                'page_name': 'workspace_sprint_backlog',
-                'can_create_sprint': True,
-                'form': dict(post),
-                'error': err,
-                'backlog_items': self._portal_workspace_hub_backlog_items(project_id),
-                'members': self._portal_workspace_hub_members(project_id),
-            })
-            return request.render(
-                'itlingo_website_portal.portal_workspace_sprint_backlog',
-                values,
-            )
-        start_raw = post.get('start_date') or False
-        end_raw = post.get('end_date') or False
-        vals = {
-            'project_id': project_id,
-            'name': name,
-            'goal': goal or False,
-            'state': 'not_started',
-        }
-        if start_raw:
-            vals['start_date'] = start_raw
-        if end_raw:
-            vals['end_date'] = end_raw
-        sprint = Sprint.create(vals)
-        return request.redirect(f'/my/sprints/{project_id}/{sprint.id}')
-
-    @route('/my/workspaces/<int:project_id>/sprint-history', type='http', auth='user', website=True)
-    def portal_workspace_sprint_history(self, project_id, **kw):
-        project, user_role = self._portal_ws_access(project_id)
-        Sprint = request.env['itlingo.sprint'].sudo()
-        sprints = Sprint.search([
-            ('project_id', '=', project_id),
-            ('state', '=', 'closed'),
-        ], order='end_date desc, id desc')
-        values = self._prepare_portal_layout_values()
-        values.update({
-            'project': project,
-            'user_role': user_role,
-            'workspace_hub': True,
-            'workspace_hub_page': 'sprint_history',
-            'sprints': sprints,
-            'page_name': 'workspace_sprint_history',
-            'backlog_items': self._portal_workspace_hub_backlog_items(project_id),
-            'members': self._portal_workspace_hub_members(project_id),
-        })
-        return request.render(
-            'itlingo_website_portal.portal_workspace_sprint_history',
-            values,
-        )
 
     @route('/my/workspaces/<int:project_id>/documentation', type='http', auth='user', website=True)
     def portal_workspace_documentation(self, project_id, **kw):
@@ -1595,7 +1330,6 @@ class ITLingoPortal(CustomerPortal):
             'documents': documents,
             'can_upload_ws_documents': can_doc,
             'page_name': 'workspace_documentation',
-            'backlog_items': self._portal_workspace_hub_backlog_items(project_id),
             'members': self._portal_workspace_hub_members(project_id),
         })
         return request.render(
@@ -1625,7 +1359,6 @@ class ITLingoPortal(CustomerPortal):
             'page_name': 'workspace_documentation_new',
             'form': {},
             'error': {},
-            'backlog_items': self._portal_workspace_hub_backlog_items(project_id),
             'members': self._portal_workspace_hub_members(project_id),
         })
         if request.httprequest.method == 'POST':
@@ -1668,26 +1401,6 @@ class ITLingoPortal(CustomerPortal):
             values,
         )
 
-    @route('/my/workspaces/<int:project_id>/reports', type='http', auth='user', website=True)
-    def portal_workspace_reports(self, project_id, **kw):
-        project, user_role = self._portal_ws_access(project_id)
-        values = self._prepare_portal_layout_values()
-        values.update({
-            'project': project,
-            'user_role': user_role,
-            'workspace_hub': True,
-            'workspace_hub_page': 'reports',
-            'page_name': 'workspace_reports',
-            'placeholder_title': _('Report generation'),
-            'placeholder_message': _('Coming soon.'),
-            'backlog_items': self._portal_workspace_hub_backlog_items(project_id),
-            'members': self._portal_workspace_hub_members(project_id),
-        })
-        return request.render(
-            'itlingo_website_portal.portal_workspace_placeholder',
-            values,
-        )
-
     @route('/my/workspaces/<int:project_id>/specifications', type='http', auth='user', website=True)
     def portal_workspace_specifications(self, project_id, **kw):
         project, user_role = self._portal_ws_access(project_id)
@@ -1703,7 +1416,6 @@ class ITLingoPortal(CustomerPortal):
             'workspace_hub': True,
             'workspace_hub_page': 'specifications',
             'page_name': 'workspace_specifications',
-            'backlog_items': self._portal_workspace_hub_backlog_items(project_id),
             'members': self._portal_workspace_hub_members(project_id),
         })
         return request.render(
@@ -1768,103 +1480,3 @@ class ITLingoPortal(CustomerPortal):
             role.action_reject()
         return request.redirect('/my/invitations')
 
-    # ──────────────────────────────────────────────
-    # Sprints
-    # ──────────────────────────────────────────────
-
-    @route('/my/sprints/<int:project_id>', type='http', auth='user', website=True)
-    def portal_sprints(self, project_id, **kw):
-        return request.redirect(f'/my/workspaces/{project_id}/sprint-backlog')
-
-    @route('/my/sprints/<int:project_id>/<int:sprint_id>',
-           type='http', auth='user', website=True)
-    def portal_sprint_detail(self, project_id, sprint_id, **kw):
-        user = request.env.user
-        user_role = self._portal_workspace_role(user, project_id)
-        if not user_role:
-            raise AccessError(_('You do not have access to this workspace.'))
-
-        sprint = request.env['itlingo.sprint'].sudo().browse(sprint_id)
-        if not sprint.exists() or sprint.project_id.id != project_id:
-            raise MissingError(_('Sprint not found.'))
-
-        values = self._prepare_portal_layout_values()
-        values.update({
-            'project': sprint.project_id,
-            'user_role': user_role,
-            'sprint': sprint,
-            'backlog_items': sprint.backlog_item_ids,
-            'tasks': sprint.task_ids,
-            'page_name': 'sprint_detail',
-            'workspace_hub': True,
-            'workspace_hub_page': 'sprint_backlog',
-            'members': self._portal_workspace_hub_members(project_id),
-        })
-        return request.render('itlingo_website_portal.portal_sprint_detail', values)
-
-    # ──────────────────────────────────────────────
-    # Backlog
-    # ──────────────────────────────────────────────
-
-    @route('/my/backlog/<int:project_id>', type='http', auth='user', website=True)
-    def portal_backlog(self, project_id, **kw):
-        qs = request.httprequest.query_string.decode()
-        suffix = f'?{qs}' if qs else ''
-        return request.redirect(
-            f'/my/workspaces/{project_id}/product-backlog{suffix}',
-        )
-
-    @route(
-        [
-            '/my/backlog/<int:project_id>/item/<int:item_id>',
-            '/my/workspaces/<int:project_id>/product-backlog/item/<int:item_id>',
-        ],
-        type='http', auth='user', website=True, methods=['GET', 'POST'],
-    )
-    def portal_backlog_item(self, project_id, item_id, **post):
-        user = request.env.user
-        user_role = self._portal_workspace_role(user, project_id)
-        if not user_role:
-            raise AccessError(_('You do not have access to this workspace.'))
-
-        item = request.env['itlingo.backlog.item'].sudo().browse(item_id)
-        if not item.exists() or item.project_id.id != project_id:
-            raise MissingError(_('Backlog item not found.'))
-
-        can_manage_backlog = user_role.role in ('ws_manager', 'product_manager')
-
-        status_selection = request.env['itlingo.backlog.item'].fields_get(
-            ['status'],
-        )['status']['selection']
-
-        if request.httprequest.method == 'POST':
-            if not can_manage_backlog:
-                raise AccessError(
-                    _('Only workspace managers and product managers can update backlog items.'),
-                )
-            new_status = (post.get('status') or '').strip()
-            allowed = {k for k, _ in status_selection}
-            if new_status in allowed:
-                item.write({'status': new_status})
-            return request.redirect(
-                f'/my/workspaces/{project_id}/product-backlog/item/{item_id}',
-            )
-
-        project = request.env['project.project'].sudo().browse(project_id)
-        values = self._prepare_portal_layout_values()
-        values.update({
-            'project': project,
-            'user_role': user_role,
-            'can_manage_backlog': can_manage_backlog,
-            'item': item,
-            'status_selection': status_selection,
-            'page_name': 'backlog_item_detail',
-            'workspace_hub': True,
-            'workspace_hub_page': 'product_backlog',
-            'backlog_items': self._portal_workspace_hub_backlog_items(project_id),
-            'members': self._portal_workspace_hub_members(project_id),
-        })
-        return request.render(
-            'itlingo_website_portal.portal_backlog_item_detail',
-            values,
-        )

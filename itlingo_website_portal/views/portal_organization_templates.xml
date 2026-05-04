@@ -160,10 +160,6 @@
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'workspaces' and 'active' or ''}">
                                 <i class="fa fa-th-large fa-fw me-2" aria-hidden="true"/>Workspaces
                             </a>
-                            <a t-attf-href="/my/organizations/#{organization.id}/analytics"
-                               t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'analytics' and 'active' or ''}">
-                                <i class="fa fa-line-chart fa-fw me-2" aria-hidden="true"/>Analytics
-                            </a>
                             <a t-attf-href="/my/organizations/#{organization.id}/documentation"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'documentation' and 'active' or ''}">
                                 <i class="fa fa-file-text-o fa-fw me-2" aria-hidden="true"/>Documentation
@@ -268,48 +264,6 @@
                                         </t>
                                         <t t-else="">—</t>
                                     </span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </t>
-    </template>
-
-    <!-- Analytics (phase 1: workspace summary) -->
-    <template id="portal_organization_hub_analytics" name="Organization analytics">
-        <t t-call="itlingo_website_portal.portal_organization_hub_shell">
-            <p class="text-muted mb-3">
-                Per-workspace burndown and velocity are available from each workspace in the backend.
-                Open a workspace below for sprint and backlog activity in the portal.
-            </p>
-            <t t-if="not projects">
-                <p class="text-muted">No workspaces to analyze yet.</p>
-            </t>
-            <div t-if="projects" class="card border-0 shadow-sm rounded-3">
-                <div class="card-body p-0">
-                    <table class="table table-hover mb-0">
-                        <thead class="table-light">
-                            <tr>
-                                <th>Workspace</th>
-                                <th>Business status</th>
-                                <th/>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr t-foreach="projects" t-as="proj">
-                                <td><t t-out="proj.name"/></td>
-                                <td>
-                                    <span class="badge bg-secondary">
-                                        <t t-if="proj.business_status">
-                                            <t t-out="dict(proj._fields['business_status'].selection).get(proj.business_status)"/>
-                                        </t>
-                                        <t t-else="">—</t>
-                                    </span>
-                                </td>
-                                <td class="text-end">
-                                    <a t-attf-href="/my/workspaces/#{proj.id}" class="btn btn-sm btn-outline-primary">Open</a>
                                 </td>
                             </tr>
                         </tbody>

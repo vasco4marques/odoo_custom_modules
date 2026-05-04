@@ -9,7 +9,7 @@ business status, costs) and implements project-level role/invitation workflows.
     """,
     'author': 'ITLingo',
     'website': 'https://itlingo.ist.utl.pt',
-    'depends': ['project', 'hr_timesheet', 'mail', 'itlingo_organizations'],
+    'depends': ['project', 'mail', 'itlingo_organizations'],
     'data': [
         'security/ir.model.access.csv',
         'security/itlingo_workspace_rules.xml',

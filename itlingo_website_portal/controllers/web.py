@@ -15,6 +15,8 @@ class Website(WebsiteHome):
             if user._is_internal():
                 if request.params.get('login_success'):
                     redirect = '/odoo?' + request.httprequest.query_string.decode()
+            elif user.org_setup_pending:
+                redirect = '/welcome/create-organization'
             else:
                 redirect = '/'
         return super()._login_redirect(uid, redirect=redirect)

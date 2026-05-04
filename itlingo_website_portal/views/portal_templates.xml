@@ -22,7 +22,6 @@
             </li>
             <li t-if="page_name == 'organization_stats'" class="breadcrumb-item active">Statistics</li>
             <li t-if="page_name == 'organization_workspaces'" class="breadcrumb-item active">Workspaces</li>
-            <li t-if="page_name == 'organization_analytics'" class="breadcrumb-item active">Analytics</li>
             <li t-if="page_name == 'organization_documentation'" class="breadcrumb-item active">Documentation</li>
             <li t-if="page_name == 'organization_documentation_new'" class="breadcrumb-item">
                 <a t-attf-href="/my/organizations/#{organization.id}/documentation">Documentation</a>
@@ -47,42 +46,6 @@
             </li>
             <li t-if="page_name == 'invitations'" class="breadcrumb-item active">
                 Invitations
-            </li>
-            <li t-if="page_name == 'sprints'" class="breadcrumb-item">
-                <a href="/my/workspaces">Workspaces</a>
-            </li>
-            <li t-if="page_name == 'sprints'" class="breadcrumb-item active">
-                Sprints
-            </li>
-            <li t-if="page_name == 'sprint_detail'" class="breadcrumb-item">
-                <a href="/my/workspaces">Workspaces</a>
-            </li>
-            <li t-if="page_name == 'sprint_detail'" class="breadcrumb-item">
-                <a t-attf-href="/my/workspaces/#{project.id}"><t t-out="project.name"/></a>
-            </li>
-            <li t-if="page_name == 'sprint_detail'" class="breadcrumb-item">
-                <a t-attf-href="/my/workspaces/#{project.id}/sprint-backlog">Sprint backlog</a>
-            </li>
-            <li t-if="page_name == 'sprint_detail'" class="breadcrumb-item active text-truncate">
-                <t t-out="sprint.name"/>
-            </li>
-            <li t-if="page_name == 'backlog'" class="breadcrumb-item">
-                <a href="/my/workspaces">Workspaces</a>
-            </li>
-            <li t-if="page_name == 'backlog'" class="breadcrumb-item active">
-                Backlog
-            </li>
-            <li t-if="page_name == 'backlog_item_detail'" class="breadcrumb-item">
-                <a href="/my/workspaces">Workspaces</a>
-            </li>
-            <li t-if="page_name == 'backlog_item_detail'" class="breadcrumb-item">
-                <a t-attf-href="/my/workspaces/#{project.id}"><t t-out="project.name"/></a>
-            </li>
-            <li t-if="page_name == 'backlog_item_detail'" class="breadcrumb-item">
-                <a t-attf-href="/my/workspaces/#{project.id}/product-backlog">Product backlog</a>
-            </li>
-            <li t-if="page_name == 'backlog_item_detail'" class="breadcrumb-item active text-truncate">
-                <t t-out="item.name"/>
             </li>
         </xpath>
     </template>

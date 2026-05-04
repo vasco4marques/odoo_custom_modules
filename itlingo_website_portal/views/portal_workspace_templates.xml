@@ -49,16 +49,6 @@
                                     <label class="form-check-label" for="role_ws_manager">Workspace Manager</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="role_product_manager" value="1"
-                                           id="role_product_manager" t-att-checked="filters.get('role_product_manager')"/>
-                                    <label class="form-check-label" for="role_product_manager">Product Manager</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="role_sprint_manager" value="1"
-                                           id="role_sprint_manager" t-att-checked="filters.get('role_sprint_manager')"/>
-                                    <label class="form-check-label" for="role_sprint_manager">Sprint Manager</label>
-                                </div>
-                                <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="role_doc_manager" value="1"
                                            id="role_doc_manager" t-att-checked="filters.get('role_doc_manager')"/>
                                     <label class="form-check-label" for="role_doc_manager">Document Manager</label>
@@ -190,43 +180,6 @@
         </t>
     </template>
 
-    <!-- Shared Chart.js block (expects chart_json, project in context) -->
-    <template id="portal_workspace_charts_block" name="Workspace charts block">
-        <div id="itlingo-ws-charts" t-attf-data-project-id="#{project.id}">
-            <p t-if="chart_json and focus_sprint_name" class="small text-muted mb-2">
-                Focus sprint: <t t-out="focus_sprint_name"/>
-            </p>
-            <t t-if="chart_json">
-                <div class="card border-0 shadow-sm rounded-3 mb-3">
-                    <div class="card-body">
-                        <h3 class="h6 text-muted text-uppercase mb-2">Burndown (remaining effort)</h3>
-                        <canvas t-attf-id="chart_burndown_#{project.id}" class="itlingo-ws-chart-canvas" height="200"/>
-                    </div>
-                </div>
-                <div class="card border-0 shadow-sm rounded-3 mb-3">
-                    <div class="card-body">
-                        <h3 class="h6 text-muted text-uppercase mb-2">Burnup (completed effort)</h3>
-                        <canvas t-attf-id="chart_burnup_#{project.id}" class="itlingo-ws-chart-canvas" height="200"/>
-                    </div>
-                </div>
-                <div class="card border-0 shadow-sm rounded-3 mb-3">
-                    <div class="card-body">
-                        <h3 class="h6 text-muted text-uppercase mb-2">Tasks by sprint</h3>
-                        <canvas t-attf-id="chart_tasks_#{project.id}" class="itlingo-ws-chart-canvas" height="200"/>
-                    </div>
-                </div>
-                <script type="application/json" id="itlingo-ws-chart-json"><t t-raw="chart_json"/></script>
-            </t>
-            <t t-else="">
-                <div class="card border-0 shadow-sm rounded-3">
-                    <div class="card-body text-muted small">
-                        Charts appear when there are sprints or burndown data for this workspace.
-                    </div>
-                </div>
-            </t>
-        </div>
-    </template>
-
     <!-- Workspace hub shell: sidebar + main (slot in child templates) -->
     <template id="portal_workspace_hub_shell" name="Workspace hub shell">
         <t t-call="portal.portal_layout">
@@ -242,26 +195,6 @@
                             <a t-attf-href="/my/workspaces/#{project.id}"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'home' and 'active' or ''}">
                                 <i class="fa fa-home fa-fw me-2" aria-hidden="true"/>Home
-                            </a>
-                            <a t-attf-href="/my/workspaces/#{project.id}/product-backlog"
-                               t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'product_backlog' and 'active' or ''}">
-                                <i class="fa fa-th-large fa-fw me-2" aria-hidden="true"/>Product Backlog
-                            </a>
-                            <a t-attf-href="/my/workspaces/#{project.id}/analytics"
-                               t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'analytics' and 'active' or ''}">
-                                <i class="fa fa-line-chart fa-fw me-2" aria-hidden="true"/>Analytics
-                            </a>
-                            <a t-attf-href="/my/workspaces/#{project.id}/sprint-backlog"
-                               t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'sprint_backlog' and 'active' or ''}">
-                                <i class="fa fa-list-alt fa-fw me-2" aria-hidden="true"/>Sprint Backlog
-                            </a>
-                            <a t-attf-href="/my/workspaces/#{project.id}/sprint-history"
-                               t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'sprint_history' and 'active' or ''}">
-                                <i class="fa fa-history fa-fw me-2" aria-hidden="true"/>Sprint History
-                            </a>
-                            <a t-attf-href="/my/workspaces/#{project.id}/reports"
-                               t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'reports' and 'active' or ''}">
-                                <i class="fa fa-cloud-download fa-fw me-2" aria-hidden="true"/>Report generation
                             </a>
                             <a t-attf-href="/my/workspaces/#{project.id}/documentation"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'documentation' and 'active' or ''}">
@@ -301,8 +234,8 @@
     <template id="portal_workspace_detail" name="Workspace Detail">
         <t t-call="itlingo_website_portal.portal_workspace_hub_shell">
             <div class="row g-4 align-items-start">
-                <div class="col-lg-6">
-                    <div class="card border-0 shadow-sm rounded-3 h-100">
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm rounded-3">
                         <div class="card-body">
                             <h2 class="h5 mb-3">Workspace details</h2>
                             <dl class="row mb-0 small">
@@ -358,47 +291,6 @@
                             </dl>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <t t-call="itlingo_website_portal.portal_workspace_charts_block"/>
-                </div>
-            </div>
-        </t>
-    </template>
-
-    <!-- Workspace analytics -->
-    <template id="portal_workspace_analytics" name="Workspace Analytics">
-        <t t-call="itlingo_website_portal.portal_workspace_hub_shell">
-            <div class="row g-3 mb-4">
-                <div class="col-6 col-md-4">
-                    <div class="card itlingo-kpi-card border-0 shadow-sm rounded-3 h-100">
-                        <div class="card-body">
-                            <div class="itlingo-kpi-card__label">Open backlog items</div>
-                            <div class="itlingo-kpi-card__value"><t t-out="kpi_open_backlog"/></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4">
-                    <div class="card itlingo-kpi-card border-0 shadow-sm rounded-3 h-100">
-                        <div class="card-body">
-                            <div class="itlingo-kpi-card__label">Sprints</div>
-                            <div class="itlingo-kpi-card__value"><t t-out="kpi_sprint_count"/></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="card itlingo-kpi-card border-0 shadow-sm rounded-3 h-100">
-                        <div class="card-body">
-                            <div class="itlingo-kpi-card__label">Story points (active sprint)</div>
-                            <div class="itlingo-kpi-card__value"><t t-out="kpi_active_sprint_points"/></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-12">
-                    <h2 class="h5 mb-3">Charts</h2>
-                    <t t-call="itlingo_website_portal.portal_workspace_charts_block"/>
                 </div>
             </div>
         </t>
@@ -458,8 +350,6 @@
                             <select class="form-select" id="ws_invite_role" name="role">
                                 <option value="ws_member">Workspace Member</option>
                                 <option value="doc_manager">Document Manager</option>
-                                <option value="sprint_manager">Sprint Manager</option>
-                                <option value="product_manager">Product Manager</option>
                                 <option value="ws_manager">Workspace Manager</option>
                             </select>
                         </div>
@@ -522,207 +412,6 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
-            </div>
-        </t>
-    </template>
-
-    <!-- Product backlog (hub + filters) -->
-    <template id="portal_workspace_product_backlog" name="Workspace product backlog">
-        <t t-call="itlingo_website_portal.portal_workspace_hub_shell">
-            <div class="card itlingo-portal-filter-card shadow-sm border-0 rounded-3 mb-4">
-                <div class="card-body">
-                    <p class="text-muted small text-uppercase fw-semibold mb-3">Backlog filters</p>
-                    <form method="get" t-attf-action="/my/workspaces/#{project.id}/product-backlog" class="row g-3 align-items-end">
-                        <div class="col-md-4 col-lg-3">
-                            <label class="form-label small text-muted mb-1" for="bl_name">Name / ID</label>
-                            <div class="input-group">
-                                <span class="input-group-text bg-light border-end-0"><i class="fa fa-search text-muted"/></span>
-                                <input type="search" class="form-control border-start-0 bg-light" id="bl_name"
-                                       name="name" t-att-value="filters.get('name') or ''" placeholder="Search"/>
-                            </div>
-                        </div>
-                        <div class="col-md-8 col-lg-6">
-                            <span class="form-label small text-muted d-block mb-1">Status</span>
-                            <div class="d-flex flex-wrap gap-2">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="status_new" value="1" id="bl_st_new" t-att-checked="filters.get('status_new')"/>
-                                    <label class="form-check-label" for="bl_st_new">new</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="status_ready" value="1" id="bl_st_ready" t-att-checked="filters.get('status_ready')"/>
-                                    <label class="form-check-label" for="bl_st_ready">ready</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="status_in_progress" value="1" id="bl_st_ip" t-att-checked="filters.get('status_in_progress')"/>
-                                    <label class="form-check-label" for="bl_st_ip">in_progress</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="status_done" value="1" id="bl_st_done" t-att-checked="filters.get('status_done')"/>
-                                    <label class="form-check-label" for="bl_st_done">done</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="status_canceled" value="1" id="bl_st_can" t-att-checked="filters.get('status_canceled')"/>
-                                    <label class="form-check-label" for="bl_st_can">canceled</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-3">
-                            <span class="form-label small text-muted d-block mb-1">Priority</span>
-                            <div class="d-flex flex-wrap gap-2">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="priority_vhi" value="1" id="bl_pr_vhi" t-att-checked="filters.get('priority_vhi')"/>
-                                    <label class="form-check-label" for="bl_pr_vhi">vhi</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="priority_hi" value="1" id="bl_pr_hi" t-att-checked="filters.get('priority_hi')"/>
-                                    <label class="form-check-label" for="bl_pr_hi">hi</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="priority_med" value="1" id="bl_pr_med" t-att-checked="filters.get('priority_med')"/>
-                                    <label class="form-check-label" for="bl_pr_med">med</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="priority_lo" value="1" id="bl_pr_lo" t-att-checked="filters.get('priority_lo')"/>
-                                    <label class="form-check-label" for="bl_pr_lo">lo</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 d-flex flex-wrap gap-2">
-                            <a t-attf-href="/my/workspaces/#{project.id}/product-backlog" class="btn btn-outline-secondary">Clear filters</a>
-                            <button type="submit" class="btn btn-primary"><i class="fa fa-search me-1"/>Filter</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <t t-if="not backlog_items">
-                <div class="alert alert-light border">The product backlog is empty or matches no filters.</div>
-            </t>
-            <div t-if="backlog_items" class="card border-0 shadow-sm rounded-3">
-                <div class="card-body p-0 table-responsive">
-                    <table class="table table-hover table-sm itlingo-portal-table mb-0">
-                        <thead class="table-light">
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Type</th>
-                                <th>Sprint</th>
-                                <th>Story Points</th>
-                                <th>Priority</th>
-                                <th>Status</th>
-                                <th>Tasks</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr t-foreach="backlog_items" t-as="item">
-                                <td class="text-muted"><t t-out="item.identifier"/></td>
-                                <td>
-                                    <a t-attf-href="/my/workspaces/#{project.id}/product-backlog/item/#{item.id}">
-                                        <t t-out="item.name"/>
-                                    </a>
-                                </td>
-                                <td><t t-out="item.item_type"/></td>
-                                <td><t t-out="item.sprint_id.name or '—'"/></td>
-                                <td><t t-out="item.story_points"/></td>
-                                <td>
-                                    <span t-attf-class="badge #{
-                                        item.priority == 'vhi' and 'bg-danger' or
-                                        item.priority == 'hi' and 'bg-warning' or
-                                        item.priority == 'med' and 'bg-info' or
-                                        item.priority == 'lo' and 'bg-secondary' or 'bg-light text-dark'
-                                    }">
-                                        <t t-out="item.priority"/>
-                                    </span>
-                                </td>
-                                <td>
-                                    <span t-attf-class="badge #{
-                                        item.status == 'done' and 'bg-success' or
-                                        item.status == 'in_progress' and 'bg-primary' or
-                                        item.status == 'canceled' and 'bg-danger' or 'bg-secondary'
-                                    }">
-                                        <t t-out="item.status"/>
-                                    </span>
-                                </td>
-                                <td><t t-out="item.task_count"/></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </t>
-    </template>
-
-    <!-- Sprint backlog landing (create sprint or redirect) -->
-    <template id="portal_workspace_sprint_backlog" name="Workspace sprint backlog">
-        <t t-call="itlingo_website_portal.portal_workspace_hub_shell">
-            <t t-if="can_create_sprint">
-                <div class="card border-0 shadow-sm rounded-3">
-                    <div class="card-header bg-white">
-                        <h2 class="h5 mb-0">Create a sprint</h2>
-                    </div>
-                    <div class="card-body">
-                        <div t-if="error.get('name')" class="alert alert-danger" role="alert"><t t-out="error['name']"/></div>
-                        <form t-attf-action="/my/workspaces/#{project.id}/sprints/new" method="post" class="row g-3">
-                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                            <div class="col-md-6">
-                                <label class="form-label" for="sp_name">Sprint name</label>
-                                <input type="text" class="form-control" id="sp_name" name="name" required=""
-                                       t-att-value="form.get('name') or ''"/>
-                            </div>
-                            <div class="col-md-3">
-                                <label class="form-label" for="sp_start">Start</label>
-                                <input type="date" class="form-control" id="sp_start" name="start_date"
-                                       t-att-value="form.get('start_date') or ''"/>
-                            </div>
-                            <div class="col-md-3">
-                                <label class="form-label" for="sp_end">End</label>
-                                <input type="date" class="form-control" id="sp_end" name="end_date"
-                                       t-att-value="form.get('end_date') or ''"/>
-                            </div>
-                            <div class="col-12">
-                                <label class="form-label" for="sp_goal">Goal</label>
-                                <textarea class="form-control" id="sp_goal" name="goal" rows="2"><t t-out="form.get('goal') or ''"/></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Create sprint</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </t>
-            <t t-else="">
-                <div class="alert alert-info border-0 shadow-sm rounded-3">
-                    You do not have permission to create sprints here. Ask a workspace manager.
-                </div>
-            </t>
-        </t>
-    </template>
-
-    <template id="portal_workspace_sprint_history" name="Workspace sprint history">
-        <t t-call="itlingo_website_portal.portal_workspace_hub_shell">
-            <t t-if="not sprints">
-                <p class="text-muted">No closed sprints yet.</p>
-            </t>
-            <div t-if="sprints" class="card border-0 shadow-sm rounded-3">
-                <div class="card-body p-0 table-responsive">
-                    <table class="table table-hover mb-0">
-                        <thead class="table-light">
-                            <tr>
-                                <th>Sprint</th>
-                                <th>Dates</th>
-                                <th>Story points</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr t-foreach="sprints" t-as="sp">
-                                <td>
-                                    <a t-attf-href="/my/sprints/#{project.id}/#{sp.id}"><t t-out="sp.name"/></a>
-                                </td>
-                                <td><t t-out="sp.start_date or '—'"/> – <t t-out="sp.end_date or '—'"/></td>
-                                <td><t t-out="sp.completed_story_points"/> / <t t-out="sp.total_story_points"/></td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </t>
@@ -843,17 +532,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </t>
-    </template>
-
-    <template id="portal_workspace_placeholder" name="Workspace placeholder page">
-        <t t-call="itlingo_website_portal.portal_workspace_hub_shell">
-            <div class="card border-0 shadow-sm rounded-3">
-                <div class="card-body">
-                    <h2 class="h5"><t t-out="placeholder_title"/></h2>
-                    <p class="text-muted mb-0"><t t-out="placeholder_message"/></p>
                 </div>
             </div>
         </t>

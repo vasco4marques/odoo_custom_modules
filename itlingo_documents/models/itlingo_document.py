@@ -39,10 +39,6 @@ class ItlingoDocument(models.Model):
         'itlingo.organization', string='Organization',
         tracking=True,
     )
-    backlog_item_id = fields.Many2one(
-        'itlingo.backlog.item', string='Backlog Item',
-        domain="[('project_id', '=', project_id)]",
-    )
     creator_id = fields.Many2one(
         'res.users', string='Creator',
         default=lambda self: self.env.user, readonly=True,

@@ -60,7 +60,6 @@
                         <group>
                             <field name="project_id"/>
                             <field name="organization_id"/>
-                            <field name="backlog_item_id"/>
                         </group>
                     </group>
                     <group>

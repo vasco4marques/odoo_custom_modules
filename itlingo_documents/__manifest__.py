@@ -5,11 +5,11 @@
     'summary': 'Structured document management for ITLingo Cloud',
     'description': """
 Typed, versioned document management with templates, linked to
-projects, organizations, and backlog items.
+projects and organizations.
     """,
     'author': 'ITLingo',
     'website': 'https://itlingo.ist.utl.pt',
-    'depends': ['mail', 'itlingo_organizations', 'itlingo_workspace_access', 'itlingo_agile'],
+    'depends': ['mail', 'itlingo_organizations', 'itlingo_workspace_access'],
     'data': [
         'security/ir.model.access.csv',
         'security/itlingo_document_rules.xml',

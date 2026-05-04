@@ -30,7 +30,7 @@
     <record id="role_admin_research" model="itlingo.project.role">
         <field name="user_id" ref="base.user_admin"/>
         <field name="project_id" ref="project_research"/>
-        <field name="role">product_manager</field>
+        <field name="role">ws_member</field>
         <field name="state">accepted</field>
     </record>
 

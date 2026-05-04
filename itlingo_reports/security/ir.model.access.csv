@@ -1,7 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_itlingo_burndown_report_member,itlingo.burndown.report.member,model_itlingo_burndown_report,itlingo_organizations.group_itlingo_member,1,0,0,0
-access_itlingo_burndown_report_manager,itlingo.burndown.report.manager,model_itlingo_burndown_report,itlingo_organizations.group_itlingo_manager,1,0,0,0
-access_itlingo_velocity_report_member,itlingo.velocity.report.member,model_itlingo_velocity_report,itlingo_organizations.group_itlingo_member,1,0,0,0
-access_itlingo_velocity_report_manager,itlingo.velocity.report.manager,model_itlingo_velocity_report,itlingo_organizations.group_itlingo_manager,1,0,0,0
-access_backlog_export_wizard,itlingo.backlog.export.wizard,model_itlingo_backlog_export_wizard,itlingo_organizations.group_itlingo_member,1,1,1,1
-access_backlog_import_wizard,itlingo.backlog.import.wizard,model_itlingo_backlog_import_wizard,itlingo_organizations.group_itlingo_manager,1,1,1,1

@@ -40,4 +40,68 @@
         </t>
     </template>
 
+    <template id="portal_welcome_create_organization"
+              name="Welcome – Create Organization">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure">
+                <section class="s_text_block pt80 pb80">
+                    <div class="container" style="max-width: 560px;">
+                        <h2 class="mb-2 text-center">Welcome to ITLingo Cloud</h2>
+                        <p class="text-muted text-center mb-4">
+                            Create your organization to get started, or skip for now.
+                        </p>
+
+                        <div t-if="error.get('name')" class="alert alert-danger" role="alert">
+                            <t t-out="error['name']"/>
+                        </div>
+
+                        <div class="card shadow-sm border-0 rounded-3">
+                            <div class="card-body p-4">
+                                <form action="/welcome/create-organization" method="post">
+                                    <input type="hidden" name="csrf_token"
+                                           t-att-value="request.csrf_token()"/>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="org_name">Organization name</label>
+                                        <input type="text" class="form-control" name="name"
+                                               id="org_name" required="required"
+                                               t-att-value="form.get('name') or ''"/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="organization_type">Type</label>
+                                        <select class="form-select" name="organization_type"
+                                                id="organization_type">
+                                            <option value="private">Private</option>
+                                            <option value="public">Public</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="activity_type">Activity</label>
+                                        <select class="form-select" name="activity_type"
+                                                id="activity_type">
+                                            <option value="it">IT</option>
+                                            <option value="marketing">Marketing</option>
+                                            <option value="consulting">Consulting</option>
+                                            <option value="finance">Finance</option>
+                                            <option value="education">Education</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <button type="submit" class="btn btn-primary">
+                                            Create organization
+                                        </button>
+                                        <button type="submit" name="skip" value="1"
+                                                class="btn btn-link text-muted">
+                                            Skip for now
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
 </odoo>

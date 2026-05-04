@@ -1,8 +1,14 @@
-from odoo import api, models
+from odoo import api, fields, models
 
 
 class ResUsers(models.Model):
     _inherit = 'res.users'
+
+    org_setup_pending = fields.Boolean(
+        default=False,
+        help='When True the user is redirected to the welcome '
+             'organisation-creation screen on next login.',
+    )
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -21,5 +27,6 @@ class ResUsers(models.Model):
                     "VALUES (%s, %s) ON CONFLICT DO NOTHING",
                     (itlingo_member.id, user.id),
                 )
+                user.org_setup_pending = True
         self.env.registry.clear_cache()
         return users

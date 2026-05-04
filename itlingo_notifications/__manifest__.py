@@ -11,7 +11,7 @@ portal inbox, and automated event-driven notifications.
     'website': 'https://itlingo.ist.utl.pt',
     'depends': [
         'mail', 'portal',
-        'itlingo_organizations', 'itlingo_workspace_access', 'itlingo_agile',
+        'itlingo_organizations', 'itlingo_workspace_access',
     ],
     'data': [
         'security/ir.model.access.csv',

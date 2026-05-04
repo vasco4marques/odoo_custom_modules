@@ -16,8 +16,6 @@ class ItlingoProjectRole(models.Model):
     )
     role = fields.Selection([
         ('ws_manager', 'Workspace Manager'),
-        ('product_manager', 'Product Manager'),
-        ('sprint_manager', 'Sprint Manager'),
         ('doc_manager', 'Document Manager'),
         ('ws_member', 'Workspace Member'),
     ], required=True, default='ws_member')
