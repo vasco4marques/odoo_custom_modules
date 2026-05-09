@@ -403,11 +403,20 @@ class ITLingoPortal(CustomerPortal):
             invitee = Users.with_context(no_org_setup=True).create({
                 'login': email,
                 'partner_id': partner.id,
-                'groups_id': [(6, 0, [
-                    request.env.ref('base.group_portal').id,
-                ])],
             })
-            invitee.action_reset_password()
+            user_group = request.env.ref('base.group_user')
+            portal_group = request.env.ref('base.group_portal')
+            request.env.cr.execute(
+                "DELETE FROM res_groups_users_rel WHERE gid = %s AND uid = %s",
+                (user_group.id, invitee.id),
+            )
+            request.env.cr.execute(
+                "INSERT INTO res_groups_users_rel (gid, uid) "
+                "VALUES (%s, %s) ON CONFLICT DO NOTHING",
+                (portal_group.id, invitee.id),
+            )
+            invitee.env.registry.clear_cache()
+            invitee.with_context(create_user=True).action_reset_password()
             new_user_created = True
         Role = request.env['itlingo.organization.role'].sudo()
         existing = Role.search([
@@ -1214,11 +1223,20 @@ class ITLingoPortal(CustomerPortal):
             invitee = Users.with_context(no_org_setup=True).create({
                 'login': email,
                 'partner_id': partner.id,
-                'groups_id': [(6, 0, [
-                    request.env.ref('base.group_portal').id,
-                ])],
             })
-            invitee.action_reset_password()
+            user_group = request.env.ref('base.group_user')
+            portal_group = request.env.ref('base.group_portal')
+            request.env.cr.execute(
+                "DELETE FROM res_groups_users_rel WHERE gid = %s AND uid = %s",
+                (user_group.id, invitee.id),
+            )
+            request.env.cr.execute(
+                "INSERT INTO res_groups_users_rel (gid, uid) "
+                "VALUES (%s, %s) ON CONFLICT DO NOTHING",
+                (portal_group.id, invitee.id),
+            )
+            invitee.env.registry.clear_cache()
+            invitee.with_context(create_user=True).action_reset_password()
             new_user_created = True
         WsRole = request.env['itlingo.project.role'].sudo()
         existing = WsRole.search([
