@@ -14,7 +14,7 @@
             <div t-if="org_list_message == 'org_deleted'" class="alert alert-success" role="alert">
                 The organization was deleted.
             </div>
-            <div t-if="is_platform_admin" class="d-flex flex-wrap align-items-center gap-2 mb-3">
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
                 <a href="/my/organizations/new" class="btn btn-primary">New organization</a>
             </div>
             <div class="card itlingo-portal-filter-card shadow-sm border-0 rounded-3 mb-4">

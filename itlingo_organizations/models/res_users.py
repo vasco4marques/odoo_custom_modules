@@ -19,6 +19,7 @@ class ResUsers(models.Model):
         )
         if not itlingo_member:
             return users
+        skip_org_setup = self.env.context.get('no_org_setup', False)
         for user in users:
             if user.has_group('base.group_portal') \
                     and not user.has_group('itlingo_organizations.group_itlingo_member'):
@@ -27,6 +28,7 @@ class ResUsers(models.Model):
                     "VALUES (%s, %s) ON CONFLICT DO NOTHING",
                     (itlingo_member.id, user.id),
                 )
-                user.org_setup_pending = True
+                if not skip_org_setup:
+                    user.org_setup_pending = True
         self.env.registry.clear_cache()
         return users

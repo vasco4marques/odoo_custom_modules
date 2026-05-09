@@ -291,8 +291,6 @@ class ITLingoPortal(CustomerPortal):
     @route('/my/organizations/new', type='http', auth='user', website=True,
            methods=['GET', 'POST'])
     def portal_organization_new(self, **post):
-        if not self._is_platform_admin():
-            raise AccessError(_('Only platform administrators can create organizations.'))
         values = self._prepare_portal_layout_values()
         values.update({
             'page_name': 'organization_new',
@@ -396,10 +394,21 @@ class ITLingoPortal(CustomerPortal):
             invitee = Users.search([('login', '=ilike', email)], limit=1)
         if not invitee:
             invitee = Users.search([('email', '=ilike', email)], limit=1)
+        new_user_created = False
         if not invitee:
-            return request.redirect(
-                f'/my/organizations/{org_id}/users?error=invite_user_not_found',
-            )
+            partner = request.env['res.partner'].sudo().create({
+                'name': email.split('@')[0],
+                'email': email,
+            })
+            invitee = Users.with_context(no_org_setup=True).create({
+                'login': email,
+                'partner_id': partner.id,
+                'groups_id': [(6, 0, [
+                    request.env.ref('base.group_portal').id,
+                ])],
+            })
+            invitee.action_reset_password()
+            new_user_created = True
         Role = request.env['itlingo.organization.role'].sudo()
         existing = Role.search([
             ('organization_id', '=', org_id),
@@ -413,7 +422,7 @@ class ITLingoPortal(CustomerPortal):
             'organization_id': org_id,
             'user_id': invitee.id,
             'role': role_key,
-            'state': 'pending',
+            'state': 'accepted' if new_user_created else 'pending',
         })
         return request.redirect(
             f'/my/organizations/{org_id}/users?message=invite_sent',
@@ -1196,12 +1205,21 @@ class ITLingoPortal(CustomerPortal):
             invitee = Users.search([('login', '=ilike', email)], limit=1)
         if not invitee:
             invitee = Users.search([('email', '=ilike', email)], limit=1)
+        new_user_created = False
         if not invitee:
-            if to_users:
-                return self._portal_ws_user_redirect(project_id, error='invite_user_not_found')
-            return request.redirect(
-                f'/my/workspaces/{project_id}?error=invite_user_not_found',
-            )
+            partner = request.env['res.partner'].sudo().create({
+                'name': email.split('@')[0],
+                'email': email,
+            })
+            invitee = Users.with_context(no_org_setup=True).create({
+                'login': email,
+                'partner_id': partner.id,
+                'groups_id': [(6, 0, [
+                    request.env.ref('base.group_portal').id,
+                ])],
+            })
+            invitee.action_reset_password()
+            new_user_created = True
         WsRole = request.env['itlingo.project.role'].sudo()
         existing = WsRole.search([
             ('project_id', '=', project_id),
@@ -1217,7 +1235,7 @@ class ITLingoPortal(CustomerPortal):
             'project_id': project_id,
             'user_id': invitee.id,
             'role': role_key,
-            'state': 'pending',
+            'state': 'accepted' if new_user_created else 'pending',
         })
         if to_users:
             return self._portal_ws_user_redirect(project_id, message='invite_sent')
