@@ -79,6 +79,37 @@ class ITLingoPortal(CustomerPortal):
             'itlingo_organizations.group_itlingo_admin',
         )
 
+    def _send_signup_invitation_email(self, email):
+        base_url = request.env['ir.config_parameter'].sudo().get_param('web.base.url')
+        signup_url = f'{base_url}/web/signup'
+        company = request.env.company
+        body = (
+            '<div style="font-family: Arial, sans-serif; max-width: 600px;">'
+            '<h2>You\'ve been invited to ITLingo Cloud</h2>'
+            '<p>Hello,</p>'
+            '<p>You have been invited to collaborate on '
+            '<strong>ITLingo Cloud</strong>.</p>'
+            '<p>Create your account using the email address '
+            'this message was sent to:</p>'
+            '<p style="margin: 24px 0;">'
+            f'<a href="{signup_url}" '
+            'style="background-color: #714B67; color: white; '
+            'padding: 12px 24px; text-decoration: none; '
+            'border-radius: 4px; display: inline-block;">'
+            'Create Account</a></p>'
+            '<p style="color: #666; font-size: 12px;">'
+            'If the button doesn\'t work, copy and paste this link '
+            f'into your browser:<br/>{signup_url}</p>'
+            '</div>'
+        )
+        mail = request.env['mail.mail'].sudo().create({
+            'subject': "You've been invited to join ITLingo Cloud",
+            'body_html': body,
+            'email_to': email,
+            'email_from': company.email_formatted or company.email or '',
+        })
+        mail.send()
+
     def _portal_workspace_role(self, user, project_id):
         return request.env['itlingo.project.role'].sudo().search([
             ('user_id', '=', user.id),
@@ -401,8 +432,9 @@ class ITLingoPortal(CustomerPortal):
                 ('organization_id', '=', org_id),
             ], limit=1)
             if already_pending:
+                self._send_signup_invitation_email(email)
                 return request.redirect(
-                    f'/my/organizations/{org_id}/users?error=invite_already_member',
+                    f'/my/organizations/{org_id}/users?message=invite_resent',
                 )
             partner = request.env['res.partner'].sudo().search(
                 [('email', '=ilike', email)], limit=1,
@@ -418,12 +450,7 @@ class ITLingoPortal(CustomerPortal):
                 'role': role_key,
                 'invited_by_id': request.env.user.id,
             })
-            template = request.env.ref(
-                'itlingo_organizations.mail_template_signup_invitation',
-                raise_if_not_found=False,
-            )
-            if template:
-                template.sudo().send_mail(partner.id, force_send=True)
+            self._send_signup_invitation_email(email)
             return request.redirect(
                 f'/my/organizations/{org_id}/users?message=invite_sent',
             )
@@ -1230,10 +1257,11 @@ class ITLingoPortal(CustomerPortal):
                 ('project_id', '=', project_id),
             ], limit=1)
             if already_pending:
+                self._send_signup_invitation_email(email)
                 if to_users:
-                    return self._portal_ws_user_redirect(project_id, error='invite_already_member')
+                    return self._portal_ws_user_redirect(project_id, message='invite_resent')
                 return request.redirect(
-                    f'/my/workspaces/{project_id}?error=invite_already_member',
+                    f'/my/workspaces/{project_id}?message=invite_resent',
                 )
             partner = request.env['res.partner'].sudo().search(
                 [('email', '=ilike', email)], limit=1,
@@ -1249,12 +1277,7 @@ class ITLingoPortal(CustomerPortal):
                 'role': role_key,
                 'invited_by_id': request.env.user.id,
             })
-            template = request.env.ref(
-                'itlingo_organizations.mail_template_signup_invitation',
-                raise_if_not_found=False,
-            )
-            if template:
-                template.sudo().send_mail(partner.id, force_send=True)
+            self._send_signup_invitation_email(email)
             if to_users:
                 return self._portal_ws_user_redirect(project_id, message='invite_sent')
             return request.redirect(

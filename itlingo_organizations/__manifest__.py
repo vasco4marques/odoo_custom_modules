@@ -15,7 +15,6 @@ for the ITLingo Cloud platform.
         'security/ir.model.access.csv',
         'security/itlingo_organization_rules.xml',
         'data/auth_signup_data.xml',
-        'data/mail_template_signup_invitation.xml',
         'views/itlingo_organization_role_views.xml',
         'views/itlingo_organization_views.xml',
         'views/itlingo_menus.xml',

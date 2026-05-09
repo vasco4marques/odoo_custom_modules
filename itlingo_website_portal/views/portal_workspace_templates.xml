@@ -300,7 +300,10 @@
     <template id="portal_workspace_users" name="Workspace Users">
         <t t-call="itlingo_website_portal.portal_workspace_hub_shell">
             <div t-if="ws_message == 'invite_sent'" class="alert alert-success" role="alert">
-                Invitation created. The user will see it under My Invitations.
+                Invitation sent successfully.
+            </div>
+            <div t-if="ws_message == 'invite_resent'" class="alert alert-success" role="alert">
+                Invitation resent.
             </div>
             <div t-if="ws_message == 'role_updated'" class="alert alert-success" role="alert">
                 Role updated.
@@ -310,9 +313,6 @@
             </div>
             <div t-if="ws_error == 'invite_email_required'" class="alert alert-danger" role="alert">
                 Enter an email address to invite.
-            </div>
-            <div t-if="ws_error == 'invite_user_not_found'" class="alert alert-danger" role="alert">
-                No user found with that email. The person must have an account first.
             </div>
             <div t-if="ws_error == 'invite_already_member'" class="alert alert-danger" role="alert">
                 This user already has a role in the workspace.
