@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="notification_bell"
+              inherit_id="portal.user_dropdown"
+              name="ITLingo Notification Bell">
+        <xpath expr="//li[@t-if='is_connected']" position="before">
+            <li t-if="is_connected" class="o_no_autohide_item itlingo-bell-wrapper">
+                <div class="itlingo-bell position-relative" role="button"
+                     aria-label="Notifications" tabindex="0">
+                    <i class="fa fa-bell fa-lg"/>
+                    <span class="itlingo-bell__badge d-none">0</span>
+                </div>
+                <div class="itlingo-bell-dropdown d-none">
+                    <div class="itlingo-bell-dropdown__header d-flex justify-content-between align-items-center">
+                        <strong>Notifications</strong>
+                        <button type="button" class="btn btn-sm btn-link itlingo-bell__clear-all p-0">
+                            Clear all
+                        </button>
+                    </div>
+                    <div class="itlingo-bell-dropdown__body">
+                        <div class="itlingo-bell-dropdown__empty text-muted text-center py-4">
+                            No new notifications
+                        </div>
+                        <div class="itlingo-bell-dropdown__list"></div>
+                    </div>
+                    <div class="itlingo-bell-dropdown__footer text-center">
+                        <a href="/my/notifications" class="small">View all notifications</a>
+                    </div>
+                </div>
+            </li>
+        </xpath>
+    </template>
+
+</odoo>
