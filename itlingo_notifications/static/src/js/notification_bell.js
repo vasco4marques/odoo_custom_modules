@@ -3,13 +3,6 @@
 (function () {
     'use strict';
 
-    const BELL_SEL = '.itlingo-bell';
-    const BADGE_SEL = '.itlingo-bell__badge';
-    const DROPDOWN_SEL = '.itlingo-bell-dropdown';
-    const LIST_SEL = '.itlingo-bell-dropdown__list';
-    const EMPTY_SEL = '.itlingo-bell-dropdown__empty';
-    const CLEAR_SEL = '.itlingo-bell__clear-all';
-
     function rpc(url, params) {
         return fetch(url, {
             method: 'POST',
@@ -88,28 +81,47 @@
         return card;
     }
 
-    function init() {
-        var wrapper = document.querySelector('.itlingo-bell-wrapper');
-        if (!wrapper) return;
+    var allInstances = [];
 
-        var bell = wrapper.querySelector(BELL_SEL);
-        var badge = wrapper.querySelector(BADGE_SEL);
-        var dropdown = wrapper.querySelector(DROPDOWN_SEL);
-        var list = wrapper.querySelector(LIST_SEL);
-        var empty = wrapper.querySelector(EMPTY_SEL);
-        var clearBtn = wrapper.querySelector(CLEAR_SEL);
+    function updateAllBadges(count) {
+        allInstances.forEach(function (inst) {
+            inst.setBadge(count);
+        });
+    }
+
+    function closeAllDropdowns() {
+        allInstances.forEach(function (inst) {
+            inst.close();
+        });
+    }
+
+    function initBell(wrapper) {
+        var bell = wrapper.querySelector('.itlingo-bell');
+        var badge = wrapper.querySelector('.itlingo-bell__badge');
+        var dropdown = wrapper.querySelector('.itlingo-bell-dropdown');
+        var list = wrapper.querySelector('.itlingo-bell-dropdown__list');
+        var empty = wrapper.querySelector('.itlingo-bell-dropdown__empty');
+        var clearBtn = wrapper.querySelector('.itlingo-bell__clear-all');
+
+        if (!bell || !dropdown) return null;
 
         var isOpen = false;
         var loading = false;
 
-        function setBadge(count) {
-            if (count > 0) {
-                badge.textContent = count > 99 ? '99+' : count;
-                badge.classList.remove('d-none');
-            } else {
-                badge.classList.add('d-none');
-            }
-        }
+        var inst = {
+            setBadge: function (count) {
+                if (count > 0) {
+                    badge.textContent = count > 99 ? '99+' : count;
+                    badge.classList.remove('d-none');
+                } else {
+                    badge.classList.add('d-none');
+                }
+            },
+            close: function () {
+                isOpen = false;
+                dropdown.classList.add('d-none');
+            },
+        };
 
         function renderList(notifications) {
             list.innerHTML = '';
@@ -133,50 +145,44 @@
             rpc('/itlingo/notifications/bell').then(function (res) {
                 loading = false;
                 if (!res) return;
-                setBadge(res.unread_count);
+                updateAllBadges(res.unread_count);
                 renderList(res.notifications);
             }).catch(function () { loading = false; });
         }
 
         function openDropdown() {
+            closeAllDropdowns();
             isOpen = true;
             dropdown.classList.remove('d-none');
             fetchBell();
         }
 
-        function closeDropdown() {
-            isOpen = false;
-            dropdown.classList.add('d-none');
-        }
-
         bell.addEventListener('click', function (e) {
+            e.preventDefault();
             e.stopPropagation();
-            if (isOpen) closeDropdown();
-            else openDropdown();
-        });
-
-        document.addEventListener('click', function (e) {
-            if (isOpen && !wrapper.contains(e.target)) {
-                closeDropdown();
+            if (isOpen) {
+                inst.close();
+            } else {
+                openDropdown();
             }
         });
 
-        dropdown.addEventListener('click', function (e) {
-            e.stopPropagation();
-        });
-
-        wrapper.addEventListener('click', function (e) {
+        function handleAction(e) {
             var actionBtn = e.target.closest('.itlingo-bell-action');
             if (actionBtn) {
+                e.preventDefault();
+                e.stopPropagation();
                 var notifId = parseInt(actionBtn.dataset.notif, 10);
                 var action = actionBtn.dataset.action;
                 actionBtn.disabled = true;
+                var sibling = actionBtn.parentElement.querySelector('.itlingo-bell-action:not([disabled])');
+                if (sibling) sibling.disabled = true;
                 rpc('/itlingo/notifications/invitation/respond', {
                     notification_id: notifId,
                     action: action,
                 }).then(function (res) {
                     if (res) {
-                        setBadge(res.unread_count);
+                        updateAllBadges(res.unread_count);
                         var card = actionBtn.closest('.itlingo-bell-item');
                         if (card) card.remove();
                         if (list.children.length === 0) {
@@ -189,13 +195,15 @@
 
             var dismissBtn = e.target.closest('.itlingo-bell-dismiss');
             if (dismissBtn) {
+                e.preventDefault();
+                e.stopPropagation();
                 var nid = parseInt(dismissBtn.dataset.notif, 10);
                 dismissBtn.disabled = true;
                 rpc('/itlingo/notifications/mark_read', {
                     notification_id: nid,
                 }).then(function (res) {
                     if (res) {
-                        setBadge(res.unread_count);
+                        updateAllBadges(res.unread_count);
                         var card = dismissBtn.closest('.itlingo-bell-item');
                         if (card) card.remove();
                         if (list.children.length === 0) {
@@ -203,19 +211,51 @@
                         }
                     }
                 });
+                return;
             }
+
+            var clearAll = e.target.closest('.itlingo-bell__clear-all');
+            if (clearAll) {
+                e.preventDefault();
+                e.stopPropagation();
+                rpc('/itlingo/notifications/mark_read', {}).then(function (res) {
+                    if (res) {
+                        updateAllBadges(0);
+                        renderList([]);
+                    }
+                });
+                return;
+            }
+        }
+
+        dropdown.addEventListener('click', function (e) {
+            handleAction(e);
+            e.stopPropagation();
         });
 
-        clearBtn.addEventListener('click', function () {
-            rpc('/itlingo/notifications/mark_read', {}).then(function (res) {
+        return inst;
+    }
+
+    function init() {
+        var wrappers = document.querySelectorAll('.itlingo-bell-wrapper');
+        if (!wrappers.length) return;
+
+        wrappers.forEach(function (wrapper) {
+            var inst = initBell(wrapper);
+            if (inst) allInstances.push(inst);
+        });
+
+        document.addEventListener('click', function () {
+            closeAllDropdowns();
+        });
+
+        if (allInstances.length > 0) {
+            rpc('/itlingo/notifications/bell').then(function (res) {
                 if (res) {
-                    setBadge(0);
-                    renderList([]);
+                    updateAllBadges(res.unread_count);
                 }
             });
-        });
-
-        fetchBell();
+        }
     }
 
     if (document.readyState === 'loading') {
