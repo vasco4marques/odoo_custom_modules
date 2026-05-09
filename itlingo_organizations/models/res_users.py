@@ -41,7 +41,6 @@ class ResUsers(models.Model):
         if not invitations:
             return False
         OrgRole = self.env['itlingo.organization.role'].sudo()
-        WsRole = self.env.get('itlingo.project.role')
         for inv in invitations:
             if inv.organization_id:
                 OrgRole.create({
@@ -50,12 +49,14 @@ class ResUsers(models.Model):
                     'role': inv.role,
                     'state': 'accepted',
                 })
-            elif inv.project_id and WsRole is not None:
-                WsRole.sudo().create({
-                    'project_id': inv.project_id.id,
-                    'user_id': user.id,
-                    'role': inv.role,
-                    'state': 'accepted',
-                })
+            elif inv.project_id:
+                WsRole = self.env.get('itlingo.project.role')
+                if WsRole is not None:
+                    WsRole.sudo().create({
+                        'project_id': inv.project_id,
+                        'user_id': user.id,
+                        'role': inv.role,
+                        'state': 'accepted',
+                    })
         invitations.unlink()
         return True

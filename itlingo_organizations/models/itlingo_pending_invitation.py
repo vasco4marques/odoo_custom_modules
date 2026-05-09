@@ -10,8 +10,6 @@ class ItlingoPendingInvitation(models.Model):
     organization_id = fields.Many2one(
         'itlingo.organization', ondelete='cascade',
     )
-    project_id = fields.Many2one(
-        'project.project', ondelete='cascade',
-    )
+    project_id = fields.Integer(string='Workspace ID')
     role = fields.Char(required=True)
     invited_by_id = fields.Many2one('res.users', string='Invited By')
