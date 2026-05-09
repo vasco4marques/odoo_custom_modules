@@ -412,19 +412,22 @@ class ITLingoPortal(CustomerPortal):
                     'name': email.split('@')[0],
                     'email': email,
                 })
-            partner.sudo().signup_prepare(signup_type='signup')
             Pending.create({
                 'email': email,
                 'organization_id': org_id,
                 'role': role_key,
                 'invited_by_id': request.env.user.id,
             })
+            base_url = request.env['ir.config_parameter'].sudo().get_param('web.base.url')
+            signup_url = f'{base_url}/web/signup'
             template = request.env.ref(
                 'itlingo_organizations.mail_template_signup_invitation',
                 raise_if_not_found=False,
             )
             if template:
-                template.sudo().send_mail(partner.id, force_send=True)
+                template.sudo().with_context(signup_url=signup_url).send_mail(
+                    partner.id, force_send=True,
+                )
             return request.redirect(
                 f'/my/organizations/{org_id}/users?message=invite_sent',
             )
@@ -1244,19 +1247,22 @@ class ITLingoPortal(CustomerPortal):
                     'name': email.split('@')[0],
                     'email': email,
                 })
-            partner.sudo().signup_prepare(signup_type='signup')
             Pending.create({
                 'email': email,
                 'project_id': project_id,
                 'role': role_key,
                 'invited_by_id': request.env.user.id,
             })
+            base_url = request.env['ir.config_parameter'].sudo().get_param('web.base.url')
+            signup_url = f'{base_url}/web/signup'
             template = request.env.ref(
                 'itlingo_organizations.mail_template_signup_invitation',
                 raise_if_not_found=False,
             )
             if template:
-                template.sudo().send_mail(partner.id, force_send=True)
+                template.sudo().with_context(signup_url=signup_url).send_mail(
+                    partner.id, force_send=True,
+                )
             if to_users:
                 return self._portal_ws_user_redirect(project_id, message='invite_sent')
             return request.redirect(
