@@ -394,30 +394,40 @@ class ITLingoPortal(CustomerPortal):
             invitee = Users.search([('login', '=ilike', email)], limit=1)
         if not invitee:
             invitee = Users.search([('email', '=ilike', email)], limit=1)
-        new_user_created = False
         if not invitee:
-            partner = request.env['res.partner'].sudo().create({
-                'name': email.split('@')[0],
+            Pending = request.env['itlingo.pending.invitation'].sudo()
+            already_pending = Pending.search([
+                ('email', '=ilike', email),
+                ('organization_id', '=', org_id),
+            ], limit=1)
+            if already_pending:
+                return request.redirect(
+                    f'/my/organizations/{org_id}/users?error=invite_already_member',
+                )
+            partner = request.env['res.partner'].sudo().search(
+                [('email', '=ilike', email)], limit=1,
+            )
+            if not partner:
+                partner = request.env['res.partner'].sudo().create({
+                    'name': email.split('@')[0],
+                    'email': email,
+                })
+            partner.sudo().signup_prepare(signup_type='signup')
+            Pending.create({
                 'email': email,
+                'organization_id': org_id,
+                'role': role_key,
+                'invited_by_id': request.env.user.id,
             })
-            invitee = Users.with_context(no_org_setup=True).create({
-                'login': email,
-                'partner_id': partner.id,
-            })
-            user_group = request.env.ref('base.group_user')
-            portal_group = request.env.ref('base.group_portal')
-            request.env.cr.execute(
-                "DELETE FROM res_groups_users_rel WHERE gid = %s AND uid = %s",
-                (user_group.id, invitee.id),
+            template = request.env.ref(
+                'itlingo_organizations.mail_template_signup_invitation',
+                raise_if_not_found=False,
             )
-            request.env.cr.execute(
-                "INSERT INTO res_groups_users_rel (gid, uid) "
-                "VALUES (%s, %s) ON CONFLICT DO NOTHING",
-                (portal_group.id, invitee.id),
+            if template:
+                template.sudo().send_mail(partner.id, force_send=True)
+            return request.redirect(
+                f'/my/organizations/{org_id}/users?message=invite_sent',
             )
-            invitee.env.registry.clear_cache()
-            invitee.with_context(create_user=True).action_reset_password()
-            new_user_created = True
         Role = request.env['itlingo.organization.role'].sudo()
         existing = Role.search([
             ('organization_id', '=', org_id),
@@ -431,7 +441,7 @@ class ITLingoPortal(CustomerPortal):
             'organization_id': org_id,
             'user_id': invitee.id,
             'role': role_key,
-            'state': 'accepted' if new_user_created else 'pending',
+            'state': 'pending',
         })
         return request.redirect(
             f'/my/organizations/{org_id}/users?message=invite_sent',
@@ -1214,30 +1224,44 @@ class ITLingoPortal(CustomerPortal):
             invitee = Users.search([('login', '=ilike', email)], limit=1)
         if not invitee:
             invitee = Users.search([('email', '=ilike', email)], limit=1)
-        new_user_created = False
         if not invitee:
-            partner = request.env['res.partner'].sudo().create({
-                'name': email.split('@')[0],
+            Pending = request.env['itlingo.pending.invitation'].sudo()
+            already_pending = Pending.search([
+                ('email', '=ilike', email),
+                ('project_id', '=', project_id),
+            ], limit=1)
+            if already_pending:
+                if to_users:
+                    return self._portal_ws_user_redirect(project_id, error='invite_already_member')
+                return request.redirect(
+                    f'/my/workspaces/{project_id}?error=invite_already_member',
+                )
+            partner = request.env['res.partner'].sudo().search(
+                [('email', '=ilike', email)], limit=1,
+            )
+            if not partner:
+                partner = request.env['res.partner'].sudo().create({
+                    'name': email.split('@')[0],
+                    'email': email,
+                })
+            partner.sudo().signup_prepare(signup_type='signup')
+            Pending.create({
                 'email': email,
+                'project_id': project_id,
+                'role': role_key,
+                'invited_by_id': request.env.user.id,
             })
-            invitee = Users.with_context(no_org_setup=True).create({
-                'login': email,
-                'partner_id': partner.id,
-            })
-            user_group = request.env.ref('base.group_user')
-            portal_group = request.env.ref('base.group_portal')
-            request.env.cr.execute(
-                "DELETE FROM res_groups_users_rel WHERE gid = %s AND uid = %s",
-                (user_group.id, invitee.id),
+            template = request.env.ref(
+                'itlingo_organizations.mail_template_signup_invitation',
+                raise_if_not_found=False,
             )
-            request.env.cr.execute(
-                "INSERT INTO res_groups_users_rel (gid, uid) "
-                "VALUES (%s, %s) ON CONFLICT DO NOTHING",
-                (portal_group.id, invitee.id),
+            if template:
+                template.sudo().send_mail(partner.id, force_send=True)
+            if to_users:
+                return self._portal_ws_user_redirect(project_id, message='invite_sent')
+            return request.redirect(
+                f'/my/workspaces/{project_id}?message=invite_sent',
             )
-            invitee.env.registry.clear_cache()
-            invitee.with_context(create_user=True).action_reset_password()
-            new_user_created = True
         WsRole = request.env['itlingo.project.role'].sudo()
         existing = WsRole.search([
             ('project_id', '=', project_id),
@@ -1253,7 +1277,7 @@ class ITLingoPortal(CustomerPortal):
             'project_id': project_id,
             'user_id': invitee.id,
             'role': role_key,
-            'state': 'accepted' if new_user_created else 'pending',
+            'state': 'pending',
         })
         if to_users:
             return self._portal_ws_user_redirect(project_id, message='invite_sent')

@@ -19,7 +19,6 @@ class ResUsers(models.Model):
         )
         if not itlingo_member:
             return users
-        skip_org_setup = self.env.context.get('no_org_setup', False)
         for user in users:
             if user.has_group('base.group_portal') \
                     and not user.has_group('itlingo_organizations.group_itlingo_member'):
@@ -28,7 +27,35 @@ class ResUsers(models.Model):
                     "VALUES (%s, %s) ON CONFLICT DO NOTHING",
                     (itlingo_member.id, user.id),
                 )
-                if not skip_org_setup:
+                pending = self._process_pending_invitations(user)
+                if not pending:
                     user.org_setup_pending = True
         self.env.registry.clear_cache()
         return users
+
+    def _process_pending_invitations(self, user):
+        """Check for pending invitations by email and auto-create roles."""
+        Pending = self.env['itlingo.pending.invitation'].sudo()
+        email = user.login or user.email
+        invitations = Pending.search([('email', '=ilike', email)])
+        if not invitations:
+            return False
+        OrgRole = self.env['itlingo.organization.role'].sudo()
+        WsRole = self.env.get('itlingo.project.role')
+        for inv in invitations:
+            if inv.organization_id:
+                OrgRole.create({
+                    'organization_id': inv.organization_id.id,
+                    'user_id': user.id,
+                    'role': inv.role,
+                    'state': 'accepted',
+                })
+            elif inv.project_id and WsRole is not None:
+                WsRole.sudo().create({
+                    'project_id': inv.project_id.id,
+                    'user_id': user.id,
+                    'role': inv.role,
+                    'state': 'accepted',
+                })
+        invitations.unlink()
+        return True

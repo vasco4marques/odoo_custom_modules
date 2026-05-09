@@ -5,3 +5,5 @@ access_itlingo_organization_role_member,itlingo.organization.role.member,model_i
 access_itlingo_organization_role_manager,itlingo.organization.role.manager,model_itlingo_organization_role,group_itlingo_manager,1,1,1,1
 access_itlingo_organization_portal,itlingo.organization.portal,model_itlingo_organization,base.group_portal,1,0,1,0
 access_itlingo_organization_role_portal,itlingo.organization.role.portal,model_itlingo_organization_role,base.group_portal,1,1,1,0
+access_itlingo_pending_invitation_manager,itlingo.pending.invitation.manager,model_itlingo_pending_invitation,group_itlingo_manager,1,1,1,1
+access_itlingo_pending_invitation_portal,itlingo.pending.invitation.portal,model_itlingo_pending_invitation,base.group_portal,1,0,1,0
