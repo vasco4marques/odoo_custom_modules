@@ -12,7 +12,7 @@
 <p>Log in to your ITLingo portal to respond.</p>
 <p>Best regards,<br/>ITLingo Cloud</p>
         ]]></field>
-        <field name="email_from">{{ (object.create_uid.email_formatted) }}</field>
+        <field name="email_from">{{ object.env.company.email_formatted }}</field>
         <field name="email_to">{{ object.user_id.email }}</field>
         <field name="auto_delete" eval="True"/>
     </record>
