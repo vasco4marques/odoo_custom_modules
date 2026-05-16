@@ -1300,19 +1300,6 @@ class ITLingoPortal(CustomerPortal):
             'role': role_key,
             'state': 'pending',
         })
-        if _project.organization_id:
-            OrgRole = request.env['itlingo.organization.role'].sudo()
-            existing_org_role = OrgRole.search([
-                ('user_id', '=', invitee.id),
-                ('organization_id', '=', _project.organization_id.id),
-            ], limit=1)
-            if not existing_org_role:
-                OrgRole.create({
-                    'organization_id': _project.organization_id.id,
-                    'user_id': invitee.id,
-                    'role': 'org_member',
-                    'state': 'accepted',
-                })
         if to_users:
             return self._portal_ws_user_redirect(project_id, message='invite_sent')
         return request.redirect(

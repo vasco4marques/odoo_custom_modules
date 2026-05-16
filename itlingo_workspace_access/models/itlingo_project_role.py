@@ -61,6 +61,23 @@ class ItlingoProjectRole(models.Model):
         for rec in self:
             rec.display_name = f'{rec.user_id.name} - {rec.project_id.name} ({rec.role})'
 
+    def _ensure_org_member(self, user, project):
+        """Auto-assign org_member on the workspace's parent organization."""
+        if not project.organization_id:
+            return
+        OrgRole = self.env['itlingo.organization.role'].sudo()
+        existing = OrgRole.search([
+            ('user_id', '=', user.id),
+            ('organization_id', '=', project.organization_id.id),
+        ], limit=1)
+        if not existing:
+            OrgRole.create({
+                'organization_id': project.organization_id.id,
+                'user_id': user.id,
+                'role': 'org_member',
+                'state': 'accepted',
+            })
+
     def action_accept(self):
         for rec in self:
             if rec.state != 'pending':
@@ -69,6 +86,7 @@ class ItlingoProjectRole(models.Model):
                 'state': 'accepted',
                 'response_date': fields.Datetime.now(),
             })
+            rec._ensure_org_member(rec.user_id, rec.project_id)
             rec.project_id.message_subscribe(partner_ids=rec.user_id.partner_id.ids)
             rec.project_id.message_post(
                 body=_('%s accepted the invitation as %s.',
