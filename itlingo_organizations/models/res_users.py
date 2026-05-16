@@ -58,5 +58,20 @@ class ResUsers(models.Model):
                         'role': inv.role,
                         'state': 'accepted',
                     })
+                project = self.env['project.project'].sudo().browse(inv.project_id)
+                if project.exists() \
+                        and 'organization_id' in project._fields \
+                        and project.organization_id:
+                    has_org_role = OrgRole.search([
+                        ('user_id', '=', user.id),
+                        ('organization_id', '=', project.organization_id.id),
+                    ], limit=1)
+                    if not has_org_role:
+                        OrgRole.create({
+                            'organization_id': project.organization_id.id,
+                            'user_id': user.id,
+                            'role': 'org_member',
+                            'state': 'accepted',
+                        })
         invitations.unlink()
         return True
