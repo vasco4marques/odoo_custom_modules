@@ -30,6 +30,12 @@ class ProjectProject(models.Model):
     actual_end = fields.Date(string='Actual End')
     planned_cost = fields.Float(string='Planned Cost', digits=(12, 2))
     current_cost = fields.Float(string='Current Cost', digits=(12, 2))
+    is_public_workspace = fields.Boolean(
+        string='Public workspace',
+        default=False,
+        tracking=True,
+        help='If enabled, the workspace is listed on the public workspace page and all users can see its documents, and specifications.',
+    )
 
     workspace_role_ids = fields.One2many(
         'itlingo.project.role', 'project_id', string='Workspace Roles',

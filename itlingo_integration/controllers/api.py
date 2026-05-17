@@ -64,6 +64,40 @@ class ITLingoIntegrationAPI(http.Controller):
         _logger.info('ITOI redirect target: %s', target)
         return wz_redirect(target, code=302)
 
+    @http.route(
+        '/itoi/launch/public/<int:project_id>',
+        type='http', auth='public', website=True,
+    )
+    def itoi_launch_public(self, project_id, **kw):
+        """Read-only ITOI launch for visitors to public workspaces (no membership)."""
+        settings = request.env['itlingo.integration.settings'].sudo()._get_settings()
+        itoi_url = (settings.itoi_url or 'http://localhost:3000/').rstrip('/')
+
+        project = request.env['project.project'].sudo().browse(project_id)
+        if not project.exists() or not project.is_public_workspace:
+            return request.not_found()
+
+        user = request.env.user
+        org_name = project.organization_id.name if project.organization_id else ''
+
+        payload = json.dumps({
+            'user': user.login,
+            'workspace': project.name,
+            'organization': org_name,
+            'write': False,
+        })
+
+        iv_b64, ct_b64 = settings._aes_encrypt(payload)
+
+        _logger.info(
+            'ITOI public launch: user=%s project=%s',
+            user.login, project.name,
+        )
+
+        qs = urlencode({'iv': iv_b64, 't': ct_b64})
+        target = f'{itoi_url}/createTempWorkspace?{qs}'
+        return wz_redirect(target, code=302)
+
     # ------------------------------------------------------------------
     # Bearer-token helpers (for REST API endpoints)
     # ------------------------------------------------------------------

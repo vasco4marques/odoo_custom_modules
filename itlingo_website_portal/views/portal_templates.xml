@@ -32,6 +32,42 @@
             <li t-if="page_name == 'workspaces'" class="breadcrumb-item active">
                 Workspaces
             </li>
+            <li t-if="page_name == 'public_workspaces'" class="breadcrumb-item active">
+                Public workspaces
+            </li>
+            <li t-if="page_name == 'public_workspace_detail'" class="breadcrumb-item">
+                <a href="/public-workspaces">Public workspaces</a>
+            </li>
+            <li t-if="page_name == 'public_workspace_detail'" class="breadcrumb-item active text-truncate">
+                <t t-out="project.name"/>
+            </li>
+            <li t-if="page_name == 'public_workspace_documentation'" class="breadcrumb-item">
+                <a href="/public-workspaces">Public workspaces</a>
+            </li>
+            <li t-if="page_name == 'public_workspace_documentation'" class="breadcrumb-item">
+                <a t-attf-href="/public-workspaces/#{project.id}"><t t-out="project.name"/></a>
+            </li>
+            <li t-if="page_name == 'public_workspace_documentation'" class="breadcrumb-item active">
+                Documentation
+            </li>
+            <li t-if="page_name == 'public_workspace_specifications'" class="breadcrumb-item">
+                <a href="/public-workspaces">Public workspaces</a>
+            </li>
+            <li t-if="page_name == 'public_workspace_specifications'" class="breadcrumb-item">
+                <a t-attf-href="/public-workspaces/#{project.id}"><t t-out="project.name"/></a>
+            </li>
+            <li t-if="page_name == 'public_workspace_specifications'" class="breadcrumb-item active">
+                Specifications
+            </li>
+            <li t-if="page_name == 'public_workspace_document'" class="breadcrumb-item">
+                <a href="/public-workspaces">Public workspaces</a>
+            </li>
+            <li t-if="page_name == 'public_workspace_document'" class="breadcrumb-item">
+                <a t-attf-href="/public-workspaces/#{project.id}"><t t-out="project.name"/></a>
+            </li>
+            <li t-if="page_name == 'public_workspace_document'" class="breadcrumb-item active text-truncate">
+                <t t-out="document.name"/>
+            </li>
             <li t-if="page_name == 'workspace_new'" class="breadcrumb-item">
                 <a href="/my/workspaces">Workspaces</a>
             </li>

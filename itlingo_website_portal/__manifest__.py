@@ -1,6 +1,6 @@
 {
     'name': 'ITLingo Website & Portal',
-    'version': '19.0.1.0.9',
+    'version': '19.0.1.1.0',
     'category': 'Website',
     'summary': 'Public website and authenticated portal for ITLingo Cloud',
     'description': """

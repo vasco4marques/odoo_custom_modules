@@ -40,7 +40,7 @@
                                        name="name" t-att-value="filters.get('name') or ''" placeholder="Name"/>
                             </div>
                         </div>
-                        <div class="col-md-8 col-lg-6">
+                        <div class="col-md-8 col-lg-5">
                             <span class="form-label small text-muted d-block mb-1">Your roles</span>
                             <div class="d-flex flex-wrap gap-3">
                                 <div class="form-check">
@@ -60,7 +60,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-3 d-flex flex-wrap gap-2">
+                        <div class="col-md-12 col-lg-4">
+                            <span class="form-label small text-muted d-block mb-1">Visibility</span>
+                            <div class="d-flex flex-wrap gap-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="public_ws" value="1"
+                                           id="ws_filter_public" t-att-checked="filters.get('public_ws')"/>
+                                    <label class="form-check-label" for="ws_filter_public">Public workspace</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="private_ws" value="1"
+                                           id="ws_filter_private" t-att-checked="filters.get('private_ws')"/>
+                                    <label class="form-check-label" for="ws_filter_private">Not public</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-12 d-flex flex-wrap gap-2 mt-2 mt-lg-0">
                             <a href="/my/workspaces" class="btn btn-outline-secondary">Clear filters</a>
                             <button type="submit" class="btn btn-primary">
                                 <i class="fa fa-search me-1"/>Filter
@@ -80,6 +95,7 @@
                         <th>Workspace</th>
                         <th>Organization</th>
                         <th>Your Role</th>
+                        <th>Public</th>
                         <th>Status</th>
                         <th>Change status</th>
                         <th class="text-end">Actions</th>
@@ -106,6 +122,10 @@
                             <span t-if="role" class="badge bg-info text-dark">
                                 <t t-out="dict(role._fields['role'].selection).get(role.role)"/>
                             </span>
+                        </td>
+                        <td>
+                            <span t-if="proj.is_public_workspace" class="badge bg-success">Yes</span>
+                            <span t-else="" class="badge bg-light text-dark border">No</span>
                         </td>
                         <td>
                             <span class="badge bg-secondary">
@@ -180,6 +200,132 @@
         </t>
     </template>
 
+    <!-- Public workspace directory (anonymous and portal users) -->
+    <template id="portal_public_workspaces" name="Public workspaces">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Public workspaces</t>
+            </t>
+            <p class="text-muted small mb-3">
+                These workspaces are shared publicly.
+            </p>
+            <div class="card itlingo-portal-filter-card shadow-sm border-0 rounded-3 mb-4">
+                <div class="card-body">
+                    <form method="get" action="/public-workspaces" class="row g-3 align-items-end">
+                        <div class="col-md-6 col-lg-4">
+                            <label class="form-label small text-muted mb-1" for="pub_ws_name">Name</label>
+                            <input type="search" class="form-control" id="pub_ws_name" name="name"
+                                   t-att-value="filters.get('name') or ''" placeholder="Search by name"/>
+                        </div>
+                        <div class="col-12 col-md-auto d-flex flex-wrap gap-2">
+                            <a href="/public-workspaces" class="btn btn-outline-secondary">Clear</a>
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <t t-if="not projects">
+                <div class="alert alert-light border" role="alert">
+                    No public workspaces match your search.
+                </div>
+            </t>
+            <t t-if="projects" t-call="portal.portal_table">
+                <thead>
+                    <tr>
+                        <th>Workspace</th>
+                        <th>Organization</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="public_workspace_rows" t-as="pw_row">
+                        <t t-set="proj" t-value="pw_row[0]"/>
+                        <t t-set="pw_url" t-value="pw_row[1]"/>
+                        <t t-set="bs" t-value="proj.business_status or 'not_started'"/>
+                        <td>
+                            <a t-att-href="pw_url">
+                                <t t-out="proj.name"/>
+                            </a>
+                        </td>
+                        <td>
+                            <t t-if="proj.organization_id" t-out="proj.organization_id.name"/>
+                            <t t-else="">—</t>
+                        </td>
+                        <td>
+                            <span class="badge bg-secondary">
+                                <t t-out="dict(proj._fields['business_status'].selection).get(bs)"/>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </t>
+            <div t-if="pager" class="o_portal_pager text-center mt-3">
+                <t t-call="portal.pager"/>
+            </div>
+        </t>
+    </template>
+
+    <!-- Public read-only document detail (no chatter) -->
+    <template id="portal_public_workspace_document" name="Public workspace document">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title" t-value="document.name"/>
+            </t>
+            <nav class="mb-3" aria-label="breadcrumb">
+                <ol class="breadcrumb small">
+                    <li class="breadcrumb-item">
+                        <a t-attf-href="/public-workspaces/#{project.id}"><t t-out="project.name"/></a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a t-attf-href="/public-workspaces/#{project.id}/documentation">Documentation</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page"><t t-out="document.name"/></li>
+                </ol>
+            </nav>
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3 class="mb-0"><t t-out="document.name"/></h3>
+                    <span t-attf-class="badge rounded-pill
+                        #{'text-bg-secondary' if document.status == 'draft'
+                          else 'text-bg-warning' if document.status == 'in_review'
+                          else 'text-bg-success' if document.status == 'approved'
+                          else 'text-bg-primary' if document.status == 'published'
+                          else 'text-bg-dark'}">
+                        <t t-out="dict(document._fields['status'].selection).get(document.status)"/>
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <dl>
+                                <dt>Type</dt>
+                                <dd><t t-out="document.document_type_id.name or 'N/A'"/></dd>
+                                <dt>Version</dt>
+                                <dd><t t-out="document.version"/></dd>
+                                <dt>Created</dt>
+                                <dd><t t-out="document.creation_date" t-options='{"widget": "datetime"}'/></dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <dl>
+                                <dt>Workspace</dt>
+                                <dd><t t-out="document.project_id.name or 'N/A'"/></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div t-if="document.document_file" class="mt-3">
+                        <a t-attf-href="/public-workspaces/#{project.id}/documents/#{document.id}/download"
+                           class="btn btn-primary">
+                            <i class="fa fa-download"/> Download file
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
     <!-- Workspace hub shell: sidebar + main (slot in child templates) -->
     <template id="portal_workspace_hub_shell" name="Workspace hub shell">
         <t t-call="portal.portal_layout">
@@ -192,23 +338,23 @@
                     <aside class="col-lg-3">
                         <nav class="itlingo-org-hub__sidebar nav flex-column rounded-3 shadow-sm bg-white p-2"
                              aria-label="Workspace sections">
-                            <a t-attf-href="/my/workspaces/#{project.id}"
+                            <a t-att-href="ws_hub_prefix"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'home' and 'active' or ''}">
                                 <i class="fa fa-home fa-fw me-2" aria-hidden="true"/>Home
                             </a>
-                            <a t-attf-href="/my/workspaces/#{project.id}/documentation"
+                            <a t-attf-href="#{ws_hub_prefix}/documentation"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'documentation' and 'active' or ''}">
                                 <i class="fa fa-file-text-o fa-fw me-2" aria-hidden="true"/>Documentation
                             </a>
-                            <a t-attf-href="/my/workspaces/#{project.id}/specifications"
+                            <a t-attf-href="#{ws_hub_prefix}/specifications"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'specifications' and 'active' or ''}">
                                 <i class="fa fa-code fa-fw me-2" aria-hidden="true"/>Specifications
                             </a>
-                            <a t-attf-href="/my/workspaces/#{project.id}/users"
+                            <a t-if="not workspace_hub_public" t-attf-href="#{ws_hub_prefix}/users"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'users' and 'active' or ''}">
                                 <i class="fa fa-users fa-fw me-2" aria-hidden="true"/>Users
                             </a>
-                            <a t-attf-href="/my/workspaces/#{project.id}/settings"
+                            <a t-if="not workspace_hub_public" t-attf-href="#{ws_hub_prefix}/settings"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'settings' and 'active' or ''}">
                                 <i class="fa fa-cog fa-fw me-2" aria-hidden="true"/>Workspace settings
                             </a>
@@ -216,10 +362,13 @@
                     </aside>
                     <div class="col-lg-9 itlingo-org-hub__main">
                         <h1 class="itlingo-org-hub__title mb-4">
-                            <t t-if="project.organization_id">
+                            <t t-if="project.organization_id and not workspace_hub_public">
                                 <a t-attf-href="/my/organizations/#{project.organization_id.id}" class="text-reset text-decoration-none">
                                     <t t-out="project.organization_id.name"/>
                                 </a>:
+                            </t>
+                            <t t-if="project.organization_id and workspace_hub_public">
+                                <span class="text-muted"><t t-out="project.organization_id.name"/>:</span>
                             </t>
                             <t t-out="project.name"/>
                         </h1>
@@ -253,17 +402,20 @@
                                 </dd>
                                 <dt class="col-sm-4 text-muted">Organization</dt>
                                 <dd class="col-sm-8">
-                                    <t t-if="project.organization_id">
+                                    <t t-if="project.organization_id and not workspace_hub_public">
                                         <a t-attf-href="/my/organizations/#{project.organization_id.id}">
                                             <t t-out="project.organization_id.name"/>
                                         </a>
                                     </t>
-                                    <t t-else="">—</t>
+                                    <t t-if="project.organization_id and workspace_hub_public">
+                                        <t t-out="project.organization_id.name"/>
+                                    </t>
+                                    <t t-if="not project.organization_id">—</t>
                                 </dd>
                                 <dt class="col-sm-4 text-muted">Methodology</dt>
                                 <dd class="col-sm-8"><t t-out="dict(project._fields['methodology'].selection).get(project.methodology) if project.methodology else '—'"/></dd>
-                                <dt class="col-sm-4 text-muted">Your role</dt>
-                                <dd class="col-sm-8">
+                                <dt t-if="user_role" class="col-sm-4 text-muted">Your role</dt>
+                                <dd t-if="user_role" class="col-sm-8">
                                     <span class="badge bg-info text-dark">
                                         <t t-out="dict(user_role._fields['role'].selection).get(user_role.role)"/>
                                     </span>
@@ -420,7 +572,7 @@
     <template id="portal_workspace_documentation" name="Workspace documentation">
         <t t-call="itlingo_website_portal.portal_workspace_hub_shell">
             <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3" t-if="can_upload_ws_documents">
-                <a t-attf-href="/my/workspaces/#{project.id}/documentation/new" class="btn btn-primary">Add document</a>
+                <a t-attf-href="#{ws_hub_prefix}/documentation/new" class="btn btn-primary">Add document</a>
             </div>
             <t t-if="not documents">
                 <p class="text-muted">No documents linked to this workspace yet.</p>
@@ -438,7 +590,14 @@
                         <tbody>
                             <tr t-foreach="documents" t-as="doc">
                                 <td>
-                                    <a t-attf-href="/my/documents/#{doc.id}"><t t-out="doc.name"/></a>
+                                    <a t-if="workspace_hub_public"
+                                       t-attf-href="/public-workspaces/#{project.id}/documents/#{doc.id}">
+                                        <t t-out="doc.name"/>
+                                    </a>
+                                    <a t-if="not workspace_hub_public"
+                                       t-attf-href="/my/documents/#{doc.id}">
+                                        <t t-out="doc.name"/>
+                                    </a>
                                 </td>
                                 <td>
                                     <span class="badge bg-secondary">
@@ -524,7 +683,7 @@
                                 </p>
                             </div>
                             <div class="col-auto">
-                                <a t-attf-href="/itoi/launch/#{project.id}"
+                                <a t-att-href="itoi_launch_path"
                                    target="_blank" rel="noopener noreferrer"
                                    class="btn btn-primary">
                                     <i class="fa fa-external-link me-1"/>Launch ITOI
@@ -587,6 +746,13 @@
                             <option value="kanban" t-att-selected="(form.get('methodology') or project.methodology) == 'kanban'">Kanban</option>
                         </select>
                     </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" name="is_public_workspace" id="ws_wiz_pub_e" value="1"
+                               t-att-checked="form.get('is_public_workspace')"/>
+                        <label class="form-check-label" for="ws_wiz_pub_e">
+                            Public workspace (all users can view documents and specifications)
+                        </label>
+                    </div>
                     <button type="submit" class="btn btn-primary">Continue</button>
                     <a t-attf-href="/my/workspaces/#{project.id}" class="btn btn-link">Cancel</a>
                 </div>
@@ -615,6 +781,13 @@
                             <option value="scrum" t-att-selected="(form.get('methodology') or 'scrum') == 'scrum'">Scrum</option>
                             <option value="kanban" t-att-selected="(form.get('methodology') or '') == 'kanban'">Kanban</option>
                         </select>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" name="is_public_workspace" id="ws_wiz_pub" value="1"
+                               t-att-checked="form.get('is_public_workspace')"/>
+                        <label class="form-check-label" for="ws_wiz_pub">
+                            Public workspace (all users can view documents and specifications)
+                        </label>
                     </div>
                     <button type="submit" class="btn btn-primary">Continue</button>
                     <a href="/my/workspaces" class="btn btn-link">Cancel</a>
@@ -718,6 +891,7 @@
                         <dt class="col-sm-4">Name</dt><dd class="col-sm-8"><t t-out="wizard_data.get('name')"/></dd>
                         <dt class="col-sm-4">Organization</dt><dd class="col-sm-8"><t t-out="wizard_data.get('organization') or wizard_data.get('organization_id')"/></dd>
                         <dt class="col-sm-4">Methodology</dt><dd class="col-sm-8"><t t-out="wizard_data.get('methodology')"/></dd>
+                        <dt class="col-sm-4">Public workspace</dt><dd class="col-sm-8"><t t-out="'Yes' if wizard_data.get('is_public_workspace') else 'No'"/></dd>
                         <dt class="col-sm-4">Planned start</dt><dd class="col-sm-8"><t t-out="wizard_data.get('planned_start') or '—'"/></dd>
                         <dt class="col-sm-4">Planned end</dt><dd class="col-sm-8"><t t-out="wizard_data.get('planned_end') or '—'"/></dd>
                     </dl>

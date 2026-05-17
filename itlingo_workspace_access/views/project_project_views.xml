@@ -19,6 +19,7 @@
                         <group string="Methodology &amp; Status">
                             <field name="methodology"/>
                             <field name="business_status" widget="radio"/>
+                            <field name="is_public_workspace"/>
                         </group>
                         <group string="Schedule">
                             <field name="planned_start"/>
@@ -98,6 +99,7 @@
                        decoration-success="business_status == 'executing'"
                        decoration-danger="business_status == 'canceled'"
                        decoration-muted="business_status == 'concluded'"/>
+                <field name="is_public_workspace" optional="hide"/>
             </xpath>
         </field>
     </record>
@@ -114,6 +116,8 @@
                         domain="[('methodology', '=', 'scrum')]"/>
                 <filter name="kanban" string="Kanban"
                         domain="[('methodology', '=', 'kanban')]"/>
+                <filter name="public_workspace" string="Public workspace"
+                        domain="[('is_public_workspace', '=', True)]"/>
                 <separator/>
                 <filter name="not_started" string="Not Started"
                         domain="[('business_status', '=', 'not_started')]"/>

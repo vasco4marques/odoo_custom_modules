@@ -2,7 +2,7 @@ import base64
 
 from odoo import _, http
 from odoo.exceptions import AccessError, MissingError, UserError
-from odoo.http import request, route
+from odoo.http import request, route, content_disposition
 from odoo.addons.portal.controllers.portal import CustomerPortal, pager
 
 
@@ -116,6 +116,38 @@ class ITLingoPortal(CustomerPortal):
             ('project_id', '=', project_id),
             ('state', '=', 'accepted'),
         ], limit=1)
+
+    def _portal_public_workspace_project(self, project_id):
+        project = request.env['project.project'].sudo().browse(project_id)
+        if project.exists() and project.is_public_workspace:
+            return project
+        return None
+
+    def _portal_ws_maybe_redirect_public_to_my(self, project_id, path_suffix=''):
+        """Send workspace members to /my/workspaces when they use public hub URLs."""
+        role = self._portal_workspace_role(request.env.user, project_id)
+        if role:
+            return request.redirect(f'/my/workspaces/{project_id}{path_suffix}')
+        return None
+
+    def _portal_workspace_hub_common(self, project, hub_page, public_hub=False):
+        """Shared layout flags for workspace hub templates."""
+        pid = project.id
+        if public_hub:
+            return {
+                'ws_hub_prefix': f'/public-workspaces/{pid}',
+                'workspace_hub_public': True,
+                'workspace_hub': True,
+                'workspace_hub_page': hub_page,
+                'itoi_launch_path': f'/itoi/launch/public/{pid}',
+            }
+        return {
+            'ws_hub_prefix': f'/my/workspaces/{pid}',
+            'workspace_hub_public': False,
+            'workspace_hub': True,
+            'workspace_hub_page': hub_page,
+            'itoi_launch_path': f'/itoi/launch/{pid}',
+        }
 
     def _prepare_home_portal_values(self, counters):
         values = super()._prepare_home_portal_values(counters)
@@ -253,6 +285,13 @@ class ITLingoPortal(CustomerPortal):
         name_q = (params.get('name') or '').strip()
         if name_q:
             domain.append(('name', 'ilike', f'%{name_q}%'))
+        pub_sel = []
+        if params.get('public_ws') == '1':
+            pub_sel.append(True)
+        if params.get('private_ws') == '1':
+            pub_sel.append(False)
+        if len(pub_sel) == 1:
+            domain.append(('is_public_workspace', '=', pub_sel[0]))
         return domain, name_q
 
     def _portal_ws_list_url_args(self, params, name_q):
@@ -262,6 +301,10 @@ class ITLingoPortal(CustomerPortal):
         for key in self._WS_ROLE_FILTER_KEYS:
             if params.get(f'role_{key}') == '1':
                 url_args[f'role_{key}'] = '1'
+        if params.get('public_ws') == '1':
+            url_args['public_ws'] = '1'
+        if params.get('private_ws') == '1':
+            url_args['private_ws'] = '1'
         return url_args
 
     @route(['/my/organizations', '/my/organizations/page/<int:page>'],
@@ -817,11 +860,200 @@ class ITLingoPortal(CustomerPortal):
                 'role_ws_manager': params.get('role_ws_manager') == '1',
                 'role_doc_manager': params.get('role_doc_manager') == '1',
                 'role_ws_member': params.get('role_ws_member') == '1',
+                'public_ws': params.get('public_ws') == '1',
+                'private_ws': params.get('private_ws') == '1',
             },
             'ws_list_error': params.get('error'),
             'ws_list_message': params.get('message'),
         })
         return request.render('itlingo_website_portal.portal_my_workspaces', values)
+
+    # ──────────────────────────────────────────────
+    # Public workspaces (auth=public)
+    # ──────────────────────────────────────────────
+
+    @route(
+        ['/public-workspaces', '/public-workspaces/page/<int:page>'],
+        type='http', auth='public', website=True,
+    )
+    def portal_public_workspaces_list(self, page=1, **kw):
+        params = request.params
+        Project = request.env['project.project'].sudo()
+        domain = [('is_public_workspace', '=', True)]
+        name_q = (params.get('name') or '').strip()
+        if name_q:
+            domain.append(('name', 'ilike', f'%{name_q}%'))
+        url_args = {'name': name_q} if name_q else None
+
+        project_count = Project.search_count(domain)
+        page_detail = pager(
+            url='/public-workspaces',
+            total=project_count,
+            page=page,
+            step=10,
+            url_args=url_args,
+        )
+        projects = Project.search(
+            domain,
+            limit=10,
+            offset=page_detail['offset'],
+            order='name',
+        )
+        user = request.env.user
+        public_workspace_rows = []
+        for p in projects:
+            if self._portal_workspace_role(user, p.id):
+                url = f'/my/workspaces/{p.id}'
+            else:
+                url = f'/public-workspaces/{p.id}'
+            public_workspace_rows.append((p, url))
+
+        values = self._prepare_portal_layout_values()
+        values.update({
+            'projects': projects,
+            'public_workspace_rows': public_workspace_rows,
+            'pager': page_detail,
+            'page_name': 'public_workspaces',
+            'default_url': '/public-workspaces',
+            'filters': {'name': name_q},
+        })
+        return request.render('itlingo_website_portal.portal_public_workspaces', values)
+
+    @route('/public-workspaces/<int:project_id>', type='http', auth='public', website=True)
+    def portal_public_workspace_home(self, project_id, **kw):
+        redir = self._portal_ws_maybe_redirect_public_to_my(project_id)
+        if redir:
+            return redir
+        project = self._portal_public_workspace_project(project_id)
+        if not project:
+            return request.not_found()
+        Role = request.env['itlingo.project.role'].sudo()
+        values = self._prepare_portal_layout_values()
+        values.update({
+            'project': project,
+            'user_role': Role.browse(),
+            'page_name': 'public_workspace_detail',
+            'members': Role.browse(),
+            **self._portal_workspace_hub_common(project, 'home', public_hub=True),
+        })
+        return request.render('itlingo_website_portal.portal_workspace_detail', values)
+
+    @route(
+        '/public-workspaces/<int:project_id>/documentation',
+        type='http', auth='public', website=True,
+    )
+    def portal_public_workspace_documentation(self, project_id, **kw):
+        redir = self._portal_ws_maybe_redirect_public_to_my(
+            project_id, '/documentation',
+        )
+        if redir:
+            return redir
+        project = self._portal_public_workspace_project(project_id)
+        if not project:
+            return request.not_found()
+        Document = request.env['itlingo.document'].sudo()
+        documents = Document.search([
+            ('project_id', '=', project_id),
+        ], order='creation_date desc, name')
+        Role = request.env['itlingo.project.role'].sudo()
+        values = self._prepare_portal_layout_values()
+        values.update({
+            'project': project,
+            'user_role': Role.browse(),
+            'documents': documents,
+            'can_upload_ws_documents': False,
+            'page_name': 'public_workspace_documentation',
+            'members': Role.browse(),
+            **self._portal_workspace_hub_common(project, 'documentation', public_hub=True),
+        })
+        return request.render(
+            'itlingo_website_portal.portal_workspace_documentation',
+            values,
+        )
+
+    @route(
+        '/public-workspaces/<int:project_id>/specifications',
+        type='http', auth='public', website=True,
+    )
+    def portal_public_workspace_specifications(self, project_id, **kw):
+        redir = self._portal_ws_maybe_redirect_public_to_my(
+            project_id, '/specifications',
+        )
+        if redir:
+            return redir
+        project = self._portal_public_workspace_project(project_id)
+        if not project:
+            return request.not_found()
+        Role = request.env['itlingo.project.role'].sudo()
+        values = self._prepare_portal_layout_values()
+        values.update({
+            'project': project,
+            'user_role': Role.browse(),
+            'has_write': False,
+            'page_name': 'public_workspace_specifications',
+            'members': Role.browse(),
+            **self._portal_workspace_hub_common(project, 'specifications', public_hub=True),
+        })
+        return request.render(
+            'itlingo_website_portal.portal_workspace_specifications',
+            values,
+        )
+
+    def _portal_public_workspace_document_or_404(self, project_id, document_id):
+        project = self._portal_public_workspace_project(project_id)
+        if not project:
+            return None, None
+        doc = request.env['itlingo.document'].sudo().browse(document_id)
+        if (
+            not doc.exists()
+            or not doc.project_id
+            or doc.project_id.id != project_id
+        ):
+            return None, None
+        return project, doc
+
+    @route(
+        '/public-workspaces/<int:project_id>/documents/<int:document_id>',
+        type='http', auth='public', website=True,
+    )
+    def portal_public_workspace_document_detail(self, project_id, document_id, **kw):
+        project, doc = self._portal_public_workspace_document_or_404(
+            project_id, document_id,
+        )
+        if not doc:
+            return request.not_found()
+        values = self._prepare_portal_layout_values()
+        values.update({
+            'project': project,
+            'document': doc,
+            'page_name': 'public_workspace_document',
+        })
+        return request.render(
+            'itlingo_website_portal.portal_public_workspace_document',
+            values,
+        )
+
+    @route(
+        '/public-workspaces/<int:project_id>/documents/<int:document_id>/download',
+        type='http', auth='public', website=True,
+    )
+    def portal_public_workspace_document_download(
+        self, project_id, document_id, **kw,
+    ):
+        _project, doc = self._portal_public_workspace_document_or_404(
+            project_id, document_id,
+        )
+        if not doc or not doc.document_file:
+            return request.not_found()
+        raw = base64.b64decode(doc.document_file)
+        fname = doc.file_name or 'document'
+        return request.make_response(
+            raw,
+            headers=[
+                ('Content-Type', 'application/octet-stream'),
+                ('Content-Disposition', content_disposition(fname)),
+            ],
+        )
 
     @route(
         '/my/workspaces/<int:project_id>/business_status',
@@ -909,7 +1141,6 @@ class ITLingoPortal(CustomerPortal):
                 except (TypeError, ValueError):
                     org_id = 0
                 methodology = post.get('methodology') or 'scrum'
-                values['form'] = dict(post)
                 err = {}
                 if not organizations:
                     err['organization_id'] = _('You are not an organization manager.')
@@ -921,6 +1152,12 @@ class ITLingoPortal(CustomerPortal):
                     err['name'] = _('Invalid methodology.')
                 if err:
                     values['error'] = err
+                    values['form'] = {
+                        'name': name,
+                        'organization_id': org_id,
+                        'methodology': methodology,
+                        'is_public_workspace': post.get('is_public_workspace') == '1',
+                    }
                     return request.render(
                         'itlingo_website_portal.portal_workspace_wizard',
                         values,
@@ -929,6 +1166,7 @@ class ITLingoPortal(CustomerPortal):
                     'name': name,
                     'organization_id': org_id,
                     'methodology': methodology,
+                    'is_public_workspace': post.get('is_public_workspace') == '1',
                 }
                 sess[self._WS_NEW_SESSION_KEY] = wizard
                 return request.redirect('/my/workspaces/new/step/2')
@@ -972,6 +1210,7 @@ class ITLingoPortal(CustomerPortal):
                     'organization_id': wizard['organization_id'],
                     'methodology': wizard['methodology'],
                     'description': wizard.get('description') or False,
+                    'is_public_workspace': bool(wizard.get('is_public_workspace')),
                 }
                 for f in ('planned_start', 'planned_end', 'actual_start', 'actual_end'):
                     if wizard.get(f):
@@ -1013,6 +1252,7 @@ class ITLingoPortal(CustomerPortal):
                 'name': w.get('name'),
                 'organization': org.name if org.exists() else '',
                 'methodology': w.get('methodology'),
+                'is_public_workspace': bool(w.get('is_public_workspace')),
                 'planned_start': w.get('planned_start'),
                 'planned_end': w.get('planned_end'),
                 'actual_start': w.get('actual_start'),
@@ -1038,6 +1278,7 @@ class ITLingoPortal(CustomerPortal):
                     'name': wizard.get('name', ''),
                     'organization_id': wizard.get('organization_id'),
                     'methodology': wizard.get('methodology', 'scrum'),
+                    'is_public_workspace': bool(wizard.get('is_public_workspace')),
                 }
         return request.render('itlingo_website_portal.portal_workspace_wizard', values)
 
@@ -1069,18 +1310,28 @@ class ITLingoPortal(CustomerPortal):
             'form': {},
             'error': {},
             'members': self._portal_workspace_hub_members(project_id),
+            **self._portal_workspace_hub_common(project, 'settings', public_hub=False),
         })
         if request.httprequest.method == 'POST':
             if step == 1:
                 name = (post.get('name') or '').strip()
                 methodology = post.get('methodology') or 'scrum'
-                values['form'] = dict(post)
+                is_public = post.get('is_public_workspace') == '1'
+                values['form'] = {
+                    'name': name,
+                    'methodology': methodology,
+                    'is_public_workspace': is_public,
+                }
                 if not name:
                     values['error']['name'] = _('Workspace name is required.')
                 elif methodology not in allowed_methodology:
                     values['error']['name'] = _('Invalid methodology.')
                 else:
-                    proj.write({'name': name, 'methodology': methodology})
+                    proj.write({
+                        'name': name,
+                        'methodology': methodology,
+                        'is_public_workspace': is_public,
+                    })
                     return request.redirect(f'/my/workspaces/{project_id}/settings/2')
                 return request.render(
                     'itlingo_website_portal.portal_workspace_wizard',
@@ -1117,6 +1368,7 @@ class ITLingoPortal(CustomerPortal):
             values['form'] = {
                 'name': proj.name,
                 'methodology': proj.methodology or 'scrum',
+                'is_public_workspace': proj.is_public_workspace,
             }
         elif step == 2:
             values['form'] = {
@@ -1135,6 +1387,7 @@ class ITLingoPortal(CustomerPortal):
                 'name': proj.name,
                 'methodology': proj.methodology,
                 'organization': proj.organization_id.name if proj.organization_id else '',
+                'is_public_workspace': proj.is_public_workspace,
                 'planned_start': proj.planned_start,
                 'planned_end': proj.planned_end,
                 'actual_start': proj.actual_start,
@@ -1184,6 +1437,7 @@ class ITLingoPortal(CustomerPortal):
             'ws_message': params.get('message'),
             'page_name': 'workspace_detail',
             'members': self._portal_workspace_hub_members(project_id),
+            **self._portal_workspace_hub_common(project, 'home', public_hub=False),
         })
         return request.render('itlingo_website_portal.portal_workspace_detail', values)
 
@@ -1206,6 +1460,7 @@ class ITLingoPortal(CustomerPortal):
             'ws_error': params.get('error'),
             'ws_message': params.get('message'),
             'page_name': 'workspace_users',
+            **self._portal_workspace_hub_common(project, 'users', public_hub=False),
         })
         return request.render('itlingo_website_portal.portal_workspace_users', values)
 
@@ -1401,7 +1656,9 @@ class ITLingoPortal(CustomerPortal):
         documents = Document.search([
             ('project_id', '=', project_id),
         ], order='creation_date desc, name')
-        can_doc = user_role.role in ('ws_manager', 'doc_manager')
+        can_doc = bool(
+            user_role and user_role.role in ('ws_manager', 'doc_manager'),
+        )
         values = self._prepare_portal_layout_values()
         values.update({
             'project': project,
@@ -1412,6 +1669,7 @@ class ITLingoPortal(CustomerPortal):
             'can_upload_ws_documents': can_doc,
             'page_name': 'workspace_documentation',
             'members': self._portal_workspace_hub_members(project_id),
+            **self._portal_workspace_hub_common(project, 'documentation', public_hub=False),
         })
         return request.render(
             'itlingo_website_portal.portal_workspace_documentation',
@@ -1441,6 +1699,7 @@ class ITLingoPortal(CustomerPortal):
             'form': {},
             'error': {},
             'members': self._portal_workspace_hub_members(project_id),
+            **self._portal_workspace_hub_common(project, 'documentation', public_hub=False),
         })
         if request.httprequest.method == 'POST':
             name = (post.get('name') or '').strip()
@@ -1487,7 +1746,9 @@ class ITLingoPortal(CustomerPortal):
         project, user_role = self._portal_ws_access(project_id)
 
         write_roles = ('ws_manager', 'doc_manager')
-        has_write = user_role.role in write_roles if user_role else False
+        has_write = bool(
+            user_role and user_role.role in write_roles,
+        )
 
         values = self._prepare_portal_layout_values()
         values.update({
@@ -1498,6 +1759,7 @@ class ITLingoPortal(CustomerPortal):
             'workspace_hub_page': 'specifications',
             'page_name': 'workspace_specifications',
             'members': self._portal_workspace_hub_members(project_id),
+            **self._portal_workspace_hub_common(project, 'specifications', public_hub=False),
         })
         return request.render(
             'itlingo_website_portal.portal_workspace_specifications',
