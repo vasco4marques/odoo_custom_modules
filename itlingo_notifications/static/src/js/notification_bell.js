@@ -238,6 +238,11 @@
     }
 
     function init() {
+        // Do not initialize or modify DOM if Odoo Website Builder is active
+        if (document.body.classList.contains('editor_enable')) {
+            return;
+        }
+
         var wrappers = document.querySelectorAll('.itlingo-bell-wrapper');
         if (!wrappers.length) return;
 
@@ -248,6 +253,19 @@
                 allInstances.push(inst);
             }
         });
+
+        // Watch for Odoo's editor being enabled AFTER the page has loaded
+        var observer = new MutationObserver(function (mutations) {
+            mutations.forEach(function (mutation) {
+                if (mutation.attributeName === 'class' && document.body.classList.contains('editor_enable')) {
+                    // Reset all bells to 0 immediately when entering edit mode
+                    allInstances.forEach(function (inst) {
+                        inst.setBadge(0);
+                    });
+                }
+            });
+        });
+        observer.observe(document.body, { attributes: true });
 
         document.addEventListener('click', function () {
             closeAllDropdowns();
