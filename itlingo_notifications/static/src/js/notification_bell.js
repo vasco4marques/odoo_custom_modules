@@ -114,6 +114,7 @@
                     badge.textContent = count > 99 ? '99+' : count;
                     badge.classList.remove('d-none');
                 } else {
+                    badge.textContent = '0';
                     badge.classList.add('d-none');
                 }
             },
@@ -242,7 +243,10 @@
 
         wrappers.forEach(function (wrapper) {
             var inst = initBell(wrapper);
-            if (inst) allInstances.push(inst);
+            if (inst) {
+                inst.setBadge(0);
+                allInstances.push(inst);
+            }
         });
 
         document.addEventListener('click', function () {
