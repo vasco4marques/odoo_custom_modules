@@ -35,7 +35,7 @@ class ITLingoNotificationAPI(http.Controller):
             })
         return items
 
-    @http.route('/itlingo/notifications/bell', type='json',
+    @http.route('/itlingo/notifications/bell', type='jsonrpc',
                 auth='user', website=True)
     def notification_bell(self, **kw):
         Notif = request.env['itlingo.notification']
@@ -48,7 +48,7 @@ class ITLingoNotificationAPI(http.Controller):
             'notifications': self._serialize_notifications(unread),
         }
 
-    @http.route('/itlingo/notifications/invitation/respond', type='json',
+    @http.route('/itlingo/notifications/invitation/respond', type='jsonrpc',
                 auth='user', website=True)
     def invitation_respond(self, notification_id, action, **kw):
         Notif = request.env['itlingo.notification'].sudo()
@@ -82,7 +82,7 @@ class ITLingoNotificationAPI(http.Controller):
         notif.action_mark_read()
         return {'success': True, 'unread_count': self._unread_count()}
 
-    @http.route('/itlingo/notifications/mark_read', type='json',
+    @http.route('/itlingo/notifications/mark_read', type='jsonrpc',
                 auth='user', website=True)
     def mark_read(self, notification_id=None, **kw):
         Notif = request.env['itlingo.notification'].sudo()

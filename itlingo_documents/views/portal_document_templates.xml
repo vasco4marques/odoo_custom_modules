@@ -81,13 +81,6 @@
     <!-- Document detail -->
     <template id="portal_document_detail" name="Document Detail">
         <t t-call="portal.portal_layout">
-            <t t-set="o_portal_fullwidth_alert" groups="itlingo_organizations.group_itlingo_manager">
-                <t t-call="portal.portal_back_in_edit_mode">
-                    <t t-set="backend_url"
-                       t-value="'/odoo/itlingo-documents/%s' % document.id"/>
-                </t>
-            </t>
-
             <div class="card mt-3">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h3 class="mb-0"><t t-out="document.name"/></h3>
@@ -123,11 +116,26 @@
                             </dl>
                         </div>
                     </div>
-                    <div t-if="document.document_file" class="mt-3">
-                        <a t-attf-href="/web/content/#{document.id}?model=itlingo.document&amp;field=document_file&amp;filename_field=file_name&amp;download=true"
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <a t-if="document.document_file"
+                           t-attf-href="/web/content/#{document.id}?model=itlingo.document&amp;field=document_file&amp;filename_field=file_name&amp;download=true"
                            class="btn btn-primary">
                             <i class="fa fa-download"/> Download File
                         </a>
+                        <a t-if="can_edit_document"
+                           t-attf-href="/my/documents/#{document.id}/edit"
+                           class="btn btn-outline-primary">
+                            <i class="fa fa-pencil"/> Edit
+                        </a>
+                        <form t-if="can_edit_document"
+                              t-attf-action="/my/documents/#{document.id}/delete"
+                              method="post" class="d-inline"
+                              onsubmit="return confirm('Delete this document? This cannot be undone.');">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            <button type="submit" class="btn btn-outline-danger">
+                                <i class="fa fa-trash"/> Delete
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -136,6 +144,72 @@
                 <t t-call="portal.message_thread">
                     <t t-set="object" t-value="document"/>
                 </t>
+            </div>
+        </t>
+    </template>
+
+    <template id="portal_document_edit" name="Document Edit">
+        <t t-call="portal.portal_layout">
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h3 class="mb-0">Edit document: <t t-out="document.name"/></h3>
+                </div>
+                <div class="card-body">
+                    <div t-if="error.get('_form')" class="alert alert-danger" role="alert">
+                        <t t-out="error['_form']"/>
+                    </div>
+                    <form t-attf-action="/my/documents/#{document.id}/edit"
+                          method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <div class="mb-3">
+                            <label class="form-label" for="doc_edit_name">Name</label>
+                            <input type="text" class="form-control" id="doc_edit_name" name="name" required=""
+                                   t-att-value="form.get('name') or ''"/>
+                            <div t-if="error.get('name')" class="text-danger small mt-1"><t t-out="error['name']"/></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="doc_edit_type">Document type</label>
+                            <select class="form-select" id="doc_edit_type" name="document_type_id">
+                                <option value="">—</option>
+                                <t t-foreach="doc_types" t-as="dt">
+                                    <option t-att-value="dt.id"
+                                            t-att-selected="str(form.get('document_type_id') or '') == str(dt.id)">
+                                        <t t-out="dt.name"/>
+                                    </option>
+                                </t>
+                            </select>
+                            <div t-if="error.get('document_type_id')" class="text-danger small mt-1"><t t-out="error['document_type_id']"/></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="doc_edit_status">Status</label>
+                            <select class="form-select" id="doc_edit_status" name="status">
+                                <t t-foreach="status_selection" t-as="opt">
+                                    <option t-att-value="opt[0]"
+                                            t-att-selected="(form.get('status') or document.status) == opt[0]">
+                                        <t t-out="opt[1]"/>
+                                    </option>
+                                </t>
+                            </select>
+                            <div t-if="error.get('status')" class="text-danger small mt-1"><t t-out="error['status']"/></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="doc_edit_version">Version</label>
+                            <input type="text" class="form-control" id="doc_edit_version" name="version"
+                                   t-att-value="form.get('version') or ''"/>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="doc_edit_file">Replace file (optional)</label>
+                            <input type="file" class="form-control" id="doc_edit_file" name="document_file"/>
+                            <div t-if="document.file_name" class="form-text">
+                                Current file: <t t-out="document.file_name"/>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <a t-attf-href="/my/documents/#{document.id}" class="btn btn-outline-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </t>
     </template>

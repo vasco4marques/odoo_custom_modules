@@ -11,7 +11,7 @@ class ItlingoLibrary(models.Model):
         'itlingo.document.library', 'library_id', string='Documents',
     )
     document_count = fields.Integer(
-        compute='_compute_document_count', string='Documents',
+        compute='_compute_document_count', string='Document Count',
     )
 
     def _compute_document_count(self):

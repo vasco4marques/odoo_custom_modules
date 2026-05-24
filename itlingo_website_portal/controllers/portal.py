@@ -74,11 +74,6 @@ class ITLingoPortal(CustomerPortal):
         request.env.user.sudo().org_setup_pending = False
         return request.redirect('/')
 
-    def _is_platform_admin(self):
-        return request.env.user.has_group(
-            'itlingo_organizations.group_itlingo_admin',
-        )
-
     def _send_signup_invitation_email(self, email):
         base_url = request.env['ir.config_parameter'].sudo().get_param('web.base.url')
         signup_url = f'{base_url}/web/signup'
@@ -346,7 +341,6 @@ class ITLingoPortal(CustomerPortal):
         values.update({
             'organizations': organizations,
             'role_map': role_map,
-            'is_platform_admin': self._is_platform_admin(),
             'page_name': 'organizations',
             'pager': page_detail,
             'default_url': '/my/organizations',
@@ -408,11 +402,11 @@ class ITLingoPortal(CustomerPortal):
         type='http', auth='user', website=True, methods=['POST'],
     )
     def portal_organization_delete(self, org_id, **post):
-        if not self._is_platform_admin():
-            raise AccessError(_('Only platform administrators can delete organizations.'))
         org, user_role = self._portal_org_access(org_id)
         if user_role.role != 'org_manager':
-            raise AccessError(_('Only organization managers can delete an organization.'))
+            raise AccessError(
+                _('Only organization managers can delete this organization.'),
+            )
         Project = request.env['project.project'].sudo()
         if Project.search_count([('organization_id', '=', org_id)]):
             return request.redirect(
@@ -420,28 +414,6 @@ class ITLingoPortal(CustomerPortal):
             )
         org.unlink()
         return request.redirect('/my/organizations?message=org_deleted')
-
-    @route(
-        '/my/organizations/<int:org_id>/suspend',
-        type='http', auth='user', website=True, methods=['POST'],
-    )
-    def portal_organization_suspend(self, org_id, **post):
-        if not self._is_platform_admin():
-            raise AccessError(_('Only platform administrators can suspend organizations.'))
-        org, _user_role = self._portal_org_access(org_id)
-        org.action_suspend()
-        return request.redirect(f'/my/organizations/{org_id}/settings?message=org_suspended')
-
-    @route(
-        '/my/organizations/<int:org_id>/activate',
-        type='http', auth='user', website=True, methods=['POST'],
-    )
-    def portal_organization_activate(self, org_id, **post):
-        if not self._is_platform_admin():
-            raise AccessError(_('Only platform administrators can activate organizations.'))
-        org, _user_role = self._portal_org_access(org_id)
-        org.action_activate()
-        return request.redirect(f'/my/organizations/{org_id}/settings?message=org_activated')
 
     @route(
         '/my/organizations/<int:org_id>/users/invite',
@@ -567,6 +539,84 @@ class ITLingoPortal(CustomerPortal):
         target.unlink()
         return request.redirect(
             f'/my/organizations/{org_id}/users?message=member_removed',
+        )
+
+    @route(
+        '/my/organizations/<int:org_id>/leave',
+        type='http', auth='user', website=True, methods=['POST'],
+    )
+    def portal_organization_leave(self, org_id, **post):
+        org, user_role = self._portal_org_access(org_id)
+        OrgRole = request.env['itlingo.organization.role'].sudo()
+        accepted = OrgRole.search([
+            ('organization_id', '=', org_id),
+            ('state', '=', 'accepted'),
+        ])
+        if len(accepted) <= 1:
+            Project = request.env['project.project'].sudo()
+            if Project.search_count([('organization_id', '=', org_id)]):
+                return request.redirect(
+                    '/my/organizations?error=org_delete_has_workspaces',
+                )
+            try:
+                org.sudo().unlink()
+            except UserError:
+                return request.redirect(
+                    f'/my/organizations/{org_id}/users?error=leave_failed',
+                )
+            return request.redirect('/my/organizations?message=org_deleted_self_leave')
+        is_last_manager = (
+            user_role.role == 'org_manager'
+            and self._portal_org_accepted_manager_count(org_id) <= 1
+        )
+        if is_last_manager:
+            return request.redirect(f'/my/organizations/{org_id}/leave/promote')
+        user_role.unlink()
+        return request.redirect('/my/organizations?message=left_organization')
+
+    @route(
+        '/my/organizations/<int:org_id>/leave/promote',
+        type='http', auth='user', website=True, methods=['GET', 'POST'],
+    )
+    def portal_organization_leave_promote(self, org_id, **post):
+        org, user_role = self._portal_org_access(org_id)
+        if user_role.role != 'org_manager':
+            return request.redirect(f'/my/organizations/{org_id}/users')
+        OrgRole = request.env['itlingo.organization.role'].sudo()
+        candidates = OrgRole.search([
+            ('organization_id', '=', org_id),
+            ('state', '=', 'accepted'),
+            ('user_id', '!=', request.env.user.id),
+        ])
+        if not candidates:
+            return request.redirect(f'/my/organizations/{org_id}/users')
+        values = self._prepare_portal_layout_values()
+        values.update({
+            'organization': org,
+            'user_role': user_role,
+            'candidates': candidates,
+            'organization_hub': True,
+            'org_hub_page': 'users',
+            'page_name': 'organization_leave_promote',
+            'error': None,
+        })
+        if request.httprequest.method == 'POST':
+            try:
+                successor_role_id = int(post.get('successor_role_id') or 0)
+            except (TypeError, ValueError):
+                successor_role_id = 0
+            successor = candidates.filtered(lambda r: r.id == successor_role_id)
+            if not successor:
+                values['error'] = _('Pick a member to promote before leaving.')
+                return request.render(
+                    'itlingo_website_portal.portal_organization_leave_promote',
+                    values,
+                )
+            successor.write({'role': 'org_manager'})
+            user_role.unlink()
+            return request.redirect('/my/organizations?message=left_organization')
+        return request.render(
+            'itlingo_website_portal.portal_organization_leave_promote', values,
         )
 
     @route(
@@ -725,18 +775,10 @@ class ITLingoPortal(CustomerPortal):
             for key, label in OrgModel._fields['activity_type'].selection
         ]
 
-        msg_param = request.params.get('message')
-        settings_message = None
-        if msg_param == 'org_suspended':
-            settings_message = _('Organization suspended.')
-        elif msg_param == 'org_activated':
-            settings_message = _('Organization activated.')
-
         values = self._prepare_portal_layout_values()
         values.update({
             'organization': org,
             'user_role': user_role,
-            'is_platform_admin': self._is_platform_admin(),
             'page_name': 'organization_settings',
             'organization_hub': True,
             'org_hub_page': 'settings',
@@ -744,7 +786,7 @@ class ITLingoPortal(CustomerPortal):
             'activity_type_selection': activity_type_selection,
             'form': {},
             'error': {},
-            'settings_message': settings_message,
+            'settings_message': None,
         })
 
         if request.httprequest.method == 'POST':
@@ -848,6 +890,14 @@ class ITLingoPortal(CustomerPortal):
             order='name',
         )
 
+        can_create_workspace = bool(
+            request.env['itlingo.organization.role'].sudo().search_count([
+                ('user_id', '=', user.id),
+                ('state', '=', 'accepted'),
+                ('role', '=', 'org_manager'),
+            ])
+        )
+
         values = self._prepare_portal_layout_values()
         values.update({
             'projects': projects,
@@ -863,6 +913,7 @@ class ITLingoPortal(CustomerPortal):
                 'public_ws': params.get('public_ws') == '1',
                 'private_ws': params.get('private_ws') == '1',
             },
+            'can_create_workspace': can_create_workspace,
             'ws_list_error': params.get('error'),
             'ws_list_message': params.get('message'),
         })
@@ -1622,12 +1673,6 @@ class ITLingoPortal(CustomerPortal):
             return request.redirect(
                 f'/my/workspaces/{project_id}?error=remove_not_accepted',
             )
-        if target.role == 'ws_manager' and target.user_id.id != request.env.user.id:
-            if to_users:
-                return self._portal_ws_user_redirect(project_id, error='cannot_remove_ws_manager')
-            return request.redirect(
-                f'/my/workspaces/{project_id}?error=cannot_remove_ws_manager',
-            )
         mgr_count = self._portal_ws_accepted_manager_count(project_id)
         if target.role == 'ws_manager' and mgr_count <= 1:
             if to_users:
@@ -1643,6 +1688,82 @@ class ITLingoPortal(CustomerPortal):
             return self._portal_ws_user_redirect(project_id, message='member_removed')
         return request.redirect(
             f'/my/workspaces/{project_id}?message=member_removed',
+        )
+
+    # ──────────────────────────────────────────────
+    # Workspace: leave + promote successor
+    # ──────────────────────────────────────────────
+
+    @route(
+        '/my/workspaces/<int:project_id>/leave',
+        type='http', auth='user', website=True, methods=['POST'],
+    )
+    def portal_workspace_leave(self, project_id, **post):
+        project, user_role = self._portal_ws_access(project_id)
+        WsRole = request.env['itlingo.project.role'].sudo()
+        accepted = WsRole.search([
+            ('project_id', '=', project_id),
+            ('state', '=', 'accepted'),
+        ])
+        if len(accepted) <= 1:
+            try:
+                project.sudo().unlink()
+            except UserError:
+                return self._portal_ws_user_redirect(project_id, error='leave_failed')
+            return request.redirect('/my/workspaces?message=ws_deleted_self_leave')
+        is_last_manager = (
+            user_role.role == 'ws_manager'
+            and self._portal_ws_accepted_manager_count(project_id) <= 1
+        )
+        if is_last_manager:
+            return request.redirect(f'/my/workspaces/{project_id}/leave/promote')
+        user_role.unlink()
+        return request.redirect('/my/workspaces?message=left_workspace')
+
+    @route(
+        '/my/workspaces/<int:project_id>/leave/promote',
+        type='http', auth='user', website=True, methods=['GET', 'POST'],
+    )
+    def portal_workspace_leave_promote(self, project_id, **post):
+        project, user_role = self._portal_ws_access(project_id)
+        if user_role.role != 'ws_manager':
+            return request.redirect(f'/my/workspaces/{project_id}/users')
+        WsRole = request.env['itlingo.project.role'].sudo()
+        candidates = WsRole.search([
+            ('project_id', '=', project_id),
+            ('state', '=', 'accepted'),
+            ('user_id', '!=', request.env.user.id),
+        ])
+        if not candidates:
+            return request.redirect(f'/my/workspaces/{project_id}/users')
+        values = self._prepare_portal_layout_values()
+        values.update({
+            'project': project,
+            'user_role': user_role,
+            'candidates': candidates,
+            'workspace_hub': True,
+            'workspace_hub_page': 'users',
+            'page_name': 'workspace_leave_promote',
+            'error': None,
+            **self._portal_workspace_hub_common(project, 'users', public_hub=False),
+        })
+        if request.httprequest.method == 'POST':
+            try:
+                successor_role_id = int(post.get('successor_role_id') or 0)
+            except (TypeError, ValueError):
+                successor_role_id = 0
+            successor = candidates.filtered(lambda r: r.id == successor_role_id)
+            if not successor:
+                values['error'] = _('Pick a member to promote before leaving.')
+                return request.render(
+                    'itlingo_website_portal.portal_workspace_leave_promote',
+                    values,
+                )
+            successor.write({'role': 'ws_manager'})
+            user_role.unlink()
+            return request.redirect('/my/workspaces?message=left_workspace')
+        return request.render(
+            'itlingo_website_portal.portal_workspace_leave_promote', values,
         )
 
     # ──────────────────────────────────────────────

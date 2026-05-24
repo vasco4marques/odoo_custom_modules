@@ -8,7 +8,7 @@ class ItlingoOrganization(models.Model):
         'itlingo.document', 'organization_id', string='Documents',
     )
     document_count = fields.Integer(
-        compute='_compute_document_count', string='Documents',
+        compute='_compute_document_count', string='Document Count',
     )
 
     @api.depends('document_ids')

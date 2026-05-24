@@ -14,6 +14,12 @@
             <div t-if="org_list_message == 'org_deleted'" class="alert alert-success" role="alert">
                 The organization was deleted.
             </div>
+            <div t-if="org_list_message == 'org_deleted_self_leave'" class="alert alert-success" role="alert">
+                You were the only member, so the organization was deleted when you left.
+            </div>
+            <div t-if="org_list_message == 'left_organization'" class="alert alert-success" role="alert">
+                You left the organization.
+            </div>
             <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
                 <a href="/my/organizations/new" class="btn btn-primary">New organization</a>
             </div>
@@ -121,7 +127,7 @@
                                title="Users" aria-label="Users">
                                 <i class="fa fa-users fa-lg"/>
                             </a>
-                            <t t-if="is_platform_admin and role and role.role == 'org_manager'">
+                            <t t-if="role and role.role == 'org_manager'">
                                 <form t-attf-action="/my/organizations/#{org.id}/delete" method="post" class="d-inline">
                                     <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                                     <button type="submit" class="btn btn-sm btn-link text-danger p-1"
@@ -426,7 +432,7 @@
                                 <tr>
                                     <th>User</th>
                                     <th>Role</th>
-                                    <th t-if="can_manage_org_users" class="text-end">Actions</th>
+                                    <th class="text-end">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -453,8 +459,18 @@
                                             <button type="submit" class="btn btn-sm btn-outline-primary">Update</button>
                                         </form>
                                     </td>
-                                    <td t-if="can_manage_org_users" class="text-end">
-                                        <form t-attf-action="/my/organizations/#{organization.id}/users/#{member.id}/remove"
+                                    <td class="text-end">
+                                        <form t-if="member.user_id.id == request.env.uid"
+                                              t-attf-action="/my/organizations/#{organization.id}/leave"
+                                              method="post" class="d-inline"
+                                              onsubmit="return confirm('Leave this organization? You will lose access.');">
+                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                            <button type="submit" class="btn btn-sm btn-outline-warning">
+                                                <i class="fa fa-sign-out me-1"/>Leave organization
+                                            </button>
+                                        </form>
+                                        <form t-if="can_manage_org_users and member.user_id.id != request.env.uid"
+                                              t-attf-action="/my/organizations/#{organization.id}/users/#{member.id}/remove"
                                               method="post" class="d-inline"
                                               onsubmit="return confirm('Remove this member from the organization?');">
                                             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
@@ -523,36 +539,46 @@
                     </form>
                 </div>
             </div>
+        </t>
+    </template>
 
-            <!-- Admin-only: Suspend / Activate -->
-            <div t-if="is_platform_admin" class="card border-0 shadow-sm rounded-3 mt-4">
-                <div class="card-header bg-white border-0 pt-3 pb-0">
-                    <h2 class="h6 mb-0">Administration</h2>
+    <template id="portal_organization_leave_promote" name="Organization leave promote">
+        <t t-call="itlingo_website_portal.portal_organization_hub_shell">
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Promote a successor before leaving</h5>
                 </div>
                 <div class="card-body">
-                    <p class="text-muted small">
-                        Current status:
-                        <span t-attf-class="badge #{organization.state == 'active' and 'bg-success' or 'bg-warning'}">
-                            <t t-out="dict(organization._fields['state'].selection).get(organization.state)"/>
-                        </span>
+                    <p class="text-muted">
+                        You are the last Organization Manager of this organization.
+                        Pick another member to promote to Organization Manager before
+                        you leave.
                     </p>
-                    <t t-if="organization.state == 'active'">
-                        <form t-attf-action="/my/organizations/#{organization.id}/suspend" method="post" class="d-inline">
-                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <div t-if="error" class="alert alert-danger" role="alert">
+                        <t t-out="error"/>
+                    </div>
+                    <form t-attf-action="/my/organizations/#{organization.id}/leave/promote"
+                          method="post">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <div class="list-group mb-3">
+                            <label t-foreach="candidates" t-as="cand"
+                                   class="list-group-item d-flex align-items-center gap-2">
+                                <input type="radio" class="form-check-input m-0"
+                                       name="successor_role_id" t-att-value="cand.id" required=""/>
+                                <span class="ms-2"><t t-out="cand.user_id.name"/></span>
+                                <span class="badge bg-info text-dark ms-auto">
+                                    <t t-out="dict(cand._fields['role'].selection).get(cand.role)"/>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="d-flex gap-2">
                             <button type="submit" class="btn btn-warning"
-                                    onclick="return confirm('Suspend this organization? Members will still see it but it will be marked as suspended.');">
-                                Suspend organization
+                                    onclick="return confirm('Promote the selected member and leave the organization?');">
+                                Promote and leave
                             </button>
-                        </form>
-                    </t>
-                    <t t-if="organization.state == 'suspended'">
-                        <form t-attf-action="/my/organizations/#{organization.id}/activate" method="post" class="d-inline">
-                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                            <button type="submit" class="btn btn-success">
-                                Activate organization
-                            </button>
-                        </form>
-                    </t>
+                            <a t-attf-href="/my/organizations/#{organization.id}/users" class="btn btn-outline-secondary">Cancel</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </t>

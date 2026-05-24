@@ -19,7 +19,6 @@
         <field name="group_ids" eval="[(6, 0, [ref('base.group_user'), ref('base.group_portal')])]"/>
     </record>
 
-    <delete model="website.menu" id="menu_itlingo_portal"/>
 
 </data>
 </odoo>

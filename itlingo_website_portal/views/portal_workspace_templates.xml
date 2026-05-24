@@ -14,6 +14,12 @@
             <div t-if="ws_list_message == 'ws_deleted'" class="alert alert-success mt-2" role="alert">
                 The workspace was deleted.
             </div>
+            <div t-if="ws_list_message == 'ws_deleted_self_leave'" class="alert alert-success mt-2" role="alert">
+                You were the only member, so the workspace was deleted when you left.
+            </div>
+            <div t-if="ws_list_message == 'left_workspace'" class="alert alert-success mt-2" role="alert">
+                You left the workspace.
+            </div>
             <div t-if="ws_list_error == 'ws_bad_status'" class="alert alert-danger mt-2" role="alert">
                 Invalid status action.
             </div>
@@ -23,7 +29,7 @@
             <div t-if="ws_list_error == 'ws_delete_failed'" class="alert alert-danger mt-2" role="alert">
                 Could not delete this workspace. It may have linked records blocking removal.
             </div>
-            <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+            <div t-if="can_create_workspace" class="d-flex flex-wrap align-items-center gap-2 mb-3">
                 <a href="/my/workspaces/new" class="btn btn-outline-success">
                     <i class="fa fa-plus me-1"/>Create workspace
                 </a>
@@ -175,12 +181,12 @@
                                title="Users and roles" aria-label="Users and roles">
                                 <i class="fa fa-key fa-lg"/>
                             </a>
-                            <a t-attf-href="/my/workspaces/#{proj.id}/settings"
-                               class="btn btn-sm btn-link text-primary p-1"
-                               title="Workspace settings" aria-label="Workspace settings">
-                                <i class="fa fa-pencil fa-lg"/>
-                            </a>
                             <t t-if="role and role.role == 'ws_manager'">
+                                <a t-attf-href="/my/workspaces/#{proj.id}/settings"
+                                   class="btn btn-sm btn-link text-primary p-1"
+                                   title="Workspace settings" aria-label="Workspace settings">
+                                    <i class="fa fa-pencil fa-lg"/>
+                                </a>
                                 <form t-attf-action="/my/workspaces/#{proj.id}/delete" method="post" class="d-inline">
                                     <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                                     <button type="submit" class="btn btn-sm btn-link text-danger p-1"
@@ -354,7 +360,8 @@
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'users' and 'active' or ''}">
                                 <i class="fa fa-users fa-fw me-2" aria-hidden="true"/>Users
                             </a>
-                            <a t-if="not workspace_hub_public" t-attf-href="#{ws_hub_prefix}/settings"
+                            <a t-if="not workspace_hub_public and user_role and user_role.role == 'ws_manager'"
+                               t-attf-href="#{ws_hub_prefix}/settings"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'settings' and 'active' or ''}">
                                 <i class="fa fa-cog fa-fw me-2" aria-hidden="true"/>Workspace settings
                             </a>
@@ -478,9 +485,6 @@
             <div t-if="ws_error == 'role_invalid'" class="alert alert-danger" role="alert">
                 Invalid role.
             </div>
-            <div t-if="ws_error == 'cannot_remove_ws_manager'" class="alert alert-danger" role="alert">
-                You cannot remove another accepted workspace manager.
-            </div>
             <div t-if="ws_error in ('role_not_accepted', 'remove_not_accepted')" class="alert alert-danger" role="alert">
                 That membership is not active.
             </div>
@@ -523,7 +527,7 @@
                                 <tr>
                                     <th>User</th>
                                     <th>Role</th>
-                                    <th t-if="can_manage_ws_users" class="text-end">Actions</th>
+                                    <th class="text-end">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -551,10 +555,20 @@
                                             <button type="submit" class="btn btn-sm btn-outline-primary">Update</button>
                                         </form>
                                     </td>
-                                    <td t-if="can_manage_ws_users" class="text-end">
-                                        <form t-attf-action="/my/workspaces/#{project.id}/users/#{member.id}/remove"
+                                    <td class="text-end">
+                                        <form t-if="member.user_id.id == request.env.uid"
+                                              t-attf-action="/my/workspaces/#{project.id}/leave"
                                               method="post" class="d-inline"
-                                              t-att-onsubmit="member.user_id.id == request.env.uid and 'return confirm(\'Remove yourself from this workspace? You will lose access.\');' or 'return confirm(\'Remove this member from the workspace?\');'">
+                                              onsubmit="return confirm('Leave this workspace? You will lose access.');">
+                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                            <button type="submit" class="btn btn-sm btn-outline-warning">
+                                                <i class="fa fa-sign-out me-1"/>Leave workspace
+                                            </button>
+                                        </form>
+                                        <form t-if="can_manage_ws_users and member.user_id.id != request.env.uid"
+                                              t-attf-action="/my/workspaces/#{project.id}/users/#{member.id}/remove"
+                                              method="post" class="d-inline"
+                                              onsubmit="return confirm('Remove this member from the workspace?');">
                                             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                                             <input type="hidden" name="redirect_users" value="1"/>
                                             <button type="submit" class="btn btn-sm btn-outline-danger">Remove</button>
@@ -900,6 +914,48 @@
                         <button type="submit" class="btn btn-success">Create workspace</button>
                     </form>
                     <a t-attf-href="/my/workspaces/#{project.id}" t-if="wizard_mode == 'edit'" class="btn btn-primary">Done</a>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="portal_workspace_leave_promote" name="Workspace leave promote">
+        <t t-call="itlingo_website_portal.portal_workspace_hub_shell">
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Promote a successor before leaving</h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted">
+                        You are the last Workspace Manager of this workspace.
+                        Pick another member to promote to Workspace Manager before
+                        you leave.
+                    </p>
+                    <div t-if="error" class="alert alert-danger" role="alert">
+                        <t t-out="error"/>
+                    </div>
+                    <form t-attf-action="/my/workspaces/#{project.id}/leave/promote"
+                          method="post">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <div class="list-group mb-3">
+                            <label t-foreach="candidates" t-as="cand"
+                                   class="list-group-item d-flex align-items-center gap-2">
+                                <input type="radio" class="form-check-input m-0"
+                                       name="successor_role_id" t-att-value="cand.id" required=""/>
+                                <span class="ms-2"><t t-out="cand.user_id.name"/></span>
+                                <span class="badge bg-info text-dark ms-auto">
+                                    <t t-out="dict(cand._fields['role'].selection).get(cand.role)"/>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-warning"
+                                    onclick="return confirm('Promote the selected member and leave the workspace?');">
+                                Promote and leave
+                            </button>
+                            <a t-attf-href="/my/workspaces/#{project.id}/users" class="btn btn-outline-secondary">Cancel</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </t>
