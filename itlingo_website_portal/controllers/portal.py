@@ -686,8 +686,14 @@ class ITLingoPortal(CustomerPortal):
            type='http', auth='user', website=True)
     def portal_organization_workspaces(self, org_id, **kw):
         org, user_role = self._portal_org_access(org_id)
+        accessible_role_ids = request.env['itlingo.project.role'].sudo().search([
+            ('user_id', '=', request.env.user.id),
+            ('state', '=', 'accepted'),
+            ('project_id.organization_id', '=', org_id),
+        ]).mapped('project_id').ids
         projects = request.env['project.project'].sudo().search([
             ('organization_id', '=', org_id),
+            ('id', 'in', accessible_role_ids),
         ], order='name')
         values = self._prepare_portal_layout_values()
         values.update({
