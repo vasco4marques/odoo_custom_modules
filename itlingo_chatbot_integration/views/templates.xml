@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="chat_page" name="Workspace Chat Page">
+        <t t-call="website.layout">
+            <div class="container-fluid pt-3 px-3 px-lg-4 pb-3 pb-lg-4">
+                <style>
+                    .itlingo-chat-page {
+                        min-height: calc(100vh - 150px);
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .itlingo-chat-back-link {
+                        width: fit-content;
+                        display: inline-flex;
+                        align-items: center;
+                    }
+
+                    .itlingo-chat-frame-card {
+                        flex: 1 1 auto;
+                        min-height: 0;
+                        overflow: hidden;
+                    }
+
+                    .itlingo-chat-frame {
+                        width: 100%;
+                        height: 100%;
+                        min-height: 80vh;
+                        border: 0;
+                    }
+
+                    @media (max-width: 991.98px) {
+                        .itlingo-chat-page {
+                            min-height: calc(100vh - 140px);
+                        }
+
+                        .itlingo-chat-frame {
+                            min-height: 82vh;
+                        }
+                    }
+                </style>
+
+                <div class="itlingo-chat-page">
+                    <div class="mb-3">
+                        <a t-attf-href="/my/workspaces/#{project_id}"
+                           class="nav-link itlingo-org-hub__nav-link rounded-2 px-3 py-2 itlingo-chat-back-link">
+                            <i class="fa fa-arrow-left me-2" aria-hidden="true"/>Back to workspace
+                        </a>
+                    </div>
+
+                    <div class="card border-0 shadow-sm rounded-3 itlingo-chat-frame-card">
+                        <iframe class="itlingo-chat-frame"
+                                t-att-src="chat_url + ('?workspace_id=' + str(project_id) + ('&amp;token=' + token if token else ''))"
+                                title="Workspace Chat"
+                                allow="microphone; camera;"/>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- add a Chat link to workspace hub nav -->
+    <template id="portal_add_chat_link" inherit_id="itlingo_website_portal.portal_workspace_hub_shell">
+        <xpath expr="//nav[contains(@class,'itlingo-org-hub__sidebar')]" position="inside">
+            <a t-attf-href="/my/workspaces/#{project.id}/chat" t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'chat' and 'active' or ''}">
+                <i class="fa fa-comments fa-fw me-2" aria-hidden="true"/>Chat
+            </a>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="itlingo_chatbot_url" model="ir.config_parameter">
+        <field name="key">itlingo_chatbot.url</field>
+        <field name="value">http://127.0.0.1:8000/</field>
+    </record>
+
+    <record id="itlingo_chatbot_secret" model="ir.config_parameter">
+        <field name="key">itlingo_chatbot.secret</field>
+        <field name="value"/>
+    </record>
+</odoo>
