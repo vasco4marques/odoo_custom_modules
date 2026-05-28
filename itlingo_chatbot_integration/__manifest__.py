@@ -7,11 +7,16 @@
     "depends": [
         "website",
         "portal",
+        "project",
+        "itlingo_organizations",
         "itlingo_website_portal"
     ],
     "data": [
         "views/templates.xml",
-        "data/ir_config_parameter.xml"
+        "data/ir_config_parameter.xml",
+        "security/ir.model.access.csv",
+        "views/chatbot_views.xml",
+        "views/chatbot_menus.xml",
     ],
     "installable": True,
     "application": False,

@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="itlingo_chat_workspace_view_tree" model="ir.ui.view">
+        <field name="name">itlingo.chat.workspace.tree</field>
+        <field name="model">itlingo.chat.workspace</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="odoo_project_id"/>
+                <field name="workspace_key"/>
+                <field name="workspace_name"/>
+                <field name="current_thread_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="itlingo_chat_workspace_view_form" model="ir.ui.view">
+        <field name="name">itlingo.chat.workspace.form</field>
+        <field name="model">itlingo.chat.workspace</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="odoo_project_id"/>
+                        <field name="workspace_key"/>
+                        <field name="workspace_name"/>
+                        <field name="current_thread_id"/>
+                    </group>
+                    <group>
+                        <field name="created_at" readonly="1"/>
+                        <field name="updated_at" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_chat_workspace_view_search" model="ir.ui.view">
+        <field name="name">itlingo.chat.workspace.search</field>
+        <field name="model">itlingo.chat.workspace</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="odoo_project_id"/>
+                <field name="workspace_key"/>
+                <field name="workspace_name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="itlingo_chat_workspace_action" model="ir.actions.act_window">
+        <field name="name">Chat Workspaces</field>
+        <field name="res_model">itlingo.chat.workspace</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="itlingo_chat_workspace_view_search"/>
+    </record>
+
+    <record id="itlingo_chat_folder_view_tree" model="ir.ui.view">
+        <field name="name">itlingo.chat.folder.tree</field>
+        <field name="model">itlingo.chat.folder</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="workspace_key"/>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="itlingo_chat_folder_view_form" model="ir.ui.view">
+        <field name="name">itlingo.chat.folder.form</field>
+        <field name="model">itlingo.chat.folder</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="workspace_key"/>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="created_at" readonly="1"/>
+                        <field name="updated_at" readonly="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Threads">
+                            <field name="thread_ids">
+                                <list>
+                                    <field name="workspace_key"/>
+                                    <field name="title"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Files">
+                            <field name="file_ids">
+                                <list>
+                                    <field name="workspace_key"/>
+                                    <field name="file_name"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_chat_folder_view_search" model="ir.ui.view">
+        <field name="name">itlingo.chat.folder.search</field>
+        <field name="model">itlingo.chat.folder</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="workspace_key"/>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="itlingo_chat_folder_action" model="ir.actions.act_window">
+        <field name="name">Chat Folders</field>
+        <field name="res_model">itlingo.chat.folder</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="itlingo_chat_folder_view_search"/>
+    </record>
+
+    <record id="itlingo_chat_thread_view_tree" model="ir.ui.view">
+        <field name="name">itlingo.chat.thread.tree</field>
+        <field name="model">itlingo.chat.thread</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="workspace_key"/>
+                <field name="title"/>
+                <field name="folder_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="itlingo_chat_thread_view_form" model="ir.ui.view">
+        <field name="name">itlingo.chat.thread.form</field>
+        <field name="model">itlingo.chat.thread</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="workspace_key"/>
+                        <field name="title"/>
+                        <field name="folder_id"/>
+                    </group>
+                    <group>
+                        <field name="created_at" readonly="1"/>
+                        <field name="updated_at" readonly="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Messages">
+                            <field name="message_ids">
+                                <list>
+                                    <field name="workspace_key"/>
+                                    <field name="role"/>
+                                    <field name="content_preview" string="Content"/>
+                                    <field name="model"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Files">
+                            <field name="file_ids">
+                                <list>
+                                    <field name="workspace_key"/>
+                                    <field name="file_name"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_chat_thread_view_search" model="ir.ui.view">
+        <field name="name">itlingo.chat.thread.search</field>
+        <field name="model">itlingo.chat.thread</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="workspace_key"/>
+                <field name="title"/>
+                <field name="folder_id"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="itlingo_chat_thread_action" model="ir.actions.act_window">
+        <field name="name">Chat Threads</field>
+        <field name="res_model">itlingo.chat.thread</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="itlingo_chat_thread_view_search"/>
+    </record>
+
+    <record id="itlingo_chat_message_view_tree" model="ir.ui.view">
+        <field name="name">itlingo.chat.message.tree</field>
+        <field name="model">itlingo.chat.message</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="workspace_key"/>
+                <field name="thread_id"/>
+                <field name="role"/>
+                <field name="content_preview" string="Content"/>
+                <field name="model"/>
+                <field name="timestamp"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="itlingo_chat_message_view_form" model="ir.ui.view">
+        <field name="name">itlingo.chat.message.form</field>
+        <field name="model">itlingo.chat.message</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="workspace_key"/>
+                        <field name="thread_id"/>
+                        <field name="role"/>
+                        <field name="model"/>
+                        <field name="model_auto_switched"/>
+                    </group>
+                    <group>
+                        <field name="content" nolabel="1"/>
+                    </group>
+                    <group>
+                        <field name="models_used"/>
+                        <field name="tokens"/>
+                    </group>
+                    <group>
+                        <field name="timestamp" readonly="1"/>
+                    </group>
+                    <notebook>
+                        <page string="File Links">
+                            <field name="file_link_ids">
+                                <list>
+                                    <field name="thread_file_id"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_chat_message_view_search" model="ir.ui.view">
+        <field name="name">itlingo.chat.message.search</field>
+        <field name="model">itlingo.chat.message</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="workspace_key"/>
+                <field name="thread_id"/>
+                <field name="role"/>
+                <field name="content_preview" string="Content"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="itlingo_chat_message_action" model="ir.actions.act_window">
+        <field name="name">Chat Messages</field>
+        <field name="res_model">itlingo.chat.message</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="itlingo_chat_message_view_search"/>
+    </record>
+
+    <record id="itlingo_thread_file_view_tree" model="ir.ui.view">
+        <field name="name">itlingo.thread.file.tree</field>
+        <field name="model">itlingo.thread.file</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="workspace_key"/>
+                <field name="thread_id"/>
+                <field name="folder_id"/>
+                <field name="file_size_bytes"/>
+                <field name="extension"/>
+                <field name="mime_type"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="itlingo_thread_file_view_form" model="ir.ui.view">
+        <field name="name">itlingo.thread.file.form</field>
+        <field name="model">itlingo.thread.file</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="workspace_key"/>
+                        <field name="thread_id"/>
+                        <field name="folder_id"/>
+                        <field name="file_name"/>
+                    </group>
+                    <group>
+                        <field name="file_size_bytes"/>
+                        <field name="extension"/>
+                        <field name="mime_type"/>
+                        <field name="extraction_method"/>
+                        <field name="preserve_full_context"/>
+                    </group>
+                    <group>
+                        <field name="extracted_content" nolabel="1"/>
+                    </group>
+                    <group>
+                        <field name="created_at" readonly="1"/>
+                        <field name="updated_at" readonly="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Chunks">
+                            <field name="chunk_ids">
+                                <list>
+                                    <field name="chunk_index"/>
+                                    <field name="content"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_thread_file_view_search" model="ir.ui.view">
+        <field name="name">itlingo.thread.file.search</field>
+        <field name="model">itlingo.thread.file</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="workspace_key"/>
+                <field name="thread_id"/>
+                <field name="folder_id"/>
+                <field name="file_name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="itlingo_thread_file_action" model="ir.actions.act_window">
+        <field name="name">Thread Files</field>
+        <field name="res_model">itlingo.thread.file</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="itlingo_thread_file_view_search"/>
+    </record>
+
+    <record id="itlingo_thread_file_chunk_view_tree" model="ir.ui.view">
+        <field name="name">itlingo.thread.file.chunk.tree</field>
+        <field name="model">itlingo.thread.file.chunk</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="thread_file_id"/>
+                <field name="chunk_index"/>
+                <field name="content"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="itlingo_thread_file_chunk_view_form" model="ir.ui.view">
+        <field name="name">itlingo.thread.file.chunk.form</field>
+        <field name="model">itlingo.thread.file.chunk</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="thread_file_id"/>
+                        <field name="chunk_index"/>
+                    </group>
+                    <group>
+                        <field name="content" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_thread_file_chunk_view_search" model="ir.ui.view">
+        <field name="name">itlingo.thread.file.chunk.search</field>
+        <field name="model">itlingo.thread.file.chunk</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="thread_file_id"/>
+                <field name="chunk_index"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="itlingo_thread_file_chunk_action" model="ir.actions.act_window">
+        <field name="name">Thread File Chunks</field>
+        <field name="res_model">itlingo.thread.file.chunk</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="itlingo_thread_file_chunk_view_search"/>
+    </record>
+
+    <record id="itlingo_message_file_link_view_tree" model="ir.ui.view">
+        <field name="name">itlingo.message.file.link.tree</field>
+        <field name="model">itlingo.message.file.link</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="message_id"/>
+                <field name="thread_file_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="itlingo_message_file_link_view_form" model="ir.ui.view">
+        <field name="name">itlingo.message.file.link.form</field>
+        <field name="model">itlingo.message.file.link</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="message_id"/>
+                        <field name="thread_file_id"/>
+                    </group>
+                    <group>
+                        <field name="created_at" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_message_file_link_view_search" model="ir.ui.view">
+        <field name="name">itlingo.message.file.link.search</field>
+        <field name="model">itlingo.message.file.link</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="message_id"/>
+                <field name="thread_file_id"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="itlingo_message_file_link_action" model="ir.actions.act_window">
+        <field name="name">Message File Links</field>
+        <field name="res_model">itlingo.message.file.link</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="itlingo_message_file_link_view_search"/>
+    </record>
+
+    <record id="itlingo_model_usage_view_tree" model="ir.ui.view">
+        <field name="name">itlingo.model.usage.tree</field>
+        <field name="model">itlingo.model.usage</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="timestamp"/>
+                <field name="provider"/>
+                <field name="model"/>
+                <field name="input_tokens"/>
+                <field name="output_tokens"/>
+                <field name="total_tokens"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="itlingo_model_usage_view_form" model="ir.ui.view">
+        <field name="name">itlingo.model.usage.form</field>
+        <field name="model">itlingo.model.usage</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="timestamp" readonly="1"/>
+                        <field name="provider"/>
+                        <field name="model"/>
+                    </group>
+                    <group>
+                        <field name="input_tokens"/>
+                        <field name="output_tokens"/>
+                        <field name="total_tokens"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_model_usage_view_search" model="ir.ui.view">
+        <field name="name">itlingo.model.usage.search</field>
+        <field name="model">itlingo.model.usage</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="provider"/>
+                <field name="model"/>
+                <filter name="group_provider" string="Provider" context="{'group_by': 'provider'}"/>
+                <filter name="group_model" string="Model" context="{'group_by': 'model'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="itlingo_model_usage_action" model="ir.actions.act_window">
+        <field name="name">Model Usage</field>
+        <field name="res_model">itlingo.model.usage</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="itlingo_model_usage_view_search"/>
+    </record>
+
+    <record id="itlingo_ops_configuration_view_tree" model="ir.ui.view">
+        <field name="name">itlingo.ops.configuration.tree</field>
+        <field name="model">itlingo.ops.configuration</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="key"/>
+                <field name="default_model"/>
+                <field name="rag_llm_model"/>
+                <field name="attachment_retention_days"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="itlingo_ops_configuration_view_form" model="ir.ui.view">
+        <field name="name">itlingo.ops.configuration.form</field>
+        <field name="model">itlingo.ops.configuration</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="key"/>
+                        <field name="default_model"/>
+                        <field name="rag_llm_model"/>
+                    </group>
+                    <group>
+                        <field name="diagram_auto_switch_model"/>
+                        <field name="image_auto_switch_model"/>
+                        <field name="attachment_retention_days"/>
+                    </group>
+                    <group>
+                        <field name="model_groups"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_ops_configuration_action" model="ir.actions.act_window">
+        <field name="name">Ops Configuration</field>
+        <field name="res_model">itlingo.ops.configuration</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="itlingo_session_settings_view_tree" model="ir.ui.view">
+        <field name="name">itlingo.session.settings.tree</field>
+        <field name="model">itlingo.session.settings</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="session_id"/>
+                <field name="num_drafts"/>
+                <field name="max_rounds"/>
+                <field name="max_calls"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="itlingo_session_settings_view_form" model="ir.ui.view">
+        <field name="name">itlingo.session.settings.form</field>
+        <field name="model">itlingo.session.settings</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="session_id"/>
+                        <field name="num_drafts"/>
+                        <field name="max_rounds"/>
+                        <field name="max_calls"/>
+                    </group>
+                    <group>
+                        <field name="min_syntactic_score"/>
+                        <field name="min_completeness_score"/>
+                    </group>
+                    <group>
+                        <field name="created_at" readonly="1"/>
+                        <field name="updated_at" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_session_settings_view_search" model="ir.ui.view">
+        <field name="name">itlingo.session.settings.search</field>
+        <field name="model">itlingo.session.settings</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="session_id"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="itlingo_session_settings_action" model="ir.actions.act_window">
+        <field name="name">Session Settings</field>
+        <field name="res_model">itlingo.session.settings</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="itlingo_session_settings_view_search"/>
+    </record>
+
+    <record id="itlingo_kb_language_view_tree" model="ir.ui.view">
+        <field name="name">itlingo.kb.language.tree</field>
+        <field name="model">itlingo.kb.language</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="itlingo_kb_language_view_form" model="ir.ui.view">
+        <field name="name">itlingo.kb.language.form</field>
+        <field name="model">itlingo.kb.language</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="created_at" readonly="1"/>
+                        <field name="updated_at" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_kb_language_action" model="ir.actions.act_window">
+        <field name="name">KB Languages</field>
+        <field name="res_model">itlingo.kb.language</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="itlingo_kb_file_view_tree" model="ir.ui.view">
+        <field name="name">itlingo.kb.file.tree</field>
+        <field name="model">itlingo.kb.file</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="file_name"/>
+                <field name="file_type"/>
+                <field name="language_id"/>
+                <field name="is_enabled"/>
+                <field name="source_url"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="itlingo_kb_file_view_form" model="ir.ui.view">
+        <field name="name">itlingo.kb.file.form</field>
+        <field name="model">itlingo.kb.file</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="file_name"/>
+                        <field name="file_type"/>
+                        <field name="language_id"/>
+                        <field name="is_enabled"/>
+                    </group>
+                    <group>
+                        <field name="extension"/>
+                        <field name="mime_type"/>
+                        <field name="extraction_method"/>
+                        <field name="source_url"/>
+                    </group>
+                    <group>
+                        <field name="content" nolabel="1"/>
+                    </group>
+                    <group>
+                        <field name="created_at" readonly="1"/>
+                        <field name="updated_at" readonly="1"/>
+                        <field name="last_refreshed_at" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_kb_file_action" model="ir.actions.act_window">
+        <field name="name">KB Files</field>
+        <field name="res_model">itlingo.kb.file</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>
