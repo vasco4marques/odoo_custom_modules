@@ -126,6 +126,7 @@ class ItlingoOpsConfiguration(models.Model):
 
     key = fields.Char(required=True)
     model_groups = fields.Json(default=list)
+    env_var_pairs = fields.Json(default=list)
     default_model = fields.Char(default='gemini-2.5-flash-lite')
     rag_llm_model = fields.Char(default='command-a-03-2025')
     diagram_auto_switch_model = fields.Char(default='gemini-2.5-flash')

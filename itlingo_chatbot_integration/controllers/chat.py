@@ -60,7 +60,11 @@ class ChatController(http.Controller):
     def workspace_chat(self, project_id, **kw):
         # read configuration
         params = request.env['ir.config_parameter'].sudo()
-        chat_url = params.get_param('itlingo_chatbot.url', default='http://127.0.0.1:8000/')
+        chat_url = (
+            params.get_param('itlingo_chatbot.chatbot_url')
+            or params.get_param('itlingo_chatbot.url')
+            or 'http://127.0.0.1:8000/'
+        )
         secret = params.get_param('itlingo_chatbot.secret', default=None)
 
         user = request.env.user

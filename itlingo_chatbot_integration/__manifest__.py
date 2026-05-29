@@ -15,6 +15,7 @@
         "views/templates.xml",
         "data/ir_config_parameter.xml",
         "security/ir.model.access.csv",
+        "views/chatbot_settings_views.xml",
         "views/chatbot_views.xml",
         "views/chatbot_menus.xml",
     ],

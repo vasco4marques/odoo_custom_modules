@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="itlingo_chatbot_settings_view_form" model="ir.ui.view">
+        <field name="name">itlingo.chatbot.settings.form</field>
+        <field name="model">itlingo.chatbot.settings</field>
+        <field name="arch" type="xml">
+            <form create="false" delete="false" duplicate="false">
+                <sheet>
+                    <group>
+                        <field name="name" invisible="1"/>
+                        <field name="settings_section" invisible="1"/>
+                    </group>
+                    <div class="d-flex flex-column gap-3 mt-3">
+                        <div class="d-flex flex-column gap-3" invisible="settings_section != 'running'">
+                            <div class="d-flex flex-column">
+                                <label for="chatbot_url" class="form-label mb-1">Chatbot URL</label>
+                                <field name="chatbot_url" nolabel="1" class="w-100"/>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="langium_ai_service_url" class="form-label mb-1">Langium AI Service URL</label>
+                                <field name="langium_ai_service_url" nolabel="1" class="w-100"/>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column gap-3" invisible="settings_section != 'operational'">
+                            <div class="d-flex flex-column gap-2">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="o_form_label mb-0 fw-semibold">Model Catalog</span>
+                                    <span class="text-muted small">Manage providers and options in dedicated lists.</span>
+                                </div>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button name="action_open_providers" type="object" class="btn btn-primary">Manage Providers</button>
+                                    <button name="action_open_model_options" type="object" class="btn btn-secondary">Manage Model Options</button>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column gap-2">
+                                <span class="o_form_label mb-0 fw-semibold">LLM Settings</span>
+                                <div class="d-flex flex-column">
+                                    <label for="default_model" class="form-label mb-1">Default Model</label>
+                                    <field name="default_model" nolabel="1" class="w-100"/>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <label for="rag_llm_model" class="form-label mb-1">RAG LLM Model</label>
+                                    <field name="rag_llm_model" nolabel="1" class="w-100"/>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <label for="diagram_auto_switch_model" class="form-label mb-1">Diagram Generation Auto-Switch model</label>
+                                    <field name="diagram_auto_switch_model" nolabel="1" class="w-100"/>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <label for="image_auto_switch_model" class="form-label mb-1">Image Interpretation Auto-Switch Model</label>
+                                    <field name="image_auto_switch_model" nolabel="1" class="w-100"/>
+                                </div>
+                                <div class="d-flex flex-column gap-2 mt-2">
+                                    <span class="o_form_label mb-0 fw-semibold">Agentic Generation Phase Models</span>
+                                    <div class="d-flex flex-column">
+                                        <label for="agentic_generation_phase0_model" class="form-label mb-1">Phase 0 - extract spec</label>
+                                        <field name="agentic_generation_phase0_model" nolabel="1" class="w-100"/>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="agentic_generation_phase1_model" class="form-label mb-1">Phase 1 - draft DSL</label>
+                                        <field name="agentic_generation_phase1_model" nolabel="1" class="w-100"/>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="agentic_generation_phase3_model" class="form-label mb-1">Phase 3 - check completeness</label>
+                                        <field name="agentic_generation_phase3_model" nolabel="1" class="w-100"/>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="agentic_generation_phase4_model" class="form-label mb-1">Phase 4 - repair DSL</label>
+                                        <field name="agentic_generation_phase4_model" nolabel="1" class="w-100"/>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="agentic_generation_phase5_model" class="form-label mb-1">Phase 5 - finalize answer</label>
+                                        <field name="agentic_generation_phase5_model" nolabel="1" class="w-100"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_chatbot_settings_open" model="ir.actions.server">
+        <field name="name">Chatbot Settings</field>
+        <field name="model_id" ref="model_itlingo_chatbot_settings"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_settings('running')</field>
+    </record>
+
+    <record id="itlingo_chatbot_settings_open_operational" model="ir.actions.server">
+        <field name="name">Operational Settings</field>
+        <field name="model_id" ref="model_itlingo_chatbot_settings"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_settings('operational')</field>
+    </record>
+
+    <record id="itlingo_chatbot_settings_provider_view_list" model="ir.ui.view">
+        <field name="name">itlingo.chatbot.settings.provider.list</field>
+        <field name="model">itlingo.chatbot.settings.provider</field>
+        <field name="arch" type="xml">
+            <list open_form_view="1">
+                <field name="label"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="itlingo_chatbot_settings_provider_view_form" model="ir.ui.view">
+        <field name="name">itlingo.chatbot.settings.provider.form</field>
+        <field name="model">itlingo.chatbot.settings.provider</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="label"/>
+                    </group>
+                    <notebook>
+                        <page string="Models">
+                            <field name="option_ids" nolabel="1">
+                                <list editable="bottom" open_form_view="1">
+                                    <field name="label"/>
+                                    <field name="value"/>
+                                    <field name="api_env_var"/>
+                                    <field name="url_env_var"/>
+                                    <field name="env_var_value"/>
+                                    <field name="base_url_enabled"/>
+                                    <field name="disabled"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itlingo_chatbot_settings_option_view_list" model="ir.ui.view">
+        <field name="name">itlingo.chatbot.settings.option.list</field>
+        <field name="model">itlingo.chatbot.settings.option</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="label"/>
+                <field name="value"/>
+                <field name="provider_name"/>
+                <field name="api_env_var"/>
+                <field name="url_env_var"/>
+                <field name="env_var_value"/>
+                <field name="base_url_enabled"/>
+                <field name="disabled"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="itlingo_chatbot_settings_option_view_form" model="ir.ui.view">
+        <field name="name">itlingo.chatbot.settings.option.form</field>
+        <field name="model">itlingo.chatbot.settings.option</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="provider_name" readonly="1"/>
+                        <field name="label"/>
+                        <field name="value"/>
+                    </group>
+                    <group string="Advanced">
+                        <field name="api_env_var"/>
+                        <field name="url_env_var"/>
+                        <field name="env_var_value"/>
+                        <field name="base_url_enabled"/>
+                        <field name="disabled"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

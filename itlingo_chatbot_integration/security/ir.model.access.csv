@@ -11,3 +11,6 @@ access_itlingo_ops_configuration,itlingo.ops.configuration,model_itlingo_ops_con
 access_itlingo_kb_language,itlingo.kb.language,model_itlingo_kb_language,base.group_user,1,1,1,1
 access_itlingo_kb_file,itlingo.kb.file,model_itlingo_kb_file,base.group_user,1,1,1,1
 access_itlingo_session_settings,itlingo.session.settings,model_itlingo_session_settings,base.group_user,1,1,1,1
+access_itlingo_chatbot_settings,itlingo.chatbot.settings,model_itlingo_chatbot_settings,itlingo_organizations.group_itlingo_admin,1,1,1,1
+access_itlingo_chatbot_settings_provider,itlingo.chatbot.settings.provider,model_itlingo_chatbot_settings_provider,itlingo_organizations.group_itlingo_admin,1,1,1,1
+access_itlingo_chatbot_settings_option,itlingo.chatbot.settings.option,model_itlingo_chatbot_settings_option,itlingo_organizations.group_itlingo_admin,1,1,1,1
