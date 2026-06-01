@@ -17,6 +17,9 @@
                             <field name="token_expiry_hours"/>
                             <field name="active"/>
                         </group>
+                        <group string="Document Import">
+                            <field name="importable_extensions"/>
+                        </group>
                     </group>
                 </sheet>
             </form>

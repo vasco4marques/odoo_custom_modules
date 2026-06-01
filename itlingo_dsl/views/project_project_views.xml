@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="project_project_view_form_inherit_dsl" model="ir.ui.view">
+        <field name="name">project.project.form.inherit.dsl</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="itlingo_workspace_access.project_project_view_form_inherit_itlingo"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='itlingo_workspace']/separator" position="before">
+                <separator string="DSLs"/>
+                <group>
+                    <group string="DSL Availability">
+                        <field name="allowed_dsl_ids" widget="many2many_tags"
+                               options="{'no_create': True, 'no_create_edit': True}"
+                               placeholder="Leave empty to inherit organization DSLs"/>
+                        <field name="default_dsl_id"
+                               options="{'no_create': True, 'no_create_edit': True}"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

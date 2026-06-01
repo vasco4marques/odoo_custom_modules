@@ -40,6 +40,13 @@ class ItlingoIntegrationSettings(models.Model):
         string='Token Expiry (hours)',
         default=24,
     )
+    importable_extensions = fields.Char(
+        string='Importable File Extensions',
+        default='rsl,asl,txt,md,json,xml,yaml,yml,csv,properties',
+        help='Comma-separated list of file extensions (without the dot) that '
+             'ITOI users are allowed to import from cloud documents. Only '
+             'text-editable formats should be listed.',
+    )
     active = fields.Boolean(default=True)
 
     @api.model_create_multi
@@ -69,6 +76,16 @@ class ItlingoIntegrationSettings(models.Model):
             'res_id': record.id,
             'view_mode': 'form',
             'target': 'current',
+        }
+
+    def _get_importable_extensions(self):
+        """Return the set of allowed import extensions (lowercase, no dot)."""
+        self.ensure_one()
+        raw = self.importable_extensions or ''
+        return {
+            ext.strip().lower().lstrip('.')
+            for ext in raw.split(',')
+            if ext.strip()
         }
 
     def _ensure_encryption_key(self):

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- List View -->
+    <record id="view_itlingo_dsl_resource_list" model="ir.ui.view">
+        <field name="name">itlingo.dsl.resource.list</field>
+        <field name="model">itlingo.dsl.resource</field>
+        <field name="arch" type="xml">
+            <list string="DSL Resources">
+                <field name="name"/>
+                <field name="dsl_id"/>
+                <field name="resource_kind"/>
+                <field name="visibility"/>
+                <field name="rag_status" widget="badge"
+                       decoration-success="rag_status == 'indexed'"
+                       decoration-info="rag_status == 'in_processing'"
+                       decoration-danger="rag_status == 'failed'"
+                       decoration-muted="rag_status == 'not_indexed'"/>
+                <field name="active" column_invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_itlingo_dsl_resource_form" model="ir.ui.view">
+        <field name="name">itlingo.dsl.resource.form</field>
+        <field name="model">itlingo.dsl.resource</field>
+        <field name="arch" type="xml">
+            <form string="DSL Resource">
+                <sheet>
+                    <widget name="web_ribbon" title="Archived"
+                            bg_color="text-bg-danger"
+                            invisible="active"/>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Resource name"/></h1>
+                    </div>
+                    <group>
+                        <group string="Classification">
+                            <field name="dsl_id"
+                                   options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="resource_kind"/>
+                            <field name="visibility"/>
+                        </group>
+                        <group string="Content">
+                            <field name="attachment_id"/>
+                            <field name="reference_url" widget="url"/>
+                            <field name="rag_status"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_itlingo_dsl_resource_search" model="ir.ui.view">
+        <field name="name">itlingo.dsl.resource.search</field>
+        <field name="model">itlingo.dsl.resource</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="dsl_id"/>
+                <field name="resource_kind"/>
+                <filter string="Public" name="public"
+                        domain="[('visibility', '=', 'public')]"/>
+                <filter string="Indexed" name="indexed"
+                        domain="[('rag_status', '=', 'indexed')]"/>
+                <separator/>
+                <filter string="Archived" name="inactive"
+                        domain="[('active', '=', False)]"/>
+                <group name="group_by">
+                    <filter string="DSL" name="group_by_dsl"
+                            context="{'group_by': 'dsl_id'}"/>
+                    <filter string="Kind" name="group_by_kind"
+                            context="{'group_by': 'resource_kind'}"/>
+                    <filter string="Visibility" name="group_by_visibility"
+                            context="{'group_by': 'visibility'}"/>
+                    <filter string="RAG Status" name="group_by_rag"
+                            context="{'group_by': 'rag_status'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_itlingo_dsl_resource" model="ir.actions.act_window">
+        <field name="name">DSL Resources</field>
+        <field name="res_model">itlingo.dsl.resource</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_itlingo_dsl_resource_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Register a global DSL resource
+            </p>
+            <p>
+                DSL resources are global platform resources associated with a
+                specific DSL, such as templates, examples, tutorials and prompts.
+            </p>
+        </field>
+    </record>
+
+</odoo>
