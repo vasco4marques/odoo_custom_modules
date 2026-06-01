@@ -1,3 +1,5 @@
+import os
+
 from odoo import api, fields, models
 from odoo.exceptions import UserError
 import json
@@ -157,6 +159,12 @@ class ItlingoChatbotSettings(models.Model):
         inverse='_inverse_langium_ai_service_url',
         help='Base URL where the Langium AI service is running.',
     )
+    chatbot_secret = fields.Char(
+        string='Chatbot Secret Key',
+        compute='_compute_running_settings',
+        inverse='_inverse_chatbot_secret',
+        help='Shared secret used to sign and verify workspace access tokens.',
+    )
     provider_ids = fields.One2many('itlingo.chatbot.settings.provider', 'settings_id', string='Model Providers')
     option_ids = fields.One2many('itlingo.chatbot.settings.option', 'settings_id', string='Model Options')
     # Legacy JSON snapshot used by Django and for bootstrap compatibility.
@@ -196,6 +204,7 @@ class ItlingoChatbotSettings(models.Model):
         return {
             'chatbot_url': self.env['ir.config_parameter'].sudo().get_param('itlingo_chatbot.chatbot_url', ''),
             'langium_ai_service_url': self.env['ir.config_parameter'].sudo().get_param('itlingo_chatbot.langium_ai_service_url', ''),
+            'chatbot_secret': (os.getenv('ITLINGO_CHATBOT_SECRET') or self.env['ir.config_parameter'].sudo().get_param('itlingo_chatbot.secret', '') or ''),
             'model_groups': json.dumps(ops_config.model_groups or []),
             'default_model': ops_config.default_model or '',
             'rag_llm_model': ops_config.rag_llm_model or '',
@@ -412,6 +421,7 @@ class ItlingoChatbotSettings(models.Model):
         for record in self:
             record.chatbot_url = values['chatbot_url']
             record.langium_ai_service_url = values['langium_ai_service_url']
+            record.chatbot_secret = values.get('chatbot_secret') or ''
             record.default_model = values.get('default_model') or ''
             record.rag_llm_model = values.get('rag_llm_model') or ''
             record.diagram_auto_switch_model = values.get('diagram_auto_switch_model') or ''
@@ -445,6 +455,11 @@ class ItlingoChatbotSettings(models.Model):
         self.env['ir.config_parameter'].sudo().set_param(
             'itlingo_chatbot.langium_ai_service_url', self.langium_ai_service_url or ''
         )
+
+    def _inverse_chatbot_secret(self):
+        self.ensure_one()
+        value = (self.chatbot_secret or '').strip()
+        self.env['ir.config_parameter'].sudo().set_param('itlingo_chatbot.secret', value)
 
     def _inverse_default_model(self):
         self.ensure_one()

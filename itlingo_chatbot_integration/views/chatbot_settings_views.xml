@@ -17,6 +17,10 @@
                                 <field name="chatbot_url" nolabel="1" class="w-100"/>
                             </div>
                             <div class="d-flex flex-column">
+                                <label for="chatbot_secret" class="form-label mb-1">Chatbot Secret Key</label>
+                                <field name="chatbot_secret" nolabel="1" class="w-100" widget="password"/>
+                            </div>
+                            <div class="d-flex flex-column">
                                 <label for="langium_ai_service_url" class="form-label mb-1">Langium AI Service URL</label>
                                 <field name="langium_ai_service_url" nolabel="1" class="w-100"/>
                             </div>

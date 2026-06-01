@@ -1,4 +1,5 @@
 from odoo import api, fields, models, _
+import uuid
 
 
 class ProjectProject(models.Model):
@@ -35,6 +36,16 @@ class ProjectProject(models.Model):
         default=False,
         tracking=True,
         help='If enabled, the workspace is listed on the public workspace page and all users can see its documents, and specifications.',
+    )
+
+    workspace_key = fields.Char(
+        string='Workspace Key',
+        required=True,
+        readonly=True,
+        default=lambda self: str(uuid.uuid4()),
+        help='Stable external identifier (UUID) used by external services to reference this workspace',
+        copy=False,
+        index=True,
     )
 
     workspace_role_ids = fields.One2many(

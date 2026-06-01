@@ -1,5 +1,6 @@
 from odoo import http
 from odoo.http import request
+import os
 import hmac
 import hashlib
 import base64
@@ -24,6 +25,9 @@ def _sign_payload(secret: str, payload: dict) -> str:
 def _build_workspace_token(project_id: int, user, secret: str) -> str:
     now = int(time.time())
     db_name = request.env.cr.dbname
+    # include workspace_key for a stable external identifier
+    project = request.env['project.project'].sudo().browse(project_id)
+    workspace_key = project.workspace_key if project and project.exists() else ''
     scope = f"odoo:{db_name}:workspace:{project_id}:user:{user.id}"
     payload = {
         "aud": "itlingo-chatbot",
@@ -34,6 +38,7 @@ def _build_workspace_token(project_id: int, user, secret: str) -> str:
         "odoo_partner_id": user.partner_id.id if user.partner_id else None,
         "odoo_db": db_name,
         "workspace_id": project_id,
+        "workspace_key": workspace_key,
         "workspace_name": request.env["project.project"].sudo().browse(project_id).name or "",
         "scope": scope,
         "iat": now,
@@ -48,7 +53,8 @@ class ChatController(http.Controller):
         return {
             "project": project,
             "project_id": project_id,
-            "workspace_session_id": str(project_id),
+            "workspace_key": project.workspace_key,
+            "workspace_session_id": str(project.workspace_key),
             "ws_hub_prefix": f"/my/workspaces/{project_id}",
             "workspace_hub_page": "chat",
             "workspace_hub_public": False,
@@ -65,7 +71,7 @@ class ChatController(http.Controller):
             or params.get_param('itlingo_chatbot.url')
             or 'http://127.0.0.1:8000/'
         )
-        secret = params.get_param('itlingo_chatbot.secret', default=None)
+        secret = (os.getenv('ITLINGO_CHATBOT_SECRET') or params.get_param('itlingo_chatbot.secret', default=None) or '').strip()
 
         user = request.env.user
         token = ''
