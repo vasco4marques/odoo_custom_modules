@@ -50,6 +50,18 @@ class ItlingoDocument(models.Model):
         'itlingo.document.library', 'document_id', string='Libraries',
     )
 
+    # DSL-specific fields
+    grammar_file = fields.Binary(string='Grammar File', attachment=True)
+    grammar_file_name = fields.Char(string='Grammar Filename')
+    validation_rules_file = fields.Binary(string='Validation Rules File', attachment=True)
+    validation_rules_file_name = fields.Char(string='Validation Rules Filename')
+    examples_file = fields.Binary(string='Examples File', attachment=True)
+    examples_file_name = fields.Char(string='Examples Filename')
+    spec_example_file_ids = fields.One2many(
+        'itlingo.document.spec.file', 'document_id',
+        string='Specification Examples',
+    )
+
     @api.depends('document_file')
     def _compute_file_size(self):
         for doc in self:
