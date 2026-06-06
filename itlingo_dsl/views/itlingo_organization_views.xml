@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="itlingo_organization_view_form_inherit_dsl" model="ir.ui.view">
+        <field name="name">itlingo.organization.form.inherit.dsl</field>
+        <field name="model">itlingo.organization</field>
+        <field name="inherit_id" ref="itlingo_organizations.itlingo_organization_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="DSLs" name="dsls">
+                    <group>
+                        <field name="allowed_dsl_ids" widget="many2many_tags"
+                               options="{'no_create': True, 'no_create_edit': True}"
+                               placeholder="Leave empty to allow all active DSLs"/>
+                    </group>
+                    <div class="text-muted">
+                        If no DSL is selected, this organization may use all active
+                        platform DSLs. Otherwise it is restricted to the selected ones.
+                    </div>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

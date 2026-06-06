@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_itlingo_dsl_member,itlingo.dsl member,model_itlingo_dsl,itlingo_organizations.group_itlingo_member,1,0,0,0
+access_itlingo_dsl_manager,itlingo.dsl manager,model_itlingo_dsl,itlingo_organizations.group_itlingo_manager,1,1,1,0
+access_itlingo_dsl_admin,itlingo.dsl admin,model_itlingo_dsl,itlingo_organizations.group_itlingo_admin,1,1,1,1
+access_itlingo_dsl_portal,itlingo.dsl portal,model_itlingo_dsl,base.group_portal,1,0,0,0
+access_itlingo_dsl_resource_member,itlingo.dsl.resource member,model_itlingo_dsl_resource,itlingo_organizations.group_itlingo_member,1,0,0,0
+access_itlingo_dsl_resource_manager,itlingo.dsl.resource manager,model_itlingo_dsl_resource,itlingo_organizations.group_itlingo_manager,1,1,1,0
+access_itlingo_dsl_resource_admin,itlingo.dsl.resource admin,model_itlingo_dsl_resource,itlingo_organizations.group_itlingo_admin,1,1,1,1
+access_itlingo_dsl_resource_portal,itlingo.dsl.resource portal,model_itlingo_dsl_resource,base.group_portal,1,0,0,0
+access_itlingo_org_resource_member,itlingo.org.resource member,model_itlingo_org_resource,itlingo_organizations.group_itlingo_member,1,1,1,0
+access_itlingo_org_resource_manager,itlingo.org.resource manager,model_itlingo_org_resource,itlingo_organizations.group_itlingo_manager,1,1,1,1
+access_itlingo_org_resource_admin,itlingo.org.resource admin,model_itlingo_org_resource,itlingo_organizations.group_itlingo_admin,1,1,1,1
+access_itlingo_org_resource_portal,itlingo.org.resource portal,model_itlingo_org_resource,base.group_portal,1,0,0,0

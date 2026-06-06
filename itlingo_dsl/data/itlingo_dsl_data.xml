@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="dsl_rsl_1_0" model="itlingo.dsl">
+        <field name="name">Requirements Specification Language</field>
+        <field name="acronym">RSL</field>
+        <field name="version">1.0</field>
+        <field name="status">active</field>
+        <field name="description">Language for rigorous requirements specifications.</field>
+        <field name="file_extensions">.rsl,.rslx</field>
+    </record>
+
+    <record id="dsl_asl_1_0" model="itlingo.dsl">
+        <field name="name">Application Specification Language</field>
+        <field name="acronym">ASL</field>
+        <field name="version">1.0</field>
+        <field name="status">active</field>
+        <field name="description">Language for rigorous application specifications.</field>
+        <field name="file_extensions">.asl,.aslx</field>
+    </record>
+
+</odoo>

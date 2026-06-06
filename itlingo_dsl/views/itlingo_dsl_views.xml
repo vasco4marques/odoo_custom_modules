@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- List View -->
+    <record id="view_itlingo_dsl_list" model="ir.ui.view">
+        <field name="name">itlingo.dsl.list</field>
+        <field name="model">itlingo.dsl</field>
+        <field name="arch" type="xml">
+            <list string="DSLs">
+                <field name="name"/>
+                <field name="acronym"/>
+                <field name="version"/>
+                <field name="status" widget="badge"
+                       decoration-info="status == 'draft'"
+                       decoration-success="status == 'active'"
+                       decoration-warning="status == 'deprecated'"
+                       decoration-muted="status == 'archived'"/>
+                <field name="file_extensions"/>
+                <field name="active" column_invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_itlingo_dsl_form" model="ir.ui.view">
+        <field name="name">itlingo.dsl.form</field>
+        <field name="model">itlingo.dsl</field>
+        <field name="arch" type="xml">
+            <form string="DSL">
+                <header>
+                    <field name="status" widget="statusbar"
+                           statusbar_visible="draft,active,deprecated,archived"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Archived"
+                            bg_color="text-bg-danger"
+                            invisible="active"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="e.g. Requirements Specification Language"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="Main Information">
+                            <field name="acronym"/>
+                            <field name="version"/>
+                            <field name="status"/>
+                        </group>
+                        <group string="Technical References">
+                            <field name="file_extensions"/>
+                            <field name="grammar_reference" widget="url"/>
+                            <field name="parser_validator_reference" widget="url"/>
+                            <field name="documentation_url" widget="url"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Description">
+                            <field name="description"/>
+                        </page>
+                        <page string="Maintainers">
+                            <field name="maintainer_ids" widget="many2many_tags"/>
+                        </page>
+                        <page string="Administration">
+                            <group>
+                                <field name="notes"/>
+                                <field name="active"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_itlingo_dsl_search" model="ir.ui.view">
+        <field name="name">itlingo.dsl.search</field>
+        <field name="model">itlingo.dsl</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="acronym"/>
+                <field name="version"/>
+                <field name="description"/>
+                <filter string="Active" name="active_status"
+                        domain="[('status', '=', 'active')]"/>
+                <filter string="Draft" name="draft_status"
+                        domain="[('status', '=', 'draft')]"/>
+                <filter string="Deprecated" name="deprecated_status"
+                        domain="[('status', '=', 'deprecated')]"/>
+                <filter string="Archived" name="archived_status"
+                        domain="[('status', '=', 'archived')]"/>
+                <separator/>
+                <filter string="Archived (Inactive)" name="inactive"
+                        domain="[('active', '=', False)]"/>
+                <group name="group_by">
+                    <filter string="Status" name="group_by_status"
+                            context="{'group_by': 'status'}"/>
+                    <filter string="Acronym" name="group_by_acronym"
+                            context="{'group_by': 'acronym'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_itlingo_dsl" model="ir.actions.act_window">
+        <field name="name">DSLs</field>
+        <field name="res_model">itlingo.dsl</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_itlingo_dsl_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Register a new platform DSL
+            </p>
+            <p>
+                DSLs such as RSL and ASL are defined once at platform level and
+                referenced across organizations and workspaces.
+            </p>
+        </field>
+    </record>
+
+</odoo>

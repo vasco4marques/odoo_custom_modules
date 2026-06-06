@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Configuration sub-menu under the existing ITLingo root -->
+    <menuitem id="itlingo_menu_configuration"
+              name="Configuration"
+              parent="itlingo_organizations.itlingo_menu_root"
+              sequence="90"/>
+
+    <!-- DSLs menu -->
+    <menuitem id="menu_itlingo_dsl"
+              name="DSLs"
+              parent="itlingo_menu_configuration"
+              action="action_itlingo_dsl"
+              sequence="10"/>
+
+    <!-- Resources sub-menu under the existing ITLingo root -->
+    <menuitem id="itlingo_menu_resources"
+              name="Resources"
+              parent="itlingo_organizations.itlingo_menu_root"
+              sequence="80"/>
+
+    <menuitem id="menu_itlingo_dsl_resource"
+              name="DSL Resources"
+              parent="itlingo_menu_resources"
+              action="action_itlingo_dsl_resource"
+              sequence="10"/>
+
+    <menuitem id="menu_itlingo_org_resource"
+              name="Organization Resources"
+              parent="itlingo_menu_resources"
+              action="action_itlingo_org_resource"
+              sequence="20"/>
+
+</odoo>
