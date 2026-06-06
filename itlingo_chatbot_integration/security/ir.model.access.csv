@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_itlingo_chat_workspace,itlingo.chat.workspace,model_itlingo_chat_workspace,base.group_user,1,1,1,1
+access_itlingo_chat_folder,itlingo.chat.folder,model_itlingo_chat_folder,base.group_user,1,1,1,1
+access_itlingo_chat_thread,itlingo.chat.thread,model_itlingo_chat_thread,base.group_user,1,1,1,1
+access_itlingo_chat_message,itlingo.chat.message,model_itlingo_chat_message,base.group_user,1,1,1,1
+access_itlingo_model_usage,itlingo.model.usage,model_itlingo_model_usage,base.group_user,1,1,1,1
+access_itlingo_thread_file,itlingo.thread.file,model_itlingo_thread_file,base.group_user,1,1,1,1
+access_itlingo_thread_file_chunk,itlingo.thread.file.chunk,model_itlingo_thread_file_chunk,base.group_user,1,1,1,1
+access_itlingo_message_file_link,itlingo.message.file.link,model_itlingo_message_file_link,base.group_user,1,1,1,1
+access_itlingo_ops_configuration,itlingo.ops.configuration,model_itlingo_ops_configuration,base.group_user,1,1,1,1
+access_itlingo_kb_language,itlingo.kb.language,model_itlingo_kb_language,base.group_user,1,1,1,1
+access_itlingo_kb_file,itlingo.kb.file,model_itlingo_kb_file,base.group_user,1,1,1,1
+access_itlingo_session_settings,itlingo.session.settings,model_itlingo_session_settings,base.group_user,1,1,1,1
+access_itlingo_chatbot_settings,itlingo.chatbot.settings,model_itlingo_chatbot_settings,itlingo_organizations.group_itlingo_admin,1,1,1,1
+access_itlingo_chatbot_settings_provider,itlingo.chatbot.settings.provider,model_itlingo_chatbot_settings_provider,itlingo_organizations.group_itlingo_admin,1,1,1,1
+access_itlingo_chatbot_settings_option,itlingo.chatbot.settings.option,model_itlingo_chatbot_settings_option,itlingo_organizations.group_itlingo_admin,1,1,1,1

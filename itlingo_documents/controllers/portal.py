@@ -8,6 +8,9 @@ from odoo.addons.portal.controllers.portal import CustomerPortal, pager
 
 class ITLingoDocumentPortal(CustomerPortal):
 
+    def _is_admin(self):
+        return request.env.user.has_group('itlingo_organizations.group_itlingo_admin')
+
     def _prepare_home_portal_values(self, counters):
         values = super()._prepare_home_portal_values(counters)
         if 'document_count' in counters:
@@ -28,9 +31,12 @@ class ITLingoDocumentPortal(CustomerPortal):
     def _can_edit_document(self, document):
         """Return True if the current user can edit/delete this document.
 
+        Admins can edit any document.
         Workspace documents require ws_manager on the document's workspace.
         Organization-level documents require org_manager on the doc's org.
         """
+        if self._is_admin():
+            return True
         user = request.env.user
         if document.project_id:
             role = request.env['itlingo.project.role'].sudo().search([
@@ -88,7 +94,80 @@ class ITLingoDocumentPortal(CustomerPortal):
             'pager': page_detail,
             'page_name': 'documents',
             'default_url': '/my/documents',
+            'is_admin': self._is_admin(),
         })
+
+    @http.route(
+        '/my/documents/new',
+        type='http', auth='user', website=True, methods=['GET', 'POST'],
+    )
+    def portal_document_create(self, **post):
+        if not self._is_admin():
+            raise AccessError(_('Only administrators can create platform documents.'))
+        Document = request.env['itlingo.document']
+        spec_file_obj = request.env['itlingo.document.spec.file']
+        values = {
+            'form': {
+                'name': '',
+            },
+            'error': {},
+            'page_name': 'document_create',
+        }
+        if request.httprequest.method == 'POST':
+            name = (post.get('name') or '').strip()
+            values['form'] = dict(post)
+
+            # Required fields
+            grammar_upload = request.httprequest.files.get('grammar_file')
+
+            if not name:
+                values['error']['name'] = _('DSL name is required.')
+            elif not grammar_upload or not grammar_upload.filename:
+                values['error']['grammar_file'] = _('Grammar file is required.')
+            elif not grammar_upload.filename.endswith('.langium'):
+                values['error']['grammar_file'] = _('Grammar file must have a .langium extension.')
+            else:
+                create_vals = {
+                    'name': name,
+                    'grammar_file': base64.b64encode(grammar_upload.read()),
+                    'grammar_file_name': grammar_upload.filename,
+                }
+
+                # Optional: Validation Rules
+                val_upload = request.httprequest.files.get('validation_rules_file')
+                if val_upload and val_upload.filename:
+                    create_vals['validation_rules_file'] = base64.b64encode(val_upload.read())
+                    create_vals['validation_rules_file_name'] = val_upload.filename
+
+                # Optional: Examples
+                examples_upload = request.httprequest.files.get('examples_file')
+                if examples_upload and examples_upload.filename:
+                    create_vals['examples_file'] = base64.b64encode(examples_upload.read())
+                    create_vals['examples_file_name'] = examples_upload.filename
+
+                try:
+                    document = Document.sudo().create(create_vals)
+
+                    # Optional: Specification Examples (multiple files)
+                    spec_uploads = request.httprequest.files.getlist('spec_example_files')
+                    spec_vals_list = []
+                    for f in spec_uploads:
+                        if f and f.filename:
+                            spec_vals_list.append({
+                                'document_id': document.id,
+                                'name': f.filename,
+                                'file_data': base64.b64encode(f.read()),
+                            })
+                    if spec_vals_list:
+                        spec_file_obj.sudo().create(spec_vals_list)
+
+                except UserError as err:
+                    values['error']['_form'] = str(err)
+                else:
+                    return request.redirect(f'/my/documents/{document.id}')
+        return request.render(
+            'itlingo_documents.portal_document_create', values,
+        )
 
     @http.route(
         '/my/documents/<int:document_id>',
@@ -178,3 +257,92 @@ class ITLingoDocumentPortal(CustomerPortal):
         except UserError:
             return request.redirect(f'/my/documents/{document.id}?error=delete_failed')
         return request.redirect(f'{return_url}?message=doc_deleted')
+
+    @http.route(
+        '/my/documents/<int:document_id>/upload-file',
+        type='http', auth='user', website=True, methods=['POST'],
+    )
+    def portal_document_upload_file(self, document_id, **post):
+        document = self._document_check_access(document_id)
+        if not self._can_edit_document(document):
+            raise AccessError(_('You cannot edit this document.'))
+        field = post.get('field')
+        allowed_fields = {'grammar_file', 'validation_rules_file', 'examples_file'}
+        if field not in allowed_fields:
+            raise AccessError(_('Invalid file field.'))
+        upload = request.httprequest.files.get('file')
+        if not upload or not upload.filename:
+            return request.redirect(f'/my/documents/{document.id}?error=no_file')
+        if field == 'grammar_file' and not upload.filename.endswith('.langium'):
+            return request.redirect(f'/my/documents/{document.id}?error=invalid_extension')
+        name_field = field.replace('_file', '_file_name')
+        vals = {
+            field: base64.b64encode(upload.read()),
+            name_field: upload.filename,
+        }
+        try:
+            document.sudo().write(vals)
+        except UserError:
+            return request.redirect(f'/my/documents/{document.id}?error=upload_failed')
+        return request.redirect(f'/my/documents/{document.id}')
+
+    @http.route(
+        '/my/documents/<int:document_id>/delete-file',
+        type='http', auth='user', website=True, methods=['POST'],
+    )
+    def portal_document_delete_file(self, document_id, **post):
+        document = self._document_check_access(document_id)
+        if not self._can_edit_document(document):
+            raise AccessError(_('You cannot edit this document.'))
+        field = post.get('field')
+        allowed_fields = {'validation_rules_file', 'examples_file'}
+        if field not in allowed_fields:
+            raise AccessError(_('Cannot delete this file field.'))
+        name_field = field.replace('_file', '_file_name')
+        try:
+            document.sudo().write({field: False, name_field: False})
+        except UserError:
+            return request.redirect(f'/my/documents/{document.id}?error=delete_failed')
+        return request.redirect(f'/my/documents/{document.id}')
+
+    @http.route(
+        '/my/documents/<int:document_id>/add-spec-file',
+        type='http', auth='user', website=True, methods=['POST'],
+    )
+    def portal_document_add_spec_file(self, document_id, **post):
+        document = self._document_check_access(document_id)
+        if not self._can_edit_document(document):
+            raise AccessError(_('You cannot edit this document.'))
+        spec_file_obj = request.env['itlingo.document.spec.file']
+        uploads = request.httprequest.files.getlist('spec_example_files')
+        vals_list = []
+        for f in uploads:
+            if f and f.filename:
+                vals_list.append({
+                    'document_id': document.id,
+                    'name': f.filename,
+                    'file_data': base64.b64encode(f.read()),
+                })
+        if vals_list:
+            try:
+                spec_file_obj.sudo().create(vals_list)
+            except UserError:
+                return request.redirect(f'/my/documents/{document.id}?error=upload_failed')
+        return request.redirect(f'/my/documents/{document.id}')
+
+    @http.route(
+        '/my/documents/<int:document_id>/delete-spec-file/<int:spec_id>',
+        type='http', auth='user', website=True, methods=['POST'],
+    )
+    def portal_document_delete_spec_file(self, document_id, spec_id, **post):
+        document = self._document_check_access(document_id)
+        if not self._can_edit_document(document):
+            raise AccessError(_('You cannot edit this document.'))
+        spec_file = request.env['itlingo.document.spec.file'].sudo().browse(spec_id)
+        if not spec_file.exists() or spec_file.document_id.id != document.id:
+            raise MissingError(_('File not found.'))
+        try:
+            spec_file.unlink()
+        except UserError:
+            return request.redirect(f'/my/documents/{document.id}?error=delete_failed')
+        return request.redirect(f'/my/documents/{document.id}')

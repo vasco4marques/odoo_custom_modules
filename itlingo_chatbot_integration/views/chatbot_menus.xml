@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="itlingo_menu_chatbot"
+              name="Chatbot"
+              parent="itlingo_organizations.itlingo_menu_root"
+              sequence="50"/>
+
+    <menuitem id="itlingo_menu_chatbot_conversations"
+              name="Conversations"
+              parent="itlingo_menu_chatbot"
+              sequence="10"/>
+
+    <menuitem id="itlingo_menu_chatbot_workspaces"
+              name="Workspaces"
+              parent="itlingo_menu_chatbot"
+              action="itlingo_chat_workspace_action"
+              sequence="15"/>
+
+    <menuitem id="itlingo_menu_chatbot_threads"
+              name="Threads"
+              parent="itlingo_menu_chatbot_conversations"
+              action="itlingo_chat_thread_action"
+              sequence="10"/>
+
+    <menuitem id="itlingo_menu_chatbot_folders"
+              name="Folders"
+              parent="itlingo_menu_chatbot_conversations"
+              action="itlingo_chat_folder_action"
+              sequence="20"/>
+
+    <menuitem id="itlingo_menu_chatbot_messages"
+              name="Messages"
+              parent="itlingo_menu_chatbot_conversations"
+              action="itlingo_chat_message_action"
+              sequence="30"/>
+
+    <menuitem id="itlingo_menu_chatbot_files"
+              name="Files"
+              parent="itlingo_menu_chatbot"
+              sequence="20"/>
+
+    <menuitem id="itlingo_menu_chatbot_thread_files"
+              name="Thread Files"
+              parent="itlingo_menu_chatbot_files"
+              action="itlingo_thread_file_action"
+              sequence="10"/>
+
+    <menuitem id="itlingo_menu_chatbot_thread_file_chunks"
+              name="File Chunks"
+              parent="itlingo_menu_chatbot_files"
+              action="itlingo_thread_file_chunk_action"
+              sequence="20"/>
+
+    <menuitem id="itlingo_menu_chatbot_message_file_links"
+              name="Message File Links"
+              parent="itlingo_menu_chatbot_files"
+              action="itlingo_message_file_link_action"
+              sequence="30"/>
+
+    <menuitem id="itlingo_menu_chatbot_kb"
+              name="Knowledge Base"
+              parent="itlingo_menu_chatbot"
+              sequence="30"/>
+
+    <menuitem id="itlingo_menu_chatbot_kb_languages"
+              name="Languages"
+              parent="itlingo_menu_chatbot_kb"
+              action="itlingo_kb_language_action"
+              sequence="10"/>
+
+    <menuitem id="itlingo_menu_chatbot_kb_files"
+              name="KB Files"
+              parent="itlingo_menu_chatbot_kb"
+              action="itlingo_kb_file_action"
+              sequence="20"/>
+
+    <menuitem id="itlingo_menu_chatbot_ops"
+              name="Operations"
+              parent="itlingo_menu_chatbot"
+              sequence="40"/>
+
+    <menuitem id="itlingo_menu_chatbot_model_usage"
+              name="Model Usage"
+              parent="itlingo_menu_chatbot_ops"
+              action="itlingo_model_usage_action"
+              sequence="10"/>
+
+    <menuitem id="itlingo_menu_chatbot_ops_config"
+              name="Configuration"
+              parent="itlingo_menu_chatbot_ops"
+              action="itlingo_ops_configuration_action"
+              sequence="20"/>
+
+    <menuitem id="itlingo_menu_chatbot_session_settings"
+              name="Session Settings"
+              parent="itlingo_menu_chatbot_ops"
+              action="itlingo_session_settings_action"
+              sequence="30"/>
+
+    <menuitem id="itlingo_menu_chatbot_settings"
+              name="Chatbot Settings"
+              parent="itlingo_organizations.itlingo_menu_root"
+              action="itlingo_chatbot_settings_open"
+              sequence="75"
+              groups="itlingo_organizations.group_itlingo_admin"/>
+
+    <menuitem id="itlingo_menu_chatbot_settings_running"
+              name="Running Settings"
+              parent="itlingo_menu_chatbot_settings"
+              action="itlingo_chatbot_settings_open"
+              sequence="10"
+              groups="itlingo_organizations.group_itlingo_admin"/>
+
+    <menuitem id="itlingo_menu_chatbot_settings_operational"
+              name="Operational Settings"
+              parent="itlingo_menu_chatbot_settings"
+              action="itlingo_chatbot_settings_open_operational"
+              sequence="20"
+              groups="itlingo_organizations.group_itlingo_admin"/>
+
+</odoo>
