@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+    <!--
+        Technical group whose membership mirrors itlingo.dsl.maintainer_ids
+        (kept in sync by the model). It is used only to surface DSL-management
+        navigation (top menu / portal area access) for maintainers. It does NOT
+        grant edit access to any DSL: per-DSL edit rights are enforced in the
+        portal controller against each DSL's maintainer_ids.
+    -->
+    <record id="group_itlingo_dsl_maintainer" model="res.groups">
+        <field name="name">ITLingo DSL Maintainer</field>
+        <field name="comment">Users who maintain at least one DSL. Membership is managed automatically from each DSL's maintainers; it grants navigation access to /dsl but not edit rights.</field>
+    </record>
+
+</data>
+</odoo>

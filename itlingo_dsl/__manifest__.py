@@ -19,6 +19,7 @@ resources may be associated with a DSL.
     'website': 'https://itlingo.ist.utl.pt',
     'depends': ['itlingo_organizations', 'itlingo_workspace_access'],
     'data': [
+        'security/itlingo_dsl_groups.xml',
         'security/ir.model.access.csv',
         'security/itlingo_dsl_rules.xml',
         'views/itlingo_dsl_views.xml',

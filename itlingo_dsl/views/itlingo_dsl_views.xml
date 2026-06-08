@@ -58,6 +58,24 @@
                         <page string="Description">
                             <field name="description"/>
                         </page>
+                        <page string="Definition Files">
+                            <p class="text-muted">
+                                Files that define this DSL and are pushed to the
+                                chatbot knowledge base when the DSL is Active.
+                                Use exactly one Grammar (.langium). Validation and
+                                Examples files are concatenated; Specifications are
+                                kept as separate files.
+                            </p>
+                            <field name="file_ids">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="file_type"/>
+                                    <field name="file" filename="file_name"/>
+                                    <field name="file_name"/>
+                                    <field name="is_enabled"/>
+                                </list>
+                            </field>
+                        </page>
                         <page string="Maintainers">
                             <field name="maintainer_ids" widget="many2many_tags"/>
                         </page>

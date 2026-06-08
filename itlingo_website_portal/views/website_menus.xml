@@ -19,6 +19,15 @@
         <field name="group_ids" eval="[(6, 0, [ref('base.group_user'), ref('base.group_portal')])]"/>
     </record>
 
+    <!-- Platform DSL management: admins (all DSLs) and DSL maintainers (their own) -->
+    <record id="menu_itlingo_dsls" model="website.menu">
+        <field name="name">DSLs</field>
+        <field name="url">/dsl</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">30</field>
+        <field name="group_ids" eval="[(6, 0, [ref('itlingo_organizations.group_itlingo_admin'), ref('itlingo_dsl.group_itlingo_dsl_maintainer')])]"/>
+    </record>
+
 
 </data>
 </odoo>
