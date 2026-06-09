@@ -42,7 +42,7 @@ def _build_workspace_token(project_id: int, user, secret: str) -> str:
         "workspace_name": request.env["project.project"].sudo().browse(project_id).name or "",
         "scope": scope,
         "iat": now,
-        "exp": now + 300,
+        "exp": now + 3600,
     }
     return _sign_payload(secret, payload)
 

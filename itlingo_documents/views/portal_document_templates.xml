@@ -205,8 +205,8 @@
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="doc_edit_dsl" name="dsl_knowledge" value="1"
                                    t-att-checked="form.get('dsl_knowledge') or None"/>
-                            <label class="form-check-label" for="doc_edit_dsl">DSL knowledge (add to the workspace theory pool)</label>
-                            <div class="form-text">Only <strong>published</strong> documents can be marked. The file's content is added to this organization / workspace knowledge the chatbot uses for DSLs.</div>
+                            <label class="form-check-label" for="doc_edit_dsl">Grounding knowledge (add to the workspace theory pool)</label>
+                            <div class="form-text">Only <strong>published</strong> documents can be marked. The file's content is added to this organization / workspace knowledge the chatbot uses for grounding.</div>
                             <div t-if="error.get('dsl_knowledge')" class="text-danger small mt-1"><t t-out="error['dsl_knowledge']"/></div>
                         </div>
                         <div class="mb-3">
