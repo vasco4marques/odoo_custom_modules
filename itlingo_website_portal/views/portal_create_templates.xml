@@ -91,6 +91,7 @@
                                             Create organization
                                         </button>
                                         <button type="submit" name="skip" value="1"
+                                                formnovalidate="formnovalidate"
                                                 class="btn btn-link text-muted">
                                             Skip for now
                                         </button>
