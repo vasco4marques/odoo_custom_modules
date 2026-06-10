@@ -27,9 +27,6 @@
             </t>
             <div class="mb-3 d-flex gap-2">
                 <a href="/my/workspaces" class="btn btn-outline-primary">My workspaces</a>
-                <a t-if="is_admin" href="/my/documents/new" class="btn btn-primary ms-auto">
-                    <i class="fa fa-plus"/> New DSL
-                </a>
             </div>
             <t t-if="not documents">
                 <div class="alert alert-info" role="alert">
@@ -102,6 +99,11 @@
                             <dl>
                                 <dt>Type</dt>
                                 <dd><t t-out="document.document_type_id.name or 'N/A'"/></dd>
+                                <dt>DSL knowledge</dt>
+                                <dd>
+                                    <span t-if="document.dsl_knowledge" class="badge bg-info text-dark">In theory pool</span>
+                                    <t t-else="">No</t>
+                                </dd>
                                 <dt>Version</dt>
                                 <dd><t t-out="document.version"/></dd>
                                 <dt>Creator</dt>
@@ -137,160 +139,6 @@
                             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                             <button type="submit" class="btn btn-outline-danger">
                                 <i class="fa fa-trash"/> Delete
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- DSL Files section -->
-            <div t-if="document.grammar_file" class="card mt-3">
-                <div class="card-header">
-                    <h4 class="mb-0">DSL Files</h4>
-                </div>
-                <div class="card-body">
-                    <!-- Grammar -->
-                    <div class="mb-4">
-                        <h5>Grammar</h5>
-                        <div class="d-flex align-items-center gap-2">
-                            <span t-if="document.grammar_file_name" class="badge bg-info">
-                                <t t-out="document.grammar_file_name"/>
-                            </span>
-                            <a t-attf-href="/web/content/#{document.id}?model=itlingo.document&amp;field=grammar_file&amp;filename_field=grammar_file_name&amp;download=true"
-                               class="btn btn-sm btn-outline-primary">
-                                <i class="fa fa-download"/> Download
-                            </a>
-                            <t t-if="can_edit_document">
-                                <form t-attf-action="/my/documents/#{document.id}/upload-file"
-                                      method="post" enctype="multipart/form-data" class="d-inline-flex align-items-center gap-1">
-                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                    <input type="hidden" name="field" value="grammar_file"/>
-                                    <input type="file" name="file" accept=".langium" class="form-control form-control-sm" style="width:auto"/>
-                                    <button type="submit" class="btn btn-sm btn-success">
-                                        <i class="fa fa-upload"/> Replace
-                                    </button>
-                                </form>
-                            </t>
-                        </div>
-                    </div>
-
-                    <!-- Validation Rules -->
-                    <div class="mb-4">
-                        <h5>Validation Rules</h5>
-                        <div class="d-flex align-items-center gap-2">
-                            <t t-if="document.validation_rules_file_name">
-                                <span class="badge bg-info">
-                                    <t t-out="document.validation_rules_file_name"/>
-                                </span>
-                                <a t-attf-href="/web/content/#{document.id}?model=itlingo.document&amp;field=validation_rules_file&amp;filename_field=validation_rules_file_name&amp;download=true"
-                                   class="btn btn-sm btn-outline-primary">
-                                    <i class="fa fa-download"/> Download
-                                </a>
-                            </t>
-                            <t t-else="">
-                                <span class="text-muted small">No validation rules file</span>
-                            </t>
-                            <t t-if="can_edit_document">
-                                <form t-attf-action="/my/documents/#{document.id}/upload-file"
-                                      method="post" enctype="multipart/form-data" class="d-inline-flex align-items-center gap-1">
-                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                    <input type="hidden" name="field" value="validation_rules_file"/>
-                                    <input type="file" name="file" class="form-control form-control-sm" style="width:auto"/>
-                                    <button type="submit" class="btn btn-sm btn-success">
-                                        <i class="fa fa-upload"/> Upload
-                                    </button>
-                                </form>
-                                <form t-if="document.validation_rules_file_name"
-                                      t-attf-action="/my/documents/#{document.id}/delete-file"
-                                      method="post" class="d-inline">
-                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                    <input type="hidden" name="field" value="validation_rules_file"/>
-                                    <button type="submit" class="btn btn-sm btn-outline-danger"
-                                            onclick="return confirm('Delete this file?');">
-                                        <i class="fa fa-trash-o"/> Remove
-                                    </button>
-                                </form>
-                            </t>
-                        </div>
-                    </div>
-
-                    <!-- Examples -->
-                    <div class="mb-4">
-                        <h5>Examples</h5>
-                        <div class="d-flex align-items-center gap-2">
-                            <t t-if="document.examples_file_name">
-                                <span class="badge bg-info">
-                                    <t t-out="document.examples_file_name"/>
-                                </span>
-                                <a t-attf-href="/web/content/#{document.id}?model=itlingo.document&amp;field=examples_file&amp;filename_field=examples_file_name&amp;download=true"
-                                   class="btn btn-sm btn-outline-primary">
-                                    <i class="fa fa-download"/> Download
-                                </a>
-                            </t>
-                            <t t-else="">
-                                <span class="text-muted small">No examples file</span>
-                            </t>
-                            <t t-if="can_edit_document">
-                                <form t-attf-action="/my/documents/#{document.id}/upload-file"
-                                      method="post" enctype="multipart/form-data" class="d-inline-flex align-items-center gap-1">
-                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                    <input type="hidden" name="field" value="examples_file"/>
-                                    <input type="file" name="file" class="form-control form-control-sm" style="width:auto"/>
-                                    <button type="submit" class="btn btn-sm btn-success">
-                                        <i class="fa fa-upload"/> Upload
-                                    </button>
-                                </form>
-                                <form t-if="document.examples_file_name"
-                                      t-attf-action="/my/documents/#{document.id}/delete-file"
-                                      method="post" class="d-inline">
-                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                    <input type="hidden" name="field" value="examples_file"/>
-                                    <button type="submit" class="btn btn-sm btn-outline-danger"
-                                            onclick="return confirm('Delete this file?');">
-                                        <i class="fa fa-trash-o"/> Remove
-                                    </button>
-                                </form>
-                            </t>
-                        </div>
-                    </div>
-
-                    <!-- Specification Examples -->
-                    <div class="mb-4">
-                        <h5>Specification Examples</h5>
-                        <t t-if="document.spec_example_file_ids">
-                            <div class="d-flex flex-column gap-1 mb-2">
-                                <t t-foreach="document.spec_example_file_ids" t-as="spec">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <span class="badge bg-info">
-                                            <t t-out="spec.name"/>
-                                        </span>
-                                        <a t-attf-href="/web/content/#{spec.id}?model=itlingo.document.spec.file&amp;field=file_data&amp;filename_field=name&amp;download=true"
-                                           class="btn btn-sm btn-outline-primary">
-                                            <i class="fa fa-download"/> Download
-                                        </a>
-                                        <form t-if="can_edit_document"
-                                              t-attf-action="/my/documents/#{document.id}/delete-spec-file/#{spec.id}"
-                                              method="post" class="d-inline">
-                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                            <button type="submit" class="btn btn-sm btn-outline-danger"
-                                                    onclick="return confirm('Delete this file?');">
-                                                <i class="fa fa-trash-o"/> Remove
-                                            </button>
-                                        </form>
-                                    </div>
-                                </t>
-                            </div>
-                        </t>
-                        <t t-else="">
-                            <p class="text-muted small">No specification examples</p>
-                        </t>
-                        <form t-if="can_edit_document"
-                              t-attf-action="/my/documents/#{document.id}/add-spec-file"
-                              method="post" enctype="multipart/form-data" class="d-flex align-items-center gap-1">
-                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                            <input type="file" name="spec_example_files" multiple="" class="form-control form-control-sm" style="width:auto"/>
-                            <button type="submit" class="btn btn-sm btn-success">
-                                <i class="fa fa-plus"/> Add
                             </button>
                         </form>
                     </div>
@@ -354,6 +202,13 @@
                             <input type="text" class="form-control" id="doc_edit_version" name="version"
                                    t-att-value="form.get('version') or ''"/>
                         </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="doc_edit_dsl" name="dsl_knowledge" value="1"
+                                   t-att-checked="form.get('dsl_knowledge') or None"/>
+                            <label class="form-check-label" for="doc_edit_dsl">Grounding knowledge (add to the workspace theory pool)</label>
+                            <div class="form-text">Only <strong>published</strong> documents can be marked. The file's content is added to this organization / workspace knowledge the chatbot uses for grounding.</div>
+                            <div t-if="error.get('dsl_knowledge')" class="text-danger small mt-1"><t t-out="error['dsl_knowledge']"/></div>
+                        </div>
                         <div class="mb-3">
                             <label class="form-label" for="doc_edit_file">Replace file (optional)</label>
                             <input type="file" class="form-control" id="doc_edit_file" name="document_file"/>
@@ -364,62 +219,6 @@
                         <div class="d-flex gap-2">
                             <button type="submit" class="btn btn-primary">Save</button>
                             <a t-attf-href="/my/documents/#{document.id}" class="btn btn-outline-secondary">Cancel</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </t>
-    </template>
-
-    <template id="portal_document_create" name="New DSL">
-        <t t-call="portal.portal_layout">
-            <div class="card mt-3">
-                <div class="card-header">
-                    <h3 class="mb-0">New DSL</h3>
-                </div>
-                <div class="card-body">
-                    <div t-if="error.get('_form')" class="alert alert-danger" role="alert">
-                        <t t-out="error['_form']"/>
-                    </div>
-                    <form action="/my/documents/new"
-                          method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                        <!-- DSL Name -->
-                        <div class="mb-3">
-                            <label class="form-label" for="doc_create_name">Name (DSL name)</label>
-                            <input type="text" class="form-control" id="doc_create_name" name="name" required=""
-                                   t-att-value="form.get('name') or ''"/>
-                            <div t-if="error.get('name')" class="text-danger small mt-1"><t t-out="error['name']"/></div>
-                        </div>
-                        <!-- Grammar -->
-                        <div class="mb-3">
-                            <label class="form-label" for="doc_create_grammar">Grammar</label>
-                            <input type="file" class="form-control" id="doc_create_grammar" name="grammar_file"
-                                   accept=".langium" required=""/>
-                            <div t-if="error.get('grammar_file')" class="text-danger small mt-1"><t t-out="error['grammar_file']"/></div>
-                            <div class="form-text">File extension must be .langium</div>
-                        </div>
-                        <!-- Validation Rules (Optional) -->
-                        <div class="mb-3">
-                            <label class="form-label" for="doc_create_valrules">(Optional) Validation Rules</label>
-                            <input type="file" class="form-control" id="doc_create_valrules" name="validation_rules_file"/>
-                            <div class="form-text">Max 1 file</div>
-                        </div>
-                        <!-- Examples (Optional) -->
-                        <div class="mb-3">
-                            <label class="form-label" for="doc_create_examples">(Optional) Examples</label>
-                            <input type="file" class="form-control" id="doc_create_examples" name="examples_file"/>
-                            <div class="form-text">Max 1 file</div>
-                        </div>
-                        <!-- Specification Example (Optional, multiple) -->
-                        <div class="mb-3">
-                            <label class="form-label" for="doc_create_spec_examples">(Optional) Specification Example</label>
-                            <input type="file" class="form-control" id="doc_create_spec_examples" name="spec_example_files" multiple=""/>
-                            <div class="form-text">0 or more files</div>
-                        </div>
-                        <div class="d-flex gap-2">
-                            <button type="submit" class="btn btn-primary">Create</button>
-                            <a href="/my/documents" class="btn btn-outline-secondary">Cancel</a>
                         </div>
                     </form>
                 </div>

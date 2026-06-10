@@ -83,6 +83,21 @@
             <li t-if="page_name == 'invitations'" class="breadcrumb-item active">
                 Invitations
             </li>
+            <li t-if="page_name == 'dsls'" class="breadcrumb-item active">
+                DSLs
+            </li>
+            <li t-if="page_name == 'dsl_new'" class="breadcrumb-item">
+                <a href="/dsl">DSLs</a>
+            </li>
+            <li t-if="page_name == 'dsl_new'" class="breadcrumb-item active">
+                New
+            </li>
+            <li t-if="page_name == 'dsl_edit'" class="breadcrumb-item">
+                <a href="/dsl">DSLs</a>
+            </li>
+            <li t-if="page_name == 'dsl_edit'" class="breadcrumb-item active text-truncate">
+                <t t-out="dsl.acronym"/>
+            </li>
         </xpath>
     </template>
 
@@ -113,6 +128,14 @@
                 <t t-set="url" t-value="'/my/invitations'"/>
                 <t t-set="text">Pending invitations to organizations and workspaces</t>
                 <t t-set="placeholder_count" t-value="'invitation_count'"/>
+            </t>
+            <t t-if="request.env.user.has_group('itlingo_organizations.group_itlingo_admin') or request.env.user.has_group('itlingo_dsl.group_itlingo_dsl_maintainer')"
+               t-call="portal.portal_docs_entry">
+                <t t-set="icon" t-value="'/web/static/img/folder.svg'"/>
+                <t t-set="title">DSLs</t>
+                <t t-set="url" t-value="'/dsl'"/>
+                <t t-set="text">Manage the domain-specific languages you maintain</t>
+                <t t-set="placeholder_count" t-value="'dsl_count'"/>
             </t>
         </div>
     </template>

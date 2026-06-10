@@ -12,7 +12,7 @@ workspaces, and invitations.
     'depends': [
         'website', 'portal', 'mail',
         'itlingo_organizations', 'itlingo_workspace_access',
-        'itlingo_documents',
+        'itlingo_documents', 'itlingo_dsl',
     ],
     'data': [
         'views/website_menus.xml',
@@ -22,6 +22,7 @@ workspaces, and invitations.
         'views/portal_create_templates.xml',
         'views/portal_workspace_templates.xml',
         'views/portal_invitation_templates.xml',
+        'views/portal_dsl_templates.xml',
     ],
     'assets': {
         'web.assets_frontend': [

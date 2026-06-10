@@ -8,6 +8,7 @@
             <list>
                 <field name="name"/>
                 <field name="document_type_id"/>
+                <field name="dsl_knowledge" optional="show"/>
                 <field name="version"/>
                 <field name="project_id" optional="show"/>
                 <field name="organization_id" optional="show"/>
@@ -56,6 +57,8 @@
                             <field name="document_type_id"/>
                             <field name="template_id"/>
                             <field name="version"/>
+                            <field name="dsl_knowledge"
+                                   help="Only published documents can be marked."/>
                         </group>
                         <group>
                             <field name="project_id"/>
@@ -120,6 +123,8 @@
                 <field name="project_id"/>
                 <field name="organization_id"/>
                 <field name="document_type_id"/>
+                <filter name="dsl_knowledge" string="DSL Knowledge"
+                        domain="[('dsl_knowledge', '=', True)]"/>
                 <filter name="draft" string="Draft"
                         domain="[('status', '=', 'draft')]"/>
                 <filter name="in_review" string="In Review"
@@ -138,6 +143,8 @@
                             context="{'group_by': 'project_id'}"/>
                     <filter name="group_org" string="Organization"
                             context="{'group_by': 'organization_id'}"/>
+                    <filter name="group_dsl" string="DSL Knowledge"
+                            context="{'group_by': 'dsl_knowledge'}"/>
                 </group>
             </search>
         </field>

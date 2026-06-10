@@ -7,6 +7,10 @@ access_itlingo_dsl_resource_member,itlingo.dsl.resource member,model_itlingo_dsl
 access_itlingo_dsl_resource_manager,itlingo.dsl.resource manager,model_itlingo_dsl_resource,itlingo_organizations.group_itlingo_manager,1,1,1,0
 access_itlingo_dsl_resource_admin,itlingo.dsl.resource admin,model_itlingo_dsl_resource,itlingo_organizations.group_itlingo_admin,1,1,1,1
 access_itlingo_dsl_resource_portal,itlingo.dsl.resource portal,model_itlingo_dsl_resource,base.group_portal,1,0,0,0
+access_itlingo_dsl_file_member,itlingo.dsl.file member,model_itlingo_dsl_file,itlingo_organizations.group_itlingo_member,1,0,0,0
+access_itlingo_dsl_file_manager,itlingo.dsl.file manager,model_itlingo_dsl_file,itlingo_organizations.group_itlingo_manager,1,1,1,1
+access_itlingo_dsl_file_admin,itlingo.dsl.file admin,model_itlingo_dsl_file,itlingo_organizations.group_itlingo_admin,1,1,1,1
+access_itlingo_dsl_file_portal,itlingo.dsl.file portal,model_itlingo_dsl_file,base.group_portal,1,0,0,0
 access_itlingo_org_resource_member,itlingo.org.resource member,model_itlingo_org_resource,itlingo_organizations.group_itlingo_member,1,1,1,0
 access_itlingo_org_resource_manager,itlingo.org.resource manager,model_itlingo_org_resource,itlingo_organizations.group_itlingo_manager,1,1,1,1
 access_itlingo_org_resource_admin,itlingo.org.resource admin,model_itlingo_org_resource,itlingo_organizations.group_itlingo_admin,1,1,1,1

@@ -9,10 +9,6 @@ access_itlingo_library_member,itlingo.library.member,model_itlingo_library,itlin
 access_itlingo_library_manager,itlingo.library.manager,model_itlingo_library,itlingo_organizations.group_itlingo_manager,1,1,1,1
 access_itlingo_document_library_member,itlingo.document.library.member,model_itlingo_document_library,itlingo_organizations.group_itlingo_member,1,0,0,0
 access_itlingo_document_library_manager,itlingo.document.library.manager,model_itlingo_document_library,itlingo_organizations.group_itlingo_manager,1,1,1,1
-access_itlingo_document_spec_file_member,itlingo.document.spec.file.member,model_itlingo_document_spec_file,itlingo_organizations.group_itlingo_member,1,1,1,1
-access_itlingo_document_spec_file_manager,itlingo.document.spec.file.manager,model_itlingo_document_spec_file,itlingo_organizations.group_itlingo_manager,1,1,1,1
-access_itlingo_document_spec_file_user,itlingo.document.spec.file.user,model_itlingo_document_spec_file,base.group_user,1,1,1,1
-access_itlingo_document_spec_file_portal,itlingo.document.spec.file.portal,model_itlingo_document_spec_file,base.group_portal,1,0,0,0
 access_itlingo_document_portal,itlingo.document.portal,model_itlingo_document,base.group_portal,1,0,0,0
 access_itlingo_document_type_portal,itlingo.document.type.portal,model_itlingo_document_type,base.group_portal,1,0,0,0
 access_itlingo_document_template_portal,itlingo.document.template.portal,model_itlingo_document_template,base.group_portal,1,0,0,0
