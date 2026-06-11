@@ -252,7 +252,7 @@
                 <div t-if="can_manage_dsls" class="card border-0 shadow-sm rounded-3 mb-4">
                     <div class="card-body">
                         <p class="text-muted small text-uppercase fw-semibold mb-1">Maintainers</p>
-                        <p class="text-muted small mb-3">Maintainers are the only users who can attach their organization / workspace documents to this DSL (in addition to the document role they already need).</p>
+                        <p class="text-muted small mb-3">Maintainers are the users that you allow to manage the DSL.</p>
                         <t t-if="maintainers">
                             <ul class="list-group list-group-flush mb-3">
                                 <li t-foreach="maintainers" t-as="m"

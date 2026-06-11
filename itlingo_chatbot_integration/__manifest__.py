@@ -9,7 +9,10 @@
         "portal",
         "project",
         "itlingo_organizations",
-        "itlingo_website_portal"
+        "itlingo_website_portal",
+        "itlingo_documents",
+        "itlingo_workspace_access",
+        "itlingo_integration"
     ],
     "data": [
         "views/templates.xml",

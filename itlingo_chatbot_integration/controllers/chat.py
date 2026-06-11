@@ -1,15 +1,34 @@
 from odoo import http
-from odoo.http import request
+from odoo.http import request, Response
 import os
 import hmac
 import hashlib
 import base64
 import json
+import logging
+import re
 import time
+
+import requests as http_requests
+
+_logger = logging.getLogger(__name__)
+
+# Roles allowed to export documents into a workspace (same as ITOI WRITE_ROLES).
+EXPORT_WRITE_ROLES = ('ws_manager', 'doc_manager')
+
+EXPORT_MAX_CONTENT_BYTES = 1024 * 1024  # 1 MB
+ITOI_PUSH_TIMEOUT_S = 5
 
 
 def _b64url_encode(data: bytes) -> str:
     return base64.urlsafe_b64encode(data).rstrip(b"=").decode("ascii")
+
+
+def _b64url_decode(data: str) -> bytes:
+    rem = len(data) % 4
+    if rem:
+        data += "=" * (4 - rem)
+    return base64.urlsafe_b64decode(data.encode("ascii"))
 
 
 def _sign_payload(secret: str, payload: dict) -> str:
@@ -47,6 +66,54 @@ def _build_workspace_token(project_id: int, user, secret: str) -> str:
     return _sign_payload(secret, payload)
 
 
+def _verify_workspace_token(token: str, secret: str) -> dict | None:
+    """Verify an HS256 token produced by :func:`_build_workspace_token`.
+
+    Returns the payload dict on success, or ``None`` on any failure
+    (bad format, bad signature, expired, wrong audience).
+    """
+    try:
+        parts = token.split(".")
+        if len(parts) != 3:
+            return None
+        signing_input = (parts[0] + "." + parts[1]).encode("ascii")
+        expected = hmac.new(secret.encode("utf-8"), signing_input, hashlib.sha256).digest()
+        if not hmac.compare_digest(_b64url_encode(expected), parts[2]):
+            return None
+        payload = json.loads(_b64url_decode(parts[1]).decode("utf-8"))
+        if payload.get("aud") != "itlingo-chatbot":
+            return None
+        exp = payload.get("exp")
+        if exp and int(exp) < int(time.time()):
+            return None
+        return payload
+    except Exception:
+        return None
+
+
+def _split_filename(filename: str) -> tuple[str, str]:
+    """Return (base, extension-without-dot) of *filename*."""
+    if "." in filename:
+        base, ext = filename.rsplit(".", 1)
+        return base, ext.lower()
+    return filename, ""
+
+
+def _dedup_filename(filename: str, existing_names: set[str]) -> str:
+    """Return *filename* or the first free ``base(n).ext`` variant."""
+    existing_lower = {n.lower() for n in existing_names}
+    if filename.lower() not in existing_lower:
+        return filename
+    base, ext = _split_filename(filename)
+    suffix = ("." + ext) if ext else ""
+    n = 1
+    while True:
+        candidate = f"{base}({n}){suffix}"
+        if candidate.lower() not in existing_lower:
+            return candidate
+        n += 1
+
+
 class ChatController(http.Controller):
     def _workspace_shell_values(self, project_id: int, chat_url: str, token: str) -> dict:
         project = request.env["project.project"].sudo().browse(project_id)
@@ -82,3 +149,209 @@ class ChatController(http.Controller):
                 token = ''
 
         return request.render('itlingo_chatbot_integration.chat_page', self._workspace_shell_values(project_id, chat_url, token))
+
+    # ------------------------------------------------------------------
+    # Chatbot document export (Chatbot -> Cloud -> ITOI)
+    # ------------------------------------------------------------------
+
+    @staticmethod
+    def _json_response(payload: dict, status: int = 200) -> Response:
+        return Response(
+            json.dumps(payload), status=status, content_type='application/json',
+        )
+
+    @staticmethod
+    def _itoi_failure(reason_code: str, message: str, http_status=None) -> dict:
+        return {
+            'pushed': False,
+            'live': False,
+            'reason_code': reason_code,
+            'http_status': http_status,
+            'message': message,
+        }
+
+    def _push_file_to_itoi(self, settings, user, project, filename: str, content: str) -> dict:
+        """Push *content* to ITOI's ``/pushFile`` endpoint.
+
+        Returns a structured dict: ``pushed``/``live`` (bools), ``file_name``
+        (final name on the ITOI side) and, on failure, ``reason_code``,
+        ``http_status`` and ``message`` (ITOI's own error text when available).
+        Never raises.
+
+        Reason codes: ``not_configured``, ``unreachable``, ``timeout``,
+        ``route_missing``, ``auth_failed``, ``invalid_response``, plus any
+        code ITOI itself reports (e.g. ``workspace_mismatch``,
+        ``write_denied``, ``db_write_failed``).
+        """
+        itoi_url = (settings.itoi_url or '').rstrip('/')
+        if not itoi_url:
+            return self._itoi_failure(
+                'not_configured', 'ITOI URL is not configured in the integration settings')
+
+        try:
+            payload = json.dumps({
+                'user': user.login,
+                'workspace': project.name,
+                'organization': project.organization_id.name if project.organization_id else '',
+                'write': True,
+                'wsid': project.id,
+            })
+            iv_b64, ct_b64 = settings._aes_encrypt(payload)
+
+            resp = http_requests.post(
+                f'{itoi_url}/pushFile',
+                headers={'Authorization': f'Bearer {iv_b64}:{ct_b64}'},
+                json={
+                    'filename': filename,
+                    'content': base64.b64encode(content.encode('utf-8')).decode('ascii'),
+                },
+                timeout=ITOI_PUSH_TIMEOUT_S,
+            )
+        except http_requests.exceptions.Timeout:
+            _logger.warning('ITOI pushFile timed out after %ss', ITOI_PUSH_TIMEOUT_S)
+            return self._itoi_failure(
+                'timeout', f'ITOI did not answer within {ITOI_PUSH_TIMEOUT_S}s')
+        except Exception as e:
+            _logger.warning('ITOI pushFile unreachable: %s', e)
+            return self._itoi_failure('unreachable', f'ITOI is unreachable: {e}')
+
+        try:
+            data = resp.json()
+        except ValueError:
+            data = {}
+
+        if resp.status_code != 200:
+            itoi_message = (data.get('error') or resp.text or '').strip()[:200]
+            # Prefer ITOI's own machine-readable code; fall back to a
+            # classification by HTTP status.
+            reason_code = data.get('code')
+            if not reason_code:
+                if resp.status_code == 404:
+                    # Route missing usually means an outdated ITOI deployment.
+                    reason_code = 'route_missing'
+                elif resp.status_code in (401, 403):
+                    reason_code = 'auth_failed'
+                else:
+                    reason_code = 'itoi_error'
+            log = _logger.error if reason_code == 'route_missing' else _logger.warning
+            log(
+                'ITOI pushFile failed: status=%s code=%s message=%s',
+                resp.status_code, reason_code, itoi_message,
+            )
+            return self._itoi_failure(reason_code, itoi_message, resp.status_code)
+
+        if not data or 'pushed' not in data:
+            _logger.warning('ITOI pushFile returned unexpected body: %s', resp.text[:200])
+            return self._itoi_failure(
+                'invalid_response', 'ITOI returned an unexpected response', resp.status_code)
+
+        return {
+            'pushed': bool(data.get('pushed')),
+            'live': bool(data.get('live')),
+            'file_name': data.get('file_name') or filename,
+        }
+
+    @http.route('/chatbot_api/v1/export-document', type='http', auth='none',
+                methods=['POST'], csrf=False)
+    def chatbot_export_document(self, **kw):
+        """Create an ``itlingo.document`` from chatbot content and push it to ITOI.
+
+        Authenticated with the same HMAC token Odoo issues to the chatbot
+        iframe (see :func:`_build_workspace_token`), forwarded by the chatbot
+        backend as ``Authorization: Bearer <token>``.
+        """
+        auth_header = request.httprequest.headers.get('Authorization', '')
+        if not auth_header.startswith('Bearer '):
+            return self._json_response({'error': 'Missing or invalid Authorization header'}, 401)
+
+        secret = (
+            os.getenv('ITLINGO_CHATBOT_SECRET')
+            or request.env['ir.config_parameter'].sudo().get_param('itlingo_chatbot.secret', default='')
+            or ''
+        ).strip()
+        if not secret:
+            return self._json_response({'error': 'Chatbot secret not configured'}, 500)
+
+        payload = _verify_workspace_token(auth_header[7:], secret)
+        if not payload:
+            return self._json_response({'error': 'Invalid or expired token'}, 401)
+
+        try:
+            body = json.loads(request.httprequest.get_data(as_text=True) or '{}')
+        except ValueError:
+            return self._json_response({'error': 'Invalid JSON body'}, 400)
+
+        try:
+            workspace_id = int(body.get('workspace_id'))
+        except (TypeError, ValueError):
+            return self._json_response({'error': 'Missing or invalid workspace_id'}, 400)
+        if int(payload.get('workspace_id') or 0) != workspace_id:
+            return self._json_response({'error': 'Workspace mismatch'}, 403)
+
+        content = body.get('content')
+        if not isinstance(content, str) or not content.strip():
+            return self._json_response({'error': 'Missing content'}, 400)
+        if len(content.encode('utf-8')) > EXPORT_MAX_CONTENT_BYTES:
+            return self._json_response({'error': 'Content too large'}, 413)
+
+        filename = os.path.basename((body.get('filename') or '').strip())
+        # Keep filenames conservative: no path separators or control chars.
+        if not filename or not re.fullmatch(r'[\w][\w .()\-]*', filename):
+            return self._json_response({'error': 'Missing or invalid filename'}, 400)
+
+        project = request.env['project.project'].sudo().browse(workspace_id)
+        if not project.exists():
+            return self._json_response({'error': 'Workspace not found'}, 404)
+
+        user = request.env['res.users'].sudo().browse(int(payload.get('odoo_user_id') or 0))
+        if not user.exists():
+            return self._json_response({'error': 'Unknown user'}, 401)
+
+        has_write = request.env['itlingo.project.role'].sudo().search_count([
+            ('user_id', '=', user.id),
+            ('project_id', '=', project.id),
+            ('state', '=', 'accepted'),
+            ('role', 'in', EXPORT_WRITE_ROLES),
+        ])
+        if not has_write:
+            return self._json_response(
+                {'error': 'You do not have write access to this workspace'}, 403)
+
+        settings = request.env['itlingo.integration.settings'].sudo()._get_settings()
+        _base, ext = _split_filename(filename)
+        if ext not in settings._get_importable_extensions():
+            return self._json_response(
+                {'error': f'File extension ".{ext}" is not allowed'}, 400)
+
+        Document = request.env['itlingo.document'].sudo()
+        existing = Document.search([('project_id', '=', project.id)]).mapped('file_name')
+        final_name = _dedup_filename(filename, {n for n in existing if n})
+
+        document = Document.create({
+            'name': _split_filename(final_name)[0],
+            'file_name': final_name,
+            'document_file': base64.b64encode(content.encode('utf-8')),
+            'project_id': project.id,
+            'organization_id': project.organization_id.id if project.organization_id else False,
+            'creator_id': user.id,
+            'status': 'draft',
+        })
+        _logger.info(
+            'Chatbot export: document id=%s file=%s workspace=%s user=%s',
+            document.id, final_name, project.name, user.login,
+        )
+
+        itoi_result = self._push_file_to_itoi(settings, user, project, final_name, content)
+
+        return self._json_response({
+            'id': document.id,
+            'file_name': final_name,
+            'itoi': {
+                'pushed': itoi_result.get('pushed', False),
+                'live': itoi_result.get('live', False),
+                'file_name': itoi_result.get('file_name'),
+                'reason_code': itoi_result.get('reason_code'),
+                'http_status': itoi_result.get('http_status'),
+                'message': itoi_result.get('message'),
+            },
+        })

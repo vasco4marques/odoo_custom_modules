@@ -112,9 +112,8 @@ class ItlingoDsl(models.Model):
     def _dsls_maintained_by(self, user):
         """DSLs the given user maintains.
 
-        Maintainers are the only users allowed to attach organization /
-        workspace documents to a DSL (on top of the document-management role
-        already required to edit those documents).
+        Maintainers are the users allowed to manage a DSL (metadata and
+        definition files) through the portal.
         """
         if not user:
             return self.browse()

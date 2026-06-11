@@ -48,6 +48,11 @@ class ProjectProject(models.Model):
         index=True,
     )
 
+    _unique_workspace_key = models.Constraint(
+        'UNIQUE(workspace_key)',
+        'Each workspace must have a unique workspace key.',
+    )
+
     workspace_role_ids = fields.One2many(
         'itlingo.project.role', 'project_id', string='Workspace Roles',
     )
