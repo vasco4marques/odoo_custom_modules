@@ -178,7 +178,7 @@ class ItlingoSessionSettings(models.Model):
     _description = 'Session Settings'
     _table = 'session_settings'
 
-    session_id = fields.Char(required=True)
+    workspace_key = fields.Char(required=True, index=True)
     num_drafts = fields.Integer(default=1)
     max_rounds = fields.Integer(default=2)
     max_calls = fields.Integer(default=6)

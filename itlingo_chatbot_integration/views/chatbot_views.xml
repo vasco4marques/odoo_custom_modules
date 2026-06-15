@@ -538,7 +538,7 @@
         <field name="model">itlingo.session.settings</field>
         <field name="arch" type="xml">
             <list>
-                <field name="session_id"/>
+                <field name="workspace_key"/>
                 <field name="num_drafts"/>
                 <field name="max_rounds"/>
                 <field name="max_calls"/>
@@ -553,7 +553,7 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="session_id"/>
+                        <field name="workspace_key"/>
                         <field name="num_drafts"/>
                         <field name="max_rounds"/>
                         <field name="max_calls"/>
@@ -576,7 +576,7 @@
         <field name="model">itlingo.session.settings</field>
         <field name="arch" type="xml">
             <search>
-                <field name="session_id"/>
+                <field name="workspace_key"/>
             </search>
         </field>
     </record>

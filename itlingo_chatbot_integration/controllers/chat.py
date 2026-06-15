@@ -221,7 +221,11 @@ class ChatController(http.Controller):
             data = {}
 
         if resp.status_code != 200:
-            itoi_message = (data.get('error') or resp.text or '').strip()[:200]
+            # Only trust ITOI's own JSON ``error`` field. A non-JSON body is
+            # typically an Express HTML error page (e.g. the 404 for a missing
+            # route on an outdated deployment); never forward that markup
+            # downstream, the ``reason_code`` already conveys the cause.
+            itoi_message = (data.get('error') or '').strip()[:200]
             # Prefer ITOI's own machine-readable code; fall back to a
             # classification by HTTP status.
             reason_code = data.get('code')
