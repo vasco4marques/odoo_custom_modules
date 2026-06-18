@@ -836,6 +836,240 @@ class ITLingoPortal(CustomerPortal):
             values,
         )
 
+    # ──────────────────────────────────────────────
+    # Organization LLM configuration
+    # ──────────────────────────────────────────────
+
+    LLM_CATEGORY_FIELDS = [
+        ('default_model', 'Default Model'),
+        ('rag_llm_model', 'RAG LLM Model'),
+        ('diagram_auto_switch_model', 'Diagram Generation Model'),
+        ('image_auto_switch_model', 'Image Interpretation Model'),
+        ('agentic_generation_phase0_model', 'Agentic Phase 0 - extract spec'),
+        ('agentic_generation_phase1_model', 'Agentic Phase 1 - draft DSL'),
+        ('agentic_generation_phase3_model', 'Agentic Phase 3 - check completeness'),
+        ('agentic_generation_phase4_model', 'Agentic Phase 4 - repair DSL'),
+        ('agentic_generation_phase5_model', 'Agentic Phase 5 - finalize answer'),
+    ]
+
+    def _portal_org_llm_access(self, org_id):
+        """Return (organization, user_role) for an org manager or raise."""
+        org, user_role = self._portal_org_access(org_id)
+        if user_role.role != 'org_manager':
+            raise AccessError(_('Only organization managers can configure LLMs.'))
+        return org, user_role
+
+    def _validate_org_model_credentials(self, mode, api_key, base_url, has_existing_key=False):
+        """Validate the single credential for an org model based on the chosen mode.
+
+        A model is either an API-key model or a (self-hosted) Base-URL model; the
+        ``credential_mode`` selector decides which one. Returns an error message,
+        or None when valid.
+        """
+        if mode == 'url':
+            if not (base_url or '').strip():
+                return _('A Base URL is required for a self-hosted model.')
+            return None
+        # API-key mode (default).
+        if not (api_key or '').strip() and not has_existing_key:
+            return _('An API key is required for this model.')
+        return None
+
+    def _org_option_credentials_vals(self, org_id, provider, label, mode, api_key='', base_url='', keep_key=False):
+        """Build the env-var fields for an org model option (API-key XOR Base-URL).
+
+        ``mode`` ('api' or 'url') selects which credential the model uses; the
+        other mode's fields are always cleared so switching modes can never leave
+        a stale credential behind. ``keep_key`` preserves the previously stored
+        API key on edit when the form left the key blank while staying in API mode.
+        Callers must validate with :meth:`_validate_org_model_credentials` first.
+        """
+        Option = request.env['itlingo.chatbot.settings.option'].sudo()
+        if mode == 'url':
+            return {
+                'base_url_enabled': True,
+                'url_env_var': Option._build_env_var_name(org_id, provider.label, label, 'BASE_URL'),
+                'base_url': base_url,
+                'api_env_var': '',
+                'env_var_value': '',
+            }
+        vals = {
+            'base_url_enabled': False,
+            'api_env_var': Option._build_env_var_name(org_id, provider.label, label, 'API_KEY'),
+            'url_env_var': '',
+            'base_url': '',
+        }
+        if not keep_key:
+            vals['env_var_value'] = api_key
+        return vals
+
+    def _render_org_llm(self, org_id, error=None):
+        values = self._portal_org_llm_values(org_id)
+        values['llm_error'] = error
+        return request.render('itlingo_website_portal.portal_organization_hub_llm', values)
+
+    def _portal_org_llm_values(self, org_id):
+        org, user_role = self._portal_org_llm_access(org_id)
+        settings = request.env['itlingo.chatbot.settings'].sudo()._get_settings()
+        Provider = request.env['itlingo.chatbot.settings.provider'].sudo()
+        providers = Provider.search([('organization_id', '=', org_id)], order='sequence, id')
+        ops_config = settings._get_ops_configuration_record(organization_id=org_id)
+
+        org_models = []
+        for provider in providers:
+            for option in provider.option_ids.sorted(lambda r: (r.sequence, r.id)):
+                org_models.append({
+                    'value': option.value,
+                    'label': option.label,
+                    'provider_label': provider.label,
+                })
+
+        categories = [
+            {
+                'field': field_name,
+                'label': label,
+                'selected': getattr(ops_config, field_name, '') or '',
+            }
+            for field_name, label in self.LLM_CATEGORY_FIELDS
+        ]
+
+        values = self._prepare_portal_layout_values()
+        values.update({
+            'organization': org,
+            'user_role': user_role,
+            'page_name': 'organization_llm',
+            'organization_hub': True,
+            'org_hub_page': 'llm',
+            'providers': providers,
+            'org_models': org_models,
+            'llm_categories': categories,
+            'llm_error': None,
+        })
+        return values
+
+    @route('/my/organizations/<int:org_id>/llm', type='http', auth='user', website=True)
+    def portal_organization_llm(self, org_id, **kw):
+        return self._render_org_llm(org_id)
+
+    @route('/my/organizations/<int:org_id>/llm/provider/new',
+           type='http', auth='user', website=True, methods=['POST'])
+    def portal_organization_llm_provider_new(self, org_id, **post):
+        self._portal_org_llm_access(org_id)
+        label = (post.get('provider_label') or '').strip()
+        if label:
+            settings = request.env['itlingo.chatbot.settings'].sudo()._get_settings()
+            Provider = request.env['itlingo.chatbot.settings.provider'].sudo()
+            existing = Provider.search_count([('organization_id', '=', org_id)])
+            Provider.create({
+                'settings_id': settings.id,
+                'organization_id': org_id,
+                'label': label,
+                'provider': label,
+                'sequence': (existing + 1) * 10,
+            })
+        return request.redirect(f'/my/organizations/{org_id}/llm')
+
+    @route('/my/organizations/<int:org_id>/llm/provider/<int:provider_id>/delete',
+           type='http', auth='user', website=True, methods=['POST'])
+    def portal_organization_llm_provider_delete(self, org_id, provider_id, **post):
+        self._portal_org_llm_access(org_id)
+        provider = request.env['itlingo.chatbot.settings.provider'].sudo().browse(provider_id)
+        if provider.exists() and provider.organization_id.id == org_id:
+            provider.unlink()
+        return request.redirect(f'/my/organizations/{org_id}/llm')
+
+    @route('/my/organizations/<int:org_id>/llm/model/new',
+           type='http', auth='user', website=True, methods=['POST'])
+    def portal_organization_llm_model_new(self, org_id, **post):
+        self._portal_org_llm_access(org_id)
+        Provider = request.env['itlingo.chatbot.settings.provider'].sudo()
+        Option = request.env['itlingo.chatbot.settings.option'].sudo()
+        try:
+            provider_id = int(post.get('provider_id') or 0)
+        except (TypeError, ValueError):
+            provider_id = 0
+        provider = Provider.browse(provider_id)
+        label = (post.get('model_label') or '').strip()
+        value = (post.get('model_value') or '').strip()
+        mode = (post.get('credential_mode') or 'api').strip()
+        api_key = (post.get('api_key') or '').strip()
+        base_url = (post.get('base_url') or '').strip()
+        if not (provider.exists() and provider.organization_id.id == org_id and label and value):
+            return request.redirect(f'/my/organizations/{org_id}/llm')
+        error = self._validate_org_model_credentials(mode, api_key, base_url)
+        if error:
+            return self._render_org_llm(org_id, error=error)
+        vals = {
+            'provider_id': provider.id,
+            'organization_id': org_id,
+            'label': label,
+            'value': value,
+            'sequence': (len(provider.option_ids) + 1) * 10,
+            **self._org_option_credentials_vals(org_id, provider, label, mode, api_key=api_key, base_url=base_url),
+        }
+        Option.create(vals)
+        return request.redirect(f'/my/organizations/{org_id}/llm')
+
+    @route('/my/organizations/<int:org_id>/llm/model/<int:option_id>/edit',
+           type='http', auth='user', website=True, methods=['POST'])
+    def portal_organization_llm_model_edit(self, org_id, option_id, **post):
+        self._portal_org_llm_access(org_id)
+        Option = request.env['itlingo.chatbot.settings.option'].sudo()
+        option = Option.browse(option_id)
+        if not (option.exists() and option.organization_id.id == org_id):
+            return request.redirect(f'/my/organizations/{org_id}/llm')
+
+        provider = option.provider_id
+        label = (post.get('model_label') or '').strip() or option.label
+        value = (post.get('model_value') or '').strip() or option.value
+        mode = (post.get('credential_mode') or 'api').strip()
+        api_key = (post.get('api_key') or '').strip()
+        base_url = (post.get('base_url') or '').strip()
+        # Staying in API mode with a blank key keeps the previously stored key.
+        has_existing_key = (not option.base_url_enabled) and bool(option.env_var_value or option.api_key)
+        error = self._validate_org_model_credentials(
+            mode, api_key, base_url, has_existing_key=has_existing_key)
+        if error:
+            return self._render_org_llm(org_id, error=error)
+
+        keep_key = mode != 'url' and not api_key
+        vals = {
+            'label': label,
+            'value': value,
+            **self._org_option_credentials_vals(
+                org_id, provider, label, mode, api_key=api_key, base_url=base_url, keep_key=keep_key),
+        }
+        option.write(vals)
+        return request.redirect(f'/my/organizations/{org_id}/llm')
+
+    @route('/my/organizations/<int:org_id>/llm/model/<int:option_id>/delete',
+           type='http', auth='user', website=True, methods=['POST'])
+    def portal_organization_llm_model_delete(self, org_id, option_id, **post):
+        self._portal_org_llm_access(org_id)
+        option = request.env['itlingo.chatbot.settings.option'].sudo().browse(option_id)
+        if option.exists() and option.organization_id.id == org_id:
+            option.unlink()
+        return request.redirect(f'/my/organizations/{org_id}/llm')
+
+    @route('/my/organizations/<int:org_id>/llm/categories',
+           type='http', auth='user', website=True, methods=['POST'])
+    def portal_organization_llm_categories(self, org_id, **post):
+        self._portal_org_llm_access(org_id)
+        settings = request.env['itlingo.chatbot.settings'].sudo()._get_settings()
+        ops_config = settings._get_ops_configuration_record(organization_id=org_id)
+        Provider = request.env['itlingo.chatbot.settings.provider'].sudo()
+        valid_values = set()
+        for provider in Provider.search([('organization_id', '=', org_id)]):
+            for option in provider.option_ids:
+                if option.value:
+                    valid_values.add(option.value)
+        updates = {}
+        for field_name, _label in self.LLM_CATEGORY_FIELDS:
+            selected = (post.get(field_name) or '').strip()
+            updates[field_name] = selected if selected in valid_values else ''
+        ops_config.write(updates)
+        return request.redirect(f'/my/organizations/{org_id}/llm')
+
     @route('/my/organizations/<int:org_id>', type='http', auth='user', website=True)
     def portal_organization_detail(self, org_id, **kw):
         org, user_role = self._portal_org_access(org_id)

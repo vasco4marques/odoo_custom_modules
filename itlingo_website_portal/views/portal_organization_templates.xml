@@ -174,6 +174,11 @@
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'users' and 'active' or ''}">
                                 <i class="fa fa-users fa-fw me-2" aria-hidden="true"/>Users
                             </a>
+                            <a t-if="user_role.role == 'org_manager' and 'itlingo.chatbot.settings' in request.env"
+                               t-attf-href="/my/organizations/#{organization.id}/llm"
+                               t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'llm' and 'active' or ''}">
+                                <i class="fa fa-microchip fa-fw me-2" aria-hidden="true"/>LLM configuration
+                            </a>
                             <a t-if="user_role.role == 'org_manager'"
                                t-attf-href="/my/organizations/#{organization.id}/settings"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'settings' and 'active' or ''}">
@@ -539,6 +544,213 @@
                     </form>
                 </div>
             </div>
+        </t>
+    </template>
+
+    <!-- LLM configuration -->
+    <template id="portal_organization_hub_llm" name="Organization LLM configuration">
+        <t t-call="itlingo_website_portal.portal_organization_hub_shell">
+            <p class="text-muted">
+                Configure additional LLM providers and models for this organization.
+                These are offered to your members on top of the platform-level models.
+                Leaving the organization without any models keeps your members on the
+                platform defaults.
+            </p>
+            <p class="text-muted small">
+                Each model uses one credential: choose <strong>API key</strong> for
+                hosted providers or <strong>Base URL</strong> for self-hosted
+                endpoints.
+            </p>
+            <div t-if="llm_error" class="alert alert-danger" role="alert">
+                <t t-out="llm_error"/>
+            </div>
+
+            <!-- Existing providers and their models -->
+            <t t-if="not providers">
+                <div class="alert alert-light border" role="alert">
+                    No organization providers configured yet. Add one below.
+                </div>
+            </t>
+            <div t-foreach="providers" t-as="provider" class="card border-0 shadow-sm rounded-3 mb-3">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0"><t t-out="provider.label"/></h5>
+                    <form method="post"
+                          t-attf-action="/my/organizations/#{organization.id}/llm/provider/#{provider.id}/delete"
+                          onsubmit="return confirm('Delete this provider and all its models?');">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <button type="submit" class="btn btn-sm btn-outline-danger">
+                            <i class="fa fa-trash" aria-hidden="true"/> Delete provider
+                        </button>
+                    </form>
+                </div>
+                <div class="card-body">
+                    <t t-if="not provider.option_ids">
+                        <p class="text-muted small">No models yet for this provider.</p>
+                    </t>
+                    <div t-foreach="provider.option_ids" t-as="option"
+                         class="border rounded-2 p-3 mb-2">
+                        <form method="post"
+                              t-attf-action="/my/organizations/#{organization.id}/llm/model/#{option.id}/edit"
+                              class="row g-2 align-items-end">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            <div class="col-md-3">
+                                <label class="form-label small">Model label</label>
+                                <input type="text" class="form-control form-control-sm" name="model_label"
+                                       t-att-value="option.label" required=""/>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label small">Model value / id</label>
+                                <input type="text" class="form-control form-control-sm" name="model_value"
+                                       t-att-value="option.value" required=""/>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label small">Credential</label>
+                                <select class="form-select form-select-sm credential-mode" name="credential_mode">
+                                    <option value="api" t-att-selected="not option.base_url_enabled">API key</option>
+                                    <option value="url" t-att-selected="option.base_url_enabled">Base URL</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="cred-api">
+                                    <label class="form-label small">API key</label>
+                                    <input type="password" class="form-control form-control-sm" name="api_key"
+                                           placeholder="Leave blank to keep current"/>
+                                </div>
+                                <div class="cred-url">
+                                    <label class="form-label small">Base URL</label>
+                                    <input type="text" class="form-control form-control-sm" name="base_url"
+                                           t-att-value="option.base_url or ''"/>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex gap-2 mt-2">
+                                <button type="submit" class="btn btn-sm btn-primary">Save</button>
+                            </div>
+                        </form>
+                        <form method="post"
+                              t-attf-action="/my/organizations/#{organization.id}/llm/model/#{option.id}/delete"
+                              class="mt-2"
+                              onsubmit="return confirm('Delete this model?');">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            <button type="submit" class="btn btn-sm btn-outline-danger">Delete model</button>
+                        </form>
+                    </div>
+
+                    <!-- Add model to this provider -->
+                    <form method="post"
+                          t-attf-action="/my/organizations/#{organization.id}/llm/model/new"
+                          class="row g-2 align-items-end border-top pt-3 mt-2">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <input type="hidden" name="provider_id" t-att-value="provider.id"/>
+                        <div class="col-md-3">
+                            <label class="form-label small">Model label</label>
+                            <input type="text" class="form-control form-control-sm" name="model_label"
+                                   placeholder="e.g. GPT-4o" required=""/>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label small">Model value / id</label>
+                            <input type="text" class="form-control form-control-sm" name="model_value"
+                                   placeholder="e.g. openai/gpt-4o" required=""/>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label small">Credential</label>
+                            <select class="form-select form-select-sm credential-mode" name="credential_mode">
+                                <option value="api" selected="selected">API key</option>
+                                <option value="url">Base URL</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="cred-api">
+                                <label class="form-label small">API key</label>
+                                <input type="password" class="form-control form-control-sm" name="api_key"/>
+                            </div>
+                            <div class="cred-url">
+                                <label class="form-label small">Base URL</label>
+                                <input type="text" class="form-control form-control-sm" name="base_url"/>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <button type="submit" class="btn btn-sm btn-success">Add model</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Add provider -->
+            <div class="card border-0 shadow-sm rounded-3 mb-3">
+                <div class="card-body">
+                    <form method="post"
+                          t-attf-action="/my/organizations/#{organization.id}/llm/provider/new"
+                          class="row g-2 align-items-end">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <div class="col-md-6">
+                            <label class="form-label">New provider name</label>
+                            <input type="text" class="form-control" name="provider_label"
+                                   placeholder="e.g. OpenAI" required=""/>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-primary">Add provider</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Category assignments -->
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Model category assignments</h5>
+                    <small class="text-muted">
+                        Pick one of your organization's models per category. Leave a
+                        category blank to keep using the platform's model.
+                    </small>
+                </div>
+                <div class="card-body">
+                    <t t-if="not org_models">
+                        <p class="text-muted">Add at least one model above to assign categories.</p>
+                    </t>
+                    <form t-if="org_models" method="post"
+                          t-attf-action="/my/organizations/#{organization.id}/llm/categories">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <div class="row g-3">
+                            <div t-foreach="llm_categories" t-as="category" class="col-md-6">
+                                <label class="form-label small"><t t-out="category['label']"/></label>
+                                <select class="form-select form-select-sm" t-att-name="category['field']">
+                                    <option value="">Use platform default</option>
+                                    <t t-foreach="org_models" t-as="model">
+                                        <option t-att-value="model['value']"
+                                                t-att-selected="model['value'] == category['selected']">
+                                            <t t-out="model['label']"/> (<t t-out="model['provider_label']"/>)
+                                        </option>
+                                    </t>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Save assignments</button>
+                    </form>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                (function () {
+                    function syncCredMode(select) {
+                        var form = select.closest('form');
+                        if (!form) { return; }
+                        var isApi = select.value !== 'url';
+                        var apiEl = form.querySelector('.cred-api');
+                        var urlEl = form.querySelector('.cred-url');
+                        if (apiEl) { apiEl.style.display = isApi ? '' : 'none'; }
+                        if (urlEl) { urlEl.style.display = isApi ? 'none' : ''; }
+                    }
+                    function init() {
+                        var selects = document.querySelectorAll('select.credential-mode');
+                        for (var i = 0; i &lt; selects.length; i++) {
+                            syncCredMode(selects[i]);
+                            selects[i].addEventListener('change', function (e) { syncCredMode(e.target); });
+                        }
+                    }
+                    if (document.readyState !== 'loading') { init(); }
+                    else { document.addEventListener('DOMContentLoaded', init); }
+                })();
+            </script>
         </t>
     </template>
 
