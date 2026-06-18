@@ -47,6 +47,7 @@ def _build_workspace_token(project_id: int, user, secret: str) -> str:
     # include workspace_key for a stable external identifier
     project = request.env['project.project'].sudo().browse(project_id)
     workspace_key = project.workspace_key if project and project.exists() else ''
+    organization_id = project.organization_id.id if (project and project.exists() and project.organization_id) else None
     scope = f"odoo:{db_name}:workspace:{project_id}:user:{user.id}"
     payload = {
         "aud": "itlingo-chatbot",
@@ -59,6 +60,7 @@ def _build_workspace_token(project_id: int, user, secret: str) -> str:
         "workspace_id": project_id,
         "workspace_key": workspace_key,
         "workspace_name": request.env["project.project"].sudo().browse(project_id).name or "",
+        "organization_id": organization_id,
         "scope": scope,
         "iat": now,
         "exp": now + 3600,

@@ -1,4 +1,5 @@
 import os
+import re
 
 from odoo import api, fields, models
 from odoo.exceptions import UserError
@@ -12,6 +13,10 @@ class ItlingoChatbotModelProvider(models.Model):
     _rec_name = 'label'
 
     settings_id = fields.Many2one('itlingo.chatbot.settings', required=True, ondelete='cascade')
+    organization_id = fields.Many2one(
+        'itlingo.organization', string='Organization', ondelete='cascade', index=True,
+        help='Organization that owns this provider. Empty means it is a platform-level provider.',
+    )
     sequence = fields.Integer(default=10)
     provider = fields.Char(required=True)
     label = fields.Char(required=True)
@@ -24,10 +29,19 @@ class ItlingoChatbotModelProvider(models.Model):
             result.append((record.id, name))
         return result
 
-    def _sync_parent(self):
+    def _resolve_scopes(self):
+        """Return the distinct (settings_id, organization_id) scopes to resync."""
+        scopes = set()
         for record in self:
-            if record.settings_id and not self.env.context.get('skip_model_group_sync'):
-                record.settings_id._sync_model_groups_to_ops_configuration()
+            if record.settings_id:
+                scopes.add((record.settings_id.id, record.organization_id.id or False))
+        return scopes
+
+    def _sync_parent(self):
+        if self.env.context.get('skip_model_group_sync'):
+            return
+        for settings_id, organization_id in self._resolve_scopes():
+            self.env['itlingo.chatbot.settings'].browse(settings_id)._sync_model_groups_to_ops_configuration(organization_id=organization_id)
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -51,11 +65,11 @@ class ItlingoChatbotModelProvider(models.Model):
         return result
 
     def unlink(self):
-        settings_records = self.mapped('settings_id')
+        scopes = self._resolve_scopes()
         result = super().unlink()
-        for settings_record in settings_records:
-            if settings_record and not self.env.context.get('skip_model_group_sync'):
-                settings_record._sync_model_groups_to_ops_configuration()
+        if not self.env.context.get('skip_model_group_sync'):
+            for settings_id, organization_id in scopes:
+                self.env['itlingo.chatbot.settings'].browse(settings_id)._sync_model_groups_to_ops_configuration(organization_id=organization_id)
         return result
 
 
@@ -67,6 +81,10 @@ class ItlingoChatbotModelOption(models.Model):
 
     settings_id = fields.Many2one('itlingo.chatbot.settings', required=True, ondelete='cascade')
     provider_id = fields.Many2one('itlingo.chatbot.settings.provider', required=True, ondelete='cascade')
+    organization_id = fields.Many2one(
+        'itlingo.organization', string='Organization', ondelete='cascade', index=True,
+        help='Organization that owns this model. Empty means it is a platform-level model.',
+    )
     provider_name = fields.Char(related='provider_id.label', string='Provider', readonly=True)
     sequence = fields.Integer(default=10)
     label = fields.Char(required=True)
@@ -86,11 +104,39 @@ class ItlingoChatbotModelOption(models.Model):
             result.append((record.id, name))
         return result
 
-    def _sync_parent(self):
+    @api.model
+    def _build_env_var_name(self, organization_id, provider_label, model_label, suffix):
+        """Generate a stable, unique env-var name for an org-scoped model option."""
+        def slug(text):
+            return re.sub(r'[^A-Z0-9]+', '_', (text or '').upper()).strip('_') or 'X'
+
+        return f"ORG{organization_id or 0}_{slug(provider_label)}_{slug(model_label)}_{suffix}"
+
+    def _record_scope(self, record):
+        settings_record = record.settings_id or (record.provider_id.settings_id if record.provider_id else False)
+        organization_id = (
+            record.organization_id.id
+            or (record.provider_id.organization_id.id if record.provider_id else False)
+            or False
+        )
+        return (settings_record.id if settings_record else False), organization_id
+
+    def _resolve_scopes(self):
+        scopes = set()
         for record in self:
-            settings_record = record.settings_id or (record.provider_id.settings_id if record.provider_id else False)
-            if settings_record and not self.env.context.get('skip_model_group_sync'):
-                settings_record._sync_model_groups_to_ops_configuration()
+            settings_id, organization_id = self._record_scope(record)
+            if settings_id:
+                scopes.add((settings_id, organization_id))
+        return scopes
+
+    def _options_for_scope(self, organization_id):
+        return self.filtered(lambda r: self._record_scope(r)[1] == organization_id)
+
+    def _sync_parent(self):
+        if self.env.context.get('skip_model_group_sync'):
+            return
+        for settings_id, organization_id in self._resolve_scopes():
+            self.env['itlingo.chatbot.settings'].browse(settings_id)._sync_model_groups_to_ops_configuration(organization_id=organization_id)
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -98,19 +144,22 @@ class ItlingoChatbotModelOption(models.Model):
         for vals in vals_list:
             item = dict(vals)
             provider_id = item.get('provider_id')
-            if provider_id and not item.get('settings_id'):
+            if provider_id:
                 provider = self.env['itlingo.chatbot.settings.provider'].browse(provider_id)
                 if provider.exists():
-                    item['settings_id'] = provider.settings_id.id
+                    if not item.get('settings_id'):
+                        item['settings_id'] = provider.settings_id.id
+                    if not item.get('organization_id') and provider.organization_id:
+                        item['organization_id'] = provider.organization_id.id
             normalized_vals_list.append(item)
 
         records = super().create(normalized_vals_list)
         if not self.env.context.get('skip_model_group_sync'):
-            settings_records = records.mapped('settings_id') | records.mapped('provider_id.settings_id')
-            for settings_record in settings_records:
-                settings_record._propagate_env_values_from_options(records)
-                settings_record._sync_model_groups_to_ops_configuration()
-        records._sync_parent()
+            for settings_id, organization_id in records._resolve_scopes():
+                settings_record = self.env['itlingo.chatbot.settings'].browse(settings_id)
+                scope_options = records._options_for_scope(organization_id)
+                settings_record._propagate_env_values_from_options(scope_options, organization_id=organization_id)
+                settings_record._sync_model_groups_to_ops_configuration(organization_id=organization_id)
         return records
 
     def write(self, vals):
@@ -118,18 +167,19 @@ class ItlingoChatbotModelOption(models.Model):
         if self.env.context.get('skip_model_group_sync'):
             return result
 
-        settings_records = self.mapped('settings_id') | self.mapped('provider_id.settings_id')
-        for settings_record in settings_records:
-            settings_record._propagate_env_values_from_options(self)
-        self._sync_parent()
+        for settings_id, organization_id in self._resolve_scopes():
+            settings_record = self.env['itlingo.chatbot.settings'].browse(settings_id)
+            scope_options = self._options_for_scope(organization_id)
+            settings_record._propagate_env_values_from_options(scope_options, organization_id=organization_id)
+            settings_record._sync_model_groups_to_ops_configuration(organization_id=organization_id)
         return result
 
     def unlink(self):
-        settings_records = self.mapped('settings_id') | self.mapped('provider_id.settings_id')
+        scopes = self._resolve_scopes()
         result = super().unlink()
-        for settings_record in settings_records:
-            if settings_record and not self.env.context.get('skip_model_group_sync'):
-                settings_record._sync_model_groups_to_ops_configuration()
+        if not self.env.context.get('skip_model_group_sync'):
+            for settings_id, organization_id in scopes:
+                self.env['itlingo.chatbot.settings'].browse(settings_id)._sync_model_groups_to_ops_configuration(organization_id=organization_id)
         return result
 
 
@@ -219,17 +269,39 @@ class ItlingoChatbotSettings(models.Model):
             'last_attachment_cleanup_at': ops_config.last_attachment_cleanup_at or '',
         }
 
-    def _get_ops_configuration_record(self):
+    # Category assignment fields that must start blank on org-scoped ops
+    # configuration records so resolution falls back to the platform value.
+    _OPS_CATEGORY_FIELDS = (
+        'default_model', 'rag_llm_model', 'diagram_auto_switch_model',
+        'image_auto_switch_model', 'agentic_generation_phase0_model',
+        'agentic_generation_phase1_model', 'agentic_generation_phase3_model',
+        'agentic_generation_phase4_model', 'agentic_generation_phase5_model',
+    )
+
+    def _ops_configuration_key(self, organization_id=False):
+        return f'org:{organization_id}' if organization_id else 'default'
+
+    def _get_ops_configuration_record(self, organization_id=False):
         ops_config_model = self.env['itlingo.ops.configuration'].sudo()
-        record = ops_config_model.search([('key', '=', 'default')], limit=1)
+        key = self._ops_configuration_key(organization_id)
+        record = ops_config_model.search([('key', '=', key)], limit=1)
         if not record:
-            record = ops_config_model.create({'key': 'default'})
+            vals = {'key': key}
+            if organization_id:
+                vals.update({field: '' for field in self._OPS_CATEGORY_FIELDS})
+            record = ops_config_model.create(vals)
         return record
 
-    def _serialize_model_groups(self):
+    def _scoped_providers(self, organization_id=False):
+        organization_id = organization_id or False
+        return self.provider_ids.filtered(
+            lambda rec: (rec.organization_id.id or False) == organization_id
+        )
+
+    def _serialize_model_groups(self, organization_id=False):
         self.ensure_one()
         groups = []
-        for provider in self.provider_ids.sorted(lambda rec: (rec.sequence, rec.id)):
+        for provider in self._scoped_providers(organization_id).sorted(lambda rec: (rec.sequence, rec.id)):
             options = []
             for option in provider.option_ids.sorted(lambda rec: (rec.sequence, rec.id)):
                 option_values = {
@@ -251,10 +323,10 @@ class ItlingoChatbotSettings(models.Model):
             })
         return groups
 
-    def _serialize_env_var_pairs(self):
+    def _serialize_env_var_pairs(self, organization_id=False):
         self.ensure_one()
         pairs_by_env_var = {}
-        for provider in self.provider_ids.sorted(lambda rec: (rec.sequence, rec.id)):
+        for provider in self._scoped_providers(organization_id).sorted(lambda rec: (rec.sequence, rec.id)):
             for option in provider.option_ids.sorted(lambda rec: (rec.sequence, rec.id)):
                 env_value = (option.env_var_value or option.api_key or option.base_url or '').strip()
                 if not env_value:
@@ -269,13 +341,13 @@ class ItlingoChatbotSettings(models.Model):
             if env_var
         ]
 
-    def _propagate_env_value_to_matching_options(self, env_var, env_value):
+    def _propagate_env_value_to_matching_options(self, env_var, env_value, organization_id=False):
         self.ensure_one()
         key = str(env_var or '').strip()
         if not key:
             return
 
-        for provider in self.provider_ids:
+        for provider in self._scoped_providers(organization_id):
             for option in provider.option_ids:
                 option_keys = {
                     str(option.api_env_var or '').strip(),
@@ -284,7 +356,7 @@ class ItlingoChatbotSettings(models.Model):
                 if key in option_keys and option.env_var_value != env_value:
                     option.with_context(skip_model_group_sync=True).write({'env_var_value': env_value})
 
-    def _propagate_env_values_from_options(self, option_records):
+    def _propagate_env_values_from_options(self, option_records, organization_id=False):
         self.ensure_one()
         propagated_values = {}
         for option in option_records:
@@ -295,7 +367,7 @@ class ItlingoChatbotSettings(models.Model):
                     propagated_values[key] = env_value
 
         for env_var, env_value in propagated_values.items():
-            self._propagate_env_value_to_matching_options(env_var, env_value)
+            self._propagate_env_value_to_matching_options(env_var, env_value, organization_id=organization_id)
 
     def _sync_env_var_values_from_ops_configuration(self):
         self.ensure_one()
@@ -308,7 +380,7 @@ class ItlingoChatbotSettings(models.Model):
                 env_var_map[env_var] = env_val
 
         option_updates = []
-        for provider in self.provider_ids:
+        for provider in self._scoped_providers(False):
             for option in provider.option_ids:
                 candidate_keys = [
                     str(option.api_env_var or '').strip(),
@@ -373,12 +445,12 @@ class ItlingoChatbotSettings(models.Model):
             self.with_context(skip_model_group_sync=True).write({'provider_ids': provider_commands})
             self._sync_model_groups_to_ops_configuration()
 
-    def _sync_model_groups_to_ops_configuration(self):
+    def _sync_model_groups_to_ops_configuration(self, organization_id=False):
         self.ensure_one()
-        ops_config = self._get_ops_configuration_record()
+        ops_config = self._get_ops_configuration_record(organization_id=organization_id)
         ops_config.write({
-            'model_groups': self._serialize_model_groups(),
-            'env_var_pairs': self._serialize_env_var_pairs(),
+            'model_groups': self._serialize_model_groups(organization_id=organization_id),
+            'env_var_pairs': self._serialize_env_var_pairs(organization_id=organization_id),
         })
 
     def action_open_providers(self):
