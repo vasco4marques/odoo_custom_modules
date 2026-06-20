@@ -59,11 +59,11 @@
         </t>
     </template>
 
-    <!-- add a Chat link to workspace hub nav -->
+    <!-- add a Chat link to workspace hub nav, after Specifications -->
     <template id="portal_add_chat_link" inherit_id="itlingo_website_portal.portal_workspace_hub_shell">
-        <xpath expr="//nav[contains(@class,'itlingo-org-hub__sidebar')]" position="inside">
+        <xpath expr="//a[contains(@t-attf-href, '/specifications')]" position="after">
             <a t-attf-href="/my/workspaces/#{project.id}/chat" t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'chat' and 'active' or ''}">
-                <i class="fa fa-comments fa-fw me-2" aria-hidden="true"/>ChatBot
+                <i class="fa fa-comments fa-fw me-2" aria-hidden="true"/>Chatbot
             </a>
         </xpath>
     </template>

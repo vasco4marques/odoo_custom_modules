@@ -119,7 +119,7 @@
                         <td class="text-end text-nowrap">
                             <a t-attf-href="/my/organizations/#{org.id}/documentation"
                                class="btn btn-sm btn-link text-primary p-1"
-                               title="Documentation" aria-label="Documentation">
+                               title="Documents" aria-label="Documents">
                                 <i class="fa fa-file-text-o fa-lg"/>
                             </a>
                             <a t-attf-href="/my/organizations/#{org.id}/users"
@@ -160,7 +160,7 @@
                         <nav class="itlingo-org-hub__sidebar nav flex-column rounded-3 shadow-sm bg-white p-2" aria-label="Organization sections">
                             <a t-attf-href="/my/organizations/#{organization.id}"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'stats' and 'active' or ''}">
-                                <i class="fa fa-bar-chart fa-fw me-2" aria-hidden="true"/>Statistics
+                                <i class="fa fa-home fa-fw me-2" aria-hidden="true"/>Home
                             </a>
                             <a t-attf-href="/my/organizations/#{organization.id}/workspaces"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'workspaces' and 'active' or ''}">
@@ -168,7 +168,7 @@
                             </a>
                             <a t-attf-href="/my/organizations/#{organization.id}/documentation"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'documentation' and 'active' or ''}">
-                                <i class="fa fa-file-text-o fa-fw me-2" aria-hidden="true"/>Documentation
+                                <i class="fa fa-file-text-o fa-fw me-2" aria-hidden="true"/>Documents
                             </a>
                             <a t-attf-href="/my/organizations/#{organization.id}/users"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'users' and 'active' or ''}">
@@ -177,7 +177,7 @@
                             <a t-if="user_role.role == 'org_manager' and 'itlingo.chatbot.settings' in request.env"
                                t-attf-href="/my/organizations/#{organization.id}/llm"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'llm' and 'active' or ''}">
-                                <i class="fa fa-microchip fa-fw me-2" aria-hidden="true"/>LLM configuration
+                                <i class="fa fa-microchip fa-fw me-2" aria-hidden="true"/>LLM configurations
                             </a>
                             <a t-if="user_role.role == 'org_manager'"
                                t-attf-href="/my/organizations/#{organization.id}/settings"

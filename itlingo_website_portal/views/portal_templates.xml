@@ -20,11 +20,11 @@
             <li t-if="organization_hub" class="breadcrumb-item">
                 <a t-attf-href="/my/organizations/#{organization.id}"><t t-out="organization.name"/></a>
             </li>
-            <li t-if="page_name == 'organization_stats'" class="breadcrumb-item active">Statistics</li>
+            <li t-if="page_name == 'organization_stats'" class="breadcrumb-item active">Home</li>
             <li t-if="page_name == 'organization_workspaces'" class="breadcrumb-item active">Workspaces</li>
-            <li t-if="page_name == 'organization_documentation'" class="breadcrumb-item active">Documentation</li>
+            <li t-if="page_name == 'organization_documentation'" class="breadcrumb-item active">Documents</li>
             <li t-if="page_name == 'organization_documentation_new'" class="breadcrumb-item">
-                <a t-attf-href="/my/organizations/#{organization.id}/documentation">Documentation</a>
+                <a t-attf-href="/my/organizations/#{organization.id}/documentation">Documents</a>
             </li>
             <li t-if="page_name == 'organization_documentation_new'" class="breadcrumb-item active">New document</li>
             <li t-if="page_name == 'organization_users'" class="breadcrumb-item active">Users</li>
@@ -48,7 +48,7 @@
                 <a t-attf-href="/public-workspaces/#{project.id}"><t t-out="project.name"/></a>
             </li>
             <li t-if="page_name == 'public_workspace_documentation'" class="breadcrumb-item active">
-                Documentation
+                Documents
             </li>
             <li t-if="page_name == 'public_workspace_specifications'" class="breadcrumb-item">
                 <a href="/public-workspaces">Public workspaces</a>

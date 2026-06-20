@@ -173,7 +173,7 @@
                         <td class="text-end text-nowrap">
                             <a t-attf-href="/my/workspaces/#{proj.id}/documentation"
                                class="btn btn-sm btn-link text-primary p-1"
-                               title="Documentation" aria-label="Documentation">
+                               title="Documents" aria-label="Documents">
                                 <i class="fa fa-file-text-o fa-lg"/>
                             </a>
                             <a t-attf-href="/my/workspaces/#{proj.id}/users"
@@ -285,7 +285,7 @@
                         <a t-attf-href="/public-workspaces/#{project.id}"><t t-out="project.name"/></a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a t-attf-href="/public-workspaces/#{project.id}/documentation">Documentation</a>
+                        <a t-attf-href="/public-workspaces/#{project.id}/documentation">Documents</a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page"><t t-out="document.name"/></li>
                 </ol>
@@ -350,7 +350,7 @@
                             </a>
                             <a t-attf-href="#{ws_hub_prefix}/documentation"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'documentation' and 'active' or ''}">
-                                <i class="fa fa-file-text-o fa-fw me-2" aria-hidden="true"/>Documentation
+                                <i class="fa fa-file-text-o fa-fw me-2" aria-hidden="true"/>Documents
                             </a>
                             <a t-attf-href="#{ws_hub_prefix}/specifications"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'specifications' and 'active' or ''}">
@@ -363,7 +363,7 @@
                             <a t-if="not workspace_hub_public and user_role and user_role.role == 'ws_manager'"
                                t-attf-href="#{ws_hub_prefix}/settings"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'settings' and 'active' or ''}">
-                                <i class="fa fa-cog fa-fw me-2" aria-hidden="true"/>Workspace settings
+                                <i class="fa fa-cog fa-fw me-2" aria-hidden="true"/>Settings
                             </a>
                         </nav>
                     </aside>
