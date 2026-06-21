@@ -658,6 +658,7 @@
                             <label class="form-label" for="ws_doc_file">File</label>
                             <input type="file" class="form-control" id="ws_doc_file" name="document_file"/>
                         </div>
+                        <t t-call="itlingo_documents.portal_document_template_fields"/>
                         <div class="d-flex gap-2">
                             <button type="submit" class="btn btn-primary">Create</button>
                             <a t-attf-href="/my/workspaces/#{project.id}/documentation" class="btn btn-outline-secondary">Cancel</a>

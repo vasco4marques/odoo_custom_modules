@@ -1,0 +1,33 @@
+Package System1
+System Sys1 "Example System" : Application [
+    vendor "ITLingo"
+    version "1.0"
+    description "An example system used to exercise the templating framework."
+]
+Stakeholder stk_customer "Customer" : Organization [
+    description "The customer organization."
+]
+Actor act_user "End User" : User [
+    stakeholder stk_customer
+    description "A user of the system."
+]
+Term term_login "Login" : Noun [
+    acronym "LGN"
+    description "The act of authenticating into the system."
+]
+Goal goal_secure "Be secure" : Security [
+    priority High
+    description "The system shall protect user data."
+]
+FR fr_login "User login" : Functional [
+    stakeholder stk_customer
+    priority High
+    description "The system shall allow users to log in."
+]
+UseCase uc_login "Login" : Login [
+    primaryActor act_user
+    precondition "The user has an account."
+    postcondition "The user is authenticated."
+    priority High
+    description "A user logs into the system."
+]

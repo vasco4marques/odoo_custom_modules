@@ -120,16 +120,25 @@ class ITLingoDocumentPortal(CustomerPortal):
         DocType = request.env['itlingo.document.type'].sudo()
         doc_types = DocType.search([], order='name')
         status_selection = document._fields['status'].selection
+        template_type = request.env.ref(
+            'itlingo_documents.doc_type_template', raise_if_not_found=False,
+        )
+        template_type_id = template_type.id if template_type else False
+        has_pattern = 'output_filename_pattern' in document._fields
         values = {
             'document': document,
             'doc_types': doc_types,
             'status_selection': status_selection,
+            'template_type_id': template_type_id,
             'form': {
                 'name': document.name,
                 'document_type_id': document.document_type_id.id or '',
                 'dsl_knowledge': document.dsl_knowledge,
                 'status': document.status,
                 'version': document.version or '',
+                'output_filename_pattern': (
+                    document.output_filename_pattern or '' if has_pattern else ''
+                ),
             },
             'error': {},
             'page_name': 'document_edit',
@@ -144,6 +153,8 @@ class ITLingoDocumentPortal(CustomerPortal):
                 type_id = False
             dsl_knowledge = post.get('dsl_knowledge') == '1'
             values['form']['dsl_knowledge'] = dsl_knowledge
+            output_pattern = (post.get('output_filename_pattern') or '').strip()
+            values['form']['output_filename_pattern'] = output_pattern
             status = (post.get('status') or '').strip()
             version = (post.get('version') or '').strip()
             allowed_status = {key for key, _label in status_selection}
@@ -168,6 +179,11 @@ class ITLingoDocumentPortal(CustomerPortal):
                     'status': final_status,
                     'version': version or document.version,
                 }
+                if has_pattern:
+                    is_tpl_type = bool(template_type_id) and type_id == template_type_id
+                    write_vals['output_filename_pattern'] = (
+                        output_pattern if is_tpl_type else False
+                    )
                 if upload and upload.filename:
                     write_vals['file_name'] = upload.filename
                     write_vals['document_file'] = base64.b64encode(upload.read())

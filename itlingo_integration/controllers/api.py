@@ -310,6 +310,7 @@ class ITLingoIntegrationAPI(http.Controller):
         return documents.filtered(
             lambda d: d.document_file
             and self._file_extension(d.file_name) in allowed
+            and not getattr(d, "is_template", False)
         )
 
     @http.route('/token_api/get-file-list/<int:workspace_id>', type='http',

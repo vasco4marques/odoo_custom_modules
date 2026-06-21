@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <!-- Reusable template field (output filename pattern), shown when the
+         selected Document Type is "Template". Rendered only when the templating
+         module is installed (template_type_id set). Reused by create/edit forms. -->
+    <template id="portal_document_template_fields" name="Document Template Fields">
+        <t t-if="template_type_id">
+            <div id="doc_template_opts" class="mb-3" style="display:none;">
+                <label class="form-label" for="doc_output_pattern">Output filename pattern</label>
+                <input type="text" class="form-control" id="doc_output_pattern"
+                       name="output_filename_pattern"
+                       t-att-value="form.get('output_filename_pattern') or ''"
+                       placeholder="{{ project.code }}_requirements.docx"/>
+                <div class="form-text">
+                    Shown for "Template" documents. Jinja2 pattern for the generated
+                    filename; defaults to the document name. Templates are excluded
+                    from the knowledge pool and cannot be sent to ITOI.
+                </div>
+            </div>
+            <script type="text/javascript">
+                (function(){
+                    var sel = document.querySelector('select[name=document_type_id]');
+                    var opts = document.getElementById('doc_template_opts');
+                    var tplId = '<t t-esc="template_type_id"/>';
+                    function sync(){ if(sel){ if(opts){ opts.style.display = (String(sel.value) === tplId) ? '' : 'none'; } } }
+                    if(sel){ sel.addEventListener('change', sync); sync(); }
+                })();
+            </script>
+        </t>
+    </template>
+
     <!-- Portal home card -->
     <template id="portal_my_home_documents"
               name="Portal Documents"
@@ -216,6 +245,7 @@
                                 Current file: <t t-out="document.file_name"/>
                             </div>
                         </div>
+                        <t t-call="itlingo_documents.portal_document_template_fields"/>
                         <div class="d-flex gap-2">
                             <button type="submit" class="btn btn-primary">Save</button>
                             <a t-attf-href="/my/documents/#{document.id}" class="btn btn-outline-secondary">Cancel</a>

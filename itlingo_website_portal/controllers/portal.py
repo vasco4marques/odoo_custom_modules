@@ -619,6 +619,25 @@ class ITLingoPortal(CustomerPortal):
             'itlingo_website_portal.portal_organization_leave_promote', values,
         )
 
+    def _template_type_id(self):
+        """Id of the 'Template' document type, or False when unavailable."""
+        t = request.env.ref(
+            'itlingo_documents.doc_type_template', raise_if_not_found=False,
+        )
+        return t.id if t else False
+
+    def _apply_template_vals(self, vals, post):
+        """Set the template output pattern when the chosen type is 'Template'."""
+        Doc = request.env['itlingo.document']
+        if 'output_filename_pattern' not in Doc._fields:
+            return
+        tpl_type_id = self._template_type_id()
+        is_template = bool(tpl_type_id) and vals.get('document_type_id') == tpl_type_id
+        vals['output_filename_pattern'] = (
+            (post.get('output_filename_pattern') or '').strip()
+            if is_template else False
+        )
+
     @route(
         '/my/organizations/<int:org_id>/documentation/new',
         type='http', auth='user', website=True, methods=['GET', 'POST'],
@@ -636,6 +655,7 @@ class ITLingoPortal(CustomerPortal):
             'organization': org,
             'user_role': user_role,
             'doc_types': doc_types,
+            'template_type_id': self._template_type_id(),
             'page_name': 'organization_documentation_new',
             'organization_hub': True,
             'org_hub_page': 'documentation',
@@ -661,16 +681,18 @@ class ITLingoPortal(CustomerPortal):
                 if upload and upload.filename:
                     fname = upload.filename
                     file_b64 = base64.b64encode(upload.read())
+                doc_vals = {
+                    'name': name,
+                    'organization_id': org_id,
+                    'document_type_id': type_id or False,
+                    'document_file': file_b64 or False,
+                    'file_name': fname or False,
+                    'status': 'draft',
+                    'creator_id': request.env.user.id,
+                }
+                self._apply_template_vals(doc_vals, post)
                 try:
-                    request.env['itlingo.document'].sudo().create({
-                        'name': name,
-                        'organization_id': org_id,
-                        'document_type_id': type_id or False,
-                        'document_file': file_b64 or False,
-                        'file_name': fname or False,
-                        'status': 'draft',
-                        'creator_id': request.env.user.id,
-                    })
+                    request.env['itlingo.document'].sudo().create(doc_vals)
                 except UserError as err:
                     values['error']['_form'] = str(err)
                 else:
@@ -2056,6 +2078,7 @@ class ITLingoPortal(CustomerPortal):
             'workspace_hub': True,
             'workspace_hub_page': 'documentation',
             'doc_types': doc_types,
+            'template_type_id': self._template_type_id(),
             'page_name': 'workspace_documentation_new',
             'form': {},
             'error': {},
@@ -2081,16 +2104,18 @@ class ITLingoPortal(CustomerPortal):
                 if upload and upload.filename:
                     fname = upload.filename
                     file_b64 = base64.b64encode(upload.read())
+                doc_vals = {
+                    'name': name,
+                    'project_id': project_id,
+                    'document_type_id': type_id or False,
+                    'document_file': file_b64 or False,
+                    'file_name': fname or False,
+                    'status': 'draft',
+                    'creator_id': request.env.user.id,
+                }
+                self._apply_template_vals(doc_vals, post)
                 try:
-                    request.env['itlingo.document'].sudo().create({
-                        'name': name,
-                        'project_id': project_id,
-                        'document_type_id': type_id or False,
-                        'document_file': file_b64 or False,
-                        'file_name': fname or False,
-                        'status': 'draft',
-                        'creator_id': request.env.user.id,
-                    })
+                    request.env['itlingo.document'].sudo().create(doc_vals)
                 except UserError as err:
                     values['error']['_form'] = str(err)
                 else:

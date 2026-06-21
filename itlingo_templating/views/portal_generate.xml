@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Green "Generate Template" button on the document detail page -->
+    <template id="portal_document_detail_generate_button"
+              inherit_id="itlingo_documents.portal_document_detail"
+              name="Generate Template Button">
+        <xpath expr="//div[hasclass('flex-wrap')]" position="inside">
+            <a t-if="document.is_template and (document.file_name or '').lower().endswith('.docx') and document.document_file"
+               t-attf-href="/my/documents/#{document.id}/generate"
+               class="btn btn-success">
+                <i class="fa fa-cogs"/> Generate Template
+            </a>
+        </xpath>
+    </template>
+
+    <!-- RSL upload + generate form -->
+    <template id="portal_generate_form" name="Generate from Template">
+        <t t-call="portal.portal_layout">
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h3 class="mb-0">Generate from template: <t t-out="document.name"/></h3>
+                </div>
+                <div class="card-body">
+                    <div t-if="error" class="alert alert-danger" role="alert">
+                        <div><t t-out="error"/></div>
+                        <ul t-if="diagnostics" class="mb-0 mt-2">
+                            <li t-foreach="diagnostics" t-as="d">
+                                <t t-if="d.get('line') is not None">Line <t t-out="d['line'] + 1"/>: </t>
+                                <t t-out="d.get('message')"/>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="text-muted">
+                        Upload an <code>.rsl</code> specification. The template is
+                        filled with its contents and the generated DOCX is downloaded.
+                    </p>
+                    <form t-attf-action="/my/documents/#{document.id}/generate"
+                          method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <div class="mb-3">
+                            <label class="form-label" for="rsl_file">RSL specification</label>
+                            <input type="file" class="form-control" id="rsl_file"
+                                   name="rsl_file" accept=".rsl" required="required"/>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-success">
+                                <i class="fa fa-cogs"/> Generate
+                            </button>
+                            <a t-attf-href="/my/documents/#{document.id}"
+                               class="btn btn-outline-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

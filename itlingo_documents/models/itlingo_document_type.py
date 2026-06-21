@@ -13,6 +13,7 @@ class ItlingoDocumentType(models.Model):
         ('report', 'Report'),
         ('specification', 'Specification'),
         ('manual', 'Manual'),
+        ('template', 'Template'),
         ('other', 'Other'),
     ], required=True, default='other')
     subtype = fields.Char()

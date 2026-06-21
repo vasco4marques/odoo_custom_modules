@@ -44,5 +44,12 @@
         <field name="extension_file">.pdf</field>
     </record>
 
+    <record id="doc_type_template" model="itlingo.document.type">
+        <field name="type_code">template</field>
+        <field name="short_name">TPL</field>
+        <field name="name">Template</field>
+        <field name="extension_file">.docx</field>
+    </record>
+
 </data>
 </odoo>

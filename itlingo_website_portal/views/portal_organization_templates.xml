@@ -360,6 +360,7 @@
                             <input type="file" class="form-control" id="doc_new_file" name="document_file"/>
                             <div class="form-text">Optional for a draft; you can attach a file later from the backend if needed.</div>
                         </div>
+                        <t t-call="itlingo_documents.portal_document_template_fields"/>
                         <div class="d-flex gap-2">
                             <button type="submit" class="btn btn-primary">Create</button>
                             <a t-attf-href="/my/organizations/#{organization.id}/documentation" class="btn btn-outline-secondary">Cancel</a>
