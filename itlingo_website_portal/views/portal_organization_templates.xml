@@ -117,7 +117,7 @@
                             </span>
                         </td>
                         <td class="text-end text-nowrap">
-                            <a t-attf-href="/my/organizations/#{org.id}/documentation"
+                            <a t-attf-href="/my/organizations/#{org.id}/documents"
                                class="btn btn-sm btn-link text-primary p-1"
                                title="Documents" aria-label="Documents">
                                 <i class="fa fa-file-text-o fa-lg"/>
@@ -166,7 +166,7 @@
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'workspaces' and 'active' or ''}">
                                 <i class="fa fa-th-large fa-fw me-2" aria-hidden="true"/>Workspaces
                             </a>
-                            <a t-attf-href="/my/organizations/#{organization.id}/documentation"
+                            <a t-attf-href="/my/organizations/#{organization.id}/documents"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'documentation' and 'active' or ''}">
                                 <i class="fa fa-file-text-o fa-fw me-2" aria-hidden="true"/>Documents
                             </a>
@@ -287,8 +287,14 @@
     <!-- Documentation -->
     <template id="portal_organization_hub_documentation" name="Organization documentation">
         <t t-call="itlingo_website_portal.portal_organization_hub_shell">
+            <div t-if="doc_message == 'doc_deleted'" class="alert alert-success" role="alert">
+                The document was deleted.
+            </div>
+            <div t-if="doc_error == 'delete_failed'" class="alert alert-danger" role="alert">
+                Could not delete this document.
+            </div>
             <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3" t-if="can_upload_org_documents">
-                <a t-attf-href="/my/organizations/#{organization.id}/documentation/new"
+                <a t-attf-href="/my/organizations/#{organization.id}/documents/new"
                    class="btn btn-primary">Add document</a>
             </div>
             <t t-if="not documents">
@@ -307,7 +313,7 @@
                         <tbody>
                             <tr t-foreach="documents" t-as="doc">
                                 <td>
-                                    <a t-attf-href="/my/documents/#{doc.id}">
+                                    <a t-attf-href="/my/organizations/#{organization.id}/documents/#{doc.id}">
                                         <t t-out="doc.name"/>
                                     </a>
                                 </td>
@@ -333,7 +339,7 @@
                     <div t-if="error.get('_form')" class="alert alert-danger" role="alert">
                         <t t-out="error['_form']"/>
                     </div>
-                    <form t-attf-action="/my/organizations/#{organization.id}/documentation/new"
+                    <form t-attf-action="/my/organizations/#{organization.id}/documents/new"
                           method="post" enctype="multipart/form-data">
                         <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                         <div class="mb-3">
@@ -363,7 +369,7 @@
                         <t t-call="itlingo_documents.portal_document_template_fields"/>
                         <div class="d-flex gap-2">
                             <button type="submit" class="btn btn-primary">Create</button>
-                            <a t-attf-href="/my/organizations/#{organization.id}/documentation" class="btn btn-outline-secondary">Cancel</a>
+                            <a t-attf-href="/my/organizations/#{organization.id}/documents" class="btn btn-outline-secondary">Cancel</a>
                         </div>
                     </form>
                 </div>

@@ -13,8 +13,7 @@
                        t-att-value="form.get('output_filename_pattern') or ''"
                        placeholder="{{ project.code }}_requirements.docx"/>
                 <div class="form-text">
-                    Shown for "Template" documents. Jinja2 pattern for the generated
-                    filename; defaults to the document name. Templates are excluded
+                    Defaults to the document name. Templates are excluded
                     from the knowledge pool and cannot be sent to ITOI.
                 </div>
             </div>
@@ -30,86 +29,16 @@
         </t>
     </template>
 
-    <!-- Portal home card -->
-    <template id="portal_my_home_documents"
-              name="Portal Documents"
-              inherit_id="portal.portal_my_home"
-              priority="60">
-        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
-            <t t-call="portal.portal_docs_entry">
-                <t t-set="icon" t-value="'/itlingo_documents/static/description/icon.png'"/>
-                <t t-set="title">Documents</t>
-                <t t-set="url" t-value="'/my/documents'"/>
-                <t t-set="text">Browse workspace documents</t>
-                <t t-set="count" t-value="document_count"/>
-                <t t-set="placeholder_count" t-value="'document_count'"/>
-            </t>
-        </xpath>
-    </template>
-
-    <!-- Document list -->
-    <template id="portal_my_documents" name="My Documents">
-        <t t-call="portal.portal_layout">
-            <t t-set="breadcrumbs_searchbar" t-value="True"/>
-            <t t-call="portal.portal_searchbar">
-                <t t-set="title">Documents</t>
-            </t>
-            <div class="mb-3 d-flex gap-2">
-                <a href="/my/workspaces" class="btn btn-outline-primary">My workspaces</a>
-            </div>
-            <t t-if="not documents">
-                <div class="alert alert-info" role="alert">
-                    No documents found.
-                </div>
-            </t>
-            <div class="table-responsive">
-                <table class="table table-hover" t-if="documents">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Type</th>
-                                <th>Version</th>
-                                <th>Workspace</th>
-                                <th>Status</th>
-                                <th>Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <t t-foreach="documents" t-as="doc">
-                                <tr>
-                                    <td>
-                                        <a t-attf-href="/my/documents/#{doc.id}">
-                                            <t t-out="doc.name"/>
-                                        </a>
-                                    </td>
-                                    <td><t t-out="doc.document_type_id.name or '-'"/></td>
-                                    <td><t t-out="doc.version"/></td>
-                                    <td><t t-out="doc.project_id.name or '-'"/></td>
-                                    <td>
-                                        <span t-attf-class="badge rounded-pill
-                                            #{'text-bg-secondary' if doc.status == 'draft'
-                                              else 'text-bg-warning' if doc.status == 'in_review'
-                                              else 'text-bg-success' if doc.status == 'approved'
-                                              else 'text-bg-primary' if doc.status == 'published'
-                                              else 'text-bg-dark'}">
-                                            <t t-out="doc.status"/>
-                                        </span>
-                                    </td>
-                                    <td><t t-out="doc.creation_date" t-options='{"widget": "date"}'/></td>
-                                </tr>
-                            </t>
-                        </tbody>
-                    </table>
-                </div>
-            <div t-if="documents and pager" class="o_portal_pager text-center">
-                    <t t-call="portal.pager"/>
-                </div>
-        </t>
-    </template>
-
-    <!-- Document detail -->
+    <!-- Document detail (scoped under a workspace or organization).
+         Callers must provide ``doc_base_url`` (e.g. /my/workspaces/5/documents
+         or /my/organizations/3/documents) used to build the action links. -->
     <template id="portal_document_detail" name="Document Detail">
         <t t-call="portal.portal_layout">
+            <div class="mb-3">
+                <a t-att-href="doc_base_url" class="btn btn-sm btn-outline-secondary">
+                    <i class="fa fa-arrow-left me-1"/> Back to documents
+                </a>
+            </div>
             <div class="card mt-3">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h3 class="mb-0"><t t-out="document.name"/></h3>
@@ -152,17 +81,17 @@
                     </div>
                     <div class="d-flex flex-wrap gap-2 mt-3">
                         <a t-if="document.document_file"
-                           t-attf-href="/web/content/#{document.id}?model=itlingo.document&amp;field=document_file&amp;filename_field=file_name&amp;download=true"
+                           t-attf-href="#{doc_base_url}/#{document.id}/download"
                            class="btn btn-primary">
                             <i class="fa fa-download"/> Download File
                         </a>
                         <a t-if="can_edit_document"
-                           t-attf-href="/my/documents/#{document.id}/edit"
+                           t-attf-href="#{doc_base_url}/#{document.id}/edit"
                            class="btn btn-outline-primary">
                             <i class="fa fa-pencil"/> Edit
                         </a>
                         <form t-if="can_edit_document"
-                              t-attf-action="/my/documents/#{document.id}/delete"
+                              t-attf-action="#{doc_base_url}/#{document.id}/delete"
                               method="post" class="d-inline"
                               onsubmit="return confirm('Delete this document? This cannot be undone.');">
                             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
@@ -172,12 +101,6 @@
                         </form>
                     </div>
                 </div>
-            </div>
-
-            <div class="mt-4">
-                <t t-call="portal.message_thread">
-                    <t t-set="object" t-value="document"/>
-                </t>
             </div>
         </t>
     </template>
@@ -192,7 +115,7 @@
                     <div t-if="error.get('_form')" class="alert alert-danger" role="alert">
                         <t t-out="error['_form']"/>
                     </div>
-                    <form t-attf-action="/my/documents/#{document.id}/edit"
+                    <form t-attf-action="#{doc_base_url}/#{document.id}/edit"
                           method="post" enctype="multipart/form-data">
                         <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                         <div class="mb-3">
@@ -248,7 +171,7 @@
                         <t t-call="itlingo_documents.portal_document_template_fields"/>
                         <div class="d-flex gap-2">
                             <button type="submit" class="btn btn-primary">Save</button>
-                            <a t-attf-href="/my/documents/#{document.id}" class="btn btn-outline-secondary">Cancel</a>
+                            <a t-attf-href="#{doc_base_url}/#{document.id}" class="btn btn-outline-secondary">Cancel</a>
                         </div>
                     </form>
                 </div>

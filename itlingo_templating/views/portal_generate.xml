@@ -7,7 +7,7 @@
               name="Generate Template Button">
         <xpath expr="//div[hasclass('flex-wrap')]" position="inside">
             <a t-if="document.is_template and (document.file_name or '').lower().endswith('.docx') and document.document_file"
-               t-attf-href="/my/documents/#{document.id}/generate"
+               t-attf-href="#{doc_base_url}/#{document.id}/generate"
                class="btn btn-success">
                 <i class="fa fa-cogs"/> Generate Template
             </a>
@@ -35,7 +35,7 @@
                         Upload an <code>.rsl</code> specification. The template is
                         filled with its contents and the generated DOCX is downloaded.
                     </p>
-                    <form t-attf-action="/my/documents/#{document.id}/generate"
+                    <form t-attf-action="#{doc_base_url}/#{document.id}/generate"
                           method="post" enctype="multipart/form-data">
                         <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                         <div class="mb-3">
@@ -47,7 +47,7 @@
                             <button type="submit" class="btn btn-success">
                                 <i class="fa fa-cogs"/> Generate
                             </button>
-                            <a t-attf-href="/my/documents/#{document.id}"
+                            <a t-attf-href="#{doc_base_url}/#{document.id}"
                                class="btn btn-outline-secondary">Cancel</a>
                         </div>
                     </form>

@@ -19,9 +19,10 @@ Set an `itlingo.document`'s **Document Type** to **Template** and give it a
 `.docx` file. `is_template` is derived from that type. An optional output
 filename pattern appears for template documents in the create/edit forms.
 
-On its portal page (`/my/documents/<id>`), a green **Generate Template** button
-opens an upload form; submitting an `.rsl` streams the generated DOCX. Nothing
-is stored. Any user who can read the template can generate.
+On its scoped portal page (`/my/workspaces/<id>/documents/<doc_id>` or
+`/my/organizations/<id>/documents/<doc_id>`), a green **Generate Template**
+button opens an upload form; submitting an `.rsl` streams the generated DOCX.
+Nothing is stored. Any user who can read the template can generate.
 
 Templates are excluded from the knowledge pool and the ITOI send list.
 

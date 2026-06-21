@@ -36,13 +36,36 @@ class ItlingoTemplatingPortal(http.Controller):
         return (document.file_name or "").lower().endswith(".docx")
 
     @http.route(
-        "/my/documents/<int:document_id>/generate",
+        "/my/workspaces/<int:project_id>/documents/<int:document_id>/generate",
         type="http", auth="user", website=True, methods=["GET", "POST"],
     )
-    def portal_generate(self, document_id, **post):
+    def portal_generate_workspace(self, project_id, document_id, **post):
+        base_url = f"/my/workspaces/{project_id}/documents"
+        return self._portal_generate(
+            document_id, base_url, project_id=project_id, **post,
+        )
+
+    @http.route(
+        "/my/organizations/<int:org_id>/documents/<int:document_id>/generate",
+        type="http", auth="user", website=True, methods=["GET", "POST"],
+    )
+    def portal_generate_organization(self, org_id, document_id, **post):
+        base_url = f"/my/organizations/{org_id}/documents"
+        return self._portal_generate(
+            document_id, base_url, org_id=org_id, **post,
+        )
+
+    def _portal_generate(self, document_id, base_url, project_id=None,
+                         org_id=None, **post):
         document = self._get_template_document(document_id)
+        # The document must belong to the scope it is reached through.
+        if project_id is not None and document.project_id.id != project_id:
+            raise MissingError(_("Document not found."))
+        if org_id is not None and document.organization_id.id != org_id:
+            raise MissingError(_("Document not found."))
         values = {
             "document": document,
+            "doc_base_url": base_url,
             "error": None,
             "diagnostics": None,
             "page_name": "document_generate",
