@@ -1,6 +1,6 @@
 {
     'name': 'ITLingo Documents',
-    'version': '19.0.1.0.0',
+    'version': '19.0.1.1.0',
     'category': 'Services',
     'summary': 'Structured document management for ITLingo Cloud',
     'description': """
@@ -19,7 +19,7 @@ projects and organizations.
         'views/itlingo_document_views.xml',
         'views/itlingo_library_views.xml',
         'views/itlingo_document_menus.xml',
-        'views/project_project_views.xml',
+        'views/itlingo_workspace_views.xml',
         'views/portal_document_templates.xml',
     ],
     'demo': ['demo/demo.xml'],

@@ -1,8 +1,8 @@
 from odoo import api, fields, models
 
 
-class ProjectProject(models.Model):
-    _inherit = 'project.project'
+class ItlingoWorkspace(models.Model):
+    _inherit = 'itlingo.workspace'
 
     document_ids = fields.One2many(
         'itlingo.document', 'project_id', string='Documents',
@@ -13,5 +13,5 @@ class ProjectProject(models.Model):
 
     @api.depends('document_ids')
     def _compute_document_count(self):
-        for project in self:
-            project.document_count = len(project.document_ids)
+        for workspace in self:
+            workspace.document_count = len(workspace.document_ids)

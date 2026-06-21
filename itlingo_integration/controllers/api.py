@@ -31,7 +31,7 @@ class ITLingoIntegrationAPI(http.Controller):
         settings = request.env['itlingo.integration.settings'].sudo()._get_settings()
         itoi_url = (settings.itoi_url or 'http://localhost:3000/').rstrip('/')
 
-        project = request.env['project.project'].sudo().browse(project_id)
+        project = request.env['itlingo.workspace'].sudo().browse(project_id)
         if not project.exists():
             return request.not_found()
 
@@ -76,7 +76,7 @@ class ITLingoIntegrationAPI(http.Controller):
         settings = request.env['itlingo.integration.settings'].sudo()._get_settings()
         itoi_url = (settings.itoi_url or 'http://localhost:3000/').rstrip('/')
 
-        project = request.env['project.project'].sudo().browse(project_id)
+        project = request.env['itlingo.workspace'].sudo().browse(project_id)
         if not project.exists() or not project.is_public_workspace:
             return request.not_found()
 
@@ -193,7 +193,7 @@ class ITLingoIntegrationAPI(http.Controller):
                 status=403, content_type='application/json',
             )
 
-        project = request.env['project.project'].sudo().browse(wsid)
+        project = request.env['itlingo.workspace'].sudo().browse(wsid)
         if not project.exists():
             return None, Response(
                 json.dumps({'error': 'Workspace not found'}),
@@ -256,7 +256,7 @@ class ITLingoIntegrationAPI(http.Controller):
             return error_resp
 
         user_id = payload.get('user_id')
-        projects = request.env['project.project'].sudo().search([
+        projects = request.env['itlingo.workspace'].sudo().search([
             ('workspace_role_ids.user_id', '=', user_id),
             ('workspace_role_ids.state', '=', 'accepted'),
         ])

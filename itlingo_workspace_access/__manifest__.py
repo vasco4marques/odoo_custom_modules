@@ -1,20 +1,20 @@
 {
     'name': 'ITLingo Workspace Access',
-    'version': '19.0.1.0.2',
+    'version': '19.0.2.0.0',
     'category': 'Services/Project',
-    'summary': 'Workspace/project role management for ITLingo Cloud',
+    'summary': 'Workspace role management for ITLingo Cloud',
     'description': """
-Extends Odoo Project with ITLingo workspace fields (organization, methodology,
-business status, costs) and implements project-level role/invitation workflows.
+Provides the ITLingo workspace model (organization, methodology, business
+status, costs) and implements workspace-level role/invitation workflows.
     """,
     'author': 'ITLingo',
     'website': 'https://itlingo.ist.utl.pt',
-    'depends': ['project', 'mail', 'itlingo_organizations'],
+    'depends': ['mail', 'itlingo_organizations'],
     'data': [
         'security/ir.model.access.csv',
         'security/itlingo_workspace_rules.xml',
         'views/itlingo_project_role_views.xml',
-        'views/project_project_views.xml',
+        'views/itlingo_workspace_views.xml',
         'views/itlingo_workspace_menus.xml',
     ],
     'demo': ['demo/demo.xml'],

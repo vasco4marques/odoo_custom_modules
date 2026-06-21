@@ -171,7 +171,7 @@
                             <span t-else="" class="text-muted small">—</span>
                         </td>
                         <td class="text-end text-nowrap">
-                            <a t-attf-href="/my/workspaces/#{proj.id}/documentation"
+                            <a t-attf-href="/my/workspaces/#{proj.id}/documents"
                                class="btn btn-sm btn-link text-primary p-1"
                                title="Documents" aria-label="Documents">
                                 <i class="fa fa-file-text-o fa-lg"/>
@@ -275,6 +275,7 @@
     <!-- Public read-only document detail (no chatter) -->
     <template id="portal_public_workspace_document" name="Public workspace document">
         <t t-call="portal.portal_layout">
+            <t t-set="hide_project_breadcrumbs" t-value="True"/>
             <t t-set="breadcrumbs_searchbar" t-value="True"/>
             <t t-call="portal.portal_searchbar">
                 <t t-set="title" t-value="document.name"/>
@@ -285,7 +286,7 @@
                         <a t-attf-href="/public-workspaces/#{project.id}"><t t-out="project.name"/></a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a t-attf-href="/public-workspaces/#{project.id}/documentation">Documents</a>
+                        <a t-attf-href="/public-workspaces/#{project.id}/documents">Documents</a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page"><t t-out="document.name"/></li>
                 </ol>
@@ -335,6 +336,7 @@
     <!-- Workspace hub shell: sidebar + main (slot in child templates) -->
     <template id="portal_workspace_hub_shell" name="Workspace hub shell">
         <t t-call="portal.portal_layout">
+            <t t-set="hide_project_breadcrumbs" t-value="True"/>
             <t t-set="breadcrumbs_searchbar" t-value="True"/>
             <t t-call="portal.portal_searchbar">
                 <t t-set="title" t-value="project.name"/>
@@ -348,7 +350,7 @@
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'home' and 'active' or ''}">
                                 <i class="fa fa-home fa-fw me-2" aria-hidden="true"/>Home
                             </a>
-                            <a t-attf-href="#{ws_hub_prefix}/documentation"
+                            <a t-attf-href="#{ws_hub_prefix}/documents"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'documentation' and 'active' or ''}">
                                 <i class="fa fa-file-text-o fa-fw me-2" aria-hidden="true"/>Documents
                             </a>
@@ -585,8 +587,14 @@
 
     <template id="portal_workspace_documentation" name="Workspace documentation">
         <t t-call="itlingo_website_portal.portal_workspace_hub_shell">
+            <div t-if="doc_message == 'doc_deleted'" class="alert alert-success" role="alert">
+                The document was deleted.
+            </div>
+            <div t-if="doc_error == 'delete_failed'" class="alert alert-danger" role="alert">
+                Could not delete this document.
+            </div>
             <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3" t-if="can_upload_ws_documents">
-                <a t-attf-href="#{ws_hub_prefix}/documentation/new" class="btn btn-primary">Add document</a>
+                <a t-attf-href="#{ws_hub_prefix}/documents/new" class="btn btn-primary">Add document</a>
             </div>
             <t t-if="not documents">
                 <p class="text-muted">No documents linked to this workspace yet.</p>
@@ -604,12 +612,7 @@
                         <tbody>
                             <tr t-foreach="documents" t-as="doc">
                                 <td>
-                                    <a t-if="workspace_hub_public"
-                                       t-attf-href="/public-workspaces/#{project.id}/documents/#{doc.id}">
-                                        <t t-out="doc.name"/>
-                                    </a>
-                                    <a t-if="not workspace_hub_public"
-                                       t-attf-href="/my/documents/#{doc.id}">
+                                    <a t-attf-href="#{ws_hub_prefix}/documents/#{doc.id}">
                                         <t t-out="doc.name"/>
                                     </a>
                                 </td>
@@ -632,7 +635,7 @@
             <div class="card border-0 shadow-sm rounded-3">
                 <div class="card-body">
                     <div t-if="error.get('_form')" class="alert alert-danger" role="alert"><t t-out="error['_form']"/></div>
-                    <form t-attf-action="/my/workspaces/#{project.id}/documentation/new"
+                    <form t-attf-action="/my/workspaces/#{project.id}/documents/new"
                           method="post" enctype="multipart/form-data">
                         <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                         <div class="mb-3">
@@ -661,7 +664,7 @@
                         <t t-call="itlingo_documents.portal_document_template_fields"/>
                         <div class="d-flex gap-2">
                             <button type="submit" class="btn btn-primary">Create</button>
-                            <a t-attf-href="/my/workspaces/#{project.id}/documentation" class="btn btn-outline-secondary">Cancel</a>
+                            <a t-attf-href="/my/workspaces/#{project.id}/documents" class="btn btn-outline-secondary">Cancel</a>
                         </div>
                     </form>
                 </div>

@@ -47,7 +47,7 @@ class ItlingoProjectRole(models.Model):
                 _('%s joined workspace <b>%s</b>.',
                   role.user_id.name, role.project_id.name),
                 notification_type='invite',
-                res_model='project.project',
+                res_model='itlingo.workspace',
                 res_id=role.project_id.id,
             )
         return res
@@ -65,7 +65,7 @@ class ItlingoProjectRole(models.Model):
                 _('%s declined to join workspace <b>%s</b>.',
                   role.user_id.name, role.project_id.name),
                 notification_type='invite',
-                res_model='project.project',
+                res_model='itlingo.workspace',
                 res_id=role.project_id.id,
             )
         return res

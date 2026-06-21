@@ -39,7 +39,7 @@ class ItlingoOrganizationRole(models.Model):
         if 'itlingo.project.role' not in self.env:
             return
         ProjectRole = self.env['itlingo.project.role'].sudo()
-        projects = self.env['project.project'].sudo().search([
+        projects = self.env['itlingo.workspace'].sudo().search([
             ('organization_id', '=', organization.id),
         ])
         for project in projects:

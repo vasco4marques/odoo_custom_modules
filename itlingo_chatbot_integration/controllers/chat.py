@@ -59,7 +59,7 @@ def _build_workspace_token(project_id: int, user, secret: str) -> str:
     now = int(time.time())
     db_name = request.env.cr.dbname
     # include workspace_key for a stable external identifier
-    project = request.env['project.project'].sudo().browse(project_id)
+    project = request.env['itlingo.workspace'].sudo().browse(project_id)
     workspace_key = project.workspace_key if project and project.exists() else ''
     organization_id = project.organization_id.id if (project and project.exists() and project.organization_id) else None
     scope = f"odoo:{db_name}:workspace:{project_id}:user:{user.id}"
@@ -76,7 +76,7 @@ def _build_workspace_token(project_id: int, user, secret: str) -> str:
         "odoo_db": db_name,
         "workspace_id": project_id,
         "workspace_key": workspace_key,
-        "workspace_name": request.env["project.project"].sudo().browse(project_id).name or "",
+        "workspace_name": request.env["itlingo.workspace"].sudo().browse(project_id).name or "",
         "organization_id": organization_id,
         "scope": scope,
         "iat": now,
@@ -135,7 +135,7 @@ def _dedup_filename(filename: str, existing_names: set[str]) -> str:
 
 class ChatController(http.Controller):
     def _workspace_shell_values(self, project_id: int, chat_url: str, token: str) -> dict:
-        project = request.env["project.project"].sudo().browse(project_id)
+        project = request.env["itlingo.workspace"].sudo().browse(project_id)
         return {
             "project": project,
             "project_id": project_id,
@@ -322,7 +322,7 @@ class ChatController(http.Controller):
         if not filename or not re.fullmatch(r'[\w][\w .()\-]*', filename):
             return self._json_response({'error': 'Missing or invalid filename'}, 400)
 
-        project = request.env['project.project'].sudo().browse(workspace_id)
+        project = request.env['itlingo.workspace'].sudo().browse(workspace_id)
         if not project.exists():
             return self._json_response({'error': 'Workspace not found'}, 404)
 

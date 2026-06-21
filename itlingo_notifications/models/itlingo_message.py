@@ -19,7 +19,7 @@ class ItlingoMessage(models.Model):
     is_read = fields.Boolean(default=False, index=True)
     read_date = fields.Datetime()
     project_id = fields.Many2one(
-        'project.project', string='Project Context',
+        'itlingo.workspace', string='Workspace Context',
     )
 
     def action_mark_read(self):

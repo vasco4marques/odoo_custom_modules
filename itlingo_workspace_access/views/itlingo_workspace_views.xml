@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Workspace form view -->
+    <record id="itlingo_workspace_view_form" model="ir.ui.view">
+        <field name="name">itlingo.workspace.form</field>
+        <field name="model">itlingo.workspace</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_invite_workspace_member" string="Invite Member"
+                            type="object" class="btn-primary"/>
+                    <button name="action_start" string="Start"
+                            type="object" class="btn-success"
+                            invisible="business_status != 'not_started'"/>
+                    <button name="action_conclude" string="Conclude"
+                            type="object" class="btn-primary"
+                            invisible="business_status != 'executing'"/>
+                    <button name="action_cancel" string="Cancel workspace"
+                            type="object" class="btn-warning"
+                            invisible="business_status not in ('not_started', 'executing')"
+                            confirm="Are you sure you want to cancel this workspace?"/>
+                    <button name="action_reset" string="Reset"
+                            type="object"
+                            invisible="business_status not in ('canceled', 'concluded')"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" icon="fa-users"
+                                name="%(itlingo_project_role_action)d"
+                                type="action"
+                                context="{'default_project_id': id, 'search_default_project_id': id}">
+                            <field name="workspace_member_count" widget="statinfo" string="WS Members"/>
+                        </button>
+                    </div>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger"
+                            invisible="active"/>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name" placeholder="Workspace name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="organization_id"/>
+                            <field name="creator_id"/>
+                            <field name="workspace_key" groups="base.group_no_one"/>
+                            <field name="active" invisible="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="ITLingo Workspace" name="itlingo_workspace">
+                            <group>
+                                <group string="Methodology &amp; Status">
+                                    <field name="methodology"/>
+                                    <field name="business_status" widget="radio"/>
+                                    <field name="is_public_workspace"/>
+                                </group>
+                                <group string="Schedule">
+                                    <field name="planned_start"/>
+                                    <field name="planned_end"/>
+                                    <field name="actual_start"/>
+                                    <field name="actual_end"/>
+                                </group>
+                            </group>
+                            <group>
+                                <group string="Cost">
+                                    <field name="planned_cost"/>
+                                    <field name="current_cost"/>
+                                </group>
+                            </group>
+                            <separator string="Workspace Roles"/>
+                            <field name="workspace_role_ids">
+                                <list editable="bottom">
+                                    <field name="user_id"/>
+                                    <field name="role"/>
+                                    <field name="state" widget="badge"
+                                           decoration-success="state == 'accepted'"
+                                           decoration-warning="state == 'pending'"
+                                           decoration-danger="state == 'rejected'"/>
+                                    <field name="invite_date"/>
+                                    <field name="response_date"/>
+                                    <button name="action_accept" string="Accept"
+                                            type="object" icon="fa-check"
+                                            invisible="state != 'pending'"/>
+                                    <button name="action_reject" string="Reject"
+                                            type="object" icon="fa-times"
+                                            invisible="state != 'pending'"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Description" name="description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Workspace list view -->
+    <record id="itlingo_workspace_view_tree" model="ir.ui.view">
+        <field name="name">itlingo.workspace.list</field>
+        <field name="model">itlingo.workspace</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="organization_id" optional="show"/>
+                <field name="methodology" optional="hide"/>
+                <field name="business_status" widget="badge" optional="show"
+                       decoration-info="business_status == 'not_started'"
+                       decoration-success="business_status == 'executing'"
+                       decoration-danger="business_status == 'canceled'"
+                       decoration-muted="business_status == 'concluded'"/>
+                <field name="is_public_workspace" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Workspace search view -->
+    <record id="itlingo_workspace_view_search" model="ir.ui.view">
+        <field name="name">itlingo.workspace.search</field>
+        <field name="model">itlingo.workspace</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="organization_id"/>
+                <filter name="scrum" string="Scrum"
+                        domain="[('methodology', '=', 'scrum')]"/>
+                <filter name="kanban" string="Kanban"
+                        domain="[('methodology', '=', 'kanban')]"/>
+                <filter name="public_workspace" string="Public workspace"
+                        domain="[('is_public_workspace', '=', True)]"/>
+                <separator/>
+                <filter name="not_started" string="Not Started"
+                        domain="[('business_status', '=', 'not_started')]"/>
+                <filter name="executing" string="Executing"
+                        domain="[('business_status', '=', 'executing')]"/>
+                <filter name="concluded" string="Concluded"
+                        domain="[('business_status', '=', 'concluded')]"/>
+                <separator/>
+                <filter name="archived" string="Archived"
+                        domain="[('active', '=', False)]"/>
+                <group name="group_by">
+                    <filter name="group_org" string="Organization"
+                            context="{'group_by': 'organization_id'}"/>
+                    <filter name="group_methodology" string="Methodology"
+                            context="{'group_by': 'methodology'}"/>
+                    <filter name="group_business_status" string="Business Status"
+                            context="{'group_by': 'business_status'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo>

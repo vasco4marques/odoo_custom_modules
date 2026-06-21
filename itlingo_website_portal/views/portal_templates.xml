@@ -24,7 +24,7 @@
             <li t-if="page_name == 'organization_workspaces'" class="breadcrumb-item active">Workspaces</li>
             <li t-if="page_name == 'organization_documentation'" class="breadcrumb-item active">Documents</li>
             <li t-if="page_name == 'organization_documentation_new'" class="breadcrumb-item">
-                <a t-attf-href="/my/organizations/#{organization.id}/documentation">Documents</a>
+                <a t-attf-href="/my/organizations/#{organization.id}/documents">Documents</a>
             </li>
             <li t-if="page_name == 'organization_documentation_new'" class="breadcrumb-item active">New document</li>
             <li t-if="page_name == 'organization_users'" class="breadcrumb-item active">Users</li>
@@ -80,6 +80,27 @@
             <li t-if="page_name == 'workspace_detail'" class="breadcrumb-item active text-truncate">
                 <t t-out="project.name"/>
             </li>
+            <!-- Workspace hub sub-pages: Workspaces / <name> / <section> -->
+            <t t-set="ws_subpages"
+               t-value="['workspace_users', 'workspace_documentation', 'workspace_documentation_new', 'workspace_specifications', 'workspace_settings', 'workspace_leave_promote']"/>
+            <li t-if="page_name in ws_subpages" class="breadcrumb-item">
+                <a href="/my/workspaces">Workspaces</a>
+            </li>
+            <li t-if="page_name in ws_subpages" class="breadcrumb-item text-truncate">
+                <a t-attf-href="/my/workspaces/#{project.id}"><t t-out="project.name"/></a>
+            </li>
+            <li t-if="page_name == 'workspace_users'" class="breadcrumb-item active">Users</li>
+            <li t-if="page_name == 'workspace_leave_promote'" class="breadcrumb-item">
+                <a t-attf-href="/my/workspaces/#{project.id}/users">Users</a>
+            </li>
+            <li t-if="page_name == 'workspace_leave_promote'" class="breadcrumb-item active">Leave</li>
+            <li t-if="page_name == 'workspace_documentation'" class="breadcrumb-item active">Documents</li>
+            <li t-if="page_name == 'workspace_documentation_new'" class="breadcrumb-item">
+                <a t-attf-href="/my/workspaces/#{project.id}/documents">Documents</a>
+            </li>
+            <li t-if="page_name == 'workspace_documentation_new'" class="breadcrumb-item active">New document</li>
+            <li t-if="page_name == 'workspace_specifications'" class="breadcrumb-item active">Specifications</li>
+            <li t-if="page_name == 'workspace_settings'" class="breadcrumb-item active">Settings</li>
             <li t-if="page_name == 'invitations'" class="breadcrumb-item active">
                 Invitations
             </li>
@@ -98,6 +119,23 @@
             <li t-if="page_name == 'dsl_edit'" class="breadcrumb-item active text-truncate">
                 <t t-out="dsl.acronym"/>
             </li>
+        </xpath>
+    </template>
+
+    <!-- The stock Odoo `project` module is still installed, and its portal
+         breadcrumb fires whenever a template variable named `project` is in
+         scope (regardless of its model). Our workspace pages pass an
+         itlingo.workspace record as `project`, so without this guard the stock
+         "Projects" crumb would show alongside our own "Workspaces" trail.
+         Suppress it on ITLingo workspace pages via `hide_project_breadcrumbs`. -->
+    <template id="suppress_project_breadcrumb"
+              name="Hide project breadcrumb on workspace pages"
+              inherit_id="project.portal_layout" priority="60">
+        <xpath expr="//li[@t-if=&quot;page_name == 'project' or project&quot;]" position="attributes">
+            <attribute name="t-if">(page_name == 'project' or project) and not hide_project_breadcrumbs</attribute>
+        </xpath>
+        <xpath expr="//li[@t-elif='project']" position="attributes">
+            <attribute name="t-elif">project and not hide_project_breadcrumbs</attribute>
         </xpath>
     </template>
 

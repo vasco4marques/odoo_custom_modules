@@ -113,7 +113,7 @@ class ITLingoPortal(CustomerPortal):
         ], limit=1)
 
     def _portal_public_workspace_project(self, project_id):
-        project = request.env['project.project'].sudo().browse(project_id)
+        project = request.env['itlingo.workspace'].sudo().browse(project_id)
         if project.exists() and project.is_public_workspace:
             return project
         return None
@@ -407,7 +407,7 @@ class ITLingoPortal(CustomerPortal):
             raise AccessError(
                 _('Only organization managers can delete this organization.'),
             )
-        Project = request.env['project.project'].sudo()
+        Project = request.env['itlingo.workspace'].sudo()
         if Project.search_count([('organization_id', '=', org_id)]):
             return request.redirect(
                 '/my/organizations?error=org_delete_has_workspaces',
@@ -553,7 +553,7 @@ class ITLingoPortal(CustomerPortal):
             ('state', '=', 'accepted'),
         ])
         if len(accepted) <= 1:
-            Project = request.env['project.project'].sudo()
+            Project = request.env['itlingo.workspace'].sudo()
             if Project.search_count([('organization_id', '=', org_id)]):
                 return request.redirect(
                     '/my/organizations?error=org_delete_has_workspaces',
@@ -638,13 +638,144 @@ class ITLingoPortal(CustomerPortal):
             if is_template else False
         )
 
+    # ──────────────────────────────────────────────
+    # Documents (scoped under a workspace or organization)
+    # ──────────────────────────────────────────────
+
+    # Roles allowed to add / edit / delete documents in each scope. Plain
+    # members (and users with no role) can only view and download.
+    _DOC_EDIT_WS_ROLES = ('ws_manager', 'doc_manager')
+    _DOC_EDIT_ORG_ROLES = ('org_manager', 'doc_manager')
+
+    def _portal_ws_document_or_404(self, project_id, document_id):
+        """Return (project, user_role, document) for a workspace document.
+
+        Access to the workspace is enforced by ``_portal_ws_access``. The
+        document is returned only when it belongs to that workspace, otherwise
+        ``document`` is None so the caller can answer 404.
+        """
+        project, user_role = self._portal_ws_access(project_id)
+        doc = request.env['itlingo.document'].sudo().browse(document_id)
+        if not doc.exists() or doc.project_id.id != project_id:
+            return project, user_role, None
+        return project, user_role, doc
+
+    def _portal_org_document_or_404(self, org_id, document_id):
+        """Return (organization, user_role, document) for an org document."""
+        org, user_role = self._portal_org_access(org_id)
+        doc = request.env['itlingo.document'].sudo().browse(document_id)
+        if not doc.exists() or doc.organization_id.id != org_id:
+            return org, user_role, None
+        return org, user_role, doc
+
+    def _portal_document_download_response(self, document):
+        """Stream a document's file as a download (any viewer may download)."""
+        if not document.document_file:
+            return request.not_found()
+        raw = base64.b64decode(document.document_file)
+        fname = document.file_name or 'document'
+        return request.make_response(
+            raw,
+            headers=[
+                ('Content-Type', 'application/octet-stream'),
+                ('Content-Disposition', content_disposition(fname)),
+            ],
+        )
+
+    def _portal_document_edit_flow(self, document, doc_base_url, post):
+        """Shared GET/POST edit handler for a scoped document.
+
+        Returns a rendered response or a redirect. The caller must have verified
+        edit permission before calling. ``doc_base_url`` is the scoped documents
+        URL (e.g. /my/workspaces/5/documents) used to build action/redirect URLs.
+        """
+        DocType = request.env['itlingo.document.type'].sudo()
+        doc_types = DocType.search([], order='name')
+        status_selection = document._fields['status'].selection
+        template_type = request.env.ref(
+            'itlingo_documents.doc_type_template', raise_if_not_found=False,
+        )
+        template_type_id = template_type.id if template_type else False
+        has_pattern = 'output_filename_pattern' in document._fields
+        values = self._prepare_portal_layout_values()
+        values.update({
+            'document': document,
+            'doc_base_url': doc_base_url,
+            'doc_types': doc_types,
+            'status_selection': status_selection,
+            'template_type_id': template_type_id,
+            'form': {
+                'name': document.name,
+                'document_type_id': document.document_type_id.id or '',
+                'dsl_knowledge': document.dsl_knowledge,
+                'status': document.status,
+                'version': document.version or '',
+                'output_filename_pattern': (
+                    document.output_filename_pattern or '' if has_pattern else ''
+                ),
+            },
+            'error': {},
+            'page_name': 'document_edit',
+        })
+        if request.httprequest.method == 'POST':
+            name = (post.get('name') or '').strip()
+            values['form'] = dict(post)
+            raw_type = post.get('document_type_id')
+            try:
+                type_id = int(raw_type) if raw_type else False
+            except (TypeError, ValueError):
+                type_id = False
+            dsl_knowledge = post.get('dsl_knowledge') == '1'
+            values['form']['dsl_knowledge'] = dsl_knowledge
+            output_pattern = (post.get('output_filename_pattern') or '').strip()
+            values['form']['output_filename_pattern'] = output_pattern
+            status = (post.get('status') or '').strip()
+            version = (post.get('version') or '').strip()
+            allowed_status = {key for key, _label in status_selection}
+            final_status = status or document.status
+            upload = request.httprequest.files.get('document_file')
+            if not name:
+                values['error']['name'] = _('Name is required.')
+            elif type_id and type_id not in doc_types.ids:
+                values['error']['document_type_id'] = _('Invalid document type.')
+            elif status and status not in allowed_status:
+                values['error']['status'] = _('Invalid status.')
+            elif dsl_knowledge and final_status != 'published':
+                values['error']['dsl_knowledge'] = _(
+                    'A document must be published before it can be marked as '
+                    'DSL knowledge.',
+                )
+            else:
+                write_vals = {
+                    'name': name,
+                    'document_type_id': type_id or False,
+                    'dsl_knowledge': dsl_knowledge,
+                    'status': final_status,
+                    'version': version or document.version,
+                }
+                if has_pattern:
+                    is_tpl_type = bool(template_type_id) and type_id == template_type_id
+                    write_vals['output_filename_pattern'] = (
+                        output_pattern if is_tpl_type else False
+                    )
+                if upload and upload.filename:
+                    write_vals['file_name'] = upload.filename
+                    write_vals['document_file'] = base64.b64encode(upload.read())
+                try:
+                    document.sudo().write(write_vals)
+                except UserError as err:
+                    values['error']['_form'] = str(err)
+                else:
+                    return request.redirect(f'{doc_base_url}/{document.id}')
+        return request.render('itlingo_documents.portal_document_edit', values)
+
     @route(
-        '/my/organizations/<int:org_id>/documentation/new',
+        '/my/organizations/<int:org_id>/documents/new',
         type='http', auth='user', website=True, methods=['GET', 'POST'],
     )
     def portal_organization_documentation_new(self, org_id, **post):
         org, user_role = self._portal_org_access(org_id)
-        if user_role.role not in ('org_manager', 'doc_manager'):
+        if user_role.role not in self._DOC_EDIT_ORG_ROLES:
             raise AccessError(
                 _('Only organization or document managers can add documents.'),
             )
@@ -697,7 +828,7 @@ class ITLingoPortal(CustomerPortal):
                     values['error']['_form'] = str(err)
                 else:
                     return request.redirect(
-                        f'/my/organizations/{org_id}/documentation',
+                        f'/my/organizations/{org_id}/documents',
                     )
         return request.render(
             'itlingo_website_portal.portal_organization_hub_documentation_new',
@@ -713,7 +844,7 @@ class ITLingoPortal(CustomerPortal):
             ('state', '=', 'accepted'),
             ('project_id.organization_id', '=', org_id),
         ]).mapped('project_id').ids
-        projects = request.env['project.project'].sudo().search([
+        projects = request.env['itlingo.workspace'].sudo().search([
             ('organization_id', '=', org_id),
             ('id', 'in', accessible_role_ids),
         ], order='name')
@@ -731,7 +862,7 @@ class ITLingoPortal(CustomerPortal):
             values,
         )
 
-    @route('/my/organizations/<int:org_id>/documentation',
+    @route('/my/organizations/<int:org_id>/documents',
            type='http', auth='user', website=True)
     def portal_organization_documentation(self, org_id, **kw):
         org, user_role = self._portal_org_access(org_id)
@@ -744,9 +875,9 @@ class ITLingoPortal(CustomerPortal):
             'organization': org,
             'user_role': user_role,
             'documents': documents,
-            'can_upload_org_documents': user_role.role in (
-                'org_manager', 'doc_manager',
-            ),
+            'can_upload_org_documents': user_role.role in self._DOC_EDIT_ORG_ROLES,
+            'doc_message': request.params.get('message'),
+            'doc_error': request.params.get('error'),
             'page_name': 'organization_documentation',
             'organization_hub': True,
             'org_hub_page': 'documentation',
@@ -755,6 +886,72 @@ class ITLingoPortal(CustomerPortal):
             'itlingo_website_portal.portal_organization_hub_documentation',
             values,
         )
+
+    @route(
+        '/my/organizations/<int:org_id>/documents/<int:document_id>',
+        type='http', auth='user', website=True,
+    )
+    def portal_organization_document_detail(self, org_id, document_id, **kw):
+        _org, user_role, document = self._portal_org_document_or_404(
+            org_id, document_id,
+        )
+        if not document:
+            return request.not_found()
+        values = self._prepare_portal_layout_values()
+        values.update({
+            'document': document,
+            'doc_base_url': f'/my/organizations/{org_id}/documents',
+            'can_edit_document': user_role.role in self._DOC_EDIT_ORG_ROLES,
+            'page_name': 'document_detail',
+        })
+        return request.render('itlingo_documents.portal_document_detail', values)
+
+    @route(
+        '/my/organizations/<int:org_id>/documents/<int:document_id>/edit',
+        type='http', auth='user', website=True, methods=['GET', 'POST'],
+    )
+    def portal_organization_document_edit(self, org_id, document_id, **post):
+        _org, user_role, document = self._portal_org_document_or_404(
+            org_id, document_id,
+        )
+        if not document:
+            return request.not_found()
+        if user_role.role not in self._DOC_EDIT_ORG_ROLES:
+            raise AccessError(_('You cannot edit this document.'))
+        return self._portal_document_edit_flow(
+            document, f'/my/organizations/{org_id}/documents', post,
+        )
+
+    @route(
+        '/my/organizations/<int:org_id>/documents/<int:document_id>/delete',
+        type='http', auth='user', website=True, methods=['POST'],
+    )
+    def portal_organization_document_delete(self, org_id, document_id, **post):
+        _org, user_role, document = self._portal_org_document_or_404(
+            org_id, document_id,
+        )
+        if not document:
+            return request.not_found()
+        if user_role.role not in self._DOC_EDIT_ORG_ROLES:
+            raise AccessError(_('You cannot delete this document.'))
+        base_url = f'/my/organizations/{org_id}/documents'
+        try:
+            document.sudo().unlink()
+        except UserError:
+            return request.redirect(f'{base_url}/{document_id}?error=delete_failed')
+        return request.redirect(f'{base_url}?message=doc_deleted')
+
+    @route(
+        '/my/organizations/<int:org_id>/documents/<int:document_id>/download',
+        type='http', auth='user', website=True,
+    )
+    def portal_organization_document_download(self, org_id, document_id, **kw):
+        _org, _user_role, document = self._portal_org_document_or_404(
+            org_id, document_id,
+        )
+        if not document:
+            return request.not_found()
+        return self._portal_document_download_response(document)
 
     @route('/my/organizations/<int:org_id>/users',
            type='http', auth='user', website=True)
@@ -1095,7 +1292,7 @@ class ITLingoPortal(CustomerPortal):
     @route('/my/organizations/<int:org_id>', type='http', auth='user', website=True)
     def portal_organization_detail(self, org_id, **kw):
         org, user_role = self._portal_org_access(org_id)
-        Project = request.env['project.project'].sudo()
+        Project = request.env['itlingo.workspace'].sudo()
         base_dom = [('organization_id', '=', org_id)]
         kpi_active = Project.search_count(
             base_dom + [('business_status', 'in', ['not_started', 'executing'])],
@@ -1133,7 +1330,7 @@ class ITLingoPortal(CustomerPortal):
         user = request.env.user
         params = request.params
         project_ids, role_map = self._portal_ws_list_filtered_project_ids(user, params)
-        Project = request.env['project.project'].sudo()
+        Project = request.env['itlingo.workspace'].sudo()
         domain, name_q = self._portal_ws_list_filters_domain(project_ids, params)
         url_args = self._portal_ws_list_url_args(params, name_q)
 
@@ -1191,7 +1388,7 @@ class ITLingoPortal(CustomerPortal):
     )
     def portal_public_workspaces_list(self, page=1, **kw):
         params = request.params
-        Project = request.env['project.project'].sudo()
+        Project = request.env['itlingo.workspace'].sudo()
         domain = [('is_public_workspace', '=', True)]
         name_q = (params.get('name') or '').strip()
         if name_q:
@@ -1252,12 +1449,12 @@ class ITLingoPortal(CustomerPortal):
         return request.render('itlingo_website_portal.portal_workspace_detail', values)
 
     @route(
-        '/public-workspaces/<int:project_id>/documentation',
+        '/public-workspaces/<int:project_id>/documents',
         type='http', auth='public', website=True,
     )
     def portal_public_workspace_documentation(self, project_id, **kw):
         redir = self._portal_ws_maybe_redirect_public_to_my(
-            project_id, '/documentation',
+            project_id, '/documents',
         )
         if redir:
             return redir
@@ -1516,7 +1713,7 @@ class ITLingoPortal(CustomerPortal):
                 wizard = sess.pop(self._WS_NEW_SESSION_KEY, None)
                 if not wizard or not wizard.get('name'):
                     return request.redirect('/my/workspaces/new/step/1')
-                Project = request.env['project.project'].sudo()
+                Project = request.env['itlingo.workspace'].sudo()
                 WsRole = request.env['itlingo.project.role'].sudo()
                 vals = {
                     'name': wizard['name'],
@@ -1713,7 +1910,7 @@ class ITLingoPortal(CustomerPortal):
 
     def _portal_ws_access(self, project_id):
         """Return (project, user_role) or raise."""
-        project = request.env['project.project'].sudo().browse(project_id)
+        project = request.env['itlingo.workspace'].sudo().browse(project_id)
         if not project.exists():
             raise MissingError(_('Workspace not found.'))
         user_role = self._portal_workspace_role(request.env.user, project_id)
@@ -2032,7 +2229,7 @@ class ITLingoPortal(CustomerPortal):
     # Workspace hub: documentation, placeholders
     # ──────────────────────────────────────────────
 
-    @route('/my/workspaces/<int:project_id>/documentation', type='http', auth='user', website=True)
+    @route('/my/workspaces/<int:project_id>/documents', type='http', auth='user', website=True)
     def portal_workspace_documentation(self, project_id, **kw):
         project, user_role = self._portal_ws_access(project_id)
         Document = request.env['itlingo.document'].sudo()
@@ -2040,8 +2237,9 @@ class ITLingoPortal(CustomerPortal):
             ('project_id', '=', project_id),
         ], order='creation_date desc, name')
         can_doc = bool(
-            user_role and user_role.role in ('ws_manager', 'doc_manager'),
+            user_role and user_role.role in self._DOC_EDIT_WS_ROLES,
         )
+        params = request.params
         values = self._prepare_portal_layout_values()
         values.update({
             'project': project,
@@ -2050,6 +2248,8 @@ class ITLingoPortal(CustomerPortal):
             'workspace_hub_page': 'documentation',
             'documents': documents,
             'can_upload_ws_documents': can_doc,
+            'doc_message': params.get('message'),
+            'doc_error': params.get('error'),
             'page_name': 'workspace_documentation',
             'members': self._portal_workspace_hub_members(project_id),
             **self._portal_workspace_hub_common(project, 'documentation', public_hub=False),
@@ -2060,12 +2260,12 @@ class ITLingoPortal(CustomerPortal):
         )
 
     @route(
-        '/my/workspaces/<int:project_id>/documentation/new',
+        '/my/workspaces/<int:project_id>/documents/new',
         type='http', auth='user', website=True, methods=['GET', 'POST'],
     )
     def portal_workspace_documentation_new(self, project_id, **post):
         project, user_role = self._portal_ws_access(project_id)
-        if user_role.role not in ('ws_manager', 'doc_manager'):
+        if user_role.role not in self._DOC_EDIT_WS_ROLES:
             raise AccessError(
                 _('Only workspace managers or document managers can add documents.'),
             )
@@ -2120,12 +2320,78 @@ class ITLingoPortal(CustomerPortal):
                     values['error']['_form'] = str(err)
                 else:
                     return request.redirect(
-                        f'/my/workspaces/{project_id}/documentation',
+                        f'/my/workspaces/{project_id}/documents',
                     )
         return request.render(
             'itlingo_website_portal.portal_workspace_documentation_new',
             values,
         )
+
+    @route(
+        '/my/workspaces/<int:project_id>/documents/<int:document_id>',
+        type='http', auth='user', website=True,
+    )
+    def portal_workspace_document_detail(self, project_id, document_id, **kw):
+        _project, user_role, document = self._portal_ws_document_or_404(
+            project_id, document_id,
+        )
+        if not document:
+            return request.not_found()
+        values = self._prepare_portal_layout_values()
+        values.update({
+            'document': document,
+            'doc_base_url': f'/my/workspaces/{project_id}/documents',
+            'can_edit_document': user_role.role in self._DOC_EDIT_WS_ROLES,
+            'page_name': 'document_detail',
+        })
+        return request.render('itlingo_documents.portal_document_detail', values)
+
+    @route(
+        '/my/workspaces/<int:project_id>/documents/<int:document_id>/edit',
+        type='http', auth='user', website=True, methods=['GET', 'POST'],
+    )
+    def portal_workspace_document_edit(self, project_id, document_id, **post):
+        _project, user_role, document = self._portal_ws_document_or_404(
+            project_id, document_id,
+        )
+        if not document:
+            return request.not_found()
+        if user_role.role not in self._DOC_EDIT_WS_ROLES:
+            raise AccessError(_('You cannot edit this document.'))
+        return self._portal_document_edit_flow(
+            document, f'/my/workspaces/{project_id}/documents', post,
+        )
+
+    @route(
+        '/my/workspaces/<int:project_id>/documents/<int:document_id>/delete',
+        type='http', auth='user', website=True, methods=['POST'],
+    )
+    def portal_workspace_document_delete(self, project_id, document_id, **post):
+        _project, user_role, document = self._portal_ws_document_or_404(
+            project_id, document_id,
+        )
+        if not document:
+            return request.not_found()
+        if user_role.role not in self._DOC_EDIT_WS_ROLES:
+            raise AccessError(_('You cannot delete this document.'))
+        base_url = f'/my/workspaces/{project_id}/documents'
+        try:
+            document.sudo().unlink()
+        except UserError:
+            return request.redirect(f'{base_url}/{document_id}?error=delete_failed')
+        return request.redirect(f'{base_url}?message=doc_deleted')
+
+    @route(
+        '/my/workspaces/<int:project_id>/documents/<int:document_id>/download',
+        type='http', auth='user', website=True,
+    )
+    def portal_workspace_document_download(self, project_id, document_id, **kw):
+        _project, _user_role, document = self._portal_ws_document_or_404(
+            project_id, document_id,
+        )
+        if not document:
+            return request.not_found()
+        return self._portal_document_download_response(document)
 
     @route('/my/workspaces/<int:project_id>/specifications', type='http', auth='user', website=True)
     def portal_workspace_specifications(self, project_id, **kw):

@@ -1,6 +1,6 @@
 {
     'name': 'ITLingo Website & Portal',
-    'version': '19.0.1.1.1',
+    'version': '19.0.1.2.0',
     'category': 'Website',
     'summary': 'Public website and authenticated portal for ITLingo Cloud',
     'description': """
@@ -10,7 +10,7 @@ workspaces, and invitations.
     'author': 'ITLingo',
     'website': 'https://itlingo.ist.utl.pt',
     'depends': [
-        'website', 'portal', 'mail',
+        'website', 'portal', 'mail', 'project',
         'itlingo_organizations', 'itlingo_workspace_access',
         'itlingo_documents', 'itlingo_dsl',
     ],

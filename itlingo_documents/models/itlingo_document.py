@@ -41,7 +41,7 @@ class ItlingoDocument(models.Model):
         'itlingo.document.template', string='Template',
     )
     project_id = fields.Many2one(
-        'project.project', string='Project',
+        'itlingo.workspace', string='Workspace',
         tracking=True,
     )
     organization_id = fields.Many2one(

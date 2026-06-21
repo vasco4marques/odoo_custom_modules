@@ -2,8 +2,8 @@ from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
 
 
-class ProjectProject(models.Model):
-    _inherit = "project.project"
+class ItlingoWorkspace(models.Model):
+    _inherit = "itlingo.workspace"
 
     allowed_dsl_ids = fields.Many2many(
         "itlingo.dsl",
@@ -25,11 +25,11 @@ class ProjectProject(models.Model):
 
     @api.constrains("allowed_dsl_ids", "organization_id")
     def _check_allowed_dsl_within_organization(self):
-        for project in self:
-            org = project.organization_id
-            if not org or not org.allowed_dsl_ids or not project.allowed_dsl_ids:
+        for workspace in self:
+            org = workspace.organization_id
+            if not org or not org.allowed_dsl_ids or not workspace.allowed_dsl_ids:
                 continue
-            forbidden = project.allowed_dsl_ids - org.allowed_dsl_ids
+            forbidden = workspace.allowed_dsl_ids - org.allowed_dsl_ids
             if forbidden:
                 names = ", ".join(forbidden.mapped("acronym"))
                 raise ValidationError(_(
@@ -40,8 +40,8 @@ class ProjectProject(models.Model):
 
     @api.constrains("default_dsl_id", "allowed_dsl_ids", "organization_id")
     def _check_default_dsl(self):
-        for project in self:
-            dsl = project.default_dsl_id
+        for workspace in self:
+            dsl = workspace.default_dsl_id
             if not dsl:
                 continue
             if dsl.status == "archived":
@@ -49,7 +49,7 @@ class ProjectProject(models.Model):
                     "An archived DSL (%s) cannot be set as the default DSL.",
                     dsl.display_name,
                 ))
-            available = project._itlingo_available_dsls()
+            available = workspace._itlingo_available_dsls()
             if available and dsl not in available:
                 raise ValidationError(_(
                     "The default DSL (%s) must be one of the workspace's "

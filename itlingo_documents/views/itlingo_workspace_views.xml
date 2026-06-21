@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- Add document stat button to project form -->
-    <record id="project_project_view_form_inherit_docs" model="ir.ui.view">
-        <field name="name">project.project.form.inherit.itlingo.docs</field>
-        <field name="model">project.project</field>
-        <field name="inherit_id" ref="project.edit_project"/>
+    <!-- Add document stat button to the workspace form -->
+    <record id="itlingo_workspace_view_form_inherit_docs" model="ir.ui.view">
+        <field name="name">itlingo.workspace.form.inherit.docs</field>
+        <field name="model">itlingo.workspace</field>
+        <field name="inherit_id" ref="itlingo_workspace_access.itlingo_workspace_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//div[@name='button_box']" position="inside">
                 <button class="oe_stat_button" icon="fa-file-text-o"

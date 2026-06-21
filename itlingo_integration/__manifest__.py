@@ -1,6 +1,6 @@
 {
     'name': 'ITLingo Integration',
-    'version': '19.0.1.0.1',
+    'version': '19.0.1.1.0',
     'category': 'Services',
     'summary': 'ITOI token-based integration for external ITLingo tools',
     'description': """

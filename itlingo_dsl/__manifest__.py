@@ -1,6 +1,6 @@
 {
     'name': 'ITLingo DSL',
-    'version': '19.0.1.0.0',
+    'version': '19.0.1.1.0',
     'category': 'Services',
     'summary': 'Platform-level Domain-Specific Language registry for ITLingo Cloud',
     'description': """
@@ -26,7 +26,7 @@ resources may be associated with a DSL.
         'views/itlingo_dsl_resource_views.xml',
         'views/itlingo_org_resource_views.xml',
         'views/itlingo_organization_views.xml',
-        'views/project_project_views.xml',
+        'views/itlingo_workspace_views.xml',
         'views/itlingo_dsl_menus.xml',
         'data/itlingo_dsl_data.xml',
     ],

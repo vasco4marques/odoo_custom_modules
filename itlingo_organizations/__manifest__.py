@@ -1,6 +1,6 @@
 {
     'name': 'ITLingo Organizations',
-    'version': '19.0.1.0.0',
+    'version': '19.0.1.1.0',
     'category': 'Services',
     'summary': 'Organization management for ITLingo Cloud',
     'description': """
@@ -9,7 +9,7 @@ for the ITLingo Cloud platform.
     """,
     'author': 'ITLingo',
     'website': 'https://itlingo.ist.utl.pt',
-    'depends': ['base', 'contacts', 'mail', 'portal', 'auth_signup', 'project'],
+    'depends': ['base', 'contacts', 'mail', 'portal', 'auth_signup'],
     'data': [
         'security/itlingo_security.xml',
         'security/ir.model.access.csv',

@@ -15,7 +15,7 @@ class ItlingoIntegrationToken(models.Model):
         default=lambda self: self.env.user, ondelete='cascade',
     )
     project_id = fields.Many2one(
-        'project.project', string='Project',
+        'itlingo.workspace', string='Workspace',
     )
     token_iv = fields.Char(string='Token IV (base64url)', readonly=True)
     token_ct = fields.Text(string='Token Ciphertext (base64url)', readonly=True)

@@ -58,7 +58,7 @@ class ResUsers(models.Model):
                         'role': inv.role,
                         'state': 'accepted',
                     })
-                project = self.env['project.project'].sudo().browse(inv.project_id)
+                project = self.env['itlingo.workspace'].sudo().browse(inv.project_id)
                 if project.exists() \
                         and 'organization_id' in project._fields \
                         and project.organization_id:

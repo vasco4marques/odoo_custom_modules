@@ -2,8 +2,15 @@ from odoo import api, fields, models, _
 import uuid
 
 
-class ProjectProject(models.Model):
-    _inherit = 'project.project'
+class ItlingoWorkspace(models.Model):
+    _name = 'itlingo.workspace'
+    _description = 'ITLingo Workspace'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+    _order = 'name'
+
+    name = fields.Char(string='Name', required=True, tracking=True)
+    description = fields.Html(string='Description')
+    active = fields.Boolean(string='Active', default=True)
 
     organization_id = fields.Many2one(
         'itlingo.organization', string='Organization',
@@ -62,9 +69,9 @@ class ProjectProject(models.Model):
 
     @api.depends('workspace_role_ids', 'workspace_role_ids.state')
     def _compute_workspace_member_count(self):
-        for project in self:
-            project.workspace_member_count = len(
-                project.workspace_role_ids.filtered(lambda r: r.state == 'accepted')
+        for workspace in self:
+            workspace.workspace_member_count = len(
+                workspace.workspace_role_ids.filtered(lambda r: r.state == 'accepted')
             )
 
     def action_invite_workspace_member(self):

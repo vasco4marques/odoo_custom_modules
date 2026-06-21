@@ -3,13 +3,13 @@
 
     <record id="itlingo_action_workspace_projects" model="ir.actions.act_window">
         <field name="name">Workspaces</field>
-        <field name="res_model">project.project</field>
-        <field name="view_mode">list,kanban,form</field>
-        <field name="search_view_id" ref="project.view_project_project_filter"/>
+        <field name="res_model">itlingo.workspace</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="itlingo_workspace_view_search"/>
         <field name="context">{}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Create a workspace project and link it to an organization on the form.
+                Create a workspace and link it to an organization on the form.
             </p>
         </field>
     </record>

@@ -26,5 +26,29 @@
         <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
     </record>
 
+    <!-- ITLingo Admin sees all workspaces -->
+    <record id="itlingo_workspace_rule_admin" model="ir.rule">
+        <field name="name">ITLingo Workspace: admin sees all</field>
+        <field name="model_id" ref="model_itlingo_workspace"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('itlingo_organizations.group_itlingo_admin'))]"/>
+    </record>
+
+    <!-- Members see workspaces where they have an accepted role -->
+    <record id="itlingo_workspace_rule_member" model="ir.rule">
+        <field name="name">ITLingo Workspace: member sees own workspaces</field>
+        <field name="model_id" ref="model_itlingo_workspace"/>
+        <field name="domain_force">[('workspace_role_ids.user_id', '=', user.id), ('workspace_role_ids.state', '=', 'accepted')]</field>
+        <field name="groups" eval="[(4, ref('itlingo_organizations.group_itlingo_member'))]"/>
+    </record>
+
+    <!-- Portal sees public workspaces and workspaces where they have an accepted role -->
+    <record id="itlingo_workspace_rule_portal" model="ir.rule">
+        <field name="name">ITLingo Workspace: portal sees own and public workspaces</field>
+        <field name="model_id" ref="model_itlingo_workspace"/>
+        <field name="domain_force">['|', ('is_public_workspace', '=', True), '&amp;', ('workspace_role_ids.user_id', '=', user.id), ('workspace_role_ids.state', '=', 'accepted')]</field>
+        <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+    </record>
+
 </data>
 </odoo>

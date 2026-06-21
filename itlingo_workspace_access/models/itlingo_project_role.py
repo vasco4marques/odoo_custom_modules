@@ -11,7 +11,7 @@ class ItlingoProjectRole(models.Model):
         'res.users', string='User', required=True, ondelete='cascade',
     )
     project_id = fields.Many2one(
-        'project.project', string='Project',
+        'itlingo.workspace', string='Workspace',
         required=True, ondelete='cascade',
     )
     role = fields.Selection([
