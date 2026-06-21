@@ -41,6 +41,20 @@ def _sign_payload(secret: str, payload: dict) -> str:
     return header_b + "." + payload_b + "." + sig_b
 
 
+def _user_can_write_workspace(user, project_id: int) -> bool:
+    """Return True when *user* holds an accepted write role on the workspace.
+
+    Write roles mirror :data:`EXPORT_WRITE_ROLES` (``ws_manager``/``doc_manager``).
+    Users with no role or only the lowest ``ws_member`` role are read-only.
+    """
+    return bool(request.env['itlingo.project.role'].sudo().search_count([
+        ('user_id', '=', user.id),
+        ('project_id', '=', project_id),
+        ('state', '=', 'accepted'),
+        ('role', 'in', EXPORT_WRITE_ROLES),
+    ]))
+
+
 def _build_workspace_token(project_id: int, user, secret: str) -> str:
     now = int(time.time())
     db_name = request.env.cr.dbname
@@ -50,6 +64,9 @@ def _build_workspace_token(project_id: int, user, secret: str) -> str:
     organization_id = project.organization_id.id if (project and project.exists() and project.organization_id) else None
     scope = f"odoo:{db_name}:workspace:{project_id}:user:{user.id}"
     payload = {
+        # Read-only when the user lacks an accepted write role on the workspace
+        # (no role at all, e.g. public workspace, or only the ws_member role).
+        "read_only": not _user_can_write_workspace(user, project_id),
         "aud": "itlingo-chatbot",
         "sub": user.id,
         "odoo_user_id": user.id,
