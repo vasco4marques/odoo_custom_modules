@@ -9,7 +9,7 @@
             <a t-if="document.is_template and (document.file_name or '').lower().endswith('.docx') and document.document_file"
                t-attf-href="#{doc_base_url}/#{document.id}/generate"
                class="btn btn-success">
-                <i class="fa fa-cogs"/> Generate Template
+                <i class="fa fa-cogs"/> Generate from template
             </a>
         </xpath>
     </template>
