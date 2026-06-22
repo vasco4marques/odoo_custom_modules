@@ -1,0 +1,49 @@
+"""Jinja2 helpers shared by the DOCX and XLSX renderers.
+
+Rendering is lenient: missing fields resolve to blank instead of failing, so
+partial specifications still produce a document.
+"""
+
+import re
+
+
+def lenient_env():
+    """Jinja2 environment used by every renderer.
+
+    ChainableUndefined keeps *missing* keys blank; finalize keeps present-but
+    -None values (e.g. an unset version/vendor) blank instead of printing "None".
+    """
+    import jinja2
+
+    return jinja2.Environment(
+        undefined=jinja2.ChainableUndefined,
+        finalize=lambda v: "" if v is None else v,
+    )
+
+
+_OFFICE_EXTS = (".docx", ".xlsx")
+
+
+def render_filename(pattern, context, fallback, extension):
+    """Render an output filename from a Jinja2 *pattern*.
+
+    Falls back to *fallback* when the pattern is empty or invalid, then forces
+    *extension* (e.g. ".xlsx"): a wrong office extension is replaced rather than
+    stacked, so ``foo.docx`` becomes ``foo.xlsx`` instead of ``foo.docx.xlsx``.
+    """
+    name = ""
+    if pattern:
+        try:
+            name = lenient_env().from_string(pattern).render(context).strip()
+        except Exception:
+            name = ""
+    name = name or fallback
+    lower = name.lower()
+    if not lower.endswith(extension):
+        for ext in _OFFICE_EXTS:
+            if lower.endswith(ext):
+                name = name[: -len(ext)]
+                break
+        name = "%s%s" % (name, extension)
+    # Strip path separators / unsafe characters from the final filename.
+    return re.sub(r"[\\/:*?\"<>|]+", "_", name)

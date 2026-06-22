@@ -6,20 +6,30 @@ from odoo import _, http
 from odoo.exceptions import AccessError, MissingError
 from odoo.http import content_disposition, request
 
-from odoo.addons.itlingo_templating.services import canonical_model, docx_renderer
+from odoo.addons.itlingo_templating.services import (
+    canonical_model, docx_renderer, rendering, xlsx_renderer,
+)
 from odoo.addons.itlingo_templating.services.rsl_parser import RslParseError, parse_rsl
 
 _logger = logging.getLogger(__name__)
 
-_DOCX_MIME = (
-    "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-)
+# extension -> (renderer callable, MIME type)
+_FORMATS = {
+    "docx": (
+        docx_renderer.render_docx,
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    ),
+    "xlsx": (
+        xlsx_renderer.render_xlsx,
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    ),
+}
 
 
 class ItlingoTemplatingPortal(http.Controller):
 
     def _get_template_document(self, document_id):
-        """Return a readable template document (.docx) or raise."""
+        """Return a readable template document or raise."""
         document = request.env["itlingo.document"].browse(document_id)
         if not document.exists():
             raise MissingError(_("Document not found."))
@@ -33,8 +43,10 @@ class ItlingoTemplatingPortal(http.Controller):
         return document
 
     @staticmethod
-    def _is_docx(document):
-        return (document.file_name or "").lower().endswith(".docx")
+    def _template_format(document):
+        """Return 'docx'/'xlsx' for a supported template file, else None."""
+        ext = os.path.splitext(document.file_name or "")[1].lower().lstrip(".")
+        return ext if ext in _FORMATS else None
 
     @http.route(
         "/my/workspaces/<int:project_id>/documents/<int:document_id>/generate",
@@ -72,9 +84,10 @@ class ItlingoTemplatingPortal(http.Controller):
             "page_name": "document_generate",
         }
 
-        if not self._is_docx(document) or not document.document_file:
+        fmt = self._template_format(document)
+        if not fmt or not document.document_file:
             values["error"] = _(
-                "Only DOCX templates with an attached file can be generated."
+                "Only DOCX/XLSX templates with an attached file can be generated."
             )
             return request.render("itlingo_templating.portal_generate_form", values)
 
@@ -100,16 +113,18 @@ class ItlingoTemplatingPortal(http.Controller):
 
         context = canonical_model.build_canonical_model(ast)
 
+        renderer, mime = _FORMATS[fmt]
         try:
             template_bytes = base64.b64decode(document.document_file)
-            output = docx_renderer.render_docx(template_bytes, context)
+            output = renderer(template_bytes, context)
         except ImportError:
             values["error"] = _(
-                "The docxtpl Python package is not installed on the server."
+                "The Python package required to render %s files is not "
+                "installed on the server." % fmt.upper()
             )
             return request.render("itlingo_templating.portal_generate_form", values)
         except Exception as err:
-            _logger.exception("DOCX rendering failed for document %s", document.id)
+            _logger.exception("%s rendering failed for document %s", fmt, document.id)
             values["error"] = _("Document generation failed: %s") % err
             return request.render("itlingo_templating.portal_generate_form", values)
 
@@ -120,11 +135,12 @@ class ItlingoTemplatingPortal(http.Controller):
             context, template_name=template_name, spec_name=spec_name,
         )
         fallback = document.name or "generated"
-        filename = docx_renderer.render_filename(
+        filename = rendering.render_filename(
             document.output_filename_pattern, filename_context, fallback,
+            extension="." + fmt,
         )
         return request.make_response(output, headers=[
-            ("Content-Type", _DOCX_MIME),
+            ("Content-Type", mime),
             ("Content-Disposition", content_disposition(filename)),
             ("Content-Length", str(len(output))),
         ])

@@ -6,7 +6,7 @@
               inherit_id="itlingo_documents.portal_document_detail"
               name="Generate Template Button">
         <xpath expr="//div[hasclass('flex-wrap')]" position="inside">
-            <a t-if="document.is_template and (document.file_name or '').lower().endswith('.docx') and document.document_file"
+            <a t-if="document.is_template and (document.file_name or '').lower().endswith(('.docx', '.xlsx')) and document.document_file"
                t-attf-href="#{doc_base_url}/#{document.id}/generate"
                class="btn btn-success">
                 <i class="fa fa-cogs"/> Generate from template
@@ -33,7 +33,8 @@
                     </div>
                     <p class="text-muted">
                         Upload an <code>.rsl</code> specification. The template is
-                        filled with its contents and the generated DOCX is downloaded.
+                        filled with its contents and the generated DOCX/XLSX is
+                        downloaded.
                     </p>
                     <form t-attf-action="#{doc_base_url}/#{document.id}/generate"
                           method="post" enctype="multipart/form-data">
