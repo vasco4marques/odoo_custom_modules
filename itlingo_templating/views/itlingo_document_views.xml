@@ -10,7 +10,7 @@
                 <field name="is_template"/>
                 <field name="output_filename_pattern"
                        invisible="not is_template"
-                       placeholder="{{ project.code }}_requirements.docx"/>
+                       placeholder="{{ spec_name }}_requirements.docx"/>
             </field>
         </field>
     </record>

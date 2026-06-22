@@ -1,5 +1,6 @@
 import base64
 import logging
+import os
 
 from odoo import _, http
 from odoo.exceptions import AccessError, MissingError
@@ -112,9 +113,15 @@ class ItlingoTemplatingPortal(http.Controller):
             values["error"] = _("Document generation failed: %s") % err
             return request.render("itlingo_templating.portal_generate_form", values)
 
+        # Extra variables available only to the output filename pattern.
+        template_name = os.path.splitext(document.file_name or document.name or "template")[0]
+        spec_name = os.path.splitext(upload.filename or "spec")[0]
+        filename_context = dict(
+            context, template_name=template_name, spec_name=spec_name,
+        )
         fallback = document.name or "generated"
         filename = docx_renderer.render_filename(
-            document.output_filename_pattern, context, fallback,
+            document.output_filename_pattern, filename_context, fallback,
         )
         return request.make_response(output, headers=[
             ("Content-Type", _DOCX_MIME),

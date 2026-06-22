@@ -10,11 +10,14 @@
                 <label class="form-label" for="doc_output_pattern">Output filename pattern</label>
                 <input type="text" class="form-control" id="doc_output_pattern"
                        name="output_filename_pattern"
-                       t-att-value="form.get('output_filename_pattern') or ''"
-                       placeholder="{{ project.code }}_requirements.docx"/>
+                       t-att-value="form.get('output_filename_pattern') or '{{ project.code }}_requirements.docx'"/>
                 <div class="form-text">
-                    Defaults to the document name. Templates are excluded
-                    from the knowledge pool and cannot be sent to ITOI.
+                    Jinja2 pattern for the generated file. Available:
+                    <code>{{ template_name }}</code> (this template's name),
+                    <code>{{ spec_name }}</code> (uploaded .rsl name), and
+                    <code>{{ project.* }}</code> (e.g. <code>{{ project.code }}</code>).
+                    Defaults to the document name. Templates are excluded from
+                    the knowledge pool and cannot be sent to ITOI.
                 </div>
             </div>
             <script type="text/javascript">

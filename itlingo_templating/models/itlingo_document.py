@@ -17,8 +17,10 @@ class ItlingoDocument(models.Model):
     )
     output_filename_pattern = fields.Char(
         string="Output Filename Pattern",
-        help="Jinja2 pattern for the generated filename, e.g. "
-             "{{ project.code }}_requirements.docx. Defaults to the template name.",
+        help="Jinja2 pattern for the generated filename. Available variables: "
+             "template_name (this template's name), spec_name (uploaded .rsl "
+             "name) and project.* (e.g. project.code). Example: "
+             "{{ spec_name }}_requirements.docx. Defaults to the template name.",
     )
 
     @api.depends("document_type_id", "document_type_id.type_code")
