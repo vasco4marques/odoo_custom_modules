@@ -113,7 +113,7 @@
               groups="itlingo_organizations.group_itlingo_admin"/>
 
     <menuitem id="itlingo_menu_chatbot_settings_operational"
-              name="Operational Settings"
+              name="LLM Settings"
               parent="itlingo_menu_chatbot_settings"
               action="itlingo_chatbot_settings_open_operational"
               sequence="20"
