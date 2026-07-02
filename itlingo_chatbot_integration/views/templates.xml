@@ -52,7 +52,7 @@
                         <iframe class="itlingo-chat-frame"
                                 t-att-src="chat_url + ('?workspace_key=' + (project.workspace_key or '') + '&amp;workspace_id=' + str(project_id) + ('&amp;token=' + token if token else ''))"
                                 title="Workspace Chat"
-                                allow="microphone; camera; clipboard-write;"/>
+                                allow="microphone; camera; clipboard-write; fullscreen"/>
                     </div>
                 </div>
             </div>
