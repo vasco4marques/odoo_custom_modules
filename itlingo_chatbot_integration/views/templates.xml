@@ -1,59 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="chat_page" name="Workspace Chat Page">
-        <t t-call="website.layout">
-            <div class="container-fluid pt-3 px-3 px-lg-4 pb-3 pb-lg-4">
-                <style>
+        <t t-call="portal.portal_layout">
+            <t t-set="hide_project_breadcrumbs" t-value="True"/>
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title" t-value="project.name"/>
+            </t>
+
+            <style>
+                .itlingo-chat-page {
+                    display: flex;
+                    flex-direction: column;
+                    min-height: calc(100vh - 280px);
+                }
+
+                .itlingo-chat-frame-card {
+                    flex: 1 1 auto;
+                    min-height: 0;
+                    overflow: hidden;
+                }
+
+                .itlingo-chat-frame {
+                    width: 100%;
+                    height: 100%;
+                    min-height: 78vh;
+                    border: 0;
+                }
+
+                @media (max-width: 991.98px) {
                     .itlingo-chat-page {
-                        min-height: calc(100vh - 150px);
-                        display: flex;
-                        flex-direction: column;
-                    }
-
-                    .itlingo-chat-back-link {
-                        width: fit-content;
-                        display: inline-flex;
-                        align-items: center;
-                    }
-
-                    .itlingo-chat-frame-card {
-                        flex: 1 1 auto;
-                        min-height: 0;
-                        overflow: hidden;
+                        min-height: calc(100vh - 260px);
                     }
 
                     .itlingo-chat-frame {
-                        width: 100%;
-                        height: 100%;
                         min-height: 80vh;
-                        border: 0;
                     }
+                }
+            </style>
 
-                    @media (max-width: 991.98px) {
-                        .itlingo-chat-page {
-                            min-height: calc(100vh - 140px);
-                        }
-
-                        .itlingo-chat-frame {
-                            min-height: 82vh;
-                        }
-                    }
-                </style>
-
-                <div class="itlingo-chat-page">
-                    <div class="mb-3">
-                        <a t-attf-href="/my/workspaces/#{project_id}"
-                           class="nav-link itlingo-org-hub__nav-link rounded-2 px-3 py-2 itlingo-chat-back-link">
-                            <i class="fa fa-arrow-left me-2" aria-hidden="true"/>Back to workspace
-                        </a>
-                    </div>
-
-                    <div class="card border-0 shadow-sm rounded-3 itlingo-chat-frame-card">
-                        <iframe class="itlingo-chat-frame"
-                                t-att-src="chat_url + ('?workspace_key=' + (project.workspace_key or '') + '&amp;workspace_id=' + str(project_id) + ('&amp;token=' + token if token else ''))"
-                                title="Workspace Chat"
-                                allow="microphone; camera; clipboard-write; fullscreen"/>
-                    </div>
+            <div class="itlingo-chat-page">
+                <div class="card border-0 shadow-sm rounded-3 itlingo-chat-frame-card">
+                    <iframe class="itlingo-chat-frame"
+                            t-att-src="chat_url + ('?workspace_key=' + (project.workspace_key or '') + '&amp;workspace_id=' + str(project_id) + ('&amp;token=' + token if token else ''))"
+                            title="Workspace Chat"
+                            allow="microphone; camera; clipboard-write; fullscreen"/>
                 </div>
             </div>
         </t>

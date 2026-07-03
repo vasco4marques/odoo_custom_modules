@@ -142,6 +142,7 @@ class ChatController(http.Controller):
             "workspace_key": project.workspace_key,
             "workspace_session_id": str(project.workspace_key),
             "ws_hub_prefix": f"/my/workspaces/{project_id}",
+            "page_name": "workspace_chat",
             "workspace_hub_page": "chat",
             "workspace_hub_public": False,
             "chat_url": chat_url,
