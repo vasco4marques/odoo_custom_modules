@@ -12,6 +12,27 @@ class ITLingoPortal(CustomerPortal):
     def home(self, **kw):
         return request.redirect('/')
 
+    def _create_or_update_address(self, partner_sudo, **kwargs):
+        # Invitations and role lookups are email-centric on this platform,
+        # so the account email must never change through the portal form
+        # (the input is rendered read-only, this guards against tampering).
+        if partner_sudo and partner_sudo == request.env.user.partner_id \
+                and partner_sudo.email:
+            kwargs['email'] = partner_sudo.email
+        return super()._create_or_update_address(partner_sudo, **kwargs)
+
+    # This platform is not an e-commerce: no invoicing or shipping happens,
+    # so only the name is mandatory on the account/address forms. The email
+    # is always present anyway (read-only input + guard above).
+    def _get_mandatory_billing_address_fields(self, country_sudo):
+        return {'name'}
+
+    def _get_mandatory_delivery_address_fields(self, country_sudo):
+        return {'name'}
+
+    def _get_mandatory_address_fields(self, country_sudo):
+        return set()
+
     # ──────────────────────────────────────────────
     # Welcome: post-registration org creation
     # ──────────────────────────────────────────────

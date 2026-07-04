@@ -33,6 +33,73 @@
         </a>
     </template>
 
+    <!-- "My Account" must open real account management. The stock link goes
+         to /my/home, which this platform redirects to the homepage; point it
+         to /my/account instead and add a Security entry (password / 2FA). -->
+    <template id="user_dropdown_account" name="User dropdown: account management"
+              inherit_id="portal.my_account_link">
+        <xpath expr="//a[@href='/my/home']" position="replace">
+            <a href="/my/account" role="menuitem" class="dropdown-item ps-3">
+                <i class="fa fa-fw fa-id-card-o me-1 small text-primary-emphasis"/> My Account
+            </a>
+            <a href="/my/security" role="menuitem" class="dropdown-item ps-3">
+                <i class="fa fa-fw fa-lock me-1 small text-primary-emphasis"/> Security
+            </a>
+        </xpath>
+    </template>
+
+    <!-- Invitations and role lookups are email-centric, so the account email
+         must not be editable from the portal (see also the server-side guard
+         in controllers/portal.py). Only applies to the user's own record;
+         extra contact addresses keep an editable email.
+         Also: this platform has no invoicing/shipping, so only Name (and the
+         read-only email) is mandatory — mark every other label optional; the
+         matching server-side rule is the _get_mandatory_*_fields override. -->
+    <template id="address_form_email_readonly" name="Account form: read-only email, minimal required fields"
+              inherit_id="portal.address_form_fields">
+        <xpath expr="//input[@id='o_email']" position="attributes">
+            <attribute name="t-att-readonly">'1' if partner_sudo and partner_sudo == request.env.user.partner_id else None</attribute>
+        </xpath>
+        <xpath expr="//div[@id='div_email']" position="inside">
+            <small t-if="partner_sudo and partner_sudo == request.env.user.partner_id"
+                   class="form-text text-muted">
+                Your email identifies your account and invitations, so it cannot be changed here.
+            </small>
+        </xpath>
+        <xpath expr="//label[@for='o_phone']" position="attributes">
+            <attribute name="class" add="label-optional" separator=" "/>
+        </xpath>
+        <xpath expr="//label[@for='o_street']" position="attributes">
+            <attribute name="class" add="label-optional" separator=" "/>
+        </xpath>
+        <xpath expr="(//label[@for='o_zip'])[1]" position="attributes">
+            <attribute name="class" add="label-optional" separator=" "/>
+        </xpath>
+        <xpath expr="(//label[@for='o_zip'])[2]" position="attributes">
+            <attribute name="class" add="label-optional" separator=" "/>
+        </xpath>
+        <xpath expr="//label[@for='o_city']" position="attributes">
+            <attribute name="class" add="label-optional" separator=" "/>
+        </xpath>
+        <xpath expr="//label[@for='o_country_id']" position="attributes">
+            <attribute name="class" add="label-optional" separator=" "/>
+        </xpath>
+    </template>
+
+    <!-- Security page: keep only "Change Password" (and account deletion).
+         2FA and Passkeys are removed by deactivating the stock hook views;
+         "Revoke All Sessions" is removed below. -->
+    <record id="auth_totp_portal.totp_portal_hook" model="ir.ui.view">
+        <field name="active" eval="False"/>
+    </record>
+    <record id="auth_passkey_portal.passkeys_portal_hook" model="ir.ui.view">
+        <field name="active" eval="False"/>
+    </record>
+    <template id="portal_my_security_minimal" name="Security page: password change only"
+              inherit_id="portal.portal_my_security" priority="99">
+        <xpath expr="//section[@name='portal_revoke_all_devices_popup']" position="replace"/>
+    </template>
+
     <!-- Breadcrumb entries -->
     <template id="portal_layout" name="Portal layout: ITLingo menu entries"
               inherit_id="portal.portal_breadcrumbs" priority="50">
