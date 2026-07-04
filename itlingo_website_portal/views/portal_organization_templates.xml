@@ -516,8 +516,10 @@
             </div>
             <div t-if="can_manage_org_users" class="collapse mb-4" id="org_invite_panel">
                 <div class="card border-0 shadow-sm rounded-3">
+                    <div class="card-header bg-white border-0 p-3">
+                        <h5 class="fw-semibold mb-0">Invite member</h5>
+                    </div>
                     <div class="card-body">
-                        <h3 class="h6 mb-3">Invite member</h3>
                         <form t-attf-action="/my/organizations/#{organization.id}/users/invite" method="post" class="row g-3 align-items-end">
                             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                             <div class="col-md-5">
@@ -576,8 +578,8 @@
                 </div>
             </div>
             <div class="card border-0 shadow-sm rounded-3">
-                <div class="card-header bg-white border-0 pt-3 pb-0">
-                    <h2 class="h6 mb-0">Members (<t t-out="member_count"/>)</h2>
+                <div class="card-header bg-white border-0 p-3">
+                    <h5 class="fw-semibold mb-0">Members (<t t-out="member_count"/>)</h5>
                 </div>
                 <div class="card-body p-0">
                     <div class="table-responsive">
