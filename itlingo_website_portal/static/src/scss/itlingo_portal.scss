@@ -26,6 +26,33 @@
     }
 }
 
+/* /my/account: only Your Name, Email and Country are relevant on this
+   platform. The other fields are hidden (not removed) because the portal
+   address JS expects every input to exist in the DOM; their unchanged
+   values are still submitted. !important beats the inline display the JS
+   sets when toggling street/zip/city per country. */
+.itlingo-account-minimal {
+    #div_phone,
+    #company_name_div,
+    #div_vat,
+    #div_street,
+    #div_street2,
+    #div_zip,
+    #div_city,
+    #div_state {
+        display: none !important;
+    }
+}
+
+/* Stock portal CSS gives every section on /my/security a border-top, which
+   doubles with the separator under the page title. Only the Change Password
+   section is left, so drop the section chrome entirely. */
+.o_portal_security_body section {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
 .itlingo-org-hub {
     max-width: 100%;
 
