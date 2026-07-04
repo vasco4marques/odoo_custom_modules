@@ -50,10 +50,31 @@
         </t>
     </template>
 
-    <!-- add a Chat link to workspace hub nav, after Specifications -->
+    <!-- Breadcrumbs for the chat page, matching the other workspace pages:
+         Home / Public workspaces / <workspace> / Chatbot   (anonymous hub)
+         Home / Workspaces / <workspace> / Chatbot          (member hub)   -->
+    <template id="portal_chat_breadcrumbs" name="Chat page breadcrumbs"
+              inherit_id="portal.portal_breadcrumbs" priority="55">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'workspace_chat' and workspace_hub_public" class="breadcrumb-item">
+                <a href="/public-workspaces">Public workspaces</a>
+            </li>
+            <li t-if="page_name == 'workspace_chat' and not workspace_hub_public" class="breadcrumb-item">
+                <a href="/my/workspaces">Workspaces</a>
+            </li>
+            <li t-if="page_name == 'workspace_chat'" class="breadcrumb-item text-truncate">
+                <a t-att-href="ws_hub_prefix"><t t-out="project.name"/></a>
+            </li>
+            <li t-if="page_name == 'workspace_chat'" class="breadcrumb-item active">Chatbot</li>
+        </xpath>
+    </template>
+
+    <!-- add a Chat link to workspace hub nav, after Specifications.
+         Uses ws_hub_prefix so it also works on the public (anonymous,
+         read-only) workspace hub. -->
     <template id="portal_add_chat_link" inherit_id="itlingo_website_portal.portal_workspace_hub_shell">
         <xpath expr="//a[contains(@t-attf-href, '/specifications')]" position="after">
-            <a t-attf-href="/my/workspaces/#{project.id}/chat" t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'chat' and 'active' or ''}">
+            <a t-attf-href="#{ws_hub_prefix}/chat" t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{workspace_hub_page == 'chat' and 'active' or ''}">
                 <i class="fa fa-comments fa-fw me-2" aria-hidden="true"/>Chatbot
             </a>
         </xpath>

@@ -6,7 +6,6 @@
     <record id="project_itlingo_platform" model="itlingo.workspace">
         <field name="name">ITLingo Platform</field>
         <field name="organization_id" ref="itlingo_organizations.org_techcorp"/>
-        <field name="methodology">scrum</field>
         <field name="business_status">executing</field>
         <field name="description">&lt;p&gt;Main platform development workspace.&lt;/p&gt;</field>
     </record>
@@ -14,7 +13,6 @@
     <record id="project_research" model="itlingo.workspace">
         <field name="name">SE Research Project</field>
         <field name="organization_id" ref="itlingo_organizations.org_university"/>
-        <field name="methodology">kanban</field>
         <field name="business_status">not_started</field>
         <field name="description">&lt;p&gt;Software engineering research project.&lt;/p&gt;</field>
     </record>

@@ -239,9 +239,30 @@
             <t t-if="projects" t-call="portal.portal_table">
                 <thead>
                     <tr>
-                        <th>Workspace</th>
-                        <th>Organization</th>
-                        <th>Status</th>
+                        <th>
+                            <t t-call="itlingo_website_portal.portal_sort_th">
+                                <t t-set="sort_key" t-value="'name'"/>
+                                <t t-set="sort_label">Workspace</t>
+                            </t>
+                        </th>
+                        <th>
+                            <t t-call="itlingo_website_portal.portal_sort_th">
+                                <t t-set="sort_key" t-value="'organization'"/>
+                                <t t-set="sort_label">Organization</t>
+                            </t>
+                        </th>
+                        <th>
+                            <t t-call="itlingo_website_portal.portal_sort_th">
+                                <t t-set="sort_key" t-value="'create_date'"/>
+                                <t t-set="sort_label">Create Date</t>
+                            </t>
+                        </th>
+                        <th>
+                            <t t-call="itlingo_website_portal.portal_sort_th">
+                                <t t-set="sort_key" t-value="'status'"/>
+                                <t t-set="sort_label">Status</t>
+                            </t>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -257,6 +278,11 @@
                         <td>
                             <t t-if="proj.organization_id" t-out="proj.organization_id.name"/>
                             <t t-else="">—</t>
+                        </td>
+                        <td>
+                            <t t-call="itlingo_website_portal.portal_date">
+                                <t t-set="date_value" t-value="proj.create_date"/>
+                            </t>
                         </td>
                         <td>
                             <span class="badge bg-secondary">
@@ -280,17 +306,6 @@
             <t t-call="portal.portal_searchbar">
                 <t t-set="title" t-value="document.name"/>
             </t>
-            <nav class="mb-3" aria-label="breadcrumb">
-                <ol class="breadcrumb small">
-                    <li class="breadcrumb-item">
-                        <a t-attf-href="/public-workspaces/#{project.id}"><t t-out="project.name"/></a>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a t-attf-href="/public-workspaces/#{project.id}/documents">Documents</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page"><t t-out="document.name"/></li>
-                </ol>
-            </nav>
             <div class="card border-0 shadow-sm rounded-3">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h3 class="mb-0"><t t-out="document.name"/></h3>
@@ -307,18 +322,45 @@
                     <div class="row">
                         <div class="col-md-6">
                             <dl>
-                                <dt>Type</dt>
+                                <dt>Workspace</dt>
+                                <dd><t t-out="document.project_id.name or 'N/A'"/></dd>
+                                <dt>Organization</dt>
+                                <dd><t t-out="document.organization_id.name or 'N/A'"/></dd>
+                                <dt>Document Type</dt>
                                 <dd><t t-out="document.document_type_id.name or 'N/A'"/></dd>
-                                <dt>Version</dt>
-                                <dd><t t-out="document.version"/></dd>
-                                <dt>Created</dt>
-                                <dd><t t-out="document.creation_date" t-options='{"widget": "datetime"}'/></dd>
+                                <dt>DSL</dt>
+                                <dd>
+                                    <t t-if="document.dsl_id" t-out="document.dsl_id.acronym"/>
+                                    <t t-else="">—</t>
+                                </dd>
                             </dl>
                         </div>
                         <div class="col-md-6">
                             <dl>
-                                <dt>Workspace</dt>
-                                <dd><t t-out="document.project_id.name or 'N/A'"/></dd>
+                                <dt>Language</dt>
+                                <dd>
+                                    <t t-if="document.language" t-out="dict(document._fields['language'].selection).get(document.language)"/>
+                                    <t t-else="">—</t>
+                                </dd>
+                                <dt>Format</dt>
+                                <dd>
+                                    <t t-if="document.document_format" t-out="dict(document._fields['document_format'].selection).get(document.document_format)"/>
+                                    <t t-else="">—</t>
+                                </dd>
+                                <dt>Version</dt>
+                                <dd><t t-out="document.version"/></dd>
+                                <dt>Created</dt>
+                                <dd>
+                                    <t t-call="itlingo_website_portal.portal_date">
+                                        <t t-set="date_value" t-value="document.creation_date"/>
+                                    </t>
+                                </dd>
+                                <dt>Last Modified</dt>
+                                <dd>
+                                    <t t-call="itlingo_website_portal.portal_date">
+                                        <t t-set="date_value" t-value="document.write_date"/>
+                                    </t>
+                                </dd>
                             </dl>
                         </div>
                     </div>
@@ -395,7 +437,7 @@
                 <div class="col-12">
                     <div class="card border-0 shadow-sm rounded-3">
                         <div class="card-body">
-                            <h2 class="h5 mb-3">Workspace details</h2>
+                            <h2 class="h5 mb-3"><t t-out="project.name"/></h2>
                             <dl class="row mb-0 small">
                                 <dt class="col-sm-4 text-muted">Description</dt>
                                 <dd class="col-sm-8">
@@ -421,8 +463,6 @@
                                     </t>
                                     <t t-if="not project.organization_id">—</t>
                                 </dd>
-                                <dt class="col-sm-4 text-muted">Methodology</dt>
-                                <dd class="col-sm-8"><t t-out="dict(project._fields['methodology'].selection).get(project.methodology) if project.methodology else '—'"/></dd>
                                 <dt t-if="user_role" class="col-sm-4 text-muted">Your role</dt>
                                 <dd t-if="user_role" class="col-sm-8">
                                     <span class="badge bg-info text-dark">
@@ -436,15 +476,35 @@
                                     </span>
                                 </dd>
                                 <dt class="col-sm-4 text-muted">Creation date</dt>
-                                <dd class="col-sm-8"><span t-field="project.create_date" t-options='{"widget": "date"}'/></dd>
+                                <dd class="col-sm-8">
+                                    <t t-call="itlingo_website_portal.portal_date">
+                                        <t t-set="date_value" t-value="project.create_date"/>
+                                    </t>
+                                </dd>
                                 <dt class="col-sm-4 text-muted">Planned start</dt>
-                                <dd class="col-sm-8"><t t-out="project.planned_start or '—'"/></dd>
+                                <dd class="col-sm-8">
+                                    <t t-call="itlingo_website_portal.portal_date">
+                                        <t t-set="date_value" t-value="project.planned_start"/>
+                                    </t>
+                                </dd>
                                 <dt class="col-sm-4 text-muted">Planned end</dt>
-                                <dd class="col-sm-8"><t t-out="project.planned_end or '—'"/></dd>
+                                <dd class="col-sm-8">
+                                    <t t-call="itlingo_website_portal.portal_date">
+                                        <t t-set="date_value" t-value="project.planned_end"/>
+                                    </t>
+                                </dd>
                                 <dt class="col-sm-4 text-muted">Actual start</dt>
-                                <dd class="col-sm-8"><t t-out="project.actual_start or '—'"/></dd>
+                                <dd class="col-sm-8">
+                                    <t t-call="itlingo_website_portal.portal_date">
+                                        <t t-set="date_value" t-value="project.actual_start"/>
+                                    </t>
+                                </dd>
                                 <dt class="col-sm-4 text-muted">Actual end</dt>
-                                <dd class="col-sm-8"><t t-out="project.actual_end or '—'"/></dd>
+                                <dd class="col-sm-8">
+                                    <t t-call="itlingo_website_portal.portal_date">
+                                        <t t-set="date_value" t-value="project.actual_end"/>
+                                    </t>
+                                </dd>
                                 <dt class="col-sm-4 text-muted">Planned cost</dt>
                                 <dd class="col-sm-8"><t t-out="project.planned_cost if project.planned_cost else '—'"/></dd>
                                 <dt class="col-sm-4 text-muted">Current cost</dt>
@@ -596,17 +656,131 @@
             <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3" t-if="can_upload_ws_documents">
                 <a t-attf-href="#{ws_hub_prefix}/documents/new" class="btn btn-primary">Add document</a>
             </div>
+            <div class="card itlingo-portal-filter-card shadow-sm border-0 rounded-3 mb-4">
+                <div class="card-body">
+                    <p class="text-muted small text-uppercase fw-semibold mb-3">Document filters</p>
+                    <form method="get" t-att-action="sort_base_url" class="row g-3 align-items-end">
+                        <div class="col-md-4 col-lg-3">
+                            <label class="form-label small text-muted mb-1" for="doc_filter_name">Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0"><i class="fa fa-search text-muted"/></span>
+                                <input type="search" class="form-control border-start-0 bg-light" id="doc_filter_name"
+                                       name="name" t-att-value="doc_filters.get('name') or ''" placeholder="Name"/>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-2">
+                            <label class="form-label small text-muted mb-1" for="doc_filter_type">Type</label>
+                            <select class="form-select" id="doc_filter_type" name="type_id">
+                                <option value="">All</option>
+                                <t t-foreach="doc_types" t-as="dt">
+                                    <option t-att-value="dt.id"
+                                            t-att-selected="doc_filters.get('type_id') == dt.id">
+                                        <t t-out="dt.name"/>
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                        <div class="col-md-4 col-lg-2">
+                            <label class="form-label small text-muted mb-1" for="doc_filter_dsl">DSL</label>
+                            <select class="form-select" id="doc_filter_dsl" name="dsl_id">
+                                <option value="">All</option>
+                                <t t-foreach="dsls" t-as="dsl_rec">
+                                    <option t-att-value="dsl_rec.id"
+                                            t-att-selected="doc_filters.get('dsl_id') == dsl_rec.id">
+                                        <t t-out="dsl_rec.acronym"/> <t t-out="dsl_rec.version"/>
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                        <div class="col-md-4 col-lg-2">
+                            <label class="form-label small text-muted mb-1" for="doc_filter_lang">Language</label>
+                            <select class="form-select" id="doc_filter_lang" name="language">
+                                <option value="">All</option>
+                                <t t-foreach="doc_language_selection" t-as="opt">
+                                    <option t-att-value="opt[0]"
+                                            t-att-selected="doc_filters.get('language') == opt[0]">
+                                        <t t-out="opt[1]"/>
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                        <div class="col-md-4 col-lg-2">
+                            <label class="form-label small text-muted mb-1" for="doc_filter_format">Format</label>
+                            <select class="form-select" id="doc_filter_format" name="format">
+                                <option value="">All</option>
+                                <t t-foreach="doc_format_selection" t-as="opt">
+                                    <option t-att-value="opt[0]"
+                                            t-att-selected="doc_filters.get('format') == opt[0]">
+                                        <t t-out="opt[1]"/>
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap gap-2">
+                            <a t-att-href="sort_base_url" class="btn btn-outline-secondary">Clear filters</a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa fa-search me-1"/>Filter
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <t t-if="not documents">
-                <p class="text-muted">No documents linked to this workspace yet.</p>
+                <p class="text-muted">No documents match your filters, or no documents are linked to this workspace yet.</p>
             </t>
             <div t-if="documents" class="card border-0 shadow-sm rounded-3">
                 <div class="card-body p-0 table-responsive">
                     <table class="table table-hover mb-0">
                         <thead class="table-light">
                             <tr>
-                                <th>Name</th>
-                                <th>Status</th>
-                                <th>Version</th>
+                                <th>
+                                    <t t-call="itlingo_website_portal.portal_sort_th">
+                                        <t t-set="sort_key" t-value="'name'"/>
+                                        <t t-set="sort_label">Name</t>
+                                    </t>
+                                </th>
+                                <th>
+                                    <t t-call="itlingo_website_portal.portal_sort_th">
+                                        <t t-set="sort_key" t-value="'type'"/>
+                                        <t t-set="sort_label">Type</t>
+                                    </t>
+                                </th>
+                                <th>
+                                    <t t-call="itlingo_website_portal.portal_sort_th">
+                                        <t t-set="sort_key" t-value="'dsl'"/>
+                                        <t t-set="sort_label">DSL</t>
+                                    </t>
+                                </th>
+                                <th>
+                                    <t t-call="itlingo_website_portal.portal_sort_th">
+                                        <t t-set="sort_key" t-value="'language'"/>
+                                        <t t-set="sort_label">Language</t>
+                                    </t>
+                                </th>
+                                <th>
+                                    <t t-call="itlingo_website_portal.portal_sort_th">
+                                        <t t-set="sort_key" t-value="'format'"/>
+                                        <t t-set="sort_label">Format</t>
+                                    </t>
+                                </th>
+                                <th>
+                                    <t t-call="itlingo_website_portal.portal_sort_th">
+                                        <t t-set="sort_key" t-value="'create_date'"/>
+                                        <t t-set="sort_label">Create Date</t>
+                                    </t>
+                                </th>
+                                <th>
+                                    <t t-call="itlingo_website_portal.portal_sort_th">
+                                        <t t-set="sort_key" t-value="'write_date'"/>
+                                        <t t-set="sort_label">Last Modified</t>
+                                    </t>
+                                </th>
+                                <th>
+                                    <t t-call="itlingo_website_portal.portal_sort_th">
+                                        <t t-set="sort_key" t-value="'status'"/>
+                                        <t t-set="sort_label">Status</t>
+                                    </t>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -616,12 +790,34 @@
                                         <t t-out="doc.name"/>
                                     </a>
                                 </td>
+                                <td><t t-out="doc.document_type_id.name or '—'"/></td>
+                                <td>
+                                    <t t-if="doc.dsl_id" t-out="doc.dsl_id.acronym"/>
+                                    <t t-else="">—</t>
+                                </td>
+                                <td>
+                                    <t t-if="doc.language" t-out="dict(doc._fields['language'].selection).get(doc.language)"/>
+                                    <t t-else="">—</t>
+                                </td>
+                                <td>
+                                    <t t-if="doc.document_format" t-out="dict(doc._fields['document_format'].selection).get(doc.document_format)"/>
+                                    <t t-else="">—</t>
+                                </td>
+                                <td>
+                                    <t t-call="itlingo_website_portal.portal_date">
+                                        <t t-set="date_value" t-value="doc.creation_date"/>
+                                    </t>
+                                </td>
+                                <td>
+                                    <t t-call="itlingo_website_portal.portal_date">
+                                        <t t-set="date_value" t-value="doc.write_date"/>
+                                    </t>
+                                </td>
                                 <td>
                                     <span class="badge bg-secondary">
                                         <t t-out="dict(doc._fields['status'].selection).get(doc.status)"/>
                                     </span>
                                 </td>
-                                <td><t t-out="doc.version or '—'"/></td>
                             </tr>
                         </tbody>
                     </table>
@@ -657,6 +853,7 @@
                             </select>
                             <div t-if="error.get('document_type_id')" class="text-danger small mt-1"><t t-out="error['document_type_id']"/></div>
                         </div>
+                        <t t-call="itlingo_documents.portal_document_meta_fields"/>
                         <div class="mb-3">
                             <label class="form-label" for="ws_doc_file">File</label>
                             <input type="file" class="form-control" id="ws_doc_file" name="document_file"/>
@@ -757,13 +954,6 @@
                         <input type="text" class="form-control" id="ws_wiz_name_e" name="name" required=""
                                t-att-value="form.get('name') or project.name"/>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="ws_wiz_met_e">Methodology</label>
-                        <select class="form-select" id="ws_wiz_met_e" name="methodology">
-                            <option value="scrum" t-att-selected="(form.get('methodology') or project.methodology) == 'scrum'">Scrum</option>
-                            <option value="kanban" t-att-selected="(form.get('methodology') or project.methodology) == 'kanban'">Kanban</option>
-                        </select>
-                    </div>
                     <div class="form-check mb-3">
                         <input class="form-check-input" type="checkbox" name="is_public_workspace" id="ws_wiz_pub_e" value="1"
                                t-att-checked="form.get('is_public_workspace')"/>
@@ -791,13 +981,6 @@
                                     <t t-out="org.name"/>
                                 </option>
                             </t>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="ws_wiz_met">Methodology</label>
-                        <select class="form-select" id="ws_wiz_met" name="methodology">
-                            <option value="scrum" t-att-selected="(form.get('methodology') or 'scrum') == 'scrum'">Scrum</option>
-                            <option value="kanban" t-att-selected="(form.get('methodology') or '') == 'kanban'">Kanban</option>
                         </select>
                     </div>
                     <div class="form-check mb-3">
@@ -908,7 +1091,6 @@
                     <dl class="row small mb-0">
                         <dt class="col-sm-4">Name</dt><dd class="col-sm-8"><t t-out="wizard_data.get('name')"/></dd>
                         <dt class="col-sm-4">Organization</dt><dd class="col-sm-8"><t t-out="wizard_data.get('organization') or wizard_data.get('organization_id')"/></dd>
-                        <dt class="col-sm-4">Methodology</dt><dd class="col-sm-8"><t t-out="wizard_data.get('methodology')"/></dd>
                         <dt class="col-sm-4">Public workspace</dt><dd class="col-sm-8"><t t-out="'Yes' if wizard_data.get('is_public_workspace') else 'No'"/></dd>
                         <dt class="col-sm-4">Planned start</dt><dd class="col-sm-8"><t t-out="wizard_data.get('planned_start') or '—'"/></dd>
                         <dt class="col-sm-4">Planned end</dt><dd class="col-sm-8"><t t-out="wizard_data.get('planned_end') or '—'"/></dd>

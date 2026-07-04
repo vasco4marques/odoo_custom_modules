@@ -1,6 +1,6 @@
 {
     'name': 'ITLingo Documents',
-    'version': '19.0.1.1.0',
+    'version': '19.0.1.2.0',
     'category': 'Services',
     'summary': 'Structured document management for ITLingo Cloud',
     'description': """
@@ -9,7 +9,10 @@ projects and organizations.
     """,
     'author': 'ITLingo',
     'website': 'https://itlingo.ist.utl.pt',
-    'depends': ['mail', 'itlingo_organizations', 'itlingo_workspace_access'],
+    'depends': [
+        'mail', 'itlingo_organizations', 'itlingo_workspace_access',
+        'itlingo_dsl',
+    ],
     'data': [
         'security/ir.model.access.csv',
         'security/itlingo_document_rules.xml',

@@ -105,6 +105,33 @@ class ITLingoPortal(CustomerPortal):
         })
         mail.send()
 
+    # ──────────────────────────────────────────────
+    # Shared list sorting (3-click cycle: asc / desc / none)
+    # ──────────────────────────────────────────────
+
+    def _portal_sort(self, params, allowed, default_order):
+        """Resolve `sortby`/`sortdir` query params against a whitelist.
+
+        ``allowed`` maps sort keys to ORM order expressions (possibly several
+        comma-separated fields). Returns ``(order, sortby, sortdir)``; when the
+        params are absent or invalid the default order is used and
+        ``sortby``/``sortdir`` are None (the "no sort" state of the cycle).
+        """
+        sortby = (params.get('sortby') or '').strip()
+        sortdir = (params.get('sortdir') or '').strip()
+        if sortby not in allowed or sortdir not in ('asc', 'desc'):
+            return default_order, None, None
+        order = ', '.join(
+            f'{field.strip()} {sortdir}'
+            for field in allowed[sortby].split(',')
+        )
+        return order, sortby, sortdir
+
+    def _portal_sort_qs(self, url_args):
+        """Encode filter params (no sort keys) for the sortable headers."""
+        from urllib.parse import urlencode
+        return urlencode(url_args) if url_args else ''
+
     def _portal_workspace_role(self, user, project_id):
         return request.env['itlingo.project.role'].sudo().search([
             ('user_id', '=', user.id),
@@ -642,10 +669,108 @@ class ITLingoPortal(CustomerPortal):
     # Documents (scoped under a workspace or organization)
     # ──────────────────────────────────────────────
 
+    # Sortable columns shared by every document list in the portal.
+    _DOC_SORT_FIELDS = {
+        'name': 'name',
+        'type': 'document_type_id',
+        'dsl': 'dsl_id',
+        'language': 'language',
+        'format': 'document_format',
+        'create_date': 'creation_date',
+        'write_date': 'write_date',
+        'status': 'status',
+    }
+
+    def _portal_documents_list_ctx(self, base_domain, params):
+        """Shared filter + sort handling for portal document lists.
+
+        Applies the filter bar params (name, language, format, type, dsl) and
+        the sortable-header params on top of ``base_domain`` and returns the
+        template context (documents, filter values, dropdown options, sort
+        state). Callers still set ``sort_base_url``.
+        """
+        Document = request.env['itlingo.document'].sudo()
+        domain = list(base_domain)
+        filter_args = {}
+
+        name_q = (params.get('name') or '').strip()
+        if name_q:
+            domain.append(('name', 'ilike', f'%{name_q}%'))
+            filter_args['name'] = name_q
+        language = (params.get('language') or '').strip()
+        if language in dict(Document._fields['language'].selection):
+            domain.append(('language', '=', language))
+            filter_args['language'] = language
+        doc_format = (params.get('format') or '').strip()
+        if doc_format in dict(Document._fields['document_format'].selection):
+            domain.append(('document_format', '=', doc_format))
+            filter_args['format'] = doc_format
+        try:
+            type_id = int(params.get('type_id') or 0)
+        except (TypeError, ValueError):
+            type_id = 0
+        if type_id:
+            domain.append(('document_type_id', '=', type_id))
+            filter_args['type_id'] = type_id
+        try:
+            dsl_id = int(params.get('dsl_id') or 0)
+        except (TypeError, ValueError):
+            dsl_id = 0
+        if dsl_id:
+            domain.append(('dsl_id', '=', dsl_id))
+            filter_args['dsl_id'] = dsl_id
+
+        order, sortby, sortdir = self._portal_sort(
+            params, self._DOC_SORT_FIELDS, 'creation_date desc, name',
+        )
+        documents = Document.search(domain, order=order)
+        return {
+            'documents': documents,
+            'doc_filters': {
+                'name': name_q,
+                'language': language,
+                'format': doc_format,
+                'type_id': type_id,
+                'dsl_id': dsl_id,
+            },
+            'doc_types': request.env['itlingo.document.type'].sudo().search(
+                [], order='name'),
+            'dsls': request.env['itlingo.dsl'].sudo().search(
+                [], order='acronym, version desc'),
+            'doc_language_selection': Document._fields['language'].selection,
+            'doc_format_selection': Document._fields['document_format'].selection,
+            'sortby': sortby,
+            'sortdir': sortdir,
+            'sort_qs': self._portal_sort_qs(filter_args),
+        }
+
     # Roles allowed to add / edit / delete documents in each scope. Plain
     # members (and users with no role) can only view and download.
     _DOC_EDIT_WS_ROLES = ('ws_manager', 'doc_manager')
     _DOC_EDIT_ORG_ROLES = ('org_manager', 'doc_manager')
+
+    def _portal_document_form_meta(self):
+        """Dropdown data for the shared Language / DSL form fields."""
+        Document = request.env['itlingo.document'].sudo()
+        return {
+            'dsls': request.env['itlingo.dsl'].sudo().search(
+                [], order='acronym, version desc'),
+            'doc_language_selection': Document._fields['language'].selection,
+        }
+
+    def _portal_document_meta_vals(self, post):
+        """Parse the shared Language / DSL form inputs into write values."""
+        Document = request.env['itlingo.document'].sudo()
+        language = (post.get('language') or '').strip()
+        if language not in dict(Document._fields['language'].selection):
+            language = False
+        try:
+            dsl_id = int(post.get('dsl_id') or 0)
+        except (TypeError, ValueError):
+            dsl_id = 0
+        if dsl_id and not request.env['itlingo.dsl'].sudo().browse(dsl_id).exists():
+            dsl_id = 0
+        return {'language': language, 'dsl_id': dsl_id or False}
 
     def _portal_ws_document_or_404(self, project_id, document_id):
         """Return (project, user_role, document) for a workspace document.
@@ -704,12 +829,15 @@ class ITLingoPortal(CustomerPortal):
             'doc_types': doc_types,
             'status_selection': status_selection,
             'template_type_id': template_type_id,
+            **self._portal_document_form_meta(),
             'form': {
                 'name': document.name,
                 'document_type_id': document.document_type_id.id or '',
                 'dsl_knowledge': document.dsl_knowledge,
                 'status': document.status,
                 'version': document.version or '',
+                'language': document.language or '',
+                'dsl_id': document.dsl_id.id or '',
                 'output_filename_pattern': (
                     document.output_filename_pattern or '' if has_pattern else ''
                 ),
@@ -752,6 +880,7 @@ class ITLingoPortal(CustomerPortal):
                     'dsl_knowledge': dsl_knowledge,
                     'status': final_status,
                     'version': version or document.version,
+                    **self._portal_document_meta_vals(post),
                 }
                 if has_pattern:
                     is_tpl_type = bool(template_type_id) and type_id == template_type_id
@@ -787,6 +916,7 @@ class ITLingoPortal(CustomerPortal):
             'user_role': user_role,
             'doc_types': doc_types,
             'template_type_id': self._template_type_id(),
+            **self._portal_document_form_meta(),
             'page_name': 'organization_documentation_new',
             'organization_hub': True,
             'org_hub_page': 'documentation',
@@ -820,6 +950,7 @@ class ITLingoPortal(CustomerPortal):
                     'file_name': fname or False,
                     'status': 'draft',
                     'creator_id': request.env.user.id,
+                    **self._portal_document_meta_vals(post),
                 }
                 self._apply_template_vals(doc_vals, post)
                 try:
@@ -1393,7 +1524,17 @@ class ITLingoPortal(CustomerPortal):
         name_q = (params.get('name') or '').strip()
         if name_q:
             domain.append(('name', 'ilike', f'%{name_q}%'))
-        url_args = {'name': name_q} if name_q else None
+        filter_args = {'name': name_q} if name_q else {}
+
+        order, sortby, sortdir = self._portal_sort(params, {
+            'name': 'name',
+            'organization': 'organization_id',
+            'status': 'business_status',
+            'create_date': 'create_date',
+        }, default_order='name')
+        url_args = dict(filter_args)
+        if sortby:
+            url_args.update({'sortby': sortby, 'sortdir': sortdir})
 
         project_count = Project.search_count(domain)
         page_detail = pager(
@@ -1401,13 +1542,13 @@ class ITLingoPortal(CustomerPortal):
             total=project_count,
             page=page,
             step=10,
-            url_args=url_args,
+            url_args=url_args or None,
         )
         projects = Project.search(
             domain,
             limit=10,
             offset=page_detail['offset'],
-            order='name',
+            order=order,
         )
         user = request.env.user
         public_workspace_rows = []
@@ -1426,6 +1567,10 @@ class ITLingoPortal(CustomerPortal):
             'page_name': 'public_workspaces',
             'default_url': '/public-workspaces',
             'filters': {'name': name_q},
+            'sortby': sortby,
+            'sortdir': sortdir,
+            'sort_base_url': '/public-workspaces',
+            'sort_qs': self._portal_sort_qs(filter_args),
         })
         return request.render('itlingo_website_portal.portal_public_workspaces', values)
 
@@ -1461,20 +1606,18 @@ class ITLingoPortal(CustomerPortal):
         project = self._portal_public_workspace_project(project_id)
         if not project:
             return request.not_found()
-        Document = request.env['itlingo.document'].sudo()
-        documents = Document.search([
-            ('project_id', '=', project_id),
-        ], order='creation_date desc, name')
         Role = request.env['itlingo.project.role'].sudo()
         values = self._prepare_portal_layout_values()
         values.update({
             'project': project,
             'user_role': Role.browse(),
-            'documents': documents,
             'can_upload_ws_documents': False,
             'page_name': 'public_workspace_documentation',
             'members': Role.browse(),
             **self._portal_workspace_hub_common(project, 'documentation', public_hub=True),
+            **self._portal_documents_list_ctx(
+                [('project_id', '=', project_id)], request.params),
+            'sort_base_url': f'/public-workspaces/{project_id}/documents',
         })
         return request.render(
             'itlingo_website_portal.portal_workspace_documentation',
@@ -1641,8 +1784,6 @@ class ITLingoPortal(CustomerPortal):
             'error': {},
         })
 
-        allowed_methodology = {'scrum', 'kanban'}
-
         if request.httprequest.method == 'POST':
             if step == 1:
                 name = (post.get('name') or '').strip()
@@ -1650,7 +1791,6 @@ class ITLingoPortal(CustomerPortal):
                     org_id = int(post.get('organization_id') or 0)
                 except (TypeError, ValueError):
                     org_id = 0
-                methodology = post.get('methodology') or 'scrum'
                 err = {}
                 if not organizations:
                     err['organization_id'] = _('You are not an organization manager.')
@@ -1658,14 +1798,11 @@ class ITLingoPortal(CustomerPortal):
                     err['name'] = _('Workspace name is required.')
                 elif org_id not in organizations.ids:
                     err['organization_id'] = _('Invalid organization.')
-                elif methodology not in allowed_methodology:
-                    err['name'] = _('Invalid methodology.')
                 if err:
                     values['error'] = err
                     values['form'] = {
                         'name': name,
                         'organization_id': org_id,
-                        'methodology': methodology,
                         'is_public_workspace': post.get('is_public_workspace') == '1',
                     }
                     return request.render(
@@ -1675,7 +1812,6 @@ class ITLingoPortal(CustomerPortal):
                 wizard = {
                     'name': name,
                     'organization_id': org_id,
-                    'methodology': methodology,
                     'is_public_workspace': post.get('is_public_workspace') == '1',
                 }
                 sess[self._WS_NEW_SESSION_KEY] = wizard
@@ -1718,7 +1854,6 @@ class ITLingoPortal(CustomerPortal):
                 vals = {
                     'name': wizard['name'],
                     'organization_id': wizard['organization_id'],
-                    'methodology': wizard['methodology'],
                     'description': wizard.get('description') or False,
                     'is_public_workspace': bool(wizard.get('is_public_workspace')),
                 }
@@ -1761,7 +1896,6 @@ class ITLingoPortal(CustomerPortal):
             values['wizard_data'] = {
                 'name': w.get('name'),
                 'organization': org.name if org.exists() else '',
-                'methodology': w.get('methodology'),
                 'is_public_workspace': bool(w.get('is_public_workspace')),
                 'planned_start': w.get('planned_start'),
                 'planned_end': w.get('planned_end'),
@@ -1787,7 +1921,6 @@ class ITLingoPortal(CustomerPortal):
                 values['form'] = {
                     'name': wizard.get('name', ''),
                     'organization_id': wizard.get('organization_id'),
-                    'methodology': wizard.get('methodology', 'scrum'),
                     'is_public_workspace': bool(wizard.get('is_public_workspace')),
                 }
         return request.render('itlingo_website_portal.portal_workspace_wizard', values)
@@ -1807,7 +1940,6 @@ class ITLingoPortal(CustomerPortal):
         if step < 1 or step > 4:
             return request.redirect(f'/my/workspaces/{project_id}/settings/1')
         proj = project.sudo()
-        allowed_methodology = {'scrum', 'kanban'}
         values = self._prepare_portal_layout_values()
         values.update({
             'project': project,
@@ -1825,21 +1957,16 @@ class ITLingoPortal(CustomerPortal):
         if request.httprequest.method == 'POST':
             if step == 1:
                 name = (post.get('name') or '').strip()
-                methodology = post.get('methodology') or 'scrum'
                 is_public = post.get('is_public_workspace') == '1'
                 values['form'] = {
                     'name': name,
-                    'methodology': methodology,
                     'is_public_workspace': is_public,
                 }
                 if not name:
                     values['error']['name'] = _('Workspace name is required.')
-                elif methodology not in allowed_methodology:
-                    values['error']['name'] = _('Invalid methodology.')
                 else:
                     proj.write({
                         'name': name,
-                        'methodology': methodology,
                         'is_public_workspace': is_public,
                     })
                     return request.redirect(f'/my/workspaces/{project_id}/settings/2')
@@ -1877,7 +2004,6 @@ class ITLingoPortal(CustomerPortal):
         if step == 1:
             values['form'] = {
                 'name': proj.name,
-                'methodology': proj.methodology or 'scrum',
                 'is_public_workspace': proj.is_public_workspace,
             }
         elif step == 2:
@@ -1895,7 +2021,6 @@ class ITLingoPortal(CustomerPortal):
         elif step == 4:
             values['wizard_data'] = {
                 'name': proj.name,
-                'methodology': proj.methodology,
                 'organization': proj.organization_id.name if proj.organization_id else '',
                 'is_public_workspace': proj.is_public_workspace,
                 'planned_start': proj.planned_start,
@@ -2232,10 +2357,6 @@ class ITLingoPortal(CustomerPortal):
     @route('/my/workspaces/<int:project_id>/documents', type='http', auth='user', website=True)
     def portal_workspace_documentation(self, project_id, **kw):
         project, user_role = self._portal_ws_access(project_id)
-        Document = request.env['itlingo.document'].sudo()
-        documents = Document.search([
-            ('project_id', '=', project_id),
-        ], order='creation_date desc, name')
         can_doc = bool(
             user_role and user_role.role in self._DOC_EDIT_WS_ROLES,
         )
@@ -2246,13 +2367,15 @@ class ITLingoPortal(CustomerPortal):
             'user_role': user_role,
             'workspace_hub': True,
             'workspace_hub_page': 'documentation',
-            'documents': documents,
             'can_upload_ws_documents': can_doc,
             'doc_message': params.get('message'),
             'doc_error': params.get('error'),
             'page_name': 'workspace_documentation',
             'members': self._portal_workspace_hub_members(project_id),
             **self._portal_workspace_hub_common(project, 'documentation', public_hub=False),
+            **self._portal_documents_list_ctx(
+                [('project_id', '=', project_id)], params),
+            'sort_base_url': f'/my/workspaces/{project_id}/documents',
         })
         return request.render(
             'itlingo_website_portal.portal_workspace_documentation',
@@ -2279,6 +2402,7 @@ class ITLingoPortal(CustomerPortal):
             'workspace_hub_page': 'documentation',
             'doc_types': doc_types,
             'template_type_id': self._template_type_id(),
+            **self._portal_document_form_meta(),
             'page_name': 'workspace_documentation_new',
             'form': {},
             'error': {},
@@ -2312,6 +2436,7 @@ class ITLingoPortal(CustomerPortal):
                     'file_name': fname or False,
                     'status': 'draft',
                     'creator_id': request.env.user.id,
+                    **self._portal_document_meta_vals(post),
                 }
                 self._apply_template_vals(doc_vals, post)
                 try:

@@ -22,6 +22,8 @@ class ItlingoWorkspace(models.Model):
         default=lambda self: self.env.user,
         readonly=True,
     )
+    # Deprecated: removed from all views/portal (2026-07). The column is kept
+    # for now; drop it in a follow-up migration once confirmed.
     methodology = fields.Selection([
         ('scrum', 'Scrum'),
         ('kanban', 'Kanban'),

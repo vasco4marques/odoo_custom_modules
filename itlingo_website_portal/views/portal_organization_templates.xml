@@ -251,7 +251,6 @@
                         <thead class="table-light">
                             <tr>
                                 <th>Workspace</th>
-                                <th>Methodology</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
@@ -261,12 +260,6 @@
                                     <a t-attf-href="/my/workspaces/#{proj.id}">
                                         <t t-out="proj.name"/>
                                     </a>
-                                </td>
-                                <td>
-                                    <t t-if="proj.methodology">
-                                        <t t-out="dict(proj._fields['methodology'].selection).get(proj.methodology)"/>
-                                    </t>
-                                    <t t-else="">—</t>
                                 </td>
                                 <td>
                                     <span class="badge bg-secondary">
@@ -361,6 +354,7 @@
                             </select>
                             <div t-if="error.get('document_type_id')" class="text-danger small mt-1"><t t-out="error['document_type_id']"/></div>
                         </div>
+                        <t t-call="itlingo_documents.portal_document_meta_fields"/>
                         <div class="mb-3">
                             <label class="form-label" for="doc_new_file">File</label>
                             <input type="file" class="form-control" id="doc_new_file" name="document_file"/>

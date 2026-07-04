@@ -50,8 +50,7 @@
                     <notebook>
                         <page string="ITLingo Workspace" name="itlingo_workspace">
                             <group>
-                                <group string="Methodology &amp; Status">
-                                    <field name="methodology"/>
+                                <group string="Status">
                                     <field name="business_status" widget="radio"/>
                                     <field name="is_public_workspace"/>
                                 </group>
@@ -106,7 +105,6 @@
             <list>
                 <field name="name"/>
                 <field name="organization_id" optional="show"/>
-                <field name="methodology" optional="hide"/>
                 <field name="business_status" widget="badge" optional="show"
                        decoration-info="business_status == 'not_started'"
                        decoration-success="business_status == 'executing'"
@@ -125,10 +123,6 @@
             <search>
                 <field name="name"/>
                 <field name="organization_id"/>
-                <filter name="scrum" string="Scrum"
-                        domain="[('methodology', '=', 'scrum')]"/>
-                <filter name="kanban" string="Kanban"
-                        domain="[('methodology', '=', 'kanban')]"/>
                 <filter name="public_workspace" string="Public workspace"
                         domain="[('is_public_workspace', '=', True)]"/>
                 <separator/>
@@ -144,8 +138,6 @@
                 <group name="group_by">
                     <filter name="group_org" string="Organization"
                             context="{'group_by': 'organization_id'}"/>
-                    <filter name="group_methodology" string="Methodology"
-                            context="{'group_by': 'methodology'}"/>
                     <filter name="group_business_status" string="Business Status"
                             context="{'group_by': 'business_status'}"/>
                 </group>

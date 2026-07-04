@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <!-- Shared date formatting: user locale when logged in, DD-MM-YYYY
+         fallback for anonymous visitors. Call with `date_value` set. -->
+    <template id="portal_date" name="Portal formatted date">
+        <t t-if="date_value">
+            <t t-if="request.env.user._is_public()">
+                <t t-out="date_value.strftime('%d-%m-%Y')"/>
+            </t>
+            <t t-else="">
+                <t t-out="date_value" t-options='{"widget": "date"}'/>
+            </t>
+        </t>
+        <t t-else="">—</t>
+    </template>
+
+    <!-- Shared sortable column header (3-click cycle: asc / desc / none).
+         Call inside a <th> with `sort_key` and `sort_label` set. Expects
+         `sortby`, `sortdir`, `sort_base_url` and `sort_qs` (pre-encoded query
+         string of the other filters) in the rendering context. -->
+    <template id="portal_sort_th" name="Sortable column header">
+        <t t-set="s_active" t-value="sortby == sort_key"/>
+        <t t-set="s_next" t-value="'asc' if not s_active else ('desc' if sortdir == 'asc' else None)"/>
+        <t t-set="s_parts" t-value="([sort_qs] if sort_qs else []) + (['sortby=' + sort_key, 'sortdir=' + s_next] if s_next else [])"/>
+        <t t-set="s_href" t-value="(sort_base_url or '') + ('?' + '&amp;'.join(s_parts) if s_parts else '')"/>
+        <a t-att-href="s_href" class="text-reset text-decoration-none d-inline-flex align-items-center gap-1"
+           t-att-title="'Sort ' + ('ascending' if s_next == 'asc' else 'descending' if s_next == 'desc' else 'off')">
+            <t t-out="sort_label"/>
+            <i t-if="s_active and sortdir == 'asc'" class="fa fa-caret-up" aria-hidden="true"/>
+            <i t-elif="s_active and sortdir == 'desc'" class="fa fa-caret-down" aria-hidden="true"/>
+            <i t-else="" class="fa fa-sort text-muted opacity-50" aria-hidden="true"/>
+        </a>
+    </template>
+
     <!-- Breadcrumb entries -->
     <template id="portal_layout" name="Portal layout: ITLingo menu entries"
               inherit_id="portal.portal_breadcrumbs" priority="50">
@@ -65,6 +97,9 @@
             <li t-if="page_name == 'public_workspace_document'" class="breadcrumb-item">
                 <a t-attf-href="/public-workspaces/#{project.id}"><t t-out="project.name"/></a>
             </li>
+            <li t-if="page_name == 'public_workspace_document'" class="breadcrumb-item">
+                <a t-attf-href="/public-workspaces/#{project.id}/documents">Documents</a>
+            </li>
             <li t-if="page_name == 'public_workspace_document'" class="breadcrumb-item active text-truncate">
                 <t t-out="document.name"/>
             </li>
@@ -113,10 +148,10 @@
             <li t-if="page_name == 'dsl_new'" class="breadcrumb-item active">
                 New
             </li>
-            <li t-if="page_name == 'dsl_edit'" class="breadcrumb-item">
+            <li t-if="page_name in ('dsl_edit', 'dsl_view')" class="breadcrumb-item">
                 <a href="/dsl">DSLs</a>
             </li>
-            <li t-if="page_name == 'dsl_edit'" class="breadcrumb-item active text-truncate">
+            <li t-if="page_name in ('dsl_edit', 'dsl_view')" class="breadcrumb-item active text-truncate">
                 <t t-out="dsl.acronym"/>
             </li>
         </xpath>

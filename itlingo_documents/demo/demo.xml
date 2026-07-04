@@ -5,6 +5,8 @@
     <record id="demo_doc_1" model="itlingo.document">
         <field name="name">Requirements Document v1</field>
         <field name="document_type_id" ref="itlingo_documents.doc_type_rsl"/>
+        <field name="language">en</field>
+        <field name="dsl_id" ref="itlingo_dsl.dsl_rsl_1_0"/>
         <field name="version">1.0</field>
         <field name="status">draft</field>
         <field name="project_id" ref="itlingo_workspace_access.project_itlingo_platform"/>
@@ -15,6 +17,7 @@
     <record id="demo_doc_2" model="itlingo.document">
         <field name="name">Test Specification Alpha</field>
         <field name="document_type_id" ref="itlingo_documents.doc_type_tsl"/>
+        <field name="language">en</field>
         <field name="version">1.0</field>
         <field name="status">published</field>
         <field name="project_id" ref="itlingo_workspace_access.project_itlingo_platform"/>

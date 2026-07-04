@@ -31,6 +31,27 @@ class ItlingoDocument(models.Model):
     document_type_id = fields.Many2one(
         'itlingo.document.type', string='Document Type', tracking=True,
     )
+    language = fields.Selection([
+        ('en', 'English'),
+        ('pt', 'Portuguese'),
+        ('es', 'Spanish'),
+        ('fr', 'French'),
+        ('de', 'German'),
+        ('other', 'Other'),
+    ], string='Language', tracking=True,
+        help='Language of the document content.')
+    dsl_id = fields.Many2one(
+        'itlingo.dsl', string='DSL', tracking=True,
+        help='ITLingo DSL this document relates to (if any).',
+    )
+    document_format = fields.Selection([
+        ('word', 'Word'),
+        ('excel', 'Excel'),
+        ('pdf', 'PDF'),
+        ('text', 'Text'),
+        ('other', 'Other'),
+    ], string='Format', compute='_compute_document_format', store=True,
+        help='Grouped format derived from the file extension.')
     dsl_knowledge = fields.Boolean(
         string='DSL Knowledge', tracking=True, default=False,
         help="When enabled on a published document, its content is added to "
@@ -58,6 +79,25 @@ class ItlingoDocument(models.Model):
     library_ids = fields.One2many(
         'itlingo.document.library', 'document_id', string='Libraries',
     )
+
+    _FORMAT_BY_EXTENSION = {
+        'doc': 'word', 'docx': 'word', 'odt': 'word', 'rtf': 'word',
+        'xls': 'excel', 'xlsx': 'excel', 'csv': 'excel', 'ods': 'excel',
+        'pdf': 'pdf',
+        'txt': 'text', 'md': 'text', 'rsl': 'text', 'asl': 'text',
+        'psl': 'text', 'tsl': 'text', 'json': 'text', 'xml': 'text',
+        'yaml': 'text', 'yml': 'text',
+    }
+
+    @api.depends('file_name')
+    def _compute_document_format(self):
+        for doc in self:
+            fname = (doc.file_name or '').strip().lower()
+            if not fname:
+                doc.document_format = False
+                continue
+            ext = fname.rsplit('.', 1)[-1] if '.' in fname else ''
+            doc.document_format = self._FORMAT_BY_EXTENSION.get(ext, 'other')
 
     @api.depends('document_file')
     def _compute_file_size(self):

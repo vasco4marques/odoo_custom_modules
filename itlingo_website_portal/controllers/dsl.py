@@ -119,18 +119,18 @@ class ITLingoDslPortal(CustomerPortal):
         return values
 
     # ──────────────────────────────────────────────
-    # List
+    # List (public read-only catalog; management actions per role)
     # ──────────────────────────────────────────────
 
-    @route(['/dsl', '/dsl/page/<int:page>'], type='http', auth='user', website=True)
+    @route(['/dsl', '/dsl/page/<int:page>'], type='http', auth='public', website=True)
     def portal_dsl_list(self, page=1, **kw):
-        self._require_dsl_area()
         is_admin = self._itlingo_is_admin()
         params = request.params
         Dsl = request.env['itlingo.dsl'].sudo()
 
-        # Admins see every DSL; maintainers see only the DSLs they maintain.
-        domain = [] if is_admin else [('id', 'in', self._maintained_dsl_ids())]
+        # Everyone (including anonymous users) can consult the catalog;
+        # edit/delete actions are rendered per row based on the user's rights.
+        domain = []
         name_q = (params.get('name') or '').strip()
         if name_q:
             domain = domain + [
@@ -152,6 +152,13 @@ class ITLingoDslPortal(CustomerPortal):
             order='acronym, version desc',
         )
 
+        if is_admin:
+            editable_dsl_ids = set(dsls.ids)
+        elif request.env.user._is_public():
+            editable_dsl_ids = set()
+        else:
+            editable_dsl_ids = set(self._maintained_dsl_ids())
+
         values = self._prepare_portal_layout_values()
         values.update({
             'dsls': dsls,
@@ -160,6 +167,7 @@ class ITLingoDslPortal(CustomerPortal):
             'default_url': '/dsl',
             'filters': {'name': name_q},
             'can_manage_dsls': is_admin,
+            'editable_dsl_ids': editable_dsl_ids,
             'dsl_message': params.get('message'),
             'dsl_error': params.get('error'),
         })
@@ -198,14 +206,24 @@ class ITLingoDslPortal(CustomerPortal):
         return request.render('itlingo_website_portal.portal_dsl_new', values)
 
     # ──────────────────────────────────────────────
-    # Edit (metadata + files)
+    # Detail: read-only view for everyone, edit for admins/maintainers
     # ──────────────────────────────────────────────
 
-    @route('/dsl/<int:dsl_id>', type='http', auth='user', website=True,
+    @route('/dsl/<int:dsl_id>', type='http', auth='public', website=True,
            methods=['GET', 'POST'])
     def portal_dsl_edit(self, dsl_id, **post):
         dsl = self._dsl_or_404(dsl_id)
-        self._require_dsl_edit(dsl)
+        if not self._can_edit_dsl(dsl):
+            if request.httprequest.method == 'POST':
+                raise AccessError(_('You can only edit DSLs you maintain.'))
+            values = self._prepare_portal_layout_values()
+            values.update({
+                'dsl': dsl,
+                'page_name': 'dsl_view',
+            })
+            return request.render(
+                'itlingo_website_portal.portal_dsl_view', values,
+            )
         values = self._prepare_portal_layout_values()
         values.update({
             'dsl': dsl,
@@ -278,10 +296,11 @@ class ITLingoDslPortal(CustomerPortal):
         return request.redirect(f'/dsl/{dsl.id}?message=file_updated')
 
     @route('/dsl/<int:dsl_id>/files/<int:file_id>/download', type='http',
-           auth='user', website=True)
+           auth='public', website=True)
     def portal_dsl_file_download(self, dsl_id, file_id, **kw):
+        # DSL definition files are public content (they feed the public
+        # chatbot knowledge base), so anyone may download them.
         dsl = self._dsl_or_404(dsl_id)
-        self._require_dsl_edit(dsl)
         line = self._dsl_file_or_404(dsl, file_id)
         if not line.file:
             return request.not_found()

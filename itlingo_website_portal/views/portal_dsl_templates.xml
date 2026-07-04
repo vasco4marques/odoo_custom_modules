@@ -42,7 +42,8 @@
             </div>
             <t t-if="not dsls">
                 <div class="alert alert-warning" role="alert">
-                    No DSLs found. Use <strong>New DSL</strong> to create one.
+                    <t t-if="can_manage_dsls">No DSLs found. Use <strong>New DSL</strong> to create one.</t>
+                    <t t-else="">No DSLs found.</t>
                 </div>
             </t>
             <t t-if="dsls" t-call="portal.portal_table">
@@ -74,10 +75,17 @@
                             <span class="badge bg-info text-dark"><t t-out="len(dsl_rec.file_ids)"/></span>
                         </td>
                         <td class="text-end text-nowrap">
-                            <a t-attf-href="/dsl/#{dsl_rec.id}"
+                            <a t-if="dsl_rec.id in editable_dsl_ids"
+                               t-attf-href="/dsl/#{dsl_rec.id}"
                                class="btn btn-sm btn-link text-primary p-1"
                                title="Edit" aria-label="Edit">
                                 <i class="fa fa-pencil fa-lg"/>
+                            </a>
+                            <a t-else=""
+                               t-attf-href="/dsl/#{dsl_rec.id}"
+                               class="btn btn-sm btn-link text-primary p-1"
+                               title="View" aria-label="View">
+                                <i class="fa fa-eye fa-lg"/>
                             </a>
                             <form t-if="can_manage_dsls" t-attf-action="/dsl/#{dsl_rec.id}/delete" method="post" class="d-inline">
                                 <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
@@ -158,6 +166,76 @@
                         <a href="/dsl" class="btn btn-outline-secondary">Cancel</a>
                     </div>
                 </form>
+            </div>
+        </t>
+    </template>
+
+    <!-- DSL read-only detail (public catalog view) -->
+    <template id="portal_dsl_view" name="DSL details">
+        <t t-call="portal.portal_layout">
+            <div class="container py-3">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                    <h3 class="mb-0">
+                        <t t-out="dsl.acronym"/> <span class="text-muted">·</span> <t t-out="dsl.name"/>
+                    </h3>
+                    <a href="/dsl" class="btn btn-outline-secondary btn-sm">Back to DSLs</a>
+                </div>
+
+                <div class="card border-0 shadow-sm rounded-3 mb-4">
+                    <div class="card-body">
+                        <p class="text-muted small text-uppercase fw-semibold mb-3">Details</p>
+                        <dl class="row mb-0 small">
+                            <dt class="col-sm-3 text-muted">Acronym</dt>
+                            <dd class="col-sm-9"><t t-out="dsl.acronym"/></dd>
+                            <dt class="col-sm-3 text-muted">Name</dt>
+                            <dd class="col-sm-9"><t t-out="dsl.name"/></dd>
+                            <dt class="col-sm-3 text-muted">Version</dt>
+                            <dd class="col-sm-9"><t t-out="dsl.version"/></dd>
+                            <dt class="col-sm-3 text-muted">Status</dt>
+                            <dd class="col-sm-9">
+                                <span t-attf-class="badge #{'bg-success' if dsl.status == 'active' else 'bg-secondary'}">
+                                    <t t-out="dict(dsl._fields['status'].selection).get(dsl.status)"/>
+                                </span>
+                            </dd>
+                            <dt class="col-sm-3 text-muted">File extensions</dt>
+                            <dd class="col-sm-9"><t t-out="dsl.file_extensions or '—'"/></dd>
+                            <dt class="col-sm-3 text-muted">Documentation</dt>
+                            <dd class="col-sm-9">
+                                <a t-if="dsl.documentation_url" t-att-href="dsl.documentation_url"
+                                   target="_blank" rel="noopener noreferrer">
+                                    <t t-out="dsl.documentation_url"/>
+                                </a>
+                                <t t-else="">—</t>
+                            </dd>
+                            <dt class="col-sm-3 text-muted">Description</dt>
+                            <dd class="col-sm-9"><t t-out="dsl.description or '—'"/></dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm rounded-3">
+                    <div class="card-body">
+                        <p class="text-muted small text-uppercase fw-semibold mb-3">Definition files</p>
+                        <t t-set="public_files" t-value="dsl.file_ids.filtered(lambda f: f.is_enabled)"/>
+                        <t t-if="public_files">
+                            <ul class="list-group list-group-flush mb-0">
+                                <li t-foreach="public_files" t-as="f"
+                                    class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                    <span>
+                                        <i class="fa fa-file-o me-2 text-muted"/>
+                                        <a t-attf-href="/dsl/#{dsl.id}/files/#{f.id}/download"><t t-out="f.file_name"/></a>
+                                    </span>
+                                    <span class="badge bg-light text-dark border text-capitalize">
+                                        <t t-out="f.file_type"/>
+                                    </span>
+                                </li>
+                            </ul>
+                        </t>
+                        <t t-else="">
+                            <p class="text-muted fst-italic mb-0">No definition files published yet.</p>
+                        </t>
+                    </div>
+                </div>
             </div>
         </t>
     </template>

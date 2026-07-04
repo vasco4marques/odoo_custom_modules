@@ -32,6 +32,37 @@
         </t>
     </template>
 
+    <!-- Language + DSL selects shared by the document create/edit forms.
+         Expects `form`, `dsls` and `doc_language_selection` in context. -->
+    <template id="portal_document_meta_fields" name="Document Language/DSL Fields">
+        <div class="row">
+            <div class="mb-3 col-md-6">
+                <label class="form-label" for="doc_meta_language">Language</label>
+                <select class="form-select" id="doc_meta_language" name="language">
+                    <option value="">—</option>
+                    <t t-foreach="doc_language_selection" t-as="opt">
+                        <option t-att-value="opt[0]"
+                                t-att-selected="(form.get('language') or '') == opt[0]">
+                            <t t-out="opt[1]"/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+            <div class="mb-3 col-md-6">
+                <label class="form-label" for="doc_meta_dsl">DSL</label>
+                <select class="form-select" id="doc_meta_dsl" name="dsl_id">
+                    <option value="">—</option>
+                    <t t-foreach="dsls" t-as="dsl_rec">
+                        <option t-att-value="dsl_rec.id"
+                                t-att-selected="str(form.get('dsl_id') or '') == str(dsl_rec.id)">
+                            <t t-out="dsl_rec.acronym"/> <t t-out="dsl_rec.version"/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+        </div>
+    </template>
+
     <!-- Document detail (scoped under a workspace or organization).
          Callers must provide ``doc_base_url`` (e.g. /my/workspaces/5/documents
          or /my/organizations/3/documents) used to build the action links. -->
@@ -58,27 +89,52 @@
                     <div class="row">
                         <div class="col-md-6">
                             <dl>
-                                <dt>Type</dt>
+                                <dt>Workspace</dt>
+                                <dd><t t-out="document.project_id.name or 'N/A'"/></dd>
+                                <dt>Organization</dt>
+                                <dd><t t-out="document.organization_id.name or 'N/A'"/></dd>
+                                <dt>Document Type</dt>
                                 <dd><t t-out="document.document_type_id.name or 'N/A'"/></dd>
+                                <dt>DSL</dt>
+                                <dd>
+                                    <t t-if="document.dsl_id" t-out="document.dsl_id.acronym"/>
+                                    <t t-else="">—</t>
+                                </dd>
                                 <dt>DSL knowledge</dt>
                                 <dd>
                                     <span t-if="document.dsl_knowledge" class="badge bg-info text-dark">In theory pool</span>
                                     <t t-else="">No</t>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <dl>
+                                <dt>Language</dt>
+                                <dd>
+                                    <t t-if="document.language" t-out="dict(document._fields['language'].selection).get(document.language)"/>
+                                    <t t-else="">—</t>
+                                </dd>
+                                <dt>Format</dt>
+                                <dd>
+                                    <t t-if="document.document_format" t-out="dict(document._fields['document_format'].selection).get(document.document_format)"/>
+                                    <t t-else="">—</t>
                                 </dd>
                                 <dt>Version</dt>
                                 <dd><t t-out="document.version"/></dd>
                                 <dt>Creator</dt>
                                 <dd><t t-out="document.creator_id.name"/></dd>
                                 <dt>Created</dt>
-                                <dd><t t-out="document.creation_date" t-options='{"widget": "datetime"}'/></dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <dl>
-                                <dt>Workspace</dt>
-                                <dd><t t-out="document.project_id.name or 'N/A'"/></dd>
-                                <dt>Organization</dt>
-                                <dd><t t-out="document.organization_id.name or 'N/A'"/></dd>
+                                <dd>
+                                    <t t-call="itlingo_website_portal.portal_date">
+                                        <t t-set="date_value" t-value="document.creation_date"/>
+                                    </t>
+                                </dd>
+                                <dt>Last Modified</dt>
+                                <dd>
+                                    <t t-call="itlingo_website_portal.portal_date">
+                                        <t t-set="date_value" t-value="document.write_date"/>
+                                    </t>
+                                </dd>
                             </dl>
                         </div>
                     </div>
@@ -140,6 +196,7 @@
                             </select>
                             <div t-if="error.get('document_type_id')" class="text-danger small mt-1"><t t-out="error['document_type_id']"/></div>
                         </div>
+                        <t t-call="itlingo_documents.portal_document_meta_fields"/>
                         <div class="mb-3">
                             <label class="form-label" for="doc_edit_status">Status</label>
                             <select class="form-select" id="doc_edit_status" name="status">

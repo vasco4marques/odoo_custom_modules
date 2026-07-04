@@ -134,24 +134,27 @@ def _dedup_filename(filename: str, existing_names: set[str]) -> str:
 
 
 class ChatController(http.Controller):
-    def _workspace_shell_values(self, project_id: int, chat_url: str, token: str) -> dict:
+    def _workspace_shell_values(self, project_id: int, chat_url: str, token: str,
+                                public_hub: bool = False) -> dict:
         project = request.env["itlingo.workspace"].sudo().browse(project_id)
+        prefix = (
+            f"/public-workspaces/{project_id}" if public_hub
+            else f"/my/workspaces/{project_id}"
+        )
         return {
             "project": project,
             "project_id": project_id,
             "workspace_key": project.workspace_key,
             "workspace_session_id": str(project.workspace_key),
-            "ws_hub_prefix": f"/my/workspaces/{project_id}",
+            "ws_hub_prefix": prefix,
             "page_name": "workspace_chat",
             "workspace_hub_page": "chat",
-            "workspace_hub_public": False,
+            "workspace_hub_public": public_hub,
             "chat_url": chat_url,
             "token": token,
         }
 
-    @http.route(['/my/workspaces/<int:project_id>/chat'], type='http', auth='user', website=True)
-    def workspace_chat(self, project_id, **kw):
-        # read configuration
+    def _chat_config(self):
         params = request.env['ir.config_parameter'].sudo()
         chat_url = (
             params.get_param('itlingo_chatbot.chatbot_url')
@@ -159,16 +162,50 @@ class ChatController(http.Controller):
             or 'http://127.0.0.1:8000/'
         )
         secret = (os.getenv('ITLINGO_CHATBOT_SECRET') or params.get_param('itlingo_chatbot.secret', default=None) or '').strip()
+        return chat_url, secret
 
-        user = request.env.user
-        token = ''
-        if secret:
-            try:
-                token = _build_workspace_token(project_id, user, secret)
-            except Exception:
-                token = ''
+    def _build_token_or_empty(self, project_id, user, secret):
+        if not secret:
+            return ''
+        try:
+            return _build_workspace_token(project_id, user, secret)
+        except Exception:
+            return ''
 
+    @http.route(['/my/workspaces/<int:project_id>/chat'], type='http', auth='user', website=True)
+    def workspace_chat(self, project_id, **kw):
+        chat_url, secret = self._chat_config()
+        token = self._build_token_or_empty(project_id, request.env.user, secret)
         return request.render('itlingo_chatbot_integration.chat_page', self._workspace_shell_values(project_id, chat_url, token))
+
+    @http.route(['/public-workspaces/<int:project_id>/chat'], type='http', auth='public', website=True)
+    def public_workspace_chat(self, project_id, **kw):
+        """Read-only chatbot for anonymous visitors of a public workspace.
+
+        The token is built for the current (public or roleless) user, so it
+        always carries ``read_only: true`` and the chatbot rejects any write
+        (new chats, messages, uploads) while allowing browsing of the
+        workspace's existing chats.
+        """
+        project = request.env['itlingo.workspace'].sudo().browse(project_id)
+        if not project.exists() or not project.is_public_workspace:
+            return request.not_found()
+        user = request.env.user
+        if not user._is_public():
+            # Workspace members keep their normal (possibly writable) hub.
+            has_role = request.env['itlingo.project.role'].sudo().search_count([
+                ('user_id', '=', user.id),
+                ('project_id', '=', project_id),
+                ('state', '=', 'accepted'),
+            ])
+            if has_role:
+                return request.redirect(f'/my/workspaces/{project_id}/chat')
+        chat_url, secret = self._chat_config()
+        token = self._build_token_or_empty(project_id, user, secret)
+        return request.render(
+            'itlingo_chatbot_integration.chat_page',
+            self._workspace_shell_values(project_id, chat_url, token, public_hub=True),
+        )
 
     # ------------------------------------------------------------------
     # Chatbot document export (Chatbot -> Cloud -> ITOI)

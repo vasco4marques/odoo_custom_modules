@@ -1,10 +1,10 @@
 {
     'name': 'ITLingo Workspace Access',
-    'version': '19.0.2.0.0',
+    'version': '19.0.2.1.0',
     'category': 'Services/Project',
     'summary': 'Workspace role management for ITLingo Cloud',
     'description': """
-Provides the ITLingo workspace model (organization, methodology, business
+Provides the ITLingo workspace model (organization, business
 status, costs) and implements workspace-level role/invitation workflows.
     """,
     'author': 'ITLingo',
