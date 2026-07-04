@@ -33,18 +33,21 @@ class ItlingoWorkspace(models.Model):
         ('executing', 'Executing'),
         ('canceled', 'Canceled'),
         ('concluded', 'Concluded'),
-    ], string='Business Status', default='not_started', tracking=True)
+    ], string='State', default='not_started', tracking=True)
     planned_start = fields.Date(string='Planned Start')
     planned_end = fields.Date(string='Planned End')
     actual_start = fields.Date(string='Actual Start')
     actual_end = fields.Date(string='Actual End')
-    planned_cost = fields.Float(string='Planned Cost', digits=(12, 2))
-    current_cost = fields.Float(string='Current Cost', digits=(12, 2))
+    # Deprecated: cost accounting is out of scope for the platform. Removed
+    # from all views/portal (2026-07); drop the columns in a follow-up
+    # migration once confirmed.
+    planned_cost = fields.Float(string='Planned Cost (deprecated)', digits=(12, 2))
+    current_cost = fields.Float(string='Current Cost (deprecated)', digits=(12, 2))
     is_public_workspace = fields.Boolean(
         string='Public workspace',
         default=False,
         tracking=True,
-        help='If enabled, the workspace is listed on the public workspace page and all users can see its documents, and specifications.',
+        help='If enabled, the workspace is listed on the public workspace page and all users can view its documents, specifications and AI chats.',
     )
 
     workspace_key = fields.Char(

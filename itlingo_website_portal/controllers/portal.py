@@ -1837,6 +1837,8 @@ class ITLingoPortal(CustomerPortal):
             'user_role': Role.browse(),
             'page_name': 'public_workspace_detail',
             'members': Role.browse(),
+            'stats_cards': self._portal_ws_stats_cards(
+                project, f'/public-workspaces/{project_id}', public_hub=True),
             **self._portal_workspace_hub_common(project, 'home', public_hub=True),
         })
         return request.render('itlingo_website_portal.portal_workspace_detail', values)
@@ -2066,7 +2068,11 @@ class ITLingoPortal(CustomerPortal):
                 return request.redirect('/my/workspaces/new/step/2')
 
             if step == 2:
-                wizard = sess.get(self._WS_NEW_SESSION_KEY) or {}
+                # Copy before mutating: updating the session-stored dict in
+                # place makes Session.__setitem__ compare the value against
+                # itself, so the session was never marked dirty and the dates
+                # entered here were silently lost on redirect (D.1 note 2).
+                wizard = dict(sess.get(self._WS_NEW_SESSION_KEY) or {})
                 if not wizard.get('name'):
                     return request.redirect('/my/workspaces/new/step/1')
                 values['form'] = dict(post)
@@ -2074,19 +2080,11 @@ class ITLingoPortal(CustomerPortal):
                 wizard['planned_end'] = post.get('planned_end') or False
                 wizard['actual_start'] = post.get('actual_start') or False
                 wizard['actual_end'] = post.get('actual_end') or False
-                try:
-                    wizard['planned_cost'] = float(post.get('planned_cost') or 0)
-                except (TypeError, ValueError):
-                    wizard['planned_cost'] = 0.0
-                try:
-                    wizard['current_cost'] = float(post.get('current_cost') or 0)
-                except (TypeError, ValueError):
-                    wizard['current_cost'] = 0.0
                 sess[self._WS_NEW_SESSION_KEY] = wizard
                 return request.redirect('/my/workspaces/new/step/3')
 
             if step == 3:
-                wizard = sess.get(self._WS_NEW_SESSION_KEY) or {}
+                wizard = dict(sess.get(self._WS_NEW_SESSION_KEY) or {})
                 if not wizard.get('name'):
                     return request.redirect('/my/workspaces/new/step/1')
                 wizard['description'] = post.get('description') or ''
@@ -2108,10 +2106,6 @@ class ITLingoPortal(CustomerPortal):
                 for f in ('planned_start', 'planned_end', 'actual_start', 'actual_end'):
                     if wizard.get(f):
                         vals[f] = wizard[f]
-                if wizard.get('planned_cost'):
-                    vals['planned_cost'] = wizard['planned_cost']
-                if wizard.get('current_cost'):
-                    vals['current_cost'] = wizard['current_cost']
                 project = Project.create(vals)
                 WsRole.create({
                     'project_id': project.id,
@@ -2131,8 +2125,6 @@ class ITLingoPortal(CustomerPortal):
                 'planned_end': wizard.get('planned_end') or '',
                 'actual_start': wizard.get('actual_start') or '',
                 'actual_end': wizard.get('actual_end') or '',
-                'planned_cost': wizard.get('planned_cost', ''),
-                'current_cost': wizard.get('current_cost', ''),
             }
         elif step == 3:
             values['form'] = {'description': wizard.get('description') or ''}
@@ -2149,8 +2141,6 @@ class ITLingoPortal(CustomerPortal):
                 'planned_end': w.get('planned_end'),
                 'actual_start': w.get('actual_start'),
                 'actual_end': w.get('actual_end'),
-                'planned_cost': w.get('planned_cost'),
-                'current_cost': w.get('current_cost'),
                 'description': w.get('description'),
             }
         if step == 1:
@@ -2223,25 +2213,11 @@ class ITLingoPortal(CustomerPortal):
                     values,
                 )
             if step == 2:
-                pstart = post.get('planned_start') or False
-                pend = post.get('planned_end') or False
-                astart = post.get('actual_start') or False
-                aend = post.get('actual_end') or False
-                try:
-                    pcost = float(post.get('planned_cost') or 0)
-                except (TypeError, ValueError):
-                    pcost = 0.0
-                try:
-                    ccost = float(post.get('current_cost') or 0)
-                except (TypeError, ValueError):
-                    ccost = 0.0
                 proj.write({
-                    'planned_start': pstart or False,
-                    'planned_end': pend or False,
-                    'actual_start': astart or False,
-                    'actual_end': aend or False,
-                    'planned_cost': pcost,
-                    'current_cost': ccost,
+                    'planned_start': post.get('planned_start') or False,
+                    'planned_end': post.get('planned_end') or False,
+                    'actual_start': post.get('actual_start') or False,
+                    'actual_end': post.get('actual_end') or False,
                 })
                 return request.redirect(f'/my/workspaces/{project_id}/settings/3')
             if step == 3:
@@ -2260,8 +2236,6 @@ class ITLingoPortal(CustomerPortal):
                 'planned_end': proj.planned_end or '',
                 'actual_start': proj.actual_start or '',
                 'actual_end': proj.actual_end or '',
-                'planned_cost': proj.planned_cost,
-                'current_cost': proj.current_cost,
             }
         elif step == 3:
             desc = proj.description or ''
@@ -2275,8 +2249,6 @@ class ITLingoPortal(CustomerPortal):
                 'planned_end': proj.planned_end,
                 'actual_start': proj.actual_start,
                 'actual_end': proj.actual_end,
-                'planned_cost': proj.planned_cost,
-                'current_cost': proj.current_cost,
                 'description': proj.description,
             }
         return request.render('itlingo_website_portal.portal_workspace_wizard', values)
@@ -2305,6 +2277,77 @@ class ITLingoPortal(CustomerPortal):
             ('state', '=', 'accepted'),
         ])
 
+    def _portal_ws_stats_cards(self, project, hub_prefix, public_hub=False):
+        """Grouped indicator cards for the workspace home (same design as the
+        organization dashboard, C.3 / D.2 (c))."""
+        palette = self._STATS_PALETTE
+        cards = []
+
+        Document = request.env['itlingo.document'].sudo()
+        doc_dom = [('project_id', '=', project.id)]
+        doc_type_rows = [
+            {
+                'label': doc_type.name if doc_type else 'No type',
+                'count': count,
+                'url': f'{hub_prefix}/documents?type_id={doc_type.id}' if doc_type else None,
+                'color': palette[i % len(palette)],
+            }
+            for i, (doc_type, count) in enumerate(Document._read_group(
+                doc_dom, groupby=['document_type_id'], aggregates=['__count'],
+            ))
+        ]
+        doc_dsl_rows = [
+            {
+                'label': f'{dsl.acronym} {dsl.version}'.strip() if dsl else 'No DSL',
+                'count': count,
+                'url': f'{hub_prefix}/documents?dsl_id={dsl.id}' if dsl else None,
+                'color': palette[(i + 2) % len(palette)],
+            }
+            for i, (dsl, count) in enumerate(Document._read_group(
+                doc_dom, groupby=['dsl_id'], aggregates=['__count'],
+            ))
+        ]
+        cards.append({
+            'title': 'Documents',
+            'icon': 'fa-file-text-o',
+            'total': Document.search_count(doc_dom),
+            'total_url': f'{hub_prefix}/documents',
+            'rows_title': 'By type',
+            'rows': doc_type_rows,
+            'rows2_title': 'By DSL',
+            'rows2': doc_dsl_rows,
+        })
+
+        # The public hub has no users page, so the Users card is members-only.
+        if not public_hub:
+            WsRole = request.env['itlingo.project.role'].sudo()
+            role_dom = [('project_id', '=', project.id), ('state', '=', 'accepted')]
+            role_counts = dict(WsRole._read_group(
+                role_dom, groupby=['role'], aggregates=['__count'],
+            ))
+            role_labels = dict(WsRole._fields['role'].selection)
+            role_colors = {
+                'ws_manager': '#6f42c1',
+                'doc_manager': '#198754',
+                'ws_member': '#adb5bd',
+            }
+            cards.append({
+                'title': 'Users',
+                'icon': 'fa-users',
+                'total': sum(role_counts.values()),
+                'total_url': f'{hub_prefix}/users',
+                'rows': [
+                    {
+                        'label': role_labels[key],
+                        'count': role_counts.get(key, 0),
+                        'url': f'{hub_prefix}/users',
+                        'color': role_colors[key],
+                    }
+                    for key in ('ws_manager', 'doc_manager', 'ws_member')
+                ],
+            })
+        return cards
+
     @route('/my/workspaces/<int:project_id>', type='http', auth='user', website=True)
     def portal_workspace_detail(self, project_id, **kw):
         project, user_role = self._portal_ws_access(project_id)
@@ -2320,6 +2363,8 @@ class ITLingoPortal(CustomerPortal):
             'ws_message': params.get('message'),
             'page_name': 'workspace_detail',
             'members': self._portal_workspace_hub_members(project_id),
+            'stats_cards': self._portal_ws_stats_cards(
+                project, f'/my/workspaces/{project_id}'),
             **self._portal_workspace_hub_common(project, 'home', public_hub=False),
         })
         return request.render('itlingo_website_portal.portal_workspace_detail', values)

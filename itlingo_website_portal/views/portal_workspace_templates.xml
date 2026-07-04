@@ -91,8 +91,8 @@
                         <th>Organization</th>
                         <th>Your Role</th>
                         <th>Public</th>
-                        <th>Status</th>
-                        <th>Change status</th>
+                        <th>State</th>
+                        <th>Change state</th>
                         <th class="text-end">Actions</th>
                     </tr>
                 </thead>
@@ -249,7 +249,7 @@
                         <th>
                             <t t-call="itlingo_website_portal.portal_sort_th">
                                 <t t-set="sort_key" t-value="'status'"/>
-                                <t t-set="sort_label">Status</t>
+                                <t t-set="sort_label">State</t>
                             </t>
                         </th>
                     </tr>
@@ -419,88 +419,88 @@
         </t>
     </template>
 
-    <!-- Workspace Detail / Home dashboard (filled in by controller with charts partial) -->
+    <!-- Workspace Detail / Home dashboard -->
     <template id="portal_workspace_detail" name="Workspace Detail">
         <t t-call="itlingo_website_portal.portal_workspace_hub_shell">
-            <div class="row g-4 align-items-start">
-                <div class="col-12">
-                    <div class="card border-0 shadow-sm rounded-3">
-                        <div class="card-body">
-                            <h2 class="h5 mb-3"><t t-out="project.name"/></h2>
-                            <dl class="row mb-0 small">
-                                <dt class="col-sm-4 text-muted">Description</dt>
-                                <dd class="col-sm-8">
-                                    <t t-if="project.description">
-                                        <div t-field="project.description"/>
-                                    </t>
-                                    <t t-else="">—</t>
-                                </dd>
-                                <dt class="col-sm-4 text-muted">Creator</dt>
-                                <dd class="col-sm-8">
-                                    <t t-if="project.creator_id" t-out="project.creator_id.name"/>
-                                    <t t-else="">—</t>
-                                </dd>
-                                <dt class="col-sm-4 text-muted">Organization</dt>
-                                <dd class="col-sm-8">
-                                    <t t-if="project.organization_id and not workspace_hub_public">
-                                        <a t-attf-href="/my/organizations/#{project.organization_id.id}">
-                                            <t t-out="project.organization_id.name"/>
-                                        </a>
-                                    </t>
-                                    <t t-if="project.organization_id and workspace_hub_public">
-                                        <t t-out="project.organization_id.name"/>
-                                    </t>
-                                    <t t-if="not project.organization_id">—</t>
-                                </dd>
-                                <dt t-if="user_role" class="col-sm-4 text-muted">Your role</dt>
-                                <dd t-if="user_role" class="col-sm-8">
-                                    <span class="badge bg-info text-dark">
-                                        <t t-out="dict(user_role._fields['role'].selection).get(user_role.role)"/>
-                                    </span>
-                                </dd>
-                                <dt class="col-sm-4 text-muted">Business status</dt>
-                                <dd class="col-sm-8">
-                                    <span class="badge bg-secondary">
-                                        <t t-out="dict(project._fields['business_status'].selection).get(project.business_status or 'not_started')"/>
-                                    </span>
-                                </dd>
-                                <dt class="col-sm-4 text-muted">Creation date</dt>
-                                <dd class="col-sm-8">
-                                    <t t-call="itlingo_website_portal.portal_date">
-                                        <t t-set="date_value" t-value="project.create_date"/>
-                                    </t>
-                                </dd>
-                                <dt class="col-sm-4 text-muted">Planned start</dt>
-                                <dd class="col-sm-8">
-                                    <t t-call="itlingo_website_portal.portal_date">
-                                        <t t-set="date_value" t-value="project.planned_start"/>
-                                    </t>
-                                </dd>
-                                <dt class="col-sm-4 text-muted">Planned end</dt>
-                                <dd class="col-sm-8">
-                                    <t t-call="itlingo_website_portal.portal_date">
-                                        <t t-set="date_value" t-value="project.planned_end"/>
-                                    </t>
-                                </dd>
-                                <dt class="col-sm-4 text-muted">Actual start</dt>
-                                <dd class="col-sm-8">
-                                    <t t-call="itlingo_website_portal.portal_date">
-                                        <t t-set="date_value" t-value="project.actual_start"/>
-                                    </t>
-                                </dd>
-                                <dt class="col-sm-4 text-muted">Actual end</dt>
-                                <dd class="col-sm-8">
-                                    <t t-call="itlingo_website_portal.portal_date">
-                                        <t t-set="date_value" t-value="project.actual_end"/>
-                                    </t>
-                                </dd>
-                                <dt class="col-sm-4 text-muted">Planned cost</dt>
-                                <dd class="col-sm-8"><t t-out="project.planned_cost if project.planned_cost else '—'"/></dd>
-                                <dt class="col-sm-4 text-muted">Current cost</dt>
-                                <dd class="col-sm-8"><t t-out="project.current_cost if project.current_cost else '—'"/></dd>
-                            </dl>
-                        </div>
-                    </div>
+            <!-- Description: full-width HTML block, no label (D.2 a) -->
+            <div t-if="project.description" class="card border-0 shadow-sm rounded-3 mb-4">
+                <div class="card-body">
+                    <div t-field="project.description"/>
+                </div>
+            </div>
+
+            <!-- Grouped indicator cards, same design as the org dashboard (D.2 c) -->
+            <t t-if="stats_cards">
+                <t t-call="itlingo_website_portal.portal_stats_cards">
+                    <t t-set="stats_col_class" t-value="'col-12 col-md-6'"/>
+                </t>
+            </t>
+
+            <!-- Compact metadata (D.2 b) -->
+            <div class="card border-0 shadow-sm rounded-3 mt-4">
+                <div class="card-body">
+                    <h2 class="h6 text-muted mb-3">Details</h2>
+                    <dl class="row mb-0 small">
+                        <dt class="col-sm-4 text-muted">Creator</dt>
+                        <dd class="col-sm-8">
+                            <t t-if="project.creator_id" t-out="project.creator_id.name"/>
+                            <t t-else="">—</t>
+                        </dd>
+                        <dt class="col-sm-4 text-muted">Organization</dt>
+                        <dd class="col-sm-8">
+                            <t t-if="project.organization_id and not workspace_hub_public">
+                                <a t-attf-href="/my/organizations/#{project.organization_id.id}">
+                                    <t t-out="project.organization_id.name"/>
+                                </a>
+                            </t>
+                            <t t-if="project.organization_id and workspace_hub_public">
+                                <t t-out="project.organization_id.name"/>
+                            </t>
+                            <t t-if="not project.organization_id">—</t>
+                        </dd>
+                        <dt t-if="user_role" class="col-sm-4 text-muted">Your role</dt>
+                        <dd t-if="user_role" class="col-sm-8">
+                            <span class="badge bg-info text-dark">
+                                <t t-out="dict(user_role._fields['role'].selection).get(user_role.role)"/>
+                            </span>
+                        </dd>
+                        <dt class="col-sm-4 text-muted">State</dt>
+                        <dd class="col-sm-8">
+                            <span class="badge bg-secondary">
+                                <t t-out="dict(project._fields['business_status'].selection).get(project.business_status or 'not_started')"/>
+                            </span>
+                        </dd>
+                        <dt class="col-sm-4 text-muted">Creation date</dt>
+                        <dd class="col-sm-8">
+                            <t t-call="itlingo_website_portal.portal_date">
+                                <t t-set="date_value" t-value="project.create_date"/>
+                            </t>
+                        </dd>
+                        <dt class="col-sm-4 text-muted">Planned start</dt>
+                        <dd class="col-sm-8">
+                            <t t-call="itlingo_website_portal.portal_date">
+                                <t t-set="date_value" t-value="project.planned_start"/>
+                            </t>
+                        </dd>
+                        <dt class="col-sm-4 text-muted">Planned end</dt>
+                        <dd class="col-sm-8">
+                            <t t-call="itlingo_website_portal.portal_date">
+                                <t t-set="date_value" t-value="project.planned_end"/>
+                            </t>
+                        </dd>
+                        <dt class="col-sm-4 text-muted">Actual start</dt>
+                        <dd class="col-sm-8">
+                            <t t-call="itlingo_website_portal.portal_date">
+                                <t t-set="date_value" t-value="project.actual_start"/>
+                            </t>
+                        </dd>
+                        <dt class="col-sm-4 text-muted">Actual end</dt>
+                        <dd class="col-sm-8">
+                            <t t-call="itlingo_website_portal.portal_date">
+                                <t t-set="date_value" t-value="project.actual_end"/>
+                            </t>
+                        </dd>
+                    </dl>
                 </div>
             </div>
         </t>
@@ -783,7 +783,7 @@
                         <input class="form-check-input" type="checkbox" name="is_public_workspace" id="ws_wiz_pub_e" value="1"
                                t-att-checked="form.get('is_public_workspace')"/>
                         <label class="form-check-label" for="ws_wiz_pub_e">
-                            Public workspace (all users can view documents and specifications)
+                            Public workspace (all users can view documents, specifications and AI chats)
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary">Continue</button>
@@ -812,7 +812,7 @@
                         <input class="form-check-input" type="checkbox" name="is_public_workspace" id="ws_wiz_pub" value="1"
                                t-att-checked="form.get('is_public_workspace')"/>
                         <label class="form-check-label" for="ws_wiz_pub">
-                            Public workspace (all users can view documents and specifications)
+                            Public workspace (all users can view documents, specifications and AI chats)
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary">Continue</button>
@@ -825,6 +825,10 @@
                   method="post" class="card border-0 shadow-sm rounded-3">
                 <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                 <div class="card-body row g-3">
+                    <div class="col-12">
+                        <h2 class="h6 mb-0">Planning <span class="text-muted fw-normal">(optional)</span></h2>
+                        <p class="text-muted small mb-0">All dates are optional and can be left empty.</p>
+                    </div>
                     <div class="col-md-6">
                         <label class="form-label" for="pstart">Planned start</label>
                         <input type="date" class="form-control" id="pstart" name="planned_start" t-att-value="form.get('planned_start') or ''"/>
@@ -841,14 +845,6 @@
                         <label class="form-label" for="aend">Actual end</label>
                         <input type="date" class="form-control" id="aend" name="actual_end" t-att-value="form.get('actual_end') or ''"/>
                     </div>
-                    <div class="col-md-6">
-                        <label class="form-label" for="pcost">Planned cost</label>
-                        <input type="number" step="0.01" class="form-control" id="pcost" name="planned_cost" t-att-value="form.get('planned_cost') if form.get('planned_cost') is not None else ''"/>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label" for="ccost">Current cost</label>
-                        <input type="number" step="0.01" class="form-control" id="ccost" name="current_cost" t-att-value="form.get('current_cost') if form.get('current_cost') is not None else ''"/>
-                    </div>
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">Continue</button>
                     </div>
@@ -857,6 +853,10 @@
             <form t-else="" action="/my/workspaces/new/step/2" method="post" class="card border-0 shadow-sm rounded-3">
                 <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                 <div class="card-body row g-3">
+                    <div class="col-12">
+                        <h2 class="h6 mb-0">Planning <span class="text-muted fw-normal">(optional)</span></h2>
+                        <p class="text-muted small mb-0">All dates are optional and can be left empty.</p>
+                    </div>
                     <div class="col-md-6">
                         <label class="form-label" for="pstart_c">Planned start</label>
                         <input type="date" class="form-control" id="pstart_c" name="planned_start" t-att-value="form.get('planned_start') or ''"/>
@@ -872,14 +872,6 @@
                     <div class="col-md-6">
                         <label class="form-label" for="aend_c">Actual end</label>
                         <input type="date" class="form-control" id="aend_c" name="actual_end" t-att-value="form.get('actual_end') or ''"/>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label" for="pcost_c">Planned cost</label>
-                        <input type="number" step="0.01" class="form-control" id="pcost_c" name="planned_cost" t-att-value="form.get('planned_cost') if form.get('planned_cost') is not None else ''"/>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label" for="ccost_c">Current cost</label>
-                        <input type="number" step="0.01" class="form-control" id="ccost_c" name="current_cost" t-att-value="form.get('current_cost') if form.get('current_cost') is not None else ''"/>
                     </div>
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">Continue</button>
@@ -919,6 +911,8 @@
                         <dt class="col-sm-4">Public workspace</dt><dd class="col-sm-8"><t t-out="'Yes' if wizard_data.get('is_public_workspace') else 'No'"/></dd>
                         <dt class="col-sm-4">Planned start</dt><dd class="col-sm-8"><t t-out="wizard_data.get('planned_start') or '—'"/></dd>
                         <dt class="col-sm-4">Planned end</dt><dd class="col-sm-8"><t t-out="wizard_data.get('planned_end') or '—'"/></dd>
+                        <dt class="col-sm-4">Actual start</dt><dd class="col-sm-8"><t t-out="wizard_data.get('actual_start') or '—'"/></dd>
+                        <dt class="col-sm-4">Actual end</dt><dd class="col-sm-8"><t t-out="wizard_data.get('actual_end') or '—'"/></dd>
                     </dl>
                     <form t-if="wizard_mode != 'edit'" action="/my/workspaces/new/step/4" method="post" class="mt-3">
                         <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>

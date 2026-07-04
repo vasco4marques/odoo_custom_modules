@@ -50,7 +50,7 @@
                     <notebook>
                         <page string="ITLingo Workspace" name="itlingo_workspace">
                             <group>
-                                <group string="Status">
+                                <group string="State">
                                     <field name="business_status" widget="radio"/>
                                     <field name="is_public_workspace"/>
                                 </group>
@@ -59,12 +59,6 @@
                                     <field name="planned_end"/>
                                     <field name="actual_start"/>
                                     <field name="actual_end"/>
-                                </group>
-                            </group>
-                            <group>
-                                <group string="Cost">
-                                    <field name="planned_cost"/>
-                                    <field name="current_cost"/>
                                 </group>
                             </group>
                             <separator string="Workspace Roles"/>
@@ -138,7 +132,7 @@
                 <group name="group_by">
                     <filter name="group_org" string="Organization"
                             context="{'group_by': 'organization_id'}"/>
-                    <filter name="group_business_status" string="Business Status"
+                    <filter name="group_business_status" string="State"
                             context="{'group_by': 'business_status'}"/>
                 </group>
             </search>

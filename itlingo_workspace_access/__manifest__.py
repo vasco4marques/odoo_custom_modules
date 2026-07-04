@@ -1,6 +1,6 @@
 {
     'name': 'ITLingo Workspace Access',
-    'version': '19.0.2.1.0',
+    'version': '19.0.2.2.0',
     'category': 'Services/Project',
     'summary': 'Workspace role management for ITLingo Cloud',
     'description': """
