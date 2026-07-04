@@ -37,6 +37,8 @@
             <div class="card itlingo-portal-filter-card shadow-sm border-0 rounded-3 mb-4">
                 <div class="card-body">
                     <p class="text-muted small text-uppercase fw-semibold mb-3">Workspace filters</p>
+                    <!-- One filter per column, in column order:
+                         Workspace (name) | Organization | Your Role | Public | State -->
                     <form method="get" action="/my/workspaces" class="row g-3 align-items-end">
                         <div class="col-md-4 col-lg-3">
                             <label class="form-label small text-muted mb-1" for="ws_filter_name">Name</label>
@@ -46,10 +48,20 @@
                                        name="name" t-att-value="filters.get('name') or ''" placeholder="Name"/>
                             </div>
                         </div>
-                        <div class="col-md-4 col-lg-3">
+                        <div class="col-md-4 col-lg-2">
+                            <t t-call="itlingo_website_portal.portal_filter_multiselect">
+                                <t t-set="ms_id" t-value="'ws_filter_org'"/>
+                                <t t-set="ms_label">Organization</t>
+                                <t t-set="ms_options" t-value="[
+                                    {'name': 'org_id', 'value': org.id, 'label': org.name,
+                                     'checked': org.id in (filters.get('org_id') or [])}
+                                    for org in ws_org_options]"/>
+                            </t>
+                        </div>
+                        <div class="col-md-4 col-lg-2">
                             <t t-call="itlingo_website_portal.portal_filter_multiselect">
                                 <t t-set="ms_id" t-value="'ws_filter_roles'"/>
-                                <t t-set="ms_label">Your roles</t>
+                                <t t-set="ms_label">Your Role</t>
                                 <t t-set="ms_options" t-value="[
                                     {'name': 'role_ws_manager', 'value': '1', 'label': 'Workspace Manager',
                                      'checked': filters.get('role_ws_manager')},
@@ -59,15 +71,25 @@
                                      'checked': filters.get('role_ws_member')}]"/>
                             </t>
                         </div>
-                        <div class="col-md-4 col-lg-3">
+                        <div class="col-md-4 col-lg-2">
                             <t t-call="itlingo_website_portal.portal_filter_multiselect">
                                 <t t-set="ms_id" t-value="'ws_filter_visibility'"/>
-                                <t t-set="ms_label">Visibility</t>
+                                <t t-set="ms_label">Public</t>
                                 <t t-set="ms_options" t-value="[
-                                    {'name': 'public_ws', 'value': '1', 'label': 'Public workspace',
+                                    {'name': 'public_ws', 'value': '1', 'label': 'Yes',
                                      'checked': filters.get('public_ws')},
-                                    {'name': 'private_ws', 'value': '1', 'label': 'Not public',
+                                    {'name': 'private_ws', 'value': '1', 'label': 'No',
                                      'checked': filters.get('private_ws')}]"/>
+                            </t>
+                        </div>
+                        <div class="col-md-4 col-lg-2">
+                            <t t-call="itlingo_website_portal.portal_filter_multiselect">
+                                <t t-set="ms_id" t-value="'ws_filter_status'"/>
+                                <t t-set="ms_label">State</t>
+                                <t t-set="ms_options" t-value="[
+                                    {'name': 'status', 'value': opt[0], 'label': opt[1],
+                                     'checked': opt[0] in (filters.get('status') or [])}
+                                    for opt in ws_status_selection]"/>
                             </t>
                         </div>
                         <div class="col-12 d-flex flex-wrap gap-2">
@@ -207,15 +229,39 @@
             </p>
             <div class="card itlingo-portal-filter-card shadow-sm border-0 rounded-3 mb-4">
                 <div class="card-body">
+                    <!-- One filter per column, in column order:
+                         Workspace (name) | Organization | State -->
                     <form method="get" action="/public-workspaces" class="row g-3 align-items-end">
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-md-4 col-lg-3">
                             <label class="form-label small text-muted mb-1" for="pub_ws_name">Name</label>
                             <input type="search" class="form-control" id="pub_ws_name" name="name"
                                    t-att-value="filters.get('name') or ''" placeholder="Search by name"/>
                         </div>
-                        <div class="col-12 col-md-auto d-flex flex-wrap gap-2">
-                            <a href="/public-workspaces" class="btn btn-outline-secondary">Clear</a>
-                            <button type="submit" class="btn btn-primary">Search</button>
+                        <div class="col-md-4 col-lg-3">
+                            <t t-call="itlingo_website_portal.portal_filter_multiselect">
+                                <t t-set="ms_id" t-value="'pub_ws_filter_org'"/>
+                                <t t-set="ms_label">Organization</t>
+                                <t t-set="ms_options" t-value="[
+                                    {'name': 'org_id', 'value': org.id, 'label': org.name,
+                                     'checked': org.id in (filters.get('org_id') or [])}
+                                    for org in ws_org_options]"/>
+                            </t>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <t t-call="itlingo_website_portal.portal_filter_multiselect">
+                                <t t-set="ms_id" t-value="'pub_ws_filter_status'"/>
+                                <t t-set="ms_label">State</t>
+                                <t t-set="ms_options" t-value="[
+                                    {'name': 'status', 'value': opt[0], 'label': opt[1],
+                                     'checked': opt[0] in (filters.get('status') or [])}
+                                    for opt in ws_status_selection]"/>
+                            </t>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa fa-search me-1"/>Filter
+                            </button>
+                            <a href="/public-workspaces" class="btn btn-outline-secondary">Clear filters</a>
                         </div>
                     </form>
                 </div>

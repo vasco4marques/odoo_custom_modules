@@ -125,11 +125,21 @@
                                 for opt in doc_format_selection]"/>
                         </t>
                     </div>
+                    <div class="col-md-4 col-lg-2">
+                        <t t-call="itlingo_website_portal.portal_filter_multiselect">
+                            <t t-set="ms_id" t-value="'doc_filter_status'"/>
+                            <t t-set="ms_label">Status</t>
+                            <t t-set="ms_options" t-value="[
+                                {'name': 'status', 'value': opt[0], 'label': opt[1],
+                                 'checked': opt[0] in (doc_filters.get('status') or [])}
+                                for opt in doc_status_selection]"/>
+                        </t>
+                    </div>
                     <div class="col-12 d-flex flex-wrap gap-2">
-                        <a t-att-href="sort_base_url" class="btn btn-outline-secondary">Clear filters</a>
                         <button type="submit" class="btn btn-primary">
                             <i class="fa fa-search me-1"/>Filter
                         </button>
+                        <a t-att-href="sort_base_url" class="btn btn-outline-secondary">Clear filters</a>
                     </div>
                 </form>
             </div>

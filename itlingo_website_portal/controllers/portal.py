@@ -270,6 +270,13 @@ class ITLingoPortal(CustomerPortal):
         name_q = (params.get('name') or '').strip()
         if name_q:
             domain.append(('name', 'ilike', f'%{name_q}%'))
+        Org = request.env['itlingo.organization'].sudo()
+        activities = [
+            a for a in self._portal_multi_params('activity')
+            if a in dict(Org._fields['activity_type'].selection)
+        ]
+        if activities:
+            domain.append(('activity_type', 'in', activities))
         states = []
         if params.get('state_active') == '1':
             states.append('active')
@@ -283,6 +290,12 @@ class ITLingoPortal(CustomerPortal):
         url_args = {}
         if name_q:
             url_args['name'] = name_q
+        for key in self._ORG_ROLE_FILTER_KEYS:
+            if params.get(f'role_{key}') == '1':
+                url_args[f'role_{key}'] = '1'
+        activities = self._portal_multi_params('activity')
+        if activities:
+            url_args['activity'] = activities
         if params.get('state_active') == '1':
             url_args['state_active'] = '1'
         if params.get('state_suspended') == '1':
@@ -358,7 +371,14 @@ class ITLingoPortal(CustomerPortal):
             ('user_id', '=', user.id),
             ('state', '=', 'accepted'),
         ])
-        org_ids = roles.mapped('organization_id').ids
+        role_keys = [
+            key for key in self._ORG_ROLE_FILTER_KEYS
+            if params.get(f'role_{key}') == '1'
+        ]
+        org_ids = [
+            role.organization_id.id for role in roles
+            if not role_keys or role.role in role_keys
+        ]
         Org = request.env['itlingo.organization'].sudo()
         domain, name_q = self._portal_org_list_filters_domain(org_ids, params)
         url_args = self._portal_org_list_url_args(params, name_q)
@@ -391,9 +411,15 @@ class ITLingoPortal(CustomerPortal):
             'default_url': '/my/organizations',
             'filters': {
                 'name': name_q,
+                **{
+                    f'role_{key}': key in role_keys
+                    for key in self._ORG_ROLE_FILTER_KEYS
+                },
+                'activity': self._portal_multi_params('activity'),
                 'state_active': params.get('state_active') == '1',
                 'state_suspended': params.get('state_suspended') == '1',
             },
+            'org_activity_selection': Org._fields['activity_type'].selection,
             'org_list_error': params.get('error'),
             'org_list_message': params.get('message'),
         })
@@ -752,6 +778,13 @@ class ITLingoPortal(CustomerPortal):
         if dsl_ids:
             domain.append(('dsl_id', 'in', dsl_ids))
             filter_args['dsl_id'] = dsl_ids
+        statuses = [
+            s for s in self._portal_multi_params('status')
+            if s in dict(Document._fields['status'].selection)
+        ]
+        if statuses:
+            domain.append(('status', 'in', statuses))
+            filter_args['status'] = statuses
 
         order, sortby, sortdir = self._portal_sort(
             params, self._DOC_SORT_FIELDS, 'creation_date desc, name',
@@ -780,6 +813,7 @@ class ITLingoPortal(CustomerPortal):
                 'format': doc_formats,
                 'type_id': type_ids,
                 'dsl_id': dsl_ids,
+                'status': statuses,
             },
             'doc_types': request.env['itlingo.document.type'].sudo().search(
                 [], order='name'),
@@ -787,6 +821,7 @@ class ITLingoPortal(CustomerPortal):
                 [], order='acronym, version desc'),
             'doc_language_selection': Document._fields['language'].selection,
             'doc_format_selection': Document._fields['document_format'].selection,
+            'doc_status_selection': Document._fields['status'].selection,
             'sortby': sortby,
             'sortdir': sortdir,
             'sort_qs': self._portal_sort_qs(filter_args),
@@ -1713,6 +1748,28 @@ class ITLingoPortal(CustomerPortal):
         domain, name_q = self._portal_ws_list_filters_domain(project_ids, params)
         url_args = self._portal_ws_list_url_args(params, name_q)
 
+        # Organization + State filters (multi-select), mirroring the columns.
+        filter_org_ids = []
+        for raw in self._portal_multi_params('org_id'):
+            try:
+                filter_org_ids.append(int(raw))
+            except (TypeError, ValueError):
+                pass
+        if filter_org_ids:
+            domain.append(('organization_id', 'in', filter_org_ids))
+            url_args['org_id'] = filter_org_ids
+        statuses = [
+            s for s in self._portal_multi_params('status')
+            if s in dict(Project._fields['business_status'].selection)
+        ]
+        if statuses:
+            domain.append(('business_status', 'in', statuses))
+            url_args['status'] = statuses
+        # Dropdown options: the organizations of all workspaces the user is a
+        # member of (unfiltered, so options don't vanish while filtering).
+        org_options = Project.browse(list(role_map.keys())) \
+            .mapped('organization_id').sorted('name')
+
         project_count = Project.search_count(domain)
         page_detail = pager(
             url='/my/workspaces',
@@ -1745,12 +1802,16 @@ class ITLingoPortal(CustomerPortal):
             'default_url': '/my/workspaces',
             'filters': {
                 'name': name_q,
+                'org_id': filter_org_ids,
                 'role_ws_manager': params.get('role_ws_manager') == '1',
                 'role_doc_manager': params.get('role_doc_manager') == '1',
                 'role_ws_member': params.get('role_ws_member') == '1',
                 'public_ws': params.get('public_ws') == '1',
                 'private_ws': params.get('private_ws') == '1',
+                'status': statuses,
             },
+            'ws_org_options': org_options,
+            'ws_status_selection': Project._fields['business_status'].selection,
             'can_create_workspace': can_create_workspace,
             'ws_list_error': params.get('error'),
             'ws_list_message': params.get('message'),
@@ -1773,6 +1834,27 @@ class ITLingoPortal(CustomerPortal):
         if name_q:
             domain.append(('name', 'ilike', f'%{name_q}%'))
         filter_args = {'name': name_q} if name_q else {}
+        # Organization + State filters (multi-select), mirroring the columns.
+        filter_org_ids = []
+        for raw in self._portal_multi_params('org_id'):
+            try:
+                filter_org_ids.append(int(raw))
+            except (TypeError, ValueError):
+                pass
+        if filter_org_ids:
+            domain.append(('organization_id', 'in', filter_org_ids))
+            filter_args['org_id'] = filter_org_ids
+        statuses = [
+            s for s in self._portal_multi_params('status')
+            if s in dict(Project._fields['business_status'].selection)
+        ]
+        if statuses:
+            domain.append(('business_status', 'in', statuses))
+            filter_args['status'] = statuses
+        # Dropdown options: organizations that have at least one public
+        # workspace (unfiltered, so options don't vanish while filtering).
+        org_options = Project.search([('is_public_workspace', '=', True)]) \
+            .mapped('organization_id').sorted('name')
 
         order, sortby, sortdir = self._portal_sort(params, {
             'name': 'name',
@@ -1814,7 +1896,13 @@ class ITLingoPortal(CustomerPortal):
             'pager': page_detail,
             'page_name': 'public_workspaces',
             'default_url': '/public-workspaces',
-            'filters': {'name': name_q},
+            'filters': {
+                'name': name_q,
+                'org_id': filter_org_ids,
+                'status': statuses,
+            },
+            'ws_org_options': org_options,
+            'ws_status_selection': Project._fields['business_status'].selection,
             'sortby': sortby,
             'sortdir': sortdir,
             'sort_base_url': '/public-workspaces',
