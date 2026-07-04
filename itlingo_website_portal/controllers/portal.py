@@ -2457,10 +2457,52 @@ class ITLingoPortal(CustomerPortal):
         })
         return request.render('itlingo_website_portal.portal_workspace_detail', values)
 
-    @route('/my/workspaces/<int:project_id>/users', type='http', auth='user', website=True)
-    def portal_workspace_users(self, project_id, **kw):
+    @route(['/my/workspaces/<int:project_id>/users',
+            '/my/workspaces/<int:project_id>/users/page/<int:page>'],
+           type='http', auth='user', website=True)
+    def portal_workspace_users(self, project_id, page=1, **kw):
+        # Same layout/behavior as the organization users page: filter panel,
+        # paginated members table and inline role edit (?edit_role=<id>).
         project, user_role = self._portal_ws_access(project_id)
         params = request.params
+        base_url = f'/my/workspaces/{project_id}/users'
+        WsRole = request.env['itlingo.project.role'].sudo()
+
+        domain = [
+            ('project_id', '=', project_id),
+            ('state', '=', 'accepted'),
+        ]
+        url_args = {}
+        name_q = (params.get('name') or '').strip()
+        if name_q:
+            domain += ['|',
+                       ('user_id.name', 'ilike', f'%{name_q}%'),
+                       ('user_id.login', 'ilike', f'%{name_q}%')]
+            url_args['name'] = name_q
+        role_keys = [
+            key for key in self._WS_ROLE_FILTER_KEYS
+            if params.get(f'role_{key}') == '1'
+        ]
+        if role_keys:
+            domain.append(('role', 'in', role_keys))
+            url_args.update({f'role_{key}': '1' for key in role_keys})
+
+        member_count = WsRole.search_count(domain)
+        page_detail = pager(
+            url=base_url,
+            total=member_count,
+            page=page,
+            step=20,
+            url_args=url_args or None,
+        )
+        members = WsRole.search(
+            domain, limit=20, offset=page_detail['offset'], order='user_id',
+        )
+
+        try:
+            edit_role_id = int(params.get('edit_role') or 0)
+        except (TypeError, ValueError):
+            edit_role_id = 0
 
         is_ws_manager = user_role.role == 'ws_manager'
 
@@ -2468,7 +2510,18 @@ class ITLingoPortal(CustomerPortal):
         values.update({
             'project': project,
             'user_role': user_role,
-            'members': self._portal_workspace_hub_members(project_id),
+            'members': members,
+            'member_count': member_count,
+            'pager': page_detail,
+            'users_filters': {
+                'name': name_q,
+                **{
+                    f'role_{key}': key in role_keys
+                    for key in self._WS_ROLE_FILTER_KEYS
+                },
+            },
+            'users_filter_url': base_url,
+            'edit_role_id': edit_role_id,
             'workspace_hub': True,
             'workspace_hub_page': 'users',
             'is_ws_manager': is_ws_manager,

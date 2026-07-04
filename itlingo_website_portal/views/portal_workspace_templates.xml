@@ -586,36 +586,80 @@
                 That membership is not active.
             </div>
 
-            <div t-if="can_manage_ws_users" class="card border-0 shadow-sm rounded-3 mb-3">
-                <div class="card-header bg-white border-0 p-3">
-                    <h5 class="fw-semibold mb-0">Invite member</h5>
+            <div t-if="can_manage_ws_users" class="d-flex flex-wrap gap-2 mb-3">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#ws_invite_panel" aria-expanded="false"
+                        aria-controls="ws_invite_panel">
+                    <i class="fa fa-user-plus me-1"/>Invite member
+                </button>
+            </div>
+            <div t-if="can_manage_ws_users" class="collapse mb-4" id="ws_invite_panel">
+                <div class="card border-0 shadow-sm rounded-3">
+                    <div class="card-header bg-white border-0 p-3">
+                        <h5 class="fw-semibold mb-0">Invite member</h5>
+                    </div>
+                    <div class="card-body">
+                        <form t-attf-action="/my/workspaces/#{project.id}/users/invite" method="post" class="row g-3 align-items-end">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            <input type="hidden" name="redirect_users" value="1"/>
+                            <div class="col-md-5">
+                                <label class="form-label" for="ws_invite_email">Email (login)</label>
+                                <input type="email" class="form-control" id="ws_invite_email" name="email" required="" placeholder="user@example.com"/>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label" for="ws_invite_role">Role</label>
+                                <select class="form-select" id="ws_invite_role" name="role">
+                                    <option value="ws_member">Workspace Member</option>
+                                    <option value="doc_manager">Document Manager</option>
+                                    <option value="ws_manager">Workspace Manager</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary w-100">Send invitation</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
+            </div>
+            <div class="card itlingo-portal-filter-card shadow-sm border-0 rounded-3 mb-4">
                 <div class="card-body">
-                    <form t-attf-action="/my/workspaces/#{project.id}/users/invite" method="post" class="row g-3 align-items-end">
-                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                        <input type="hidden" name="redirect_users" value="1"/>
-                        <div class="col-md-5">
-                            <label class="form-label" for="ws_invite_email">Email (login)</label>
-                            <input type="email" class="form-control" id="ws_invite_email" name="email" required="" placeholder="user@example.com"/>
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label" for="ws_invite_role">Role</label>
-                            <select class="form-select" id="ws_invite_role" name="role">
-                                <option value="ws_member">Workspace Member</option>
-                                <option value="doc_manager">Document Manager</option>
-                                <option value="ws_manager">Workspace Manager</option>
-                            </select>
-                        </div>
-                        <div class="col-md-3">
-                            <button type="submit" class="btn btn-primary w-100">Send invitation</button>
+                    <p class="text-muted small text-uppercase fw-semibold mb-3">Member filters</p>
+                    <form method="get" t-att-action="users_filter_url">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label small text-muted mb-1" for="ws_user_filter_name">Name or email</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0"><i class="fa fa-search text-muted"/></span>
+                                    <input type="search" class="form-control border-start-0 bg-light" id="ws_user_filter_name"
+                                           name="name" t-att-value="users_filters.get('name') or ''" placeholder="Name or email"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <t t-call="itlingo_website_portal.portal_filter_multiselect">
+                                    <t t-set="ms_id" t-value="'ws_user_filter_role'"/>
+                                    <t t-set="ms_label">Role</t>
+                                    <t t-set="ms_options" t-value="[
+                                        {'name': 'role_ws_manager', 'value': '1', 'label': 'Workspace Manager',
+                                         'checked': users_filters.get('role_ws_manager')},
+                                        {'name': 'role_doc_manager', 'value': '1', 'label': 'Document Manager',
+                                         'checked': users_filters.get('role_doc_manager')},
+                                        {'name': 'role_ws_member', 'value': '1', 'label': 'Workspace Member',
+                                         'checked': users_filters.get('role_ws_member')}]"/>
+                                </t>
+                            </div>
+                            <div class="col-12 d-flex flex-wrap gap-2 pt-1">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-search me-1"/>Filter
+                                </button>
+                                <a t-att-href="users_filter_url" class="btn btn-outline-secondary">Clear filters</a>
+                            </div>
                         </div>
                     </form>
                 </div>
             </div>
-
             <div class="card border-0 shadow-sm rounded-3">
                 <div class="card-header bg-white border-0 p-3">
-                    <h5 class="fw-semibold mb-0">Members (<t t-out="len(members)"/>)</h5>
+                    <h5 class="fw-semibold mb-0">Members (<t t-out="member_count"/>)</h5>
                 </div>
                 <div class="card-body p-0">
                     <div class="table-responsive">
@@ -623,25 +667,27 @@
                             <thead class="table-light">
                                 <tr>
                                     <th>User</th>
+                                    <th>Email</th>
                                     <th>Role</th>
-                                    <th class="text-end">Actions</th>
+                                    <th>Member Since</th>
+                                    <th class="text-end" style="width: 8rem;">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr t-foreach="members" t-as="member">
+                                    <t t-set="editing" t-value="can_manage_ws_users and edit_role_id == member.id"/>
                                     <td><t t-out="member.user_id.name"/></td>
+                                    <td class="text-muted"><t t-out="member.user_id.login"/></td>
                                     <td>
-                                        <t t-if="not can_manage_ws_users">
-                                            <span class="badge bg-info text-dark">
-                                                <t t-out="dict(member._fields['role'].selection).get(member.role)"/>
-                                            </span>
-                                        </t>
-                                        <form t-if="can_manage_ws_users"
+                                        <span t-if="not editing" class="badge bg-info text-dark">
+                                            <t t-out="dict(member._fields['role'].selection).get(member.role)"/>
+                                        </span>
+                                        <form t-if="editing"
                                               t-attf-action="/my/workspaces/#{project.id}/users/#{member.id}/role"
                                               method="post" class="d-flex flex-wrap gap-2 align-items-center">
                                             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                                             <input type="hidden" name="redirect_users" value="1"/>
-                                            <select class="form-select form-select-sm" style="min-width: 12rem;" name="role">
+                                            <select class="form-select form-select-sm" style="min-width: 10rem;" name="role">
                                                 <t t-foreach="member._fields['role'].selection" t-as="sel">
                                                     <option t-att-value="sel[0]"
                                                             t-att-selected="member.role == sel[0]">
@@ -649,33 +695,58 @@
                                                     </option>
                                                 </t>
                                             </select>
-                                            <button type="submit" class="btn btn-sm btn-outline-primary">Update</button>
+                                            <button type="submit" class="btn btn-sm btn-primary">Save</button>
+                                            <a t-att-href="users_filter_url" class="btn btn-sm btn-outline-secondary">Cancel</a>
                                         </form>
                                     </td>
+                                    <td>
+                                        <t t-call="itlingo_website_portal.portal_date">
+                                            <t t-set="date_value" t-value="member.response_date or member.create_date"/>
+                                        </t>
+                                    </td>
                                     <td class="text-end">
-                                        <form t-if="member.user_id.id == request.env.uid"
-                                              t-attf-action="/my/workspaces/#{project.id}/leave"
-                                              method="post" class="d-inline"
-                                              onsubmit="return confirm('Leave this workspace? You will lose access.');">
-                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                            <button type="submit" class="btn btn-sm btn-outline-warning">
-                                                <i class="fa fa-sign-out me-1"/>Leave workspace
-                                            </button>
-                                        </form>
-                                        <form t-if="can_manage_ws_users and member.user_id.id != request.env.uid"
-                                              t-attf-action="/my/workspaces/#{project.id}/users/#{member.id}/remove"
-                                              method="post" class="d-inline"
-                                              onsubmit="return confirm('Remove this member from the workspace?');">
-                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                            <input type="hidden" name="redirect_users" value="1"/>
-                                            <button type="submit" class="btn btn-sm btn-outline-danger">Remove</button>
-                                        </form>
+                                        <div class="d-inline-flex justify-content-end">
+                                            <span class="d-inline-block text-center" style="width: 2.25rem;">
+                                                <a t-if="can_manage_ws_users and not editing"
+                                                   t-attf-href="#{users_filter_url}?edit_role=#{member.id}"
+                                                   class="btn btn-sm btn-link text-primary p-1"
+                                                   title="Edit role" aria-label="Edit role">
+                                                    <i class="fa fa-pencil fa-lg"/>
+                                                </a>
+                                            </span>
+                                            <span class="d-inline-block text-center" style="width: 2.25rem;">
+                                                <form t-if="member.user_id.id == request.env.uid"
+                                                      t-attf-action="/my/workspaces/#{project.id}/leave"
+                                                      method="post" class="d-inline"
+                                                      onsubmit="return confirm('Leave this workspace? You will lose access.');">
+                                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                    <button type="submit" class="btn btn-sm btn-link text-warning p-1"
+                                                            title="Leave workspace" aria-label="Leave workspace">
+                                                        <i class="fa fa-sign-out fa-lg"/>
+                                                    </button>
+                                                </form>
+                                                <form t-if="can_manage_ws_users and member.user_id.id != request.env.uid"
+                                                      t-attf-action="/my/workspaces/#{project.id}/users/#{member.id}/remove"
+                                                      method="post" class="d-inline"
+                                                      onsubmit="return confirm('Remove this member from the workspace?');">
+                                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                    <input type="hidden" name="redirect_users" value="1"/>
+                                                    <button type="submit" class="btn btn-sm btn-link text-danger p-1"
+                                                            title="Remove member" aria-label="Remove member">
+                                                        <i class="fa fa-user-times fa-lg"/>
+                                                    </button>
+                                                </form>
+                                            </span>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
+            </div>
+            <div t-if="pager" class="o_portal_pager text-center mt-3">
+                <t t-call="portal.pager"/>
             </div>
         </t>
     </template>
