@@ -44,10 +44,10 @@ class ITLingoPortal(CustomerPortal):
         if not user.org_setup_pending:
             return request.redirect('/')
 
+        countries = request.env['res.country'].sudo().search([], order='name')
         values = self._prepare_portal_layout_values()
-        values.update({'form': {}, 'error': {}})
+        values.update({'form': {}, 'error': {}, 'countries': countries})
 
-        allowed_types = {'private', 'public'}
         allowed_activity = {
             'it', 'marketing', 'consulting', 'finance', 'education', 'other',
         }
@@ -58,23 +58,26 @@ class ITLingoPortal(CustomerPortal):
                 return request.redirect('/')
 
             name = (post.get('name') or '').strip()
-            org_type = post.get('organization_type') or 'private'
             activity = post.get('activity_type') or 'it'
+            try:
+                country_id = int(post.get('country_id') or 0)
+            except (TypeError, ValueError):
+                country_id = 0
             values['form'] = dict(post)
 
             if not name:
                 values['error']['name'] = _('Name is required.')
-            elif org_type not in allowed_types:
-                values['error']['name'] = _('Invalid organization type.')
             elif activity not in allowed_activity:
                 values['error']['name'] = _('Invalid activity type.')
+            elif country_id and country_id not in countries.ids:
+                values['error']['name'] = _('Invalid country.')
             else:
                 Org = request.env['itlingo.organization'].sudo()
                 Role = request.env['itlingo.organization.role'].sudo()
                 org = Org.create({
                     'name': name,
-                    'organization_type': org_type,
                     'activity_type': activity,
+                    'country_id': country_id or False,
                 })
                 Role.create({
                     'organization_id': org.id,
@@ -148,10 +151,15 @@ class ITLingoPortal(CustomerPortal):
         )
         return order, sortby, sortdir
 
+    def _portal_multi_params(self, name):
+        """All values submitted for a GET param (multi-select filters)."""
+        return [v for v in request.httprequest.args.getlist(name) if v]
+
     def _portal_sort_qs(self, url_args):
         """Encode filter params (no sort keys) for the sortable headers."""
         from urllib.parse import urlencode
-        return urlencode(url_args) if url_args else ''
+        # doseq: multi-select filters put lists in url_args
+        return urlencode(url_args, doseq=True) if url_args else ''
 
     def _portal_workspace_role(self, user, project_id):
         return request.env['itlingo.project.role'].sudo().search([
@@ -262,13 +270,6 @@ class ITLingoPortal(CustomerPortal):
         name_q = (params.get('name') or '').strip()
         if name_q:
             domain.append(('name', 'ilike', f'%{name_q}%'))
-        privacy = []
-        if params.get('privacy_private') == '1':
-            privacy.append('private')
-        if params.get('privacy_public') == '1':
-            privacy.append('public')
-        if privacy:
-            domain.append(('organization_type', 'in', privacy))
         states = []
         if params.get('state_active') == '1':
             states.append('active')
@@ -282,10 +283,6 @@ class ITLingoPortal(CustomerPortal):
         url_args = {}
         if name_q:
             url_args['name'] = name_q
-        if params.get('privacy_private') == '1':
-            url_args['privacy_private'] = '1'
-        if params.get('privacy_public') == '1':
-            url_args['privacy_public'] = '1'
         if params.get('state_active') == '1':
             url_args['state_active'] = '1'
         if params.get('state_suspended') == '1':
@@ -394,8 +391,6 @@ class ITLingoPortal(CustomerPortal):
             'default_url': '/my/organizations',
             'filters': {
                 'name': name_q,
-                'privacy_private': params.get('privacy_private') == '1',
-                'privacy_public': params.get('privacy_public') == '1',
                 'state_active': params.get('state_active') == '1',
                 'state_suspended': params.get('state_suspended') == '1',
             },
@@ -407,34 +402,38 @@ class ITLingoPortal(CustomerPortal):
     @route('/my/organizations/new', type='http', auth='user', website=True,
            methods=['GET', 'POST'])
     def portal_organization_new(self, **post):
+        countries = request.env['res.country'].sudo().search([], order='name')
         values = self._prepare_portal_layout_values()
         values.update({
             'page_name': 'organization_new',
             'form': {},
             'error': {},
+            'countries': countries,
         })
-        allowed_types = {'private', 'public'}
         allowed_activity = {
             'it', 'marketing', 'consulting', 'finance', 'education', 'other',
         }
         if request.httprequest.method == 'POST':
             name = (post.get('name') or '').strip()
-            org_type = post.get('organization_type') or 'private'
             activity = post.get('activity_type') or 'it'
+            try:
+                country_id = int(post.get('country_id') or 0)
+            except (TypeError, ValueError):
+                country_id = 0
             values['form'] = dict(post)
             if not name:
                 values['error']['name'] = _('Name is required.')
-            elif org_type not in allowed_types:
-                values['error']['name'] = _('Invalid organization type.')
             elif activity not in allowed_activity:
                 values['error']['name'] = _('Invalid activity type.')
+            elif country_id and country_id not in countries.ids:
+                values['error']['name'] = _('Invalid country.')
             else:
                 Org = request.env['itlingo.organization'].sudo()
                 Role = request.env['itlingo.organization.role'].sudo()
                 org = Org.create({
                     'name': name,
-                    'organization_type': org_type,
                     'activity_type': activity,
+                    'country_id': country_id or False,
                 })
                 Role.create({
                     'organization_id': org.id,
@@ -702,13 +701,16 @@ class ITLingoPortal(CustomerPortal):
         'status': 'status',
     }
 
-    def _portal_documents_list_ctx(self, base_domain, params):
+    def _portal_documents_list_ctx(self, base_domain, params,
+                                   page_url=None, page=1, step=20):
         """Shared filter + sort handling for portal document lists.
 
         Applies the filter bar params (name, language, format, type, dsl) and
         the sortable-header params on top of ``base_domain`` and returns the
         template context (documents, filter values, dropdown options, sort
-        state). Callers still set ``sort_base_url``.
+        state). Callers still set ``sort_base_url``. When ``page_url`` is
+        given the list is paginated (``step`` rows per page) and a ``pager``
+        is included in the context.
         """
         Document = request.env['itlingo.document'].sudo()
         domain = list(base_domain)
@@ -718,41 +720,66 @@ class ITLingoPortal(CustomerPortal):
         if name_q:
             domain.append(('name', 'ilike', f'%{name_q}%'))
             filter_args['name'] = name_q
-        language = (params.get('language') or '').strip()
-        if language in dict(Document._fields['language'].selection):
-            domain.append(('language', '=', language))
-            filter_args['language'] = language
-        doc_format = (params.get('format') or '').strip()
-        if doc_format in dict(Document._fields['document_format'].selection):
-            domain.append(('document_format', '=', doc_format))
-            filter_args['format'] = doc_format
-        try:
-            type_id = int(params.get('type_id') or 0)
-        except (TypeError, ValueError):
-            type_id = 0
-        if type_id:
-            domain.append(('document_type_id', '=', type_id))
-            filter_args['type_id'] = type_id
-        try:
-            dsl_id = int(params.get('dsl_id') or 0)
-        except (TypeError, ValueError):
-            dsl_id = 0
-        if dsl_id:
-            domain.append(('dsl_id', '=', dsl_id))
-            filter_args['dsl_id'] = dsl_id
+        languages = [
+            lang for lang in self._portal_multi_params('language')
+            if lang in dict(Document._fields['language'].selection)
+        ]
+        if languages:
+            domain.append(('language', 'in', languages))
+            filter_args['language'] = languages
+        doc_formats = [
+            fmt for fmt in self._portal_multi_params('format')
+            if fmt in dict(Document._fields['document_format'].selection)
+        ]
+        if doc_formats:
+            domain.append(('document_format', 'in', doc_formats))
+            filter_args['format'] = doc_formats
+        type_ids = []
+        for raw in self._portal_multi_params('type_id'):
+            try:
+                type_ids.append(int(raw))
+            except (TypeError, ValueError):
+                pass
+        if type_ids:
+            domain.append(('document_type_id', 'in', type_ids))
+            filter_args['type_id'] = type_ids
+        dsl_ids = []
+        for raw in self._portal_multi_params('dsl_id'):
+            try:
+                dsl_ids.append(int(raw))
+            except (TypeError, ValueError):
+                pass
+        if dsl_ids:
+            domain.append(('dsl_id', 'in', dsl_ids))
+            filter_args['dsl_id'] = dsl_ids
 
         order, sortby, sortdir = self._portal_sort(
             params, self._DOC_SORT_FIELDS, 'creation_date desc, name',
         )
-        documents = Document.search(domain, order=order)
+        page_detail = None
+        limit = offset = None
+        if page_url:
+            url_args = dict(filter_args)
+            if sortby:
+                url_args.update({'sortby': sortby, 'sortdir': sortdir})
+            page_detail = pager(
+                url=page_url,
+                total=Document.search_count(domain),
+                page=page,
+                step=step,
+                url_args=url_args or None,
+            )
+            limit, offset = step, page_detail['offset']
+        documents = Document.search(domain, order=order, limit=limit, offset=offset)
         return {
             'documents': documents,
+            'pager': page_detail,
             'doc_filters': {
                 'name': name_q,
-                'language': language,
-                'format': doc_format,
-                'type_id': type_id,
-                'dsl_id': dsl_id,
+                'language': languages,
+                'format': doc_formats,
+                'type_id': type_ids,
+                'dsl_id': dsl_ids,
             },
             'doc_types': request.env['itlingo.document.type'].sudo().search(
                 [], order='name'),
@@ -987,24 +1014,62 @@ class ITLingoPortal(CustomerPortal):
             values,
         )
 
-    @route('/my/organizations/<int:org_id>/workspaces',
+    @route(['/my/organizations/<int:org_id>/workspaces',
+            '/my/organizations/<int:org_id>/workspaces/page/<int:page>'],
            type='http', auth='user', website=True)
-    def portal_organization_workspaces(self, org_id, **kw):
+    def portal_organization_workspaces(self, org_id, page=1, **kw):
         org, user_role = self._portal_org_access(org_id)
-        accessible_role_ids = request.env['itlingo.project.role'].sudo().search([
-            ('user_id', '=', request.env.user.id),
-            ('state', '=', 'accepted'),
-            ('project_id.organization_id', '=', org_id),
-        ]).mapped('project_id').ids
-        projects = request.env['itlingo.workspace'].sudo().search([
-            ('organization_id', '=', org_id),
-            ('id', 'in', accessible_role_ids),
-        ], order='name')
+        params = request.params
+        base_url = f'/my/organizations/{org_id}/workspaces'
+        Project = request.env['itlingo.workspace'].sudo()
+
+        # Same filter panel behavior as "My Workspaces" (name, your roles,
+        # visibility), plus a status filter used by the dashboard counters.
+        project_ids, role_map = self._portal_ws_list_filtered_project_ids(
+            request.env.user, params,
+        )
+        domain, name_q = self._portal_ws_list_filters_domain(project_ids, params)
+        domain.append(('organization_id', '=', org_id))
+        statuses = [
+            s for s in self._portal_multi_params('status')
+            if s in dict(Project._fields['business_status'].selection)
+        ]
+        if statuses:
+            domain.append(('business_status', 'in', statuses))
+        url_args = self._portal_ws_list_url_args(params, name_q)
+        if statuses:
+            url_args['status'] = statuses
+
+        project_count = Project.search_count(domain)
+        page_detail = pager(
+            url=base_url,
+            total=project_count,
+            page=page,
+            step=20,
+            url_args=url_args or None,
+        )
+        projects = Project.search(
+            domain, limit=20, offset=page_detail['offset'], order='name',
+        )
+
         values = self._prepare_portal_layout_values()
         values.update({
             'organization': org,
             'user_role': user_role,
             'projects': projects,
+            'ws_role_map': role_map,
+            'pager': page_detail,
+            'ws_filters': {
+                'name': name_q,
+                'role_ws_manager': params.get('role_ws_manager') == '1',
+                'role_doc_manager': params.get('role_doc_manager') == '1',
+                'role_ws_member': params.get('role_ws_member') == '1',
+                'public_ws': params.get('public_ws') == '1',
+                'private_ws': params.get('private_ws') == '1',
+                'status': statuses,
+            },
+            'ws_status_selection': Project._fields['business_status'].selection,
+            'ws_filter_url': base_url,
             'page_name': 'organization_workspaces',
             'organization_hub': True,
             'org_hub_page': 'workspaces',
@@ -1014,19 +1079,22 @@ class ITLingoPortal(CustomerPortal):
             values,
         )
 
-    @route('/my/organizations/<int:org_id>/documents',
+    @route(['/my/organizations/<int:org_id>/documents',
+            '/my/organizations/<int:org_id>/documents/page/<int:page>'],
            type='http', auth='user', website=True)
-    def portal_organization_documentation(self, org_id, **kw):
+    def portal_organization_documentation(self, org_id, page=1, **kw):
         org, user_role = self._portal_org_access(org_id)
-        Document = request.env['itlingo.document'].sudo()
-        documents = Document.search([
-            ('organization_id', '=', org_id),
-        ], order='creation_date desc, name')
+        base_url = f'/my/organizations/{org_id}/documents'
         values = self._prepare_portal_layout_values()
+        values.update(self._portal_documents_list_ctx(
+            [('organization_id', '=', org_id)], request.params,
+            page_url=base_url, page=page,
+        ))
         values.update({
             'organization': org,
             'user_role': user_role,
-            'documents': documents,
+            'sort_base_url': base_url,
+            'doc_link_base': base_url,
             'can_upload_org_documents': user_role.role in self._DOC_EDIT_ORG_ROLES,
             'doc_message': request.params.get('message'),
             'doc_error': request.params.get('error'),
@@ -1105,20 +1173,71 @@ class ITLingoPortal(CustomerPortal):
             return request.not_found()
         return self._portal_document_download_response(document)
 
-    @route('/my/organizations/<int:org_id>/users',
+    _ORG_ROLE_FILTER_KEYS = ('org_manager', 'org_member', 'doc_manager')
+
+    @route(['/my/organizations/<int:org_id>/users',
+            '/my/organizations/<int:org_id>/users/page/<int:page>'],
            type='http', auth='user', website=True)
-    def portal_organization_users(self, org_id, **kw):
+    def portal_organization_users(self, org_id, page=1, **kw):
         org, user_role = self._portal_org_access(org_id)
-        members = request.env['itlingo.organization.role'].sudo().search([
+        params = request.params
+        base_url = f'/my/organizations/{org_id}/users'
+        OrgRole = request.env['itlingo.organization.role'].sudo()
+
+        domain = [
             ('organization_id', '=', org_id),
             ('state', '=', 'accepted'),
-        ], order='user_id')
-        params = request.params
+        ]
+        url_args = {}
+        name_q = (params.get('name') or '').strip()
+        if name_q:
+            domain += ['|',
+                       ('user_id.name', 'ilike', f'%{name_q}%'),
+                       ('user_id.login', 'ilike', f'%{name_q}%')]
+            url_args['name'] = name_q
+        role_keys = [
+            key for key in self._ORG_ROLE_FILTER_KEYS
+            if params.get(f'role_{key}') == '1'
+        ]
+        if role_keys:
+            domain.append(('role', 'in', role_keys))
+            url_args.update({f'role_{key}': '1' for key in role_keys})
+
+        member_count = OrgRole.search_count(domain)
+        page_detail = pager(
+            url=base_url,
+            total=member_count,
+            page=page,
+            step=20,
+            url_args=url_args or None,
+        )
+        members = OrgRole.search(
+            domain, limit=20, offset=page_detail['offset'], order='user_id',
+        )
+
+        # Inline role edit: ?edit_role=<role line id> renders the dropdown
+        # for that single row only.
+        try:
+            edit_role_id = int(params.get('edit_role') or 0)
+        except (TypeError, ValueError):
+            edit_role_id = 0
+
         values = self._prepare_portal_layout_values()
         values.update({
             'organization': org,
             'user_role': user_role,
             'members': members,
+            'member_count': member_count,
+            'pager': page_detail,
+            'users_filters': {
+                'name': name_q,
+                **{
+                    f'role_{key}': key in role_keys
+                    for key in self._ORG_ROLE_FILTER_KEYS
+                },
+            },
+            'users_filter_url': base_url,
+            'edit_role_id': edit_role_id,
             'can_manage_org_users': user_role.role == 'org_manager',
             'org_users_error': params.get('error'),
             'org_users_message': params.get('message'),
@@ -1140,7 +1259,6 @@ class ITLingoPortal(CustomerPortal):
         if user_role.role != 'org_manager':
             raise AccessError(_('Only organization managers can change settings.'))
 
-        allowed_types = {'private', 'public'}
         allowed_activity = {
             'it', 'marketing', 'consulting', 'finance', 'education', 'other',
         }
@@ -1168,7 +1286,6 @@ class ITLingoPortal(CustomerPortal):
 
         if request.httprequest.method == 'POST':
             name = (post.get('name') or '').strip()
-            org_type = post.get('organization_type') or 'private'
             activity = post.get('activity_type') or 'it'
             raw_country = post.get('country_id')
             try:
@@ -1178,8 +1295,6 @@ class ITLingoPortal(CustomerPortal):
             values['form'] = dict(post)
             if not name:
                 values['error']['name'] = _('Name is required.')
-            elif org_type not in allowed_types:
-                values['error']['organization_type'] = _('Invalid privacy value.')
             elif activity not in allowed_activity:
                 values['error']['activity_type'] = _('Invalid activity type.')
             elif country_id and country_id not in countries.ids:
@@ -1187,7 +1302,6 @@ class ITLingoPortal(CustomerPortal):
             else:
                 org.write({
                     'name': name,
-                    'organization_type': org_type,
                     'activity_type': activity,
                     'country_id': country_id or False,
                 })
@@ -1441,28 +1555,141 @@ class ITLingoPortal(CustomerPortal):
         ops_config.write(updates)
         return request.redirect(f'/my/organizations/{org_id}/llm')
 
+    # Bullet-dot colors for the dashboard stats cards: semantic colors for
+    # status-like rows, a rotating palette for open-ended enumerations.
+    _STATS_PALETTE = ('#6f42c1', '#fd7e14', '#20c997', '#d63384', '#0d6efd', '#ffc107')
+    _STATS_STATUS_COLORS = {
+        'not_started': '#adb5bd',
+        'executing': '#0d6efd',
+        'canceled': '#dc3545',
+        'concluded': '#198754',
+    }
+
     @route('/my/organizations/<int:org_id>', type='http', auth='user', website=True)
     def portal_organization_detail(self, org_id, **kw):
         org, user_role = self._portal_org_access(org_id)
+        base_url = f'/my/organizations/{org_id}'
+        palette = self._STATS_PALETTE
+
+        # Workspaces: total + per business status, each linked to the
+        # workspaces list filtered by that status.
         Project = request.env['itlingo.workspace'].sudo()
-        base_dom = [('organization_id', '=', org_id)]
-        kpi_active = Project.search_count(
-            base_dom + [('business_status', 'in', ['not_started', 'executing'])],
+        ws_dom = [('organization_id', '=', org_id)]
+        ws_counts = dict(Project._read_group(
+            ws_dom, groupby=['business_status'], aggregates=['__count'],
+        ))
+        ws_labels = dict(Project._fields['business_status'].selection)
+        ws_rows = [
+            {
+                'label': 'Ongoing' if key == 'executing' else ws_labels[key],
+                'count': ws_counts.get(key, 0),
+                'url': f'{base_url}/workspaces?status={key}',
+                'color': self._STATS_STATUS_COLORS[key],
+            }
+            for key in ('not_started', 'executing', 'canceled', 'concluded')
+        ]
+
+        # Documents: total + breakdown by type and by DSL, linked to the
+        # documents list with the matching filter preset.
+        Document = request.env['itlingo.document'].sudo()
+        doc_dom = [('organization_id', '=', org_id)]
+        doc_total = Document.search_count(doc_dom)
+        doc_type_rows = [
+            {
+                'label': doc_type.name if doc_type else 'No type',
+                'count': count,
+                'url': f'{base_url}/documents?type_id={doc_type.id}' if doc_type else None,
+                'color': palette[i % len(palette)],
+            }
+            for i, (doc_type, count) in enumerate(Document._read_group(
+                doc_dom, groupby=['document_type_id'], aggregates=['__count'],
+            ))
+        ]
+        doc_dsl_rows = [
+            {
+                'label': f'{dsl.acronym} {dsl.version}'.strip() if dsl else 'No DSL',
+                'count': count,
+                'url': f'{base_url}/documents?dsl_id={dsl.id}' if dsl else None,
+                'color': palette[(i + 2) % len(palette)],
+            }
+            for i, (dsl, count) in enumerate(Document._read_group(
+                doc_dom, groupby=['dsl_id'], aggregates=['__count'],
+            ))
+        ]
+
+        # Users: total + per role, linked to the users list role filter.
+        OrgRole = request.env['itlingo.organization.role'].sudo()
+        role_dom = [('organization_id', '=', org_id), ('state', '=', 'accepted')]
+        role_counts = dict(OrgRole._read_group(
+            role_dom, groupby=['role'], aggregates=['__count'],
+        ))
+        role_labels = dict(OrgRole._fields['role'].selection)
+        role_colors = {
+            'org_manager': '#6f42c1',
+            'org_member': '#adb5bd',
+            'doc_manager': '#198754',
+        }
+        user_rows = [
+            {
+                'label': role_labels[key],
+                'count': role_counts.get(key, 0),
+                'url': f'{base_url}/users?role_{key}=1',
+                'color': role_colors[key],
+            }
+            for key in ('org_manager', 'org_member', 'doc_manager')
+        ]
+
+        # LLMs: organization-scoped models (active / inactive).
+        LlmOption = request.env['itlingo.chatbot.settings.option'].sudo()
+        llm_dom = [('organization_id', '=', org_id)]
+        llm_total = LlmOption.search_count(llm_dom)
+        llm_active = LlmOption.search_count(llm_dom + [('disabled', '=', False)])
+        llm_url = (
+            f'{base_url}/llm' if user_role.role == 'org_manager' else None
         )
-        kpi_canceled = Project.search_count(
-            base_dom + [('business_status', '=', 'canceled')],
-        )
-        kpi_completed = Project.search_count(
-            base_dom + [('business_status', '=', 'concluded')],
-        )
+
         values = self._prepare_portal_layout_values()
         values.update({
             'organization': org,
             'user_role': user_role,
-            'kpi_users': org.member_count,
-            'kpi_active_projects': kpi_active,
-            'kpi_canceled_projects': kpi_canceled,
-            'kpi_completed_projects': kpi_completed,
+            'stats_cards': [
+                {
+                    'title': 'Workspaces',
+                    'icon': 'fa-th-large',
+                    'total': sum(ws_counts.values()),
+                    'total_url': f'{base_url}/workspaces',
+                    'rows': ws_rows,
+                },
+                {
+                    'title': 'Documents',
+                    'icon': 'fa-file-text-o',
+                    'total': doc_total,
+                    'total_url': f'{base_url}/documents',
+                    'rows_title': 'By type',
+                    'rows': doc_type_rows,
+                    'rows2_title': 'By DSL',
+                    'rows2': doc_dsl_rows,
+                },
+                {
+                    'title': 'Users',
+                    'icon': 'fa-users',
+                    'total': sum(role_counts.values()),
+                    'total_url': f'{base_url}/users',
+                    'rows': user_rows,
+                },
+                {
+                    'title': 'LLMs',
+                    'icon': 'fa-microchip',
+                    'total': llm_total,
+                    'total_url': llm_url,
+                    'rows': [
+                        {'label': 'Active', 'count': llm_active,
+                         'url': llm_url, 'color': '#198754'},
+                        {'label': 'Inactive', 'count': llm_total - llm_active,
+                         'url': llm_url, 'color': '#adb5bd'},
+                    ],
+                },
+            ],
             'page_name': 'organization_stats',
             'organization_hub': True,
             'org_hub_page': 'stats',

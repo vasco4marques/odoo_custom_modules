@@ -9,10 +9,13 @@ class ItlingoOrganization(models.Model):
     _order = 'name'
 
     name = fields.Char(required=True, tracking=True)
+    # DEPRECATED: organizations have no public exposure, so a Public/Private
+    # type carries no behavior. Removed from all views/forms; the column will
+    # be dropped in a follow-up migration once confirmed.
     organization_type = fields.Selection([
         ('private', 'Private'),
         ('public', 'Public'),
-    ], string='Type', default='private', required=True, tracking=True)
+    ], string='Type (deprecated)', default='private', required=True)
     activity_type = fields.Selection([
         ('it', 'IT'),
         ('marketing', 'Marketing'),

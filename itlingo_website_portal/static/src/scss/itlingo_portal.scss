@@ -11,8 +11,19 @@
     background-color: var(--itlingo-portal-page-tint);
 }
 
-.itlingo-portal-filter-card {
+.card.itlingo-portal-filter-card {
     box-shadow: var(--itlingo-portal-shadow);
+    /* The website theme sets `.card { overflow: hidden; }`, which clips
+       open filter dropdown menus at the card edge. Let them escape. */
+    overflow: visible;
+    /* And raise above the sibling table/list cards so the menus are not
+       painted behind them. */
+    position: relative;
+    z-index: 2;
+
+    .dropdown-menu {
+        z-index: 1055;
+    }
 }
 
 .itlingo-org-hub {

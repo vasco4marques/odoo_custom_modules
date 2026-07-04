@@ -33,6 +33,210 @@
         </a>
     </template>
 
+    <!-- Multi-select filter dropdown: a Bootstrap dropdown holding checkboxes,
+         so it submits like plain checkboxes in the surrounding GET form.
+         Expects:
+           ms_id      unique id prefix for the checkbox inputs
+           ms_label   group label shown above the button
+           ms_options list of {name, value, label, checked} -->
+    <template id="portal_filter_multiselect" name="Filter multi-select">
+        <t t-set="ms_selected" t-value="[o['label'] for o in ms_options if o.get('checked')]"/>
+        <span class="form-label small text-muted d-block mb-1"><t t-out="ms_label"/></span>
+        <div class="dropdown">
+            <button class="btn btn-light border dropdown-toggle w-100 text-start d-flex align-items-center"
+                    type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                    aria-expanded="false">
+                <span class="text-truncate flex-grow-1">
+                    <t t-if="not ms_selected">All</t>
+                    <t t-elif="len(ms_selected) &lt;= 2" t-out="', '.join(ms_selected)"/>
+                    <t t-else="" t-out="'%s selected' % len(ms_selected)"/>
+                </span>
+            </button>
+            <div class="dropdown-menu w-100 px-3 py-2" style="min-width: 12rem;">
+                <div t-foreach="ms_options" t-as="opt" class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           t-att-name="opt['name']" t-att-value="opt['value']"
+                           t-attf-id="#{ms_id}_#{opt_index}"
+                           t-att-checked="'1' if opt.get('checked') else None"/>
+                    <label class="form-check-label d-block" t-attf-for="#{ms_id}_#{opt_index}">
+                        <t t-out="opt['label']"/>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Shared documents list: filter bar + sortable table, used by every
+         document list in the portal (workspace, public workspace, org) so
+         the columns stay consistent. Expects the _portal_documents_list_ctx
+         context plus `sort_base_url` and `doc_link_base` (prefix of the
+         document detail links). -->
+    <template id="portal_documents_list" name="Shared documents list">
+        <div class="card itlingo-portal-filter-card shadow-sm border-0 rounded-3 mb-4">
+            <div class="card-body">
+                <p class="text-muted small text-uppercase fw-semibold mb-3">Document filters</p>
+                <form method="get" t-att-action="sort_base_url" class="row g-3 align-items-end">
+                    <div class="col-md-4 col-lg-3">
+                        <label class="form-label small text-muted mb-1" for="doc_filter_name">Name</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light border-end-0"><i class="fa fa-search text-muted"/></span>
+                            <input type="search" class="form-control border-start-0 bg-light" id="doc_filter_name"
+                                   name="name" t-att-value="doc_filters.get('name') or ''" placeholder="Name"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-2">
+                        <t t-call="itlingo_website_portal.portal_filter_multiselect">
+                            <t t-set="ms_id" t-value="'doc_filter_type'"/>
+                            <t t-set="ms_label">Type</t>
+                            <t t-set="ms_options" t-value="[
+                                {'name': 'type_id', 'value': dt.id, 'label': dt.name,
+                                 'checked': dt.id in (doc_filters.get('type_id') or [])}
+                                for dt in doc_types]"/>
+                        </t>
+                    </div>
+                    <div class="col-md-4 col-lg-2">
+                        <t t-call="itlingo_website_portal.portal_filter_multiselect">
+                            <t t-set="ms_id" t-value="'doc_filter_dsl'"/>
+                            <t t-set="ms_label">DSL</t>
+                            <t t-set="ms_options" t-value="[
+                                {'name': 'dsl_id', 'value': d.id,
+                                 'label': '%s %s' % (d.acronym, d.version or ''),
+                                 'checked': d.id in (doc_filters.get('dsl_id') or [])}
+                                for d in dsls]"/>
+                        </t>
+                    </div>
+                    <div class="col-md-4 col-lg-2">
+                        <t t-call="itlingo_website_portal.portal_filter_multiselect">
+                            <t t-set="ms_id" t-value="'doc_filter_lang'"/>
+                            <t t-set="ms_label">Language</t>
+                            <t t-set="ms_options" t-value="[
+                                {'name': 'language', 'value': opt[0], 'label': opt[1],
+                                 'checked': opt[0] in (doc_filters.get('language') or [])}
+                                for opt in doc_language_selection]"/>
+                        </t>
+                    </div>
+                    <div class="col-md-4 col-lg-2">
+                        <t t-call="itlingo_website_portal.portal_filter_multiselect">
+                            <t t-set="ms_id" t-value="'doc_filter_format'"/>
+                            <t t-set="ms_label">Format</t>
+                            <t t-set="ms_options" t-value="[
+                                {'name': 'format', 'value': opt[0], 'label': opt[1],
+                                 'checked': opt[0] in (doc_filters.get('format') or [])}
+                                for opt in doc_format_selection]"/>
+                        </t>
+                    </div>
+                    <div class="col-12 d-flex flex-wrap gap-2">
+                        <a t-att-href="sort_base_url" class="btn btn-outline-secondary">Clear filters</a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-search me-1"/>Filter
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <t t-if="not documents">
+            <p class="text-muted">No documents match your filters, or there are no documents here yet.</p>
+        </t>
+        <div t-if="documents" class="card border-0 shadow-sm rounded-3">
+            <div class="card-body p-0 table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>
+                                <t t-call="itlingo_website_portal.portal_sort_th">
+                                    <t t-set="sort_key" t-value="'name'"/>
+                                    <t t-set="sort_label">Name</t>
+                                </t>
+                            </th>
+                            <th>
+                                <t t-call="itlingo_website_portal.portal_sort_th">
+                                    <t t-set="sort_key" t-value="'type'"/>
+                                    <t t-set="sort_label">Type</t>
+                                </t>
+                            </th>
+                            <th>
+                                <t t-call="itlingo_website_portal.portal_sort_th">
+                                    <t t-set="sort_key" t-value="'dsl'"/>
+                                    <t t-set="sort_label">DSL</t>
+                                </t>
+                            </th>
+                            <th>
+                                <t t-call="itlingo_website_portal.portal_sort_th">
+                                    <t t-set="sort_key" t-value="'language'"/>
+                                    <t t-set="sort_label">Language</t>
+                                </t>
+                            </th>
+                            <th>
+                                <t t-call="itlingo_website_portal.portal_sort_th">
+                                    <t t-set="sort_key" t-value="'format'"/>
+                                    <t t-set="sort_label">Format</t>
+                                </t>
+                            </th>
+                            <th>
+                                <t t-call="itlingo_website_portal.portal_sort_th">
+                                    <t t-set="sort_key" t-value="'create_date'"/>
+                                    <t t-set="sort_label">Create Date</t>
+                                </t>
+                            </th>
+                            <th>
+                                <t t-call="itlingo_website_portal.portal_sort_th">
+                                    <t t-set="sort_key" t-value="'write_date'"/>
+                                    <t t-set="sort_label">Last Modified</t>
+                                </t>
+                            </th>
+                            <th>
+                                <t t-call="itlingo_website_portal.portal_sort_th">
+                                    <t t-set="sort_key" t-value="'status'"/>
+                                    <t t-set="sort_label">Status</t>
+                                </t>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="documents" t-as="doc">
+                            <td>
+                                <a t-attf-href="#{doc_link_base}/#{doc.id}">
+                                    <t t-out="doc.name"/>
+                                </a>
+                            </td>
+                            <td><t t-out="doc.document_type_id.name or '—'"/></td>
+                            <td>
+                                <t t-if="doc.dsl_id" t-out="doc.dsl_id.acronym"/>
+                                <t t-else="">—</t>
+                            </td>
+                            <td>
+                                <t t-if="doc.language" t-out="dict(doc._fields['language'].selection).get(doc.language)"/>
+                                <t t-else="">—</t>
+                            </td>
+                            <td>
+                                <t t-if="doc.document_format" t-out="dict(doc._fields['document_format'].selection).get(doc.document_format)"/>
+                                <t t-else="">—</t>
+                            </td>
+                            <td>
+                                <t t-call="itlingo_website_portal.portal_date">
+                                    <t t-set="date_value" t-value="doc.creation_date"/>
+                                </t>
+                            </td>
+                            <td>
+                                <t t-call="itlingo_website_portal.portal_date">
+                                    <t t-set="date_value" t-value="doc.write_date"/>
+                                </t>
+                            </td>
+                            <td>
+                                <span class="badge bg-secondary">
+                                    <t t-out="dict(doc._fields['status'].selection).get(doc.status)"/>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div t-if="pager" class="o_portal_pager text-center mt-3">
+            <t t-call="portal.pager"/>
+        </div>
+    </template>
+
     <!-- "My Account" must open real account management. The stock link goes
          to /my/home, which this platform redirects to the homepage; point it
          to /my/account instead and add a Security entry (password / 2FA). -->

@@ -5,7 +5,6 @@
     <!-- Demo Organizations -->
     <record id="org_techcorp" model="itlingo.organization">
         <field name="name">TechCorp Solutions</field>
-        <field name="organization_type">private</field>
         <field name="activity_type">it</field>
         <field name="state">active</field>
         <field name="description">&lt;p&gt;A leading IT solutions company specializing in software development.&lt;/p&gt;</field>
@@ -13,7 +12,6 @@
 
     <record id="org_university" model="itlingo.organization">
         <field name="name">University Research Lab</field>
-        <field name="organization_type">public</field>
         <field name="activity_type">education</field>
         <field name="state">active</field>
         <field name="description">&lt;p&gt;Academic research laboratory focused on software engineering.&lt;/p&gt;</field>
@@ -21,7 +19,6 @@
 
     <record id="org_consulting" model="itlingo.organization">
         <field name="name">Global Consulting Group</field>
-        <field name="organization_type">private</field>
         <field name="activity_type">consulting</field>
         <field name="state">active</field>
         <field name="description">&lt;p&gt;International consulting firm.&lt;/p&gt;</field>

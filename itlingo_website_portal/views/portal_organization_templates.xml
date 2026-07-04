@@ -36,40 +36,21 @@
                             </div>
                         </div>
                         <div class="col-md-4 col-lg-3">
-                            <span class="form-label small text-muted d-block mb-1">Privacy</span>
-                            <div class="d-flex flex-wrap gap-3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="privacy_private" value="1"
-                                           id="privacy_private" t-att-checked="filters.get('privacy_private')"/>
-                                    <label class="form-check-label" for="privacy_private">Private</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="privacy_public" value="1"
-                                           id="privacy_public" t-att-checked="filters.get('privacy_public')"/>
-                                    <label class="form-check-label" for="privacy_public">Public</label>
-                                </div>
-                            </div>
+                            <t t-call="itlingo_website_portal.portal_filter_multiselect">
+                                <t t-set="ms_id" t-value="'org_filter_state'"/>
+                                <t t-set="ms_label">State</t>
+                                <t t-set="ms_options" t-value="[
+                                    {'name': 'state_active', 'value': '1', 'label': 'Active',
+                                     'checked': filters.get('state_active')},
+                                    {'name': 'state_suspended', 'value': '1', 'label': 'Suspended',
+                                     'checked': filters.get('state_suspended')}]"/>
+                            </t>
                         </div>
-                        <div class="col-md-4 col-lg-3">
-                            <span class="form-label small text-muted d-block mb-1">Type</span>
-                            <div class="d-flex flex-wrap gap-3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="state_active" value="1"
-                                           id="state_active" t-att-checked="filters.get('state_active')"/>
-                                    <label class="form-check-label" for="state_active">Active</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="state_suspended" value="1"
-                                           id="state_suspended" t-att-checked="filters.get('state_suspended')"/>
-                                    <label class="form-check-label" for="state_suspended">Suspended</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-3 d-flex flex-wrap gap-2">
-                            <a href="/my/organizations" class="btn btn-outline-secondary">Clear filters</a>
+                        <div class="col-12 col-lg-6 d-flex flex-wrap gap-2 align-items-end">
                             <button type="submit" class="btn btn-primary">
                                 <i class="fa fa-search me-1"/>Filter
                             </button>
+                            <a href="/my/organizations" class="btn btn-outline-secondary">Clear filters</a>
                         </div>
                     </form>
                 </div>
@@ -84,10 +65,9 @@
                     <tr>
                         <th>Organization</th>
                         <th>Your Role</th>
-                        <th>Privacy</th>
                         <th>Activity Type</th>
-                        <th>Status</th>
-                        <th class="text-end">Actions</th>
+                        <th>State</th>
+                        <th class="text-end" style="width: 8rem;">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -104,39 +84,53 @@
                             </span>
                         </td>
                         <td>
-                            <span class="badge bg-secondary">
-                                <t t-out="dict(org._fields['organization_type'].selection).get(org.organization_type)"/>
-                            </span>
-                        </td>
-                        <td>
                             <t t-out="dict(org._fields['activity_type'].selection).get(org.activity_type)"/>
                         </td>
                         <td>
-                            <span t-if="role" class="badge bg-success">
-                                <t t-out="dict(role._fields['state'].selection).get(role.state)"/>
+                            <span t-attf-class="badge #{org.state == 'active' and 'bg-success' or 'bg-danger'}">
+                                <t t-out="dict(org._fields['state'].selection).get(org.state)"/>
                             </span>
                         </td>
-                        <td class="text-end text-nowrap">
-                            <a t-attf-href="/my/organizations/#{org.id}/documents"
-                               class="btn btn-sm btn-link text-primary p-1"
-                               title="Documents" aria-label="Documents">
-                                <i class="fa fa-file-text-o fa-lg"/>
-                            </a>
-                            <a t-attf-href="/my/organizations/#{org.id}/users"
-                               class="btn btn-sm btn-link text-primary p-1"
-                               title="Users" aria-label="Users">
-                                <i class="fa fa-users fa-lg"/>
-                            </a>
-                            <t t-if="role and role.role == 'org_manager'">
-                                <form t-attf-action="/my/organizations/#{org.id}/delete" method="post" class="d-inline">
-                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                    <button type="submit" class="btn btn-sm btn-link text-danger p-1"
-                                            title="Delete organization" aria-label="Delete organization"
-                                            onclick="return confirm('Delete this organization? This cannot be undone.');">
-                                        <i class="fa fa-trash fa-lg"/>
-                                    </button>
-                                </form>
-                            </t>
+                        <td class="text-end">
+                            <!-- Fixed 3-slot action row so icons align across rows:
+                                 Open | Settings (managers) | Delete/Leave -->
+                            <div class="d-inline-flex justify-content-end">
+                                <span class="d-inline-block text-center" style="width: 2.25rem;">
+                                    <a t-attf-href="/my/organizations/#{org.id}"
+                                       class="btn btn-sm btn-link text-primary p-1"
+                                       title="Open organization" aria-label="Open organization">
+                                        <i class="fa fa-folder-open-o fa-lg"/>
+                                    </a>
+                                </span>
+                                <span class="d-inline-block text-center" style="width: 2.25rem;">
+                                    <a t-if="role and role.role == 'org_manager'"
+                                       t-attf-href="/my/organizations/#{org.id}/settings"
+                                       class="btn btn-sm btn-link text-primary p-1"
+                                       title="Organization settings" aria-label="Organization settings">
+                                        <i class="fa fa-cog fa-lg"/>
+                                    </a>
+                                </span>
+                                <span class="d-inline-block text-center" style="width: 2.25rem;">
+                                    <form t-if="role and role.role == 'org_manager'"
+                                          t-attf-action="/my/organizations/#{org.id}/delete" method="post" class="d-inline">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <button type="submit" class="btn btn-sm btn-link text-danger p-1"
+                                                title="Delete organization" aria-label="Delete organization"
+                                                onclick="return confirm('Delete this organization? This cannot be undone.');">
+                                            <i class="fa fa-trash fa-lg"/>
+                                        </button>
+                                    </form>
+                                    <form t-if="role and role.role != 'org_manager'"
+                                          t-attf-action="/my/organizations/#{org.id}/leave" method="post" class="d-inline">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <button type="submit" class="btn btn-sm btn-link text-warning p-1"
+                                                title="Leave organization" aria-label="Leave organization"
+                                                onclick="return confirm('Leave this organization? You will lose access.');">
+                                            <i class="fa fa-sign-out fa-lg"/>
+                                        </button>
+                                    </form>
+                                </span>
+                            </div>
                         </td>
                     </tr>
                 </tbody>
@@ -177,12 +171,12 @@
                             <a t-if="user_role.role == 'org_manager' and 'itlingo.chatbot.settings' in request.env"
                                t-attf-href="/my/organizations/#{organization.id}/llm"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'llm' and 'active' or ''}">
-                                <i class="fa fa-microchip fa-fw me-2" aria-hidden="true"/>LLM configurations
+                                <i class="fa fa-microchip fa-fw me-2" aria-hidden="true"/>LLM Settings
                             </a>
                             <a t-if="user_role.role == 'org_manager'"
                                t-attf-href="/my/organizations/#{organization.id}/settings"
                                t-attf-class="nav-link itlingo-org-hub__nav-link rounded-2 #{org_hub_page == 'settings' and 'active' or ''}">
-                                <i class="fa fa-cog fa-fw me-2" aria-hidden="true"/>Settings
+                                <i class="fa fa-cog fa-fw me-2" aria-hidden="true"/>General Settings
                             </a>
                         </nav>
                     </aside>
@@ -195,43 +189,76 @@
         </t>
     </template>
 
-    <!-- Statistics (default org landing) -->
-    <template id="portal_organization_hub_stats" name="Organization statistics">
-        <t t-call="itlingo_website_portal.portal_organization_hub_shell">
-            <div class="row g-3">
-                <div class="col-6 col-md-3">
-                    <div class="card itlingo-kpi-card border-0 shadow-sm rounded-3 h-100">
-                        <div class="card-body">
-                            <div class="itlingo-kpi-card__label">Users</div>
-                            <div class="itlingo-kpi-card__value"><t t-out="kpi_users"/></div>
+    <!-- One breakdown row of a stats card: colored dot + label (optionally a
+         link) on the left, count on the right. -->
+    <template id="portal_stats_card_row" name="Stats card row">
+        <li class="d-flex align-items-center gap-2 py-1">
+            <span class="rounded-circle flex-shrink-0"
+                  t-attf-style="width: .5rem; height: .5rem; background-color: #{row.get('color') or '#adb5bd'};"/>
+            <a t-if="row.get('url')" t-att-href="row['url']"
+               class="text-reset text-decoration-none text-truncate flex-grow-1">
+                <t t-out="row['label']"/>
+            </a>
+            <span t-else="" class="text-muted text-truncate flex-grow-1"><t t-out="row['label']"/></span>
+            <span class="fw-semibold ms-auto"><t t-out="row['count']"/></span>
+        </li>
+    </template>
+
+    <!-- Shared grouped stats cards (used by the org dashboard; reusable for
+         the workspace dashboard). Expects `stats_cards`: a list of dicts with
+         title, icon, total, total_url, rows [{label, count, url, color}],
+         and optionally rows_title / rows2_title / rows2. -->
+    <template id="portal_stats_cards" name="Grouped stats cards">
+        <div class="row g-3">
+            <div t-foreach="stats_cards" t-as="card" class="col-12 col-md-6 col-xl-3 d-flex">
+                <div class="card itlingo-kpi-card border-0 shadow-sm rounded-3 w-100">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex align-items-center gap-2 text-muted mb-1">
+                            <i t-if="card.get('icon')" t-attf-class="fa #{card['icon']} fa-fw" aria-hidden="true"/>
+                            <span class="small fw-semibold"><t t-out="card['title']"/></span>
                         </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="card itlingo-kpi-card border-0 shadow-sm rounded-3 h-100">
-                        <div class="card-body">
-                            <div class="itlingo-kpi-card__label">Active projects</div>
-                            <div class="itlingo-kpi-card__value"><t t-out="kpi_active_projects"/></div>
+                        <div class="fs-2 fw-bold lh-1 mb-2">
+                            <a t-if="card.get('total_url')" t-att-href="card['total_url']"
+                               class="text-reset text-decoration-none">
+                                <t t-out="card['total']"/>
+                            </a>
+                            <t t-else="" t-out="card['total']"/>
                         </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="card itlingo-kpi-card border-0 shadow-sm rounded-3 h-100">
-                        <div class="card-body">
-                            <div class="itlingo-kpi-card__label">Canceled projects</div>
-                            <div class="itlingo-kpi-card__value"><t t-out="kpi_canceled_projects"/></div>
+                        <hr class="my-2"/>
+                        <div t-if="card.get('rows_title')" class="text-muted small mt-1 mb-0">
+                            <t t-out="card['rows_title']"/>
                         </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="card itlingo-kpi-card border-0 shadow-sm rounded-3 h-100">
-                        <div class="card-body">
-                            <div class="itlingo-kpi-card__label">Completed projects</div>
-                            <div class="itlingo-kpi-card__value"><t t-out="kpi_completed_projects"/></div>
-                        </div>
+                        <ul class="list-unstyled small mb-0">
+                            <t t-foreach="card.get('rows') or []" t-as="row">
+                                <t t-call="itlingo_website_portal.portal_stats_card_row"/>
+                            </t>
+                        </ul>
+                        <t t-if="card.get('rows2')">
+                            <div class="text-muted small mt-2 mb-0">
+                                <t t-out="card.get('rows2_title') or ''"/>
+                            </div>
+                            <ul class="list-unstyled small mb-0">
+                                <t t-foreach="card['rows2']" t-as="row">
+                                    <t t-call="itlingo_website_portal.portal_stats_card_row"/>
+                                </t>
+                            </ul>
+                        </t>
                     </div>
                 </div>
             </div>
+        </div>
+    </template>
+
+    <!-- Statistics (default org landing) -->
+    <template id="portal_organization_hub_stats" name="Organization statistics">
+        <t t-call="itlingo_website_portal.portal_organization_hub_shell">
+            <t t-call="itlingo_website_portal.portal_stats_cards"/>
+            <p class="text-muted small mt-3 mb-0">
+                Registered on
+                <t t-call="itlingo_website_portal.portal_date">
+                    <t t-set="date_value" t-value="organization.create_date"/>
+                </t>
+            </p>
         </t>
     </template>
 
@@ -242,24 +269,100 @@
                 <a t-attf-href="/my/workspaces/new?organization_id=#{organization.id}"
                    class="btn btn-primary">New workspace</a>
             </div>
+            <div class="card itlingo-portal-filter-card shadow-sm border-0 rounded-3 mb-4">
+                <div class="card-body">
+                    <p class="text-muted small text-uppercase fw-semibold mb-3">Workspace filters</p>
+                    <form method="get" t-att-action="ws_filter_url">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <label class="form-label small text-muted mb-1" for="org_ws_filter_name">Name</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0"><i class="fa fa-search text-muted"/></span>
+                                    <input type="search" class="form-control border-start-0 bg-light" id="org_ws_filter_name"
+                                           name="name" t-att-value="ws_filters.get('name') or ''" placeholder="Name"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <t t-call="itlingo_website_portal.portal_filter_multiselect">
+                                    <t t-set="ms_id" t-value="'org_ws_filter_roles'"/>
+                                    <t t-set="ms_label">Your roles</t>
+                                    <t t-set="ms_options" t-value="[
+                                        {'name': 'role_ws_manager', 'value': '1', 'label': 'Workspace Manager',
+                                         'checked': ws_filters.get('role_ws_manager')},
+                                        {'name': 'role_doc_manager', 'value': '1', 'label': 'Document Manager',
+                                         'checked': ws_filters.get('role_doc_manager')},
+                                        {'name': 'role_ws_member', 'value': '1', 'label': 'Workspace Member',
+                                         'checked': ws_filters.get('role_ws_member')}]"/>
+                                </t>
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <t t-call="itlingo_website_portal.portal_filter_multiselect">
+                                    <t t-set="ms_id" t-value="'org_ws_filter_visibility'"/>
+                                    <t t-set="ms_label">Visibility</t>
+                                    <t t-set="ms_options" t-value="[
+                                        {'name': 'public_ws', 'value': '1', 'label': 'Public workspace',
+                                         'checked': ws_filters.get('public_ws')},
+                                        {'name': 'private_ws', 'value': '1', 'label': 'Not public',
+                                         'checked': ws_filters.get('private_ws')}]"/>
+                                </t>
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <t t-call="itlingo_website_portal.portal_filter_multiselect">
+                                    <t t-set="ms_id" t-value="'org_ws_filter_status'"/>
+                                    <t t-set="ms_label">Status</t>
+                                    <t t-set="ms_options" t-value="[
+                                        {'name': 'status', 'value': opt[0], 'label': opt[1],
+                                         'checked': opt[0] in (ws_filters.get('status') or [])}
+                                        for opt in ws_status_selection]"/>
+                                </t>
+                            </div>
+                            <div class="col-12 d-flex flex-wrap gap-2 pt-1">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-search me-1"/>Filter
+                                </button>
+                                <a t-att-href="ws_filter_url" class="btn btn-outline-secondary">Clear filters</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <t t-if="not projects">
-                <p class="text-muted">No workspaces in this organization yet.</p>
+                <p class="text-muted">No workspaces match your filters, or there are no workspaces in this organization yet.</p>
             </t>
             <div t-if="projects" class="card border-0 shadow-sm rounded-3">
-                <div class="card-body p-0">
+                <div class="card-body p-0 table-responsive">
                     <table class="table table-hover mb-0">
                         <thead class="table-light">
                             <tr>
                                 <th>Workspace</th>
+                                <th>Your Role</th>
+                                <th>Public</th>
+                                <th>Create Date</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr t-foreach="projects" t-as="proj">
+                                <t t-set="ws_role" t-value="ws_role_map.get(proj.id)"/>
                                 <td>
                                     <a t-attf-href="/my/workspaces/#{proj.id}">
                                         <t t-out="proj.name"/>
                                     </a>
+                                </td>
+                                <td>
+                                    <span t-if="ws_role" class="badge bg-info text-dark">
+                                        <t t-out="dict(ws_role._fields['role'].selection).get(ws_role.role)"/>
+                                    </span>
+                                    <t t-else="">—</t>
+                                </td>
+                                <td>
+                                    <span t-if="proj.is_public_workspace" class="badge bg-success">Yes</span>
+                                    <span t-else="" class="badge bg-light text-dark border">No</span>
+                                </td>
+                                <td>
+                                    <t t-call="itlingo_website_portal.portal_date">
+                                        <t t-set="date_value" t-value="proj.create_date"/>
+                                    </t>
                                 </td>
                                 <td>
                                     <span class="badge bg-secondary">
@@ -273,6 +376,9 @@
                         </tbody>
                     </table>
                 </div>
+            </div>
+            <div t-if="pager" class="o_portal_pager text-center mt-3">
+                <t t-call="portal.pager"/>
             </div>
         </t>
     </template>
@@ -290,37 +396,7 @@
                 <a t-attf-href="/my/organizations/#{organization.id}/documents/new"
                    class="btn btn-primary">Add document</a>
             </div>
-            <t t-if="not documents">
-                <p class="text-muted">No documents linked to this organization yet.</p>
-            </t>
-            <div t-if="documents" class="card border-0 shadow-sm rounded-3">
-                <div class="card-body p-0">
-                    <table class="table table-hover mb-0">
-                        <thead class="table-light">
-                            <tr>
-                                <th>Name</th>
-                                <th>Status</th>
-                                <th>Version</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr t-foreach="documents" t-as="doc">
-                                <td>
-                                    <a t-attf-href="/my/organizations/#{organization.id}/documents/#{doc.id}">
-                                        <t t-out="doc.name"/>
-                                    </a>
-                                </td>
-                                <td>
-                                    <span class="badge bg-secondary">
-                                        <t t-out="dict(doc._fields['status'].selection).get(doc.status)"/>
-                                    </span>
-                                </td>
-                                <td><t t-out="doc.version or '-'"/></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            <t t-call="itlingo_website_portal.portal_documents_list"/>
         </t>
     </template>
 
@@ -404,32 +480,77 @@
             <div t-if="org_users_error in ('role_not_accepted', 'remove_not_accepted')" class="alert alert-danger" role="alert">
                 That membership is not active.
             </div>
-            <div t-if="can_manage_org_users" class="card border-0 shadow-sm rounded-3 mb-4">
+            <div t-if="can_manage_org_users" class="d-flex flex-wrap gap-2 mb-3">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#org_invite_panel" aria-expanded="false"
+                        aria-controls="org_invite_panel">
+                    <i class="fa fa-user-plus me-1"/>Invite member
+                </button>
+            </div>
+            <div t-if="can_manage_org_users" class="collapse mb-4" id="org_invite_panel">
+                <div class="card border-0 shadow-sm rounded-3">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">Invite member</h3>
+                        <form t-attf-action="/my/organizations/#{organization.id}/users/invite" method="post" class="row g-3 align-items-end">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            <div class="col-md-5">
+                                <label class="form-label" for="invite_email">Email (login)</label>
+                                <input type="email" class="form-control" id="invite_email" name="email" required="" placeholder="user@example.com"/>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label" for="invite_role">Role</label>
+                                <select class="form-select" id="invite_role" name="role">
+                                    <option value="org_member">Org Member</option>
+                                    <option value="doc_manager">Document Manager</option>
+                                    <option value="org_manager">Org Manager</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary w-100">Send invitation</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="card itlingo-portal-filter-card shadow-sm border-0 rounded-3 mb-4">
                 <div class="card-body">
-                    <h3 class="h6 mb-3">Invite member</h3>
-                    <form t-attf-action="/my/organizations/#{organization.id}/users/invite" method="post" class="row g-3 align-items-end">
-                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                        <div class="col-md-5">
-                            <label class="form-label" for="invite_email">Email (login)</label>
-                            <input type="email" class="form-control" id="invite_email" name="email" required="" placeholder="user@example.com"/>
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label" for="invite_role">Role</label>
-                            <select class="form-select" id="invite_role" name="role">
-                                <option value="org_member">Org Member</option>
-                                <option value="doc_manager">Document Manager</option>
-                                <option value="org_manager">Org Manager</option>
-                            </select>
-                        </div>
-                        <div class="col-md-3">
-                            <button type="submit" class="btn btn-primary w-100">Send invitation</button>
+                    <p class="text-muted small text-uppercase fw-semibold mb-3">Member filters</p>
+                    <form method="get" t-att-action="users_filter_url">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label small text-muted mb-1" for="org_user_filter_name">Name or email</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0"><i class="fa fa-search text-muted"/></span>
+                                    <input type="search" class="form-control border-start-0 bg-light" id="org_user_filter_name"
+                                           name="name" t-att-value="users_filters.get('name') or ''" placeholder="Name or email"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <t t-call="itlingo_website_portal.portal_filter_multiselect">
+                                    <t t-set="ms_id" t-value="'org_user_filter_role'"/>
+                                    <t t-set="ms_label">Role</t>
+                                    <t t-set="ms_options" t-value="[
+                                        {'name': 'role_org_manager', 'value': '1', 'label': 'Org Manager',
+                                         'checked': users_filters.get('role_org_manager')},
+                                        {'name': 'role_org_member', 'value': '1', 'label': 'Org Member',
+                                         'checked': users_filters.get('role_org_member')},
+                                        {'name': 'role_doc_manager', 'value': '1', 'label': 'Document Manager',
+                                         'checked': users_filters.get('role_doc_manager')}]"/>
+                                </t>
+                            </div>
+                            <div class="col-12 d-flex flex-wrap gap-2 pt-1">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-search me-1"/>Filter
+                                </button>
+                                <a t-att-href="users_filter_url" class="btn btn-outline-secondary">Clear filters</a>
+                            </div>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="card border-0 shadow-sm rounded-3">
                 <div class="card-header bg-white border-0 pt-3 pb-0">
-                    <h2 class="h6 mb-0">Members (<t t-out="len(members)"/>)</h2>
+                    <h2 class="h6 mb-0">Members (<t t-out="member_count"/>)</h2>
                 </div>
                 <div class="card-body p-0">
                     <div class="table-responsive">
@@ -437,20 +558,22 @@
                             <thead class="table-light">
                                 <tr>
                                     <th>User</th>
+                                    <th>Email</th>
                                     <th>Role</th>
-                                    <th class="text-end">Actions</th>
+                                    <th>Member Since</th>
+                                    <th class="text-end" style="width: 8rem;">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr t-foreach="members" t-as="member">
+                                    <t t-set="editing" t-value="can_manage_org_users and edit_role_id == member.id"/>
                                     <td><t t-out="member.user_id.name"/></td>
+                                    <td class="text-muted"><t t-out="member.user_id.login"/></td>
                                     <td>
-                                        <t t-if="not can_manage_org_users">
-                                            <span class="badge bg-info text-dark">
-                                                <t t-out="dict(member._fields['role'].selection).get(member.role)"/>
-                                            </span>
-                                        </t>
-                                        <form t-if="can_manage_org_users"
+                                        <span t-if="not editing" class="badge bg-info text-dark">
+                                            <t t-out="dict(member._fields['role'].selection).get(member.role)"/>
+                                        </span>
+                                        <form t-if="editing"
                                               t-attf-action="/my/organizations/#{organization.id}/users/#{member.id}/role"
                                               method="post" class="d-flex flex-wrap gap-2 align-items-center">
                                             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
@@ -462,32 +585,57 @@
                                                     </option>
                                                 </t>
                                             </select>
-                                            <button type="submit" class="btn btn-sm btn-outline-primary">Update</button>
+                                            <button type="submit" class="btn btn-sm btn-primary">Save</button>
+                                            <a t-att-href="users_filter_url" class="btn btn-sm btn-outline-secondary">Cancel</a>
                                         </form>
                                     </td>
+                                    <td>
+                                        <t t-call="itlingo_website_portal.portal_date">
+                                            <t t-set="date_value" t-value="member.response_date or member.create_date"/>
+                                        </t>
+                                    </td>
                                     <td class="text-end">
-                                        <form t-if="member.user_id.id == request.env.uid"
-                                              t-attf-action="/my/organizations/#{organization.id}/leave"
-                                              method="post" class="d-inline"
-                                              onsubmit="return confirm('Leave this organization? You will lose access.');">
-                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                            <button type="submit" class="btn btn-sm btn-outline-warning">
-                                                <i class="fa fa-sign-out me-1"/>Leave organization
-                                            </button>
-                                        </form>
-                                        <form t-if="can_manage_org_users and member.user_id.id != request.env.uid"
-                                              t-attf-action="/my/organizations/#{organization.id}/users/#{member.id}/remove"
-                                              method="post" class="d-inline"
-                                              onsubmit="return confirm('Remove this member from the organization?');">
-                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                            <button type="submit" class="btn btn-sm btn-outline-danger">Remove</button>
-                                        </form>
+                                        <div class="d-inline-flex justify-content-end">
+                                            <span class="d-inline-block text-center" style="width: 2.25rem;">
+                                                <a t-if="can_manage_org_users and not editing"
+                                                   t-attf-href="#{users_filter_url}?edit_role=#{member.id}"
+                                                   class="btn btn-sm btn-link text-primary p-1"
+                                                   title="Edit role" aria-label="Edit role">
+                                                    <i class="fa fa-pencil fa-lg"/>
+                                                </a>
+                                            </span>
+                                            <span class="d-inline-block text-center" style="width: 2.25rem;">
+                                                <form t-if="member.user_id.id == request.env.uid"
+                                                      t-attf-action="/my/organizations/#{organization.id}/leave"
+                                                      method="post" class="d-inline"
+                                                      onsubmit="return confirm('Leave this organization? You will lose access.');">
+                                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                    <button type="submit" class="btn btn-sm btn-link text-warning p-1"
+                                                            title="Leave organization" aria-label="Leave organization">
+                                                        <i class="fa fa-sign-out fa-lg"/>
+                                                    </button>
+                                                </form>
+                                                <form t-if="can_manage_org_users and member.user_id.id != request.env.uid"
+                                                      t-attf-action="/my/organizations/#{organization.id}/users/#{member.id}/remove"
+                                                      method="post" class="d-inline"
+                                                      onsubmit="return confirm('Remove this member from the organization?');">
+                                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                    <button type="submit" class="btn btn-sm btn-link text-danger p-1"
+                                                            title="Remove member" aria-label="Remove member">
+                                                        <i class="fa fa-user-times fa-lg"/>
+                                                    </button>
+                                                </form>
+                                            </span>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
+            </div>
+            <div t-if="pager" class="o_portal_pager text-center mt-3">
+                <t t-call="portal.pager"/>
             </div>
         </t>
     </template>
@@ -507,14 +655,6 @@
                             <input type="text" class="form-control" id="org_settings_name" name="name" required=""
                                    t-att-value="form.get('name') if form else organization.name"/>
                             <div t-if="error.get('name')" class="text-danger small mt-1"><t t-out="error['name']"/></div>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="org_settings_privacy">Privacy</label>
-                            <select class="form-select" id="org_settings_privacy" name="organization_type">
-                                <option value="private" t-att-selected="(form.get('organization_type') if form else organization.organization_type) == 'private'">Private</option>
-                                <option value="public" t-att-selected="(form.get('organization_type') if form else organization.organization_type) == 'public'">Public</option>
-                            </select>
-                            <div t-if="error.get('organization_type')" class="text-danger small mt-1"><t t-out="error['organization_type']"/></div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="org_settings_activity">Activity type</label>
@@ -541,6 +681,12 @@
                             </select>
                             <div t-if="error.get('country_id')" class="text-danger small mt-1"><t t-out="error['country_id']"/></div>
                         </div>
+                        <p class="text-muted small mb-3">
+                            Registered on
+                            <t t-call="itlingo_website_portal.portal_date">
+                                <t t-set="date_value" t-value="organization.create_date"/>
+                            </t>
+                        </p>
                         <button type="submit" class="btn btn-primary">Save</button>
                     </form>
                 </div>
