@@ -18,7 +18,7 @@ class ItlingoProjectRole(models.Model):
             role_label = dict(role._fields['role'].selection).get(role.role, role.role)
             body = _(
                 'You were invited to workspace <b>%s</b> as <b>%s</b>. '
-                '<a href="/my/invitations">Open My Invitations</a> to respond.',
+                'Respond from <a href="/my/notifications">your notifications</a>.',
                 role.project_id.name,
                 role_label,
             )

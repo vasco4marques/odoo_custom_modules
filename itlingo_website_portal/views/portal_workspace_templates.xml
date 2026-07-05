@@ -206,9 +206,7 @@
                     </table>
                 </div>
             </div>
-            <div t-if="pager" class="o_portal_pager text-center mt-3">
-                <t t-call="portal.pager"/>
-            </div>
+            <t t-call="itlingo_website_portal.portal_list_pager"/>
         </t>
     </template>
 
@@ -322,9 +320,7 @@
                     </tr>
                 </tbody>
             </t>
-            <div t-if="pager" class="o_portal_pager text-center mt-3">
-                <t t-call="portal.pager"/>
-            </div>
+            <t t-call="itlingo_website_portal.portal_list_pager"/>
         </t>
     </template>
 
@@ -796,9 +792,7 @@
                     </div>
                 </div>
             </div>
-            <div t-if="pager" class="o_portal_pager text-center mt-3">
-                <t t-call="portal.pager"/>
-            </div>
+            <t t-call="itlingo_website_portal.portal_list_pager"/>
         </t>
     </template>
 

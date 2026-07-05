@@ -3,7 +3,9 @@ import base64
 from odoo import _, http
 from odoo.exceptions import AccessError, MissingError, UserError, ValidationError
 from odoo.http import request, route, content_disposition
-from odoo.addons.portal.controllers.portal import CustomerPortal, pager
+from odoo.addons.portal.controllers.portal import CustomerPortal
+
+from .portal import paginate
 
 DSL_STATUS = ('draft', 'active', 'deprecated', 'archived')
 DSL_FILE_TYPES = ('grammar', 'validation', 'examples', 'specification')
@@ -149,19 +151,9 @@ class ITLingoDslPortal(CustomerPortal):
             url_args = dict(url_args)
             url_args.update({'sortby': sortby, 'sortdir': sortdir})
 
-        total = Dsl.search_count(domain)
-        page_detail = pager(
-            url='/dsl',
-            total=total,
-            page=page,
-            step=20,
-            url_args=url_args or None,
-        )
-        dsls = Dsl.search(
-            domain,
-            limit=20,
-            offset=page_detail['offset'],
-            order=order,
+        dsls, total, page_detail = paginate(
+            Dsl, domain, '/dsl', page,
+            url_args=url_args, order=order,
         )
 
         if is_admin:

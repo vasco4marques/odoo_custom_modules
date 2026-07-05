@@ -13,16 +13,7 @@ class ITLingoNotificationAPI(http.Controller):
     def _serialize_notifications(self, notifications):
         items = []
         for n in notifications:
-            is_actionable = False
-            if n.notification_type == 'invite' and n.res_model and n.res_id:
-                try:
-                    role = request.env[n.res_model].sudo().browse(n.res_id)
-                    if (role.exists()
-                            and role.user_id.id == request.uid
-                            and role.state == 'pending'):
-                        is_actionable = True
-                except Exception:
-                    pass
+            is_actionable = n._is_pending_invitation()
             items.append({
                 'id': n.id,
                 'title': n.title,
@@ -59,15 +50,9 @@ class ITLingoNotificationAPI(http.Controller):
         if action not in ('accept', 'reject'):
             return {'error': 'Invalid action.'}
 
-        if not notif.res_model or not notif.res_id:
+        role = notif._linked_invitation_role()
+        if not role:
             return {'error': 'No linked invitation.'}
-
-        if notif.res_model not in ('itlingo.organization.role', 'itlingo.project.role'):
-            return {'error': 'Not an invitation notification.'}
-
-        role = request.env[notif.res_model].sudo().browse(notif.res_id)
-        if not role.exists() or role.user_id.id != request.uid:
-            return {'error': 'Invitation not found.'}
 
         if role.state != 'pending':
             notif.action_mark_read()

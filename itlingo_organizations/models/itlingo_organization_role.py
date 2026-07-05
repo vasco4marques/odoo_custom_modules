@@ -74,7 +74,7 @@ class ItlingoOrganizationRole(models.Model):
                 summary=_('Invitation: %s', rec.organization_id.name),
                 note=_(
                     'You were invited to join <b>%s</b> as <b>%s</b>. '
-                    'Open your portal at <a href="/my/invitations">My Invitations</a> '
+                    'Open your portal at <a href="/my/notifications">My Notifications</a> '
                     'to accept or decline.',
                     rec.organization_id.name,
                     role_label,

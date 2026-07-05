@@ -28,6 +28,27 @@ class ItlingoNotification(models.Model):
         model_field='res_model',
     )
 
+    INVITE_ROLE_MODELS = ('itlingo.organization.role', 'itlingo.project.role')
+
+    def _linked_invitation_role(self):
+        """Return the pending role record this invite notification points to,
+        or an empty/None value when the notification is not an actionable
+        invitation for its recipient."""
+        self.ensure_one()
+        if (self.notification_type != 'invite'
+                or self.res_model not in self.INVITE_ROLE_MODELS
+                or not self.res_id):
+            return None
+        role = self.env[self.res_model].sudo().browse(self.res_id)
+        if role.exists() and role.user_id.id == self.user_id.id:
+            return role
+        return None
+
+    def _is_pending_invitation(self):
+        self.ensure_one()
+        role = self._linked_invitation_role()
+        return bool(role and role.state == 'pending')
+
     def action_mark_read(self):
         self.filtered(lambda n: not n.is_read).write({
             'is_read': True,

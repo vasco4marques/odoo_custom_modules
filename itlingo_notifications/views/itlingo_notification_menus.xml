@@ -12,10 +12,4 @@
               action="itlingo_notification_action"
               sequence="10"/>
 
-    <menuitem id="itlingo_menu_messages_list"
-              name="Messages"
-              parent="itlingo_menu_notifications"
-              action="itlingo_message_action"
-              sequence="20"/>
-
 </odoo>

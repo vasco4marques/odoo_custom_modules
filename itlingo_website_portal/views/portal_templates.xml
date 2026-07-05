@@ -79,6 +79,21 @@
         </div>
     </template>
 
+    <!-- Shared list pager footer, used below every paginated table. Expects
+         `pager` (the dict built by controllers.portal.paginate) in the
+         rendering context. Always shows the "Showing X-Y of Z" summary when
+         there are results; the page controls (core portal.pager) appear only
+         when there is more than one page. -->
+    <template id="portal_list_pager" name="Shared list pager">
+        <div t-if="pager" class="o_portal_pager text-center mt-3">
+            <p t-if="pager.get('total')" class="text-muted small mb-1">
+                Showing <t t-out="pager['range_start']"/>&#8211;<t t-out="pager['range_end']"/>
+                of <t t-out="pager['total']"/>
+            </p>
+            <t t-call="portal.pager"/>
+        </div>
+    </template>
+
     <!-- Shared documents list: filter bar + sortable table, used by every
          document list in the portal (workspace, public workspace, org) so
          the columns stay consistent. Expects the _portal_documents_list_ctx
@@ -258,9 +273,7 @@
                 </table>
             </div>
         </div>
-        <div t-if="pager" class="o_portal_pager text-center mt-3">
-            <t t-call="portal.pager"/>
-        </div>
+        <t t-call="itlingo_website_portal.portal_list_pager"/>
     </template>
 
     <!-- "My Account" must open real account management. The stock link goes
@@ -528,8 +541,8 @@
             <li t-if="page_name == 'workspace_document_edit'" class="breadcrumb-item active">Edit</li>
             <li t-if="page_name == 'workspace_specifications'" class="breadcrumb-item active">Specifications</li>
             <li t-if="page_name == 'workspace_settings'" class="breadcrumb-item active">Settings</li>
-            <li t-if="page_name == 'invitations'" class="breadcrumb-item active">
-                Invitations
+            <li t-if="page_name == 'notifications'" class="breadcrumb-item active">
+                Notifications
             </li>
             <li t-if="page_name == 'dsls'" class="breadcrumb-item active">
                 DSLs
@@ -586,13 +599,6 @@
                 <t t-set="url" t-value="'/my/workspaces'"/>
                 <t t-set="text">Access your project workspaces</t>
                 <t t-set="placeholder_count" t-value="'workspace_count'"/>
-            </t>
-            <t t-call="portal.portal_docs_entry">
-                <t t-set="icon" t-value="'/web/static/img/mail.svg'"/>
-                <t t-set="title">Invitations</t>
-                <t t-set="url" t-value="'/my/invitations'"/>
-                <t t-set="text">Pending invitations to organizations and workspaces</t>
-                <t t-set="placeholder_count" t-value="'invitation_count'"/>
             </t>
             <t t-if="request.env.user.has_group('itlingo_organizations.group_itlingo_admin') or request.env.user.has_group('itlingo_dsl.group_itlingo_dsl_maintainer')"
                t-call="portal.portal_docs_entry">

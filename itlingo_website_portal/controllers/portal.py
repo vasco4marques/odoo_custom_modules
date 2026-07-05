@@ -1,9 +1,48 @@
 import base64
+from urllib.parse import urlencode
 
 from odoo import _, http
 from odoo.exceptions import AccessError, MissingError, UserError
 from odoo.http import request, route, content_disposition
 from odoo.addons.portal.controllers.portal import CustomerPortal, pager
+
+# Rows per page on every portal list. Keep a single value so all listing
+# pages paginate the same way.
+PORTAL_PAGE_STEP = 10
+
+
+def paginate(records_model, domain, url, page, url_args=None, order=None,
+             step=PORTAL_PAGE_STEP):
+    """Shared pagination for portal lists.
+
+    Counts the records matching ``domain``, builds the standard portal
+    pager for ``url`` and fetches only the current page. Returns
+    ``(records, total, pager_dict)``.
+    """
+    total = records_model.search_count(domain)
+    page_detail = pager(
+        url=url,
+        total=total,
+        page=page,
+        step=step,
+        url_args=url_args or None,
+    )
+    _pager_add_summary(page_detail, total, step)
+    records = records_model.search(
+        domain, limit=step, offset=page_detail['offset'], order=order,
+    )
+    return records, total, page_detail
+
+
+def _pager_add_summary(page_detail, total, step):
+    """Extra keys consumed by the shared `portal_list_pager` template to
+    render the "Showing X-Y of Z" summary (core `portal.pager` only
+    renders page links, and only when there is more than one page)."""
+    page_detail.update({
+        'total': total,
+        'range_start': page_detail['offset'] + 1 if total else 0,
+        'range_end': min(page_detail['offset'] + step, total),
+    })
 
 
 class ITLingoPortal(CustomerPortal):
@@ -157,7 +196,6 @@ class ITLingoPortal(CustomerPortal):
 
     def _portal_sort_qs(self, url_args):
         """Encode filter params (no sort keys) for the sortable headers."""
-        from urllib.parse import urlencode
         # doseq: multi-select filters put lists in url_args
         return urlencode(url_args, doseq=True) if url_args else ''
 
@@ -217,17 +255,6 @@ class ITLingoPortal(CustomerPortal):
                 ('state', '=', 'accepted'),
             ])
             values['workspace_count'] = len(ws_roles)
-
-        if 'invitation_count' in counters:
-            org_pending = request.env['itlingo.organization.role'].sudo().search_count([
-                ('user_id', '=', user.id),
-                ('state', '=', 'pending'),
-            ])
-            ws_pending = request.env['itlingo.project.role'].sudo().search_count([
-                ('user_id', '=', user.id),
-                ('state', '=', 'pending'),
-            ])
-            values['invitation_count'] = org_pending + ws_pending
 
         return values
 
@@ -393,19 +420,9 @@ class ITLingoPortal(CustomerPortal):
             url_args = dict(url_args)
             url_args.update({'sortby': sortby, 'sortdir': sortdir})
 
-        org_count = Org.search_count(domain)
-        page_detail = pager(
-            url='/my/organizations',
-            total=org_count,
-            page=page,
-            step=10,
-            url_args=url_args or None,
-        )
-        organizations = Org.search(
-            domain,
-            limit=10,
-            offset=page_detail['offset'],
-            order=order,
+        organizations, org_count, page_detail = paginate(
+            Org, domain, '/my/organizations', page,
+            url_args=url_args, order=order,
         )
 
         role_map = {}
@@ -743,7 +760,8 @@ class ITLingoPortal(CustomerPortal):
     }
 
     def _portal_documents_list_ctx(self, base_domain, params,
-                                   page_url=None, page=1, step=20):
+                                   page_url=None, page=1,
+                                   step=PORTAL_PAGE_STEP):
         """Shared filter + sort handling for portal document lists.
 
         Applies the filter bar params (name, language, format, type, dsl) and
@@ -804,22 +822,18 @@ class ITLingoPortal(CustomerPortal):
         order, sortby, sortdir = self._portal_sort(
             params, self._DOC_SORT_FIELDS, 'creation_date desc, name',
         )
-        doc_count = Document.search_count(domain)
-        page_detail = None
-        limit = offset = None
         if page_url:
             url_args = dict(filter_args)
             if sortby:
                 url_args.update({'sortby': sortby, 'sortdir': sortdir})
-            page_detail = pager(
-                url=page_url,
-                total=doc_count,
-                page=page,
-                step=step,
-                url_args=url_args or None,
+            documents, doc_count, page_detail = paginate(
+                Document, domain, page_url, page,
+                url_args=url_args, order=order, step=step,
             )
-            limit, offset = step, page_detail['offset']
-        documents = Document.search(domain, order=order, limit=limit, offset=offset)
+        else:
+            doc_count = Document.search_count(domain)
+            page_detail = None
+            documents = Document.search(domain, order=order)
         return {
             'documents': documents,
             'doc_count': doc_count,
@@ -1107,16 +1121,9 @@ class ITLingoPortal(CustomerPortal):
             url_args = dict(url_args)
             url_args.update({'sortby': sortby, 'sortdir': sortdir})
 
-        project_count = Project.search_count(domain)
-        page_detail = pager(
-            url=base_url,
-            total=project_count,
-            page=page,
-            step=20,
-            url_args=url_args or None,
-        )
-        projects = Project.search(
-            domain, limit=20, offset=page_detail['offset'], order=order,
+        projects, project_count, page_detail = paginate(
+            Project, domain, base_url, page,
+            url_args=url_args, order=order,
         )
 
         values = self._prepare_portal_layout_values()
@@ -1296,16 +1303,9 @@ class ITLingoPortal(CustomerPortal):
             url_args = dict(url_args)
             url_args.update({'sortby': sortby, 'sortdir': sortdir})
 
-        member_count = OrgRole.search_count(domain)
-        page_detail = pager(
-            url=base_url,
-            total=member_count,
-            page=page,
-            step=20,
-            url_args=url_args or None,
-        )
-        members = OrgRole.search(
-            domain, limit=20, offset=page_detail['offset'], order=order,
+        members, member_count, page_detail = paginate(
+            OrgRole, domain, base_url, page,
+            url_args=url_args, order=order,
         )
 
         # Inline role edit: ?edit_role=<role line id> renders the dropdown
@@ -1843,19 +1843,9 @@ class ITLingoPortal(CustomerPortal):
             url_args = dict(url_args)
             url_args.update({'sortby': sortby, 'sortdir': sortdir})
 
-        project_count = Project.search_count(domain)
-        page_detail = pager(
-            url='/my/workspaces',
-            total=project_count,
-            page=page,
-            step=10,
-            url_args=url_args or None,
-        )
-        projects = Project.search(
-            domain,
-            limit=10,
-            offset=page_detail['offset'],
-            order=order,
+        projects, project_count, page_detail = paginate(
+            Project, domain, '/my/workspaces', page,
+            url_args=url_args, order=order,
         )
 
         can_create_workspace = bool(
@@ -1944,19 +1934,9 @@ class ITLingoPortal(CustomerPortal):
         if sortby:
             url_args.update({'sortby': sortby, 'sortdir': sortdir})
 
-        project_count = Project.search_count(domain)
-        page_detail = pager(
-            url='/public-workspaces',
-            total=project_count,
-            page=page,
-            step=10,
-            url_args=url_args or None,
-        )
-        projects = Project.search(
-            domain,
-            limit=10,
-            offset=page_detail['offset'],
-            order=order,
+        projects, project_count, page_detail = paginate(
+            Project, domain, '/public-workspaces', page,
+            url_args=url_args, order=order,
         )
         user = request.env.user
         public_workspace_rows = []
@@ -2010,10 +1990,11 @@ class ITLingoPortal(CustomerPortal):
         return request.render('itlingo_website_portal.portal_workspace_detail', values)
 
     @route(
-        '/public-workspaces/<int:project_id>/documents',
+        ['/public-workspaces/<int:project_id>/documents',
+         '/public-workspaces/<int:project_id>/documents/page/<int:page>'],
         type='http', auth='public', website=True,
     )
-    def portal_public_workspace_documentation(self, project_id, **kw):
+    def portal_public_workspace_documentation(self, project_id, page=1, **kw):
         redir = self._portal_ws_maybe_redirect_public_to_my(
             project_id, '/documents',
         )
@@ -2023,6 +2004,7 @@ class ITLingoPortal(CustomerPortal):
         if not project:
             return request.not_found()
         Role = request.env['itlingo.project.role'].sudo()
+        base_url = f'/public-workspaces/{project_id}/documents'
         values = self._prepare_portal_layout_values()
         values.update({
             'project': project,
@@ -2032,8 +2014,9 @@ class ITLingoPortal(CustomerPortal):
             'members': Role.browse(),
             **self._portal_workspace_hub_common(project, 'documentation', public_hub=True),
             **self._portal_documents_list_ctx(
-                [('project_id', '=', project_id)], request.params),
-            'sort_base_url': f'/public-workspaces/{project_id}/documents',
+                [('project_id', '=', project_id)], request.params,
+                page_url=base_url, page=page),
+            'sort_base_url': base_url,
         })
         return request.render(
             'itlingo_website_portal.portal_workspace_documentation',
@@ -2576,16 +2559,9 @@ class ITLingoPortal(CustomerPortal):
             url_args = dict(url_args)
             url_args.update({'sortby': sortby, 'sortdir': sortdir})
 
-        member_count = WsRole.search_count(domain)
-        page_detail = pager(
-            url=base_url,
-            total=member_count,
-            page=page,
-            step=20,
-            url_args=url_args or None,
-        )
-        members = WsRole.search(
-            domain, limit=20, offset=page_detail['offset'], order=order,
+        members, member_count, page_detail = paginate(
+            WsRole, domain, base_url, page,
+            url_args=url_args, order=order,
         )
 
         try:
@@ -2881,13 +2857,16 @@ class ITLingoPortal(CustomerPortal):
     # Workspace hub: documentation, placeholders
     # ──────────────────────────────────────────────
 
-    @route('/my/workspaces/<int:project_id>/documents', type='http', auth='user', website=True)
-    def portal_workspace_documentation(self, project_id, **kw):
+    @route(['/my/workspaces/<int:project_id>/documents',
+            '/my/workspaces/<int:project_id>/documents/page/<int:page>'],
+           type='http', auth='user', website=True)
+    def portal_workspace_documentation(self, project_id, page=1, **kw):
         project, user_role = self._portal_ws_access(project_id)
         can_doc = bool(
             user_role and user_role.role in self._DOC_EDIT_WS_ROLES,
         )
         params = request.params
+        base_url = f'/my/workspaces/{project_id}/documents'
         values = self._prepare_portal_layout_values()
         values.update({
             'project': project,
@@ -2901,8 +2880,9 @@ class ITLingoPortal(CustomerPortal):
             'members': self._portal_workspace_hub_members(project_id),
             **self._portal_workspace_hub_common(project, 'documentation', public_hub=False),
             **self._portal_documents_list_ctx(
-                [('project_id', '=', project_id)], params),
-            'sort_base_url': f'/my/workspaces/{project_id}/documents',
+                [('project_id', '=', project_id)], params,
+                page_url=base_url, page=page),
+            'sort_base_url': base_url,
         })
         return request.render(
             'itlingo_website_portal.portal_workspace_documentation',
@@ -3081,60 +3061,4 @@ class ITLingoPortal(CustomerPortal):
             values,
         )
 
-    # ──────────────────────────────────────────────
-    # Invitations
-    # ──────────────────────────────────────────────
-
-    @route('/my/invitations', type='http', auth='user', website=True)
-    def portal_my_invitations(self, **kw):
-        user = request.env.user
-
-        org_invitations = request.env['itlingo.organization.role'].sudo().search([
-            ('user_id', '=', user.id),
-            ('state', '=', 'pending'),
-        ])
-        ws_invitations = request.env['itlingo.project.role'].sudo().search([
-            ('user_id', '=', user.id),
-            ('state', '=', 'pending'),
-        ])
-
-        values = self._prepare_portal_layout_values()
-        values.update({
-            'org_invitations': org_invitations,
-            'ws_invitations': ws_invitations,
-            'page_name': 'invitations',
-        })
-        return request.render('itlingo_website_portal.portal_my_invitations', values)
-
-    @route('/my/invitations/org/<int:role_id>/accept',
-           type='http', auth='user', website=True)
-    def portal_accept_org_invitation(self, role_id, **kw):
-        role = request.env['itlingo.organization.role'].sudo().browse(role_id)
-        if role.exists() and role.user_id.id == request.env.user.id:
-            role.action_accept()
-        return request.redirect('/my/invitations')
-
-    @route('/my/invitations/org/<int:role_id>/reject',
-           type='http', auth='user', website=True)
-    def portal_reject_org_invitation(self, role_id, **kw):
-        role = request.env['itlingo.organization.role'].sudo().browse(role_id)
-        if role.exists() and role.user_id.id == request.env.user.id:
-            role.action_reject()
-        return request.redirect('/my/invitations')
-
-    @route('/my/invitations/ws/<int:role_id>/accept',
-           type='http', auth='user', website=True)
-    def portal_accept_ws_invitation(self, role_id, **kw):
-        role = request.env['itlingo.project.role'].sudo().browse(role_id)
-        if role.exists() and role.user_id.id == request.env.user.id:
-            role.action_accept()
-        return request.redirect('/my/invitations')
-
-    @route('/my/invitations/ws/<int:role_id>/reject',
-           type='http', auth='user', website=True)
-    def portal_reject_ws_invitation(self, role_id, **kw):
-        role = request.env['itlingo.project.role'].sudo().browse(role_id)
-        if role.exists() and role.user_id.id == request.env.user.id:
-            role.action_reject()
-        return request.redirect('/my/invitations')
 

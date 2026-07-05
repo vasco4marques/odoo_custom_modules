@@ -1,6 +1,7 @@
 from odoo import http
 from odoo.http import request
-from odoo.addons.portal.controllers.portal import CustomerPortal, pager
+from odoo.addons.portal.controllers.portal import CustomerPortal
+from odoo.addons.itlingo_website_portal.controllers.portal import paginate
 
 
 class ITLingoNotificationPortal(CustomerPortal):
@@ -10,11 +11,10 @@ class ITLingoNotificationPortal(CustomerPortal):
         if 'notification_count' in counters:
             values['notification_count'] = request.env[
                 'itlingo.notification'
-            ].search_count([('is_read', '=', False)])
-        if 'message_count' in counters:
-            values['message_count'] = request.env[
-                'itlingo.message'
-            ].search_count([('recipient_id', '=', request.uid), ('is_read', '=', False)])
+            ].search_count([
+                ('user_id', '=', request.uid),
+                ('is_read', '=', False),
+            ])
         return values
 
     @http.route(
@@ -24,19 +24,17 @@ class ITLingoNotificationPortal(CustomerPortal):
     def portal_my_notifications(self, page=1, **kw):
         Notification = request.env['itlingo.notification']
         domain = [('user_id', '=', request.uid)]
-        notif_count = Notification.search_count(domain)
-        page_detail = pager(
-            url='/my/notifications',
-            total=notif_count,
-            page=page,
-            step=20,
-        )
-        notifications = Notification.search(
-            domain, limit=20, offset=page_detail['offset'],
+        notifications, notif_count, page_detail = paginate(
+            Notification, domain, '/my/notifications', page,
             order='create_date desc',
         )
+        actionable_ids = {
+            n.id for n in notifications if n._is_pending_invitation()
+        }
         return request.render('itlingo_notifications.portal_my_notifications', {
             'notifications': notifications,
+            'notif_count': notif_count,
+            'actionable_ids': actionable_ids,
             'pager': page_detail,
             'page_name': 'notifications',
             'default_url': '/my/notifications',
@@ -44,7 +42,7 @@ class ITLingoNotificationPortal(CustomerPortal):
 
     @http.route(
         '/my/notifications/mark_all_read',
-        type='http', auth='user', website=True,
+        type='http', auth='user', website=True, methods=['POST'],
     )
     def portal_mark_all_read(self, **kw):
         request.env['itlingo.notification'].search([
@@ -54,30 +52,18 @@ class ITLingoNotificationPortal(CustomerPortal):
         return request.redirect('/my/notifications')
 
     @http.route(
-        ['/my/messages', '/my/messages/page/<int:page>'],
-        type='http', auth='user', website=True,
+        '/my/notifications/<int:notification_id>/respond',
+        type='http', auth='user', website=True, methods=['POST'],
     )
-    def portal_my_messages(self, page=1, **kw):
-        Message = request.env['itlingo.message']
-        domain = [
-            '|',
-            ('sender_id', '=', request.uid),
-            ('recipient_id', '=', request.uid),
-        ]
-        msg_count = Message.search_count(domain)
-        page_detail = pager(
-            url='/my/messages',
-            total=msg_count,
-            page=page,
-            step=20,
-        )
-        messages = Message.search(
-            domain, limit=20, offset=page_detail['offset'],
-            order='create_date desc',
-        )
-        return request.render('itlingo_notifications.portal_my_messages', {
-            'messages': messages,
-            'pager': page_detail,
-            'page_name': 'messages',
-            'default_url': '/my/messages',
-        })
+    def portal_notification_respond(self, notification_id, action=None, **kw):
+        notif = request.env['itlingo.notification'].sudo().browse(notification_id)
+        if (notif.exists() and notif.user_id.id == request.uid
+                and action in ('accept', 'reject')):
+            role = notif._linked_invitation_role()
+            if role and role.state == 'pending':
+                if action == 'accept':
+                    role.action_accept()
+                else:
+                    role.action_reject()
+            notif.action_mark_read()
+        return request.redirect('/my/notifications')

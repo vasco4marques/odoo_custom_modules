@@ -1,11 +1,11 @@
 {
     'name': 'ITLingo Website & Portal',
-    'version': '19.0.1.6.0',
+    'version': '19.0.1.7.0',
     'category': 'Website',
     'summary': 'Public website and authenticated portal for ITLingo Cloud',
     'description': """
-Provides authenticated portal pages for organizations,
-workspaces, and invitations.
+Provides authenticated portal pages for organizations
+and workspaces.
     """,
     'author': 'ITLingo',
     'website': 'https://itlingo.ist.utl.pt',
@@ -22,7 +22,6 @@ workspaces, and invitations.
         'views/portal_organization_templates.xml',
         'views/portal_create_templates.xml',
         'views/portal_workspace_templates.xml',
-        'views/portal_invitation_templates.xml',
         'views/portal_dsl_templates.xml',
     ],
     'assets': {
