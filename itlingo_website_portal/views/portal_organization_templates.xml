@@ -21,7 +21,9 @@
                 You left the organization.
             </div>
             <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
-                <a href="/my/organizations/new" class="btn btn-primary">New organization</a>
+                <a href="/my/organizations/new" class="btn btn-primary">
+                    <i class="fa fa-plus me-1"/>New organization
+                </a>
             </div>
             <div class="card itlingo-portal-filter-card shadow-sm border-0 rounded-3 mb-4">
                 <div class="card-body">
@@ -85,13 +87,33 @@
                     You are not a member of any organization yet, or no organizations match your filters.
                 </div>
             </t>
-            <t t-if="organizations" t-call="portal.portal_table">
-                <thead>
+            <div t-if="organizations" class="card border-0 shadow-sm rounded-3">
+                <div class="card-header bg-white border-0 p-3">
+                    <h5 class="fw-semibold mb-0">Organizations (<t t-out="org_count"/>)</h5>
+                </div>
+                <div class="card-body p-0 table-responsive">
+                    <table class="table table-hover mb-0 align-middle">
+                <thead class="table-light">
                     <tr>
-                        <th>Organization</th>
+                        <th>
+                            <t t-call="itlingo_website_portal.portal_sort_th">
+                                <t t-set="sort_key" t-value="'name'"/>
+                                <t t-set="sort_label">Organization</t>
+                            </t>
+                        </th>
                         <th>Your Role</th>
-                        <th>Activity Type</th>
-                        <th>State</th>
+                        <th>
+                            <t t-call="itlingo_website_portal.portal_sort_th">
+                                <t t-set="sort_key" t-value="'activity'"/>
+                                <t t-set="sort_label">Activity Type</t>
+                            </t>
+                        </th>
+                        <th>
+                            <t t-call="itlingo_website_portal.portal_sort_th">
+                                <t t-set="sort_key" t-value="'state'"/>
+                                <t t-set="sort_label">State</t>
+                            </t>
+                        </th>
                         <th class="text-end" style="width: 8rem;">Actions</th>
                     </tr>
                 </thead>
@@ -159,7 +181,9 @@
                         </td>
                     </tr>
                 </tbody>
-            </t>
+                    </table>
+                </div>
+            </div>
             <div t-if="pager" class="o_portal_pager text-center mt-3">
                 <t t-call="portal.pager"/>
             </div>
@@ -294,7 +318,7 @@
         <t t-call="itlingo_website_portal.portal_organization_hub_shell">
             <div class="d-flex flex-wrap gap-2 mb-3" t-if="user_role.role == 'org_manager'">
                 <a t-attf-href="/my/workspaces/new?organization_id=#{organization.id}"
-                   class="btn btn-primary">New workspace</a>
+                   class="btn btn-primary"><i class="fa fa-plus me-1"/>New workspace</a>
             </div>
             <div class="card itlingo-portal-filter-card shadow-sm border-0 rounded-3 mb-4">
                 <div class="card-body">
@@ -357,15 +381,38 @@
                 <p class="text-muted">No workspaces match your filters, or there are no workspaces in this organization yet.</p>
             </t>
             <div t-if="projects" class="card border-0 shadow-sm rounded-3">
+                <div class="card-header bg-white border-0 p-3">
+                    <h5 class="fw-semibold mb-0">Workspaces (<t t-out="ws_count"/>)</h5>
+                </div>
                 <div class="card-body p-0 table-responsive">
-                    <table class="table table-hover mb-0">
+                    <table class="table table-hover mb-0 align-middle">
                         <thead class="table-light">
                             <tr>
-                                <th>Workspace</th>
+                                <th>
+                                    <t t-call="itlingo_website_portal.portal_sort_th">
+                                        <t t-set="sort_key" t-value="'name'"/>
+                                        <t t-set="sort_label">Workspace</t>
+                                    </t>
+                                </th>
                                 <th>Your Role</th>
-                                <th>Public</th>
-                                <th>Create Date</th>
-                                <th>State</th>
+                                <th>
+                                    <t t-call="itlingo_website_portal.portal_sort_th">
+                                        <t t-set="sort_key" t-value="'public'"/>
+                                        <t t-set="sort_label">Public</t>
+                                    </t>
+                                </th>
+                                <th>
+                                    <t t-call="itlingo_website_portal.portal_sort_th">
+                                        <t t-set="sort_key" t-value="'create_date'"/>
+                                        <t t-set="sort_label">Create Date</t>
+                                    </t>
+                                </th>
+                                <th>
+                                    <t t-call="itlingo_website_portal.portal_sort_th">
+                                        <t t-set="sort_key" t-value="'status'"/>
+                                        <t t-set="sort_label">State</t>
+                                    </t>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -392,12 +439,9 @@
                                     </t>
                                 </td>
                                 <td>
-                                    <span class="badge bg-secondary">
-                                        <t t-if="proj.business_status">
-                                            <t t-out="dict(proj._fields['business_status'].selection).get(proj.business_status)"/>
-                                        </t>
-                                        <t t-else="">—</t>
-                                    </span>
+                                    <t t-call="itlingo_website_portal.portal_ws_status_badge">
+                                        <t t-set="ws_status_project" t-value="proj"/>
+                                    </t>
                                 </td>
                             </tr>
                         </tbody>
@@ -421,7 +465,7 @@
             </div>
             <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3" t-if="can_upload_org_documents">
                 <a t-attf-href="/my/organizations/#{organization.id}/documents/new"
-                   class="btn btn-primary">Add document</a>
+                   class="btn btn-primary"><i class="fa fa-plus me-1"/>New document</a>
             </div>
             <t t-call="itlingo_website_portal.portal_documents_list"/>
         </t>
@@ -586,10 +630,25 @@
                         <table class="table table-hover mb-0 align-middle">
                             <thead class="table-light">
                                 <tr>
-                                    <th>User</th>
+                                    <th>
+                                        <t t-call="itlingo_website_portal.portal_sort_th">
+                                            <t t-set="sort_key" t-value="'user'"/>
+                                            <t t-set="sort_label">User</t>
+                                        </t>
+                                    </th>
                                     <th>Email</th>
-                                    <th>Role</th>
-                                    <th>Member Since</th>
+                                    <th>
+                                        <t t-call="itlingo_website_portal.portal_sort_th">
+                                            <t t-set="sort_key" t-value="'role'"/>
+                                            <t t-set="sort_label">Role</t>
+                                        </t>
+                                    </th>
+                                    <th>
+                                        <t t-call="itlingo_website_portal.portal_sort_th">
+                                            <t t-set="sort_key" t-value="'member_since'"/>
+                                            <t t-set="sort_label">Member Since</t>
+                                        </t>
+                                    </th>
                                     <th class="text-end" style="width: 8rem;">Actions</th>
                                 </tr>
                             </thead>

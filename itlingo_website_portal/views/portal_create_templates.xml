@@ -4,7 +4,7 @@
     <template id="portal_organization_new" name="New Organization">
         <t t-call="portal.portal_layout">
             <div class="container py-3">
-                <h3>Create organization</h3>
+                <h1 class="h4 mb-3">Create organization</h1>
                 <div t-if="error.get('name')" class="alert alert-danger" role="alert">
                     <t t-out="error['name']"/>
                 </div>
@@ -39,7 +39,7 @@
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary">Create</button>
-                    <a href="/my/organizations" class="btn btn-link">Cancel</a>
+                    <a href="/my/organizations" class="btn btn-outline-secondary">Cancel</a>
                 </form>
             </div>
         </t>

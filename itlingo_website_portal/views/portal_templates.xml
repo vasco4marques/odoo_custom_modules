@@ -33,6 +33,19 @@
         </a>
     </template>
 
+    <!-- Shared workspace business-status badge with semantic colors, so the
+         state reads the same on every list and detail page. Call with
+         `ws_status_project` (an itlingo.workspace record) set. -->
+    <template id="portal_ws_status_badge" name="Workspace status badge">
+        <t t-set="ws_bs" t-value="ws_status_project.business_status or 'not_started'"/>
+        <span t-attf-class="badge #{'bg-info text-dark' if ws_bs == 'executing'
+                                    else 'bg-success' if ws_bs == 'concluded'
+                                    else 'bg-danger' if ws_bs == 'canceled'
+                                    else 'bg-light text-dark border'}">
+            <t t-out="dict(ws_status_project._fields['business_status'].selection).get(ws_bs)"/>
+        </span>
+    </template>
+
     <!-- Multi-select filter dropdown: a Bootstrap dropdown holding checkboxes,
          so it submits like plain checkboxes in the surrounding GET form.
          Expects:
@@ -148,6 +161,9 @@
             <p class="text-muted">No documents match your filters, or there are no documents here yet.</p>
         </t>
         <div t-if="documents" class="card border-0 shadow-sm rounded-3">
+            <div class="card-header bg-white border-0 p-3">
+                <h5 class="fw-semibold mb-0">Documents (<t t-out="doc_count"/>)</h5>
+            </div>
             <div class="card-body p-0 table-responsive">
                 <table class="table table-hover mb-0">
                     <thead class="table-light">
@@ -310,6 +326,9 @@
          submitted and no data is wiped. -->
     <template id="portal_my_details_minimal" name="Account page: only name, email, country"
               inherit_id="portal.portal_my_details">
+        <!-- The stock template hides the site footer (eCommerce checkout
+             pattern); every other portal page shows it, so keep it here too. -->
+        <xpath expr="//t[@t-set='no_footer']" position="replace"/>
         <xpath expr="//div[@name='address_details']" position="attributes">
             <attribute name="class" add="itlingo-account-minimal" separator=" "/>
         </xpath>
@@ -325,11 +344,19 @@
         </xpath>
     </template>
 
-    <!-- The account form is not an "address" on this platform: plain "Save". -->
-    <template id="address_footer_save_label" name="Address footer: Save button label"
+    <!-- The account form is not an "address" on this platform: plain
+         left-aligned "Save" + "Cancel" like every other portal form, instead
+         of the stock checkout-style Discard/Save split with chevrons. -->
+    <template id="address_footer_save_label" name="Address footer: Save/Cancel buttons"
               inherit_id="portal.address_footer">
-        <xpath expr="//t[@name='save_address_label']" position="replace">
-            <t name="save_address_label">Save</t>
+        <xpath expr="//div[hasclass('d-flex')]" position="replace">
+            <div class="d-flex gap-2 mt32 mb32">
+                <button id="save_address" class="btn btn-primary">
+                    <t name="save_address_label">Save</t>
+                </button>
+                <a role="button" t-att-href="discard_url or '/my/'"
+                   class="btn btn-outline-secondary">Cancel</a>
+            </div>
         </xpath>
     </template>
 
@@ -344,6 +371,12 @@
     </record>
     <template id="portal_my_security_minimal" name="Security page: password change only"
               inherit_id="portal.portal_my_security" priority="99">
+        <!-- The stock t-set sits inside the body div where it never reaches
+             the layout's <title>, so the tab showed the raw template name.
+             Set it as a direct child of the t-call instead. -->
+        <xpath expr="//div[hasclass('o_portal_security_body')]" position="before">
+            <t t-set="additional_title">Security</t>
+        </xpath>
         <xpath expr="//section[@name='portal_revoke_all_devices_popup']" position="replace"/>
         <!-- Users must not be able to deactivate their own account. -->
         <xpath expr="//section[@name='portal_deactivate_account']" position="replace"/>
@@ -352,6 +385,20 @@
         <xpath expr="//a[@href='/my/']/.." position="replace">
             <h3 class="mt-3 mb-0">Security</h3>
             <hr class="mt-2 mb-3"/>
+        </xpath>
+        <!-- Primary action styled like every other form; labels without the
+             stock colon suffix. -->
+        <xpath expr="//form[hasclass('oe_reset_password_form')]//button[@type='submit']" position="attributes">
+            <attribute name="class">btn btn-primary</attribute>
+        </xpath>
+        <xpath expr="//label[@for='current']" position="replace">
+            <label for="current">Password</label>
+        </xpath>
+        <xpath expr="//label[@for='new']" position="replace">
+            <label for="new">New Password</label>
+        </xpath>
+        <xpath expr="//label[@for='new2']" position="replace">
+            <label for="new2">Verify New Password</label>
         </xpath>
     </template>
 
@@ -371,17 +418,30 @@
             <li t-if="organization_hub" class="breadcrumb-item">
                 <a href="/my/organizations">Organizations</a>
             </li>
-            <li t-if="organization_hub" class="breadcrumb-item">
+            <li t-if="organization_hub and page_name == 'organization_stats'" class="breadcrumb-item active text-truncate">
+                <t t-out="organization.name"/>
+            </li>
+            <li t-if="organization_hub and page_name != 'organization_stats'" class="breadcrumb-item text-truncate">
                 <a t-attf-href="/my/organizations/#{organization.id}"><t t-out="organization.name"/></a>
             </li>
-            <li t-if="page_name == 'organization_stats'" class="breadcrumb-item active">Home</li>
             <li t-if="page_name == 'organization_workspaces'" class="breadcrumb-item active">Workspaces</li>
             <li t-if="page_name == 'organization_documentation'" class="breadcrumb-item active">Documents</li>
             <li t-if="page_name == 'organization_documentation_new'" class="breadcrumb-item">
                 <a t-attf-href="/my/organizations/#{organization.id}/documents">Documents</a>
             </li>
             <li t-if="page_name == 'organization_documentation_new'" class="breadcrumb-item active">New document</li>
+            <li t-if="page_name in ('organization_document_detail', 'organization_document_edit')" class="breadcrumb-item">
+                <a t-attf-href="/my/organizations/#{organization.id}/documents">Documents</a>
+            </li>
+            <li t-if="page_name == 'organization_document_detail'" class="breadcrumb-item active text-truncate">
+                <t t-out="document.name"/>
+            </li>
+            <li t-if="page_name == 'organization_document_edit'" class="breadcrumb-item text-truncate">
+                <a t-attf-href="/my/organizations/#{organization.id}/documents/#{document.id}"><t t-out="document.name"/></a>
+            </li>
+            <li t-if="page_name == 'organization_document_edit'" class="breadcrumb-item active">Edit</li>
             <li t-if="page_name == 'organization_users'" class="breadcrumb-item active">Users</li>
+            <li t-if="page_name == 'organization_llm'" class="breadcrumb-item active">LLM Settings</li>
             <li t-if="page_name == 'organization_settings'" class="breadcrumb-item active">Settings</li>
             <li t-if="page_name == 'workspaces'" class="breadcrumb-item active">
                 Workspaces
@@ -439,7 +499,7 @@
             </li>
             <!-- Workspace hub sub-pages: Workspaces / <name> / <section> -->
             <t t-set="ws_subpages"
-               t-value="['workspace_users', 'workspace_documentation', 'workspace_documentation_new', 'workspace_specifications', 'workspace_settings', 'workspace_leave_promote']"/>
+               t-value="['workspace_users', 'workspace_documentation', 'workspace_documentation_new', 'workspace_document_detail', 'workspace_document_edit', 'workspace_specifications', 'workspace_settings', 'workspace_leave_promote']"/>
             <li t-if="page_name in ws_subpages" class="breadcrumb-item">
                 <a href="/my/workspaces">Workspaces</a>
             </li>
@@ -456,6 +516,16 @@
                 <a t-attf-href="/my/workspaces/#{project.id}/documents">Documents</a>
             </li>
             <li t-if="page_name == 'workspace_documentation_new'" class="breadcrumb-item active">New document</li>
+            <li t-if="page_name in ('workspace_document_detail', 'workspace_document_edit')" class="breadcrumb-item">
+                <a t-attf-href="/my/workspaces/#{project.id}/documents">Documents</a>
+            </li>
+            <li t-if="page_name == 'workspace_document_detail'" class="breadcrumb-item active text-truncate">
+                <t t-out="document.name"/>
+            </li>
+            <li t-if="page_name == 'workspace_document_edit'" class="breadcrumb-item text-truncate">
+                <a t-attf-href="/my/workspaces/#{project.id}/documents/#{document.id}"><t t-out="document.name"/></a>
+            </li>
+            <li t-if="page_name == 'workspace_document_edit'" class="breadcrumb-item active">Edit</li>
             <li t-if="page_name == 'workspace_specifications'" class="breadcrumb-item active">Specifications</li>
             <li t-if="page_name == 'workspace_settings'" class="breadcrumb-item active">Settings</li>
             <li t-if="page_name == 'invitations'" class="breadcrumb-item active">

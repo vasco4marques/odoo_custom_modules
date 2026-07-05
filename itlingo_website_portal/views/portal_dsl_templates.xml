@@ -32,10 +32,10 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-4 d-flex flex-wrap gap-2">
-                            <a href="/dsl" class="btn btn-outline-secondary">Clear filters</a>
                             <button type="submit" class="btn btn-primary">
                                 <i class="fa fa-search me-1"/>Filter
                             </button>
+                            <a href="/dsl" class="btn btn-outline-secondary">Clear filters</a>
                         </div>
                     </form>
                 </div>
@@ -46,13 +46,38 @@
                     <t t-else="">No DSLs found.</t>
                 </div>
             </t>
-            <t t-if="dsls" t-call="portal.portal_table">
-                <thead>
+            <div t-if="dsls" class="card border-0 shadow-sm rounded-3">
+                <div class="card-header bg-white border-0 p-3">
+                    <h5 class="fw-semibold mb-0">DSLs (<t t-out="dsl_count"/>)</h5>
+                </div>
+                <div class="card-body p-0 table-responsive">
+                <table class="table table-hover mb-0 align-middle">
+                <thead class="table-light">
                     <tr>
-                        <th>Acronym</th>
-                        <th>Name</th>
-                        <th>Version</th>
-                        <th>Status</th>
+                        <th>
+                            <t t-call="itlingo_website_portal.portal_sort_th">
+                                <t t-set="sort_key" t-value="'acronym'"/>
+                                <t t-set="sort_label">Acronym</t>
+                            </t>
+                        </th>
+                        <th>
+                            <t t-call="itlingo_website_portal.portal_sort_th">
+                                <t t-set="sort_key" t-value="'name'"/>
+                                <t t-set="sort_label">Name</t>
+                            </t>
+                        </th>
+                        <th>
+                            <t t-call="itlingo_website_portal.portal_sort_th">
+                                <t t-set="sort_key" t-value="'version'"/>
+                                <t t-set="sort_label">Version</t>
+                            </t>
+                        </th>
+                        <th>
+                            <t t-call="itlingo_website_portal.portal_sort_th">
+                                <t t-set="sort_key" t-value="'status'"/>
+                                <t t-set="sort_label">Status</t>
+                            </t>
+                        </th>
                         <th class="text-center">Files</th>
                         <th class="text-end">Actions</th>
                     </tr>
@@ -98,7 +123,9 @@
                         </td>
                     </tr>
                 </tbody>
-            </t>
+                </table>
+                </div>
+            </div>
             <div t-if="pager" class="o_portal_pager text-center mt-3">
                 <t t-call="portal.pager"/>
             </div>
@@ -109,7 +136,7 @@
     <template id="portal_dsl_new" name="New DSL">
         <t t-call="portal.portal_layout">
             <div class="container py-3">
-                <h3>Create DSL</h3>
+                <h1 class="h4 mb-3">Create DSL</h1>
                 <div t-if="error.get('_form')" class="alert alert-danger" role="alert">
                     <t t-out="error['_form']"/>
                 </div>
@@ -174,12 +201,9 @@
     <template id="portal_dsl_view" name="DSL details">
         <t t-call="portal.portal_layout">
             <div class="container py-3">
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
-                    <h3 class="mb-0">
-                        <t t-out="dsl.acronym"/> <span class="text-muted">·</span> <t t-out="dsl.name"/>
-                    </h3>
-                    <a href="/dsl" class="btn btn-outline-secondary btn-sm">Back to DSLs</a>
-                </div>
+                <h1 class="h4 mb-3">
+                    <t t-out="dsl.acronym"/> <span class="text-muted">·</span> <t t-out="dsl.name"/>
+                </h1>
 
                 <div class="card border-0 shadow-sm rounded-3 mb-4">
                     <div class="card-body">
@@ -244,12 +268,9 @@
     <template id="portal_dsl_edit" name="Edit DSL">
         <t t-call="portal.portal_layout">
             <div class="container py-3">
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
-                    <h3 class="mb-0">
-                        <t t-out="dsl.acronym"/> <span class="text-muted">·</span> <t t-out="dsl.name"/>
-                    </h3>
-                    <a href="/dsl" class="btn btn-outline-secondary btn-sm">Back to DSLs</a>
-                </div>
+                <h1 class="h4 mb-3">
+                    <t t-out="dsl.acronym"/> <span class="text-muted">·</span> <t t-out="dsl.name"/>
+                </h1>
 
                 <div t-if="dsl_message == 'created'" class="alert alert-success" role="alert">DSL created. You can now upload its definition files below.</div>
                 <div t-if="dsl_message == 'saved'" class="alert alert-success" role="alert">Changes saved.</div>
@@ -321,6 +342,7 @@
                             </div>
                             <div class="d-flex gap-2 mt-3">
                                 <button type="submit" class="btn btn-primary">Save</button>
+                                <a href="/dsl" class="btn btn-outline-secondary">Cancel</a>
                             </div>
                         </form>
                     </div>

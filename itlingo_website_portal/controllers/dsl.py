@@ -137,19 +137,31 @@ class ITLingoDslPortal(CustomerPortal):
                 '|', ('name', 'ilike', name_q), ('acronym', 'ilike', name_q),
             ]
 
+        url_args = {'name': name_q} if name_q else {}
+        order, sortby, sortdir = self._portal_sort(params, {
+            'acronym': 'acronym',
+            'name': 'name',
+            'version': 'version',
+            'status': 'status',
+        }, default_order='acronym, version desc')
+        sort_qs = self._portal_sort_qs(url_args)
+        if sortby:
+            url_args = dict(url_args)
+            url_args.update({'sortby': sortby, 'sortdir': sortdir})
+
         total = Dsl.search_count(domain)
         page_detail = pager(
             url='/dsl',
             total=total,
             page=page,
             step=20,
-            url_args={'name': name_q} if name_q else None,
+            url_args=url_args or None,
         )
         dsls = Dsl.search(
             domain,
             limit=20,
             offset=page_detail['offset'],
-            order='acronym, version desc',
+            order=order,
         )
 
         if is_admin:
@@ -162,9 +174,14 @@ class ITLingoDslPortal(CustomerPortal):
         values = self._prepare_portal_layout_values()
         values.update({
             'dsls': dsls,
+            'dsl_count': total,
             'page_name': 'dsls',
             'pager': page_detail,
             'default_url': '/dsl',
+            'sortby': sortby,
+            'sortdir': sortdir,
+            'sort_base_url': '/dsl',
+            'sort_qs': sort_qs,
             'filters': {'name': name_q},
             'can_manage_dsls': is_admin,
             'editable_dsl_ids': editable_dsl_ids,

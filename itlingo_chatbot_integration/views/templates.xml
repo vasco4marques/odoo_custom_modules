@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="chat_page" name="Workspace Chat Page">
-        <t t-call="portal.portal_layout">
-            <t t-set="hide_project_breadcrumbs" t-value="True"/>
-            <t t-set="breadcrumbs_searchbar" t-value="True"/>
-            <t t-call="portal.portal_searchbar">
-                <t t-set="title" t-value="project.name"/>
-            </t>
-
+        <t t-call="itlingo_website_portal.portal_workspace_hub_shell">
             <style>
                 .itlingo-chat-page {
                     display: flex;

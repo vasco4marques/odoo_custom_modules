@@ -65,24 +65,38 @@
 
     <!-- Document detail (scoped under a workspace or organization).
          Callers must provide ``doc_base_url`` (e.g. /my/workspaces/5/documents
-         or /my/organizations/3/documents) used to build the action links. -->
+         or /my/organizations/3/documents) used to build the action links.
+         Rendered inside the workspace / organization hub shell (sidebar +
+         breadcrumbs) when the controller passes the hub context. -->
     <template id="portal_document_detail" name="Document Detail">
-        <t t-call="portal.portal_layout">
-            <div class="mb-3">
-                <a t-att-href="doc_base_url" class="btn btn-sm btn-outline-secondary">
-                    <i class="fa fa-arrow-left me-1"/> Back to documents
-                </a>
-            </div>
-            <div class="card mt-3">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <h3 class="mb-0"><t t-out="document.name"/></h3>
+        <t t-if="workspace_hub">
+            <t t-call="itlingo_website_portal.portal_workspace_hub_shell">
+                <t t-call="itlingo_documents.portal_document_detail_inner"/>
+            </t>
+        </t>
+        <t t-elif="organization_hub">
+            <t t-call="itlingo_website_portal.portal_organization_hub_shell">
+                <t t-call="itlingo_documents.portal_document_detail_inner"/>
+            </t>
+        </t>
+        <t t-else="">
+            <t t-call="portal.portal_layout">
+                <t t-call="itlingo_documents.portal_document_detail_inner"/>
+            </t>
+        </t>
+    </template>
+
+    <template id="portal_document_detail_inner" name="Document Detail (inner)">
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center p-3">
+                    <h2 class="h5 fw-semibold mb-0"><t t-out="document.name"/></h2>
                     <span t-attf-class="badge rounded-pill
                         #{'text-bg-secondary' if document.status == 'draft'
                           else 'text-bg-warning' if document.status == 'in_review'
                           else 'text-bg-success' if document.status == 'approved'
                           else 'text-bg-primary' if document.status == 'published'
                           else 'text-bg-dark'}">
-                        <t t-out="document.status"/>
+                        <t t-out="dict(document._fields['status'].selection).get(document.status)"/>
                     </span>
                 </div>
                 <div class="card-body">
@@ -161,14 +175,30 @@
                     </div>
                 </div>
             </div>
-        </t>
     </template>
 
     <template id="portal_document_edit" name="Document Edit">
-        <t t-call="portal.portal_layout">
-            <div class="card mt-3">
-                <div class="card-header">
-                    <h3 class="mb-0">Edit document: <t t-out="document.name"/></h3>
+        <t t-if="workspace_hub">
+            <t t-call="itlingo_website_portal.portal_workspace_hub_shell">
+                <t t-call="itlingo_documents.portal_document_edit_inner"/>
+            </t>
+        </t>
+        <t t-elif="organization_hub">
+            <t t-call="itlingo_website_portal.portal_organization_hub_shell">
+                <t t-call="itlingo_documents.portal_document_edit_inner"/>
+            </t>
+        </t>
+        <t t-else="">
+            <t t-call="portal.portal_layout">
+                <t t-call="itlingo_documents.portal_document_edit_inner"/>
+            </t>
+        </t>
+    </template>
+
+    <template id="portal_document_edit_inner" name="Document Edit (inner)">
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="card-header bg-white p-3">
+                    <h2 class="h5 fw-semibold mb-0">Edit document: <t t-out="document.name"/></h2>
                 </div>
                 <div class="card-body">
                     <div t-if="error.get('_form')" class="alert alert-danger" role="alert">
@@ -236,7 +266,6 @@
                     </form>
                 </div>
             </div>
-        </t>
     </template>
 
 </odoo>

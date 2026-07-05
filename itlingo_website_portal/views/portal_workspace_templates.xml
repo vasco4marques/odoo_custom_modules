@@ -30,8 +30,8 @@
                 Could not delete this workspace. It may have linked records blocking removal.
             </div>
             <div t-if="can_create_workspace" class="d-flex flex-wrap align-items-center gap-2 mb-3">
-                <a href="/my/workspaces/new" class="btn btn-outline-success">
-                    <i class="fa fa-plus me-1"/>Create workspace
+                <a href="/my/workspaces/new" class="btn btn-primary">
+                    <i class="fa fa-plus me-1"/>New workspace
                 </a>
             </div>
             <div class="card itlingo-portal-filter-card shadow-sm border-0 rounded-3 mb-4">
@@ -106,22 +106,45 @@
                     No workspaces match your filters, or you are not a member of any workspace yet.
                 </div>
             </t>
-            <t t-if="projects" t-call="portal.portal_table">
-                <thead>
+            <div t-if="projects" class="card border-0 shadow-sm rounded-3">
+                <div class="card-header bg-white border-0 p-3">
+                    <h5 class="fw-semibold mb-0">Workspaces (<t t-out="ws_count"/>)</h5>
+                </div>
+                <div class="card-body p-0 table-responsive">
+                    <table class="table table-hover mb-0 align-middle">
+                <thead class="table-light">
                     <tr>
-                        <th>Workspace</th>
-                        <th>Organization</th>
+                        <th>
+                            <t t-call="itlingo_website_portal.portal_sort_th">
+                                <t t-set="sort_key" t-value="'name'"/>
+                                <t t-set="sort_label">Workspace</t>
+                            </t>
+                        </th>
+                        <th>
+                            <t t-call="itlingo_website_portal.portal_sort_th">
+                                <t t-set="sort_key" t-value="'organization'"/>
+                                <t t-set="sort_label">Organization</t>
+                            </t>
+                        </th>
                         <th>Your Role</th>
-                        <th>Public</th>
-                        <th>State</th>
-                        <th>Change state</th>
+                        <th>
+                            <t t-call="itlingo_website_portal.portal_sort_th">
+                                <t t-set="sort_key" t-value="'public'"/>
+                                <t t-set="sort_label">Public</t>
+                            </t>
+                        </th>
+                        <th>
+                            <t t-call="itlingo_website_portal.portal_sort_th">
+                                <t t-set="sort_key" t-value="'status'"/>
+                                <t t-set="sort_label">State</t>
+                            </t>
+                        </th>
                         <th class="text-end">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr t-foreach="projects" t-as="proj">
                         <t t-set="role" t-value="role_map.get(proj.id)"/>
-                        <t t-set="bs" t-value="proj.business_status or 'not_started'"/>
                         <td>
                             <a t-attf-href="/my/workspaces/#{proj.id}">
                                 <t t-out="proj.name"/>
@@ -136,7 +159,9 @@
                             <t t-else="">—</t>
                         </td>
                         <td>
-                            <span t-if="role" class="badge bg-info text-dark">
+                            <!-- text-wrap lets the pill break on narrow screens so the
+                                 table fits a 768px viewport without clipping -->
+                            <span t-if="role" class="badge bg-info text-dark text-wrap">
                                 <t t-out="dict(role._fields['role'].selection).get(role.role)"/>
                             </span>
                         </td>
@@ -145,43 +170,11 @@
                             <span t-else="" class="badge bg-light text-dark border">No</span>
                         </td>
                         <td>
-                            <span class="badge bg-secondary">
-                                <t t-out="dict(proj._fields['business_status'].selection).get(bs)"/>
-                            </span>
-                        </td>
-                        <td class="text-nowrap">
-                            <t t-if="role and role.role == 'ws_manager'">
-                                <form t-attf-action="/my/workspaces/#{proj.id}/business_status" method="post" class="d-inline">
-                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                    <input type="hidden" name="transition" value="executing"/>
-                                    <button type="submit" class="btn btn-sm btn-link text-primary p-1"
-                                            title="Set executing" aria-label="Set executing"
-                                            t-att-disabled="bs == 'executing' or bs == 'concluded'">
-                                        <i class="fa fa-play-circle fa-lg"/>
-                                    </button>
-                                </form>
-                                <form t-attf-action="/my/workspaces/#{proj.id}/business_status" method="post" class="d-inline">
-                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                    <input type="hidden" name="transition" value="canceled"/>
-                                    <button type="submit" class="btn btn-sm btn-link text-primary p-1"
-                                            title="Set canceled" aria-label="Set canceled"
-                                            t-att-disabled="bs == 'canceled'">
-                                        <i class="fa fa-times-circle fa-lg"/>
-                                    </button>
-                                </form>
-                                <form t-attf-action="/my/workspaces/#{proj.id}/business_status" method="post" class="d-inline">
-                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                    <input type="hidden" name="transition" value="concluded"/>
-                                    <button type="submit" class="btn btn-sm btn-link text-primary p-1"
-                                            title="Set concluded" aria-label="Set concluded"
-                                            t-att-disabled="bs == 'concluded' or bs == 'canceled'">
-                                        <i class="fa fa-check-circle fa-lg"/>
-                                    </button>
-                                </form>
+                            <t t-call="itlingo_website_portal.portal_ws_status_badge">
+                                <t t-set="ws_status_project" t-value="proj"/>
                             </t>
-                            <span t-else="" class="text-muted small">—</span>
                         </td>
-                        <td class="text-end text-nowrap">
+                        <td class="text-end">
                             <a t-attf-href="/my/workspaces/#{proj.id}/documents"
                                class="btn btn-sm btn-link text-primary p-1"
                                title="Documents" aria-label="Documents">
@@ -190,13 +183,13 @@
                             <a t-attf-href="/my/workspaces/#{proj.id}/users"
                                class="btn btn-sm btn-link text-primary p-1"
                                title="Users and roles" aria-label="Users and roles">
-                                <i class="fa fa-key fa-lg"/>
+                                <i class="fa fa-users fa-lg"/>
                             </a>
                             <t t-if="role and role.role == 'ws_manager'">
                                 <a t-attf-href="/my/workspaces/#{proj.id}/settings"
                                    class="btn btn-sm btn-link text-primary p-1"
                                    title="Workspace settings" aria-label="Workspace settings">
-                                    <i class="fa fa-pencil fa-lg"/>
+                                    <i class="fa fa-cog fa-lg"/>
                                 </a>
                                 <form t-attf-action="/my/workspaces/#{proj.id}/delete" method="post" class="d-inline">
                                     <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
@@ -210,7 +203,9 @@
                         </td>
                     </tr>
                 </tbody>
-            </t>
+                    </table>
+                </div>
+            </div>
             <div t-if="pager" class="o_portal_pager text-center mt-3">
                 <t t-call="portal.pager"/>
             </div>
@@ -320,9 +315,9 @@
                             </t>
                         </td>
                         <td>
-                            <span class="badge bg-secondary">
-                                <t t-out="dict(proj._fields['business_status'].selection).get(bs)"/>
-                            </span>
+                            <t t-call="itlingo_website_portal.portal_ws_status_badge">
+                                <t t-set="ws_status_project" t-value="proj"/>
+                            </t>
                         </td>
                     </tr>
                 </tbody>
@@ -468,6 +463,15 @@
     <!-- Workspace Detail / Home dashboard -->
     <template id="portal_workspace_detail" name="Workspace Detail">
         <t t-call="itlingo_website_portal.portal_workspace_hub_shell">
+            <div t-if="ws_message == 'ws_status_updated'" class="alert alert-success" role="alert">
+                Workspace status updated.
+            </div>
+            <div t-if="ws_error == 'ws_bad_status'" class="alert alert-danger" role="alert">
+                Invalid status action.
+            </div>
+            <div t-if="ws_error == 'ws_status_failed'" class="alert alert-danger" role="alert">
+                Could not change status for this workspace (invalid state or permission).
+            </div>
             <!-- Description: full-width HTML block, no label (D.2 a) -->
             <div t-if="project.description" class="card border-0 shadow-sm rounded-3 mb-4">
                 <div class="card-body">
@@ -512,9 +516,41 @@
                         </dd>
                         <dt class="col-sm-4 text-muted">State</dt>
                         <dd class="col-sm-8">
-                            <span class="badge bg-secondary">
-                                <t t-out="dict(project._fields['business_status'].selection).get(project.business_status or 'not_started')"/>
-                            </span>
+                            <div class="d-flex flex-wrap align-items-center gap-2">
+                                <t t-call="itlingo_website_portal.portal_ws_status_badge">
+                                    <t t-set="ws_status_project" t-value="project"/>
+                                </t>
+                                <t t-if="user_role and user_role.role == 'ws_manager'">
+                                    <t t-set="bs" t-value="project.business_status or 'not_started'"/>
+                                    <form t-attf-action="/my/workspaces/#{project.id}/business_status" method="post" class="d-inline">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <input type="hidden" name="transition" value="executing"/>
+                                        <button type="submit" class="btn btn-sm btn-link text-primary p-1"
+                                                title="Set executing" aria-label="Set executing"
+                                                t-att-disabled="bs == 'executing' or bs == 'concluded'">
+                                            <i class="fa fa-play-circle fa-lg"/>
+                                        </button>
+                                    </form>
+                                    <form t-attf-action="/my/workspaces/#{project.id}/business_status" method="post" class="d-inline">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <input type="hidden" name="transition" value="canceled"/>
+                                        <button type="submit" class="btn btn-sm btn-link text-primary p-1"
+                                                title="Set canceled" aria-label="Set canceled"
+                                                t-att-disabled="bs == 'canceled'">
+                                            <i class="fa fa-times-circle fa-lg"/>
+                                        </button>
+                                    </form>
+                                    <form t-attf-action="/my/workspaces/#{project.id}/business_status" method="post" class="d-inline">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <input type="hidden" name="transition" value="concluded"/>
+                                        <button type="submit" class="btn btn-sm btn-link text-primary p-1"
+                                                title="Set concluded" aria-label="Set concluded"
+                                                t-att-disabled="bs == 'concluded' or bs == 'canceled'">
+                                            <i class="fa fa-check-circle fa-lg"/>
+                                        </button>
+                                    </form>
+                                </t>
+                            </div>
                         </dd>
                         <dt class="col-sm-4 text-muted">Creation date</dt>
                         <dd class="col-sm-8">
@@ -666,10 +702,25 @@
                         <table class="table table-hover mb-0 align-middle">
                             <thead class="table-light">
                                 <tr>
-                                    <th>User</th>
+                                    <th>
+                                        <t t-call="itlingo_website_portal.portal_sort_th">
+                                            <t t-set="sort_key" t-value="'user'"/>
+                                            <t t-set="sort_label">User</t>
+                                        </t>
+                                    </th>
                                     <th>Email</th>
-                                    <th>Role</th>
-                                    <th>Member Since</th>
+                                    <th>
+                                        <t t-call="itlingo_website_portal.portal_sort_th">
+                                            <t t-set="sort_key" t-value="'role'"/>
+                                            <t t-set="sort_label">Role</t>
+                                        </t>
+                                    </th>
+                                    <th>
+                                        <t t-call="itlingo_website_portal.portal_sort_th">
+                                            <t t-set="sort_key" t-value="'member_since'"/>
+                                            <t t-set="sort_label">Member Since</t>
+                                        </t>
+                                    </th>
                                     <th class="text-end" style="width: 8rem;">Actions</th>
                                 </tr>
                             </thead>
@@ -760,7 +811,7 @@
                 Could not delete this document.
             </div>
             <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3" t-if="can_upload_ws_documents">
-                <a t-attf-href="#{ws_hub_prefix}/documents/new" class="btn btn-primary">Add document</a>
+                <a t-attf-href="#{ws_hub_prefix}/documents/new" class="btn btn-primary"><i class="fa fa-plus me-1"/>New document</a>
             </div>
             <t t-call="itlingo_website_portal.portal_documents_list">
                 <t t-set="doc_link_base" t-value="ws_hub_prefix + '/documents'"/>
@@ -904,7 +955,7 @@
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary">Continue</button>
-                    <a t-attf-href="/my/workspaces/#{project.id}" class="btn btn-link">Cancel</a>
+                    <a t-attf-href="/my/workspaces/#{project.id}" class="btn btn-outline-secondary">Cancel</a>
                 </div>
             </form>
             <form t-if="wizard_mode != 'edit' and organizations" action="/my/workspaces/new/step/1" method="post" class="card border-0 shadow-sm rounded-3">
@@ -933,7 +984,7 @@
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary">Continue</button>
-                    <a href="/my/workspaces" class="btn btn-link">Cancel</a>
+                    <a href="/my/workspaces" class="btn btn-outline-secondary">Cancel</a>
                 </div>
             </form>
         </t>
@@ -962,8 +1013,9 @@
                         <label class="form-label" for="aend">Actual end</label>
                         <input type="date" class="form-control" id="aend" name="actual_end" t-att-value="form.get('actual_end') or ''"/>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 d-flex gap-2">
                         <button type="submit" class="btn btn-primary">Continue</button>
+                        <a t-attf-href="/my/workspaces/#{project.id}" class="btn btn-outline-secondary">Cancel</a>
                     </div>
                 </div>
             </form>
@@ -990,8 +1042,9 @@
                         <label class="form-label" for="aend_c">Actual end</label>
                         <input type="date" class="form-control" id="aend_c" name="actual_end" t-att-value="form.get('actual_end') or ''"/>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 d-flex gap-2">
                         <button type="submit" class="btn btn-primary">Continue</button>
+                        <a href="/my/workspaces" class="btn btn-outline-secondary">Cancel</a>
                     </div>
                 </div>
             </form>
@@ -1003,8 +1056,9 @@
                 <div class="card-body">
                     <label class="form-label" for="ws_desc">Description</label>
                     <textarea class="form-control" id="ws_desc" name="description" rows="6"><t t-out="form.get('description') or ''"/></textarea>
-                    <div class="mt-3">
+                    <div class="mt-3 d-flex gap-2">
                         <button type="submit" class="btn btn-primary">Continue</button>
+                        <a t-attf-href="/my/workspaces/#{project.id}" class="btn btn-outline-secondary">Cancel</a>
                     </div>
                 </div>
             </form>
@@ -1013,8 +1067,9 @@
                 <div class="card-body">
                     <label class="form-label" for="ws_desc_c">Description</label>
                     <textarea class="form-control" id="ws_desc_c" name="description" rows="6"><t t-out="form.get('description') or ''"/></textarea>
-                    <div class="mt-3">
+                    <div class="mt-3 d-flex gap-2">
                         <button type="submit" class="btn btn-primary">Continue</button>
+                        <a href="/my/workspaces" class="btn btn-outline-secondary">Cancel</a>
                     </div>
                 </div>
             </form>
@@ -1031,9 +1086,10 @@
                         <dt class="col-sm-4">Actual start</dt><dd class="col-sm-8"><t t-out="wizard_data.get('actual_start') or '—'"/></dd>
                         <dt class="col-sm-4">Actual end</dt><dd class="col-sm-8"><t t-out="wizard_data.get('actual_end') or '—'"/></dd>
                     </dl>
-                    <form t-if="wizard_mode != 'edit'" action="/my/workspaces/new/step/4" method="post" class="mt-3">
+                    <form t-if="wizard_mode != 'edit'" action="/my/workspaces/new/step/4" method="post" class="mt-3 d-flex gap-2">
                         <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                        <button type="submit" class="btn btn-success">Create workspace</button>
+                        <button type="submit" class="btn btn-primary">Create workspace</button>
+                        <a href="/my/workspaces" class="btn btn-outline-secondary">Cancel</a>
                     </form>
                     <a t-attf-href="/my/workspaces/#{project.id}" t-if="wizard_mode == 'edit'" class="btn btn-primary">Done</a>
                 </div>

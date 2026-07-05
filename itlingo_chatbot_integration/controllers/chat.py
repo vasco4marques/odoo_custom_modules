@@ -141,13 +141,24 @@ class ChatController(http.Controller):
             f"/public-workspaces/{project_id}" if public_hub
             else f"/my/workspaces/{project_id}"
         )
+        # The hub shell sidebar needs the member's role (Settings link is
+        # manager-only); anonymous/public visitors have none.
+        user_role = None
+        if not public_hub:
+            user_role = request.env['itlingo.project.role'].sudo().search([
+                ('user_id', '=', request.env.user.id),
+                ('project_id', '=', project_id),
+                ('state', '=', 'accepted'),
+            ], limit=1)
         return {
             "project": project,
             "project_id": project_id,
+            "user_role": user_role,
             "workspace_key": project.workspace_key,
             "workspace_session_id": str(project.workspace_key),
             "ws_hub_prefix": prefix,
             "page_name": "workspace_chat",
+            "workspace_hub": True,
             "workspace_hub_page": "chat",
             "workspace_hub_public": public_hub,
             "chat_url": chat_url,
