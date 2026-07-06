@@ -89,13 +89,42 @@ class ItlingoChatbotModelOption(models.Model):
     sequence = fields.Integer(default=10)
     label = fields.Char(required=True)
     value = fields.Char(required=True)
+    model_mode = fields.Selection(
+        [
+            ('remote', 'Remote (API key only)'),
+            ('local', 'Local (Base URL only)'),
+            ('iaedu', 'IAEdu (API key + Base URL)'),
+        ],
+        string='Mode',
+        default='remote',
+        required=True,
+        help='Remote: cloud API with API key. Local: self-hosted with base URL. IAEdu: needs both API key and base URL.',
+    )
     api_env_var = fields.Char(string='API Env Var')
     url_env_var = fields.Char(string='URL Env Var')
-    env_var_value = fields.Char(string='Env Var Value', help='Value stored for the API Env Var or URL Env Var in the shared database.')
+    env_var_value = fields.Char(string='API Key Value', help='Value stored for the API env var in the shared database.')
+    url_env_var_value = fields.Char(string='Base URL Value', help='Value stored for the URL env var in the shared database.')
     api_key = fields.Char(string='API Key', help='Deprecated: kept for compatibility with older records.')
     base_url = fields.Char(string='Base URL', help='Deprecated: kept for compatibility with older records.')
     base_url_enabled = fields.Boolean(default=False)
     disabled = fields.Boolean(default=False)
+
+    @api.onchange('model_mode')
+    def _onchange_model_mode(self):
+        """Auto-set fields based on the selected mode."""
+        for record in self:
+            if record.model_mode == 'remote':
+                record.base_url_enabled = False
+                record.api_env_var = record.api_env_var or (record.label or '').upper().replace(' ', '_') + '_API_KEY'
+            elif record.model_mode == 'local':
+                record.base_url_enabled = True
+                record.url_env_var = record.url_env_var or (record.label or '').upper().replace(' ', '_') + '_BASE_URL'
+            elif record.model_mode == 'iaedu':
+                record.base_url_enabled = True
+                if not record.api_env_var:
+                    record.api_env_var = (record.label or '').upper().replace(' ', '_') + '_API_KEY'
+                if not record.url_env_var:
+                    record.url_env_var = (record.label or '').upper().replace(' ', '_') + '_BASE_URL'
 
     def name_get(self):
         result = []
@@ -308,6 +337,7 @@ class ItlingoChatbotSettings(models.Model):
                     'label': option.label,
                     'value': option.value,
                     'base_url_enabled': bool(option.base_url_enabled),
+                    'model_mode': option.model_mode or 'remote',
                 }
                 if option.api_env_var:
                     option_values['API_env_var'] = option.api_env_var
@@ -328,13 +358,14 @@ class ItlingoChatbotSettings(models.Model):
         pairs_by_env_var = {}
         for provider in self._scoped_providers(organization_id).sorted(lambda rec: (rec.sequence, rec.id)):
             for option in provider.option_ids.sorted(lambda rec: (rec.sequence, rec.id)):
-                env_value = (option.env_var_value or option.api_key or option.base_url or '').strip()
-                if not env_value:
-                    continue
-                if option.api_env_var:
-                    pairs_by_env_var[str(option.api_env_var).strip()] = env_value
-                if option.url_env_var:
-                    pairs_by_env_var[str(option.url_env_var).strip()] = env_value
+                # API key value
+                api_value = (option.env_var_value or option.api_key or '').strip()
+                if api_value and option.api_env_var:
+                    pairs_by_env_var[str(option.api_env_var).strip()] = api_value
+                # Base URL value (separate field)
+                url_value = (option.url_env_var_value or option.base_url or '').strip()
+                if url_value and option.url_env_var:
+                    pairs_by_env_var[str(option.url_env_var).strip()] = url_value
         return [
             {'env_var': env_var, 'env_val': env_val}
             for env_var, env_val in pairs_by_env_var.items()
@@ -349,22 +380,28 @@ class ItlingoChatbotSettings(models.Model):
 
         for provider in self._scoped_providers(organization_id):
             for option in provider.option_ids:
-                option_keys = {
-                    str(option.api_env_var or '').strip(),
-                    str(option.url_env_var or '').strip(),
-                }
-                if key in option_keys and option.env_var_value != env_value:
+                api_key = str(option.api_env_var or '').strip()
+                url_key = str(option.url_env_var or '').strip()
+                if key == api_key and option.env_var_value != env_value:
                     option.with_context(skip_model_group_sync=True).write({'env_var_value': env_value})
+                elif key == url_key and option.url_env_var_value != env_value:
+                    option.with_context(skip_model_group_sync=True).write({'url_env_var_value': env_value})
 
     def _propagate_env_values_from_options(self, option_records, organization_id=False):
         self.ensure_one()
         propagated_values = {}
         for option in option_records:
-            env_value = (option.env_var_value or option.api_key or option.base_url or '').strip()
-            for env_var in (option.api_env_var, option.url_env_var):
-                key = str(env_var or '').strip()
-                if key:
-                    propagated_values[key] = env_value
+            # API key value -> api_env_var
+            api_value = (option.env_var_value or option.api_key or '').strip()
+            api_key = str(option.api_env_var or '').strip()
+            if api_value and api_key:
+                propagated_values[api_key] = api_value
+
+            # Base URL value -> url_env_var
+            url_value = (option.url_env_var_value or option.base_url or '').strip()
+            url_key = str(option.url_env_var or '').strip()
+            if url_value and url_key:
+                propagated_values[url_key] = url_value
 
         for env_var, env_value in propagated_values.items():
             self._propagate_env_value_to_matching_options(env_var, env_value, organization_id=organization_id)
@@ -379,23 +416,27 @@ class ItlingoChatbotSettings(models.Model):
             if env_var and env_val:
                 env_var_map[env_var] = env_val
 
-        option_updates = []
+        option_updates_api = []
+        option_updates_url = []
         for provider in self._scoped_providers(False):
             for option in provider.option_ids:
-                candidate_keys = [
-                    str(option.api_env_var or '').strip(),
-                    str(option.url_env_var or '').strip(),
-                ]
-                resolved_value = ''
-                for key in candidate_keys:
-                    if key and key in env_var_map:
-                        resolved_value = env_var_map[key]
-                        break
-                if option.env_var_value != resolved_value:
-                    option_updates.append((option, resolved_value))
+                api_key = str(option.api_env_var or '').strip()
+                url_key = str(option.url_env_var or '').strip()
 
-        for option, resolved_value in option_updates:
+                # Resolve API key value
+                api_value = env_var_map.get(api_key, '')
+                if api_key and option.env_var_value != api_value:
+                    option_updates_api.append((option, api_value))
+
+                # Resolve Base URL value
+                url_value = env_var_map.get(url_key, '')
+                if url_key and option.url_env_var_value != url_value:
+                    option_updates_url.append((option, url_value))
+
+        for option, resolved_value in option_updates_api:
             option.with_context(skip_model_group_sync=True).write({'env_var_value': resolved_value})
+        for option, resolved_value in option_updates_url:
+            option.with_context(skip_model_group_sync=True).write({'url_env_var_value': resolved_value})
 
     def _seed_provider_records_if_needed(self):
         self.ensure_one()
@@ -423,14 +464,26 @@ class ItlingoChatbotSettings(models.Model):
                             env_var_value = pair.get('env_val') or pair.get('value') or ''
                             if env_var_value:
                                 break
+                # Determine model_mode based on option config
+                has_api = bool(api_env_var)
+                has_url = bool(url_env_var)
+                if has_api and has_url:
+                    model_mode = 'iaedu'
+                elif has_url:
+                    model_mode = 'local'
+                else:
+                    model_mode = 'remote'
+
                 option_commands.append((0, 0, {
                     'sequence': (option_index + 1) * 10,
                     'label': option.get('label') or option.get('value') or '',
                     'value': option.get('value') or '',
+                    'model_mode': model_mode,
                     'api_env_var': api_env_var,
                     'url_env_var': url_env_var,
-                    'env_var_value': env_var_value,
-                    'base_url_enabled': bool(option.get('base_url_enabled', False)),
+                    'env_var_value': env_var_value if has_api else '',
+                    'url_env_var_value': env_var_value if has_url else '',
+                    'base_url_enabled': bool(option.get('base_url_enabled', has_url)),
                     'disabled': bool(option.get('disabled', False)),
                 }))
 

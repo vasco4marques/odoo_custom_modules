@@ -115,20 +115,24 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
-                    <group>
-                        <field name="label"/>
-                    </group>
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <label for="label" class="form-label fw-semibold">Provider Name</label>
+                            <field name="label" nolabel="1" class="w-100" placeholder="e.g. OpenAI, Cohere, IAEdu"/>
+                        </div>
+                    </div>
                     <notebook>
                         <page string="Models">
                             <field name="option_ids" nolabel="1">
-                                <list editable="bottom" open_form_view="1">
+                                <list editable="bottom" open_form_view="1" class="table table-sm">
+                                    <field name="model_mode" decoration-info="model_mode == 'remote'" decoration-success="model_mode == 'local'" decoration-warning="model_mode == 'iaedu'"/>
                                     <field name="label"/>
                                     <field name="value"/>
-                                    <field name="api_env_var"/>
-                                    <field name="url_env_var"/>
-                                    <field name="env_var_value"/>
-                                    <field name="base_url_enabled"/>
-                                    <field name="disabled"/>
+                                    <field name="api_env_var" invisible="model_mode == 'local'"/>
+                                    <field name="url_env_var" invisible="model_mode == 'remote'"/>
+                                    <field name="env_var_value" invisible="model_mode == 'local'" placeholder="API key value"/>
+                                    <field name="url_env_var_value" invisible="model_mode == 'remote'" placeholder="Base URL value"/>
+                                    <field name="disabled" optional="show"/>
                                 </list>
                             </field>
                         </page>
@@ -143,14 +147,15 @@
         <field name="model">itlingo.chatbot.settings.option</field>
         <field name="arch" type="xml">
             <list>
+                <field name="model_mode" widget="badge" decoration-info="model_mode == 'remote'" decoration-success="model_mode == 'local'" decoration-warning="model_mode == 'iaedu'"/>
                 <field name="label"/>
                 <field name="value"/>
                 <field name="provider_name"/>
-                <field name="api_env_var"/>
-                <field name="url_env_var"/>
-                <field name="env_var_value"/>
-                <field name="base_url_enabled"/>
-                <field name="disabled"/>
+                <field name="api_env_var" invisible="model_mode == 'local'"/>
+                <field name="url_env_var" invisible="model_mode == 'remote'"/>
+                <field name="env_var_value" invisible="model_mode == 'local'" optional="show"/>
+                <field name="url_env_var_value" invisible="model_mode == 'remote'" optional="show"/>
+                <field name="disabled" optional="show"/>
             </list>
         </field>
     </record>
@@ -161,16 +166,38 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
-                    <group>
-                        <field name="provider_name" readonly="1"/>
-                        <field name="label"/>
-                        <field name="value"/>
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <label for="provider_name" class="form-label fw-semibold">Provider</label>
+                            <field name="provider_name" nolabel="1" class="w-100" readonly="1"/>
+                        </div>
+                    </div>
+                    <group string="Model Identity">
+                        <field name="label" placeholder="e.g. GPT-4o, IAEdu Agent"/>
+                        <field name="value" placeholder="e.g. gpt-4o, iaedu-default"/>
+                        <field name="model_mode" widget="radio"/>
                     </group>
-                    <group string="Advanced">
-                        <field name="api_env_var"/>
-                        <field name="url_env_var"/>
-                        <field name="env_var_value"/>
-                        <field name="base_url_enabled"/>
+                    <group string="Authentication">
+                        <!-- Remote mode: API key only -->
+                        <div invisible="model_mode != 'remote'" class="w-100">
+                            <field name="api_env_var" placeholder="e.g. OPENAI_API_KEY"/>
+                            <field name="env_var_value" widget="password" placeholder="sk-..."/>
+                        </div>
+                        <!-- Local mode: Base URL only -->
+                        <div invisible="model_mode != 'local'" class="w-100">
+                            <field name="url_env_var" placeholder="e.g. OLLAMA_BASE_URL"/>
+                            <field name="url_env_var_value" placeholder="http://localhost:11434"/>
+                        </div>
+                        <!-- IAEdu mode: both API key + Base URL -->
+                        <div invisible="model_mode != 'iaedu'" class="w-100">
+                            <field name="api_env_var" placeholder="e.g. IAEDU_API_KEY"/>
+                            <field name="env_var_value" widget="password" placeholder="API key value"/>
+                            <field name="url_env_var" placeholder="e.g. IAEDU_BASE_URL"/>
+                            <field name="url_env_var_value" placeholder="https://api.iaedu.pt/agent-chat/.../stream"/>
+                        </div>
+                        <field name="base_url_enabled" invisible="1"/>
+                    </group>
+                    <group string="Options">
                         <field name="disabled"/>
                     </group>
                 </sheet>
