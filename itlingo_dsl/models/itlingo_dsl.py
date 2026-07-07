@@ -40,8 +40,9 @@ class ItlingoDsl(models.Model):
         default="1.0",
     )
 
-    description = fields.Text(
+    description = fields.Html(
         string="Description",
+        sanitize=True,
     )
 
     status = fields.Selection(

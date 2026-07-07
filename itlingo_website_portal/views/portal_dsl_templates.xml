@@ -78,8 +78,8 @@
                                 <t t-set="sort_label">Status</t>
                             </t>
                         </th>
-                        <th class="text-center">Files</th>
-                        <th class="text-end">Actions</th>
+                        <th t-if="show_dsl_management_columns" class="text-center">Files</th>
+                        <th t-if="show_dsl_management_columns" class="text-end">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -96,10 +96,10 @@
                                 <t t-out="dict(dsl_rec._fields['status'].selection).get(dsl_rec.status)"/>
                             </span>
                         </td>
-                        <td class="text-center">
+                        <td t-if="show_dsl_management_columns" class="text-center">
                             <span class="badge bg-info text-dark"><t t-out="len(dsl_rec.file_ids)"/></span>
                         </td>
-                        <td class="text-end text-nowrap">
+                        <td t-if="show_dsl_management_columns" class="text-end text-nowrap">
                             <a t-if="dsl_rec.id in editable_dsl_ids"
                                t-attf-href="/dsl/#{dsl_rec.id}"
                                class="btn btn-sm btn-link text-primary p-1"
@@ -203,14 +203,16 @@
                     <t t-out="dsl.acronym"/> <span class="text-muted">·</span> <t t-out="dsl.name"/>
                 </h1>
 
-                <div class="card border-0 shadow-sm rounded-3 mb-4">
+                <div t-if="dsl.description" class="card border-0 shadow-sm rounded-3 mb-4">
+                    <div class="card-body">
+                        <div t-field="dsl.description"/>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm rounded-3">
                     <div class="card-body">
                         <p class="text-muted small text-uppercase fw-semibold mb-3">Details</p>
                         <dl class="row mb-0 small">
-                            <dt class="col-sm-3 text-muted">Acronym</dt>
-                            <dd class="col-sm-9"><t t-out="dsl.acronym"/></dd>
-                            <dt class="col-sm-3 text-muted">Name</dt>
-                            <dd class="col-sm-9"><t t-out="dsl.name"/></dd>
                             <dt class="col-sm-3 text-muted">Version</dt>
                             <dd class="col-sm-9"><t t-out="dsl.version"/></dd>
                             <dt class="col-sm-3 text-muted">Status</dt>
@@ -221,6 +223,12 @@
                             </dd>
                             <dt class="col-sm-3 text-muted">File extensions</dt>
                             <dd class="col-sm-9"><t t-out="dsl.file_extensions or '—'"/></dd>
+                            <dt class="col-sm-3 text-muted">Created</dt>
+                            <dd class="col-sm-9">
+                                <t t-call="itlingo_website_portal.portal_date">
+                                    <t t-set="date_value" t-value="dsl.create_date"/>
+                                </t>
+                            </dd>
                             <dt class="col-sm-3 text-muted">Documentation</dt>
                             <dd class="col-sm-9">
                                 <a t-if="dsl.documentation_url" t-att-href="dsl.documentation_url"
@@ -229,13 +237,11 @@
                                 </a>
                                 <t t-else="">—</t>
                             </dd>
-                            <dt class="col-sm-3 text-muted">Description</dt>
-                            <dd class="col-sm-9"><t t-out="dsl.description or '—'"/></dd>
                         </dl>
                     </div>
                 </div>
 
-                <div class="card border-0 shadow-sm rounded-3">
+                <div t-if="can_view_dsl_files" class="card border-0 shadow-sm rounded-3 mt-4">
                     <div class="card-body">
                         <p class="text-muted small text-uppercase fw-semibold mb-3">Definition files</p>
                         <t t-set="public_files" t-value="dsl.file_ids.filtered(lambda f: f.is_enabled)"/>

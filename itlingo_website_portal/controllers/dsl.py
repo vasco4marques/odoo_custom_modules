@@ -52,6 +52,13 @@ class ITLingoDslPortal(CustomerPortal):
         if not self._can_edit_dsl(dsl):
             raise AccessError(_('You can only edit DSLs you maintain.'))
 
+    def _can_view_dsl_files(self, dsl):
+        return self._can_edit_dsl(dsl)
+
+    def _require_dsl_files(self, dsl):
+        if not self._can_view_dsl_files(dsl):
+            raise AccessError(_('You do not have access to DSL definition files.'))
+
     def _dsl_or_404(self, dsl_id):
         dsl = request.env['itlingo.dsl'].sudo().browse(dsl_id)
         if not dsl.exists():
@@ -177,6 +184,7 @@ class ITLingoDslPortal(CustomerPortal):
             'filters': {'name': name_q},
             'can_manage_dsls': is_admin,
             'editable_dsl_ids': editable_dsl_ids,
+            'show_dsl_management_columns': is_admin or bool(editable_dsl_ids),
             'dsl_message': params.get('message'),
             'dsl_error': params.get('error'),
         })
@@ -229,6 +237,7 @@ class ITLingoDslPortal(CustomerPortal):
             values.update({
                 'dsl': dsl,
                 'page_name': 'dsl_view',
+                'can_view_dsl_files': self._can_view_dsl_files(dsl),
             })
             return request.render(
                 'itlingo_website_portal.portal_dsl_view', values,
@@ -307,9 +316,8 @@ class ITLingoDslPortal(CustomerPortal):
     @route('/dsl/<int:dsl_id>/files/<int:file_id>/download', type='http',
            auth='public', website=True)
     def portal_dsl_file_download(self, dsl_id, file_id, **kw):
-        # DSL definition files are public content (they feed the public
-        # chatbot knowledge base), so anyone may download them.
         dsl = self._dsl_or_404(dsl_id)
+        self._require_dsl_files(dsl)
         line = self._dsl_file_or_404(dsl, file_id)
         if not line.file:
             return request.not_found()

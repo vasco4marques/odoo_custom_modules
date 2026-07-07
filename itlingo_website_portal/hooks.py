@@ -107,6 +107,14 @@ def _sql_delete_menus_and_pages_by_urls(cr, urls):
 
 def run_website_remove_defaults_sql(cr):
     """Everything that used to live in data/website_remove_defaults.xml (ORM-safe)."""
+    cr.execute(
+        """
+        UPDATE ir_ui_view
+           SET active = TRUE
+         WHERE key = 'website.footer_no_copyright'
+        """,
+    )
+
     _sql_delete_website_menu_by_xmlid(
         cr, "itlingo_website_portal", "menu_itlingo_about",
     )

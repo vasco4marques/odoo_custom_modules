@@ -127,6 +127,9 @@
                             <t t-set="ms_id" t-value="'doc_filter_dsl'"/>
                             <t t-set="ms_label">DSL</t>
                             <t t-set="ms_options" t-value="[
+                                {'name': 'no_dsl', 'value': '1', 'label': 'No DSL',
+                                 'checked': doc_filters.get('no_dsl')},
+                            ] + [
                                 {'name': 'dsl_id', 'value': d.id,
                                  'label': '%s %s' % (d.acronym, d.version or ''),
                                  'checked': d.id in (doc_filters.get('dsl_id') or [])}

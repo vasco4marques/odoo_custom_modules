@@ -802,15 +802,21 @@ class ITLingoPortal(CustomerPortal):
         if type_ids:
             domain.append(('document_type_id', 'in', type_ids))
             filter_args['type_id'] = type_ids
-        dsl_ids = []
-        for raw in self._portal_multi_params('dsl_id'):
-            try:
-                dsl_ids.append(int(raw))
-            except (TypeError, ValueError):
-                pass
-        if dsl_ids:
-            domain.append(('dsl_id', 'in', dsl_ids))
-            filter_args['dsl_id'] = dsl_ids
+        no_dsl = params.get('no_dsl') == '1'
+        if no_dsl:
+            domain.append(('dsl_id', '=', False))
+            filter_args['no_dsl'] = '1'
+            dsl_ids = []
+        else:
+            dsl_ids = []
+            for raw in self._portal_multi_params('dsl_id'):
+                try:
+                    dsl_ids.append(int(raw))
+                except (TypeError, ValueError):
+                    pass
+            if dsl_ids:
+                domain.append(('dsl_id', 'in', dsl_ids))
+                filter_args['dsl_id'] = dsl_ids
         statuses = [
             s for s in self._portal_multi_params('status')
             if s in dict(Document._fields['status'].selection)
@@ -844,6 +850,7 @@ class ITLingoPortal(CustomerPortal):
                 'format': doc_formats,
                 'type_id': type_ids,
                 'dsl_id': dsl_ids,
+                'no_dsl': no_dsl,
                 'status': statuses,
             },
             'doc_types': request.env['itlingo.document.type'].sudo().search(
@@ -1706,7 +1713,7 @@ class ITLingoPortal(CustomerPortal):
             {
                 'label': f'{dsl.acronym} {dsl.version}'.strip() if dsl else 'No DSL',
                 'count': count,
-                'url': f'{base_url}/documents?dsl_id={dsl.id}' if dsl else None,
+                'url': f'{base_url}/documents?dsl_id={dsl.id}' if dsl else f'{base_url}/documents?no_dsl=1',
                 'color': palette[(i + 2) % len(palette)],
             }
             for i, (dsl, count) in enumerate(Document._read_group(
@@ -2450,7 +2457,7 @@ class ITLingoPortal(CustomerPortal):
             {
                 'label': f'{dsl.acronym} {dsl.version}'.strip() if dsl else 'No DSL',
                 'count': count,
-                'url': f'{hub_prefix}/documents?dsl_id={dsl.id}' if dsl else None,
+                'url': f'{hub_prefix}/documents?dsl_id={dsl.id}' if dsl else f'{hub_prefix}/documents?no_dsl=1',
                 'color': palette[(i + 2) % len(palette)],
             }
             for i, (dsl, count) in enumerate(Document._read_group(
@@ -3060,5 +3067,3 @@ class ITLingoPortal(CustomerPortal):
             'itlingo_website_portal.portal_workspace_specifications',
             values,
         )
-
-

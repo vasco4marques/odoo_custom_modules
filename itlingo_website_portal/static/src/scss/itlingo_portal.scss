@@ -44,16 +44,14 @@
     }
 }
 
-/* Bootstrap's fixed .container caps content at ~1320px, leaving large empty
-   side margins on modern screens. Widen every page container (navbar, main
-   content and footer stay aligned): near-full width with 1.5rem gutters per
-   side, capped so ultra-wide monitors don't get absurdly long lines. */
+/* Keep portal tables wider than stock Bootstrap while restoring more readable
+   side margins on large website pages. */
 @media (min-width: 992px) {
     #wrapwrap .container {
-        /* not min(100% - 3rem, 1760px): Sass evaluates min() itself and
+        /* not min(100% - 6rem, 1500px): Sass evaluates min() itself and
            rejects the mixed % / rem units */
-        width: calc(100% - 3rem);
-        max-width: 1760px;
+        width: calc(100% - 6rem);
+        max-width: 1500px;
     }
 }
 

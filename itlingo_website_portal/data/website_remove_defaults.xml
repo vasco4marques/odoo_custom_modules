@@ -8,5 +8,8 @@
       via SQL — see itlingo_website_portal.hooks.run_website_remove_defaults_sql.
     -->
     <data noupdate="0">
+        <record id="website.footer_no_copyright" model="ir.ui.view">
+            <field name="active" eval="True"/>
+        </record>
     </data>
 </odoo>
