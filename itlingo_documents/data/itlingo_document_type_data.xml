@@ -2,53 +2,117 @@
 <odoo>
 <data noupdate="0">
 
-    <record id="doc_type_rsl" model="itlingo.document.type">
-        <field name="type_code">rsl</field>
-        <field name="short_name">RSL</field>
-        <field name="name">Requirements Specification Language</field>
-        <field name="extension_file">.rsl</field>
-    </record>
-
-    <record id="doc_type_psl" model="itlingo.document.type">
-        <field name="type_code">psl</field>
-        <field name="short_name">PSL</field>
-        <field name="name">Process Specification Language</field>
-        <field name="extension_file">.psl</field>
-    </record>
-
-    <record id="doc_type_tsl" model="itlingo.document.type">
-        <field name="type_code">tsl</field>
-        <field name="short_name">TSL</field>
-        <field name="name">Test Specification Language</field>
-        <field name="extension_file">.tsl</field>
-    </record>
-
-    <record id="doc_type_report" model="itlingo.document.type">
-        <field name="type_code">report</field>
-        <field name="short_name">RPT</field>
-        <field name="name">Report</field>
-        <field name="extension_file">.pdf</field>
-    </record>
-
     <record id="doc_type_specification" model="itlingo.document.type">
         <field name="type_code">specification</field>
         <field name="short_name">SPEC</field>
-        <field name="name">Specification Document</field>
-        <field name="extension_file">.docx</field>
+        <field name="name">Specification</field>
+        <field name="extension_file">.rsl</field>
+        <field name="active" eval="True"/>
     </record>
 
-    <record id="doc_type_manual" model="itlingo.document.type">
-        <field name="type_code">manual</field>
-        <field name="short_name">MAN</field>
-        <field name="name">Manual</field>
-        <field name="extension_file">.pdf</field>
+    <record id="doc_type_specification_template" model="itlingo.document.type">
+        <field name="type_code">specification_template</field>
+        <field name="short_name">SPEC-TPL</field>
+        <field name="name">Specification Template</field>
+        <field name="extension_file">.rsl</field>
+        <field name="active" eval="True"/>
+    </record>
+
+    <record id="doc_type_specification_library" model="itlingo.document.type">
+        <field name="type_code">specification_library</field>
+        <field name="short_name">SPEC-LIB</field>
+        <field name="name">Specification Library</field>
+        <field name="extension_file">.rsl</field>
+        <field name="active" eval="True"/>
     </record>
 
     <record id="doc_type_template" model="itlingo.document.type">
-        <field name="type_code">template</field>
-        <field name="short_name">TPL</field>
-        <field name="name">Template</field>
+        <field name="type_code">document_template</field>
+        <field name="short_name">DOC-TPL</field>
+        <field name="name">Document Template</field>
         <field name="extension_file">.docx</field>
+        <field name="active" eval="True"/>
+    </record>
+
+    <record id="doc_type_technical_document" model="itlingo.document.type">
+        <field name="type_code">technical_document</field>
+        <field name="short_name">TECH</field>
+        <field name="name">Technical Document</field>
+        <field name="extension_file">.pdf</field>
+        <field name="active" eval="True"/>
+    </record>
+
+    <record id="doc_type_dataset" model="itlingo.document.type">
+        <field name="type_code">dataset</field>
+        <field name="short_name">DATA</field>
+        <field name="name">Dataset</field>
+        <field name="extension_file">.csv</field>
+        <field name="active" eval="True"/>
+    </record>
+
+    <record id="doc_type_tutorial" model="itlingo.document.type">
+        <field name="type_code">tutorial</field>
+        <field name="short_name">TUT</field>
+        <field name="name">Tutorial</field>
+        <field name="extension_file">.md</field>
+        <field name="active" eval="True"/>
+    </record>
+
+    <record id="doc_type_prompt_template" model="itlingo.document.type">
+        <field name="type_code">prompt_template</field>
+        <field name="short_name">PROMPT</field>
+        <field name="name">Prompt Template</field>
+        <field name="extension_file">.md</field>
+        <field name="active" eval="True"/>
+    </record>
+
+    <record id="doc_type_other" model="itlingo.document.type">
+        <field name="type_code">other</field>
+        <field name="short_name">OTHER</field>
+        <field name="name">Other</field>
+        <field name="extension_file"></field>
+        <field name="active" eval="True"/>
+    </record>
+
+    <!-- Legacy records kept inactive so older XML ids remain resolvable. -->
+    <record id="doc_type_rsl" model="itlingo.document.type">
+        <field name="type_code">specification</field>
+        <field name="short_name">RSL</field>
+        <field name="name">Legacy RSL</field>
+        <field name="extension_file">.rsl</field>
+        <field name="active" eval="False"/>
+    </record>
+
+    <record id="doc_type_psl" model="itlingo.document.type">
+        <field name="type_code">specification</field>
+        <field name="short_name">PSL</field>
+        <field name="name">Legacy PSL</field>
+        <field name="extension_file">.psl</field>
+        <field name="active" eval="False"/>
+    </record>
+
+    <record id="doc_type_tsl" model="itlingo.document.type">
+        <field name="type_code">specification</field>
+        <field name="short_name">TSL</field>
+        <field name="name">Legacy TSL</field>
+        <field name="extension_file">.tsl</field>
+        <field name="active" eval="False"/>
+    </record>
+
+    <record id="doc_type_report" model="itlingo.document.type">
+        <field name="type_code">technical_document</field>
+        <field name="short_name">RPT</field>
+        <field name="name">Legacy Report</field>
+        <field name="extension_file">.pdf</field>
+        <field name="active" eval="False"/>
+    </record>
+
+    <record id="doc_type_manual" model="itlingo.document.type">
+        <field name="type_code">technical_document</field>
+        <field name="short_name">MAN</field>
+        <field name="name">Legacy Manual</field>
+        <field name="extension_file">.pdf</field>
+        <field name="active" eval="False"/>
     </record>
 
 </data>

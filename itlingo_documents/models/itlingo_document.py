@@ -53,10 +53,10 @@ class ItlingoDocument(models.Model):
     ], string='Format', compute='_compute_document_format', store=True,
         help='Grouped format derived from the file extension.')
     dsl_knowledge = fields.Boolean(
-        string='DSL Knowledge', tracking=True, default=False,
+        string='Grounding Knowledge', tracking=True, default=False,
         help="When enabled on a published document, its content is added to "
-             "the organization / workspace theory pool the chatbot uses as DSL "
-             "knowledge. A document must be published before it can be marked.",
+             "the organization / workspace knowledge pool the chatbot uses for "
+             "grounding. A document must be published before it can be marked.",
     )
     template_id = fields.Many2one(
         'itlingo.document.template', string='Template',
@@ -88,6 +88,10 @@ class ItlingoDocument(models.Model):
         'psl': 'text', 'tsl': 'text', 'json': 'text', 'xml': 'text',
         'yaml': 'text', 'yml': 'text',
     }
+    _KB_TEXT_EXTENSIONS = frozenset({
+        'asl', 'aslx', 'csv', 'json', 'md', 'psl', 'rsl', 'rslx', 'sql',
+        'tsl', 'txt', 'xml', 'yaml', 'yml',
+    })
 
     @api.depends('file_name')
     def _compute_document_format(self):
@@ -125,13 +129,21 @@ class ItlingoDocument(models.Model):
         'organization_id', 'project_id',
     )
 
-    @api.constrains('dsl_knowledge', 'status')
+    @api.constrains('dsl_knowledge', 'status', 'file_name', 'document_file')
     def _check_dsl_knowledge_published(self):
         for doc in self:
-            if doc.dsl_knowledge and doc.status != 'published':
+            if not doc.dsl_knowledge:
+                continue
+            if doc.status != 'published':
                 raise ValidationError(_(
                     'A document must be published before it can be marked as '
-                    'DSL knowledge (document: %s).', doc.name,
+                    'grounding knowledge (document: %s).', doc.name,
+                ))
+            if not doc._is_text_like_kb_file():
+                raise ValidationError(_(
+                    'Grounding knowledge currently supports only text-like '
+                    'uploaded files such as .txt, .md, .json, .xml, .yaml, '
+                    '.csv, .rsl or .asl (document: %s).', doc.name,
                 ))
 
     @api.model_create_multi
@@ -141,16 +153,27 @@ class ItlingoDocument(models.Model):
         return records
 
     def write(self, vals):
-        # A document can only be marked as DSL knowledge while published, so
+        # A document can only be marked as grounding knowledge while published, so
         # leaving the published state automatically clears the mark (and pulls
-        # the file from the theory pool).
+        # the file from the grounding pool).
         if (
             'status' in vals
             and vals.get('status') != 'published'
             and 'dsl_knowledge' not in vals
         ):
             vals = dict(vals, dsl_knowledge=False)
+        legacy_kb_keys = []
+        if {'file_name', 'organization_id', 'project_id'} & set(vals):
+            for doc in self:
+                doc_file_name = (doc.file_name or '').strip()
+                if doc_file_name:
+                    legacy_kb_keys.append((
+                        doc_file_name,
+                        doc.organization_id.id if doc.organization_id else None,
+                        doc.project_id.id if doc.project_id else None,
+                    ))
         result = super().write(vals)
+        self._remove_legacy_kb_files(legacy_kb_keys)
         if any(f in vals for f in self._KB_SYNC_TRIGGER_FIELDS):
             self._sync_kb_files()
         return result
@@ -177,11 +200,11 @@ class ItlingoDocument(models.Model):
         return _read_attachment_base64(self.env, 'itlingo.document', self.id, field_name)
 
     def _sync_kb_files(self):
-        """Project documents into the chatbot KB theory pool.
+        """Project documents into the chatbot KB grounding pool.
 
         A document is sent to the chatbot only when it is **published** AND
-        flagged as **DSL knowledge**. It is then stored as an ``other``
-        knowledge-base entry (the chatbot's language-agnostic "theory" pool),
+        flagged as **grounding knowledge**. It is then stored as an ``other``
+        knowledge-base entry (the chatbot's language-agnostic grounding pool),
         scoped to the document's organization / workspace. Documents that are
         not published, or not flagged, are removed from the pool. DSL definition
         files (grammar / validation / examples / specs) live on ``itlingo.dsl``.
@@ -210,6 +233,13 @@ class ItlingoDocument(models.Model):
             project_id = doc.project_id.id if doc.project_id else None
 
             ext = doc_file_name.rsplit('.', 1)[-1].lower() if '.' in doc_file_name else ''
+            if ext not in self._KB_TEXT_EXTENSIONS:
+                _logger.warning(
+                    "Skipping document KB sync for non-text file %s (doc id=%s)",
+                    doc_file_name, doc.id,
+                )
+                doc._remove_kb_files()
+                continue
             raw_bytes = _b64.b64decode(doc_raw)
             try:
                 file_text = raw_bytes.decode('utf-8')
@@ -217,15 +247,21 @@ class ItlingoDocument(models.Model):
                 file_text = raw_bytes.decode('latin-1')
             file_text = file_text.replace('\x00', '')
 
+            source_url = doc._kb_source_url()
             existing = kb_file_model.sudo().search([
-                ('file_type', '=', 'other'), ('file_name', '=', doc_file_name),
-                ('organization_id', '=', org_id), ('project_id', '=', project_id),
+                ('file_type', '=', 'other'), ('source_url', '=', source_url),
             ], limit=1)
+            if not existing:
+                existing = kb_file_model.sudo().search([
+                    ('file_type', '=', 'other'), ('file_name', '=', doc_file_name),
+                    ('organization_id', '=', org_id), ('project_id', '=', project_id),
+                ], limit=1)
             vals = {
                 'file_name': doc_file_name, 'extension': ext,
                 'mime_type': 'application/octet-stream',
                 'file_type': 'other', 'language_id': None,
                 'content': file_text, 'extraction_method': 'odoo_direct',
+                'source_url': source_url,
                 'is_enabled': True,
                 'organization_id': org_id, 'project_id': project_id,
             }
@@ -237,6 +273,9 @@ class ItlingoDocument(models.Model):
     def _remove_kb_files(self):
         """Delete chatbot_kbfile records when a document is unpublished."""
         cr = self.env.cr
+        cr.execute("SELECT to_regclass('chatbot_kbfile')")
+        if not cr.fetchone()[0]:
+            return
         for doc in self:
             org_id = doc.organization_id.id if doc.organization_id else None
             project_id = doc.project_id.id if doc.project_id else None
@@ -245,22 +284,55 @@ class ItlingoDocument(models.Model):
                 doc.id, doc.name, org_id, project_id,
             )
 
-            # Remove "other" files (main document file) by org + project + file_name
+            source_url = doc._kb_source_url()
+            cr.execute(
+                "DELETE FROM chatbot_kbfile WHERE file_type = 'other' AND source_url = %s",
+                [source_url],
+            )
+
+            # Remove legacy "other" files by org + project + file_name.
             doc_file_name = (doc.file_name or '').strip()
             if doc_file_name:
-                conditions = ["file_type = 'other'", "file_name = %s"]
-                params = [doc_file_name]
-                if org_id:
-                    conditions.append("organization_id = %s")
-                    params.append(org_id)
-                if project_id:
-                    conditions.append("project_id = %s")
-                    params.append(project_id)
-                cr.execute(
-                    "DELETE FROM chatbot_kbfile WHERE " + " AND ".join(conditions),
-                    params,
-                )
+                self._remove_legacy_kb_files([(doc_file_name, org_id, project_id)])
                 _logger.info("KB remove: deleted other files matching %s", doc_file_name)
+
+    def _kb_source_url(self):
+        self.ensure_one()
+        return 'odoo://itlingo.document/%s' % self.id
+
+    def _is_text_like_kb_file(self):
+        self.ensure_one()
+        if not self.document_file:
+            return False
+        file_name = (self.file_name or '').strip().lower()
+        if not file_name or '.' not in file_name:
+            return False
+        return file_name.rsplit('.', 1)[-1] in self._KB_TEXT_EXTENSIONS
+
+    def _remove_legacy_kb_files(self, keys):
+        if not keys:
+            return
+        cr = self.env.cr
+        cr.execute("SELECT to_regclass('chatbot_kbfile')")
+        if not cr.fetchone()[0]:
+            return
+        for file_name, org_id, project_id in keys:
+            conditions = ["file_type = 'other'", "file_name = %s"]
+            params = [file_name]
+            if org_id:
+                conditions.append("organization_id = %s")
+                params.append(org_id)
+            else:
+                conditions.append("organization_id IS NULL")
+            if project_id:
+                conditions.append("project_id = %s")
+                params.append(project_id)
+            else:
+                conditions.append("project_id IS NULL")
+            cr.execute(
+                "DELETE FROM chatbot_kbfile WHERE " + " AND ".join(conditions),
+                params,
+            )
 
 
 def _read_attachment_base64(env, res_model, res_id, field_name):

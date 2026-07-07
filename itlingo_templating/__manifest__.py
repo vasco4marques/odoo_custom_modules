@@ -1,6 +1,6 @@
 {
     'name': 'ITLingo Templating',
-    'version': '19.0.1.0.0',
+    'version': '19.0.1.0.1',
     'category': 'Services',
     'summary': 'Generate DOCX/XLSX documents from RSL specifications and templates',
     'description': """

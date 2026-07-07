@@ -2,26 +2,114 @@
 <odoo>
 <data noupdate="0">
 
-    <record id="demo_doc_1" model="itlingo.document">
-        <field name="name">Requirements Document v1</field>
-        <field name="document_type_id" ref="itlingo_documents.doc_type_rsl"/>
+    <record id="demo_doc_specification" model="itlingo.document">
+        <field name="name">Customer Portal Requirements</field>
+        <field name="document_type_id" ref="itlingo_documents.doc_type_specification"/>
         <field name="language">en</field>
         <field name="dsl_id" ref="itlingo_dsl.dsl_rsl_1_0"/>
         <field name="version">1.0</field>
-        <field name="status">draft</field>
+        <field name="file_name">customer_portal_requirements.rsl</field>
+        <field name="status">published</field>
         <field name="project_id" ref="itlingo_workspace_access.project_itlingo_platform"/>
-        <field name="organization_id" ref="itlingo_organizations.demo_org_techcorp"/>
+        <field name="organization_id" ref="itlingo_organizations.org_techcorp"/>
         <field name="creator_id" ref="base.user_admin"/>
     </record>
 
-    <record id="demo_doc_2" model="itlingo.document">
-        <field name="name">Test Specification Alpha</field>
-        <field name="document_type_id" ref="itlingo_documents.doc_type_tsl"/>
+    <record id="demo_doc_specification_template" model="itlingo.document">
+        <field name="name">RSL Use Case Structure</field>
+        <field name="document_type_id" ref="itlingo_documents.doc_type_specification_template"/>
+        <field name="language">en</field>
+        <field name="dsl_id" ref="itlingo_dsl.dsl_rsl_1_0"/>
+        <field name="version">1.0</field>
+        <field name="file_name">rsl_use_case_structure.rsl</field>
+        <field name="status">approved</field>
+        <field name="project_id" ref="itlingo_workspace_access.project_itlingo_platform"/>
+        <field name="organization_id" ref="itlingo_organizations.org_techcorp"/>
+        <field name="creator_id" ref="base.user_admin"/>
+    </record>
+
+    <record id="demo_doc_specification_library" model="itlingo.document">
+        <field name="name">Reusable Requirement Fragments</field>
+        <field name="document_type_id" ref="itlingo_documents.doc_type_specification_library"/>
+        <field name="language">en</field>
+        <field name="dsl_id" ref="itlingo_dsl.dsl_rsl_1_0"/>
+        <field name="version">1.0</field>
+        <field name="file_name">reusable_requirement_fragments.rsl</field>
+        <field name="status">published</field>
+        <field name="organization_id" ref="itlingo_organizations.org_techcorp"/>
+        <field name="creator_id" ref="base.user_admin"/>
+    </record>
+
+    <record id="demo_doc_document_template" model="itlingo.document">
+        <field name="name">Requirements Report Layout</field>
+        <field name="document_type_id" ref="itlingo_documents.doc_type_template"/>
+        <field name="language">en</field>
+        <field name="dsl_id" ref="itlingo_dsl.dsl_rsl_1_0"/>
+        <field name="version">1.0</field>
+        <field name="file_name">requirements_report_layout.docx</field>
+        <field name="status">approved</field>
+        <field name="project_id" ref="itlingo_workspace_access.project_itlingo_platform"/>
+        <field name="organization_id" ref="itlingo_organizations.org_techcorp"/>
+        <field name="creator_id" ref="base.user_admin"/>
+    </record>
+
+    <record id="demo_doc_technical_document" model="itlingo.document">
+        <field name="name">Architecture Overview</field>
+        <field name="document_type_id" ref="itlingo_documents.doc_type_technical_document"/>
         <field name="language">en</field>
         <field name="version">1.0</field>
+        <field name="file_name">architecture_overview.pdf</field>
         <field name="status">published</field>
         <field name="project_id" ref="itlingo_workspace_access.project_itlingo_platform"/>
-        <field name="organization_id" ref="itlingo_organizations.demo_org_techcorp"/>
+        <field name="organization_id" ref="itlingo_organizations.org_techcorp"/>
+        <field name="creator_id" ref="base.user_admin"/>
+    </record>
+
+    <record id="demo_doc_dataset" model="itlingo.document">
+        <field name="name">Validation Survey Dataset</field>
+        <field name="document_type_id" ref="itlingo_documents.doc_type_dataset"/>
+        <field name="language">en</field>
+        <field name="version">1.0</field>
+        <field name="file_name">validation_survey_dataset.csv</field>
+        <field name="status">published</field>
+        <field name="organization_id" ref="itlingo_organizations.org_university"/>
+        <field name="creator_id" ref="base.user_admin"/>
+    </record>
+
+    <record id="demo_doc_tutorial" model="itlingo.document">
+        <field name="name">Getting Started with RSL</field>
+        <field name="document_type_id" ref="itlingo_documents.doc_type_tutorial"/>
+        <field name="language">en</field>
+        <field name="dsl_id" ref="itlingo_dsl.dsl_rsl_1_0"/>
+        <field name="version">1.0</field>
+        <field name="file_name">getting_started_with_rsl.md</field>
+        <field name="status">published</field>
+        <field name="project_id" ref="itlingo_workspace_access.project_research"/>
+        <field name="organization_id" ref="itlingo_organizations.org_university"/>
+        <field name="creator_id" ref="base.user_admin"/>
+    </record>
+
+    <record id="demo_doc_prompt_template" model="itlingo.document">
+        <field name="name">Requirements Review Prompt</field>
+        <field name="document_type_id" ref="itlingo_documents.doc_type_prompt_template"/>
+        <field name="language">en</field>
+        <field name="dsl_id" ref="itlingo_dsl.dsl_rsl_1_0"/>
+        <field name="version">1.0</field>
+        <field name="file_name">requirements_review_prompt.md</field>
+        <field name="status">draft</field>
+        <field name="organization_id" ref="itlingo_organizations.org_techcorp"/>
+        <field name="creator_id" ref="base.user_admin"/>
+    </record>
+
+    <record id="demo_doc_other" model="itlingo.document">
+        <field name="name">Meeting Notes</field>
+        <field name="document_type_id" ref="itlingo_documents.doc_type_other"/>
+        <field name="language">en</field>
+        <field name="version">1.0</field>
+        <field name="file_name">meeting_notes.txt</field>
+        <field name="status">in_review</field>
+        <field name="project_id" ref="itlingo_workspace_access.project_itlingo_platform"/>
+        <field name="organization_id" ref="itlingo_organizations.org_techcorp"/>
         <field name="creator_id" ref="base.user_admin"/>
     </record>
 
@@ -29,13 +117,13 @@
         <field name="name">Project Alpha Library</field>
     </record>
 
-    <record id="demo_doc_lib_1" model="itlingo.document.library">
-        <field name="document_id" ref="demo_doc_1"/>
+    <record id="demo_doc_lib_specification" model="itlingo.document.library">
+        <field name="document_id" ref="demo_doc_specification"/>
         <field name="library_id" ref="demo_library_1"/>
     </record>
 
-    <record id="demo_doc_lib_2" model="itlingo.document.library">
-        <field name="document_id" ref="demo_doc_2"/>
+    <record id="demo_doc_lib_dataset" model="itlingo.document.library">
+        <field name="document_id" ref="demo_doc_dataset"/>
         <field name="library_id" ref="demo_library_1"/>
     </record>
 

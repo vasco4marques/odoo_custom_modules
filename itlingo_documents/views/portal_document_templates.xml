@@ -87,6 +87,9 @@
     </template>
 
     <template id="portal_document_detail_inner" name="Document Detail (inner)">
+            <div t-if="doc_message == 'saved'" class="alert alert-success" role="alert">
+                Document saved.
+            </div>
             <div class="card border-0 shadow-sm rounded-3">
                 <div class="card-header bg-white d-flex justify-content-between align-items-center p-3">
                     <h2 class="h5 fw-semibold mb-0"><t t-out="document.name"/></h2>
@@ -114,10 +117,17 @@
                                     <t t-if="document.dsl_id" t-out="document.dsl_id.acronym"/>
                                     <t t-else="">—</t>
                                 </dd>
-                                <dt>DSL knowledge</dt>
+                                <dt>Grounding knowledge</dt>
                                 <dd>
-                                    <span t-if="document.dsl_knowledge" class="badge bg-info text-dark">In theory pool</span>
-                                    <t t-else="">No</t>
+                                    <span t-if="document.status != 'published'" class="badge bg-secondary">
+                                        Unavailable until published
+                                    </span>
+                                    <span t-elif="document.dsl_knowledge" class="badge bg-info text-dark">
+                                        In grounding knowledge
+                                    </span>
+                                    <span t-else="" class="badge bg-light text-dark border">
+                                        Not included
+                                    </span>
                                 </dd>
                             </dl>
                         </div>
@@ -246,9 +256,10 @@
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="doc_edit_dsl" name="dsl_knowledge" value="1"
-                                   t-att-checked="form.get('dsl_knowledge') or None"/>
-                            <label class="form-check-label" for="doc_edit_dsl">Grounding knowledge (add to the workspace theory pool)</label>
-                            <div class="form-text">Only <strong>published</strong> documents can be marked. The file's content is added to this organization / workspace knowledge the chatbot uses for grounding.</div>
+                                   t-att-checked="form.get('dsl_knowledge') or None"
+                                   t-att-disabled="None if (form.get('status') or document.status) == 'published' else 'disabled'"/>
+                            <label class="form-check-label" for="doc_edit_dsl">Grounding knowledge</label>
+                            <div class="form-text" id="doc_edit_dsl_help">Only <strong>published</strong> text-like documents can be marked. The file's content is added to this organization / workspace knowledge the chatbot uses for grounding.</div>
                             <div t-if="error.get('dsl_knowledge')" class="text-danger small mt-1"><t t-out="error['dsl_knowledge']"/></div>
                         </div>
                         <div class="mb-3">
@@ -264,6 +275,22 @@
                             <a t-attf-href="#{doc_base_url}/#{document.id}" class="btn btn-outline-secondary">Cancel</a>
                         </div>
                     </form>
+                    <script type="text/javascript">
+                        (function () {
+                            var status = document.getElementById('doc_edit_status');
+                            var checkbox = document.getElementById('doc_edit_dsl');
+                            if (!status || !checkbox) { return; }
+                            function syncGroundingKnowledge() {
+                                var enabled = status.value === 'published';
+                                checkbox.disabled = !enabled;
+                                if (!enabled) {
+                                    checkbox.checked = false;
+                                }
+                            }
+                            status.addEventListener('change', syncGroundingKnowledge);
+                            syncGroundingKnowledge();
+                        })();
+                    </script>
                 </div>
             </div>
     </template>

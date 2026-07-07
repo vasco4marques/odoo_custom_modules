@@ -63,8 +63,8 @@
                             <field name="document_format"/>
                             <field name="template_id"/>
                             <field name="version"/>
-                            <field name="dsl_knowledge"
-                                   help="Only published documents can be marked."/>
+                <field name="dsl_knowledge"
+                                   help="Only published text-like documents can be marked."/>
                         </group>
                         <group>
                             <field name="project_id"/>
@@ -131,7 +131,7 @@
                 <field name="document_type_id"/>
                 <field name="dsl_id"/>
                 <field name="language"/>
-                <filter name="dsl_knowledge" string="DSL Knowledge"
+                <filter name="dsl_knowledge" string="Grounding Knowledge"
                         domain="[('dsl_knowledge', '=', True)]"/>
                 <filter name="draft" string="Draft"
                         domain="[('status', '=', 'draft')]"/>
@@ -157,7 +157,7 @@
                             context="{'group_by': 'project_id'}"/>
                     <filter name="group_org" string="Organization"
                             context="{'group_by': 'organization_id'}"/>
-                    <filter name="group_dsl" string="DSL Knowledge"
+                    <filter name="group_dsl" string="Grounding Knowledge"
                             context="{'group_by': 'dsl_knowledge'}"/>
                 </group>
             </search>

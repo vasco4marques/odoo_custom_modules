@@ -7,13 +7,14 @@ class ItlingoDocumentType(models.Model):
     _order = 'name'
 
     type_code = fields.Selection([
-        ('rsl', 'RSL'),
-        ('psl', 'PSL'),
-        ('tsl', 'TSL'),
-        ('report', 'Report'),
         ('specification', 'Specification'),
-        ('manual', 'Manual'),
-        ('template', 'Template'),
+        ('specification_template', 'Specification Template'),
+        ('specification_library', 'Specification Library'),
+        ('document_template', 'Document Template'),
+        ('technical_document', 'Technical Document'),
+        ('dataset', 'Dataset'),
+        ('tutorial', 'Tutorial'),
+        ('prompt_template', 'Prompt Template'),
         ('other', 'Other'),
     ], required=True, default='other')
     subtype = fields.Char()

@@ -6,7 +6,7 @@
               inherit_id="itlingo_documents.portal_document_detail_inner"
               name="Generate Template Button">
         <xpath expr="//div[hasclass('flex-wrap')]" position="inside">
-            <a t-if="document.is_template and (document.file_name or '').lower().endswith(('.docx', '.xlsx')) and document.document_file"
+            <a t-if="document.is_template and document.dsl_id and (document.file_name or '').lower().endswith(('.docx', '.xlsx')) and document.document_file"
                t-attf-href="#{doc_base_url}/#{document.id}/generate"
                class="btn btn-success">
                 <i class="fa fa-cogs"/> Generate from template

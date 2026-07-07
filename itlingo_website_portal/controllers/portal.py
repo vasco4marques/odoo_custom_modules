@@ -2,7 +2,7 @@ import base64
 from urllib.parse import urlencode
 
 from odoo import _, http
-from odoo.exceptions import AccessError, MissingError, UserError
+from odoo.exceptions import AccessError, MissingError, UserError, ValidationError
 from odoo.http import request, route, content_disposition
 from odoo.addons.portal.controllers.portal import CustomerPortal, pager
 
@@ -725,14 +725,14 @@ class ITLingoPortal(CustomerPortal):
         )
 
     def _template_type_id(self):
-        """Id of the 'Template' document type, or False when unavailable."""
+        """Id of the 'Document Template' type, or False when unavailable."""
         t = request.env.ref(
             'itlingo_documents.doc_type_template', raise_if_not_found=False,
         )
         return t.id if t else False
 
     def _apply_template_vals(self, vals, post):
-        """Set the template output pattern when the chosen type is 'Template'."""
+        """Set the output pattern when the chosen type is 'Document Template'."""
         Doc = request.env['itlingo.document']
         if 'output_filename_pattern' not in Doc._fields:
             return
@@ -996,7 +996,7 @@ class ITLingoPortal(CustomerPortal):
             elif dsl_knowledge and final_status != 'published':
                 values['error']['dsl_knowledge'] = _(
                     'A document must be published before it can be marked as '
-                    'DSL knowledge.',
+                    'grounding knowledge.',
                 )
             else:
                 write_vals = {
@@ -1017,10 +1017,10 @@ class ITLingoPortal(CustomerPortal):
                     write_vals['document_file'] = base64.b64encode(upload.read())
                 try:
                     document.sudo().write(write_vals)
-                except UserError as err:
+                except (UserError, ValidationError) as err:
                     values['error']['_form'] = str(err)
                 else:
-                    return request.redirect(f'{doc_base_url}/{document.id}')
+                    return request.redirect(f'{doc_base_url}/{document.id}?message=saved')
         return request.render('itlingo_documents.portal_document_edit', values)
 
     @route(
@@ -1208,6 +1208,8 @@ class ITLingoPortal(CustomerPortal):
             'document': document,
             'doc_base_url': f'/my/organizations/{org_id}/documents',
             'can_edit_document': user_role.role in self._DOC_EDIT_ORG_ROLES,
+            'doc_message': request.params.get('message'),
+            'doc_error': request.params.get('error'),
             'organization': org,
             'user_role': user_role,
             'organization_hub': True,
@@ -2021,7 +2023,8 @@ class ITLingoPortal(CustomerPortal):
             'members': Role.browse(),
             **self._portal_workspace_hub_common(project, 'documentation', public_hub=True),
             **self._portal_documents_list_ctx(
-                [('project_id', '=', project_id)], request.params,
+                [('project_id', '=', project_id), ('status', '=', 'published')],
+                request.params,
                 page_url=base_url, page=page),
             'sort_base_url': base_url,
         })
@@ -2067,6 +2070,7 @@ class ITLingoPortal(CustomerPortal):
             not doc.exists()
             or not doc.project_id
             or doc.project_id.id != project_id
+            or doc.status != 'published'
         ):
             return None, None
         return project, doc
@@ -2442,6 +2446,8 @@ class ITLingoPortal(CustomerPortal):
 
         Document = request.env['itlingo.document'].sudo()
         doc_dom = [('project_id', '=', project.id)]
+        if public_hub:
+            doc_dom.append(('status', '=', 'published'))
         doc_type_rows = [
             {
                 'label': doc_type.name if doc_type else 'No type',
@@ -2981,6 +2987,8 @@ class ITLingoPortal(CustomerPortal):
             'document': document,
             'doc_base_url': f'/my/workspaces/{project_id}/documents',
             'can_edit_document': user_role.role in self._DOC_EDIT_WS_ROLES,
+            'doc_message': request.params.get('message'),
+            'doc_error': request.params.get('error'),
             'project': project,
             'user_role': user_role,
             'page_name': 'workspace_document_detail',

@@ -1,7 +1,7 @@
 from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
 
-TEMPLATE_TYPE_CODE = "template"
+TEMPLATE_TYPE_CODE = "document_template"
 
 
 class ItlingoDocument(models.Model):
@@ -12,8 +12,8 @@ class ItlingoDocument(models.Model):
         compute="_compute_is_template",
         store=True,
         help="Derived from the document type: a document is a template when its "
-             "type is 'Template'. Templates are excluded from the knowledge pool "
-             "and cannot be sent to ITOI.",
+             "type is 'Document Template'. Templates are excluded from the "
+             "knowledge pool and cannot be sent to ITOI.",
     )
     output_filename_pattern = fields.Char(
         string="Output Filename Pattern",
@@ -38,7 +38,7 @@ class ItlingoDocument(models.Model):
                 ))
 
     def _vals_make_template(self, vals):
-        """True when *vals* set a document type whose code is 'template'."""
+        """True when *vals* set a document type whose code is 'document_template'."""
         dt_id = vals.get("document_type_id")
         if not dt_id:
             return False
