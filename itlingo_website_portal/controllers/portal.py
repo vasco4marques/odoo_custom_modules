@@ -866,9 +866,21 @@ class ITLingoPortal(CustomerPortal):
         }
 
     # Roles allowed to add / edit / delete documents in each scope. Plain
-    # members (and users with no role) can only view and download.
+    # members can only view and download published documents.
     _DOC_EDIT_WS_ROLES = ('ws_manager', 'doc_manager')
     _DOC_EDIT_ORG_ROLES = ('org_manager', 'doc_manager')
+
+    def _portal_org_document_domain(self, org_id, user_role):
+        domain = [('organization_id', '=', org_id)]
+        if user_role.role not in self._DOC_EDIT_ORG_ROLES:
+            domain.append(('status', '=', 'published'))
+        return domain
+
+    def _portal_ws_document_domain(self, project_id, user_role):
+        domain = [('project_id', '=', project_id)]
+        if user_role.role not in self._DOC_EDIT_WS_ROLES:
+            domain.append(('status', '=', 'published'))
+        return domain
 
     def _portal_document_form_meta(self):
         """Dropdown data for the shared Language / DSL form fields."""
@@ -902,7 +914,14 @@ class ITLingoPortal(CustomerPortal):
         """
         project, user_role = self._portal_ws_access(project_id)
         doc = request.env['itlingo.document'].sudo().browse(document_id)
-        if not doc.exists() or doc.project_id.id != project_id:
+        if (
+            not doc.exists()
+            or doc.project_id.id != project_id
+            or (
+                user_role.role not in self._DOC_EDIT_WS_ROLES
+                and doc.status != 'published'
+            )
+        ):
             return project, user_role, None
         return project, user_role, doc
 
@@ -910,7 +929,14 @@ class ITLingoPortal(CustomerPortal):
         """Return (organization, user_role, document) for an org document."""
         org, user_role = self._portal_org_access(org_id)
         doc = request.env['itlingo.document'].sudo().browse(document_id)
-        if not doc.exists() or doc.organization_id.id != org_id:
+        if (
+            not doc.exists()
+            or doc.organization_id.id != org_id
+            or (
+                user_role.role not in self._DOC_EDIT_ORG_ROLES
+                and doc.status != 'published'
+            )
+        ):
             return org, user_role, None
         return org, user_role, doc
 
@@ -1173,7 +1199,7 @@ class ITLingoPortal(CustomerPortal):
         base_url = f'/my/organizations/{org_id}/documents'
         values = self._prepare_portal_layout_values()
         values.update(self._portal_documents_list_ctx(
-            [('organization_id', '=', org_id)], request.params,
+            self._portal_org_document_domain(org_id, user_role), request.params,
             page_url=base_url, page=page,
         ))
         values.update({
@@ -1698,7 +1724,7 @@ class ITLingoPortal(CustomerPortal):
         # Documents: total + breakdown by type and by DSL, linked to the
         # documents list with the matching filter preset.
         Document = request.env['itlingo.document'].sudo()
-        doc_dom = [('organization_id', '=', org_id)]
+        doc_dom = self._portal_org_document_domain(org_id, user_role)
         doc_total = Document.search_count(doc_dom)
         doc_type_rows = [
             {
@@ -2438,7 +2464,8 @@ class ITLingoPortal(CustomerPortal):
             ('state', '=', 'accepted'),
         ])
 
-    def _portal_ws_stats_cards(self, project, hub_prefix, public_hub=False):
+    def _portal_ws_stats_cards(self, project, hub_prefix, public_hub=False,
+                               published_only=False):
         """Grouped indicator cards for the workspace home (same design as the
         organization dashboard, C.3 / D.2 (c))."""
         palette = self._STATS_PALETTE
@@ -2446,7 +2473,7 @@ class ITLingoPortal(CustomerPortal):
 
         Document = request.env['itlingo.document'].sudo()
         doc_dom = [('project_id', '=', project.id)]
-        if public_hub:
+        if public_hub or published_only:
             doc_dom.append(('status', '=', 'published'))
         doc_type_rows = [
             {
@@ -2527,7 +2554,8 @@ class ITLingoPortal(CustomerPortal):
             'page_name': 'workspace_detail',
             'members': self._portal_workspace_hub_members(project_id),
             'stats_cards': self._portal_ws_stats_cards(
-                project, f'/my/workspaces/{project_id}'),
+                project, f'/my/workspaces/{project_id}',
+                published_only=user_role.role not in self._DOC_EDIT_WS_ROLES),
             **self._portal_workspace_hub_common(project, 'home', public_hub=False),
         })
         return request.render('itlingo_website_portal.portal_workspace_detail', values)
@@ -2893,7 +2921,7 @@ class ITLingoPortal(CustomerPortal):
             'members': self._portal_workspace_hub_members(project_id),
             **self._portal_workspace_hub_common(project, 'documentation', public_hub=False),
             **self._portal_documents_list_ctx(
-                [('project_id', '=', project_id)], params,
+                self._portal_ws_document_domain(project_id, user_role), params,
                 page_url=base_url, page=page),
             'sort_base_url': base_url,
         })
