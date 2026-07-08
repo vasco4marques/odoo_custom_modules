@@ -1082,8 +1082,8 @@ var require_semaphore = __commonJS({
         this._waiting = [];
       }
       lock(thunk) {
-        return new Promise((resolve, reject2) => {
-          this._waiting.push({ thunk, resolve, reject: reject2 });
+        return new Promise((resolve2, reject2) => {
+          this._waiting.push({ thunk, resolve: resolve2, reject: reject2 });
           this.runNext();
         });
       }
@@ -2573,9 +2573,9 @@ ${JSON.stringify(message, null, 4)}`);
           if (typeof cancellationStrategy.sender.enableCancellation === "function") {
             cancellationStrategy.sender.enableCancellation(requestMessage);
           }
-          return new Promise(async (resolve, reject2) => {
+          return new Promise(async (resolve2, reject2) => {
             const resolveWithCleanup = (r) => {
-              resolve(r);
+              resolve2(r);
               cancellationStrategy.sender.cleanup(id);
               disposable?.dispose();
             };
@@ -2986,10 +2986,10 @@ var require_ril = __commonJS({
         return api_1.Disposable.create(() => this.stream.off("end", listener));
       }
       write(data, encoding) {
-        return new Promise((resolve, reject2) => {
+        return new Promise((resolve2, reject2) => {
           const callback = (error) => {
             if (error === void 0 || error === null) {
-              resolve();
+              resolve2();
             } else {
               reject2(error);
             }
@@ -3241,10 +3241,10 @@ var require_main = __commonJS({
     exports2.generateRandomPipeName = generateRandomPipeName;
     function createClientPipeTransport(pipeName, encoding = "utf-8") {
       let connectResolve;
-      const connected = new Promise((resolve, _reject) => {
-        connectResolve = resolve;
+      const connected = new Promise((resolve2, _reject) => {
+        connectResolve = resolve2;
       });
-      return new Promise((resolve, reject2) => {
+      return new Promise((resolve2, reject2) => {
         let server = (0, net_1.createServer)((socket) => {
           server.close();
           connectResolve([
@@ -3255,7 +3255,7 @@ var require_main = __commonJS({
         server.on("error", reject2);
         server.listen(pipeName, () => {
           server.removeListener("error", reject2);
-          resolve({
+          resolve2({
             onConnected: () => {
               return connected;
             }
@@ -3274,10 +3274,10 @@ var require_main = __commonJS({
     exports2.createServerPipeTransport = createServerPipeTransport;
     function createClientSocketTransport(port, encoding = "utf-8") {
       let connectResolve;
-      const connected = new Promise((resolve, _reject) => {
-        connectResolve = resolve;
+      const connected = new Promise((resolve2, _reject) => {
+        connectResolve = resolve2;
       });
-      return new Promise((resolve, reject2) => {
+      return new Promise((resolve2, reject2) => {
         const server = (0, net_1.createServer)((socket) => {
           server.close();
           connectResolve([
@@ -3288,7 +3288,7 @@ var require_main = __commonJS({
         server.on("error", reject2);
         server.listen(port, "127.0.0.1", () => {
           server.removeListener("error", reject2);
-          resolve({
+          resolve2({
             onConnected: () => {
               return connected;
             }
@@ -8074,8 +8074,8 @@ var require_server = __commonJS({
         if (value instanceof Promise) {
           return value;
         } else if (Is2.thenable(value)) {
-          return new Promise((resolve, reject2) => {
-            value.then((resolved) => resolve(resolved), (error) => reject2(error));
+          return new Promise((resolve2, reject2) => {
+            value.then((resolved) => resolve2(resolved), (error) => reject2(error));
           });
         } else {
           return Promise.resolve(value);
@@ -8345,7 +8345,7 @@ var require_files = __commonJS({
     function isWindows() {
       return process.platform === "win32";
     }
-    function resolve(moduleName, nodePath, cwd, tracer) {
+    function resolve2(moduleName, nodePath, cwd, tracer) {
       const nodePathKey = "NODE_PATH";
       const app = [
         "var p = process;",
@@ -8364,7 +8364,7 @@ var require_files = __commonJS({
         "}",
         "});"
       ].join("");
-      return new Promise((resolve2, reject2) => {
+      return new Promise((resolve3, reject2) => {
         let env = process.env;
         let newEnv = /* @__PURE__ */ Object.create(null);
         Object.keys(env).forEach((key) => newEnv[key] = env[key]);
@@ -8396,7 +8396,7 @@ var require_files = __commonJS({
             if (message2.c === "r") {
               cp.send({ c: "e" });
               if (message2.s) {
-                resolve2(message2.r);
+                resolve3(message2.r);
               } else {
                 reject2(new Error(`Failed to resolve module: ${moduleName}`));
               }
@@ -8412,7 +8412,7 @@ var require_files = __commonJS({
         }
       });
     }
-    exports2.resolve = resolve;
+    exports2.resolve = resolve2;
     function resolveGlobalNodePath(tracer) {
       let npmCommand = "npm";
       const env = /* @__PURE__ */ Object.create(null);
@@ -8527,17 +8527,17 @@ var require_files = __commonJS({
         if (!path.isAbsolute(nodePath)) {
           nodePath = path.join(workspaceRoot, nodePath);
         }
-        return resolve(moduleName, nodePath, nodePath, tracer).then((value) => {
+        return resolve2(moduleName, nodePath, nodePath, tracer).then((value) => {
           if (FileSystem.isParent(nodePath, value)) {
             return value;
           } else {
             return Promise.reject(new Error(`Failed to load ${moduleName} from node path location.`));
           }
         }).then(void 0, (_error) => {
-          return resolve(moduleName, resolveGlobalNodePath(tracer), workspaceRoot, tracer);
+          return resolve2(moduleName, resolveGlobalNodePath(tracer), workspaceRoot, tracer);
         });
       } else {
-        return resolve(moduleName, resolveGlobalNodePath(tracer), workspaceRoot, tracer);
+        return resolve2(moduleName, resolveGlobalNodePath(tracer), workspaceRoot, tracer);
       }
     }
     exports2.resolveModulePath = resolveModulePath;
@@ -8880,6 +8880,7 @@ ${stack}`);
 
 // src/parser.mjs
 import { readFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
 
 // node_modules/langium/lib/index.js
 var lib_exports = {};
@@ -24122,11 +24123,11 @@ __reExport(cancellation_exports, __toESM(require_cancellation(), 1));
 
 // node_modules/langium/lib/utils/promise-utils.js
 function delayNextTick() {
-  return new Promise((resolve) => {
+  return new Promise((resolve2) => {
     if (typeof setImmediate === "undefined") {
-      setTimeout(resolve, 0);
+      setTimeout(resolve2, 0);
     } else {
-      setImmediate(resolve);
+      setImmediate(resolve2);
     }
   });
 }
@@ -24159,9 +24160,9 @@ async function interruptAndCheck(token) {
 }
 var Deferred = class {
   constructor() {
-    this.promise = new Promise((resolve, reject2) => {
+    this.promise = new Promise((resolve2, reject2) => {
       this.resolve = (arg) => {
-        resolve(arg);
+        resolve2(arg);
         return this;
       };
       this.reject = (err) => {
@@ -26805,15 +26806,15 @@ var DefaultDocumentBuilder = class {
     } else if (cancelToken.isCancellationRequested) {
       return Promise.reject(OperationCancelled);
     }
-    return new Promise((resolve, reject2) => {
+    return new Promise((resolve2, reject2) => {
       const buildDisposable = this.onBuildPhase(state, () => {
         buildDisposable.dispose();
         cancelDisposable.dispose();
         if (uri) {
           const document = this.langiumDocuments.getDocument(uri);
-          resolve(document === null || document === void 0 ? void 0 : document.uri);
+          resolve2(document === null || document === void 0 ? void 0 : document.uri);
         } else {
-          resolve(void 0);
+          resolve2(void 0);
         }
       });
       const cancelDisposable = cancelToken.onCancellationRequested(() => {
@@ -31140,13 +31141,13 @@ var LangiumGrammarCompletionProvider = class extends DefaultCompletionProvider {
   getAllFiles(document) {
     const documents = this.documents().all;
     const uri = document.uri.toString();
-    const dirname = UriUtils.dirname(document.uri).toString();
+    const dirname2 = UriUtils.dirname(document.uri).toString();
     const paths = [];
     for (const doc of documents) {
       if (!UriUtils.equals(doc.uri, uri)) {
         const docUri = doc.uri.toString();
         const uriWithoutExt = docUri.substring(0, docUri.length - UriUtils.extname(doc.uri).length);
-        let relativePath = UriUtils.relative(dirname, uriWithoutExt);
+        let relativePath = UriUtils.relative(dirname2, uriWithoutExt);
         if (!relativePath.startsWith(".")) {
           relativePath = `./${relativePath}`;
         }
@@ -36856,6 +36857,25 @@ function getRelativeImport(source, target) {
 }
 
 // src/parser.mjs
+function loadGrammar(grammarPath, seen = /* @__PURE__ */ new Set()) {
+  const absolutePath = resolve(grammarPath);
+  if (seen.has(absolutePath)) {
+    throw new Error(`Circular grammar import: ${absolutePath}`);
+  }
+  seen.add(absolutePath);
+  const baseDir = dirname(absolutePath);
+  const grammar = readFileSync(absolutePath, "utf-8");
+  const imports = [];
+  const grammarWithoutImports = grammar.replace(
+    /^(\s*)import\s+['"]([^'"]+)['"]\s*;?\s*$/gm,
+    (_match, _indent, importedPath) => {
+      const fileName = importedPath.endsWith(".langium") ? importedPath : `${importedPath}.langium`;
+      imports.push(loadGrammar(resolve(baseDir, fileName), seen));
+      return "";
+    }
+  );
+  return [grammarWithoutImports, ...imports].join("\n");
+}
 function serializeValue(value, seen) {
   if (value && typeof value === "object" && typeof value.$refText === "string") {
     return { $ref: value.$refText };
@@ -36912,39 +36932,42 @@ function emit(result) {
   process.stdout.write(JSON.stringify(result));
 }
 async function main() {
-  const [grammarPath, rslPath] = process.argv.slice(2);
-  if (!grammarPath || !rslPath) {
-    emit({ success: false, error: "Usage: parser.mjs <grammarPath> <rslPath>", diagnostics: [] });
+  const [grammarPath, sourcePath, labelArg, validationModeArg] = process.argv.slice(2);
+  const label = labelArg || "DSL specification";
+  const validationMode = validationModeArg || "all";
+  if (!grammarPath || !sourcePath) {
+    emit({ success: false, error: "Usage: parser.mjs <grammarPath> <sourcePath> [label] [validationMode]", diagnostics: [] });
     process.exit(2);
     return;
   }
   let grammar;
   let dslText;
   try {
-    grammar = readFileSync(grammarPath, "utf-8");
-    dslText = readFileSync(rslPath, "utf-8");
+    grammar = loadGrammar(grammarPath);
+    dslText = readFileSync(sourcePath, "utf-8");
   } catch (err) {
     emit({ success: false, error: `Cannot read input files: ${String(err)}`, diagnostics: [] });
     process.exit(1);
     return;
   }
   if (!dslText.trim()) {
-    emit({ success: false, error: "Empty RSL specification", diagnostics: [] });
+    emit({ success: false, error: `Empty ${label}`, diagnostics: [] });
     process.exit(1);
     return;
   }
   try {
     const services = await createServicesForGrammar({ grammar });
-    const fileExtension = String(services.LanguageMetaData?.fileExtensions?.[0] || "rsl");
+    const fileExtension = String(services.LanguageMetaData?.fileExtensions?.[0] || "dsl").replace(/^\./, "");
     const factory = services.shared.workspace.LangiumDocumentFactory;
     const document = factory.fromString(dslText, URI2.parse(`memory:///input.${fileExtension}`));
-    await services.shared.workspace.DocumentBuilder.build([document], { validation: true });
-    const diagnostics = (document.diagnostics || []).map((d) => ({
+    const validateSemantics = validationMode !== "syntax";
+    await services.shared.workspace.DocumentBuilder.build([document], { validation: validateSemantics });
+    const diagnostics = validateSemantics ? (document.diagnostics || []).map((d) => ({
       severity: d.severity,
       message: d.message,
       line: d.range?.start?.line ?? null,
       column: d.range?.start?.character ?? null
-    }));
+    })) : [];
     const parserErrors = (document.parseResult?.parserErrors || []).map((e) => ({
       severity: 1,
       message: e.message,
@@ -36960,7 +36983,7 @@ async function main() {
     const allDiagnostics = [...parserErrors, ...lexerErrors, ...diagnostics];
     const hasError = parserErrors.length > 0 || lexerErrors.length > 0 || allDiagnostics.some((d) => d.severity === 1);
     if (hasError) {
-      emit({ success: false, error: "RSL specification has errors", diagnostics: allDiagnostics });
+      emit({ success: false, error: `${label} has errors`, diagnostics: allDiagnostics });
       process.exit(1);
       return;
     }

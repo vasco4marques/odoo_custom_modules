@@ -6,7 +6,7 @@
               inherit_id="itlingo_documents.portal_document_detail_inner"
               name="Generate Template Button">
         <xpath expr="//div[hasclass('flex-wrap')]" position="inside">
-            <a t-if="document.is_template and document.dsl_id and (document.file_name or '').lower().endswith(('.docx', '.xlsx')) and document.document_file"
+            <a t-if="document.is_template and document.dsl_id and ((document.dsl_id.acronym or '').upper() in ('RSL', 'ASL')) and (document.file_name or '').lower().endswith(('.docx', '.xlsx')) and document.document_file"
                t-attf-href="#{doc_base_url}/#{document.id}/generate"
                class="btn btn-success">
                 <i class="fa fa-cogs"/> Generate from template
@@ -14,7 +14,7 @@
         </xpath>
     </template>
 
-    <!-- RSL upload + generate form -->
+    <!-- DSL upload + generate form -->
     <template id="portal_generate_form" name="Generate from Template">
         <t t-call="portal.portal_layout">
             <div class="card mt-3">
@@ -32,17 +32,23 @@
                         </ul>
                     </div>
                     <p class="text-muted">
-                        Upload an <code>.rsl</code> specification. The template is
-                        filled with its contents and the generated DOCX/XLSX is
-                        downloaded.
+                        Upload a <t t-out="source_label or 'DSL specification'"/> file.
+                        The template is filled with its contents and the generated
+                        DOCX/XLSX is downloaded.
                     </p>
                     <form t-attf-action="#{doc_base_url}/#{document.id}/generate"
                           method="post" enctype="multipart/form-data">
                         <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                         <div class="mb-3">
-                            <label class="form-label" for="rsl_file">RSL specification</label>
-                            <input type="file" class="form-control" id="rsl_file"
-                                   name="rsl_file" accept=".rsl" required="required"/>
+                            <label class="form-label" for="source_file">
+                                <t t-out="source_label or 'Specification file'"/>
+                            </label>
+                            <input type="file" class="form-control" id="source_file"
+                                   name="source_file" t-att-accept="source_accept"
+                                   required="required"/>
+                            <div t-if="source_extensions" class="form-text">
+                                Accepted: <t t-out="', '.join(source_extensions)"/>
+                            </div>
                         </div>
                         <div class="d-flex gap-2">
                             <button type="submit" class="btn btn-success">

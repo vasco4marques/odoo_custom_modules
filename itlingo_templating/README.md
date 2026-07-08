@@ -1,28 +1,30 @@
 # ITLingo Templating
 
-Generate DOCX documents from an RSL specification and a template.
+Generate DOCX/XLSX documents from an RSL or ASL specification and a template.
 
 ## Flow
 
 ```
-template .docx (itlingo.document, type = Template)
-  + uploaded .rsl
+template .docx/.xlsx (itlingo.document, type = Document Template, DSL = RSL/ASL)
+  + uploaded .rsl/.asl
   -> embedded Langium parser (local node subprocess) -> JSON AST
   -> canonical model (faithful + id/title/kind)
-  -> docxtpl (Jinja2) render
-  -> DOCX download
+  -> docxtpl/openpyxl (Jinja2) render
+  -> DOCX/XLSX download
 ```
 
 ## Usage
 
-Set an `itlingo.document`'s **Document Type** to **Template** and give it a
-`.docx` file. `is_template` is derived from that type. An optional output
-filename pattern appears for template documents in the create/edit forms.
+Set an `itlingo.document`'s **Document Type** to **Document Template**, associate
+it with the `RSL` or `ASL` DSL, and give it a `.docx` or `.xlsx` file.
+`is_template` is derived from that type. An optional output filename pattern
+appears for template documents in the create/edit forms.
 
 On its scoped portal page (`/my/workspaces/<id>/documents/<doc_id>` or
 `/my/organizations/<id>/documents/<doc_id>`), a green **Generate Template**
-button opens an upload form; submitting an `.rsl` streams the generated DOCX.
-Nothing is stored. Any user who can read the template can generate.
+button opens an upload form; submitting a matching specification file streams
+the generated document. Nothing is stored. Any user who can read the template
+can generate.
 
 Templates are excluded from the knowledge pool and the ITOI send list.
 
@@ -40,6 +42,13 @@ Context keys: `project`, `stakeholders`, `actors`, `goals`,
 `functional_requirements`, `quality_requirements`, `constraints`,
 `user_stories`, `use_cases`, `glossary`, `data_entities`, `other`, `by_id`,
 `schema_version`. Every element has `id`, `title`, `kind` plus its RSL fields.
+
+ASL templates get: `system`, `actors`, `use_cases`, `data_entities`,
+`data_entity_clusters`, `data_enumerations`, `data_attributes`, `ui_containers`,
+`ui_components`, `ui_component_parts`, `ui_actions`, `ui_events`, `ui_ports`,
+`ui_parameters`, `contexts`, `context_devices`, `context_sensors`, `views`,
+`themes`, `system_concepts`, `other`, `by_id`, `schema_version`. Every element
+has `id`, `title`, `kind` plus its ASL fields.
 
 References resolve to the target element, so navigate them directly:
 
@@ -69,11 +78,17 @@ Optional system parameters (Settings > Technical > System Parameters):
 
 ## Rebuilding the parser bundle (local only)
 
-Only when bumping the grammar or Langium version:
+Only when bumping a grammar or Langium version:
 
 ```
-cp ../../../../rsl.langium parser/rsl.langium   # refresh the pinned grammar
+cp "../../../languium dsls/rsl.langium" parser/rsl.langium
+cp ../../../itlingoitoi/plugins/asl-langium/src/language-server/asl.langium parser/asl.langium
+cp ../../../itlingoitoi/plugins/asl-langium/src/language-server/Terminals.langium parser/Terminals.langium
 cd parser
 npm install
 npm run build                                   # -> dist/parser.mjs (commit it)
 ```
+
+RSL uses full Langium validation. ASL uses syntax validation in this lightweight
+runtime parser because the ITOI ASL extension has custom scope/linking services
+that are not loaded by `createServicesForGrammar`.

@@ -9,7 +9,13 @@ from odoo.http import content_disposition, request
 from odoo.addons.itlingo_templating.services import (
     canonical_model, docx_renderer, rendering, xlsx_renderer,
 )
-from odoo.addons.itlingo_templating.services.rsl_parser import RslParseError, parse_rsl
+from odoo.addons.itlingo_templating.services.dsl_parser import (
+    DslParseError,
+    default_dsl_extension,
+    dsl_label,
+    is_supported_dsl,
+    parse_dsl,
+)
 
 _logger = logging.getLogger(__name__)
 
@@ -24,6 +30,18 @@ _FORMATS = {
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
     ),
 }
+
+
+def _split_extensions(value):
+    extensions = []
+    for raw in (value or "").split(","):
+        ext = raw.strip().lower()
+        if not ext:
+            continue
+        if not ext.startswith("."):
+            ext = "." + ext
+        extensions.append(ext)
+    return extensions
 
 
 class ItlingoTemplatingPortal(http.Controller):
@@ -47,6 +65,22 @@ class ItlingoTemplatingPortal(http.Controller):
         """Return 'docx'/'xlsx' for a supported template file, else None."""
         ext = os.path.splitext(document.file_name or "")[1].lower().lstrip(".")
         return ext if ext in _FORMATS else None
+
+    @staticmethod
+    def _dsl_key(document):
+        return (document.dsl_id.acronym or "").strip().upper() if document.dsl_id else ""
+
+    @staticmethod
+    def _source_extensions(document, dsl_key):
+        return _split_extensions(document.dsl_id.file_extensions) or [
+            default_dsl_extension(dsl_key),
+        ]
+
+    @staticmethod
+    def _build_context(dsl_key, ast):
+        if dsl_key == "ASL":
+            return canonical_model.build_asl_canonical_model(ast)
+        return canonical_model.build_canonical_model(ast)
 
     @http.route(
         "/my/workspaces/<int:project_id>/documents/<int:document_id>/generate",
@@ -82,6 +116,10 @@ class ItlingoTemplatingPortal(http.Controller):
             "error": None,
             "diagnostics": None,
             "page_name": "document_generate",
+            "dsl_key": None,
+            "source_label": _("Specification file"),
+            "source_accept": "",
+            "source_extensions": [],
         }
 
         fmt = self._template_format(document)
@@ -91,27 +129,57 @@ class ItlingoTemplatingPortal(http.Controller):
             )
             return request.render("itlingo_templating.portal_generate_form", values)
 
+        dsl_key = self._dsl_key(document)
+        if not document.dsl_id:
+            values["error"] = _("This template is not associated with a DSL.")
+            return request.render("itlingo_templating.portal_generate_form", values)
+        if not is_supported_dsl(dsl_key):
+            values["error"] = _(
+                "Generation is currently available only for RSL and ASL templates."
+            )
+            return request.render("itlingo_templating.portal_generate_form", values)
+
+        source_extensions = self._source_extensions(document, dsl_key)
+        values.update({
+            "dsl_key": dsl_key,
+            "source_label": dsl_label(dsl_key),
+            "source_accept": ",".join(source_extensions),
+            "source_extensions": source_extensions,
+        })
+
         if request.httprequest.method != "POST":
             return request.render("itlingo_templating.portal_generate_form", values)
 
-        upload = request.httprequest.files.get("rsl_file")
+        upload = (
+            request.httprequest.files.get("source_file")
+            or request.httprequest.files.get("rsl_file")
+        )
         if not upload or not upload.filename:
-            values["error"] = _("Please upload an .rsl specification file.")
+            values["error"] = _("Please upload a %s file.") % dsl_label(dsl_key)
+            return request.render("itlingo_templating.portal_generate_form", values)
+        filename_lower = upload.filename.lower()
+        if source_extensions and not any(
+            filename_lower.endswith(ext) for ext in source_extensions
+        ):
+            values["error"] = _("Please upload a %s file (%s).") % (
+                dsl_label(dsl_key),
+                ", ".join(source_extensions),
+            )
             return request.render("itlingo_templating.portal_generate_form", values)
 
-        rsl_bytes = upload.read()
+        source_bytes = upload.read()
         try:
-            ast = parse_rsl(request.env, rsl_bytes)
-        except RslParseError as err:
+            ast = parse_dsl(request.env, dsl_key, source_bytes)
+        except DslParseError as err:
             values["error"] = str(err)
             values["diagnostics"] = err.diagnostics
             return request.render("itlingo_templating.portal_generate_form", values)
         except RuntimeError as err:
-            _logger.exception("RSL parsing failed for document %s", document.id)
+            _logger.exception("%s parsing failed for document %s", dsl_key, document.id)
             values["error"] = str(err)
             return request.render("itlingo_templating.portal_generate_form", values)
 
-        context = canonical_model.build_canonical_model(ast)
+        context = self._build_context(dsl_key, ast)
 
         renderer, mime = _FORMATS[fmt]
         try:
