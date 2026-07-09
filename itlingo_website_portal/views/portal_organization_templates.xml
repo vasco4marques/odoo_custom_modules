@@ -787,8 +787,9 @@
             </p>
             <p class="text-muted small">
                 Each model uses one credential: choose <strong>API key</strong> for
-                hosted providers or <strong>Base URL</strong> for self-hosted
-                endpoints.
+                hosted providers, <strong>Base URL</strong> for self-hosted
+                endpoints, or <strong>IAEdu</strong> for models that need
+                both an API key and a Base URL.
             </p>
             <div t-if="llm_error" class="alert alert-danger" role="alert">
                 <t t-out="llm_error"/>
@@ -831,23 +832,24 @@
                             <div class="col-md-3">
                                 <label class="form-label small">Model value / id</label>
                                 <input type="text" class="form-control form-control-sm" name="model_value"
-                                       t-att-value="option.value" required=""/>
+                                       t-att-value="option.value" required="" placeholder="e.g. openai/gpt-4o"/>
                             </div>
                             <div class="col-md-2">
                                 <label class="form-label small">Credential</label>
                                 <select class="form-select form-select-sm credential-mode" name="credential_mode">
-                                    <option value="api" t-att-selected="not option.base_url_enabled">API key</option>
-                                    <option value="url" t-att-selected="option.base_url_enabled">Base URL</option>
+                                    <option value="api" t-att-selected="not option.base_url_enabled and option.model_mode != 'iaedu'">API key</option>
+                                    <option value="url" t-att-selected="option.base_url_enabled and option.model_mode != 'iaedu'">Base URL</option>
+                                    <option value="iaedu" t-att-selected="option.model_mode == 'iaedu'">IAEdu (API key + URL)</option>
                                 </select>
                             </div>
-                            <div class="col-md-4">
-                                <div class="cred-api">
+                            <div class="col-md-4 d-flex gap-2 align-items-start">
+                                <div class="cred-api flex-fill">
                                     <label class="form-label small">API key</label>
                                     <input type="password" class="form-control form-control-sm" name="api_key"
                                            placeholder="Leave blank to keep current"
                                            autocomplete="new-password"/>
                                 </div>
-                                <div class="cred-url">
+                                <div class="cred-url flex-fill">
                                     <label class="form-label small">Base URL</label>
                                     <input type="text" class="form-control form-control-sm" name="base_url"
                                            t-att-value="option.base_url or ''"
@@ -889,15 +891,16 @@
                             <select class="form-select form-select-sm credential-mode" name="credential_mode">
                                 <option value="api" selected="selected">API key</option>
                                 <option value="url">Base URL</option>
+                                <option value="iaedu">IAEdu</option>
                             </select>
                         </div>
-                        <div class="col-md-4">
-                            <div class="cred-api">
+                        <div class="col-md-4 d-flex gap-2 align-items-start">
+                            <div class="cred-api flex-fill">
                                 <label class="form-label small">API key</label>
                                 <input type="password" class="form-control form-control-sm" name="api_key"
                                        autocomplete="new-password"/>
                             </div>
-                            <div class="cred-url">
+                            <div class="cred-url flex-fill">
                                 <label class="form-label small">Base URL</label>
                                 <input type="text" class="form-control form-control-sm" name="base_url"
                                        autocomplete="off"/>
@@ -969,11 +972,18 @@
                     function syncCredMode(select) {
                         var form = select.closest('form');
                         if (!form) { return; }
-                        var isApi = select.value !== 'url';
+                        var mode = select.value;
+                        var isApi = mode === 'api';
+                        var isUrl = mode === 'url';
+                        var isIae = mode === 'iaedu';
                         var apiEl = form.querySelector('.cred-api');
                         var urlEl = form.querySelector('.cred-url');
-                        if (apiEl) { apiEl.style.display = isApi ? '' : 'none'; }
-                        if (urlEl) { urlEl.style.display = isApi ? 'none' : ''; }
+                        if (apiEl) { apiEl.style.display = (isApi || isIae) ? '' : 'none'; }
+                        if (urlEl) { urlEl.style.display = (isUrl || isIae) ? '' : 'none'; }
+                        var valInput = form.querySelector('input[name="model_value"]');
+                        if (valInput) {
+                            valInput.placeholder = isIae ? 'Channel ID' : 'e.g. openai/gpt-4o';
+                        }
                     }
                     function init() {
                         var selects = document.querySelectorAll('select.credential-mode');

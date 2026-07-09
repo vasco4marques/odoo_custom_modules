@@ -1477,15 +1477,21 @@ class ITLingoPortal(CustomerPortal):
         return org, user_role
 
     def _validate_org_model_credentials(self, mode, api_key, base_url, has_existing_key=False):
-        """Validate the single credential for an org model based on the chosen mode.
+        """Validate credentials for an org model based on the chosen mode.
 
-        A model is either an API-key model or a (self-hosted) Base-URL model; the
-        ``credential_mode`` selector decides which one. Returns an error message,
+        ``mode`` can be 'api' (API key only), 'url' (Base URL only), or
+        'iaedu' (both API key and Base URL).  Returns an error message,
         or None when valid.
         """
         if mode == 'url':
             if not (base_url or '').strip():
                 return _('A Base URL is required for a self-hosted model.')
+            return None
+        if mode == 'iaedu':
+            if not (api_key or '').strip() and not has_existing_key:
+                return _('An API key is required for an IAEdu model.')
+            if not (base_url or '').strip():
+                return _('A Base URL is required for an IAEdu model.')
             return None
         # API-key mode (default).
         if not (api_key or '').strip() and not has_existing_key:
@@ -1493,12 +1499,13 @@ class ITLingoPortal(CustomerPortal):
         return None
 
     def _org_option_credentials_vals(self, org_id, provider, label, mode, api_key='', base_url='', keep_key=False):
-        """Build the env-var fields for an org model option (API-key XOR Base-URL).
+        """Build the env-var fields for an org model option.
 
-        ``mode`` ('api' or 'url') selects which credential the model uses; the
-        other mode's fields are always cleared so switching modes can never leave
-        a stale credential behind. ``keep_key`` preserves the previously stored
-        API key on edit when the form left the key blank while staying in API mode.
+        ``mode`` ('api', 'url', or 'iaedu') selects which credentials the
+        model uses; fields for other modes are always cleared so switching
+        modes can never leave a stale credential behind.  ``keep_key``
+        preserves the previously stored API key on edit when the form left
+        the key blank while staying in API or IAEdu mode.
         Callers must validate with :meth:`_validate_org_model_credentials` first.
         """
         Option = request.env['itlingo.chatbot.settings.option'].sudo()
@@ -1510,6 +1517,16 @@ class ITLingoPortal(CustomerPortal):
                 'api_env_var': '',
                 'env_var_value': '',
             }
+        if mode == 'iaedu':
+            vals = {
+                'base_url_enabled': True,
+                'url_env_var': Option._build_env_var_name(org_id, provider.label, label, 'BASE_URL'),
+                'base_url': base_url,
+                'api_env_var': Option._build_env_var_name(org_id, provider.label, label, 'API_KEY'),
+            }
+            if not keep_key:
+                vals['env_var_value'] = api_key
+            return vals
         vals = {
             'base_url_enabled': False,
             'api_env_var': Option._build_env_var_name(org_id, provider.label, label, 'API_KEY'),
@@ -1621,6 +1638,7 @@ class ITLingoPortal(CustomerPortal):
             'organization_id': org_id,
             'label': label,
             'value': value,
+            'model_mode': mode if mode in ('remote', 'local', 'iaedu') else 'remote',
             'sequence': (len(provider.option_ids) + 1) * 10,
             **self._org_option_credentials_vals(org_id, provider, label, mode, api_key=api_key, base_url=base_url),
         }
@@ -1642,17 +1660,19 @@ class ITLingoPortal(CustomerPortal):
         mode = (post.get('credential_mode') or 'api').strip()
         api_key = (post.get('api_key') or '').strip()
         base_url = (post.get('base_url') or '').strip()
-        # Staying in API mode with a blank key keeps the previously stored key.
-        has_existing_key = (not option.base_url_enabled) and bool(option.env_var_value or option.api_key)
+        # Staying in API/IAEdu mode with a blank key keeps the previously stored key.
+        is_key_mode = mode in ('api', 'iaedu')
+        has_existing_key = is_key_mode and bool(option.env_var_value or option.api_key)
         error = self._validate_org_model_credentials(
             mode, api_key, base_url, has_existing_key=has_existing_key)
         if error:
             return self._render_org_llm(org_id, error=error)
 
-        keep_key = mode != 'url' and not api_key
+        keep_key = is_key_mode and not api_key
         vals = {
             'label': label,
             'value': value,
+            'model_mode': mode if mode in ('remote', 'local', 'iaedu') else 'remote',
             **self._org_option_credentials_vals(
                 org_id, provider, label, mode, api_key=api_key, base_url=base_url, keep_key=keep_key),
         }
