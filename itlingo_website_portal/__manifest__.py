@@ -1,6 +1,6 @@
 {
     'name': 'ITLingo Website & Portal',
-    'version': '19.0.1.7.0',
+    'version': '19.0.1.8.0',
     'category': 'Website',
     'summary': 'Public website and authenticated portal for ITLingo Cloud',
     'description': """
@@ -18,6 +18,7 @@ and workspaces.
     'data': [
         'views/website_menus.xml',
         'data/website_remove_defaults.xml',
+        'views/terms_and_conditions.xml',
         'views/portal_templates.xml',
         'views/portal_organization_templates.xml',
         'views/portal_create_templates.xml',

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        This is a standard, published Website page. Its initial content was
+        converted from ITLingoCloud-User-Terms-and-Conditions-v2026-07.md to
+        HTML before being added here. Website pages are edited through the Odoo
+        CMS and stored as HTML; the Website editor sanitizes user-authored HTML.
+        Keeping this data noupdate prevents a module upgrade from replacing CMS
+        edits to the published terms.
+    -->
+    <data noupdate="1">
+        <record id="terms_and_conditions_page" model="website.page">
+            <field name="name">Terms and Conditions</field>
+            <field name="type">qweb</field>
+            <field name="url">/terms-and-conditions</field>
+            <field name="is_published">True</field>
+            <field name="website_indexed">True</field>
+            <field name="key">itlingo_website_portal.terms_and_conditions</field>
+            <field name="website_meta_title">ITLingoCloud Terms and Conditions</field>
+            <field name="arch" type="xml">
+                <t t-name="itlingo_website_portal.terms_and_conditions" name="Terms and Conditions">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+                            <section class="s_text_block pt64 pb64" data-snippet="s_text_block" data-name="Terms and Conditions">
+                                <div class="container s_allow_columns">
+                                    <div class="row">
+                                        <div class="col-lg-10 offset-lg-1">
+                                            <h1>ITLingoCloud — User Terms and Conditions</h1>
+                                            <p><strong>Version:</strong> 2026-07<br/><strong>Last updated:</strong> 6 July 2026</p>
+                                            <p>These User Terms govern access to and use of the ITLingoCloud platform, including the ITLingoCloud web application, ITOI — ITLingo Online IDE, ITLingo-Chatbot, domain-specific languages, templates, examples, reusable resources, generated artifacts, documentation, and associated services.</p>
+                                            <p>By accessing or using ITLingoCloud, you agree to these User Terms. If you use the Platform on behalf of an organization, institution, research group, academic course, or project, you confirm that you are authorized to do so and that your use complies with the applicable rules.</p>
+
+                                            <h2>1. Purpose and Scope</h2>
+                                            <p>ITLingoCloud is designed to support the management, specification, automation, and intelligent use of domain knowledge and structured specifications.</p>
+                                            <p>The Platform may allow users to manage languages, projects, resources, templates, examples, and reusable knowledge; specify requirements, rules, processes, services, applications, and other digital artefacts using structured languages such as RSL, ASL, or other domain-specific languages; automate the generation of documents, models, prototypes, code fragments, configuration files, and other artefacts; and use AI-assisted features for drafting, refinement, explanation, validation, transformation, and generation.</p>
+                                            <p><strong>ITLingoCloud's current version is experimental. Users must not rely on it for critical tasks.</strong></p>
+
+                                            <h2>2. Nature of the Current Service</h2>
+                                            <p>ITLingoCloud is currently offered as an experimental, evaluation-oriented platform, designed to support innovation without guaranteeing full stability, which should reassure users and set realistic expectations.</p>
+                                            <p>The service may be incomplete, experimental, or subject to change without notice, which is normal for an evaluation platform, helping users feel informed and adaptable.</p>
+                                            <p>The Platform operator does not guarantee uninterrupted availability, permanent storage, production-grade reliability, service-level commitments, technical support commitments, response times, backup guarantees, or long-term continuity of the service.</p>
+                                            <p>Users should not rely on ITLingoCloud as a mission-critical, production, commercial, operational, administrative, legal, regulatory, or safety-critical system.</p>
+
+                                            <h2>3. Non-Commercial and No-Fee Use</h2>
+                                            <p>ITLingoCloud is currently available at no cost. There are no current subscription fees, license fees, paid accounts, billing cycles, commercial service levels, refund mechanisms, or payment obligations associated with the current service.</p>
+                                            <p>The absence of fees does not create any entitlement to continued access, guaranteed availability, technical support, data retention, feature continuity, or future free use.</p>
+                                            <p>The Platform operator may, in the future, modify the access model, restrict access, discontinue the service, introduce institutional agreements, or provide commercial or production-oriented versions under separate terms.</p>
+
+                                            <h2>4. Accounts and Access</h2>
+                                            <p>To use certain parts of the Platform, users may need to create an account or authenticate through an approved identity provider.</p>
+                                            <p>Users must promptly report suspected unauthorized access to maintain security and compliance.</p>
+                                            <p>Where an account is created within an organizational, academic, research, or course workspace, the relevant organization may have administrative control over that workspace, including the ability to manage users, permissions, shared resources, templates, and project content.</p>
+                                            <p>Access may be limited to authorized users, invited users, academic groups, research partners, demonstration participants, evaluators, students, or project collaborators. The Platform operator may refuse, suspend, restrict, or terminate access where reasonably necessary to protect the Platform, other users, third-party rights, research integrity, security, or compliance with these User Terms or applicable law.</p>
+
+                                            <h2>5. Acceptable Use</h2>
+                                            <p>Users agree to use ITLingoCloud responsibly, lawfully, and in accordance with these User Terms.</p>
+                                            <p>Users must not use the Platform to upload, create, publish, store, or distribute unlawful, harmful, abusive, defamatory, discriminatory, fraudulent, misleading, infringing, or otherwise inappropriate content.</p>
+                                            <p>Users must not use the Platform to violate intellectual property rights, privacy rights, data protection rights, confidentiality obligations, contractual obligations, academic integrity rules, research ethics requirements, or other third-party rights.</p>
+                                            <p>Users must not upload malware, harmful scripts, exploit code, or content intended to disrupt, damage, access, or interfere with systems, networks, accounts, or data. Users must not attempt to bypass security controls, access restrictions, authentication mechanisms, rate limits, workspace permissions, or technical safeguards.</p>
+                                            <p>Users must not use the Platform to support cyber abuse, fraud, impersonation, deceptive activity, illegal surveillance, unauthorized access, or harmful automation.</p>
+                                            <p>Users must not submit personal data, confidential information, trade secrets, restricted data, classified data, or sensitive information unless they have the necessary rights, permissions, safeguards, and legal basis to do so. Where possible, users are encouraged to use synthetic, anonymized, fictional, educational, or non-sensitive data for demonstrations, exercises, prototypes, evaluations, and research experiments.</p>
+
+                                            <h2>6. Academic, Research, Demonstration, and Evaluation Use</h2>
+                                            <p>The Platform may be used for academic teaching, research experimentation, student projects, thesis work, scientific evaluation, prototype development, usability assessment, technology demonstration, and exploratory validation.</p>
+                                            <p>Users are responsible for ensuring that their use complies with applicable academic, institutional, research, ethical, and data protection requirements.</p>
+                                            <p>Where the Platform is used in a research study, evaluation, thesis, dissertation, experiment, or publication, users must ensure that any necessary ethical approvals, participant consents, data protection assessments, acknowledgments, citations, or institutional permissions are obtained.</p>
+                                            <p>The Platform operator may collect and analyze technical, operational, and usage information to improve the Platform, evaluate its functionality, support research, assess usability, detect errors, and enhance security, subject to the applicable Privacy Policy and data protection rules.</p>
+                                            <p>User Content will not be intentionally published or disclosed as research material without appropriate authorization, anonymization, aggregation, institutional approval, consent, or another valid legal basis.</p>
+
+                                            <h2>7. User Content</h2>
+                                            <p>“User Content” means any text, specification, model, grammar, template, document, file, prompt, data, code, image, metadata, or other material that is uploaded, created, submitted, edited, stored, or generated by a user on the Platform.</p>
+                                            <p>Users retain ownership of their User Content, subject to any rights held by their organization, collaborators, licensors, students, supervisors, research partners, or other third parties.</p>
+                                            <p>By submitting User Content to the Platform, users grant the Platform operator a limited, non-exclusive, worldwide licence to host, store, process, display, transmit, transform, and use that content solely as necessary to provide, operate, secure, maintain, evaluate, improve, and support the Platform, according to the applicable account settings, workspace permissions, service configuration, and privacy documentation.</p>
+                                            <p>Users are responsible for ensuring that they have the necessary rights and permissions to upload, use, share, or process User Content through the Platform.</p>
+                                            <p>Before publishing or sharing content via shared repositories, public examples, reusable templates, libraries, DSL resources, tutorials, documentation, prompt templates, or transformation rules, users must ensure the content does not include confidential, personal, proprietary, restricted, or third-party material they are not authorized to disclose.</p>
+
+                                            <h2>8. Generated Artifacts</h2>
+                                            <p>“Generated Artifacts” means any output produced by the Platform, including documents, diagrams, specifications, prototypes, source files, configuration scripts, reports, or AI-assisted outputs.</p>
+                                            <p>Unless otherwise agreed in writing, users may use Generated Artifacts for academic, research, educational, demonstration, evaluation, prototyping, or internal exploratory purposes, subject to their rights in the underlying User Content, the rights of their organization or collaborators, applicable third-party licenses, and these User Terms.</p>
+                                            <p>Generated Artifacts may contain errors, omissions, inconsistencies, security issues, outdated assumptions, incomplete interpretations, or prototype-level outputs. Users are responsible for reviewing, testing, validating, approving, and, where necessary, correcting Generated Artifacts before relying on them.</p>
+                                            <p>Generated Artifacts should not be used directly in production, operational, administrative, legal, regulatory, safety-critical, or commercially binding contexts without independent expert review and validation.</p>
+
+                                            <h2>9. AI-Assisted Features</h2>
+                                            <p>ITLingoCloud may include AI-assisted features to help users draft, improve, explain, validate, classify, transform, or generate specifications, resources, documents, models, prototypes, and other artifacts.</p>
+                                            <p>AI outputs are probabilistic and may be incomplete, inaccurate, biased, inconsistent, outdated, or unsuitable for a particular purpose. Users must not rely on AI outputs without appropriate human review.</p>
+                                            <p>Where the Platform identifies a chatbot, assistant, recommender, generator, validator, or other AI functionality, users acknowledge that they are interacting with an AI-assisted system or receiving AI-assisted output.</p>
+                                            <p>Users must not use AI Features to misrepresent AI-generated content as exclusively human-created where disclosure is required; generate deceptive, unlawful, infringing, defamatory, discriminatory, or harmful content; process personal data or confidential information without appropriate rights and safeguards; or make automated decisions about individuals without appropriate legal, ethical, organizational, and human oversight.</p>
+                                            <p>The Platform may rely on third-party AI providers, model providers, hosting providers, identity providers, analytics services, or infrastructure services. Where applicable, such use will be described in the Privacy Policy, service documentation, or organizational configuration.</p>
+
+                                            <h2>10. Privacy and Personal Data</h2>
+                                            <p>The processing of personal data in connection with ITLingoCloud is governed by the applicable Privacy Policy, Cookie Policy, Data Processing Agreement, institutional agreement, research protocol, or project-specific documentation, where applicable.</p>
+                                            <p>Users must not upload or process personal data through the Platform unless they have a lawful basis, authority, and appropriate safeguards to do so.</p>
+
+                                            <h2>11. Confidentiality</h2>
+                                            <p>Users must treat non-public information accessed through the Platform as confidential where it is marked as confidential, reasonably understood to be confidential, or subject to academic, professional, research, contractual, institutional, or legal confidentiality duties.</p>
+                                            <p>Users must not disclose the confidential content of another user, organization, course, research group, or project without authorization.</p>
+                                            <p>The Platform operator will treat User Content as confidential except where disclosure is necessary to provide the service, comply with the law, enforce these User Terms, protect security, respond to lawful requests, support authorized academic or research evaluation, or as otherwise described in the applicable privacy or service documentation.</p>
+
+                                            <h2>12. Intellectual Property</h2>
+                                            <p>The Platform, including its software, interface, workflows, documentation, design, names, logos, service structure, examples, platform content, and underlying technology, is owned by or licensed to the Platform operator or its respective rights holders.</p>
+                                            <p>These User Terms do not grant users ownership of the Platform or any intellectual property rights in the Platform, except for the limited right to access and use it in accordance with these User Terms.</p>
+                                            <p>Users must not copy, modify, distribute, sell, lease, sublicense, or create derivative works from the Platform except as expressly permitted by these User Terms, by the Platform functionality, by an applicable open-source license, by an academic or research agreement, or by written permission.</p>
+
+                                            <h2>13. Third-Party Services and Integrations</h2>
+                                            <p>ITLingoCloud may integrate with third-party services, including authentication services, cloud infrastructure, code repositories, document-generation tools, AI model providers, communication tools, analytics services, or external APIs.</p>
+                                            <p>Third-party services may be subject to their own terms, privacy policies, licenses, limits, availability conditions, and data-processing practices.</p>
+                                            <p>The Platform operator is not responsible for third-party services except to the extent required by applicable law or by a specific written agreement.</p>
+                                            <p>Users are responsible for ensuring that their use of third-party integrations complies with applicable third-party terms, institutional policies, project requirements, and research ethics obligations.</p>
+
+                                            <h2>14. Availability, Changes, and Experimental Features</h2>
+                                            <p>The Platform may evolve over time. Features may be added, modified, suspended, restricted, or discontinued.</p>
+                                            <p>Some features may be experimental, beta, research-oriented, demonstration-oriented, or provided for evaluation. Such features may be less reliable, less complete, or subject to change without prior notice.</p>
+                                            <p>The Platform operator may modify the Platform in response to technical constraints, research objectives, evaluation results, security needs, infrastructure limitations, academic priorities, or project requirements.</p>
+                                            <p>No service-level agreement, uptime guarantee, maintenance commitment, support guarantee, data retention guarantee, or feature-continuity guarantee is provided under these User Terms.</p>
+
+                                            <h2>15. Security</h2>
+                                            <p>Users must use the Platform in a secure and responsible manner.</p>
+                                            <p>Users must not test, scan, probe, or attempt to compromise the Platform or its infrastructure without prior written authorization.</p>
+                                            <p>If a user discovers a vulnerability, security weakness, data exposure, or misuse of the Platform, the user should promptly report it through the contact channel listed below.</p>
+                                            <p>The Platform operator may investigate suspected security incidents and take measures to protect users, organizations, data, research, and infrastructure, including suspending accounts, disabling integrations, restricting access, or removing content.</p>
+
+                                            <h2>16. Notices, Complaints, and Content Reporting</h2>
+                                            <p>If users believe that content available through ITLingoCloud is unlawful, infringes their rights, violates these User Terms, creates a security concern, or raises an academic or research ethics concern, they may submit a notice through the contact channel indicated below.</p>
+                                            <p>A valid notice should include sufficient information to identify the relevant content, explain the concern, identify the rights, rules, or obligations allegedly affected, and allow the Platform operator to assess the matter.</p>
+                                            <p>The Platform operator may take appropriate action, including removing or restricting content, contacting the relevant user or organization, preserving evidence, escalating the matter, or declining action where the notice is unfounded or insufficient.</p>
+
+                                            <h2>17. Suspension and Termination</h2>
+                                            <p>Users may stop using the Platform at any time.</p>
+                                            <p>The Platform operator may suspend or terminate access where a user breaches these User Terms; creates legal, security, operational, reputational, academic, research, or technical risk; remains inactive for an extended period; uses access limited to a specific course, project, demonstration, or evaluation period after that period has ended; or where suspension or termination is required by law, institutional agreement, research protocol, or security policy.</p>
+                                            <p>Upon termination, the user’s right to access the Platform ceases. Content export, deletion, retention, and archival rules will depend on the applicable workspace settings, institutional context, research project requirements, legal obligations, and privacy documentation.</p>
+
+                                            <h2>18. Disclaimers and Limitation of Liability</h2>
+                                            <p>The Platform is provided on an <strong>as-is and as-available</strong> basis, to the fullest extent permitted by applicable law.</p>
+                                            <p>The Platform operator does not warrant that the Platform will be uninterrupted, error-free, secure, complete, accurate, permanently available, or suitable for a specific purpose.</p>
+                                            <p>The Platform operator does not warrant that specifications, models, generated artifacts, AI outputs, templates, examples, recommendations, or documentation will be accurate, complete, legally compliant, secure, production-ready, or fit for a specific academic, research, professional, organizational, or technical purpose without independent review and validation.</p>
+                                            <p>The Platform does not provide legal, financial, medical, procurement, engineering certification, security certification, or other regulated professional advice.</p>
+                                            <p>To the fullest extent permitted by applicable law, the Platform operator will not be liable for indirect, incidental, special, consequential, punitive, exemplary, or loss-of-profit damages arising from or related to the use of the Platform. The Platform operator will not be liable for losses arising from incorrect, incomplete, or unvalidated User Content; incorrect, incomplete, or unvalidated Generated Artifacts; misuse of AI Features; third-party services; unauthorized access caused by user negligence; unavailability or discontinuation of the Platform; loss of data; or failure to review, test, validate, or approve outputs before use.</p>
+                                            <p>Nothing in these User Terms limits liability where such limitation is not permitted by applicable law.</p>
+
+                                            <h2>19. Indemnity</h2>
+                                            <p>Where permitted by applicable law, users agree to defend, indemnify, and hold harmless the Platform operator from claims, damages, liabilities, costs, and expenses arising from their breach of these User Terms; their User Content; misuse of the Platform; infringement of third-party rights; violation of applicable law; breach of academic, institutional, research, or ethical obligations; or use of Generated Artefacts without appropriate review, validation, or authorisation.</p>
+
+                                            <h2>20. Changes to These User Terms</h2>
+                                            <p>The Platform operator may update these User Terms from time to time.</p>
+                                            <p>Where changes are material, reasonable notice may be provided through the Platform, by email, or through another appropriate channel.</p>
+                                            <p>Continued use of the Platform after the effective date of updated User Terms constitutes acceptance of the updated terms. If users do not agree with the updated User Terms, they must stop using the Platform.</p>
+
+                                            <h2>21. Contact</h2>
+                                            <p>For questions, notices, complaints, security reports, data protection matters, or requests regarding these User Terms, please contact the ITLingoCloud team via the <a href="/contactus">contact us</a> link on the Platform.</p>
+                                            <p>Where appropriate, the contact request should include sufficient information to identify the matter, the relevant account or workspace, the content or functionality concerned, and the nature of the request or concern.</p>
+
+                                            <h2>22. Priority of Specific Agreements</h2>
+                                            <p>If users access or use ITLingoCloud under a separate written agreement, institutional agreement, research project agreement, academic course agreement, data processing agreement, ethics protocol, or service-specific authorization, that agreement may prevail over these User Terms to the extent of any conflict.</p>
+                                            <p>These User Terms apply to the extent not replaced or modified by such specific agreement.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+    </data>
+
+    <template id="signup_terms_acceptance" inherit_id="auth_signup.signup" name="Terms acceptance on signup">
+        <xpath expr="//t[@t-call='auth_signup.fields']" position="after">
+            <div class="mb-3 form-check">
+                <input id="terms_accepted" name="terms_accepted" type="checkbox"
+                    class="form-check-input" value="on" required="required"
+                    t-att-checked="'checked' if terms_accepted else None"/>
+                <label class="form-check-label" for="terms_accepted">
+                    I have read and agree to the
+                    <a href="/terms-and-conditions" target="_blank" rel="noopener">Terms and Conditions</a>.
+                </label>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="footer_terms_link" inherit_id="website.layout" name="Footer Terms and Conditions link">
+        <xpath expr="//div[@id='footer']" position="inside">
+            <div class="container pb-3">
+                <a href="/terms-and-conditions">Terms and Conditions</a>
+            </div>
+        </xpath>
+    </template>
+
+    <record id="view_users_form_terms_acceptance" model="ir.ui.view">
+        <field name="name">res.users.form.terms.acceptance</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Terms Acceptance" groups="base.group_system">
+                    <group>
+                        <field name="terms_accepted_version"/>
+                        <field name="terms_accepted_at"/>
+                        <field name="terms_accepted_ip"/>
+                        <field name="terms_accepted_user_agent"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
