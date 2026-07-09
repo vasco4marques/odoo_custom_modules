@@ -21,7 +21,12 @@ def lenient_env():
     )
 
 
-_OFFICE_EXTS = (".docx", ".xlsx")
+SUPPORTED_TEMPLATE_EXTENSIONS = (
+    ".docx", ".xlsx",
+    ".txt", ".md", ".rst", ".html", ".htm", ".json", ".xml",
+    ".yaml", ".yml", ".toml", ".ini", ".cfg", ".properties",
+    ".sql", ".csv", ".tsv", ".css", ".js", ".ts", ".sh",
+)
 
 
 def render_filename(pattern, context, fallback, extension):
@@ -40,7 +45,7 @@ def render_filename(pattern, context, fallback, extension):
     name = name or fallback
     lower = name.lower()
     if not lower.endswith(extension):
-        for ext in _OFFICE_EXTS:
+        for ext in SUPPORTED_TEMPLATE_EXTENSIONS:
             if lower.endswith(ext):
                 name = name[: -len(ext)]
                 break

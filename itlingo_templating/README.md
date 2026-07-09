@@ -1,22 +1,27 @@
 # ITLingo Templating
 
-Generate DOCX/XLSX documents from an RSL or ASL specification and a template.
+Generate documents from an RSL or ASL specification and a template.
 
 ## Flow
 
 ```
-template .docx/.xlsx (itlingo.document, type = Document Template, DSL = RSL/ASL)
+template .docx/.xlsx or UTF-8 text file (itlingo.document, type = Document Template, DSL = RSL/ASL)
   + uploaded .rsl/.asl
   -> embedded Langium parser (local node subprocess) -> JSON AST
   -> canonical model (faithful + id/title/kind)
-  -> docxtpl/openpyxl (Jinja2) render
-  -> DOCX/XLSX download
+  -> docxtpl/openpyxl/Jinja2 render
+  -> rendered file download
 ```
 
 ## Usage
 
 Set an `itlingo.document`'s **Document Type** to **Document Template**, associate
-it with the `RSL` or `ASL` DSL, and give it a `.docx` or `.xlsx` file.
+it with the `RSL` or `ASL` DSL, and give it a supported template file.
+Supported formats are `.docx`, `.xlsx`, and UTF-8 text formats including `.txt`,
+`.md`, `.rst`, `.html`, `.htm`, `.json`, `.xml`, `.yaml`, `.yml`, `.toml`,
+`.ini`, `.cfg`, `.properties`, `.sql`, `.csv`, `.tsv`, `.css`, `.js`, `.ts`,
+and `.sh`.
+Text templates are rendered as UTF-8 using Jinja2 directly.
 `is_template` is derived from that type. An optional output filename pattern
 appears for template documents in the create/edit forms.
 
@@ -28,7 +33,16 @@ can generate.
 
 Templates are excluded from the knowledge pool and the ITOI send list.
 
-## Template syntax (Jinja2 via docxtpl)
+## Grammar compatibility
+
+RSL/ASL templating is implemented against the platform parser and template
+context bundled with this module. Updating the RSL or ASL grammar file in the
+DSL definition updates the DSL knowledge base, but it does not automatically
+change the templating parser or the fields exposed to templates. If a grammar
+adds or changes concepts, existing templates may still render, but they may not
+include the new concepts until the templating parser/context is updated.
+
+## Template syntax (Jinja2)
 
 ```
 {{ project.name }} ({{ project.code }})

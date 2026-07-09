@@ -7,11 +7,12 @@ from odoo.exceptions import AccessError, MissingError
 from odoo.http import content_disposition, request
 
 from odoo.addons.itlingo_templating.services import (
-    canonical_model, docx_renderer, rendering, xlsx_renderer,
+    canonical_model, docx_renderer, rendering, text_renderer, xlsx_renderer,
 )
 from odoo.addons.itlingo_templating.services.dsl_parser import (
     DslParseError,
     default_dsl_extension,
+    dsl_key_for_record,
     dsl_label,
     is_supported_dsl,
     parse_dsl,
@@ -29,6 +30,26 @@ _FORMATS = {
         xlsx_renderer.render_xlsx,
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
     ),
+    "txt": (text_renderer.render_text, "text/plain; charset=utf-8"),
+    "md": (text_renderer.render_text, "text/markdown; charset=utf-8"),
+    "rst": (text_renderer.render_text, "text/x-rst; charset=utf-8"),
+    "html": (text_renderer.render_text, "text/html; charset=utf-8"),
+    "htm": (text_renderer.render_text, "text/html; charset=utf-8"),
+    "json": (text_renderer.render_text, "application/json; charset=utf-8"),
+    "xml": (text_renderer.render_text, "application/xml; charset=utf-8"),
+    "yaml": (text_renderer.render_text, "application/yaml; charset=utf-8"),
+    "yml": (text_renderer.render_text, "application/yaml; charset=utf-8"),
+    "toml": (text_renderer.render_text, "application/toml; charset=utf-8"),
+    "ini": (text_renderer.render_text, "text/plain; charset=utf-8"),
+    "cfg": (text_renderer.render_text, "text/plain; charset=utf-8"),
+    "properties": (text_renderer.render_text, "text/plain; charset=utf-8"),
+    "sql": (text_renderer.render_text, "application/sql; charset=utf-8"),
+    "csv": (text_renderer.render_text, "text/csv; charset=utf-8"),
+    "tsv": (text_renderer.render_text, "text/tab-separated-values; charset=utf-8"),
+    "css": (text_renderer.render_text, "text/css; charset=utf-8"),
+    "js": (text_renderer.render_text, "text/javascript; charset=utf-8"),
+    "ts": (text_renderer.render_text, "text/plain; charset=utf-8"),
+    "sh": (text_renderer.render_text, "text/plain; charset=utf-8"),
 }
 
 
@@ -62,13 +83,13 @@ class ItlingoTemplatingPortal(http.Controller):
 
     @staticmethod
     def _template_format(document):
-        """Return 'docx'/'xlsx' for a supported template file, else None."""
+        """Return the supported format for a template file, else None."""
         ext = os.path.splitext(document.file_name or "")[1].lower().lstrip(".")
         return ext if ext in _FORMATS else None
 
     @staticmethod
     def _dsl_key(document):
-        return (document.dsl_id.acronym or "").strip().upper() if document.dsl_id else ""
+        return dsl_key_for_record(request.env, document.dsl_id)
 
     @staticmethod
     def _source_extensions(document, dsl_key):
@@ -125,7 +146,7 @@ class ItlingoTemplatingPortal(http.Controller):
         fmt = self._template_format(document)
         if not fmt or not document.document_file:
             values["error"] = _(
-                "Only DOCX/XLSX templates with an attached file can be generated."
+                "Only supported template files with an attached file can be generated."
             )
             return request.render("itlingo_templating.portal_generate_form", values)
 
@@ -182,6 +203,11 @@ class ItlingoTemplatingPortal(http.Controller):
         try:
             template_bytes = base64.b64decode(document.document_file)
             output = renderer(template_bytes, context)
+        except UnicodeDecodeError:
+            values["error"] = _(
+                "Text template files must be encoded as UTF-8."
+            )
+            return request.render("itlingo_templating.portal_generate_form", values)
         except ImportError:
             values["error"] = _(
                 "The Python package required to render %s files is not "

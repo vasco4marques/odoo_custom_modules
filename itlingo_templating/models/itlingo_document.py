@@ -1,6 +1,11 @@
 from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
 
+from odoo.addons.itlingo_templating.services.dsl_parser import dsl_key_for_record
+from odoo.addons.itlingo_templating.services.rendering import (
+    SUPPORTED_TEMPLATE_EXTENSIONS,
+)
+
 TEMPLATE_TYPE_CODE = "document_template"
 
 
@@ -23,16 +28,33 @@ class ItlingoDocument(models.Model):
              "used. Example: {{ spec_name }}_{{ template_name }}.docx. "
              "Defaults to the template name.",
     )
-    template_dsl_acronym = fields.Char(
-        related="dsl_id.acronym",
-        string="Template DSL Acronym",
-        readonly=True,
+    template_generation_supported = fields.Boolean(
+        string="Template Generation Supported",
+        compute="_compute_template_generation_supported",
+    )
+    template_format_supported = fields.Boolean(
+        string="Template Format Supported",
+        compute="_compute_template_format_supported",
     )
 
     @api.depends("document_type_id", "document_type_id.type_code")
     def _compute_is_template(self):
         for doc in self:
             doc.is_template = doc.document_type_id.type_code == TEMPLATE_TYPE_CODE
+
+    @api.depends("dsl_id")
+    def _compute_template_generation_supported(self):
+        for doc in self:
+            doc.template_generation_supported = bool(
+                dsl_key_for_record(doc.env, doc.dsl_id)
+            )
+
+    @api.depends("file_name")
+    def _compute_template_format_supported(self):
+        for doc in self:
+            doc.template_format_supported = (doc.file_name or "").lower().endswith(
+                SUPPORTED_TEMPLATE_EXTENSIONS
+            )
 
     @api.constrains("is_template", "dsl_knowledge")
     def _check_template_not_knowledge(self):

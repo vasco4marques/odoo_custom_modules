@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <delete model="ir.ui.view"
+            search="[('name', '=', 'itlingo.dsl.form.templating'), ('model', '=', 'itlingo.dsl')]"/>
+
+    <template id="portal_dsl_edit_templating_warning"
+              inherit_id="itlingo_website_portal.portal_dsl_edit"
+              name="DSL Edit Templating Warning">
+        <xpath expr="//p[normalize-space()='Definition files']" position="after">
+            <div t-if="dsl.templating_builtin_generation"
+                 class="alert alert-warning small mb-3" role="alert">
+                For built-in RSL/ASL document generation, templating uses the
+                platform parser and template context shipped with ITLingoCloud.
+                Updating the grammar file here updates the DSL knowledge base,
+                but does not automatically update the templating parser or the
+                available template fields. Templates may miss concepts
+                introduced by newer grammar versions until templating support is
+                updated.
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

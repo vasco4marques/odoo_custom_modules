@@ -37,6 +37,11 @@ _SUPPORTED_DSLS = {
     },
 }
 
+_SUPPORTED_DSL_XML_IDS = {
+    "RSL": "itlingo_dsl.dsl_rsl_1_0",
+    "ASL": "itlingo_dsl.dsl_asl_1_0",
+}
+
 
 class DslParseError(Exception):
     """Raised when a DSL specification cannot be parsed.
@@ -59,6 +64,21 @@ class AslParseError(DslParseError):
 
 def supported_dsl_keys():
     return tuple(_SUPPORTED_DSLS.keys())
+
+
+def dsl_key_for_record(env, dsl):
+    """Return the parser key for a DSL record.
+
+    DSL acronyms are editable metadata. Use stable seeded XML ids instead of
+    names/acronyms for parser selection.
+    """
+    if not dsl:
+        return ""
+    for key, xml_id in _SUPPORTED_DSL_XML_IDS.items():
+        record = env.ref(xml_id, raise_if_not_found=False)
+        if record and dsl.id == record.id:
+            return key
+    return ""
 
 
 def is_supported_dsl(dsl_key):
