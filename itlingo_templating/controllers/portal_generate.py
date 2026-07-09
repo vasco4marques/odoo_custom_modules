@@ -150,10 +150,7 @@ class ItlingoTemplatingPortal(http.Controller):
         if request.httprequest.method != "POST":
             return request.render("itlingo_templating.portal_generate_form", values)
 
-        upload = (
-            request.httprequest.files.get("source_file")
-            or request.httprequest.files.get("rsl_file")
-        )
+        upload = request.httprequest.files.get("source_file")
         if not upload or not upload.filename:
             values["error"] = _("Please upload a %s file.") % dsl_label(dsl_key)
             return request.render("itlingo_templating.portal_generate_form", values)

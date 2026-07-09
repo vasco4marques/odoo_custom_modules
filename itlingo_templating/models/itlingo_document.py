@@ -18,9 +18,15 @@ class ItlingoDocument(models.Model):
     output_filename_pattern = fields.Char(
         string="Output Filename Pattern",
         help="Jinja2 pattern for the generated filename. Available variables: "
-             "template_name (this template's name), spec_name (uploaded "
-             "specification name) and project.* (e.g. project.code). Example: "
-             "{{ spec_name }}_requirements.docx. Defaults to the template name.",
+             "template_name (this template's name) and spec_name (uploaded "
+             "specification name). DSL-specific template fields may also be "
+             "used. Example: {{ spec_name }}_{{ template_name }}.docx. "
+             "Defaults to the template name.",
+    )
+    template_dsl_acronym = fields.Char(
+        related="dsl_id.acronym",
+        string="Template DSL Acronym",
+        readonly=True,
     )
 
     @api.depends("document_type_id", "document_type_id.type_code")

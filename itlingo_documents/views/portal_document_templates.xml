@@ -10,12 +10,19 @@
                 <label class="form-label" for="doc_output_pattern">Output filename pattern</label>
                 <input type="text" class="form-control" id="doc_output_pattern"
                        name="output_filename_pattern"
-                       t-att-value="form.get('output_filename_pattern') or '{{ project.code }}_requirements.docx'"/>
+                       t-att-value="form.get('output_filename_pattern') or '{{ spec_name }}_{{ template_name }}.docx'"/>
                 <div class="form-text">
                     Jinja2 pattern for the generated file. Available:
                     <code>{{ template_name }}</code> (this template's name),
-                    <code>{{ spec_name }}</code> (uploaded .rsl name), and
-                    <code>{{ project.* }}</code> (e.g. <code>{{ project.code }}</code>).
+                    <code>{{ spec_name }}</code> (uploaded specification name).
+                    <span id="doc_output_pattern_rsl_hint" style="display:none;">
+                        RSL example:
+                        <code>{{ project.code }}_{{ template_name }}.docx</code>.
+                    </span>
+                    <span id="doc_output_pattern_asl_hint" style="display:none;">
+                        ASL example:
+                        <code>{{ system.id }}_{{ template_name }}.docx</code>.
+                    </span>
                     Defaults to the document name. Templates are excluded from
                     the knowledge pool and cannot be sent to ITOI.
                 </div>
@@ -23,10 +30,25 @@
             <script type="text/javascript">
                 (function(){
                     var sel = document.querySelector('select[name=document_type_id]');
+                    var dslSel = document.querySelector('select[name=dsl_id]');
                     var opts = document.getElementById('doc_template_opts');
+                    var rslHint = document.getElementById('doc_output_pattern_rsl_hint');
+                    var aslHint = document.getElementById('doc_output_pattern_asl_hint');
                     var tplId = '<t t-esc="template_type_id"/>';
-                    function sync(){ if(sel){ if(opts){ opts.style.display = (String(sel.value) === tplId) ? '' : 'none'; } } }
-                    if(sel){ sel.addEventListener('change', sync); sync(); }
+                    function sync(){
+                        if(sel &amp;&amp; opts){
+                            opts.style.display = (String(sel.value) === tplId) ? '' : 'none';
+                        }
+                        var acronym = '';
+                        if(dslSel &amp;&amp; dslSel.selectedOptions &amp;&amp; dslSel.selectedOptions.length){
+                            acronym = (dslSel.selectedOptions[0].dataset.acronym || '').toUpperCase();
+                        }
+                        if(rslHint){ rslHint.style.display = acronym === 'RSL' ? '' : 'none'; }
+                        if(aslHint){ aslHint.style.display = acronym === 'ASL' ? '' : 'none'; }
+                    }
+                    if(sel){ sel.addEventListener('change', sync); }
+                    if(dslSel){ dslSel.addEventListener('change', sync); }
+                    sync();
                 })();
             </script>
         </t>
@@ -54,6 +76,7 @@
                     <option value="">—</option>
                     <t t-foreach="dsls" t-as="dsl_rec">
                         <option t-att-value="dsl_rec.id"
+                                t-att-data-acronym="dsl_rec.acronym"
                                 t-att-selected="str(form.get('dsl_id') or '') == str(dsl_rec.id)">
                             <t t-out="dsl_rec.acronym"/> <t t-out="dsl_rec.version"/>
                         </option>

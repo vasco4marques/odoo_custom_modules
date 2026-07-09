@@ -1,8 +1,8 @@
 {
-  "name": "itlingo-rsl-parser",
+  "name": "itlingo-dsl-parser",
   "version": "1.0.0",
   "private": true,
-  "description": "Self-contained RSL -> JSON AST CLI (embedded Langium parser).",
+  "description": "Self-contained RSL/ASL -> JSON AST CLI (embedded Langium parser).",
   "type": "module",
   "scripts": {
     "build": "esbuild src/parser.mjs --bundle --platform=node --format=esm --outfile=dist/parser.mjs --banner:js=\"import { createRequire } from 'module'; const require = createRequire(import.meta.url);\""

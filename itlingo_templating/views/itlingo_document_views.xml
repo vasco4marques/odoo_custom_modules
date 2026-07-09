@@ -8,9 +8,19 @@
         <field name="arch" type="xml">
             <field name="dsl_knowledge" position="after">
                 <field name="is_template"/>
+                <field name="template_dsl_acronym" invisible="1"/>
                 <field name="output_filename_pattern"
                        invisible="not is_template"
-                       placeholder="{{ spec_name }}_requirements.docx"/>
+                       placeholder="{{ spec_name }}_{{ template_name }}.docx"/>
+                <div class="text-muted" invisible="not is_template or template_dsl_acronym != 'RSL'">
+                    Example for RSL: {{ project.code }}_{{ template_name }}.docx
+                </div>
+                <div class="text-muted" invisible="not is_template or template_dsl_acronym != 'ASL'">
+                    Example for ASL: {{ system.id }}_{{ template_name }}.docx
+                </div>
+                <div class="text-muted" invisible="not is_template or template_dsl_acronym in ('RSL', 'ASL')">
+                    Universal variables: {{ spec_name }} and {{ template_name }}.
+                </div>
             </field>
         </field>
     </record>
