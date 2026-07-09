@@ -1182,6 +1182,9 @@ class ITLingoPortal(CustomerPortal):
             },
             'ws_status_selection': Project._fields['business_status'].selection,
             'ws_filter_url': base_url,
+            'can_create_workspace': (
+                user_role.role in self._WORKSPACE_CREATE_ORG_ROLES
+            ),
             'page_name': 'organization_workspaces',
             'organization_hub': True,
             'org_hub_page': 'workspaces',
@@ -1855,6 +1858,23 @@ class ITLingoPortal(CustomerPortal):
     # Workspaces
     # ──────────────────────────────────────────────
 
+    # Every accepted organization role may create a workspace in that
+    # organization. Workspace administration remains limited to the
+    # Workspace Manager role assigned to the creator below.
+    _WORKSPACE_CREATE_ORG_ROLES = (
+        'org_manager', 'doc_manager', 'org_member',
+    )
+
+    def _portal_workspace_creation_organizations(self, user=None):
+        """Return organizations where ``user`` may create a workspace."""
+        user = user or request.env.user
+        roles = request.env['itlingo.organization.role'].sudo().search([
+            ('user_id', '=', user.id),
+            ('state', '=', 'accepted'),
+            ('role', 'in', self._WORKSPACE_CREATE_ORG_ROLES),
+        ])
+        return roles.mapped('organization_id')
+
     @route(['/my/workspaces', '/my/workspaces/page/<int:page>'],
            type='http', auth='user', website=True)
     def portal_my_workspaces(self, page=1, **kw):
@@ -1904,11 +1924,7 @@ class ITLingoPortal(CustomerPortal):
         )
 
         can_create_workspace = bool(
-            request.env['itlingo.organization.role'].sudo().search_count([
-                ('user_id', '=', user.id),
-                ('state', '=', 'accepted'),
-                ('role', '=', 'org_manager'),
-            ])
+            self._portal_workspace_creation_organizations(user)
         )
 
         values = self._prepare_portal_layout_values()
@@ -2218,13 +2234,7 @@ class ITLingoPortal(CustomerPortal):
     )
     def portal_workspace_new(self, step=1, **post):
         user = request.env.user
-        Role = request.env['itlingo.organization.role'].sudo()
-        manager_roles = Role.search([
-            ('user_id', '=', user.id),
-            ('state', '=', 'accepted'),
-            ('role', '=', 'org_manager'),
-        ])
-        organizations = manager_roles.mapped('organization_id')
+        organizations = self._portal_workspace_creation_organizations(user)
         sess = request.session
         wizard = sess.get(self._WS_NEW_SESSION_KEY) or {}
 
@@ -2250,7 +2260,7 @@ class ITLingoPortal(CustomerPortal):
                     org_id = 0
                 err = {}
                 if not organizations:
-                    err['organization_id'] = _('You are not an organization manager.')
+                    err['organization_id'] = _('You are not an accepted organization member.')
                 elif not name:
                     err['name'] = _('Workspace name is required.')
                 elif org_id not in organizations.ids:
@@ -2299,9 +2309,12 @@ class ITLingoPortal(CustomerPortal):
                 return request.redirect('/my/workspaces/new/step/4')
 
             if step == 4:
-                wizard = sess.pop(self._WS_NEW_SESSION_KEY, None)
+                wizard = sess.get(self._WS_NEW_SESSION_KEY) or {}
                 if not wizard or not wizard.get('name'):
                     return request.redirect('/my/workspaces/new/step/1')
+                if wizard.get('organization_id') not in organizations.ids:
+                    return request.redirect('/my/workspaces/new/step/1')
+                sess.pop(self._WS_NEW_SESSION_KEY, None)
                 Project = request.env['itlingo.workspace'].sudo()
                 WsRole = request.env['itlingo.project.role'].sudo()
                 vals = {

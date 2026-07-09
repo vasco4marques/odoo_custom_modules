@@ -928,7 +928,7 @@
             <div t-if="error.get('name')" class="alert alert-danger" role="alert"><t t-out="error['name']"/></div>
             <div t-if="error.get('organization_id')" class="alert alert-danger" role="alert"><t t-out="error['organization_id']"/></div>
             <div t-if="not organizations" class="alert alert-warning" role="alert">
-                You need to be an organization manager to create a workspace.
+                You need to be an accepted organization member to create a workspace.
             </div>
             <form t-if="wizard_mode == 'edit'" t-attf-action="/my/workspaces/#{project.id}/settings/1"
                   method="post" class="card border-0 shadow-sm rounded-3">

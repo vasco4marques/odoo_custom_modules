@@ -314,7 +314,7 @@
     <!-- Workspaces -->
     <template id="portal_organization_hub_workspaces" name="Organization workspaces">
         <t t-call="itlingo_website_portal.portal_organization_hub_shell">
-            <div class="d-flex flex-wrap gap-2 mb-3" t-if="user_role.role == 'org_manager'">
+            <div class="d-flex flex-wrap gap-2 mb-3" t-if="can_create_workspace">
                 <a t-attf-href="/my/workspaces/new?organization_id=#{organization.id}"
                    class="btn btn-primary"><i class="fa fa-plus me-1"/>New workspace</a>
             </div>
