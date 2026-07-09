@@ -98,15 +98,25 @@
             </div>
             <div class="card border-0 shadow-sm rounded-3">
                 <div class="card-header bg-white d-flex justify-content-between align-items-center p-3">
-                    <h2 class="h5 fw-semibold mb-0"><t t-out="document.name"/></h2>
-                    <span t-attf-class="badge rounded-pill
-                        #{'text-bg-secondary' if document.status == 'draft'
-                          else 'text-bg-warning' if document.status == 'in_review'
-                          else 'text-bg-success' if document.status == 'approved'
-                          else 'text-bg-primary' if document.status == 'published'
-                          else 'text-bg-dark'}">
-                        <t t-out="dict(document._fields['status'].selection).get(document.status)"/>
-                    </span>
+                    <div>
+                        <h2 class="h5 fw-semibold mb-0"><t t-out="document.name"/></h2>
+                        <span t-if="document_scope == 'organization'" class="text-muted small">
+                            Organization document
+                        </span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span t-if="document_scope == 'organization'" class="badge bg-light text-dark border">
+                            Organization
+                        </span>
+                        <span t-attf-class="badge rounded-pill
+                            #{'text-bg-secondary' if document.status == 'draft'
+                              else 'text-bg-warning' if document.status == 'in_review'
+                              else 'text-bg-success' if document.status == 'approved'
+                              else 'text-bg-primary' if document.status == 'published'
+                              else 'text-bg-dark'}">
+                            <t t-out="dict(document._fields['status'].selection).get(document.status)"/>
+                        </span>
+                    </div>
                 </div>
                 <div class="card-body">
                     <div class="row">

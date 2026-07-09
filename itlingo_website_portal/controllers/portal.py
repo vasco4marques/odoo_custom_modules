@@ -264,18 +264,21 @@ class ITLingoPortal(CustomerPortal):
 
     def _portal_org_access(self, org_id):
         """Return (organization, user_role) or raise."""
-        user = request.env.user
         org = request.env['itlingo.organization'].sudo().browse(org_id)
         if not org.exists():
             raise MissingError(_('Organization not found.'))
-        user_role = request.env['itlingo.organization.role'].sudo().search([
-            ('user_id', '=', user.id),
-            ('organization_id', '=', org_id),
-            ('state', '=', 'accepted'),
-        ], limit=1)
+        user_role = self._portal_org_user_role(org_id)
         if not user_role:
             raise AccessError(_('You do not have access to this organization.'))
         return org, user_role
+
+    def _portal_org_user_role(self, org_id):
+        """Return the current user's accepted organization role, if any."""
+        return request.env['itlingo.organization.role'].sudo().search([
+            ('user_id', '=', request.env.user.id),
+            ('organization_id', '=', org_id),
+            ('state', '=', 'accepted'),
+        ], limit=1)
 
     def _portal_org_role_line(self, org_id, role_id):
         Role = request.env['itlingo.organization.role'].sudo()
@@ -925,6 +928,25 @@ class ITLingoPortal(CustomerPortal):
             return project, user_role, None
         return project, user_role, doc
 
+    def _portal_ws_org_document_or_404(self, project_id, document_id):
+        """Return a published organization document in a workspace context.
+
+        Workspace membership grants access to the organization's published
+        documents. Editing is deliberately not derived from the workspace
+        role: the returned organization role is used by the callers instead.
+        """
+        project, workspace_role = self._portal_ws_access(project_id)
+        org = project.organization_id
+        doc = request.env['itlingo.document'].sudo().browse(document_id)
+        if (
+            not org
+            or not doc.exists()
+            or doc.organization_id.id != org.id
+            or doc.status != 'published'
+        ):
+            return project, workspace_role, None, None
+        return project, workspace_role, self._portal_org_user_role(org.id), doc
+
     def _portal_org_document_or_404(self, org_id, document_id):
         """Return (organization, user_role, document) for an org document."""
         org, user_role = self._portal_org_access(org_id)
@@ -994,6 +1016,7 @@ class ITLingoPortal(CustomerPortal):
             },
             'error': {},
             'page_name': 'document_edit',
+            'document_scope': None,
         })
         values.update(extra_values or {})
         if request.httprequest.method == 'POST':
@@ -1235,6 +1258,7 @@ class ITLingoPortal(CustomerPortal):
         values = self._prepare_portal_layout_values()
         values.update({
             'document': document,
+            'document_scope': 'organization',
             'doc_base_url': f'/my/organizations/{org_id}/documents',
             'can_edit_document': user_role.role in self._DOC_EDIT_ORG_ROLES,
             'doc_message': request.params.get('message'),
@@ -1262,6 +1286,7 @@ class ITLingoPortal(CustomerPortal):
         return self._portal_document_edit_flow(
             document, f'/my/organizations/{org_id}/documents', post,
             extra_values={
+                'document_scope': 'organization',
                 'organization': org,
                 'user_role': user_role,
                 'organization_hub': True,
@@ -2932,15 +2957,28 @@ class ITLingoPortal(CustomerPortal):
     # ──────────────────────────────────────────────
 
     @route(['/my/workspaces/<int:project_id>/documents',
-            '/my/workspaces/<int:project_id>/documents/page/<int:page>'],
+            '/my/workspaces/<int:project_id>/documents/page/<int:page>',
+            '/my/workspaces/<int:project_id>/documents/organization/page/<int:organization_page>'],
            type='http', auth='user', website=True)
-    def portal_workspace_documentation(self, project_id, page=1, **kw):
+    def portal_workspace_documentation(
+            self, project_id, page=1, organization_page=1, **kw):
         project, user_role = self._portal_ws_access(project_id)
         can_doc = bool(
             user_role and user_role.role in self._DOC_EDIT_WS_ROLES,
         )
         params = request.params
         base_url = f'/my/workspaces/{project_id}/documents'
+        org_documents_ctx = {}
+        if project.organization_id:
+            org_documents_ctx = self._portal_documents_list_ctx(
+                [
+                    ('organization_id', '=', project.organization_id.id),
+                    ('status', '=', 'published'),
+                ],
+                params,
+                page_url=f'{base_url}/organization',
+                page=organization_page,
+            )
         values = self._prepare_portal_layout_values()
         values.update({
             'project': project,
@@ -2952,6 +2990,12 @@ class ITLingoPortal(CustomerPortal):
             'doc_error': params.get('error'),
             'page_name': 'workspace_documentation',
             'members': self._portal_workspace_hub_members(project_id),
+            'organization_documents': org_documents_ctx.get('documents'),
+            'organization_document_count': org_documents_ctx.get('doc_count', 0),
+            'organization_pager': org_documents_ctx.get('pager'),
+            'organization_sortby': org_documents_ctx.get('sortby'),
+            'organization_sortdir': org_documents_ctx.get('sortdir'),
+            'organization_sort_qs': org_documents_ctx.get('sort_qs', ''),
             **self._portal_workspace_hub_common(project, 'documentation', public_hub=False),
             **self._portal_documents_list_ctx(
                 self._portal_ws_document_domain(project_id, user_role), params,
@@ -3046,6 +3090,7 @@ class ITLingoPortal(CustomerPortal):
         values = self._prepare_portal_layout_values()
         values.update({
             'document': document,
+            'document_scope': 'workspace',
             'doc_base_url': f'/my/workspaces/{project_id}/documents',
             'can_edit_document': user_role.role in self._DOC_EDIT_WS_ROLES,
             'doc_message': request.params.get('message'),
@@ -3073,6 +3118,7 @@ class ITLingoPortal(CustomerPortal):
         return self._portal_document_edit_flow(
             document, f'/my/workspaces/{project_id}/documents', post,
             extra_values={
+                'document_scope': 'workspace',
                 'project': project,
                 'user_role': user_role,
                 'page_name': 'workspace_document_edit',
@@ -3107,6 +3153,99 @@ class ITLingoPortal(CustomerPortal):
     def portal_workspace_document_download(self, project_id, document_id, **kw):
         _project, _user_role, document = self._portal_ws_document_or_404(
             project_id, document_id,
+        )
+        if not document:
+            return request.not_found()
+        return self._portal_document_download_response(document)
+
+    @route(
+        '/my/workspaces/<int:project_id>/documents/organization/<int:document_id>',
+        type='http', auth='user', website=True,
+    )
+    def portal_workspace_organization_document_detail(
+            self, project_id, document_id, **kw):
+        project, workspace_role, org_role, document = (
+            self._portal_ws_org_document_or_404(project_id, document_id)
+        )
+        if not document:
+            return request.not_found()
+        values = self._prepare_portal_layout_values()
+        values.update({
+            'document': document,
+            'document_scope': 'organization',
+            'doc_base_url': (
+                f'/my/workspaces/{project_id}/documents/organization'
+            ),
+            'can_edit_document': bool(
+                org_role and org_role.role in self._DOC_EDIT_ORG_ROLES,
+            ),
+            'doc_message': request.params.get('message'),
+            'doc_error': request.params.get('error'),
+            'project': project,
+            'user_role': workspace_role,
+            'page_name': 'workspace_organization_document_detail',
+            **self._portal_workspace_hub_common(
+                project, 'documentation', public_hub=False),
+        })
+        return request.render('itlingo_documents.portal_document_detail', values)
+
+    @route(
+        '/my/workspaces/<int:project_id>/documents/organization/<int:document_id>/edit',
+        type='http', auth='user', website=True, methods=['GET', 'POST'],
+    )
+    def portal_workspace_organization_document_edit(
+            self, project_id, document_id, **post):
+        project, workspace_role, org_role, document = (
+            self._portal_ws_org_document_or_404(project_id, document_id)
+        )
+        if not document:
+            return request.not_found()
+        if not org_role or org_role.role not in self._DOC_EDIT_ORG_ROLES:
+            raise AccessError(_('You cannot edit this document.'))
+        return self._portal_document_edit_flow(
+            document,
+            f'/my/workspaces/{project_id}/documents/organization',
+            post,
+            extra_values={
+                'document_scope': 'organization',
+                'project': project,
+                'user_role': workspace_role,
+                'page_name': 'workspace_organization_document_edit',
+                **self._portal_workspace_hub_common(
+                    project, 'documentation', public_hub=False),
+            },
+        )
+
+    @route(
+        '/my/workspaces/<int:project_id>/documents/organization/<int:document_id>/delete',
+        type='http', auth='user', website=True, methods=['POST'],
+    )
+    def portal_workspace_organization_document_delete(
+            self, project_id, document_id, **post):
+        _project, _workspace_role, org_role, document = (
+            self._portal_ws_org_document_or_404(project_id, document_id)
+        )
+        if not document:
+            return request.not_found()
+        if not org_role or org_role.role not in self._DOC_EDIT_ORG_ROLES:
+            raise AccessError(_('You cannot delete this document.'))
+        base_url = f'/my/workspaces/{project_id}/documents/organization'
+        try:
+            document.sudo().unlink()
+        except UserError:
+            return request.redirect(f'{base_url}/{document_id}?error=delete_failed')
+        return request.redirect(
+            f'/my/workspaces/{project_id}/documents?message=doc_deleted',
+        )
+
+    @route(
+        '/my/workspaces/<int:project_id>/documents/organization/<int:document_id>/download',
+        type='http', auth='user', website=True,
+    )
+    def portal_workspace_organization_document_download(
+            self, project_id, document_id, **kw):
+        _project, _workspace_role, _org_role, document = (
+            self._portal_ws_org_document_or_404(project_id, document_id)
         )
         if not document:
             return request.not_found()

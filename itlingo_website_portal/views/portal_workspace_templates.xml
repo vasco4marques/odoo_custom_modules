@@ -810,6 +810,113 @@
             <t t-call="itlingo_website_portal.portal_documents_list">
                 <t t-set="doc_link_base" t-value="ws_hub_prefix + '/documents'"/>
             </t>
+            <t t-if="project.organization_id">
+                <div class="card border-0 shadow-sm rounded-3 mt-4">
+                    <div class="card-header bg-white border-0 p-3">
+                        <h5 class="fw-semibold mb-0">
+                            Organization documents (<t t-out="organization_document_count"/>)
+                        </h5>
+                    </div>
+                    <div t-if="organization_documents" class="card-body p-0 table-responsive">
+                        <t t-set="sortby" t-value="organization_sortby"/>
+                        <t t-set="sortdir" t-value="organization_sortdir"/>
+                        <t t-set="sort_qs" t-value="organization_sort_qs"/>
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>
+                                        <t t-call="itlingo_website_portal.portal_sort_th">
+                                            <t t-set="sort_key" t-value="'name'"/>
+                                            <t t-set="sort_label">Name</t>
+                                        </t>
+                                    </th>
+                                    <th>
+                                        <t t-call="itlingo_website_portal.portal_sort_th">
+                                            <t t-set="sort_key" t-value="'type'"/>
+                                            <t t-set="sort_label">Type</t>
+                                        </t>
+                                    </th>
+                                    <th>
+                                        <t t-call="itlingo_website_portal.portal_sort_th">
+                                            <t t-set="sort_key" t-value="'dsl'"/>
+                                            <t t-set="sort_label">DSL</t>
+                                        </t>
+                                    </th>
+                                    <th>
+                                        <t t-call="itlingo_website_portal.portal_sort_th">
+                                            <t t-set="sort_key" t-value="'language'"/>
+                                            <t t-set="sort_label">Language</t>
+                                        </t>
+                                    </th>
+                                    <th>
+                                        <t t-call="itlingo_website_portal.portal_sort_th">
+                                            <t t-set="sort_key" t-value="'format'"/>
+                                            <t t-set="sort_label">Format</t>
+                                        </t>
+                                    </th>
+                                    <th>
+                                        <t t-call="itlingo_website_portal.portal_sort_th">
+                                            <t t-set="sort_key" t-value="'create_date'"/>
+                                            <t t-set="sort_label">Create Date</t>
+                                        </t>
+                                    </th>
+                                    <th>
+                                        <t t-call="itlingo_website_portal.portal_sort_th">
+                                            <t t-set="sort_key" t-value="'write_date'"/>
+                                            <t t-set="sort_label">Last Modified</t>
+                                        </t>
+                                    </th>
+                                    <th>
+                                        <t t-call="itlingo_website_portal.portal_sort_th">
+                                            <t t-set="sort_key" t-value="'status'"/>
+                                            <t t-set="sort_label">Status</t>
+                                        </t>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="organization_documents" t-as="doc">
+                                    <td>
+                                        <a t-attf-href="#{ws_hub_prefix}/documents/organization/#{doc.id}">
+                                            <t t-out="doc.name"/>
+                                        </a>
+                                    </td>
+                                    <td><t t-out="doc.document_type_id.name or '—'"/></td>
+                                    <td>
+                                        <t t-if="doc.dsl_id" t-out="doc.dsl_id.acronym"/>
+                                        <t t-else="">—</t>
+                                    </td>
+                                    <td>
+                                        <t t-if="doc.language" t-out="dict(doc._fields['language'].selection).get(doc.language)"/>
+                                        <t t-else="">—</t>
+                                    </td>
+                                    <td>
+                                        <t t-if="doc.document_format" t-out="dict(doc._fields['document_format'].selection).get(doc.document_format)"/>
+                                        <t t-else="">—</t>
+                                    </td>
+                                    <td>
+                                        <t t-call="itlingo_website_portal.portal_date">
+                                            <t t-set="date_value" t-value="doc.creation_date"/>
+                                        </t>
+                                    </td>
+                                    <td>
+                                        <t t-call="itlingo_website_portal.portal_date">
+                                            <t t-set="date_value" t-value="doc.write_date"/>
+                                        </t>
+                                    </td>
+                                    <td><span class="badge bg-secondary">Published</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div t-else="" class="card-body">
+                        <p class="text-muted mb-0">There are no published organization documents yet.</p>
+                    </div>
+                </div>
+                <t t-call="itlingo_website_portal.portal_list_pager">
+                    <t t-set="pager" t-value="organization_pager"/>
+                </t>
+            </t>
         </t>
     </template>
 

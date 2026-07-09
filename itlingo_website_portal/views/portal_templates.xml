@@ -515,7 +515,7 @@
             </li>
             <!-- Workspace hub sub-pages: Workspaces / <name> / <section> -->
             <t t-set="ws_subpages"
-               t-value="['workspace_users', 'workspace_documentation', 'workspace_documentation_new', 'workspace_document_detail', 'workspace_document_edit', 'workspace_specifications', 'workspace_settings', 'workspace_leave_promote']"/>
+               t-value="['workspace_users', 'workspace_documentation', 'workspace_documentation_new', 'workspace_document_detail', 'workspace_document_edit', 'workspace_organization_document_detail', 'workspace_organization_document_edit', 'workspace_specifications', 'workspace_settings', 'workspace_leave_promote']"/>
             <li t-if="page_name in ws_subpages" class="breadcrumb-item">
                 <a href="/my/workspaces">Workspaces</a>
             </li>
@@ -532,16 +532,16 @@
                 <a t-attf-href="/my/workspaces/#{project.id}/documents">Documents</a>
             </li>
             <li t-if="page_name == 'workspace_documentation_new'" class="breadcrumb-item active">New document</li>
-            <li t-if="page_name in ('workspace_document_detail', 'workspace_document_edit')" class="breadcrumb-item">
+            <li t-if="page_name in ('workspace_document_detail', 'workspace_document_edit', 'workspace_organization_document_detail', 'workspace_organization_document_edit')" class="breadcrumb-item">
                 <a t-attf-href="/my/workspaces/#{project.id}/documents">Documents</a>
             </li>
-            <li t-if="page_name == 'workspace_document_detail'" class="breadcrumb-item active text-truncate">
+            <li t-if="page_name in ('workspace_document_detail', 'workspace_organization_document_detail')" class="breadcrumb-item active text-truncate">
                 <t t-out="document.name"/>
             </li>
-            <li t-if="page_name == 'workspace_document_edit'" class="breadcrumb-item text-truncate">
-                <a t-attf-href="/my/workspaces/#{project.id}/documents/#{document.id}"><t t-out="document.name"/></a>
+            <li t-if="page_name in ('workspace_document_edit', 'workspace_organization_document_edit')" class="breadcrumb-item text-truncate">
+                <a t-att-href="doc_base_url + '/' + str(document.id)"><t t-out="document.name"/></a>
             </li>
-            <li t-if="page_name == 'workspace_document_edit'" class="breadcrumb-item active">Edit</li>
+            <li t-if="page_name in ('workspace_document_edit', 'workspace_organization_document_edit')" class="breadcrumb-item active">Edit</li>
             <li t-if="page_name == 'workspace_specifications'" class="breadcrumb-item active">Specifications</li>
             <li t-if="page_name == 'workspace_settings'" class="breadcrumb-item active">Settings</li>
             <li t-if="page_name == 'notifications'" class="breadcrumb-item active">
