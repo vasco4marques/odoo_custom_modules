@@ -36928,6 +36928,25 @@ function countNodes(node) {
   }
   return count;
 }
+function collectShape(node, shape = { types: /* @__PURE__ */ new Set(), namedTypes: /* @__PURE__ */ new Set() }) {
+  if (!node || typeof node !== "object") {
+    return shape;
+  }
+  if (typeof node.$type === "string") {
+    shape.types.add(node.$type);
+    if (typeof node.name === "string" && node.name) {
+      shape.namedTypes.add(node.$type);
+    }
+  }
+  for (const value of Object.values(node)) {
+    if (Array.isArray(value)) {
+      value.forEach((item) => collectShape(item, shape));
+    } else if (value && typeof value === "object") {
+      collectShape(value, shape);
+    }
+  }
+  return shape;
+}
 function emit(result) {
   process.stdout.write(JSON.stringify(result));
 }
@@ -36988,6 +37007,7 @@ async function main() {
       return;
     }
     const ast = serializeAstNode(document.parseResult.value);
+    const shape = collectShape(ast);
     emit({
       success: true,
       ast,
@@ -36995,6 +37015,11 @@ async function main() {
       ast_summary: {
         node_count: countNodes(ast),
         root_type: String(document.parseResult.value?.$type || "Model")
+      },
+      grammar_shape: {
+        entry_type: String(document.parseResult.value?.$type || "Model"),
+        observed_types: [...shape.types].sort(),
+        named_types: [...shape.namedTypes].sort()
       }
     });
   } catch (err) {

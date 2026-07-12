@@ -18,6 +18,7 @@ def lenient_env():
     return jinja2.Environment(
         undefined=jinja2.ChainableUndefined,
         finalize=lambda v: "" if v is None else v,
+        keep_trailing_newline=True,
     )
 
 

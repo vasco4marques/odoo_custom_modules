@@ -1,7 +1,12 @@
 from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
 
-from odoo.addons.itlingo_templating.services.dsl_parser import dsl_key_for_record
+from odoo.addons.itlingo_templating.services.dsl_parser import (
+    default_dsl_extension,
+    dsl_key_for_record,
+    dsl_label,
+    is_templatable_dsl,
+)
 from odoo.addons.itlingo_templating.services.rendering import (
     SUPPORTED_TEMPLATE_EXTENSIONS,
 )
@@ -36,6 +41,18 @@ class ItlingoDocument(models.Model):
         string="Template Format Supported",
         compute="_compute_template_format_supported",
     )
+    template_source_label = fields.Char(
+        string="Template Source Label",
+        compute="_compute_template_source_metadata",
+    )
+    template_source_accept = fields.Char(
+        string="Template Source Accepted Extensions",
+        compute="_compute_template_source_metadata",
+    )
+    template_variable_groups = fields.Json(
+        string="Available Template Variables",
+        compute="_compute_template_variable_groups",
+    )
 
     @api.depends("document_type_id", "document_type_id.type_code")
     def _compute_is_template(self):
@@ -45,8 +62,8 @@ class ItlingoDocument(models.Model):
     @api.depends("dsl_id")
     def _compute_template_generation_supported(self):
         for doc in self:
-            doc.template_generation_supported = bool(
-                dsl_key_for_record(doc.env, doc.dsl_id)
+            doc.template_generation_supported = is_templatable_dsl(
+                doc.env, doc.dsl_id,
             )
 
     @api.depends("file_name")
@@ -54,6 +71,29 @@ class ItlingoDocument(models.Model):
         for doc in self:
             doc.template_format_supported = (doc.file_name or "").lower().endswith(
                 SUPPORTED_TEMPLATE_EXTENSIONS
+            )
+
+    @api.depends("dsl_id", "dsl_id.file_extensions")
+    def _compute_template_source_metadata(self):
+        for doc in self:
+            dsl_key = dsl_key_for_record(doc.env, doc.dsl_id)
+            extensions = []
+            for raw_extension in (doc.dsl_id.file_extensions or "").split(","):
+                extension = raw_extension.strip().lower()
+                if extension and not extension.startswith("."):
+                    extension = "." + extension
+                if extension:
+                    extensions.append(extension)
+            if not extensions and dsl_key:
+                extensions = [default_dsl_extension(dsl_key)]
+            doc.template_source_label = dsl_label(doc.dsl_id or dsl_key)
+            doc.template_source_accept = ",".join(extensions)
+
+    @api.depends("dsl_id", "dsl_id.template_profile")
+    def _compute_template_variable_groups(self):
+        for doc in self:
+            doc.template_variable_groups = (
+                doc.dsl_id._templating_variable_groups() if doc.dsl_id else {}
             )
 
     @api.constrains("is_template", "dsl_knowledge")
