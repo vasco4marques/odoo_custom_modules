@@ -291,7 +291,106 @@
                 </div>
                 <div t-if="dsl_error == 'no_file'" class="alert alert-danger" role="alert">Please choose a file to upload.</div>
                 <div t-if="dsl_error == 'bad_type'" class="alert alert-danger" role="alert">Invalid file type.</div>
+                <div t-if="dsl_message == 'published'" class="alert alert-success" role="alert">
+                    This version is now active and the chatbot knowledge base has been refreshed.
+                    Publication does not build or deploy the templating or ITOI parsers, which
+                    bundle their own grammar copies and are deployed separately.
+                </div>
+                <div t-if="dsl_message == 'draft_created'" class="alert alert-success" role="alert">
+                    Draft version created. Edit its grammar and definition files here, then publish
+                    when ready. The source version was not modified.
+                </div>
+                <div t-if="dsl_error == 'publish_failed'" class="alert alert-danger" role="alert">
+                    <p class="mb-1 fw-semibold">Publication failed.</p>
+                    <pre t-if="publish_error" class="mb-0 small" style="white-space: pre-wrap;"><t t-out="publish_error"/></pre>
+                </div>
+                <div t-if="dsl_error == 'draft_failed'" class="alert alert-danger" role="alert">
+                    <p class="mb-1 fw-semibold">Could not create the draft version.</p>
+                    <pre t-if="publish_error" class="mb-0 small" style="white-space: pre-wrap;"><t t-out="publish_error"/></pre>
+                </div>
                 <div t-if="error.get('_form')" class="alert alert-danger" role="alert"><t t-out="error['_form']"/></div>
+
+                <!-- Lifecycle & publication -->
+                <div class="card border-0 shadow-sm rounded-3 mb-4">
+                    <div class="card-body">
+                        <p class="text-muted small text-uppercase fw-semibold mb-3">Lifecycle &amp; publication</p>
+                        <t t-set="status_badges" t-value="{'draft': 'info', 'active': 'success', 'deprecated': 'warning', 'archived': 'secondary'}"/>
+                        <t t-set="lifecycle_grammar" t-value="dsl.file_ids.filtered(lambda f: f.file_type == 'grammar')"/>
+                        <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                            <span t-attf-class="badge text-capitalize bg-#{status_badges.get(dsl.status, 'secondary')}">
+                                <t t-out="dsl.status"/>
+                            </span>
+                            <t t-if="lifecycle_grammar">
+                                <span t-if="dsl.grammar_validation_result == 'valid' and dsl.grammar_validation_is_current"
+                                      class="badge bg-success">Grammar valid</span>
+                                <span t-elif="dsl.grammar_validation_result == 'invalid' and dsl.grammar_validation_is_current"
+                                      class="badge bg-danger">Grammar invalid</span>
+                                <span t-elif="dsl.grammar_validation_result"
+                                      class="badge bg-warning text-dark">Validation outdated</span>
+                                <span t-else="" class="badge bg-secondary">Not validated</span>
+                            </t>
+                            <small t-if="dsl.grammar_validation_time" class="text-muted">
+                                Last validated <t t-out="dsl.grammar_validation_time"/>
+                                (<t t-out="dsl.grammar_validator_version"/>)
+                            </small>
+                            <small t-if="dsl.published_at" class="text-muted">
+                                · Published <t t-out="dsl.published_at"/> by <t t-out="dsl.published_by_id.name"/>
+                            </small>
+                        </div>
+                        <div class="d-flex flex-wrap align-items-center gap-2">
+                            <form t-if="dsl.status == 'draft'" t-attf-action="/dsl/#{dsl.id}/publish" method="post" class="d-inline">
+                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                <button type="submit" class="btn btn-success"
+                                        onclick="return confirm('Publishing validates the grammar on the server, deprecates any previously active version of this acronym, and refreshes the chatbot knowledge base. It does not build or deploy the templating or ITOI parsers. Continue?');">
+                                    <i class="fa fa-rocket me-1"/>Validate &amp; Publish
+                                </button>
+                            </form>
+                            <form t-if="dsl.status == 'deprecated'" t-attf-action="/dsl/#{dsl.id}/publish" method="post" class="d-inline">
+                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                <button type="submit" class="btn btn-outline-success"
+                                        onclick="return confirm('This re-activates this previous version: the grammar is revalidated on the server, the currently active version is deprecated, and the chatbot knowledge base is refreshed with this version. Continue?');">
+                                    <i class="fa fa-history me-1"/>Reactivate this version
+                                </button>
+                            </form>
+                            <form t-if="dsl.status != 'draft'" t-attf-action="/dsl/#{dsl.id}/create-draft" method="post"
+                                  class="d-inline-flex align-items-center gap-2">
+                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                <label class="form-label mb-0 small text-muted" for="lc_version">New draft version</label>
+                                <input type="text" class="form-control form-control-sm" style="max-width: 8rem;"
+                                       name="version" id="lc_version" t-att-value="suggested_version"/>
+                                <button type="submit" class="btn btn-outline-primary btn-sm">
+                                    <i class="fa fa-code-fork me-1"/>Create draft version
+                                </button>
+                            </form>
+                        </div>
+                        <p class="text-muted small mt-3 mb-0">
+                            Draft saves never change the chatbot knowledge base; only publication does.
+                            Publication does not build or deploy the templating or ITOI parsers, which
+                            bundle their own grammar copies and are deployed separately.
+                        </p>
+                        <t t-if="dsl_versions and len(dsl_versions) > 1">
+                            <hr class="my-3"/>
+                            <p class="text-muted small text-uppercase fw-semibold mb-2">Version history</p>
+                            <ul class="list-group list-group-flush mb-0">
+                                <li t-foreach="dsl_versions" t-as="v"
+                                    class="list-group-item d-flex align-items-center justify-content-between px-0 py-1">
+                                    <span>
+                                        <t t-if="v.id == dsl.id">
+                                            <t t-out="v.acronym"/> <t t-out="v.version"/>
+                                            <span class="text-muted small">(this version)</span>
+                                        </t>
+                                        <a t-else="" t-attf-href="/dsl/#{v.id}">
+                                            <t t-out="v.acronym"/> <t t-out="v.version"/>
+                                        </a>
+                                    </span>
+                                    <span t-attf-class="badge text-capitalize bg-#{status_badges.get(v.status, 'secondary')}">
+                                        <t t-out="v.status"/>
+                                    </span>
+                                </li>
+                            </ul>
+                        </t>
+                    </div>
+                </div>
 
                 <!-- Metadata -->
                 <div class="card border-0 shadow-sm rounded-3 mb-4">
@@ -405,8 +504,24 @@
                             <t t-set="grp_files" t-value="dsl.file_ids.filtered(lambda f: f.file_type == grp['type'])"/>
                             <div class="mb-4">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h6 class="mb-1"><t t-out="grp['label']"/></h6>
-                                    <small class="text-muted"><t t-out="grp['hint']"/></small>
+                                    <div>
+                                        <h6 class="mb-1 d-inline-block"><t t-out="grp['label']"/></h6>
+                                        <span t-if="grp['type'] == 'grammar' and dsl.status != 'draft'"
+                                              class="badge bg-secondary ms-2">Read-only</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <a t-if="grp['type'] == 'grammar' and grp_files"
+                                           t-attf-href="/dsl/#{dsl.id}/grammar"
+                                           class="btn btn-sm btn-primary">
+                                            <i class="fa fa-pencil me-1"/>Open editor
+                                        </a>
+                                        <a t-if="grp['type'] == 'grammar' and not grp_files and can_edit_grammar"
+                                           t-attf-href="/dsl/#{dsl.id}/grammar"
+                                           class="btn btn-sm btn-primary">
+                                            <i class="fa fa-plus me-1"/>Create grammar
+                                        </a>
+                                        <small class="text-muted"><t t-out="grp['hint']"/></small>
+                                    </div>
                                 </div>
                                 <t t-if="grp_files">
                                     <ul class="list-group list-group-flush mb-2">
@@ -418,14 +533,16 @@
                                                 <span t-if="not f.is_enabled" class="badge bg-warning text-dark ms-2">Disabled</span>
                                             </span>
                                             <span class="text-nowrap">
-                                                <form t-attf-action="/dsl/#{dsl.id}/files/#{f.id}/toggle" method="post" class="d-inline">
+                                                <form t-if="grp['type'] != 'grammar' or can_edit_grammar"
+                                                      t-attf-action="/dsl/#{dsl.id}/files/#{f.id}/toggle" method="post" class="d-inline">
                                                     <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                                                     <button type="submit" class="btn btn-sm btn-link p-1"
                                                             t-att-title="'Disable' if f.is_enabled else 'Enable'">
                                                         <i t-attf-class="fa #{'fa-toggle-on text-success' if f.is_enabled else 'fa-toggle-off text-muted'} fa-lg"/>
                                                     </button>
                                                 </form>
-                                                <form t-attf-action="/dsl/#{dsl.id}/files/#{f.id}/delete" method="post" class="d-inline">
+                                                <form t-if="grp['type'] != 'grammar' or can_edit_grammar"
+                                                      t-attf-action="/dsl/#{dsl.id}/files/#{f.id}/delete" method="post" class="d-inline">
                                                     <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                                                     <button type="submit" class="btn btn-sm btn-link text-danger p-1" title="Delete file"
                                                             onclick="return confirm('Delete this file?');">
@@ -436,7 +553,7 @@
                                         </li>
                                     </ul>
                                 </t>
-                                <t t-if="not (grp['single'] and grp_files)">
+                                <t t-if="not (grp['single'] and grp_files) and (grp['type'] != 'grammar' or can_edit_grammar)">
                                     <form t-attf-action="/dsl/#{dsl.id}/files/add" method="post"
                                           enctype="multipart/form-data" class="d-flex flex-wrap align-items-center gap-2">
                                         <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
@@ -448,8 +565,8 @@
                                         </button>
                                     </form>
                                 </t>
-                                <t t-if="grp['single'] and grp_files">
-                                    <small class="text-muted">Delete the current grammar file to upload a replacement.</small>
+                                <t t-if="grp['single'] and grp_files and can_edit_grammar">
+                                    <small class="text-muted">Edit this grammar in the Grammar Editor, or delete it to upload a replacement.</small>
                                 </t>
                             </div>
                         </t>

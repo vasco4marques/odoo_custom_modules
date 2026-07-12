@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Backend access to the portal Grammar Editor; no duplicate editor. -->
+    <record id="view_itlingo_dsl_form_grammar_editor" model="ir.ui.view">
+        <field name="name">itlingo.dsl.form.grammar.editor</field>
+        <field name="model">itlingo.dsl</field>
+        <field name="inherit_id" ref="itlingo_dsl.view_itlingo_dsl_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_open_grammar_editor" type="object"
+                        string="Open Grammar Editor" icon="fa-code"
+                        invisible="not id"
+                        help="Opens the DSL-scoped Grammar Editor on the portal."/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

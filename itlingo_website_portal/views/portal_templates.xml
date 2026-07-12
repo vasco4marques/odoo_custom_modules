@@ -556,11 +556,17 @@
             <li t-if="page_name == 'dsl_new'" class="breadcrumb-item active">
                 New
             </li>
-            <li t-if="page_name in ('dsl_edit', 'dsl_view')" class="breadcrumb-item">
+            <li t-if="page_name in ('dsl_edit', 'dsl_view', 'dsl_grammar_editor')" class="breadcrumb-item">
                 <a href="/dsl">DSLs</a>
             </li>
             <li t-if="page_name in ('dsl_edit', 'dsl_view')" class="breadcrumb-item active text-truncate">
                 <t t-out="dsl.acronym"/>
+            </li>
+            <li t-if="page_name == 'dsl_grammar_editor'" class="breadcrumb-item text-truncate">
+                <a t-attf-href="/dsl/#{dsl.id}"><t t-out="dsl.acronym"/></a>
+            </li>
+            <li t-if="page_name == 'dsl_grammar_editor'" class="breadcrumb-item active">
+                Grammar
             </li>
         </xpath>
     </template>

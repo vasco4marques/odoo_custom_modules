@@ -1,0 +1,30 @@
+{
+  "name": "itlingo-grammar-editor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@codingame/monaco-vscode-editor-api": "25.1.2",
+    "@codingame/monaco-vscode-files-service-override": "25.1.2",
+    "langium": "4.3.1",
+    "monaco-languageclient": "10.7.0",
+    "vscode-languageserver": "10.0.1",
+    "vscode-languageserver-protocol": "3.18.2"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "vite": "8.1.4",
+    "vitest": "4.1.10"
+  },
+  "overrides": {
+    "dompurify": "3.4.11"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

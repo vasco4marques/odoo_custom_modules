@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="portal_dsl_grammar_editor" name="DSL Grammar Editor">
+        <t t-call="portal.portal_layout">
+            <t t-set="additional_title">Grammar Editor</t>
+            <link rel="stylesheet"
+                  t-attf-href="/itlingo_website_portal/static/dist/grammar-editor/grammar-editor.css?v=#{grammar_asset_version}"/>
+            <div id="wrap" class="oe_structure">
+                <section class="itlingo-grammar-page py-3" data-name="Grammar Editor">
+                    <div class="container-fluid px-3 px-lg-4">
+                        <div id="itlingo-grammar-editor"
+                             class="itlingo-grammar-shell"
+                             t-att-data-dsl-id="dsl.id"
+                             t-att-data-can-edit="'true' if can_edit_grammar else 'false'">
+                            <header class="itlingo-grammar-toolbar">
+                                <div class="d-flex align-items-center gap-3 min-w-0">
+                                    <a t-attf-href="/dsl/#{dsl.id}"
+                                       class="btn btn-sm btn-outline-secondary flex-shrink-0">
+                                        <i class="fa fa-arrow-left me-1"/>Back to DSL
+                                    </a>
+                                    <div class="text-truncate">
+                                        <h1 class="h5 mb-0 text-truncate">
+                                            <t t-out="dsl.acronym"/> <t t-out="dsl.version"/> / Grammar
+                                        </h1>
+                                        <small class="text-muted">Single-file Langium grammar</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-wrap align-items-center gap-2"
+                                     role="toolbar" aria-label="Grammar editor actions">
+                                    <span data-grammar-server-status="true"
+                                          class="itlingo-grammar-server-status text-muted"
+                                          role="status" aria-live="polite">Server: Starting…</span>
+                                    <button type="button" data-grammar-server-restart="true"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            aria-label="Restart the Langium language service"
+                                            disabled="disabled">
+                                        <i class="fa fa-refresh me-1" aria-hidden="true"/>Restart
+                                    </button>
+                                    <span data-grammar-validity="true"
+                                          class="itlingo-grammar-validity text-muted"
+                                          role="status" aria-live="polite">Not validated</span>
+                                    <button type="button" data-grammar-validate="true"
+                                            class="btn btn-sm btn-outline-primary"
+                                            aria-label="Validate the grammar with the Langium language service"
+                                            disabled="disabled">
+                                        <i class="fa fa-check me-1" aria-hidden="true"/>Validate
+                                    </button>
+                                    <span data-grammar-status="true"
+                                          class="itlingo-grammar-save-status text-muted"
+                                          role="status" aria-live="polite">Loading…</span>
+                                    <button t-if="can_edit_grammar" type="button" data-grammar-save="true"
+                                            class="btn btn-sm btn-primary"
+                                            aria-label="Save the grammar to this DSL"
+                                            aria-keyshortcuts="Control+S">
+                                        <i class="fa fa-save me-1" aria-hidden="true"/>Save
+                                    </button>
+                                </div>
+                            </header>
+                            <div data-grammar-error="true" class="alert alert-danger d-none m-3" role="alert"/>
+                            <div t-if="not can_edit_grammar" class="alert alert-info m-3 mb-0" role="note">
+                                <i class="fa fa-lock me-1" aria-hidden="true"/>
+                                This DSL version is <b t-out="dsl.status"/>, so its grammar is shown
+                                read-only. You can inspect the source and its diagnostics, but only
+                                draft DSL versions can be edited.
+                            </div>
+                            <div class="itlingo-grammar-filebar">
+                                <i class="fa fa-file-code-o me-2" aria-hidden="true"/>
+                                <span data-grammar-filename="true">Loading…</span>
+                                <span t-if="not can_edit_grammar" class="badge bg-secondary ms-2">Read-only</span>
+                            </div>
+                            <div data-grammar-editor="true" class="itlingo-grammar-editor"
+                                 aria-label="Langium grammar source editor"/>
+                            <section class="itlingo-grammar-problems" aria-label="Grammar problems">
+                                <h2 data-grammar-problems-summary="true"
+                                    class="itlingo-grammar-problems-header mb-0"
+                                    aria-live="polite">Problems: No problems</h2>
+                                <div data-grammar-problems="true"
+                                     class="itlingo-grammar-problems-list" role="list"
+                                     aria-label="Reported grammar problems"/>
+                            </section>
+                            <p class="itlingo-grammar-scope-note mb-0">
+                                Save and Validate only check this Langium grammar file. They do not
+                                generate or deploy a parser, validators, or editor support for
+                                documents written in this DSL — the templating and ITOI parsers are
+                                built and deployed separately.
+                            </p>
+                            <noscript>
+                                <div class="alert alert-warning m-3">
+                                    JavaScript is required to use the Grammar Editor.
+                                </div>
+                            </noscript>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <script type="module"
+                    t-attf-src="/itlingo_website_portal/static/dist/grammar-editor/grammar-editor.js?v=#{grammar_asset_version}"></script>
+        </t>
+    </template>
+
+</odoo>

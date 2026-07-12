@@ -1,0 +1,4374 @@
+import { a as e, n as t } from "./rolldown-runtime-B1bRi_D7.js";
+import { $C as n, $O as r, $o as i, $w as a, AA as o, AO as s, A_ as c, Ab as l, Al as u, Ap as d, As as f, At as ee, Aw as p, Bb as m, Bs as h, CA as g, CD as te, Co as ne, Cp as re, Cs as ie, DD as ae, Dj as oe, Dt as se, Ej as _, Em as ce, Es as le, Fa as ue, Fb as de, Fd as fe, Fs as v, Ft as pe, Fw as me, GC as he, Ga as ge, Gm as _e, Gs as ve, HO as ye, Hi as be, Hs as xe, IC as y, Ib as Se, Ik as Ce, Is as b, It as we, JC as Te, JT as Ee, Jo as De, Js as Oe, Jy as ke, KC as Ae, Ka as je, Kg as Me, Kj as Ne, Ks as Pe, Kw as Fe, LC as Ie, Lb as Le, Ld as Re, Ls as x, MA as ze, Md as Be, Ml as Ve, Ms as He, Mt as Ue, NC as We, Nb as Ge, Nl as Ke, Ns as S, Nt as qe, OO as C, Ob as w, Og as Je, Ok as Ye, Om as Xe, Op as Ze, Os as T, Ot as Qe, PC as $e, PM as et, Pa as tt, Pb as nt, Pl as rt, Ps as it, Pt as at, QC as ot, QT as st, Qh as ct, Qp as lt, Qr as ut, Qs as E, Qw as D, RA as dt, RC as ft, Rk as pt, Rs as mt, Sm as ht, So as gt, Ss as _t, TA as O, Tj as k, Tp as vt, Ts as A, UA as yt, Ua as bt, Ui as xt, Uj as St, Vb as Ct, Vs as wt, WC as j, Wa as Tt, Ws as Et, Ww as M, XC as Dt, Xo as Ot, Xs as kt, Xw as At, Xy as jt, YC as Mt, YO as Nt, Yo as Pt, Ys as Ft, Yw as It, ZC as Lt, Zs as Rt, _A as N, __ as zt, _j as Bt, _p as Vt, _s as P, ad as Ht, bM as Ut, b_ as Wt, bs as Gt, bw as Kt, cD as qt, cN as Jt, cT as Yt, cc as Xt, cg as Zt, ci as Qt, cs as $t, dA as en, dE as tn, dN as nn, db as rn, di as an, dj as on, dv as sn, dy as cn, eN as ln, eT as un, e_ as dn, ec as F, em as fn, eu as pn, ew as mn, fA as hn, fE as gn, fN as _n, fT as I, fb as vn, fi as yn, gi as bn, gp as xn, gs as Sn, gw as Cn, hc as wn, hi as Tn, hj as En, hs as Dn, hw as On, iE as kn, ih as An, ij as jn, ir as Mn, iu as Nn, jA as Pn, jd as Fn, jk as In, jl as Ln, jm as Rn, js as L, jt as zn, kO as Bn, kb as R, kk as Vn, ks as z, kt as Hn, la as Un, lv as Wn, mA as B, mb as Gn, mc as Kn, n as qn, nA as Jn, nc as Yn, nj as Xn, nu as Zn, nv as Qn, nw as $n, oN as er, oc as tr, or as nr, ow as rr, pN as ir, pT as ar, pb as or, pi as sr, pj as cr, pp as lr, pw as ur, py as dr, qC as fr, qg as pr, qo as mr, qs as hr, qw as V, r as gr, rT as _r, rc as vr, rd as yr, rh as br, ri as xr, rr as Sr, rs as Cr, rv as wr, sA as H, si as Tr, sr as Er, sw as Dr, tA as U, tE as Or, tN as kr, t_ as Ar, tm as jr, tu as Mr, tw as Nr, uD as Pr, uE as Fr, ua as Ir, vD as Lr, v_ as W, vg as Rr, wD as zr, ww as Br, xD as Vr, xm as Hr, xs as Ur, yA as Wr, yD as Gr, ys as Kr, zC as qr, zb as Jr, zs as Yr, zw as Xr } from "./standaloneServices-C51B94Xh.js";
+import { $t as Zr, A as Qr, B as $r, C as ei, D as ti, E as ni, G as ri, Gt as ii, I as ai, Kt as oi, L as si, Lt as ci, O as li, Ot as ui, Pt as di, R as fi, S as pi, T as mi, U as hi, W as gi, Z as _i, _ as vi, _t as yi, bt as bi, c as xi, d as Si, et as Ci, f as wi, g as Ti, h as Ei, i as Di, j as Oi, k as ki, kt as Ai, l as ji, m as Mi, p as Ni, r as Pi, rt as Fi, s as Ii, tt as Li, u as G, vt as Ri, w as zi, x as Bi, y as Vi, yt as Hi, z as Ui } from "./filesConfigurationService-CxZOIrXS.js";
+//#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/platform/remote/common/remoteHosts.js
+function Wi(e) {
+	return e.scheme === I.vscodeRemote ? e.authority : void 0;
+}
+function Gi(e) {
+	if (!e) return;
+	let t = e.indexOf("+");
+	return t < 0 ? e : e.substr(0, t);
+}
+var Ki = t((() => {
+	ar();
+}));
+//#endregion
+//#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/platform/extensions/common/extensions.js
+function qi(e, t) {
+	if (t) {
+		let n = `onResolveRemoteAuthority:${Gi(t)}`;
+		return !!e.activationEvents?.includes(n);
+	}
+	return !1;
+}
+function Ji(e) {
+	return e.map((e) => {
+		let [t, n] = e.split("@");
+		return {
+			proposalName: t,
+			version: n ? parseInt(n) : void 0
+		};
+	});
+}
+function Yi(e) {
+	return e.map((e) => e.split("@")[0]);
+}
+var Xi, Zi, Qi, $i, ea, ta, K, q, na, ra, ia, aa = t((() => {
+	r(), Ki(), Xi = "extensions.user.cache", Zi = "extensions.builtin.cache", Qi = "undefined_publisher", $i = [
+		"ui",
+		"workspace",
+		"web"
+	], ea = [
+		"AI",
+		"Azure",
+		"Chat",
+		"Data Science",
+		"Debuggers",
+		"Extension Packs",
+		"Education",
+		"Formatters",
+		"Keymaps",
+		"Language Packs",
+		"Linters",
+		"Machine Learning",
+		"Notebooks",
+		"Programming Languages",
+		"SCM Providers",
+		"Snippets",
+		"Testing",
+		"Themes",
+		"Visualization",
+		"Other"
+	], (function(e) {
+		e[e.System = 0] = "System", e[e.User = 1] = "User";
+	})(ta ||= {}), (function(e) {
+		e.WIN32_X64 = "win32-x64", e.WIN32_ARM64 = "win32-arm64", e.LINUX_X64 = "linux-x64", e.LINUX_ARM64 = "linux-arm64", e.LINUX_ARMHF = "linux-armhf", e.ALPINE_X64 = "alpine-x64", e.ALPINE_ARM64 = "alpine-arm64", e.DARWIN_X64 = "darwin-x64", e.DARWIN_ARM64 = "darwin-arm64", e.WEB = "web", e.UNIVERSAL = "universal", e.UNKNOWN = "unknown", e.UNDEFINED = "undefined";
+	})(K ||= {}), q = class {
+		constructor(e) {
+			this.value = e, this._lower = e.toLowerCase();
+		}
+		static equals(e, t) {
+			return e == null ? t == null : t == null ? !1 : typeof e == "string" || typeof t == "string" ? ye(typeof e == "string" ? e : e.value, typeof t == "string" ? t : t.value) : e._lower === t._lower;
+		}
+		static toKey(e) {
+			return typeof e == "string" ? e.toLowerCase() : e._lower;
+		}
+	}, na = class {
+		get size() {
+			return this._set.size;
+		}
+		constructor(e) {
+			if (this._set = /* @__PURE__ */ new Set(), e) for (let t of e) this.add(t);
+		}
+		add(e) {
+			this._set.add(q.toKey(e));
+		}
+		delete(e) {
+			return this._set.delete(q.toKey(e));
+		}
+		has(e) {
+			return this._set.has(q.toKey(e));
+		}
+	}, ra = class {
+		constructor() {
+			this._map = /* @__PURE__ */ new Map();
+		}
+		clear() {
+			this._map.clear();
+		}
+		delete(e) {
+			this._map.delete(q.toKey(e));
+		}
+		get(e) {
+			return this._map.get(q.toKey(e));
+		}
+		has(e) {
+			return this._map.has(q.toKey(e));
+		}
+		set(e, t) {
+			this._map.set(q.toKey(e), t);
+		}
+		values() {
+			return this._map.values();
+		}
+		forEach(e) {
+			this._map.forEach(e);
+		}
+		[Symbol.iterator]() {
+			return this._map[Symbol.iterator]();
+		}
+	}, ia = class extends Error {
+		constructor(e, t, n) {
+			super(`Error in extension ${q.toKey(e)}: ${n ?? t.message}`, { cause: t }), this.name = "ExtensionError", this.extension = e;
+		}
+	};
+}));
+//#endregion
+//#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/common/contextkeys.js
+function oa(e) {
+	return `view.${e}.visible`;
+}
+function sa(e, t, n) {
+	if (!t) {
+		e.set("");
+		return;
+	}
+	let r = ca(t, n);
+	e.set(r.join(","));
+}
+function ca(e, t) {
+	if (e.resource?.scheme === I.untitled && e.editorId !== di.id) return [];
+	if (e instanceof Li) {
+		let n = ca(e.original, t), r = new Set(ca(e.modified, t));
+		return n.filter((e) => r.has(e));
+	}
+	return e.resource ? t.getEditors(e.resource).map((e) => e.id) : [];
+}
+var J, la, ua, da, fa, pa, ma, ha, ga, _a, va, ya, ba, xa, Sa, Ca, wa, Ta, Ea, Da, Oa, ka, Aa, ja, Ma, Na, Pa, Fa, Ia, La, Ra, za, Ba, Va, Ha, Ua, Wa, Ga, Ka, qa, Ja, Ya, Xa, Za, Qa, $a, eo, to, no, ro, io, ao, oo, so, co, lo, uo, fo, po, mo, ho, go, _o, vo, yo, bo, xo, So, Co, wo, To, Eo, Do = t((() => {
+	l(), O(), k(), Bn(), Gn(), D(), wr(), Sn(), nt(), ar(), Zr(), Fi(), la = new C("workbenchState", void 0, {
+		type: "string",
+		description: _(3975, "The kind of workspace opened in the window, either 'empty' (no workspace), 'folder' (single folder) or 'workspace' (multi-root workspace)")
+	}), ua = new C("workspaceFolderCount", 0, _(3976, "The number of root folders in the workspace")), da = new C("openFolderWorkspaceSupport", !0, !0), fa = new C("enterMultiRootWorkspaceSupport", !0, !0), pa = new C("emptyWorkspaceSupport", !0, !0), ma = new C("dirtyWorkingCopies", !1, _(3977, "Whether there are any working copies with unsaved changes")), ha = new C("remoteName", "", _(3978, "The name of the remote the window is connected to or an empty string if not connected to any remote")), ga = new C("virtualWorkspace", "", _(3979, "The scheme of the current workspace is from a virtual file system or an empty string.")), _a = new C("temporaryWorkspace", !1, _(3980, "The scheme of the current workspace is from a temporary file system.")), va = new C("hasWebFileSystemAccess", !1, !0), ya = new C("embedderIdentifier", void 0, _(3981, "The identifier of the embedder according to the product service, if one is defined")), ba = new C("inAutomation", !1, _(3982, "Whether VS Code is running under automation/smoke test")), xa = new C("isSandboxWorkspace", !1, !0), Sa = new C("isFullscreen", !1, _(3983, "Whether the main window is in fullscreen mode")), Ca = new C("isAuxiliaryWindowFocusedContext", !1, _(3984, "Whether an auxiliary window is focused")), wa = new C("isAuxiliaryWindow", !1, _(3985, "Window is an auxiliary window")), Ta = new C("activeEditorIsDirty", !1, _(3986, "Whether the active editor has unsaved changes")), Ea = new C("activeEditorIsNotPreview", !1, _(3987, "Whether the active editor is not in preview mode")), Da = new C("activeEditorIsFirstInGroup", !1, _(3988, "Whether the active editor is the first one in its group")), Oa = new C("activeEditorIsLastInGroup", !1, _(3989, "Whether the active editor is the last one in its group")), ka = new C("activeEditorIsPinned", !1, _(3990, "Whether the active editor is pinned")), Aa = new C("activeEditorIsReadonly", !1, _(3991, "Whether the active editor is read-only")), ja = new C("activeCompareEditorCanSwap", !1, _(3992, "Whether the active compare editor can swap sides")), Ma = new C("activeEditorCanToggleReadonly", !0, _(3993, "Whether the active editor can toggle between being read-only or writeable")), Na = new C("activeEditorCanRevert", !1, _(3994, "Whether the active editor can revert")), Pa = new C("activeEditorCanSplitInGroup", !0), Fa = new C("activeEditor", null, {
+		type: "string",
+		description: _(3995, "The identifier of the active editor")
+	}), Ia = new C("activeEditorAvailableEditorIds", "", _(3996, "The available editor identifiers that are usable for the active editor")), La = new C("textCompareEditorVisible", !1, _(3997, "Whether a text compare editor is visible")), Ra = new C("textCompareEditorActive", !1, _(3998, "Whether a text compare editor is active")), za = new C("sideBySideEditorActive", !1, _(3999, "Whether a side by side editor is active")), Ba = new C("groupEditorsCount", 0, _(4e3, "The number of opened editor groups")), Va = new C("activeEditorGroupEmpty", !1, _(4001, "Whether the active editor group is empty")), Ha = new C("activeEditorGroupIndex", 0, _(4002, "The index of the active editor group")), Ua = new C("activeEditorGroupLast", !1, _(4003, "Whether the active editor group is the last group")), Wa = new C("activeEditorGroupLocked", !1, _(4004, "Whether the active editor group is locked")), Ga = new C("multipleEditorGroups", !1, _(4005, "Whether there are multiple editor groups opened")), Ka = new C("multipleEditorsSelectedInGroup", !1, _(4006, "Whether multiple editors have been selected in an editor group")), qa = new C("twoEditorsSelectedInGroup", !1, _(4007, "Whether exactly two editors have been selected in an editor group")), Ja = new C("SelectedEditorsInGroupFileOrUntitledResourceContextKey", !0, _(4008, "Whether all selected editors in a group have a file or untitled resource associated")), Ya = new C("editorPartMultipleEditorGroups", !1, _(4009, "Whether there are multiple editor groups opened in an editor part")), Xa = new C("editorPartMaximizedEditorGroup", !1, _(4010, "Editor Part has a maximized group")), Za = new C("editorIsOpen", !1, _(4011, "Whether an editor is open")), Qa = new C("inZenMode", !1, _(4012, "Whether Zen mode is enabled")), $a = new C("isCenteredLayout", !1, _(4013, "Whether centered layout is enabled for the main editor")), eo = new C("splitEditorsVertically", !1, _(4014, "Whether editors split vertically")), to = new C("mainEditorAreaVisible", !0, _(4015, "Whether the editor area in the main window is visible")), no = new C("editorTabsVisible", !0, _(4016, "Whether editor tabs are visible")), ro = new C("sideBarVisible", !1, _(4017, "Whether the sidebar is visible")), io = new C("sideBarFocus", !1, _(4018, "Whether the sidebar has keyboard focus")), ao = new C("activeViewlet", "", _(4019, "The identifier of the active viewlet")), oo = new C("statusBarFocused", !1, _(4020, "Whether the status bar has keyboard focus")), so = new C("titleBarStyle", "custom", _(4021, "Style of the window title bar")), co = new C("titleBarVisible", !1, _(4022, "Whether the title bar is visible")), lo = new C("isCompactTitleBar", !1, _(4023, "Title bar is in compact mode")), uo = new C("bannerFocused", !1, _(4024, "Whether the banner has keyboard focus")), fo = new C("notificationFocus", !0, _(4025, "Whether a notification has keyboard focus")), po = new C("notificationCenterVisible", !1, _(4026, "Whether the notifications center is visible")), mo = new C("notificationToastsVisible", !1, _(4027, "Whether a notification toast is visible")), ho = new C("activeAuxiliary", "", _(4028, "The identifier of the active auxiliary panel")), go = new C("auxiliaryBarFocus", !1, _(4029, "Whether the auxiliary bar has keyboard focus")), _o = new C("auxiliaryBarVisible", !1, _(4030, "Whether the auxiliary bar is visible")), vo = new C("auxiliaryBarMaximized", !1, _(4031, "Whether the auxiliary bar is maximized")), yo = new C("activePanel", "", _(4032, "The identifier of the active panel")), bo = new C("panelFocus", !1, _(4033, "Whether the panel has keyboard focus")), xo = new C("panelPosition", "bottom", _(4034, "The position of the panel, always 'bottom'")), So = new C("panelAlignment", "center", _(4035, "The alignment of the panel, either 'center', 'left', 'right' or 'justify'")), Co = new C("panelVisible", !1, _(4036, "Whether the panel is visible")), wo = new C("panelMaximized", !1, _(4037, "Whether the panel is maximized")), To = new C("focusedView", "", _(4038, "The identifier of the view that has keyboard focus")), Eo = class {
+		static {
+			J = this;
+		}
+		static {
+			this.Scheme = new C("resourceScheme", void 0, {
+				type: "string",
+				description: _(4039, "The scheme of the resource")
+			});
+		}
+		static {
+			this.Filename = new C("resourceFilename", void 0, {
+				type: "string",
+				description: _(4040, "The file name of the resource")
+			});
+		}
+		static {
+			this.Dirname = new C("resourceDirname", void 0, {
+				type: "string",
+				description: _(4041, "The folder name the resource is contained in")
+			});
+		}
+		static {
+			this.Path = new C("resourcePath", void 0, {
+				type: "string",
+				description: _(4042, "The full path of the resource")
+			});
+		}
+		static {
+			this.LangId = new C("resourceLangId", void 0, {
+				type: "string",
+				description: _(4043, "The language identifier of the resource")
+			});
+		}
+		static {
+			this.Resource = new C("resource", void 0, {
+				type: "URI",
+				description: _(4044, "The full value of the resource including scheme and path")
+			});
+		}
+		static {
+			this.Extension = new C("resourceExtname", void 0, {
+				type: "string",
+				description: _(4045, "The extension name of the resource")
+			});
+		}
+		static {
+			this.HasResource = new C("resourceSet", void 0, {
+				type: "boolean",
+				description: _(4046, "Whether a resource is present or not")
+			});
+		}
+		static {
+			this.IsFileSystemResource = new C("isFileSystemResource", void 0, {
+				type: "boolean",
+				description: _(4047, "Whether the resource is backed by a file system provider")
+			});
+		}
+		constructor(e, t, n, r) {
+			this._contextKeyService = e, this._fileService = t, this._languageService = n, this._modelService = r, this._disposables = new N(), this._schemeKey = J.Scheme.bindTo(this._contextKeyService), this._filenameKey = J.Filename.bindTo(this._contextKeyService), this._dirnameKey = J.Dirname.bindTo(this._contextKeyService), this._pathKey = J.Path.bindTo(this._contextKeyService), this._langIdKey = J.LangId.bindTo(this._contextKeyService), this._resourceKey = J.Resource.bindTo(this._contextKeyService), this._extensionKey = J.Extension.bindTo(this._contextKeyService), this._hasResource = J.HasResource.bindTo(this._contextKeyService), this._isFileSystemResource = J.IsFileSystemResource.bindTo(this._contextKeyService), this._disposables.add(t.onDidChangeFileSystemProviderRegistrations(() => {
+				let e = this.get();
+				this._isFileSystemResource.set(!!(e && t.hasProvider(e)));
+			})), this._disposables.add(r.onModelAdded((e) => {
+				un(e.uri, this.get()) && this._setLangId();
+			})), this._disposables.add(r.onModelLanguageChanged((e) => {
+				un(e.model.uri, this.get()) && this._setLangId();
+			}));
+		}
+		dispose() {
+			this._disposables.dispose();
+		}
+		_setLangId() {
+			let e = this.get();
+			if (!e) {
+				this._langIdKey.set(null);
+				return;
+			}
+			let t = this._modelService.getModel(e)?.getLanguageId() ?? this._languageService.guessLanguageIdByFilepathOrFirstLine(e);
+			this._langIdKey.set(t);
+		}
+		set(e) {
+			e ??= void 0, !un(this._value, e) && (this._value = e, this._contextKeyService.bufferChangeEvents(() => {
+				this._resourceKey.set(e ? e.toString() : null), this._schemeKey.set(e ? e.scheme : null), this._filenameKey.set(e ? M(e) : null), this._dirnameKey.set(e ? this.uriToPath(Fe(e)) : null), this._pathKey.set(e ? this.uriToPath(e) : null), this._setLangId(), this._extensionKey.set(e ? At(e) : null), this._hasResource.set(!!e), this._isFileSystemResource.set(e ? this._fileService.hasProvider(e) : !1);
+			}));
+		}
+		uriToPath(e) {
+			return e.scheme === I.file ? e.fsPath : e.path;
+		}
+		reset() {
+			this._value = void 0, this._contextKeyService.bufferChangeEvents(() => {
+				this._resourceKey.reset(), this._schemeKey.reset(), this._filenameKey.reset(), this._dirnameKey.reset(), this._pathKey.reset(), this._langIdKey.reset(), this._extensionKey.reset(), this._hasResource.reset(), this._isFileSystemResource.reset();
+			});
+		}
+		get() {
+			return this._value;
+		}
+	}, Eo = J = w([
+		R(0, or),
+		R(1, Dn),
+		R(2, Qn),
+		R(3, Ge)
+	], Eo);
+})), Oo, ko = t((() => {
+	m(), Oo = Jr("extensionResourceLoaderService");
+})), Ao, jo = t((() => {
+	m(), Ao = Jr("productService");
+})), Mo, No = t((() => {
+	k(), (function(e) {
+		e.Extensions = "Extensions", e.IntegratedTerminal = "IntegratedTerminal", e.InteractiveSession = "InteractiveSession", e.Telemetry = "Telemetry", e.Update = "Update";
+	})(Mo ||= {});
+}));
+//#endregion
+//#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/platform/extensionManagement/common/extensionManagement.js
+function Po(e, t) {
+	switch (e) {
+		case Xn.Windows: return t === "x64" ? K.WIN32_X64 : t === "arm64" ? K.WIN32_ARM64 : K.UNKNOWN;
+		case Xn.Linux: return t === "x64" ? K.LINUX_X64 : t === "arm64" ? K.LINUX_ARM64 : t === "arm" ? K.LINUX_ARMHF : K.UNKNOWN;
+		case "alpine": return t === "x64" ? K.ALPINE_X64 : t === "arm64" ? K.ALPINE_ARM64 : K.UNKNOWN;
+		case Xn.Mac: return t === "x64" ? K.DARWIN_X64 : t === "arm64" ? K.DARWIN_ARM64 : K.UNKNOWN;
+		case Xn.Web: return K.WEB;
+	}
+}
+function Fo(e) {
+	let t = e;
+	return !!t && typeof t == "object" && typeof t.id == "string" && (!t.uuid || typeof t.uuid == "string");
+}
+var Io, Lo, Ro, zo, Bo, Vo, Ho, Uo, Wo, Go, Ko, qo, Jo = t((() => {
+	jn(), No(), k(), c(), aa(), F(), vn(), Io = "^([a-z0-9A-Z][a-z0-9-A-Z]*)\\.([a-z0-9A-Z][a-z0-9-A-Z]*)$", Lo = new RegExp(Io), (function(e) {
+		e.COMMAND = "command", e.SETTINGS_SYNC = "settingsSync";
+	})(Ro ||= {}), (function(e) {
+		e.NoneOrRelevance = "NoneOrRelevance", e.LastUpdatedDate = "LastUpdatedDate", e.Title = "Title", e.PublisherName = "PublisherName", e.InstallCount = "InstallCount", e.PublishedDate = "PublishedDate", e.AverageRating = "AverageRating", e.WeightedRating = "WeightedRating";
+	})(zo ||= {}), (function(e) {
+		e[e.Default = 0] = "Default", e[e.Ascending = 1] = "Ascending", e[e.Descending = 2] = "Descending";
+	})(Bo ||= {}), (function(e) {
+		e.Category = "Category", e.ExtensionId = "ExtensionId", e.ExtensionName = "ExtensionName", e.ExcludeWithFlags = "ExcludeWithFlags", e.Featured = "Featured", e.SearchText = "SearchText", e.Tag = "Tag", e.Target = "Target";
+	})(Vo ||= {}), (function(e) {
+		e.Install = "install", e.Uninstall = "uninstall";
+	})(Ho ||= {}), (function(e) {
+		e[e.None = 1] = "None", e[e.Install = 2] = "Install", e[e.Update = 3] = "Update", e[e.Migrate = 4] = "Migrate";
+	})(Uo ||= {}), (function(e) {
+		e.Timeout = "Timeout", e.Cancelled = "Cancelled", e.ClientError = "ClientError", e.ServerError = "ServerError", e.Failed = "Failed", e.DownloadFailedWriting = "DownloadFailedWriting", e.Offline = "Offline";
+	})(Wo ||= {}), (function(e) {
+		e.NotFound = "NotFound", e.Unsupported = "Unsupported", e.Deprecated = "Deprecated", e.Malicious = "Malicious", e.Incompatible = "Incompatible", e.IncompatibleApi = "IncompatibleApi", e.IncompatibleTargetPlatform = "IncompatibleTargetPlatform", e.ReleaseVersionNotFound = "ReleaseVersionNotFound", e.Invalid = "Invalid", e.Download = "Download", e.DownloadSignature = "DownloadSignature", e.DownloadFailedWriting = "DownloadFailedWriting", e.UpdateMetadata = "UpdateMetadata", e.Extract = "Extract", e.Scanning = "Scanning", e.ScanningExtension = "ScanningExtension", e.ReadRemoved = "ReadRemoved", e.UnsetRemoved = "UnsetRemoved", e.Delete = "Delete", e.Rename = "Rename", e.IntializeDefaultProfile = "IntializeDefaultProfile", e.AddToProfile = "AddToProfile", e.InstalledExtensionNotFound = "InstalledExtensionNotFound", e.PostInstall = "PostInstall", e.CorruptZip = "CorruptZip", e.IncompleteZip = "IncompleteZip", e.PackageNotSigned = "PackageNotSigned", e.SignatureVerificationInternal = "SignatureVerificationInternal", e.SignatureVerificationFailed = "SignatureVerificationFailed", e.NotAllowed = "NotAllowed", e.Gallery = "Gallery", e.Cancelled = "Cancelled", e.Unknown = "Unknown", e.Internal = "Internal";
+	})(Go ||= {}), (function(e) {
+		e.NotSigned = "NotSigned", e.Success = "Success", e.RequiredArgumentMissing = "RequiredArgumentMissing", e.InvalidArgument = "InvalidArgument", e.PackageIsUnreadable = "PackageIsUnreadable", e.UnhandledException = "UnhandledException", e.SignatureManifestIsMissing = "SignatureManifestIsMissing", e.SignatureManifestIsUnreadable = "SignatureManifestIsUnreadable", e.SignatureIsMissing = "SignatureIsMissing", e.SignatureIsUnreadable = "SignatureIsUnreadable", e.CertificateIsUnreadable = "CertificateIsUnreadable", e.SignatureArchiveIsUnreadable = "SignatureArchiveIsUnreadable", e.FileAlreadyExists = "FileAlreadyExists", e.SignatureArchiveIsInvalidZip = "SignatureArchiveIsInvalidZip", e.SignatureArchiveHasSameSignatureFile = "SignatureArchiveHasSameSignatureFile", e.PackageIntegrityCheckFailed = "PackageIntegrityCheckFailed", e.SignatureIsInvalid = "SignatureIsInvalid", e.SignatureManifestIsInvalid = "SignatureManifestIsInvalid", e.SignatureIntegrityCheckFailed = "SignatureIntegrityCheckFailed", e.EntryIsMissing = "EntryIsMissing", e.EntryIsTampered = "EntryIsTampered", e.Untrusted = "Untrusted", e.CertificateRevoked = "CertificateRevoked", e.SignatureIsNotValid = "SignatureIsNotValid", e.UnknownError = "UnknownError", e.PackageIsInvalidZip = "PackageIsInvalidZip", e.SignatureArchiveHasTooManyEntries = "SignatureArchiveHasTooManyEntries";
+	})(Ko ||= {}), oe(1829, "Extensions"), oe(1830, "Preferences"), qo = "extensions.allowed", rn.as(Wt.Configuration).registerConfiguration({
+		id: "extensions",
+		order: 30,
+		title: _(1831, "Extensions"),
+		type: "object",
+		properties: { [qo]: {
+			type: "object",
+			markdownDescription: _(1832, "Specify a list of extensions that are allowed to use. This helps maintain a secure and consistent development environment by restricting the use of unauthorized extensions. For more information on how to configure this setting, please visit the [Configure Allowed Extensions](https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions) section."),
+			default: "*",
+			defaultSnippets: [{
+				body: {},
+				description: _(1833, "No extensions are allowed.")
+			}, {
+				body: { "*": !0 },
+				description: _(1834, "All extensions are allowed.")
+			}],
+			scope: W.APPLICATION,
+			policy: {
+				name: "AllowedExtensions",
+				category: Mo.Extensions,
+				minimumVersion: "1.96",
+				localization: { description: {
+					key: "extensions.allowed.policy",
+					value: _(1835, "Specify a list of extensions that are allowed to use. This helps maintain a secure and consistent development environment by restricting the use of unauthorized extensions. More information: https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions")
+				} }
+			},
+			additionalProperties: !1,
+			patternProperties: {
+				"([a-z0-9A-Z][a-z0-9-A-Z]*)\\.([a-z0-9A-Z][a-z0-9-A-Z]*)$": { anyOf: [{
+					type: ["boolean", "string"],
+					enum: [
+						!0,
+						!1,
+						"stable"
+					],
+					description: _(1836, "Allow or disallow the extension."),
+					enumDescriptions: [
+						_(1837, "Extension is allowed."),
+						_(1838, "Extension is not allowed."),
+						_(1839, "Allow only stable versions of the extension.")
+					]
+				}, {
+					type: "array",
+					items: { type: "string" },
+					description: _(1840, "Allow or disallow specific versions of the extension. To specifcy a platform specific version, use the format `platform@1.2.3`, e.g. `win32-x64@1.2.3`. Supported platforms are `win32-x64`, `win32-arm64`, `linux-x64`, `linux-arm64`, `linux-armhf`, `alpine-x64`, `alpine-arm64`, `darwin-x64`, `darwin-arm64`")
+				}] },
+				"([a-z0-9A-Z][a-z0-9-A-Z]*)$": {
+					type: ["boolean", "string"],
+					enum: [
+						!0,
+						!1,
+						"stable"
+					],
+					description: _(1841, "Allow or disallow all extensions from the publisher."),
+					enumDescriptions: [
+						_(1842, "All extensions from the publisher are allowed."),
+						_(1843, "All extensions from the publisher are not allowed."),
+						_(1844, "Allow only stable versions of the extensions from the publisher.")
+					]
+				},
+				"\\*": {
+					type: "boolean",
+					enum: [!0, !1],
+					description: _(1845, "Allow or disallow all extensions."),
+					enumDescriptions: [_(1846, "Allow all extensions."), _(1847, "Disallow all extensions.")]
+				}
+			}
+		} }
+	});
+})), Yo, Xo = t((() => {
+	m(), Yo = Jr("IFileDecorationsService");
+})), Zo, Qo, $o = t((() => {
+	nn(), aa(), Zo = class {
+		constructor() {
+			this._generators = /* @__PURE__ */ new Map(), this._cache = /* @__PURE__ */ new WeakMap();
+		}
+		register(e, t) {
+			this._generators.set(e, t);
+		}
+		readActivationEvents(e) {
+			return this._cache.has(e) || this._cache.set(e, this._readActivationEvents(e)), this._cache.get(e);
+		}
+		createActivationEventsMap(e) {
+			let t = Object.create(null);
+			for (let n of e) {
+				let e = this.readActivationEvents(n);
+				e.length > 0 && (t[q.toKey(n.identifier)] = e);
+			}
+			return t;
+		}
+		_readActivationEvents(e) {
+			if (e.main === void 0 && e.browser === void 0) return [];
+			let t = Array.isArray(e.activationEvents) ? e.activationEvents.slice(0) : [];
+			for (let n = 0; n < t.length; n++) t[n] === "onUri" && (t[n] = `onUri:${q.toKey(e.identifier)}`);
+			if (!e.contributes) return t;
+			for (let n in e.contributes) {
+				let r = this._generators.get(n);
+				if (!r) continue;
+				let i = e.contributes[n], a = Array.isArray(i) ? i : [i];
+				try {
+					t.push(...r(a));
+				} catch (e) {
+					ir(e);
+				}
+			}
+			return t;
+		}
+	}, Qo = new Zo();
+})), es, ts = t((() => {
+	m(), es = Jr("extensionService");
+})), ns, rs = t((() => {
+	m(), ns = Jr("elevatedFileService");
+})), is, as = t((() => {
+	m(), is = Jr("paneCompositePartService");
+})), os, ss = t((() => {
+	os = Object.freeze({
+		activeComment: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.activeComment.d.ts" },
+		aiRelatedInformation: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.aiRelatedInformation.d.ts" },
+		aiSettingsSearch: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.aiSettingsSearch.d.ts" },
+		aiTextSearchProvider: {
+			proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.aiTextSearchProvider.d.ts",
+			version: 2
+		},
+		authIssuers: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.authIssuers.d.ts" },
+		authLearnMore: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.authLearnMore.d.ts" },
+		authProviderSpecific: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.authProviderSpecific.d.ts" },
+		authSession: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.authSession.d.ts" },
+		authenticationChallenges: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.authenticationChallenges.d.ts" },
+		canonicalUriProvider: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.canonicalUriProvider.d.ts" },
+		chatContextProvider: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.chatContextProvider.d.ts" },
+		chatEditing: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.chatEditing.d.ts" },
+		chatOutputRenderer: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.chatOutputRenderer.d.ts" },
+		chatParticipantAdditions: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.chatParticipantAdditions.d.ts" },
+		chatParticipantPrivate: {
+			proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.chatParticipantPrivate.d.ts",
+			version: 11
+		},
+		chatProvider: {
+			proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.chatProvider.d.ts",
+			version: 4
+		},
+		chatReferenceBinaryData: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.chatReferenceBinaryData.d.ts" },
+		chatReferenceDiagnostic: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.chatReferenceDiagnostic.d.ts" },
+		chatSessionsProvider: {
+			proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.chatSessionsProvider.d.ts",
+			version: 3
+		},
+		chatStatusItem: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.chatStatusItem.d.ts" },
+		chatTab: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.chatTab.d.ts" },
+		codeActionAI: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.codeActionAI.d.ts" },
+		codeActionRanges: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.codeActionRanges.d.ts" },
+		codiconDecoration: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.codiconDecoration.d.ts" },
+		commentReactor: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.commentReactor.d.ts" },
+		commentReveal: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.commentReveal.d.ts" },
+		commentThreadApplicability: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.commentThreadApplicability.d.ts" },
+		commentingRangeHint: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.commentingRangeHint.d.ts" },
+		commentsDraftState: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.commentsDraftState.d.ts" },
+		contribAccessibilityHelpContent: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribAccessibilityHelpContent.d.ts" },
+		contribCommentEditorActionsMenu: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribCommentEditorActionsMenu.d.ts" },
+		contribCommentPeekContext: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribCommentPeekContext.d.ts" },
+		contribCommentThreadAdditionalMenu: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribCommentThreadAdditionalMenu.d.ts" },
+		contribCommentsViewThreadMenus: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribCommentsViewThreadMenus.d.ts" },
+		contribDebugCreateConfiguration: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribDebugCreateConfiguration.d.ts" },
+		contribDiffEditorGutterToolBarMenus: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribDiffEditorGutterToolBarMenus.d.ts" },
+		contribEditSessions: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribEditSessions.d.ts" },
+		contribEditorContentMenu: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribEditorContentMenu.d.ts" },
+		contribLabelFormatterWorkspaceTooltip: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribLabelFormatterWorkspaceTooltip.d.ts" },
+		contribLanguageModelToolSets: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribLanguageModelToolSets.d.ts" },
+		contribMenuBarHome: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribMenuBarHome.d.ts" },
+		contribMergeEditorMenus: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribMergeEditorMenus.d.ts" },
+		contribMultiDiffEditorMenus: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribMultiDiffEditorMenus.d.ts" },
+		contribNotebookStaticPreloads: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribNotebookStaticPreloads.d.ts" },
+		contribRemoteHelp: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribRemoteHelp.d.ts" },
+		contribShareMenu: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribShareMenu.d.ts" },
+		contribSourceControlArtifactGroupMenu: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribSourceControlArtifactGroupMenu.d.ts" },
+		contribSourceControlArtifactMenu: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribSourceControlArtifactMenu.d.ts" },
+		contribSourceControlHistoryItemMenu: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribSourceControlHistoryItemMenu.d.ts" },
+		contribSourceControlHistoryTitleMenu: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribSourceControlHistoryTitleMenu.d.ts" },
+		contribSourceControlInputBoxMenu: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribSourceControlInputBoxMenu.d.ts" },
+		contribSourceControlTitleMenu: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribSourceControlTitleMenu.d.ts" },
+		contribStatusBarItems: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribStatusBarItems.d.ts" },
+		contribViewContainerTitle: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribViewContainerTitle.d.ts" },
+		contribViewsRemote: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribViewsRemote.d.ts" },
+		contribViewsWelcome: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.contribViewsWelcome.d.ts" },
+		customEditorMove: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.customEditorMove.d.ts" },
+		dataChannels: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.dataChannels.d.ts" },
+		debugVisualization: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.debugVisualization.d.ts" },
+		defaultChatParticipant: {
+			proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.defaultChatParticipant.d.ts",
+			version: 4
+		},
+		devDeviceId: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.devDeviceId.d.ts" },
+		diffCommand: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.diffCommand.d.ts" },
+		diffContentOptions: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.diffContentOptions.d.ts" },
+		documentFiltersExclusive: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.documentFiltersExclusive.d.ts" },
+		editSessionIdentityProvider: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.editSessionIdentityProvider.d.ts" },
+		editorHoverVerbosityLevel: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.editorHoverVerbosityLevel.d.ts" },
+		editorInsets: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.editorInsets.d.ts" },
+		embeddings: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.embeddings.d.ts" },
+		extensionRuntime: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.extensionRuntime.d.ts" },
+		extensionsAny: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.extensionsAny.d.ts" },
+		externalUriOpener: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.externalUriOpener.d.ts" },
+		fileSearchProvider: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.fileSearchProvider.d.ts" },
+		fileSearchProvider2: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.fileSearchProvider2.d.ts" },
+		findFiles2: {
+			proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.findFiles2.d.ts",
+			version: 2
+		},
+		findTextInFiles: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.findTextInFiles.d.ts" },
+		findTextInFiles2: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.findTextInFiles2.d.ts" },
+		fsChunks: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.fsChunks.d.ts" },
+		inlineCompletionsAdditions: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.inlineCompletionsAdditions.d.ts" },
+		interactive: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.interactive.d.ts" },
+		interactiveWindow: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.interactiveWindow.d.ts" },
+		ipc: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.ipc.d.ts" },
+		languageModelCapabilities: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.languageModelCapabilities.d.ts" },
+		languageModelProxy: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.languageModelProxy.d.ts" },
+		languageModelSystem: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.languageModelSystem.d.ts" },
+		languageModelThinkingPart: {
+			proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.languageModelThinkingPart.d.ts",
+			version: 1
+		},
+		languageModelToolResultAudience: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.languageModelToolResultAudience.d.ts" },
+		languageStatusText: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.languageStatusText.d.ts" },
+		mappedEditsProvider: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.mappedEditsProvider.d.ts" },
+		markdownAlertSyntax: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.markdownAlertSyntax.d.ts" },
+		mcpToolDefinitions: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.mcpToolDefinitions.d.ts" },
+		multiDocumentHighlightProvider: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.multiDocumentHighlightProvider.d.ts" },
+		nativeWindowHandle: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.nativeWindowHandle.d.ts" },
+		newSymbolNamesProvider: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.newSymbolNamesProvider.d.ts" },
+		notebookCellExecution: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.notebookCellExecution.d.ts" },
+		notebookControllerAffinityHidden: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.notebookControllerAffinityHidden.d.ts" },
+		notebookDeprecated: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.notebookDeprecated.d.ts" },
+		notebookExecution: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.notebookExecution.d.ts" },
+		notebookKernelSource: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.notebookKernelSource.d.ts" },
+		notebookLiveShare: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.notebookLiveShare.d.ts" },
+		notebookMessaging: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.notebookMessaging.d.ts" },
+		notebookMime: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.notebookMime.d.ts" },
+		notebookReplDocument: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.notebookReplDocument.d.ts" },
+		notebookVariableProvider: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.notebookVariableProvider.d.ts" },
+		portsAttributes: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.portsAttributes.d.ts" },
+		profileContentHandlers: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.profileContentHandlers.d.ts" },
+		quickDiffProvider: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.quickDiffProvider.d.ts" },
+		quickInputButtonLocation: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.quickInputButtonLocation.d.ts" },
+		quickPickItemTooltip: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.quickPickItemTooltip.d.ts" },
+		quickPickSortByLabel: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.quickPickSortByLabel.d.ts" },
+		remoteCodingAgents: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.remoteCodingAgents.d.ts" },
+		resolvers: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.resolvers.d.ts" },
+		scmActionButton: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.scmActionButton.d.ts" },
+		scmArtifactProvider: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.scmArtifactProvider.d.ts" },
+		scmHistoryProvider: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.scmHistoryProvider.d.ts" },
+		scmMultiDiffEditor: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.scmMultiDiffEditor.d.ts" },
+		scmProviderOptions: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.scmProviderOptions.d.ts" },
+		scmSelectedProvider: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.scmSelectedProvider.d.ts" },
+		scmTextDocument: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.scmTextDocument.d.ts" },
+		scmValidation: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.scmValidation.d.ts" },
+		shareProvider: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.shareProvider.d.ts" },
+		speech: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.speech.d.ts" },
+		statusBarItemTooltip: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.statusBarItemTooltip.d.ts" },
+		tabInputMultiDiff: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.tabInputMultiDiff.d.ts" },
+		tabInputTextMerge: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.tabInputTextMerge.d.ts" },
+		taskExecutionTerminal: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.taskExecutionTerminal.d.ts" },
+		taskPresentationGroup: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.taskPresentationGroup.d.ts" },
+		taskProblemMatcherStatus: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.taskProblemMatcherStatus.d.ts" },
+		telemetry: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.telemetry.d.ts" },
+		terminalCompletionProvider: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.terminalCompletionProvider.d.ts" },
+		terminalDataWriteEvent: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.terminalDataWriteEvent.d.ts" },
+		terminalDimensions: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.terminalDimensions.d.ts" },
+		terminalExecuteCommandEvent: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.terminalExecuteCommandEvent.d.ts" },
+		terminalQuickFixProvider: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.terminalQuickFixProvider.d.ts" },
+		terminalSelection: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.terminalSelection.d.ts" },
+		terminalShellEnv: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.terminalShellEnv.d.ts" },
+		testObserver: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.testObserver.d.ts" },
+		testRelatedCode: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.testRelatedCode.d.ts" },
+		textDocumentChangeReason: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.textDocumentChangeReason.d.ts" },
+		textEditorDiffInformation: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.textEditorDiffInformation.d.ts" },
+		textSearchComplete2: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.textSearchComplete2.d.ts" },
+		textSearchProvider: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.textSearchProvider.d.ts" },
+		textSearchProvider2: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.textSearchProvider2.d.ts" },
+		timeline: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.timeline.d.ts" },
+		tokenInformation: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.tokenInformation.d.ts" },
+		toolProgress: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.toolProgress.d.ts" },
+		treeItemMarkdownLabel: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.treeItemMarkdownLabel.d.ts" },
+		treeViewActiveItem: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.treeViewActiveItem.d.ts" },
+		treeViewMarkdownMessage: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.treeViewMarkdownMessage.d.ts" },
+		treeViewReveal: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.treeViewReveal.d.ts" },
+		tunnelFactory: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.tunnelFactory.d.ts" },
+		tunnels: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.tunnels.d.ts" },
+		valueSelectionInQuickPick: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.valueSelectionInQuickPick.d.ts" },
+		workspaceTrust: { proposal: "https://raw.githubusercontent.com/microsoft/vscode/main/src/vscode-dts/vscode.proposed.workspaceTrust.d.ts" }
+	});
+})), cs, ls = t((() => {
+	m(), cs = Jr("workingCopyBackupService");
+})), us, ds = t((() => {
+	m(), us = Jr("workingCopyFileService");
+})), fs, ps, ms, hs, gs, _s = t((() => {
+	l(), p(), In(), O(), Tt(), (function(e) {
+		e[e.Explorer = 1] = "Explorer", e[e.Scm = 3] = "Scm", e[e.Extensions = 5] = "Extensions", e[e.Window = 10] = "Window", e[e.Notification = 15] = "Notification", e[e.Dialog = 20] = "Dialog";
+	})(fs ||= {}), ps = Object.freeze({
+		total() {},
+		worked() {},
+		done() {}
+	}), ms = class {
+		static {
+			this.None = Object.freeze({ report() {} });
+		}
+		get value() {
+			return this._value;
+		}
+		constructor(e) {
+			this.callback = e;
+		}
+		report(e) {
+			this._value = e, this.callback(this._value);
+		}
+	}, hs = class extends B {
+		constructor(e, t) {
+			super(), this.deferred = new Dr(), t.withProgress(e, (e) => (this.reporter = e, this.lastStep && e.report(this.lastStep), this.deferred.p)), this._register(o(() => this.deferred.complete()));
+		}
+		report(e) {
+			this.reporter ? this.reporter.report(e) : this.lastStep = e;
+		}
+	}, hs = w([R(1, bt)], hs), gs = class extends B {
+		constructor(e) {
+			super(), this.progressIndicator = e, this.currentOperationId = 0, this.currentOperationDisposables = this._register(new N()), this.currentProgressTimeout = void 0;
+		}
+		start(e) {
+			this.stop();
+			let t = ++this.currentOperationId, n = new Vn();
+			return this.currentProgressTimeout = setTimeout(() => {
+				t === this.currentOperationId && (this.currentProgressRunner = this.progressIndicator.show(!0));
+			}, e), this.currentOperationDisposables.add(o(() => clearTimeout(this.currentProgressTimeout))), this.currentOperationDisposables.add(o(() => n.cancel())), this.currentOperationDisposables.add(o(() => this.currentProgressRunner ? this.currentProgressRunner.done() : void 0)), {
+				id: t,
+				token: n.token,
+				stop: () => this.doStop(t),
+				isCurrent: () => this.currentOperationId === t
+			};
+		}
+		stop() {
+			this.doStop(this.currentOperationId);
+		}
+		doStop(e) {
+			this.currentOperationId === e && this.currentOperationDisposables.clear();
+		}
+	};
+})), vs, ys, bs = t((() => {
+	(function(e) {
+		function t(e) {
+			return typeof e?.showDirectoryPicker == "function";
+		}
+		e.supported = t;
+		function n(e) {
+			let t = e;
+			return t ? typeof t.kind == "string" && typeof t.queryPermission == "function" && typeof t.requestPermission == "function" : !1;
+		}
+		e.isFileSystemHandle = n;
+		function r(e) {
+			return e.kind === "file";
+		}
+		e.isFileSystemFileHandle = r;
+		function i(e) {
+			return e.kind === "directory";
+		}
+		e.isFileSystemDirectoryHandle = i;
+	})(vs ||= {}), (function(e) {
+		function t(e) {
+			return typeof e?.FileSystemObserver == "function";
+		}
+		e.supported = t;
+	})(ys ||= {});
+})), xs, Ss = t((() => {
+	k(), Gr(), j(), H(), O(), ar(), zr(), jn(), D(), Mt(), F(), bs(), re(), xs = class extends B {
+		get capabilities() {
+			return this._capabilities || (this._capabilities = S.FileReadWrite | S.FileReadStream, on && (this._capabilities |= S.PathCaseSensitive)), this._capabilities;
+		}
+		constructor(e, t, n) {
+			super(), this.indexedDB = e, this.store = t, this.logService = n, this.onDidChangeCapabilities = Jn.None, this.extUri = on ? V : It, this._onDidChangeFileEmitter = this._register(new U()), this.onDidChangeFile = this._onDidChangeFileEmitter.event, this._files = /* @__PURE__ */ new Map(), this._directories = /* @__PURE__ */ new Map();
+		}
+		async stat(e) {
+			try {
+				let t = await this.getHandle(e);
+				if (!t) throw this.createFileSystemProviderError(e, "No such file or directory, stat", v.FileNotFound);
+				if (vs.isFileSystemFileHandle(t)) {
+					let e = await t.getFile();
+					return {
+						type: b.File,
+						mtime: e.lastModified,
+						ctime: 0,
+						size: e.size
+					};
+				}
+				return {
+					type: b.Directory,
+					mtime: 0,
+					ctime: 0,
+					size: 0
+				};
+			} catch (e) {
+				throw this.toFileSystemProviderError(e);
+			}
+		}
+		async readdir(e) {
+			try {
+				let t = await this.getDirectoryHandle(e);
+				if (!t) throw this.createFileSystemProviderError(e, "No such file or directory, readdir", v.FileNotFound);
+				let n = [];
+				for await (let [e, r] of t) n.push([e, vs.isFileSystemFileHandle(r) ? b.File : b.Directory]);
+				return n;
+			} catch (e) {
+				throw this.toFileSystemProviderError(e);
+			}
+		}
+		readFileStream(e, t, r) {
+			let i = n((e) => y.concat(e.map((e) => y.wrap(e))).buffer, { highWaterMark: 10 });
+			return (async () => {
+				try {
+					let n = await this.getFileHandle(e);
+					if (!n) throw this.createFileSystemProviderError(e, "No such file or directory, readFile", v.FileNotFound);
+					let a = await n.getFile();
+					if (typeof t.length == "number" || typeof t.position == "number") {
+						let e = new Uint8Array(await a.arrayBuffer());
+						typeof t?.position == "number" && (e = e.slice(t.position)), typeof t?.length == "number" && (e = e.slice(0, t.length)), i.end(e);
+					} else {
+						let e = a.stream().getReader(), t = await e.read();
+						for (; !t.done && !(r.isCancellationRequested || (await i.write(t.value), r.isCancellationRequested));) t = await e.read();
+						i.end(void 0);
+					}
+				} catch (e) {
+					i.error(this.toFileSystemProviderError(e)), i.end();
+				}
+			})(), i;
+		}
+		async readFile(e) {
+			try {
+				let t = await this.getFileHandle(e);
+				if (!t) throw this.createFileSystemProviderError(e, "No such file or directory, readFile", v.FileNotFound);
+				let n = await t.getFile();
+				return new Uint8Array(await n.arrayBuffer());
+			} catch (e) {
+				throw this.toFileSystemProviderError(e);
+			}
+		}
+		async writeFile(e, t, n) {
+			try {
+				let r = await this.getFileHandle(e);
+				if (!n.create || !n.overwrite) {
+					if (r) {
+						if (!n.overwrite) throw this.createFileSystemProviderError(e, "File already exists, writeFile", v.FileExists);
+					} else if (!n.create) throw this.createFileSystemProviderError(e, "No such file, writeFile", v.FileNotFound);
+				}
+				if (!r) {
+					let t = await this.getDirectoryHandle(this.extUri.dirname(e));
+					if (!t) throw this.createFileSystemProviderError(e, "No such parent directory, writeFile", v.FileNotFound);
+					if (r = await t.getFileHandle(this.extUri.basename(e), { create: !0 }), !r) throw this.createFileSystemProviderError(e, "Unable to create file , writeFile", v.Unknown);
+				}
+				let i = await r.createWritable();
+				await i.write(t), await i.close();
+			} catch (e) {
+				throw this.toFileSystemProviderError(e);
+			}
+		}
+		async mkdir(e) {
+			try {
+				let t = await this.getDirectoryHandle(this.extUri.dirname(e));
+				if (!t) throw this.createFileSystemProviderError(e, "No such parent directory, mkdir", v.FileNotFound);
+				await t.getDirectoryHandle(this.extUri.basename(e), { create: !0 });
+			} catch (e) {
+				throw this.toFileSystemProviderError(e);
+			}
+		}
+		async delete(e, t) {
+			try {
+				let n = await this.getDirectoryHandle(this.extUri.dirname(e));
+				if (!n) throw this.createFileSystemProviderError(e, "No such parent directory, delete", v.FileNotFound);
+				return n.removeEntry(this.extUri.basename(e), { recursive: t.recursive });
+			} catch (e) {
+				throw this.toFileSystemProviderError(e);
+			}
+		}
+		async rename(e, t, n) {
+			try {
+				if (this.extUri.isEqual(e, t)) return;
+				let r = await this.getFileHandle(e);
+				if (r) {
+					let i = await r.getFile(), a = new Uint8Array(await i.arrayBuffer());
+					await this.writeFile(t, a, {
+						create: !0,
+						overwrite: n.overwrite,
+						unlock: !1,
+						atomic: !1
+					}), await this.delete(e, {
+						recursive: !1,
+						useTrash: !1,
+						atomic: !1
+					});
+				} else throw this.createFileSystemProviderError(e, _(1905, "Rename is only supported for files."), v.Unavailable);
+			} catch (e) {
+				throw this.toFileSystemProviderError(e);
+			}
+		}
+		watch(e, t) {
+			let n = new N();
+			return this.doWatch(e, t, n).catch((t) => this.logService.error(`[File Watcher ('FileSystemObserver')] Error: ${t} (${e})`)), n;
+		}
+		async doWatch(e, t, n) {
+			if (!ys.supported(globalThis)) return;
+			let r = await this.getHandle(e);
+			if (!r || n.isDisposed) return;
+			let i = new globalThis.FileSystemObserver((t) => {
+				if (n.isDisposed) return;
+				let r = [];
+				for (let i of t) switch (this.logService.getLevel() === Vt.Trace && this.logService.trace(`[File Watcher ('FileSystemObserver')] [${i.type}] ${_r(e, ...i.relativePathComponents)}`), i.type) {
+					case "appeared":
+						r.push({
+							resource: _r(e, ...i.relativePathComponents),
+							type: A.ADDED
+						});
+						break;
+					case "disappeared":
+						r.push({
+							resource: _r(e, ...i.relativePathComponents),
+							type: A.DELETED
+						});
+						break;
+					case "modified":
+						r.push({
+							resource: _r(e, ...i.relativePathComponents),
+							type: A.UPDATED
+						});
+						break;
+					case "errored": this.logService.trace(`[File Watcher ('FileSystemObserver')] errored, disposing observer (${e})`), n.dispose();
+				}
+				r.length && this._onDidChangeFileEmitter.fire(r);
+			});
+			try {
+				await i.observe(r, t.recursive ? { recursive: !0 } : void 0);
+			} finally {
+				n.isDisposed ? i.disconnect() : n.add(o(() => i.disconnect()));
+			}
+		}
+		registerFileHandle(e) {
+			return this.registerHandle(e, this._files);
+		}
+		registerDirectoryHandle(e) {
+			return this.registerHandle(e, this._directories);
+		}
+		get directories() {
+			return this._directories.values();
+		}
+		async registerHandle(e, t) {
+			let n = `/${e.name}`;
+			if (t.has(n) && !await t.get(n)?.isSameEntry(e)) {
+				let r = te(e.name), i = Vr(e.name, r), a = 1;
+				do
+					n = `/${i}-${a++}${r}`;
+				while (t.has(n) && !await t.get(n)?.isSameEntry(e));
+			}
+			t.set(n, e);
+			try {
+				await this.indexedDB?.runInTransaction(this.store, "readwrite", (t) => t.put(e, n));
+			} catch (e) {
+				this.logService.error(e);
+			}
+			return Lr.from({
+				scheme: I.file,
+				path: n
+			});
+		}
+		async getHandle(e) {
+			let t = await this.doGetHandle(e);
+			if (!t) {
+				let n = await this.getDirectoryHandle(this.extUri.dirname(e));
+				if (n) {
+					let r = V.basename(e);
+					try {
+						t = await n.getFileHandle(r);
+					} catch {
+						try {
+							t = await n.getDirectoryHandle(r);
+						} catch {}
+					}
+				}
+			}
+			return t;
+		}
+		async getFileHandle(e) {
+			let t = await this.doGetHandle(e);
+			if (t instanceof FileSystemFileHandle) return t;
+			let n = await this.getDirectoryHandle(this.extUri.dirname(e));
+			try {
+				return await n?.getFileHandle(V.basename(e));
+			} catch {
+				return;
+			}
+		}
+		async getDirectoryHandle(e) {
+			let t = await this.doGetHandle(e);
+			if (t instanceof FileSystemDirectoryHandle) return t;
+			let n = this.extUri.dirname(e);
+			if (this.extUri.isEqual(n, e)) return;
+			let r = await this.getDirectoryHandle(n);
+			try {
+				return await r?.getDirectoryHandle(V.basename(e));
+			} catch {
+				return;
+			}
+		}
+		async doGetHandle(e) {
+			if (this.extUri.dirname(e).path !== "/") return;
+			let t = e.path.replace(/\/$/, ""), n = this._files.get(t) ?? this._directories.get(t);
+			if (n) return n;
+			let r = await this.indexedDB?.runInTransaction(this.store, "readonly", (e) => e.get(t));
+			if (vs.isFileSystemHandle(r)) {
+				let e = await r.queryPermission() === "granted";
+				try {
+					e ||= await r.requestPermission() === "granted";
+				} catch (e) {
+					this.logService.error(e);
+				}
+				if (e) return vs.isFileSystemFileHandle(r) ? this._files.set(t, r) : vs.isFileSystemDirectoryHandle(r) && this._directories.set(t, r), r;
+			}
+			throw this.createFileSystemProviderError(e, "No file system handle registered", v.Unavailable);
+		}
+		toFileSystemProviderError(e) {
+			if (e instanceof it) return e;
+			let t = v.Unknown;
+			return e.name === "NotAllowedError" && (e = Error(_(1906, "Insufficient permissions. Please retry and allow the operation.")), t = v.Unavailable), h(e, t);
+		}
+		createFileSystemProviderError(e, t, n) {
+			return h(/* @__PURE__ */ Error(`${t} (${ae(e.path)})`), n);
+		}
+	};
+}));
+//#endregion
+//#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/services/workspaces/browser/workspaces.js
+function Cs(e) {
+	return {
+		id: Ts(e),
+		configPath: e
+	};
+}
+function ws(e) {
+	return {
+		id: Ts(e),
+		uri: e
+	};
+}
+function Ts(e) {
+	return We(e.toString()).toString(16);
+}
+var Es = t((() => {
+	$e();
+}));
+//#endregion
+//#region node_modules/@codingame/monaco-vscode-api/workbench.js
+function Ds() {
+	return Ns;
+}
+function Os() {
+	return Ps;
+}
+function ks() {
+	return Fs;
+}
+function As() {
+	return Is;
+}
+function js(e) {
+	let t;
+	return e.workspaceProvider != null && (t = e.workspaceProvider.workspace), t != null && bn(t) ? Cs(t.workspaceUri) : t != null && Tn(t) ? ws(t.folderUri) : Pt;
+}
+function Ms(e, t, n = {}) {
+	Ns = e, Ps = t, Fs = n, Is = js(t);
+}
+var Ns, Ps, Fs, Is, Ls, Rs = t((() => {
+	Cr(), sr(), Es(), Gr(), cn(), Ns = document.body, Ps = {}, Fs = {}, Is = Pt, Ls = Lr.file(dr(/* @__PURE__ */ new Date()).replace(/-|:|\.\d+Z$/g, "")).with({ scheme: "vscode-log" });
+})), zs, Bs = t((() => {
+	m(), rt(), zs = Ct(Ke);
+}));
+//#endregion
+//#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/platform/workspace/common/virtualWorkspace.js
+function Vs(e) {
+	return e.scheme !== I.file && e.scheme !== I.vscodeRemote;
+}
+function Hs(e) {
+	if (e.folders.length) return e.folders.every((e) => Vs(e.uri)) ? e.folders[0].uri : void 0;
+	if (e.configuration && Vs(e.configuration)) return e.configuration;
+}
+function Us(e) {
+	return Hs(e)?.scheme;
+}
+function Ws(e) {
+	return Hs(e) !== void 0;
+}
+var Gs = t((() => {
+	ar();
+}));
+//#endregion
+//#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/services/layout/browser/layoutService.js
+function Ks(e) {
+	return e === X.BOTTOM || e === X.TOP;
+}
+function qs(e) {
+	switch (e) {
+		case X.LEFT: return "left";
+		case X.RIGHT: return "right";
+		case X.BOTTOM: return "bottom";
+		case X.TOP: return "top";
+		default: return "bottom";
+	}
+}
+function Js(e) {
+	return ac[e];
+}
+function Ys(e) {
+	switch (e) {
+		case Z.ALWAYS: return "always";
+		case Z.NEVER: return "never";
+		case Z.REMEMBER_LAST: return "preserve";
+		default: return "preserve";
+	}
+}
+function Xs(e) {
+	return oc[e];
+}
+function Zs(e) {
+	return e === Y.EDITOR_PART || e === Y.STATUSBAR_PART || e === Y.TITLEBAR_PART;
+}
+function Qs(e, t, n) {
+	let r = st(t), i = yn(e);
+	if (!Bt) {
+		let t = e.getValue(xr.CUSTOM_TITLE_BAR_VISIBILITY);
+		if (t === ut.NEVER && i || t === ut.WINDOWED && r) return !1;
+	}
+	if (!$s(e)) return !0;
+	if (i && an(e)) return !1;
+	if (cr && En) return !r;
+	if (En && !r || Or() && !r) return !0;
+	switch (tn(t) ? "hidden" : Tr(e)) {
+		case "classic": return !r || !!n;
+		case "compact":
+		case "hidden": return !1;
+		case "toggle": return !!n;
+		case "visible": return !0;
+		default: return Bt ? !1 : !r || !!n;
+	}
+}
+function $s(e) {
+	if (e.getValue(tc.COMMAND_CENTER)) return !1;
+	let t = e.getValue(tc.ACTIVITY_BAR_LOCATION);
+	if (t === nc.TOP || t === nc.BOTTOM) return !1;
+	let n = e.getValue(tc.EDITOR_ACTIONS_LOCATION), r = e.getValue(tc.EDITOR_TABS_MODE);
+	return !(n === ic.TITLEBAR || n === ic.DEFAULT && r === rc.NONE || e.getValue(tc.LAYOUT_ACTIONS));
+}
+var Y, ec, tc, nc, rc, ic, X, Z, ac, oc, sc = t((() => {
+	jn(), Fr(), sr(), Ee(), (function(e) {
+		e.TITLEBAR_PART = "workbench.parts.titlebar", e.BANNER_PART = "workbench.parts.banner", e.ACTIVITYBAR_PART = "workbench.parts.activitybar", e.SIDEBAR_PART = "workbench.parts.sidebar", e.PANEL_PART = "workbench.parts.panel", e.AUXILIARYBAR_PART = "workbench.parts.auxiliarybar", e.EDITOR_PART = "workbench.parts.editor", e.STATUSBAR_PART = "workbench.parts.statusbar";
+	})(Y ||= {}), (function(e) {
+		e.SHOW_TABS = "zenMode.showTabs", e.HIDE_LINENUMBERS = "zenMode.hideLineNumbers", e.HIDE_STATUSBAR = "zenMode.hideStatusBar", e.HIDE_ACTIVITYBAR = "zenMode.hideActivityBar", e.CENTER_LAYOUT = "zenMode.centerLayout", e.FULLSCREEN = "zenMode.fullScreen", e.RESTORE = "zenMode.restore", e.SILENT_NOTIFICATIONS = "zenMode.silentNotifications";
+	})(ec ||= {}), (function(e) {
+		e.ACTIVITY_BAR_LOCATION = "workbench.activityBar.location", e.EDITOR_TABS_MODE = "workbench.editor.showTabs", e.EDITOR_ACTIONS_LOCATION = "workbench.editor.editorActionsLocation", e.COMMAND_CENTER = "window.commandCenter", e.LAYOUT_ACTIONS = "workbench.layoutControl.enabled";
+	})(tc ||= {}), (function(e) {
+		e.DEFAULT = "default", e.TOP = "top", e.BOTTOM = "bottom", e.HIDDEN = "hidden";
+	})(nc ||= {}), (function(e) {
+		e.MULTIPLE = "multiple", e.SINGLE = "single", e.NONE = "none";
+	})(rc ||= {}), (function(e) {
+		e.DEFAULT = "default", e.TITLEBAR = "titleBar", e.HIDDEN = "hidden";
+	})(ic ||= {}), (function(e) {
+		e[e.LEFT = 0] = "LEFT", e[e.RIGHT = 1] = "RIGHT", e[e.BOTTOM = 2] = "BOTTOM", e[e.TOP = 3] = "TOP";
+	})(X ||= {}), (function(e) {
+		e[e.ALWAYS = 0] = "ALWAYS", e[e.NEVER = 1] = "NEVER", e[e.REMEMBER_LAST = 2] = "REMEMBER_LAST";
+	})(Z ||= {}), ac = {
+		[qs(X.LEFT)]: X.LEFT,
+		[qs(X.RIGHT)]: X.RIGHT,
+		[qs(X.BOTTOM)]: X.BOTTOM,
+		[qs(X.TOP)]: X.TOP
+	}, oc = {
+		[Ys(Z.ALWAYS)]: Z.ALWAYS,
+		[Ys(Z.NEVER)]: Z.NEVER,
+		[Ys(Z.REMEMBER_LAST)]: Z.REMEMBER_LAST
+	};
+})), cc, lc = t((() => {
+	l(), Ee(), Fr(), O(), jn(), Ar(), Bn(), Gn(), we(), bs(), jo(), Ki(), sr(), Gs(), Cr(), ue(), Do(), _i(), gi(), Ai(), li(), sc(), Bs(), as(), pi(), cc = class extends B {
+		constructor(e, t, n, r, i, a, o, c, l, u) {
+			super(), this.contextKeyService = e, this.contextService = t, this.configurationService = n, this.environmentService = r, this.productService = i, this.editorGroupService = a, this.editorService = o, this.layoutService = c, this.paneCompositeService = l, this.workingCopyService = u, ee.bindTo(this.contextKeyService), Hn.bindTo(this.contextKeyService), at.bindTo(this.contextKeyService), qe.bindTo(this.contextKeyService), zn.bindTo(this.contextKeyService), Qe.bindTo(this.contextKeyService), Ue.bindTo(this.contextKeyService), ha.bindTo(this.contextKeyService).set(Gi(this.environmentService.remoteAuthority) || ""), this.virtualWorkspaceContext = ga.bindTo(this.contextKeyService), this.temporaryWorkspaceContext = _a.bindTo(this.contextKeyService), this.updateWorkspaceContextKeys(), va.bindTo(this.contextKeyService).set(vs.supported(gn));
+			let d = !this.environmentService.isBuilt || this.environmentService.isExtensionDevelopment;
+			se.bindTo(this.contextKeyService).set(d), s(se.key, d), pe.bindTo(this.contextKeyService).set(this.productService.quality || ""), ya.bindTo(this.contextKeyService).set(i.embedderIdentifier), this.inAutomationContext = ba.bindTo(this.contextKeyService), this.inAutomationContext.set(!!this.environmentService.enableSmokeTestDriver), this.activeEditorGroupEmpty = Va.bindTo(this.contextKeyService), this.activeEditorGroupIndex = Ha.bindTo(this.contextKeyService), this.activeEditorGroupLast = Ua.bindTo(this.contextKeyService), this.activeEditorGroupLocked = Wa.bindTo(this.contextKeyService), this.multipleEditorGroupsContext = Ga.bindTo(this.contextKeyService), this.editorsVisibleContext = Za.bindTo(this.contextKeyService), this.dirtyWorkingCopiesContext = ma.bindTo(this.contextKeyService), this.dirtyWorkingCopiesContext.set(this.workingCopyService.hasDirty), this.workbenchStateContext = la.bindTo(this.contextKeyService), this.updateWorkbenchStateContextKey(), this.workspaceFolderCountContext = ua.bindTo(this.contextKeyService), this.updateWorkspaceFolderCountContextKey(), this.openFolderWorkspaceSupportContext = da.bindTo(this.contextKeyService), this.openFolderWorkspaceSupportContext.set(En || typeof this.environmentService.remoteAuthority == "string"), this.emptyWorkspaceSupportContext = pa.bindTo(this.contextKeyService), this.emptyWorkspaceSupportContext.set(En || typeof this.environmentService.remoteAuthority == "string"), this.enterMultiRootWorkspaceSupportContext = fa.bindTo(this.contextKeyService), this.enterMultiRootWorkspaceSupportContext.set(En || typeof this.environmentService.remoteAuthority == "string"), this.splitEditorsVerticallyContext = eo.bindTo(this.contextKeyService), this.updateSplitEditorsVerticallyContext(), this.isMainWindowFullscreenContext = Sa.bindTo(this.contextKeyService), this.isAuxiliaryWindowFocusedContext = Ca.bindTo(this.contextKeyService), this.inZenModeContext = Qa.bindTo(this.contextKeyService), this.isMainEditorCenteredLayoutContext = $a.bindTo(this.contextKeyService), this.mainEditorAreaVisibleContext = to.bindTo(this.contextKeyService), this.editorTabsVisibleContext = no.bindTo(this.contextKeyService), this.sideBarVisibleContext = ro.bindTo(this.contextKeyService), this.titleAreaVisibleContext = co.bindTo(this.contextKeyService), this.titleBarStyleContext = so.bindTo(this.contextKeyService), this.updateTitleBarContextKeys(), this.panelPositionContext = xo.bindTo(this.contextKeyService), this.panelPositionContext.set(qs(this.layoutService.getPanelPosition())), this.panelVisibleContext = Co.bindTo(this.contextKeyService), this.panelVisibleContext.set(this.layoutService.isVisible(Y.PANEL_PART)), this.panelMaximizedContext = wo.bindTo(this.contextKeyService), this.panelMaximizedContext.set(this.layoutService.isPanelMaximized()), this.panelAlignmentContext = So.bindTo(this.contextKeyService), this.panelAlignmentContext.set(this.layoutService.getPanelAlignment()), this.auxiliaryBarVisibleContext = _o.bindTo(this.contextKeyService), this.auxiliaryBarVisibleContext.set(this.layoutService.isVisible(Y.AUXILIARYBAR_PART)), this.auxiliaryBarMaximizedContext = vo.bindTo(this.contextKeyService), this.auxiliaryBarMaximizedContext.set(this.layoutService.isAuxiliaryBarMaximized()), xa.bindTo(this.contextKeyService), this.registerListeners();
+		}
+		registerListeners() {
+			this.editorGroupService.whenReady.then(() => {
+				this.updateEditorAreaContextKeys(), this.updateActiveEditorGroupContextKeys(), this.updateVisiblePanesContextKeys();
+			}), this._register(this.editorService.onDidActiveEditorChange(() => this.updateActiveEditorGroupContextKeys())), this._register(this.editorService.onDidVisibleEditorsChange(() => this.updateVisiblePanesContextKeys())), this._register(this.editorGroupService.onDidAddGroup(() => this.updateEditorGroupsContextKeys())), this._register(this.editorGroupService.onDidRemoveGroup(() => this.updateEditorGroupsContextKeys())), this._register(this.editorGroupService.onDidChangeGroupIndex(() => this.updateActiveEditorGroupContextKeys())), this._register(this.editorGroupService.onDidChangeGroupLocked(() => this.updateActiveEditorGroupContextKeys())), this._register(this.editorGroupService.onDidChangeEditorPartOptions(() => this.updateEditorAreaContextKeys())), this._register(this.contextService.onDidChangeWorkbenchState(() => this.updateWorkbenchStateContextKey())), this._register(this.contextService.onDidChangeWorkspaceFolders(() => {
+				this.updateWorkspaceFolderCountContextKey(), this.updateWorkspaceContextKeys();
+			})), this._register(this.configurationService.onDidChangeConfiguration((e) => {
+				e.affectsConfiguration("workbench.editor.openSideBySideDirection") && this.updateSplitEditorsVerticallyContext();
+			})), this._register(this.layoutService.onDidChangeZenMode((e) => this.inZenModeContext.set(e))), this._register(this.layoutService.onDidChangeActiveContainer(() => this.isAuxiliaryWindowFocusedContext.set(this.layoutService.activeContainer !== this.layoutService.mainContainer))), this._register(kn((e) => {
+				e === gn.vscodeWindowId && this.isMainWindowFullscreenContext.set(st(gn));
+			})), this._register(this.layoutService.onDidChangeMainEditorCenteredLayout((e) => this.isMainEditorCenteredLayoutContext.set(e))), this._register(this.layoutService.onDidChangePanelPosition((e) => this.panelPositionContext.set(e))), this._register(this.layoutService.onDidChangePanelAlignment((e) => this.panelAlignmentContext.set(e))), this._register(this.paneCompositeService.onDidPaneCompositeClose(() => this.updateSideBarContextKeys())), this._register(this.paneCompositeService.onDidPaneCompositeOpen(() => this.updateSideBarContextKeys())), this._register(this.layoutService.onDidChangePartVisibility(() => {
+				this.mainEditorAreaVisibleContext.set(this.layoutService.isVisible(Y.EDITOR_PART, gn)), this.panelVisibleContext.set(this.layoutService.isVisible(Y.PANEL_PART)), this.panelMaximizedContext.set(this.layoutService.isPanelMaximized()), this.auxiliaryBarVisibleContext.set(this.layoutService.isVisible(Y.AUXILIARYBAR_PART)), this.updateTitleBarContextKeys();
+			})), this._register(this.layoutService.onDidChangeAuxiliaryBarMaximized(() => {
+				this.auxiliaryBarMaximizedContext.set(this.layoutService.isAuxiliaryBarMaximized());
+			})), this._register(this.workingCopyService.onDidChangeDirty((e) => this.dirtyWorkingCopiesContext.set(e.isDirty() || this.workingCopyService.hasDirty)));
+		}
+		updateVisiblePanesContextKeys() {
+			this.editorService.visibleEditorPanes.length > 0 ? this.editorsVisibleContext.set(!0) : this.editorsVisibleContext.reset();
+		}
+		updateActiveEditorGroupContextKeys() {
+			this.editorService.activeEditor ? this.activeEditorGroupEmpty.reset() : this.activeEditorGroupEmpty.set(!0);
+			let e = this.editorGroupService.activeGroup;
+			this.activeEditorGroupIndex.set(e.index + 1), this.activeEditorGroupLocked.set(e.isLocked), this.updateEditorGroupsContextKeys();
+		}
+		updateEditorGroupsContextKeys() {
+			let e = this.editorGroupService.count;
+			e > 1 ? this.multipleEditorGroupsContext.set(!0) : this.multipleEditorGroupsContext.reset();
+			let t = this.editorGroupService.activeGroup;
+			this.activeEditorGroupLast.set(t.index === e - 1);
+		}
+		updateEditorAreaContextKeys() {
+			this.editorTabsVisibleContext.set(this.editorGroupService.partOptions.showTabs === "multiple");
+		}
+		updateWorkbenchStateContextKey() {
+			this.workbenchStateContext.set(this.getWorkbenchStateString());
+		}
+		updateWorkspaceFolderCountContextKey() {
+			this.workspaceFolderCountContext.set(this.contextService.getWorkspace().folders.length);
+		}
+		updateSplitEditorsVerticallyContext() {
+			let e = Ci(this.configurationService);
+			this.splitEditorsVerticallyContext.set(e === ri.DOWN);
+		}
+		getWorkbenchStateString() {
+			switch (this.contextService.getWorkbenchState()) {
+				case i.EMPTY: return "empty";
+				case i.FOLDER: return "folder";
+				case i.WORKSPACE: return "workspace";
+			}
+		}
+		updateSideBarContextKeys() {
+			this.sideBarVisibleContext.set(this.layoutService.isVisible(Y.SIDEBAR_PART));
+		}
+		updateTitleBarContextKeys() {
+			this.titleAreaVisibleContext.set(this.layoutService.isVisible(Y.TITLEBAR_PART, gn)), this.titleBarStyleContext.set(Qt(this.configurationService));
+		}
+		updateWorkspaceContextKeys() {
+			this.virtualWorkspaceContext.set(Us(this.contextService.getWorkspace()) || ""), this.temporaryWorkspaceContext.set($t(this.contextService.getWorkspace()));
+		}
+	}, cc = w([
+		R(0, or),
+		R(1, tt),
+		R(2, dn),
+		R(3, ti),
+		R(4, Ao),
+		R(5, hi),
+		R(6, ui),
+		R(7, zs),
+		R(8, is),
+		R(9, Bi)
+	], cc);
+}));
+//#endregion
+//#region node_modules/@codingame/monaco-vscode-api/lifecycle.js
+function uc(e) {
+	xc.push(e);
+}
+function dc(e) {
+	Cc.push(e);
+}
+async function fc(e) {
+	await e.invokeFunction(async (e) => {
+		await Promise.all(xc.map((t) => t(e)));
+	}), await e.invokeFunction(async (t) => {
+		Ir((t, n) => e.createInstance(Sr, t, { instantHover: n }, {})), xt(t.get(nr));
+		let n = t.get(si);
+		rn.as(vi.Workbench).start(t), rn.as(ci.EditorFactory).start(t), await Promise.all(Sc.map((e) => e(t))), n.phase = Oi.Ready;
+	}), await e.invokeFunction(async (e) => {
+		await Promise.all(Cc.map((t) => t(e)));
+	}), yc.open(), bc.fire(), e.invokeFunction(async (e) => {
+		let t = e.get(si);
+		vc((e) => {
+			e.get(Le).createInstance(cc);
+		}), hc.fire(e), _c.fire(e), await Promise.race([e.get(zs).whenRestored, Xr(2e3)]), t.phase = Oi.Restored, new Cn(() => {
+			Br(window, () => {
+				t.phase = Oi.Eventually;
+			}, 2500);
+		}, 2500).schedule();
+	});
+}
+async function pc() {
+	await yc.wait();
+}
+function mc() {
+	if (wc) throw Error("Services are already initialized");
+}
+var hc, gc, _c, vc, yc, bc, xc, Sc, Cc, wc, Tc = t((() => {
+	vn(), Vi(), ai(), fi(), m(), p(), H(), Zr(), gr(), O(), Bs(), Un(), be(), Mn(), Er(), lc(), hc = new U(), gc = hc.event, _c = new U(), vc = _c.event, yc = new rr(), bc = new U(), xc = [], Sc = [], Cc = [], wc = !1, qn.withServices(() => (wc = !0, B.None));
+}));
+//#endregion
+//#region node_modules/@codingame/monaco-vscode-files-service-override/vscode/src/vs/platform/files/common/io.js
+async function Ec(e, t, n, r, i, a) {
+	let o;
+	try {
+		await Dc(e, t, n, r, i, a);
+	} catch (e) {
+		o = e;
+	} finally {
+		o && i.errorTransformer && (o = i.errorTransformer(o)), o !== void 0 && n.error(o), n.end();
+	}
+}
+async function Dc(e, t, n, r, i, a) {
+	Oc(a);
+	let o = await e.open(t, { create: !1 });
+	try {
+		Oc(a);
+		let t = 0, s = 0, c = i && typeof i.length == "number" ? i.length : void 0, l = y.alloc(Math.min(i.bufferSize, typeof c == "number" ? c : i.bufferSize)), u = i && typeof i.position == "number" ? i.position : 0, d = 0;
+		do
+			s = await e.read(o, u, l.buffer, d, l.byteLength - d), u += s, d += s, t += s, typeof c == "number" && (c -= s), d === l.byteLength && (await n.write(r(l)), l = y.alloc(Math.min(i.bufferSize, typeof c == "number" ? c : i.bufferSize)), d = 0);
+		while (s > 0 && (typeof c != "number" || c > 0) && Oc(a) && kc(t, i));
+		if (d > 0) {
+			let e = d;
+			typeof c == "number" && (e = Math.min(d, c)), n.write(r(l.slice(0, e)));
+		}
+	} catch (e) {
+		throw wt(e);
+	} finally {
+		await e.close(o);
+	}
+}
+function Oc(e) {
+	if (e.isCancellationRequested) throw er();
+	return !0;
+}
+function kc(e, t) {
+	if (typeof t?.limits?.size == "number" && e > t.limits.size) throw h(_(1945, "File is too large to open"), v.FileTooLarge);
+	return !0;
+}
+var Ac = t((() => {
+	j(), nn(), k(), F();
+}));
+//#endregion
+//#region node_modules/@codingame/monaco-vscode-files-service-override/vscode/src/vs/platform/files/common/fileService.js
+function jc(e) {
+	return e.scheme === I.file ? e.fsPath : e.toString(!0);
+}
+async function Mc(e, t, n) {
+	let r = [];
+	for (; !e.isEqual(n, e.dirname(n));) try {
+		if (((await t.stat(n)).type & b.Directory) === 0) throw Error(_(1913, "Unable to create folder '{0}' that already exists but is not a directory", jc(n)));
+		break;
+	} catch (t) {
+		if (vr(t) !== v.FileNotFound) throw t;
+		r.push(e.basename(n)), n = e.dirname(n);
+	}
+	for (let i = r.length - 1; i >= 0; i--) {
+		n = e.joinPath(n, r[i]);
+		try {
+			await t.mkdir(n);
+		} catch (e) {
+			if (vr(e) !== v.FileExists) throw e;
+		}
+	}
+}
+var Nc, Pc, Fc = t((() => {
+	l(), et(), p(), j(), In(), H(), $e(), ze(), O(), Xt(), ar(), Kn(), D(), Mt(), k(), F(), Ac(), jt(), nn(), Pc = class extends B {
+		static {
+			Nc = this;
+		}
+		constructor(e) {
+			super(), this.logService = e, this.BUFFER_SIZE = 256 * 1024, this._onDidChangeFileSystemProviderRegistrations = this._register(new U()), this.onDidChangeFileSystemProviderRegistrations = this._onDidChangeFileSystemProviderRegistrations.event, this._onWillActivateFileSystemProvider = this._register(new U()), this.onWillActivateFileSystemProvider = this._onWillActivateFileSystemProvider.event, this._onDidChangeFileSystemProviderCapabilities = this._register(new U()), this.onDidChangeFileSystemProviderCapabilities = this._onDidChangeFileSystemProviderCapabilities.event, this.provider = /* @__PURE__ */ new Map(), this._onDidRunOperation = this._register(new U()), this.onDidRunOperation = this._onDidRunOperation.event, this.internalOnDidFilesChange = this._register(new U()), this._onDidUncorrelatedFilesChange = this._register(new U()), this.onDidFilesChange = this._onDidUncorrelatedFilesChange.event, this._onDidWatchError = this._register(new U()), this.onDidWatchError = this._onDidWatchError.event, this.activeWatchers = /* @__PURE__ */ new Map(), this.writeQueue = this._register(new On());
+		}
+		registerProvider(e, t) {
+			if (this.provider.has(e)) throw Error(`A filesystem provider for the scheme '${e}' is already registered.`);
+			wn(`code/registerFilesystem/${e}`);
+			let n = new N();
+			return this.provider.set(e, t), this._onDidChangeFileSystemProviderRegistrations.fire({
+				added: !0,
+				scheme: e,
+				provider: t
+			}), n.add(t.onDidChangeFile((e) => {
+				let n = new le(e, !this.isPathCaseSensitive(t));
+				this.internalOnDidFilesChange.fire(n), n.hasCorrelation() || this._onDidUncorrelatedFilesChange.fire(n);
+			})), typeof t.onDidWatchError == "function" && n.add(t.onDidWatchError((e) => this._onDidWatchError.fire(Error(e)))), n.add(t.onDidChangeCapabilities(() => this._onDidChangeFileSystemProviderCapabilities.fire({
+				provider: t,
+				scheme: e
+			}))), o(() => {
+				this._onDidChangeFileSystemProviderRegistrations.fire({
+					added: !1,
+					scheme: e,
+					provider: t
+				}), this.provider.delete(e), g(n);
+			});
+		}
+		getProvider(e) {
+			return this.provider.get(e);
+		}
+		async activateProvider(e) {
+			let t = [];
+			this._onWillActivateFileSystemProvider.fire({
+				scheme: e,
+				join(e) {
+					t.push(e);
+				}
+			}), !this.provider.has(e) && await ur.settled(t);
+		}
+		async canHandleResource(e) {
+			return await this.activateProvider(e.scheme), this.hasProvider(e);
+		}
+		hasProvider(e) {
+			return this.provider.has(e.scheme);
+		}
+		hasCapability(e, t) {
+			let n = this.provider.get(e.scheme);
+			return !!(n && n.capabilities & t);
+		}
+		listCapabilities() {
+			return Pn.map(this.provider, ([e, t]) => ({
+				scheme: e,
+				capabilities: t.capabilities
+			}));
+		}
+		async withProvider(e) {
+			if (!a(e)) throw new z(_(1914, "Unable to resolve filesystem provider with relative file path '{0}'", this.resourceForError(e)), L.FILE_INVALID_PATH);
+			await this.activateProvider(e.scheme);
+			let t = this.provider.get(e.scheme);
+			if (!t) {
+				let t = new kr();
+				throw t.message = _(1915, "ENOPRO: No file system provider found for resource '{0}'", e.toString()), t;
+			}
+			return t;
+		}
+		async withReadProvider(e) {
+			let t = await this.withProvider(e);
+			if (Rt(t) || E(t) || Ft(t)) return t;
+			throw Error(`Filesystem provider for scheme '${e.scheme}' neither has FileReadWrite, FileReadStream nor FileOpenReadWriteClose capability which is needed for the read operation.`);
+		}
+		async withWriteProvider(e) {
+			let t = await this.withProvider(e);
+			if (Rt(t) || E(t)) return t;
+			throw Error(`Filesystem provider for scheme '${e.scheme}' neither has FileReadWrite nor FileOpenReadWriteClose capability which is needed for the write operation.`);
+		}
+		async resolve(e, t) {
+			try {
+				return await this.doResolveFile(e, t);
+			} catch (t) {
+				throw vr(t) === v.FileNotFound ? new z(_(1916, "Unable to resolve nonexistent file '{0}'", this.resourceForError(e)), L.FILE_NOT_FOUND) : wt(t);
+			}
+		}
+		async doResolveFile(e, t) {
+			let n = await this.withProvider(e), r = this.isPathCaseSensitive(n), i = t?.resolveTo, a = t?.resolveSingleChildDescendants, o = t?.resolveMetadata, s = await n.stat(e), c;
+			return this.toFileStat(n, e, s, void 0, !!o, (t, n) => (c || (c = tr.forUris(() => !r), c.set(e, !0), i && c.fill(!0, i)), c.get(t.resource) || c.findSuperstr(t.resource.with({
+				query: null,
+				fragment: null
+			})) ? !0 : t.isDirectory && a ? n === 1 : !1));
+		}
+		async toFileStat(e, t, n, r, i, a) {
+			let { providerExtUri: o } = this.getExtUri(e), s = {
+				resource: t,
+				name: o.basename(t),
+				isFile: (n.type & b.File) !== 0,
+				isDirectory: (n.type & b.Directory) !== 0,
+				isSymbolicLink: (n.type & b.SymbolicLink) !== 0,
+				mtime: n.mtime,
+				ctime: n.ctime,
+				size: n.size,
+				readonly: !!((n.permissions ?? 0) & He.Readonly) || !!(e.capabilities & S.Readonly),
+				locked: !!((n.permissions ?? 0) & He.Locked),
+				executable: !!((n.permissions ?? 0) & He.Executable),
+				etag: xe({
+					mtime: n.mtime,
+					size: n.size
+				}),
+				children: void 0
+			};
+			if (s.isDirectory && a(s, r)) {
+				try {
+					let n = await e.readdir(t);
+					s.children = Ut(await ur.settled(n.map(async ([r, s]) => {
+						try {
+							let c = o.joinPath(t, r), l = i ? await e.stat(c) : { type: s };
+							return await this.toFileStat(e, c, l, n.length, i, a);
+						} catch (e) {
+							return this.logService.trace(e), null;
+						}
+					})));
+				} catch (e) {
+					this.logService.trace(e), s.children = [];
+				}
+				return s;
+			}
+			return s;
+		}
+		async resolveAll(e) {
+			return ur.settled(e.map(async (e) => {
+				try {
+					return {
+						stat: await this.doResolveFile(e.resource, e.options),
+						success: !0
+					};
+				} catch (e) {
+					return this.logService.trace(e), {
+						stat: void 0,
+						success: !1
+					};
+				}
+			}));
+		}
+		async stat(e) {
+			let t = await this.withProvider(e), n = await t.stat(e);
+			return this.toFileStat(t, e, n, void 0, !0, () => !1);
+		}
+		async realpath(e) {
+			let t = await this.withProvider(e);
+			if (kt(t)) {
+				let n = await t.realpath(e);
+				return e.with({ path: n });
+			}
+		}
+		async exists(e) {
+			let t = await this.withProvider(e);
+			try {
+				return !!await t.stat(e);
+			} catch {
+				return !1;
+			}
+		}
+		async canCreateFile(e, t) {
+			try {
+				await this.doValidateCreateFile(e, t);
+			} catch (e) {
+				return e;
+			}
+			return !0;
+		}
+		async doValidateCreateFile(e, t) {
+			if (!t?.overwrite && await this.exists(e)) throw new z(_(1917, "Unable to create file '{0}' that already exists when overwrite flag is not set", this.resourceForError(e)), L.FILE_MODIFIED_SINCE, t);
+		}
+		async createFile(e, t = y.fromString(""), n) {
+			await this.doValidateCreateFile(e, n);
+			let r = await this.writeFile(e, t);
+			return this._onDidRunOperation.fire(new f(e, T.CREATE, r)), r;
+		}
+		async writeFile(e, t, n) {
+			let r = this.throwIfFileSystemIsReadonly(await this.withWriteProvider(e), e), { providerExtUri: i } = this.getExtUri(r), a = n;
+			if (Pe(r) && !a?.atomic) {
+				let t = r.enforceAtomicWriteFile?.(e);
+				t && (a = {
+					...n,
+					atomic: t
+				});
+			}
+			try {
+				let { stat: n, buffer: o } = await this.validateWriteFile(r, e, t, a);
+				n || await this.mkdirp(r, i.dirname(e)), o ||= await this.peekBufferForWriting(r, t), !Rt(r) || E(r) && o instanceof y || E(r) && Pe(r) && a?.atomic ? await this.doWriteUnbuffered(r, e, a, o) : await this.doWriteBuffered(r, e, a, o instanceof y ? Ie(o) : o), this._onDidRunOperation.fire(new f(e, T.WRITE));
+			} catch (t) {
+				throw new z(_(1918, "Unable to write file '{0}' ({1})", this.resourceForError(e), wt(t).toString()), Yn(t), a);
+			}
+			return this.resolve(e, { resolveMetadata: !0 });
+		}
+		async peekBufferForWriting(e, t) {
+			let n;
+			if (E(e) && !(t instanceof y)) if (Lt(t)) {
+				let e = await Nr(t, 3);
+				n = e.ended ? y.concat(e.buffer) : e;
+			} else n = mn(t, (e) => y.concat(e), 3);
+			else n = t;
+			return n;
+		}
+		async validateWriteFile(e, t, n, r) {
+			let i = !!r?.unlock;
+			if (i && !(e.capabilities & S.FileWriteUnlock)) throw Error(_(1919, "Unable to unlock file '{0}' because provider does not support it.", this.resourceForError(t)));
+			if (r?.atomic) {
+				if (!(e.capabilities & S.FileAtomicWrite)) throw Error(_(1920, "Unable to atomically write file '{0}' because provider does not support it.", this.resourceForError(t)));
+				if (!(e.capabilities & S.FileReadWrite)) throw Error(_(1921, "Unable to atomically write file '{0}' because provider does not support unbuffered writes.", this.resourceForError(t)));
+				if (i) throw Error(_(1922, "Unable to unlock file '{0}' because atomic write is enabled.", this.resourceForError(t)));
+			}
+			let a;
+			try {
+				a = await e.stat(t);
+			} catch {
+				return Object.create(null);
+			}
+			if ((a.type & b.Directory) !== 0) throw new z(_(1923, "Unable to write file '{0}' that is actually a directory", this.resourceForError(t)), L.FILE_IS_DIRECTORY, r);
+			this.throwIfFileIsReadonly(t, a);
+			let o;
+			if (typeof r?.mtime == "number" && typeof r.etag == "string" && r.etag !== "" && typeof a.mtime == "number" && typeof a.size == "number" && r.mtime < a.mtime && r.etag !== xe({
+				mtime: r.mtime,
+				size: a.size
+			})) {
+				if (o = await this.peekBufferForWriting(e, n), o instanceof y && o.byteLength === a.size) try {
+					let { value: e } = await this.readFile(t, { limits: { size: a.size } });
+					if (o.equals(e)) return {
+						stat: a,
+						buffer: o
+					};
+				} catch {}
+				throw new z(_(1924, "File Modified Since"), L.FILE_MODIFIED_SINCE, r);
+			}
+			return {
+				stat: a,
+				buffer: o
+			};
+		}
+		async readFile(e, t, n) {
+			let r = await this.withReadProvider(e);
+			return t?.atomic ? this.doReadFileAtomic(r, e, t, n) : this.doReadFile(r, e, t, n);
+		}
+		async doReadFileAtomic(e, t, n, r) {
+			return new Promise((i, a) => {
+				this.writeQueue.queueFor(t, async () => {
+					try {
+						i(await this.doReadFile(e, t, n, r));
+					} catch (e) {
+						a(e);
+					}
+				}, this.getExtUri(e).providerExtUri);
+			});
+		}
+		async doReadFile(e, t, n, r) {
+			let i = await this.doReadFileStream(e, t, {
+				...n,
+				preferUnbuffered: !0
+			}, r);
+			return {
+				...i,
+				value: await fr(i.value)
+			};
+		}
+		async readFileStream(e, t, n) {
+			let r = await this.withReadProvider(e);
+			return this.doReadFileStream(r, e, t, n);
+		}
+		async doReadFileStream(e, t, n, r) {
+			let i = new Vn(r), a = n;
+			ve(e) && e.enforceAtomicReadFile?.(t) && (a = {
+				...n,
+				atomic: !0
+			});
+			let o = this.validateReadFile(t, a).then((e) => e, (e) => {
+				throw i.dispose(!0), e;
+			}), s;
+			try {
+				return typeof a?.etag == "string" && a.etag !== "" && await o, s = a?.atomic && ve(e) || !(Rt(e) || Ft(e)) || E(e) && a?.preferUnbuffered ? this.readFileUnbuffered(e, t, a) : Ft(e) ? this.readFileStreamed(e, t, i.token, a) : this.readFileBuffered(e, t, i.token, a), s.on("end", () => i.dispose()), s.on("error", () => i.dispose()), {
+					...await o,
+					value: s
+				};
+			} catch (e) {
+				throw s && await Te(s), this.restoreReadError(e, t, a);
+			}
+		}
+		restoreReadError(e, t, n) {
+			let r = _(1925, "Unable to read file '{0}' ({1})", this.resourceForError(t), wt(e).toString());
+			return e instanceof mt ? new mt(r, e.stat, n) : e instanceof Yr ? new Yr(r, e.fileOperationResult, e.size, e.options) : new z(r, Yn(e), n);
+		}
+		readFileStreamed(e, t, n, r = Object.create(null)) {
+			return $n(e.readFileStream(t, r, n), {
+				data: (e) => e instanceof y ? e : y.wrap(e),
+				error: (e) => this.restoreReadError(e, t, r)
+			}, (e) => y.concat(e));
+		}
+		readFileBuffered(e, t, n, r = Object.create(null)) {
+			let i = he();
+			return Ec(e, t, i, (e) => e, {
+				...r,
+				bufferSize: this.BUFFER_SIZE,
+				errorTransformer: (e) => this.restoreReadError(e, t, r)
+			}, n), i;
+		}
+		readFileUnbuffered(e, t, r) {
+			let i = n((e) => y.concat(e));
+			return (async () => {
+				try {
+					let n;
+					n = r?.atomic && ve(e) ? await e.readFile(t, { atomic: !0 }) : await e.readFile(t), typeof r?.position == "number" && (n = n.slice(r.position)), typeof r?.length == "number" && (n = n.slice(0, r.length)), this.validateReadFileLimits(t, n.byteLength, r), i.end(y.wrap(n));
+				} catch (e) {
+					i.error(e), i.end();
+				}
+			})(), i;
+		}
+		async validateReadFile(e, t) {
+			let n = await this.resolve(e, { resolveMetadata: !0 });
+			if (n.isDirectory) throw new z(_(1926, "Unable to read file '{0}' that is actually a directory", this.resourceForError(e)), L.FILE_IS_DIRECTORY, t);
+			if (typeof t?.etag == "string" && t.etag !== "" && t.etag === n.etag) throw new mt(_(1927, "File not modified since"), n, t);
+			return this.validateReadFileLimits(e, n.size, t), n;
+		}
+		validateReadFileLimits(e, t, n) {
+			if (typeof n?.limits?.size == "number" && t > n.limits.size) throw new Yr(_(1928, "Unable to read file '{0}' that is too large to open", this.resourceForError(e)), L.FILE_TOO_LARGE, t, n);
+		}
+		async canMove(e, t, n) {
+			return this.doCanMoveCopy(e, t, "move", n);
+		}
+		async canCopy(e, t, n) {
+			return this.doCanMoveCopy(e, t, "copy", n);
+		}
+		async doCanMoveCopy(e, t, n, r) {
+			if (e.toString() !== t.toString()) try {
+				let i = n === "move" ? this.throwIfFileSystemIsReadonly(await this.withWriteProvider(e), e) : await this.withReadProvider(e), a = this.throwIfFileSystemIsReadonly(await this.withWriteProvider(t), t);
+				await this.doValidateMoveCopy(i, e, a, t, n, r);
+			} catch (e) {
+				return e;
+			}
+			return !0;
+		}
+		async move(e, t, n) {
+			let r = this.throwIfFileSystemIsReadonly(await this.withWriteProvider(e), e), i = this.throwIfFileSystemIsReadonly(await this.withWriteProvider(t), t), a = await this.doMoveCopy(r, e, i, t, "move", !!n), o = await this.resolve(t, { resolveMetadata: !0 });
+			return this._onDidRunOperation.fire(new f(e, a === "move" ? T.MOVE : T.COPY, o)), o;
+		}
+		async copy(e, t, n) {
+			let r = await this.withReadProvider(e), i = this.throwIfFileSystemIsReadonly(await this.withWriteProvider(t), t), a = await this.doMoveCopy(r, e, i, t, "copy", !!n), o = await this.resolve(t, { resolveMetadata: !0 });
+			return this._onDidRunOperation.fire(new f(e, a === "copy" ? T.COPY : T.MOVE, o)), o;
+		}
+		async doMoveCopy(e, t, n, r, i, a) {
+			if (t.toString() === r.toString()) return i;
+			let { exists: o, isSameResourceWithDifferentPathCase: s } = await this.doValidateMoveCopy(e, t, n, r, i, a);
+			if (o && !s && a && await this.del(r, { recursive: !0 }), await this.mkdirp(n, this.getExtUri(n).providerExtUri.dirname(r)), i === "copy") {
+				if (e === n && Oe(e)) await e.copy(t, r, { overwrite: a });
+				else {
+					let i = await this.resolve(t);
+					i.isDirectory ? await this.doCopyFolder(e, i, n, r) : await this.doCopyFile(e, t, n, r);
+				}
+				return i;
+			} else if (e === n) return await e.rename(t, r, { overwrite: a }), i;
+			else return await this.doMoveCopy(e, t, n, r, "copy", a), await this.del(t, { recursive: !0 }), "copy";
+		}
+		async doCopyFile(e, t, n, r) {
+			if (Rt(e) && Rt(n)) return this.doPipeBuffered(e, t, n, r);
+			if (Rt(e) && E(n)) return this.doPipeBufferedToUnbuffered(e, t, n, r);
+			if (E(e) && Rt(n)) return this.doPipeUnbufferedToBuffered(e, t, n, r);
+			if (E(e) && E(n)) return this.doPipeUnbuffered(e, t, n, r);
+		}
+		async doCopyFolder(e, t, n, r) {
+			await n.mkdir(r), Array.isArray(t.children) && await ur.settled(t.children.map(async (t) => {
+				let i = this.getExtUri(n).providerExtUri.joinPath(r, t.name);
+				return t.isDirectory ? this.doCopyFolder(e, await this.resolve(t.resource), n, i) : this.doCopyFile(e, t.resource, n, i);
+			}));
+		}
+		async doValidateMoveCopy(e, t, n, r, i, a) {
+			let o = !1;
+			if (e === n) {
+				let { providerExtUri: n, isPathCaseSensitive: a } = this.getExtUri(e);
+				if (a || (o = n.isEqual(t, r)), o && i === "copy") throw Error(_(1929, "Unable to copy when source '{0}' is same as target '{1}' with different path case on a case insensitive file system", this.resourceForError(t), this.resourceForError(r)));
+				if (!o && n.isEqualOrParent(r, t)) throw Error(_(1930, "Unable to move/copy when source '{0}' is parent of target '{1}'.", this.resourceForError(t), this.resourceForError(r)));
+			}
+			let s = await this.exists(r);
+			if (s && !o) {
+				if (!a) throw new z(_(1931, "Unable to move/copy '{0}' because target '{1}' already exists at destination.", this.resourceForError(t), this.resourceForError(r)), L.FILE_MOVE_CONFLICT);
+				if (e === n) {
+					let { providerExtUri: n } = this.getExtUri(e);
+					if (n.isEqualOrParent(t, r)) throw Error(_(1932, "Unable to move/copy '{0}' into '{1}' since a file would replace the folder it is contained in.", this.resourceForError(t), this.resourceForError(r)));
+				}
+			}
+			return {
+				exists: s,
+				isSameResourceWithDifferentPathCase: o
+			};
+		}
+		getExtUri(e) {
+			let t = this.isPathCaseSensitive(e);
+			return {
+				providerExtUri: t ? V : It,
+				isPathCaseSensitive: t
+			};
+		}
+		isPathCaseSensitive(e) {
+			return !!(e.capabilities & S.PathCaseSensitive);
+		}
+		async createFolder(e) {
+			let t = this.throwIfFileSystemIsReadonly(await this.withProvider(e), e);
+			await this.mkdirp(t, e);
+			let n = await this.resolve(e, { resolveMetadata: !0 });
+			return this._onDidRunOperation.fire(new f(e, T.CREATE, n)), n;
+		}
+		async mkdirp(e, t) {
+			let { providerExtUri: n } = this.getExtUri(e);
+			return Mc(n, e, t);
+		}
+		async canDelete(e, t) {
+			try {
+				await this.doValidateDelete(e, t);
+			} catch (e) {
+				return e;
+			}
+			return !0;
+		}
+		async doValidateDelete(e, t) {
+			let n = this.throwIfFileSystemIsReadonly(await this.withProvider(e), e), r = !!t?.useTrash;
+			if (r && !(n.capabilities & S.Trash)) throw Error(_(1933, "Unable to delete file '{0}' via trash because provider does not support it.", this.resourceForError(e)));
+			let i = t?.atomic;
+			if (i && !(n.capabilities & S.FileAtomicDelete)) throw Error(_(1934, "Unable to delete file '{0}' atomically because provider does not support it.", this.resourceForError(e)));
+			if (r && i) throw Error(_(1935, "Unable to atomically delete file '{0}' because using trash is enabled.", this.resourceForError(e)));
+			let a;
+			try {
+				a = await n.stat(e);
+			} catch {}
+			if (a) this.throwIfFileIsReadonly(e, a);
+			else throw new z(_(1936, "Unable to delete nonexistent file '{0}'", this.resourceForError(e)), L.FILE_NOT_FOUND);
+			if (!t?.recursive) {
+				let t = await this.resolve(e);
+				if (t.isDirectory && Array.isArray(t.children) && t.children.length > 0) throw Error(_(1937, "Unable to delete non-empty folder '{0}'.", this.resourceForError(e)));
+			}
+			return n;
+		}
+		async del(e, t) {
+			let n = await this.doValidateDelete(e, t), r = t;
+			if (Et(n) && !r?.atomic) {
+				let i = n.enforceAtomicDelete?.(e);
+				i && (r = {
+					...t,
+					atomic: i
+				});
+			}
+			let i = !!r?.useTrash, a = !!r?.recursive, o = r?.atomic ?? !1;
+			await n.delete(e, {
+				recursive: a,
+				useTrash: i,
+				atomic: o
+			}), this._onDidRunOperation.fire(new f(e, T.DELETE));
+		}
+		async cloneFile(e, t) {
+			let n = await this.withProvider(e), r = this.throwIfFileSystemIsReadonly(await this.withWriteProvider(t), t);
+			if (!(n === r && this.getExtUri(n).providerExtUri.isEqual(e, t))) return n === r && hr(n) ? n.cloneFile(e, t) : (await this.mkdirp(r, this.getExtUri(r).providerExtUri.dirname(t)), n === r && Oe(n) ? this.writeQueue.queueFor(e, () => n.copy(e, t, { overwrite: !0 }), this.getExtUri(n).providerExtUri) : this.writeQueue.queueFor(e, () => this.doCopyFile(n, e, r, t), this.getExtUri(n).providerExtUri));
+		}
+		static {
+			this.WATCHER_CORRELATION_IDS = 0;
+		}
+		createWatcher(e, t) {
+			return this.watch(e, {
+				...t,
+				correlationId: Nc.WATCHER_CORRELATION_IDS++
+			});
+		}
+		watch(e, t = {
+			recursive: !1,
+			excludes: []
+		}) {
+			let n = new N(), r = !1, i = () => {
+				r = !0;
+			};
+			n.add(o(() => i())), (async () => {
+				try {
+					let n = await this.doWatch(e, t);
+					r ? g(n) : i = () => g(n);
+				} catch (e) {
+					this.logService.error(e);
+				}
+			})();
+			let a = t.correlationId;
+			if (typeof a == "number") {
+				let e = n.add(new U());
+				return n.add(this.internalOnDidFilesChange.event((t) => {
+					t.correlates(a) && e.fire(t);
+				})), {
+					onDidChange: e.event,
+					dispose: () => n.dispose()
+				};
+			}
+			return n;
+		}
+		async doWatch(e, t) {
+			let n = await this.withProvider(e), r = We([this.getExtUri(n).providerExtUri.getComparisonKey(e), t]), i = this.activeWatchers.get(r);
+			return i || (i = {
+				count: 0,
+				disposable: n.watch(e, t)
+			}, this.activeWatchers.set(r, i)), i.count += 1, o(() => {
+				i && (i.count--, i.count === 0 && (g(i.disposable), this.activeWatchers.delete(r)));
+			});
+		}
+		dispose() {
+			super.dispose();
+			for (let [, e] of this.activeWatchers) g(e.disposable);
+			this.activeWatchers.clear();
+		}
+		async doWriteBuffered(e, t, n, r) {
+			return this.writeQueue.queueFor(t, async () => {
+				let i = await e.open(t, {
+					create: !0,
+					unlock: n?.unlock ?? !1
+				});
+				try {
+					Lt(r) || Dt(r) ? await this.doWriteStreamBufferedQueued(e, i, r) : await this.doWriteReadableBufferedQueued(e, i, r);
+				} catch (e) {
+					throw wt(e);
+				} finally {
+					await e.close(i);
+				}
+			}, this.getExtUri(e).providerExtUri);
+		}
+		async doWriteStreamBufferedQueued(e, t, n) {
+			let r = 0, i;
+			if (Dt(n)) {
+				if (n.buffer.length > 0) {
+					let i = y.concat(n.buffer);
+					await this.doWriteBuffer(e, t, i, i.byteLength, r, 0), r += i.byteLength;
+				}
+				if (n.ended) return;
+				i = n.stream;
+			} else i = n;
+			return new Promise((n, a) => {
+				ot(i, {
+					onData: async (n) => {
+						i.pause();
+						try {
+							await this.doWriteBuffer(e, t, n, n.byteLength, r, 0);
+						} catch (e) {
+							return a(e);
+						}
+						r += n.byteLength, setTimeout(() => i.resume());
+					},
+					onError: (e) => a(e),
+					onEnd: () => n()
+				});
+			});
+		}
+		async doWriteReadableBufferedQueued(e, t, n) {
+			let r = 0, i;
+			for (; (i = n.read()) !== null;) await this.doWriteBuffer(e, t, i, i.byteLength, r, 0), r += i.byteLength;
+		}
+		async doWriteBuffer(e, t, n, r, i, a) {
+			let o = 0;
+			for (; o < r;) {
+				let s = await e.write(t, i + o, n.buffer, a + o, r - o);
+				o += s;
+			}
+		}
+		async doWriteUnbuffered(e, t, n, r) {
+			return this.writeQueue.queueFor(t, () => this.doWriteUnbufferedQueued(e, t, n, r), this.getExtUri(e).providerExtUri);
+		}
+		async doWriteUnbufferedQueued(e, t, n, r) {
+			let i;
+			i = r instanceof y ? r : Lt(r) ? await fr(r) : Dt(r) ? await qr(r) : Ae(r), await e.writeFile(t, i.buffer, {
+				create: !0,
+				overwrite: !0,
+				unlock: n?.unlock ?? !1,
+				atomic: n?.atomic ?? !1
+			});
+		}
+		async doPipeBuffered(e, t, n, r) {
+			return this.writeQueue.queueFor(r, () => this.doPipeBufferedQueued(e, t, n, r), this.getExtUri(n).providerExtUri);
+		}
+		async doPipeBufferedQueued(e, t, n, r) {
+			let i, a;
+			try {
+				i = await e.open(t, { create: !1 }), a = await n.open(r, {
+					create: !0,
+					unlock: !1
+				});
+				let o = y.alloc(this.BUFFER_SIZE), s = 0, c = 0, l = 0;
+				do
+					l = await e.read(i, s, o.buffer, c, o.byteLength - c), await this.doWriteBuffer(n, a, o, l, s, c), s += l, c += l, c === o.byteLength && (c = 0);
+				while (l > 0);
+			} catch (e) {
+				throw wt(e);
+			} finally {
+				await ur.settled([typeof i == "number" ? e.close(i) : Promise.resolve(), typeof a == "number" ? n.close(a) : Promise.resolve()]);
+			}
+		}
+		async doPipeUnbuffered(e, t, n, r) {
+			return this.writeQueue.queueFor(r, () => this.doPipeUnbufferedQueued(e, t, n, r), this.getExtUri(n).providerExtUri);
+		}
+		async doPipeUnbufferedQueued(e, t, n, r) {
+			return n.writeFile(r, await e.readFile(t), {
+				create: !0,
+				overwrite: !0,
+				unlock: !1,
+				atomic: !1
+			});
+		}
+		async doPipeUnbufferedToBuffered(e, t, n, r) {
+			return this.writeQueue.queueFor(r, () => this.doPipeUnbufferedToBufferedQueued(e, t, n, r), this.getExtUri(n).providerExtUri);
+		}
+		async doPipeUnbufferedToBufferedQueued(e, t, n, r) {
+			let i = await n.open(r, {
+				create: !0,
+				unlock: !1
+			});
+			try {
+				let r = await e.readFile(t);
+				await this.doWriteBuffer(n, i, y.wrap(r), r.byteLength, 0, 0);
+			} catch (e) {
+				throw wt(e);
+			} finally {
+				await n.close(i);
+			}
+		}
+		async doPipeBufferedToUnbuffered(e, t, n, r) {
+			let i = await fr(this.readFileBuffered(e, t, Ye.None));
+			await this.doWriteUnbuffered(n, r, void 0, i);
+		}
+		throwIfFileSystemIsReadonly(e, t) {
+			if (e.capabilities & S.Readonly) throw new z(_(1938, "Unable to modify read-only file '{0}'", this.resourceForError(t)), L.FILE_PERMISSION_DENIED);
+			return e;
+		}
+		throwIfFileIsReadonly(e, t) {
+			if ((t.permissions ?? 0) & He.Readonly) throw new z(_(1938, "Unable to modify read-only file '{0}'", this.resourceForError(e)), L.FILE_PERMISSION_DENIED);
+		}
+		resourceForError(e) {
+			return jc(e);
+		}
+	}, Pc = Nc = w([R(0, ke)], Pc);
+})), Ic, Lc, Rc, zc = t((() => {
+	j(), H(), O(), D(), Mt(), F(), Ic = class {
+		constructor(e) {
+			this.type = b.File, this.ctime = Date.now(), this.mtime = Date.now(), this.size = 0, this.name = e;
+		}
+	}, Lc = class {
+		constructor(e) {
+			this.type = b.Directory, this.ctime = Date.now(), this.mtime = Date.now(), this.size = 0, this.name = e, this.entries = /* @__PURE__ */ new Map();
+		}
+	}, Rc = class extends B {
+		constructor() {
+			super(...arguments), this.memoryFdCounter = 0, this.fdMemory = /* @__PURE__ */ new Map(), this._onDidChangeCapabilities = this._register(new U()), this.onDidChangeCapabilities = this._onDidChangeCapabilities.event, this._capabilities = S.FileReadWrite | S.PathCaseSensitive, this.root = new Lc(""), this._onDidChangeFile = this._register(new U()), this.onDidChangeFile = this._onDidChangeFile.event, this._bufferedChanges = [];
+		}
+		get capabilities() {
+			return this._capabilities;
+		}
+		setReadOnly(e) {
+			e !== !!(this._capabilities & S.Readonly) && (this._capabilities = e ? S.Readonly | S.PathCaseSensitive | S.FileReadWrite : S.FileReadWrite | S.PathCaseSensitive, this._onDidChangeCapabilities.fire());
+		}
+		async stat(e) {
+			return this._lookup(e, !1);
+		}
+		async readdir(e) {
+			let t = this._lookupAsDirectory(e, !1), n = [];
+			return t.entries.forEach((e, t) => n.push([t, e.type])), n;
+		}
+		async readFile(e) {
+			let t = this._lookupAsFile(e, !1).data;
+			if (t) return t;
+			throw h("file not found", v.FileNotFound);
+		}
+		readFileStream(e) {
+			let t = this._lookupAsFile(e, !1).data, r = n((e) => y.concat(e.map((e) => y.wrap(e))).buffer);
+			return r.end(t), r;
+		}
+		async writeFile(e, t, n) {
+			let r = M(e), i = this._lookupParentDirectory(e), a = i.entries.get(r);
+			if (a instanceof Lc) throw h("file is directory", v.FileIsADirectory);
+			if (!a && !n.create) throw h("file not found", v.FileNotFound);
+			if (a && n.create && !n.overwrite) throw h("file exists already", v.FileExists);
+			a || (a = new Ic(r), i.entries.set(r, a), this._fireSoon({
+				type: A.ADDED,
+				resource: e
+			})), a.mtime = Date.now(), a.size = t.byteLength, a.data = t, this._fireSoon({
+				type: A.UPDATED,
+				resource: e
+			});
+		}
+		open(e, t) {
+			let n = this._lookupAsFile(e, !1).data;
+			if (n) {
+				let e = this.memoryFdCounter++;
+				return this.fdMemory.set(e, n), Promise.resolve(e);
+			}
+			throw h("file not found", v.FileNotFound);
+		}
+		close(e) {
+			return this.fdMemory.delete(e), Promise.resolve();
+		}
+		read(e, t, n, r, i) {
+			let a = this.fdMemory.get(e);
+			if (!a) throw h("No file with that descriptor open", v.Unavailable);
+			let o = y.wrap(a).slice(t, t + i);
+			return n.set(o.buffer, r), Promise.resolve(o.byteLength);
+		}
+		write(e, t, n, r, i) {
+			let a = this.fdMemory.get(e);
+			if (!a) throw h("No file with that descriptor open", v.Unavailable);
+			let o = y.wrap(n).slice(r, r + i);
+			return a.set(o.buffer, t), Promise.resolve(o.byteLength);
+		}
+		async rename(e, t, n) {
+			if (!n.overwrite && this._lookup(t, !0)) throw h("file exists already", v.FileExists);
+			let r = this._lookup(e, !1), i = this._lookupParentDirectory(e), a = this._lookupParentDirectory(t), o = M(t);
+			i.entries.delete(r.name), r.name = o, a.entries.set(o, r), this._fireSoon({
+				type: A.DELETED,
+				resource: e
+			}, {
+				type: A.ADDED,
+				resource: t
+			});
+		}
+		async delete(e, t) {
+			let n = Fe(e), r = M(e), i = this._lookupAsDirectory(n, !1);
+			i.entries.delete(r) && (i.mtime = Date.now(), --i.size, this._fireSoon({
+				type: A.UPDATED,
+				resource: n
+			}, {
+				resource: e,
+				type: A.DELETED
+			}));
+		}
+		async mkdir(e) {
+			if (this._lookup(e, !0)) throw h("file exists already", v.FileExists);
+			let t = M(e), n = Fe(e), r = this._lookupAsDirectory(n, !1), i = new Lc(t);
+			r.entries.set(i.name, i), r.mtime = Date.now(), r.size += 1, this._fireSoon({
+				type: A.UPDATED,
+				resource: n
+			}, {
+				type: A.ADDED,
+				resource: e
+			});
+		}
+		_lookup(e, t) {
+			let n = e.path.split("/"), r = this.root;
+			for (let e of n) {
+				if (!e) continue;
+				let n;
+				if (r instanceof Lc && (n = r.entries.get(e)), !n) {
+					if (t) return;
+					throw h("file not found", v.FileNotFound);
+				}
+				r = n;
+			}
+			return r;
+		}
+		_lookupAsDirectory(e, t) {
+			let n = this._lookup(e, t);
+			if (n instanceof Lc) return n;
+			throw h("file not a directory", v.FileNotADirectory);
+		}
+		_lookupAsFile(e, t) {
+			let n = this._lookup(e, t);
+			if (n instanceof Ic) return n;
+			throw h("file is a directory", v.FileIsADirectory);
+		}
+		_lookupParentDirectory(e) {
+			let t = Fe(e);
+			return this._lookupAsDirectory(t, !1);
+		}
+		watch(e, t) {
+			return B.None;
+		}
+		_fireSoon(...e) {
+			this._bufferedChanges.push(...e), this._fireSoonHandle && clearTimeout(this._fireSoonHandle), this._fireSoonHandle = setTimeout(() => {
+				this._onDidChangeFile.fire(this._bufferedChanges), this._bufferedChanges.length = 0;
+			}, 5);
+		}
+		dispose() {
+			super.dispose(), this.fdMemory.clear();
+		}
+	};
+})), Bc, Vc = t((() => {
+	Fr(), nn(), H(), O(), Bc = class extends B {
+		constructor(e) {
+			if (super(), this.channelName = e, this._onDidReceiveData = this._register(new U()), this.onDidReceiveData = this._onDidReceiveData.event, "BroadcastChannel" in gn) try {
+				this.broadcastChannel = new BroadcastChannel(e);
+				let t = (e) => {
+					this._onDidReceiveData.fire(e.data);
+				};
+				this.broadcastChannel.addEventListener("message", t), this._register(o(() => {
+					this.broadcastChannel && (this.broadcastChannel.removeEventListener("message", t), this.broadcastChannel.close());
+				}));
+			} catch (e) {
+				console.warn("Error while creating broadcast channel. Falling back to localStorage.", Jt(e));
+			}
+			this.broadcastChannel || (this.channelName = `BroadcastDataChannel.${e}`, this.createBroadcastChannel());
+		}
+		createBroadcastChannel() {
+			let e = (e) => {
+				e.key === this.channelName && e.newValue && this._onDidReceiveData.fire(JSON.parse(e.newValue));
+			};
+			gn.addEventListener("storage", e), this._register(o(() => gn.removeEventListener("storage", e)));
+		}
+		postData(e) {
+			this.broadcastChannel ? this.broadcastChannel.postMessage(e) : (localStorage.removeItem(this.channelName), localStorage.setItem(this.channelName, JSON.stringify(e)));
+		}
+	};
+})), Hc = t((() => {
+	p(), j(), H(), O(), D(), Ne(), Gr(), k(), F(), Vc(), h(_(1907, "File does not exist"), v.FileNotFound), h(_(1908, "File is Directory"), v.FileIsADirectory), h(_(1909, "File is not a directory"), v.FileNotADirectory), h(_(1910, "Directory is not empty"), v.Unknown), h(_(1911, "File exceeds available storage quota"), v.FileExceedsStorageQuota);
+})), Uc = t((() => {
+	Ze(), nn(), Kn();
+})), Wc, Gc = t((() => {
+	O(), re(), Wc = class extends lr {
+		constructor(e = xn) {
+			super(), this.buffer = [], this._logger = void 0, this._logLevelDisposable = this._register(new Wr()), this.setLevel(e);
+		}
+		set logger(e) {
+			this._logger = e, this.setLevel(e.getLevel()), this._logLevelDisposable.value = e.onDidChangeLogLevel(this.setLevel, this);
+			for (let { level: t, message: n } of this.buffer) vt(e, t, n);
+			this.buffer = [];
+		}
+		log(e, t) {
+			this._logger ? vt(this._logger, e, t) : this.getLevel() <= e && this.buffer.push({
+				level: e,
+				message: t
+			});
+		}
+		dispose() {
+			this._logger?.dispose(), super.dispose();
+		}
+		flush() {
+			this._logger?.flush();
+		}
+	};
+}));
+//#endregion
+//#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/services/textfile/common/encoding.js
+function Kc(e, t) {
+	let r = t.minBytesRequiredForDetection ?? (t.guessEncoding ? dl : ul);
+	return new Promise((i, a) => {
+		let o = n((e) => e.join("")), s = [], c = 0, l, u = new Vn(), d = async () => {
+			try {
+				let e = await nl({
+					buffer: y.concat(s),
+					bytesRead: c
+				}, t.guessEncoding, t.candidateGuessEncodings);
+				if (e.seemsBinary && t.acceptTextOnly) throw new ml("Stream is binary but only text is accepted for decoding", pl.STREAM_IS_BINARY);
+				e.encoding = await t.overwriteEncoding(e.encoding), l = await hl.create(e.encoding);
+				let n = l.write(y.concat(s).buffer);
+				o.write(n), s.length = 0, c = 0, i({
+					stream: o,
+					detected: e
+				});
+			} catch (e) {
+				u.cancel(), o.destroy(), a(e);
+			}
+		};
+		ot(e, {
+			onData: async (t) => {
+				l ? o.write(l.write(t.buffer)) : (s.push(t), c += t.byteLength, c >= r && (e.pause(), await d(), setTimeout(() => e.resume())));
+			},
+			onError: (e) => o.error(e),
+			onEnd: async () => {
+				l || await d(), o.end(l?.end());
+			}
+		}, u.token);
+	});
+}
+async function qc(t, n, r) {
+	let i = (await import("./iconv-lite-umd-1BxRKXrz.js").then((t) => /* @__PURE__ */ e(t.default, 1))).getEncoder(Yc(n), r), a = !1, o = !1;
+	return { read() {
+		if (o) return null;
+		let e = t.read();
+		if (typeof e != "string") {
+			if (o = !0, !a && r?.addBOM) switch (n) {
+				case Q:
+				case rl: return y.wrap(Uint8Array.from(cl));
+				case il: return y.wrap(Uint8Array.from(ol));
+				case al: return y.wrap(Uint8Array.from(sl));
+			}
+			let e = i.end();
+			return e && e.length > 0 ? (a = !0, y.wrap(e)) : null;
+		}
+		return a = !0, y.wrap(i.write(e));
+	} };
+}
+async function Jc(t) {
+	return (await import("./iconv-lite-umd-1BxRKXrz.js").then((t) => /* @__PURE__ */ e(t.default, 1))).encodingExists(Yc(t));
+}
+function Yc(e) {
+	return e === "utf8bom" || e === null ? Q : e;
+}
+function Xc(e, t) {
+	if (!e || t < ol.length) return null;
+	let n = e.readUInt8(0), r = e.readUInt8(1);
+	if (n === ol[0] && r === ol[1]) return il;
+	if (n === sl[0] && r === sl[1]) return al;
+	if (t < cl.length) return null;
+	let i = e.readUInt8(2);
+	return n === cl[0] && r === cl[1] && i === cl[2] ? rl : null;
+}
+async function Zc(t, n) {
+	let r = await import("./jschardet-Bzgs_WTs.js").then((t) => /* @__PURE__ */ e(t.default, 1)), i = tl(t.slice(0, fl).buffer);
+	n && (n = Ut(n.map((e) => el(e))), n.length === 0 && (n = void 0));
+	let a;
+	try {
+		a = r.detect(i, n ? { detectEncodings: n } : void 0);
+	} catch {
+		return null;
+	}
+	if (!a?.encoding) return null;
+	let o = a.encoding.toLowerCase();
+	return 0 <= gl.indexOf(o) ? null : $c(a.encoding);
+}
+function Qc(e) {
+	return e.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+}
+function $c(e) {
+	let t = Qc(e);
+	return _l[t] || t;
+}
+function el(e) {
+	let t = Qc(e), n = vl[t];
+	return n ? n.guessableName : void 0;
+}
+function tl(e) {
+	let t = "";
+	for (let n = 0; n < e.length; n++) t += String.fromCharCode(e[n]);
+	return t;
+}
+function nl({ buffer: e, bytesRead: t }, n, r) {
+	let i = Xc(e, t), a = !1;
+	if (i !== "utf16be" && i !== "utf16le" && e) {
+		let n = !0, r = !0, o = !1;
+		for (let i = 0; i < t && i < ll; i++) {
+			let t = i % 2 == 1, a = e.readUInt8(i) === 0;
+			if (a && (o = !0), n && (t && !a || !t && a) && (n = !1), r && (t && a || !t && !a) && (r = !1), a && !n && !r) break;
+		}
+		o && (n ? i = al : r ? i = il : a = !0);
+	}
+	return n && !a && !i && e ? Zc(e.slice(0, t), r).then((e) => ({
+		seemsBinary: !1,
+		encoding: e
+	})) : {
+		seemsBinary: a,
+		encoding: i
+	};
+}
+var Q, rl, il, al, ol, sl, cl, ll, ul, dl, fl, pl, ml, hl, gl, _l, $, vl, yl = t((() => {
+	Mt(), j(), In(), et(), Q = "utf8", rl = "utf8bom", il = "utf16be", al = "utf16le", ol = [254, 255], sl = [255, 254], cl = [
+		239,
+		187,
+		191
+	], ll = 512, ul = 512, dl = 512 * 8, fl = 512 * 128, (function(e) {
+		e[e.STREAM_IS_BINARY = 1] = "STREAM_IS_BINARY";
+	})(pl ||= {}), ml = class extends Error {
+		constructor(e, t) {
+			super(e), this.decodeStreamErrorKind = t;
+		}
+	}, hl = class t {
+		static async create(n) {
+			let r;
+			if (n !== "utf8") r = (await import("./iconv-lite-umd-1BxRKXrz.js").then((t) => /* @__PURE__ */ e(t.default, 1))).getDecoder(Yc(n));
+			else {
+				let e = new TextDecoder();
+				r = {
+					write(t) {
+						return e.decode(t, { stream: !0 });
+					},
+					end() {
+						return e.decode();
+					}
+				};
+			}
+			return new t(r);
+		}
+		constructor(e) {
+			this.iconvLiteDecoder = e;
+		}
+		write(e) {
+			return this.iconvLiteDecoder.write(e);
+		}
+		end() {
+			return this.iconvLiteDecoder.end();
+		}
+	}, gl = [
+		"ascii",
+		"utf-16",
+		"utf-32"
+	], _l = {
+		ibm866: "cp866",
+		big5: "cp950"
+	}, $ = {
+		utf8: {
+			labelLong: "UTF-8",
+			labelShort: "UTF-8",
+			order: 1,
+			alias: "utf8bom",
+			guessableName: "UTF-8"
+		},
+		utf8bom: {
+			labelLong: "UTF-8 with BOM",
+			labelShort: "UTF-8 with BOM",
+			encodeOnly: !0,
+			order: 2,
+			alias: "utf8"
+		},
+		utf16le: {
+			labelLong: "UTF-16 LE",
+			labelShort: "UTF-16 LE",
+			order: 3,
+			guessableName: "UTF-16LE"
+		},
+		utf16be: {
+			labelLong: "UTF-16 BE",
+			labelShort: "UTF-16 BE",
+			order: 4,
+			guessableName: "UTF-16BE"
+		},
+		windows1252: {
+			labelLong: "Western (Windows 1252)",
+			labelShort: "Windows 1252",
+			order: 5,
+			guessableName: "windows-1252"
+		},
+		iso88591: {
+			labelLong: "Western (ISO 8859-1)",
+			labelShort: "ISO 8859-1",
+			order: 6
+		},
+		iso88593: {
+			labelLong: "Western (ISO 8859-3)",
+			labelShort: "ISO 8859-3",
+			order: 7
+		},
+		iso885915: {
+			labelLong: "Western (ISO 8859-15)",
+			labelShort: "ISO 8859-15",
+			order: 8
+		},
+		macroman: {
+			labelLong: "Western (Mac Roman)",
+			labelShort: "Mac Roman",
+			order: 9
+		},
+		cp437: {
+			labelLong: "DOS (CP 437)",
+			labelShort: "CP437",
+			order: 10
+		},
+		windows1256: {
+			labelLong: "Arabic (Windows 1256)",
+			labelShort: "Windows 1256",
+			order: 11
+		},
+		iso88596: {
+			labelLong: "Arabic (ISO 8859-6)",
+			labelShort: "ISO 8859-6",
+			order: 12
+		},
+		windows1257: {
+			labelLong: "Baltic (Windows 1257)",
+			labelShort: "Windows 1257",
+			order: 13
+		},
+		iso88594: {
+			labelLong: "Baltic (ISO 8859-4)",
+			labelShort: "ISO 8859-4",
+			order: 14
+		},
+		iso885914: {
+			labelLong: "Celtic (ISO 8859-14)",
+			labelShort: "ISO 8859-14",
+			order: 15
+		},
+		windows1250: {
+			labelLong: "Central European (Windows 1250)",
+			labelShort: "Windows 1250",
+			order: 16,
+			guessableName: "windows-1250"
+		},
+		iso88592: {
+			labelLong: "Central European (ISO 8859-2)",
+			labelShort: "ISO 8859-2",
+			order: 17,
+			guessableName: "ISO-8859-2"
+		},
+		cp852: {
+			labelLong: "Central European (CP 852)",
+			labelShort: "CP 852",
+			order: 18
+		},
+		windows1251: {
+			labelLong: "Cyrillic (Windows 1251)",
+			labelShort: "Windows 1251",
+			order: 19,
+			guessableName: "windows-1251"
+		},
+		cp866: {
+			labelLong: "Cyrillic (CP 866)",
+			labelShort: "CP 866",
+			order: 20,
+			guessableName: "IBM866"
+		},
+		cp1125: {
+			labelLong: "Cyrillic (CP 1125)",
+			labelShort: "CP 1125",
+			order: 21,
+			guessableName: "IBM1125"
+		},
+		iso88595: {
+			labelLong: "Cyrillic (ISO 8859-5)",
+			labelShort: "ISO 8859-5",
+			order: 22,
+			guessableName: "ISO-8859-5"
+		},
+		koi8r: {
+			labelLong: "Cyrillic (KOI8-R)",
+			labelShort: "KOI8-R",
+			order: 23,
+			guessableName: "KOI8-R"
+		},
+		koi8u: {
+			labelLong: "Cyrillic (KOI8-U)",
+			labelShort: "KOI8-U",
+			order: 24
+		},
+		iso885913: {
+			labelLong: "Estonian (ISO 8859-13)",
+			labelShort: "ISO 8859-13",
+			order: 25
+		},
+		windows1253: {
+			labelLong: "Greek (Windows 1253)",
+			labelShort: "Windows 1253",
+			order: 26,
+			guessableName: "windows-1253"
+		},
+		iso88597: {
+			labelLong: "Greek (ISO 8859-7)",
+			labelShort: "ISO 8859-7",
+			order: 27,
+			guessableName: "ISO-8859-7"
+		},
+		windows1255: {
+			labelLong: "Hebrew (Windows 1255)",
+			labelShort: "Windows 1255",
+			order: 28,
+			guessableName: "windows-1255"
+		},
+		iso88598: {
+			labelLong: "Hebrew (ISO 8859-8)",
+			labelShort: "ISO 8859-8",
+			order: 29,
+			guessableName: "ISO-8859-8"
+		},
+		iso885910: {
+			labelLong: "Nordic (ISO 8859-10)",
+			labelShort: "ISO 8859-10",
+			order: 30
+		},
+		iso885916: {
+			labelLong: "Romanian (ISO 8859-16)",
+			labelShort: "ISO 8859-16",
+			order: 31
+		},
+		windows1254: {
+			labelLong: "Turkish (Windows 1254)",
+			labelShort: "Windows 1254",
+			order: 32
+		},
+		iso88599: {
+			labelLong: "Turkish (ISO 8859-9)",
+			labelShort: "ISO 8859-9",
+			order: 33
+		},
+		windows1258: {
+			labelLong: "Vietnamese (Windows 1258)",
+			labelShort: "Windows 1258",
+			order: 34
+		},
+		gbk: {
+			labelLong: "Simplified Chinese (GBK)",
+			labelShort: "GBK",
+			order: 35
+		},
+		gb18030: {
+			labelLong: "Simplified Chinese (GB18030)",
+			labelShort: "GB18030",
+			order: 36
+		},
+		cp950: {
+			labelLong: "Traditional Chinese (Big5)",
+			labelShort: "Big5",
+			order: 37,
+			guessableName: "Big5"
+		},
+		big5hkscs: {
+			labelLong: "Traditional Chinese (Big5-HKSCS)",
+			labelShort: "Big5-HKSCS",
+			order: 38
+		},
+		shiftjis: {
+			labelLong: "Japanese (Shift JIS)",
+			labelShort: "Shift JIS",
+			order: 39,
+			guessableName: "SHIFT_JIS"
+		},
+		eucjp: {
+			labelLong: "Japanese (EUC-JP)",
+			labelShort: "EUC-JP",
+			order: 40,
+			guessableName: "EUC-JP"
+		},
+		euckr: {
+			labelLong: "Korean (EUC-KR)",
+			labelShort: "EUC-KR",
+			order: 41,
+			guessableName: "EUC-KR"
+		},
+		windows874: {
+			labelLong: "Thai (Windows 874)",
+			labelShort: "Windows 874",
+			order: 42
+		},
+		iso885911: {
+			labelLong: "Latin/Thai (ISO 8859-11)",
+			labelShort: "ISO 8859-11",
+			order: 43
+		},
+		koi8ru: {
+			labelLong: "Cyrillic (KOI8-RU)",
+			labelShort: "KOI8-RU",
+			order: 44
+		},
+		koi8t: {
+			labelLong: "Tajik (KOI8-T)",
+			labelShort: "KOI8-T",
+			order: 45
+		},
+		gb2312: {
+			labelLong: "Simplified Chinese (GB 2312)",
+			labelShort: "GB 2312",
+			order: 46,
+			guessableName: "GB2312"
+		},
+		cp865: {
+			labelLong: "Nordic DOS (CP 865)",
+			labelShort: "CP 865",
+			order: 47
+		},
+		cp850: {
+			labelLong: "Western European DOS (CP 850)",
+			labelShort: "CP 850",
+			order: 48
+		}
+	}, vl = (() => {
+		let e = {};
+		for (let t in $) $[t].guessableName && (e[t] = $[t]);
+		return e;
+	})();
+})), bl, xl, Sl = t((() => {
+	l(), Ri(), wr(), nt(), H(), ls(), sn(), Nn(), pi(), xi(), ni(), Ne(), je(), pt(), Ai(), r(), yl(), j(), bi(), pr(), xl = class extends yi {
+		static {
+			bl = this;
+		}
+		static {
+			this.FIRST_LINE_NAME_MAX_LENGTH = 40;
+		}
+		static {
+			this.FIRST_LINE_NAME_CANDIDATE_MAX_LENGTH = this.FIRST_LINE_NAME_MAX_LENGTH * 10;
+		}
+		static {
+			this.ACTIVE_EDITOR_LANGUAGE_ID = "${activeEditorLanguage}";
+		}
+		get name() {
+			return this.configuredLabelFormat === "content" && !this.hasAssociatedFilePath && this.cachedModelFirstLineWords ? this.cachedModelFirstLineWords : this.labelService.getUriBasenameLabel(this.resource);
+		}
+		constructor(e, t, n, r, i, a, o, s, c, l, u, d, f, ee, p) {
+			super(o, a, ee, p), this.resource = e, this.hasAssociatedFilePath = t, this.initialValue = n, this.preferredLanguageId = r, this.preferredEncoding = i, this.workingCopyBackupService = s, this.textResourceConfigurationService = c, this.workingCopyService = l, this.textFileService = u, this.labelService = d, this.editorService = f, this._onDidChangeContent = this._register(new U()), this.onDidChangeContent = this._onDidChangeContent.event, this._onDidChangeName = this._register(new U()), this.onDidChangeName = this._onDidChangeName.event, this._onDidChangeDirty = this._register(new U()), this.onDidChangeDirty = this._onDidChangeDirty.event, this._onDidChangeEncoding = this._register(new U()), this.onDidChangeEncoding = this._onDidChangeEncoding.event, this._onDidSave = this._register(new U()), this.onDidSave = this._onDidSave.event, this._onDidRevert = this._register(new U()), this.onDidRevert = this._onDidRevert.event, this.typeId = "", this.capabilities = Ii.Untitled, this.configuredLabelFormat = "content", this.cachedModelFirstLineWords = void 0, this.ignoreDirtyOnModelContentChange = !1, this.dirty = this.hasAssociatedFilePath || !!this.initialValue, this._register(this.workingCopyService.registerWorkingCopy(this)), r && this.setLanguageId(r), this.onConfigurationChange(void 0, !1), this.registerListeners();
+		}
+		registerListeners() {
+			this._register(this.textResourceConfigurationService.onDidChangeConfiguration((e) => this.onConfigurationChange(e, !0)));
+		}
+		onConfigurationChange(e, t) {
+			if (!e || e.affectsConfiguration(this.resource, "files.encoding")) {
+				let e = this.textResourceConfigurationService.getValue(this.resource, "files.encoding");
+				this.configuredEncoding !== e && typeof e == "string" && (this.configuredEncoding = e, t && !this.preferredEncoding && this._onDidChangeEncoding.fire());
+			}
+			if (!e || e.affectsConfiguration(this.resource, "workbench.editor.untitled.labelFormat")) {
+				let e = this.textResourceConfigurationService.getValue(this.resource, "workbench.editor.untitled.labelFormat");
+				this.configuredLabelFormat !== e && (e === "content" || e === "name") && (this.configuredLabelFormat = e, t && this._onDidChangeName.fire());
+			}
+		}
+		setLanguageId(e, t) {
+			let n = e === bl.ACTIVE_EDITOR_LANGUAGE_ID ? this.editorService.activeTextEditorLanguageId : e;
+			this.preferredLanguageId = n, n && super.setLanguageId(n, t);
+		}
+		getLanguageId() {
+			return this.textEditorModel ? this.textEditorModel.getLanguageId() : this.preferredLanguageId;
+		}
+		getEncoding() {
+			return this.preferredEncoding || this.configuredEncoding;
+		}
+		async setEncoding(e) {
+			let t = this.getEncoding();
+			this.preferredEncoding = e, t !== this.preferredEncoding && this._onDidChangeEncoding.fire();
+		}
+		isDirty() {
+			return this.dirty;
+		}
+		isModified() {
+			return this.isDirty();
+		}
+		setDirty(e) {
+			this.dirty !== e && (this.dirty = e, this._onDidChangeDirty.fire());
+		}
+		async save(e) {
+			let t = await this.textFileService.save(this.resource, e);
+			return t && this._onDidSave.fire({
+				reason: e?.reason,
+				source: e?.source
+			}), !!t;
+		}
+		async revert() {
+			this.ignoreDirtyOnModelContentChange = !0;
+			try {
+				this.updateTextEditorModel(pn(""));
+			} finally {
+				this.ignoreDirtyOnModelContentChange = !1;
+			}
+			this.setDirty(!1), this._onDidRevert.fire();
+		}
+		async backup(e) {
+			let t;
+			return this.isResolved() ? t = await this.textFileService.getEncodedReadable(this.resource, this.createSnapshot() ?? void 0, { encoding: Q }) : typeof this.initialValue == "string" && (t = Ie(y.fromString(this.initialValue))), { content: t };
+		}
+		async resolve() {
+			let e = !1, t = !1;
+			if (this.textEditorModel) this.updateTextEditorModel(void 0, this.preferredLanguageId);
+			else {
+				let n, r = await this.workingCopyBackupService.resolve(this);
+				r ? (n = r.value, t = !0) : n = ft(y.fromString(this.initialValue || ""));
+				let i = await Zn(await this.textFileService.getDecodedStream(this.resource, n, { encoding: Q }));
+				this.createTextEditorModel(i, this.resource, this.preferredLanguageId), e = !0;
+			}
+			let n = St(this.textEditorModel);
+			return this.installModelListeners(n), e && ((t || this.initialValue) && this.updateNameFromFirstLine(n), this.setDirty(this.hasAssociatedFilePath || !!t || !!this.initialValue), (t || this.initialValue) && this._onDidChangeContent.fire()), super.resolve();
+		}
+		isResolved() {
+			return !!this.textEditorModelHandle;
+		}
+		installModelListeners(e) {
+			this._register(e.onDidChangeContent((t) => this.onModelContentChanged(e, t))), this._register(e.onDidChangeLanguage(() => this.onConfigurationChange(void 0, !0))), super.installModelListeners(e);
+		}
+		onModelContentChanged(e, t) {
+			this.ignoreDirtyOnModelContentChange || (!this.hasAssociatedFilePath && e.getLineCount() === 1 && e.getLineLength(1) === 0 ? this.setDirty(!1) : this.setDirty(!0)), t.changes.some((e) => (e.range.startLineNumber === 1 || e.range.endLineNumber === 1) && e.range.startColumn <= bl.FIRST_LINE_NAME_CANDIDATE_MAX_LENGTH) && this.updateNameFromFirstLine(e), this._onDidChangeContent.fire(), this.autoDetectLanguage();
+		}
+		updateNameFromFirstLine(e) {
+			if (this.hasAssociatedFilePath) return;
+			let t, n = e.getValueInRange({
+				startLineNumber: 1,
+				endLineNumber: 1,
+				startColumn: 1,
+				endColumn: bl.FIRST_LINE_NAME_CANDIDATE_MAX_LENGTH + 1
+			}).trim().replace(/\s+/g, " ").replace(/\u202E/g, "");
+			n = n.substr(0, Nt(n, bl.FIRST_LINE_NAME_MAX_LENGTH)[0]), n && Ce().exec(n) && (t = n), t !== this.cachedModelFirstLineWords && (this.cachedModelFirstLineWords = t, this._onDidChangeName.fire());
+		}
+		isReadonly() {
+			return !1;
+		}
+	}, xl = bl = w([
+		R(5, Qn),
+		R(6, Ge),
+		R(7, cs),
+		R(8, Wn),
+		R(9, Bi),
+		R(10, mi),
+		R(11, ge),
+		R(12, ui),
+		R(13, Hi),
+		R(14, Me)
+	], xl);
+})), Cl, wl, Tl = t((() => {
+	l(), k(), H(), Kn(), Ne(), Mi(), ni(), Zr(), Ri(), ls(), F(), Sn(), wr(), nt(), p(), jt(), zr(), pi(), xi(), $r(), je(), In(), yl(), Nn(), bi(), Qr(), D(), pr(), zt(), ts(), _s(), Tt(), nn(), Ht(), wl = class extends yi {
+		static {
+			Cl = this;
+		}
+		static {
+			this.TEXTFILE_SAVE_ENCODING_SOURCE = oi.registerSource("textFileEncoding.source", _(14310, "File Encoding Changed"));
+		}
+		static {
+			this.UNDO_REDO_SAVE_PARTICIPANTS_AUTO_SAVE_THROTTLE_THRESHOLD = 500;
+		}
+		constructor(e, t, n, r, i, a, o, s, c, l, u, d, f, ee, p, m, h) {
+			super(i, r, f, ee), this.resource = e, this.preferredEncoding = t, this.preferredLanguageId = n, this.fileService = a, this.textFileService = o, this.workingCopyBackupService = s, this.logService = c, this.workingCopyService = l, this.filesConfigurationService = u, this.labelService = d, this.pathService = p, this.extensionService = m, this.progressService = h, this._onDidChangeContent = this._register(new U()), this.onDidChangeContent = this._onDidChangeContent.event, this._onDidResolve = this._register(new U()), this.onDidResolve = this._onDidResolve.event, this._onDidChangeDirty = this._register(new U()), this.onDidChangeDirty = this._onDidChangeDirty.event, this._onDidSaveError = this._register(new U()), this.onDidSaveError = this._onDidSaveError.event, this._onDidSave = this._register(new U()), this.onDidSave = this._onDidSave.event, this._onDidRevert = this._register(new U()), this.onDidRevert = this._onDidRevert.event, this._onDidChangeEncoding = this._register(new U()), this.onDidChangeEncoding = this._onDidChangeEncoding.event, this._onDidChangeOrphaned = this._register(new U()), this.onDidChangeOrphaned = this._onDidChangeOrphaned.event, this._onDidChangeReadonly = this._register(new U()), this.onDidChangeReadonly = this._onDidChangeReadonly.event, this.typeId = "", this.capabilities = Ii.None, this.versionId = 0, this.ignoreDirtyOnModelContentChange = !1, this.ignoreSaveFromSaveParticipants = !1, this.lastModelContentChangeFromUndoRedo = void 0, this.saveSequentializer = new Kt(), this.dirty = !1, this.inConflictMode = !1, this.inOrphanMode = !1, this.inErrorMode = !1, this.hasEncodingSetExplicitly = !1, this.name = Vr(this.labelService.getUriLabel(this.resource)), this.resourceHasExtension = !!V.extname(this.resource), this._register(this.workingCopyService.registerWorkingCopy(this)), this.registerListeners();
+		}
+		registerListeners() {
+			this._register(this.fileService.onDidFilesChange((e) => this.onDidFilesChange(e))), this._register(this.filesConfigurationService.onDidChangeFilesAssociation(() => this.onDidChangeFilesAssociation())), this._register(this.filesConfigurationService.onDidChangeReadonly(() => this._onDidChangeReadonly.fire()));
+		}
+		async onDidFilesChange(e) {
+			let t = !1, n;
+			if (this.inOrphanMode ? e.contains(this.resource, A.ADDED) && (n = !1, t = !0) : e.contains(this.resource, A.DELETED) && (n = !0, t = !0), t && this.inOrphanMode !== n) {
+				let e = !1;
+				n && (await Xr(100, Ye.None), e = this.isDisposed() ? !0 : !await this.fileService.exists(this.resource)), this.inOrphanMode !== e && !this.isDisposed() && this.setOrphaned(e);
+			}
+		}
+		setOrphaned(e) {
+			this.inOrphanMode !== e && (this.inOrphanMode = e, this._onDidChangeOrphaned.fire());
+		}
+		onDidChangeFilesAssociation() {
+			if (!this.isResolved()) return;
+			let e = this.getFirstLineText(this.textEditorModel), t = this.getOrCreateLanguage(this.resource, this.languageService, this.preferredLanguageId, e);
+			this.textEditorModel.setLanguage(t);
+		}
+		setLanguageId(e, t) {
+			super.setLanguageId(e, t), this.preferredLanguageId = e;
+		}
+		async backup(e) {
+			let t;
+			this.lastResolvedFileStat && (t = {
+				mtime: this.lastResolvedFileStat.mtime,
+				ctime: this.lastResolvedFileStat.ctime,
+				size: this.lastResolvedFileStat.size,
+				etag: this.lastResolvedFileStat.etag,
+				orphaned: this.inOrphanMode
+			});
+			let n = await this.textFileService.getEncodedReadable(this.resource, this.createSnapshot() ?? void 0, { encoding: Q });
+			return {
+				meta: t,
+				content: n
+			};
+		}
+		async revert(e) {
+			if (!this.isResolved()) return;
+			let t = this.dirty, n = this.doSetDirty(!1);
+			if (!e?.soft) try {
+				await this.forceResolveFromFile();
+			} catch (e) {
+				if (e.fileOperationResult !== L.FILE_NOT_FOUND) throw n(), e;
+			}
+			this._onDidRevert.fire(), t && this._onDidChangeDirty.fire();
+		}
+		async resolve(e) {
+			if (this.trace("resolve() - enter"), wn("code/willResolveTextFileEditorModel"), this.isDisposed()) {
+				this.trace("resolve() - exit - without resolving because model is disposed");
+				return;
+			}
+			if (!e?.contents && (this.dirty || this.saveSequentializer.isRunning())) {
+				this.trace("resolve() - exit - without resolving because model is dirty or being saved");
+				return;
+			}
+			await this.doResolve(e), wn("code/didResolveTextFileEditorModel");
+		}
+		async doResolve(e) {
+			if (e?.contents) return this.resolveFromBuffer(e.contents, e);
+			if (!(!this.isResolved() && await this.resolveFromBackup(e))) return this.resolveFromFile(e);
+		}
+		async resolveFromBuffer(e, t) {
+			this.trace("resolveFromBuffer()");
+			let n, r, i, a;
+			try {
+				let e = await this.fileService.stat(this.resource);
+				n = e.mtime, r = e.ctime, i = e.size, a = e.etag, this.setOrphaned(!1);
+			} catch (e) {
+				n = Date.now(), r = Date.now(), i = 0, a = "", this.setOrphaned(e.fileOperationResult === L.FILE_NOT_FOUND);
+			}
+			let o = await this.textFileService.encoding.getPreferredWriteEncoding(this.resource, this.preferredEncoding);
+			this.resolveFromContent({
+				resource: this.resource,
+				name: this.name,
+				mtime: n,
+				ctime: r,
+				size: i,
+				etag: a,
+				value: e,
+				encoding: o.encoding,
+				readonly: !1,
+				locked: !1,
+				executable: !1
+			}, !0, t);
+		}
+		async resolveFromBackup(e) {
+			let t = await this.workingCopyBackupService.resolve(this), n = Q;
+			return t && (n = (await this.textFileService.encoding.getPreferredWriteEncoding(this.resource, this.preferredEncoding)).encoding), this.isResolved() ? (this.trace("resolveFromBackup() - exit - without resolving because previously new model got created meanwhile"), !0) : t ? (await this.doResolveFromBackup(t, n, e), !0) : !1;
+		}
+		async doResolveFromBackup(e, t, n) {
+			this.trace("doResolveFromBackup()"), this.resolveFromContent({
+				resource: this.resource,
+				name: this.name,
+				mtime: e.meta ? e.meta.mtime : Date.now(),
+				ctime: e.meta ? e.meta.ctime : Date.now(),
+				size: e.meta ? e.meta.size : 0,
+				etag: e.meta ? e.meta.etag : "",
+				value: await Zn(await this.textFileService.getDecodedStream(this.resource, e.value, { encoding: Q })),
+				encoding: t,
+				readonly: !1,
+				locked: !1,
+				executable: !1
+			}, !0, n), e.meta?.orphaned && this.setOrphaned(!0);
+		}
+		async resolveFromFile(e) {
+			this.trace("resolveFromFile()");
+			let t = e?.forceReadFromFile, n = this.isResolved() || e?.allowBinary, r;
+			t ? r = "" : this.lastResolvedFileStat && (r = this.lastResolvedFileStat.etag);
+			let i = this.versionId;
+			try {
+				let t = await this.textFileService.readStream(this.resource, {
+					acceptTextOnly: !n,
+					etag: r,
+					encoding: this.preferredEncoding,
+					limits: e?.limits
+				});
+				if (this.setOrphaned(!1), i !== this.versionId) {
+					this.trace("resolveFromFile() - exit - without resolving because model content changed");
+					return;
+				}
+				return this.resolveFromContent(t, !1, e);
+			} catch (e) {
+				let n = e.fileOperationResult;
+				if (this.setOrphaned(n === L.FILE_NOT_FOUND), this.isResolved() && n === L.FILE_NOT_MODIFIED_SINCE) {
+					e instanceof mt && this.updateLastResolvedFileStat(e.stat);
+					return;
+				}
+				if (this.isResolved() && n === L.FILE_NOT_FOUND && !t) return;
+				throw e;
+			}
+		}
+		resolveFromContent(e, t, n) {
+			if (this.trace("resolveFromContent() - enter"), this.isDisposed()) {
+				this.trace("resolveFromContent() - exit - because model is disposed");
+				return;
+			}
+			this.updateLastResolvedFileStat({
+				resource: this.resource,
+				name: e.name,
+				mtime: e.mtime,
+				ctime: e.ctime,
+				size: e.size,
+				etag: e.etag,
+				readonly: e.readonly,
+				locked: e.locked,
+				executable: !1,
+				isFile: !0,
+				isDirectory: !1,
+				isSymbolicLink: !1,
+				children: void 0
+			});
+			let r = this.contentEncoding;
+			this.contentEncoding = e.encoding, this.preferredEncoding ? this.updatePreferredEncoding(this.contentEncoding) : r !== this.contentEncoding && this._onDidChangeEncoding.fire(), this.textEditorModel ? this.doUpdateTextModel(e.value, yr.reloadFromDisk()) : this.doCreateTextModel(e.resource, e.value), this.setDirty(!!t), this._onDidResolve.fire(n?.reason ?? Ni.OTHER);
+		}
+		doCreateTextModel(e, t) {
+			this.trace("doCreateTextModel()");
+			let n = this.createTextEditorModel(t, e, this.preferredLanguageId);
+			this.installModelListeners(n), this.autoDetectLanguage();
+		}
+		doUpdateTextModel(e, t) {
+			this.trace("doUpdateTextModel()"), this.ignoreDirtyOnModelContentChange = !0;
+			try {
+				this.updateTextEditorModel(e, this.preferredLanguageId, t);
+			} finally {
+				this.ignoreDirtyOnModelContentChange = !1;
+			}
+		}
+		installModelListeners(e) {
+			this._register(e.onDidChangeContent((t) => this.onModelContentChanged(e, t.isUndoing || t.isRedoing))), this._register(e.onDidChangeLanguage(() => this.onMaybeShouldChangeEncoding())), super.installModelListeners(e);
+		}
+		onModelContentChanged(e, t) {
+			if (this.trace("onModelContentChanged() - enter"), this.versionId++, this.trace(`onModelContentChanged() - new versionId ${this.versionId}`), t && (this.lastModelContentChangeFromUndoRedo = Date.now()), !this.ignoreDirtyOnModelContentChange && !this.isReadonly()) if (e.getAlternativeVersionId() === this.bufferSavedVersionId) {
+				this.trace("onModelContentChanged() - model content changed back to last saved version");
+				let e = this.dirty;
+				this.setDirty(!1), e && this._onDidRevert.fire();
+			} else this.trace("onModelContentChanged() - model content changed and marked as dirty"), this.setDirty(!0);
+			this._onDidChangeContent.fire(), this.autoDetectLanguage();
+		}
+		async autoDetectLanguage() {
+			await this.extensionService?.whenInstalledExtensionsRegistered();
+			let e = this.getLanguageId();
+			if (this.resource.scheme === this.pathService.defaultUriScheme && (!e || e === "plaintext") && !this.resourceHasExtension) return super.autoDetectLanguage();
+		}
+		async forceResolveFromFile() {
+			this.isDisposed() || await this.textFileService.files.resolve(this.resource, {
+				reload: { async: !1 },
+				forceReadFromFile: !0
+			});
+		}
+		isDirty() {
+			return this.dirty;
+		}
+		isModified() {
+			return this.isDirty();
+		}
+		setDirty(e) {
+			if (!this.isResolved()) return;
+			let t = this.dirty;
+			this.doSetDirty(e), e !== t && this._onDidChangeDirty.fire();
+		}
+		doSetDirty(e) {
+			let t = this.dirty, n = this.inConflictMode, r = this.inErrorMode, i = this.bufferSavedVersionId;
+			return e ? this.dirty = !0 : (this.dirty = !1, this.inConflictMode = !1, this.inErrorMode = !1, this.updateSavedVersionId()), () => {
+				this.dirty = t, this.inConflictMode = n, this.inErrorMode = r, this.bufferSavedVersionId = i;
+			};
+		}
+		async save(e = Object.create(null)) {
+			return this.isResolved() ? this.isReadonly() ? (this.trace("save() - ignoring request for readonly resource"), !1) : (this.hasState(G.CONFLICT) || this.hasState(G.ERROR)) && (e.reason === ii.AUTO || e.reason === ii.FOCUS_CHANGE || e.reason === ii.WINDOW_CHANGE) ? (this.trace("save() - ignoring auto save request for model that is in conflict or error"), !1) : (this.trace("save() - enter"), await this.doSave(e), this.trace("save() - exit"), this.hasState(G.SAVED)) : !1;
+		}
+		async doSave(e) {
+			typeof e.reason != "number" && (e.reason = ii.EXPLICIT);
+			let t = this.versionId;
+			if (this.trace(`doSave(${t}) - enter with versionId ${t}`), this.ignoreSaveFromSaveParticipants) {
+				this.trace(`doSave(${t}) - exit - refusing to save() recursively from save participant`);
+				return;
+			}
+			if (this.saveSequentializer.isRunning(t)) return this.trace(`doSave(${t}) - exit - found a running save for versionId ${t}`), this.saveSequentializer.running;
+			if (!e.force && !this.dirty) {
+				this.trace(`doSave(${t}) - exit - because not dirty and/or versionId is different (this.isDirty: ${this.dirty}, this.versionId: ${this.versionId})`);
+				return;
+			}
+			if (this.saveSequentializer.isRunning()) return this.trace(`doSave(${t}) - exit - because busy saving`), this.saveSequentializer.cancelRunning(), this.saveSequentializer.queue(() => this.doSave(e));
+			this.isResolved() && this.textEditorModel.pushStackElement();
+			let n = new Vn();
+			return this.progressService.withProgress({
+				title: _(14311, "Saving '{0}'", this.name),
+				location: fs.Window,
+				cancellable: !0,
+				delay: this.isDirty() ? 3e3 : 5e3
+			}, (r) => this.doSaveSequential(t, e, r, n), () => {
+				n.cancel();
+			}).finally(() => {
+				n.dispose();
+			});
+		}
+		doSaveSequential(e, t, n, r) {
+			return this.saveSequentializer.run(e, (async () => {
+				if (this.isResolved() && !t.skipSaveParticipants) try {
+					if (t.reason === ii.AUTO && typeof this.lastModelContentChangeFromUndoRedo == "number") {
+						let e = Date.now() - this.lastModelContentChangeFromUndoRedo;
+						e < Cl.UNDO_REDO_SAVE_PARTICIPANTS_AUTO_SAVE_THROTTLE_THRESHOLD && await Xr(Cl.UNDO_REDO_SAVE_PARTICIPANTS_AUTO_SAVE_THROTTLE_THRESHOLD - e);
+					}
+					if (!r.token.isCancellationRequested) {
+						this.ignoreSaveFromSaveParticipants = !0;
+						try {
+							await this.textFileService.files.runSaveParticipants(this, {
+								reason: t.reason ?? ii.EXPLICIT,
+								savedFrom: t.from
+							}, n, r.token);
+						} catch (e) {
+							_n(e) && !r.token.isCancellationRequested && r.cancel();
+						} finally {
+							this.ignoreSaveFromSaveParticipants = !1;
+						}
+					}
+				} catch (t) {
+					this.logService.error(`[text file model] runSaveParticipants(${e}) - resulted in an error: ${t.toString()}`, this.resource.toString());
+				}
+				if (r.token.isCancellationRequested || (r.dispose(), this.isDisposed()) || !this.isResolved()) return;
+				e = this.versionId, this.inErrorMode = !1, n.report({ message: _(14312, "Writing into file...") }), this.trace(`doSave(${e}) - before write()`);
+				let i = St(this.lastResolvedFileStat), a = this;
+				return this.saveSequentializer.run(e, (async () => {
+					try {
+						let n = await this.textFileService.write(i.resource, a.createSnapshot(), {
+							mtime: i.mtime,
+							encoding: this.getEncoding(),
+							etag: t.ignoreModifiedSince || !this.filesConfigurationService.preventSaveConflicts(i.resource, a.getLanguageId()) ? "" : i.etag,
+							unlock: t.writeUnlock,
+							writeElevated: t.writeElevated
+						});
+						this.handleSaveSuccess(n, e, t);
+					} catch (n) {
+						this.handleSaveError(n, e, t);
+					}
+				})());
+			})(), () => r.cancel());
+		}
+		handleSaveSuccess(e, t, n) {
+			this.updateLastResolvedFileStat(e), t === this.versionId ? (this.trace(`handleSaveSuccess(${t}) - setting dirty to false because versionId did not change`), this.setDirty(!1)) : this.trace(`handleSaveSuccess(${t}) - not setting dirty to false because versionId did change meanwhile`), this.setOrphaned(!1), this._onDidSave.fire({
+				reason: n.reason,
+				stat: e,
+				source: n.source
+			});
+		}
+		handleSaveError(e, t, n) {
+			if ((n.ignoreErrorHandler ? this.logService.trace : this.logService.error).apply(this.logService, [`[text file model] handleSaveError(${t}) - exit - resulted in a save error: ${e.toString()}`, this.resource.toString()]), n.ignoreErrorHandler) throw e;
+			this.setDirty(!0), this.inErrorMode = !0, e.fileOperationResult === L.FILE_MODIFIED_SINCE && (this.inConflictMode = !0), this.textFileService.files.saveErrorHandler.onSaveError(e, this, n), this._onDidSaveError.fire();
+		}
+		updateSavedVersionId() {
+			this.isResolved() && (this.bufferSavedVersionId = this.textEditorModel.getAlternativeVersionId());
+		}
+		updateLastResolvedFileStat(e) {
+			let t = this.isReadonly();
+			this.lastResolvedFileStat ? this.lastResolvedFileStat.mtime <= e.mtime ? this.lastResolvedFileStat = e : this.lastResolvedFileStat = {
+				...this.lastResolvedFileStat,
+				readonly: e.readonly,
+				locked: e.locked
+			} : this.lastResolvedFileStat = e, this.isReadonly() !== t && this._onDidChangeReadonly.fire();
+		}
+		hasState(e) {
+			switch (e) {
+				case G.CONFLICT: return this.inConflictMode;
+				case G.DIRTY: return this.dirty;
+				case G.ERROR: return this.inErrorMode;
+				case G.ORPHAN: return this.inOrphanMode;
+				case G.PENDING_SAVE: return this.saveSequentializer.isRunning();
+				case G.SAVED: return !this.dirty;
+			}
+		}
+		async joinState(e) {
+			return this.saveSequentializer.running;
+		}
+		getLanguageId() {
+			return this.textEditorModel ? this.textEditorModel.getLanguageId() : this.preferredLanguageId;
+		}
+		async onMaybeShouldChangeEncoding() {
+			if (this.hasEncodingSetExplicitly) {
+				this.trace("onMaybeShouldChangeEncoding() - ignoring because encoding was set explicitly");
+				return;
+			}
+			if (this.contentEncoding === "utf8bom" || this.contentEncoding === "utf16be" || this.contentEncoding === "utf16le") {
+				this.trace("onMaybeShouldChangeEncoding() - ignoring because content encoding has a BOM");
+				return;
+			}
+			let { encoding: e } = await this.textFileService.encoding.getPreferredReadEncoding(this.resource);
+			if (typeof e != "string" || !this.isNewEncoding(e)) {
+				this.trace(`onMaybeShouldChangeEncoding() - ignoring because preferred encoding ${e} is not new`);
+				return;
+			}
+			if (this.isDirty()) {
+				this.trace("onMaybeShouldChangeEncoding() - ignoring because model is dirty");
+				return;
+			}
+			return this.logService.info(`Adjusting encoding based on configured language override to '${e}' for ${this.resource.toString(!0)}.`), this.forceResolveFromFile();
+		}
+		setEncoding(e, t) {
+			return this.hasEncodingSetExplicitly = !0, this.setEncodingInternal(e, t);
+		}
+		async setEncodingInternal(e, t) {
+			if (t === ji.Encode) this.updatePreferredEncoding(e), this.isDirty() || (this.versionId++, this.setDirty(!0)), this.inConflictMode || await this.save({ source: Cl.TEXTFILE_SAVE_ENCODING_SOURCE });
+			else {
+				if (!this.isNewEncoding(e)) return;
+				if (this.isDirty()) throw Error("Cannot re-open a dirty text document with different encoding. Save it first.");
+				this.updatePreferredEncoding(e), await this.forceResolveFromFile();
+			}
+		}
+		updatePreferredEncoding(e) {
+			this.isNewEncoding(e) && (this.preferredEncoding = e, this._onDidChangeEncoding.fire());
+		}
+		isNewEncoding(e) {
+			return !(this.preferredEncoding === e || !this.preferredEncoding && this.contentEncoding === e);
+		}
+		getEncoding() {
+			return this.preferredEncoding || this.contentEncoding;
+		}
+		trace(e) {
+			this.logService.trace(`[text file model] ${e}`, this.resource.toString());
+		}
+		isResolved() {
+			return !!this.textEditorModel;
+		}
+		isReadonly() {
+			return this.filesConfigurationService.isReadonly(this.resource, this.lastResolvedFileStat);
+		}
+		dispose() {
+			this.trace("dispose()"), this.inConflictMode = !1, this.inOrphanMode = !1, this.inErrorMode = !1, super.dispose();
+		}
+	}, wl = Cl = w([
+		R(3, Qn),
+		R(4, Ge),
+		R(5, Dn),
+		R(6, mi),
+		R(7, cs),
+		R(8, ke),
+		R(9, Bi),
+		R(10, Ui),
+		R(11, ge),
+		R(12, Hi),
+		R(13, Me),
+		R(14, ki),
+		R(15, es),
+		R(16, bt)
+	], wl);
+})), El, Dl = t((() => {
+	l(), p(), In(), jt(), _s(), Tt(), O(), hn(), k(), Re(), nn(), El = class extends B {
+		constructor(e, t) {
+			super(), this.logService = e, this.progressService = t, this.saveParticipants = new en();
+		}
+		addSaveParticipant(e) {
+			let t = this.saveParticipants.push(e);
+			return o(() => t());
+		}
+		async participate(e, t, n, r) {
+			let i = new Vn(r);
+			e.textEditorModel?.pushStackElement(), n.report({ message: _(14314, "Running Code Actions and Formatters...") });
+			let a = !1;
+			if (await this.progressService.withProgress({
+				priority: fe.URGENT,
+				location: fs.Notification,
+				cancellable: _(14315, "Skip"),
+				delay: e.isDirty() ? 5e3 : 3e3
+			}, async (n) => {
+				let r = Array.from(this.saveParticipants).sort((e, t) => (e.ordinal ?? 0) - (t.ordinal ?? 0));
+				for (let o of r) {
+					if (i.token.isCancellationRequested || !e.textEditorModel) break;
+					try {
+						await me(o.participate(e, t, n, i.token), i.token);
+					} catch (e) {
+						_n(e) ? i.token.isCancellationRequested || (i.cancel(), a = !0) : this.logService.error(e);
+					}
+				}
+			}, () => {
+				i.cancel();
+			}), e.textEditorModel?.pushStackElement(), i.dispose(), a) throw new ln();
+		}
+		dispose() {
+			this.saveParticipants.clear(), super.dispose();
+		}
+	}, El = w([R(0, ke), R(1, bt)], El);
+})), Ol, kl = t((() => {
+	l(), k(), Ze(), H(), Gr(), Tl(), O(), m(), yt(), F(), Sn(), p(), nn(), Dl(), Be(), ds(), D(), Nn(), zt(), De(), Ol = class extends B {
+		get models() {
+			return [...this.mapResourceToModel.values()];
+		}
+		constructor(e, t, n, r, i) {
+			super(), this.instantiationService = e, this.fileService = t, this.notificationService = n, this.workingCopyFileService = r, this.uriIdentityService = i, this._onDidCreate = this._register(new U({ leakWarningThreshold: 500 })), this.onDidCreate = this._onDidCreate.event, this._onDidResolve = this._register(new U()), this.onDidResolve = this._onDidResolve.event, this._onDidRemove = this._register(new U()), this.onDidRemove = this._onDidRemove.event, this._onDidChangeDirty = this._register(new U()), this.onDidChangeDirty = this._onDidChangeDirty.event, this._onDidChangeReadonly = this._register(new U()), this.onDidChangeReadonly = this._onDidChangeReadonly.event, this._onDidChangeOrphaned = this._register(new U()), this.onDidChangeOrphaned = this._onDidChangeOrphaned.event, this._onDidSaveError = this._register(new U()), this.onDidSaveError = this._onDidSaveError.event, this._onDidSave = this._register(new U()), this.onDidSave = this._onDidSave.event, this._onDidRevert = this._register(new U()), this.onDidRevert = this._onDidRevert.event, this._onDidChangeEncoding = this._register(new U()), this.onDidChangeEncoding = this._onDidChangeEncoding.event, this.mapResourceToModel = new dt(), this.mapResourceToModelListeners = new dt(), this.mapResourceToDisposeListener = new dt(), this.mapResourceToPendingModelResolvers = new dt(), this.modelResolveQueue = this._register(new On()), this.saveErrorHandler = (() => {
+				let e = this.notificationService;
+				return { onSaveError(t, n) {
+					e.error(_(14313, "Failed to save '{0}': {1}", n.name, d(t, !1)));
+				} };
+			})(), this.mapCorrelationIdToModelsToRestore = /* @__PURE__ */ new Map(), this.saveParticipants = this._register(this.instantiationService.createInstance(El)), this.registerListeners();
+		}
+		registerListeners() {
+			this._register(this.fileService.onDidFilesChange((e) => this.onDidFilesChange(e))), this._register(this.fileService.onDidChangeFileSystemProviderCapabilities((e) => this.onDidChangeFileSystemProviderCapabilities(e))), this._register(this.fileService.onDidChangeFileSystemProviderRegistrations((e) => this.onDidChangeFileSystemProviderRegistrations(e))), this._register(this.workingCopyFileService.onWillRunWorkingCopyFileOperation((e) => this.onWillRunWorkingCopyFileOperation(e))), this._register(this.workingCopyFileService.onDidFailWorkingCopyFileOperation((e) => this.onDidFailWorkingCopyFileOperation(e))), this._register(this.workingCopyFileService.onDidRunWorkingCopyFileOperation((e) => this.onDidRunWorkingCopyFileOperation(e)));
+		}
+		onDidFilesChange(e) {
+			for (let t of this.models) t.isDirty() || e.contains(t.resource, A.UPDATED, A.ADDED) && this.queueModelReload(t);
+		}
+		onDidChangeFileSystemProviderCapabilities(e) {
+			this.queueModelReloads(e.scheme);
+		}
+		onDidChangeFileSystemProviderRegistrations(e) {
+			e.added && this.queueModelReloads(e.scheme);
+		}
+		queueModelReloads(e) {
+			for (let t of this.models) t.isDirty() || e === t.resource.scheme && this.queueModelReload(t);
+		}
+		queueModelReload(e) {
+			this.modelResolveQueue.queueSize(e.resource) <= 1 && this.modelResolveQueue.queueFor(e.resource, async () => {
+				try {
+					await this.reload(e);
+				} catch (e) {
+					ir(e);
+				}
+			});
+		}
+		onWillRunWorkingCopyFileOperation(e) {
+			if (e.operation === T.MOVE || e.operation === T.COPY) {
+				let t = [];
+				for (let { source: n, target: r } of e.files) if (n) {
+					if (this.uriIdentityService.extUri.isEqual(n, r)) continue;
+					let e = [];
+					for (let t of this.models) this.uriIdentityService.extUri.isEqualOrParent(t.resource, n) && e.push(t);
+					for (let i of e) {
+						let e = i.resource, a;
+						a = this.uriIdentityService.extUri.isEqual(e, n) ? r : _r(r, e.path.substr(n.path.length + 1));
+						let o = i.getLanguageId();
+						t.push({
+							source: e,
+							target: a,
+							language: o ? {
+								id: o,
+								explicit: i.languageChangeSource === "user"
+							} : void 0,
+							encoding: i.getEncoding(),
+							snapshot: i.isDirty() ? i.createSnapshot() : void 0
+						});
+					}
+				}
+				this.mapCorrelationIdToModelsToRestore.set(e.correlationId, t);
+			}
+		}
+		onDidFailWorkingCopyFileOperation(e) {
+			if (e.operation === T.MOVE || e.operation === T.COPY) {
+				let t = this.mapCorrelationIdToModelsToRestore.get(e.correlationId);
+				t && (this.mapCorrelationIdToModelsToRestore.delete(e.correlationId), t.forEach((e) => {
+					e.snapshot && this.get(e.source)?.setDirty(!0);
+				}));
+			}
+		}
+		onDidRunWorkingCopyFileOperation(e) {
+			switch (e.operation) {
+				case T.CREATE:
+					e.waitUntil((async () => {
+						for (let { target: t } of e.files) {
+							let e = this.get(t);
+							e && !e.isDisposed() && await e.revert();
+						}
+					})());
+					break;
+				case T.MOVE:
+				case T.COPY:
+					e.waitUntil((async () => {
+						let t = this.mapCorrelationIdToModelsToRestore.get(e.correlationId);
+						t && (this.mapCorrelationIdToModelsToRestore.delete(e.correlationId), await ur.settled(t.map(async (e) => {
+							let t = this.uriIdentityService.asCanonicalUri(e.target), n = await this.resolve(t, {
+								reload: { async: !1 },
+								contents: e.snapshot ? Mr(e.snapshot) : void 0,
+								encoding: e.encoding
+							});
+							e.language?.id && e.language.id !== "plaintext" && (e.language.explicit ? n.setLanguageId(e.language.id) : n.getLanguageId() === "plaintext" && At(t) !== ".txt" && n.updateTextEditorModel(void 0, e.language.id));
+						})));
+					})());
+					break;
+			}
+		}
+		get(e) {
+			return this.mapResourceToModel.get(e);
+		}
+		has(e) {
+			return this.mapResourceToModel.has(e);
+		}
+		async reload(e) {
+			await this.joinPendingResolves(e.resource), !(e.isDirty() || e.isDisposed() || !this.has(e.resource)) && await this.doResolve(e, { reload: { async: !1 } });
+		}
+		async resolve(e, t) {
+			let n = this.joinPendingResolves(e);
+			return n && await n, this.doResolve(e, t);
+		}
+		async doResolve(e, t) {
+			let n, r;
+			Lr.isUri(e) ? (r = e, n = this.get(r)) : (r = e.resource, n = e);
+			let i, a = !1;
+			if (n) t?.contents ? i = n.resolve(t) : t?.reload ? t.reload.async ? (i = Promise.resolve(), (async () => {
+				try {
+					await n.resolve(t);
+				} catch (e) {
+					n.isDisposed() || ir(e);
+				}
+			})()) : i = n.resolve(t) : i = Promise.resolve();
+			else {
+				a = !0;
+				let e = n = this.instantiationService.createInstance(wl, r, t ? t.encoding : void 0, t ? t.languageId : void 0);
+				i = n.resolve(t), this.registerModel(e);
+			}
+			this.mapResourceToPendingModelResolvers.set(r, i), this.add(r, n), a && (this._onDidCreate.fire(n), n.isDirty() && this._onDidChangeDirty.fire(n));
+			try {
+				await i;
+			} catch (e) {
+				throw a && n.dispose(), e;
+			} finally {
+				this.mapResourceToPendingModelResolvers.delete(r);
+			}
+			return t?.languageId && n.setLanguageId(t.languageId), a && n.isDirty() && this._onDidChangeDirty.fire(n), n;
+		}
+		joinPendingResolves(e) {
+			if (this.mapResourceToPendingModelResolvers.get(e)) return this.doJoinPendingResolves(e);
+		}
+		async doJoinPendingResolves(e) {
+			let t;
+			for (; this.mapResourceToPendingModelResolvers.has(e);) {
+				let n = this.mapResourceToPendingModelResolvers.get(e);
+				if (n === t) return;
+				t = n;
+				try {
+					await n;
+				} catch {}
+			}
+		}
+		registerModel(e) {
+			let t = new N();
+			t.add(e.onDidResolve((t) => this._onDidResolve.fire({
+				model: e,
+				reason: t
+			}))), t.add(e.onDidChangeDirty(() => this._onDidChangeDirty.fire(e))), t.add(e.onDidChangeReadonly(() => this._onDidChangeReadonly.fire(e))), t.add(e.onDidChangeOrphaned(() => this._onDidChangeOrphaned.fire(e))), t.add(e.onDidSaveError(() => this._onDidSaveError.fire(e))), t.add(e.onDidSave((t) => this._onDidSave.fire({
+				model: e,
+				...t
+			}))), t.add(e.onDidRevert(() => this._onDidRevert.fire(e))), t.add(e.onDidChangeEncoding(() => this._onDidChangeEncoding.fire(e))), this.mapResourceToModelListeners.set(e.resource, t);
+		}
+		add(e, t) {
+			this.mapResourceToModel.get(e) !== t && (this.mapResourceToDisposeListener.get(e)?.dispose(), this.mapResourceToModel.set(e, t), this.mapResourceToDisposeListener.set(e, t.onWillDispose(() => this.remove(e))));
+		}
+		remove(e) {
+			let t = this.mapResourceToModel.delete(e), n = this.mapResourceToDisposeListener.get(e);
+			n && (g(n), this.mapResourceToDisposeListener.delete(e));
+			let r = this.mapResourceToModelListeners.get(e);
+			r && (g(r), this.mapResourceToModelListeners.delete(e)), t && this._onDidRemove.fire(e);
+		}
+		addSaveParticipant(e) {
+			return this.saveParticipants.addSaveParticipant(e);
+		}
+		runSaveParticipants(e, t, n, r) {
+			return this.saveParticipants.participate(e, t, n, r);
+		}
+		canDispose(e) {
+			return e.isDisposed() || !this.mapResourceToPendingModelResolvers.has(e.resource) && !e.isDirty() ? !0 : this.doCanDispose(e);
+		}
+		async doCanDispose(e) {
+			let t = this.joinPendingResolves(e.resource);
+			return t ? (await t, this.canDispose(e)) : e.isDirty() ? (await Jn.toPromise(e.onDidChangeDirty), this.canDispose(e)) : !0;
+		}
+		dispose() {
+			super.dispose(), this.mapResourceToModel.clear(), this.mapResourceToPendingModelResolvers.clear(), g(this.mapResourceToDisposeListener.values()), this.mapResourceToDisposeListener.clear(), g(this.mapResourceToModelListeners.values()), this.mapResourceToModelListeners.clear();
+		}
+	}, Ol = w([
+		R(0, Le),
+		R(1, Dn),
+		R(2, Fn),
+		R(3, us),
+		R(4, mr)
+	], Ol);
+})), Al, jl, Ml, Nl = t((() => {
+	l(), k(), Mi(), Zr(), fi(), F(), Sn(), O(), zr(), li(), zi(), Sl(), kl(), m(), ar(), Nn(), nt(), D(), Ve(), j(), sn(), zt(), $r(), Ri(), Se(), Qr(), ds(), De(), Cr(), ue(), yl(), Mt(), wr(), jt(), In(), rs(), Xo(), H(), Pr(), Je(), Rr(), br(), ct(), _e(), Xe(), ce(), An(), Zt(), ht(), Hr(), jl = class extends B {
+		static {
+			Al = this;
+		}
+		static {
+			this.TEXTFILE_SAVE_CREATE_SOURCE = oi.registerSource("textFileCreate.source", _(14297, "File Created"));
+		}
+		static {
+			this.TEXTFILE_SAVE_REPLACE_SOURCE = oi.registerSource("textFileOverwrite.source", _(14298, "File Replaced"));
+		}
+		constructor(e, t, n, r, i, a, o, s, c, l, u, d, f, ee, p, m, h, g) {
+			super(), this.fileService = e, this.lifecycleService = n, this.instantiationService = r, this.modelService = i, this.environmentService = a, this.dialogService = o, this.fileDialogService = s, this.textResourceConfigurationService = c, this.filesConfigurationService = l, this.codeEditorService = u, this.pathService = d, this.workingCopyFileService = f, this.uriIdentityService = ee, this.languageService = p, this.logService = m, this.elevatedFileService = h, this.decorationsService = g, this.files = this._register(this.instantiationService.createInstance(Ol)), this.untitled = t, this.provideDecorations();
+		}
+		provideDecorations() {
+			let e = this._register(new class extends B {
+				constructor(e) {
+					super(), this.files = e, this.label = _(14299, "Text File Model Decorations"), this._onDidChange = this._register(new U()), this.onDidChange = this._onDidChange.event, this.registerListeners();
+				}
+				registerListeners() {
+					this._register(this.files.onDidResolve(({ model: e }) => {
+						(e.isReadonly() || e.hasState(G.ORPHAN)) && this._onDidChange.fire([e.resource]);
+					})), this._register(this.files.onDidRemove((e) => this._onDidChange.fire([e]))), this._register(this.files.onDidChangeReadonly((e) => this._onDidChange.fire([e.resource]))), this._register(this.files.onDidChangeOrphaned((e) => this._onDidChange.fire([e.resource])));
+				}
+				provideDecorations(e) {
+					let t = this.files.get(e);
+					if (!t || t.isDisposed()) return;
+					let n = t.isReadonly(), r = t.hasState(G.ORPHAN);
+					if (n && r) return {
+						color: Rn,
+						letter: qt.lockSmall,
+						strikethrough: !0,
+						tooltip: _(14300, "Deleted, Read-only")
+					};
+					if (n) return {
+						letter: qt.lockSmall,
+						tooltip: _(14301, "Read-only")
+					};
+					if (r) return {
+						color: Rn,
+						strikethrough: !0,
+						tooltip: _(14302, "Deleted")
+					};
+				}
+			}(this.files));
+			this._register(this.decorationsService.registerDecorationsProvider(e));
+		}
+		get encoding() {
+			return this._encoding ||= this._register(this.instantiationService.createInstance(Ml)), this._encoding;
+		}
+		async read(e, t) {
+			let [n, r] = await this.doRead(e, {
+				...t,
+				preferUnbuffered: !0
+			});
+			return {
+				...n,
+				encoding: r.detected.encoding || "utf8",
+				value: await Te(r.stream, (e) => e.join(""))
+			};
+		}
+		async readStream(e, t) {
+			let [n, r] = await this.doRead(e, t);
+			return {
+				...n,
+				encoding: r.detected.encoding || "utf8",
+				value: await Zn(r.stream)
+			};
+		}
+		async doRead(e, t) {
+			let n = new Vn(), r;
+			if (t?.preferUnbuffered) {
+				let i = await this.fileService.readFile(e, t, n.token);
+				r = {
+					...i,
+					value: ft(i.value)
+				};
+			} else r = await this.fileService.readFileStream(e, t, n.token);
+			try {
+				let n = await this.doGetDecodedStream(e, r.value, t);
+				return [r, n];
+			} catch (e) {
+				throw n.dispose(!0), e.decodeStreamErrorKind === pl.STREAM_IS_BINARY ? new Si(_(14303, "File seems to be binary and cannot be opened as text"), wi.FILE_IS_BINARY, t) : e;
+			}
+		}
+		async create(e, t) {
+			let n = await Promise.all(e.map(async (e) => {
+				let t = await this.getEncodedReadable(e.resource, e.value);
+				return {
+					resource: e.resource,
+					contents: t,
+					overwrite: e.options?.overwrite
+				};
+			}));
+			return this.workingCopyFileService.create(n, Ye.None, t);
+		}
+		async write(e, t, n) {
+			let r = await this.getEncodedReadable(e, t, n);
+			return n?.writeElevated && this.elevatedFileService.isSupported(e) ? this.elevatedFileService.writeFileElevated(e, r, n) : this.fileService.writeFile(e, r, n);
+		}
+		async getEncodedReadable(e, t, n) {
+			let { encoding: r, addBOM: i } = await this.encoding.getWriteEncoding(e, n);
+			return r === "utf8" && !i ? t === void 0 ? void 0 : Ti(t) : (t ||= "", qc(typeof t == "string" ? Ei(t) : t, r, { addBOM: i }));
+		}
+		async getDecodedStream(e, t, n) {
+			return (await this.doGetDecodedStream(e, t, n)).stream;
+		}
+		doGetDecodedStream(e, t, n) {
+			return Kc(t, {
+				acceptTextOnly: n?.acceptTextOnly ?? !1,
+				guessEncoding: n?.autoGuessEncoding || this.textResourceConfigurationService.getValue(e, "files.autoGuessEncoding"),
+				candidateGuessEncodings: n?.candidateGuessEncodings || this.textResourceConfigurationService.getValue(e, "files.candidateGuessEncodings"),
+				overwriteEncoding: async (t) => this.validateDetectedEncoding(e, t ?? void 0, n)
+			});
+		}
+		getEncoding(e) {
+			return (e.scheme === I.untitled ? this.untitled.get(e) : this.files.get(e))?.getEncoding() ?? this.encoding.getUnvalidatedEncodingForResource(e);
+		}
+		async resolveDecoding(e, t) {
+			return {
+				preferredEncoding: (await this.encoding.getPreferredReadEncoding(e, t, void 0)).encoding,
+				guessEncoding: t?.autoGuessEncoding || this.textResourceConfigurationService.getValue(e, "files.autoGuessEncoding"),
+				candidateGuessEncodings: t?.candidateGuessEncodings || this.textResourceConfigurationService.getValue(e, "files.candidateGuessEncodings")
+			};
+		}
+		async validateDetectedEncoding(e, t, n) {
+			let { encoding: r } = await this.encoding.getPreferredReadEncoding(e, n, t);
+			return r;
+		}
+		resolveEncoding(e, t) {
+			return this.encoding.getWriteEncoding(e, t);
+		}
+		async save(e, t) {
+			if (e.scheme === I.untitled) {
+				let n = this.untitled.get(e);
+				if (n) {
+					let r;
+					if (r = n.hasAssociatedFilePath ? await this.suggestSavePath(e) : await this.fileDialogService.pickFileToSave(await this.suggestSavePath(e), t?.availableFileSystems), r) return this.saveAs(e, r, t);
+				}
+			} else {
+				let n = this.files.get(e);
+				if (n) return await n.save(t) ? e : void 0;
+			}
+		}
+		async saveAs(e, t, n) {
+			if (t ||= await this.fileDialogService.pickFileToSave(await this.suggestSavePath(n?.suggestedTarget ?? e), n?.availableFileSystems), t) {
+				if (this.filesConfigurationService.isReadonly(t)) if (await this.confirmMakeWriteable(t)) this.filesConfigurationService.updateReadonly(t, !1);
+				else return;
+				return un(e, t) ? this.save(e, {
+					...n,
+					force: !0
+				}) : this.fileService.hasProvider(e) && this.uriIdentityService.extUri.isEqual(e, t) && await this.fileService.exists(e) ? (await this.workingCopyFileService.move([{ file: {
+					source: e,
+					target: t
+				} }], Ye.None), await this.save(e, n) || await this.save(t, n), t) : this.doSaveAs(e, t, n);
+			}
+		}
+		async doSaveAs(e, t, n) {
+			let r = !1, i;
+			if (e.scheme !== I.untitled) {
+				let t = this.files.get(e);
+				t?.isResolved() && (i = t);
+			} else {
+				let t = this.untitled.get(e);
+				t?.isResolved() && (i = t);
+			}
+			if (i) r = await this.doSaveAsTextFile(i, e, t, n);
+			else if (this.fileService.hasProvider(e)) await this.fileService.copy(e, t, !0), r = !0;
+			else {
+				let i = this.modelService.getModel(e);
+				i && (r = await this.doSaveAsTextFile(i, e, t, n));
+			}
+			if (r) {
+				try {
+					await this.revert(e);
+				} catch (e) {
+					this.logService.error(e);
+				}
+				return e.scheme === I.untitled && this.untitled.notifyDidSave(e, t), t;
+			}
+		}
+		async doSaveAsTextFile(e, t, n, r) {
+			let i, a = e;
+			typeof a.getEncoding == "function" && (i = a.getEncoding());
+			let o = !1, s = this.files.get(n);
+			if (s?.isResolved()) o = !0;
+			else {
+				o = await this.fileService.exists(n), o || await this.create([{
+					resource: n,
+					value: ""
+				}]);
+				try {
+					s = await this.files.resolve(n, { encoding: i });
+				} catch (i) {
+					if (o && (i.textFileOperationResult === wi.FILE_IS_BINARY || i.fileOperationResult === L.FILE_TOO_LARGE)) return await this.fileService.del(n), this.doSaveAsTextFile(e, t, n, r);
+					throw i;
+				}
+			}
+			let c;
+			if (c = e instanceof xl && e.hasAssociatedFilePath && o && this.uriIdentityService.extUri.isEqual(n, Yt(e.resource, this.environmentService.remoteAuthority, this.pathService.defaultUriScheme)) ? await this.confirmOverwrite(n) : !0, !c) return !1;
+			let l;
+			e instanceof yi ? e.isResolved() && (l = e.textEditorModel ?? void 0) : l = e;
+			let u;
+			if (s.isResolved() && (u = s.textEditorModel), l && u) {
+				s.updatePreferredEncoding(i), this.modelService.updateModel(u, Mr(l.createSnapshot()));
+				let e = l.getLanguageId(), t = u.getLanguageId();
+				e !== "plaintext" && t === "plaintext" && u.setLanguage(e);
+				let n = this.codeEditorService.getTransientModelProperties(l);
+				if (n) for (let [e, t] of n) this.codeEditorService.setTransientModelProperty(u, e, t);
+			}
+			return r?.source || (r = {
+				...r,
+				source: o ? Al.TEXTFILE_SAVE_REPLACE_SOURCE : Al.TEXTFILE_SAVE_CREATE_SOURCE
+			}), s.save({
+				...r,
+				from: t
+			});
+		}
+		async confirmOverwrite(e) {
+			let { confirmed: t } = await this.dialogService.confirm({
+				type: "warning",
+				message: _(14304, "'{0}' already exists. Do you want to replace it?", M(e)),
+				detail: _(14305, "A file or folder with the name '{0}' already exists in the folder '{1}'. Replacing it will overwrite its current contents.", M(e), M(Fe(e))),
+				primaryButton: _(14306, "&&Replace")
+			});
+			return t;
+		}
+		async confirmMakeWriteable(e) {
+			let { confirmed: t } = await this.dialogService.confirm({
+				type: "warning",
+				message: _(14307, "'{0}' is marked as read-only. Do you want to save anyway?", M(e)),
+				detail: _(14308, "Paths can be configured as read-only via settings."),
+				primaryButton: _(14309, "&&Save Anyway")
+			});
+			return t;
+		}
+		async suggestSavePath(e) {
+			if (this.fileService.hasProvider(e)) return e;
+			let t = this.environmentService.remoteAuthority, n = await this.fileDialogService.defaultFilePath(), r;
+			if (e.scheme === I.untitled) {
+				let i = this.untitled.get(e);
+				if (i) {
+					if (i.hasAssociatedFilePath) return Yt(e, t, this.pathService.defaultUriScheme);
+					let a;
+					a = await this.pathService.hasValidBasename(_r(n, i.name), i.name) ? i.name : M(e);
+					let o = i.getLanguageId();
+					r = o && o !== "plaintext" ? this.suggestFilename(o, a) : a;
+				}
+			}
+			return r ||= M(e), _r(n, r);
+		}
+		suggestFilename(e, t) {
+			if (!this.languageService.getLanguageName(e)) return t;
+			let n = te(t), r = this.languageService.getExtensions(e);
+			if (r.includes(n)) return t;
+			let i = r.at(0);
+			if (i) return n ? `${t.substring(0, t.indexOf(n))}${i}` : `${t}${i}`;
+			let a = this.languageService.getFilenames(e);
+			return a.includes(t) ? t : a.at(0) ?? t;
+		}
+		async revert(e, t) {
+			if (e.scheme === I.untitled) {
+				let n = this.untitled.get(e);
+				if (n) return n.revert(t);
+			} else {
+				let n = this.files.get(e);
+				if (n && (n.isDirty() || t?.force)) return n.revert(t);
+			}
+		}
+		isDirty(e) {
+			let t = e.scheme === I.untitled ? this.untitled.get(e) : this.files.get(e);
+			return t ? t.isDirty() : !1;
+		}
+	}, jl = Al = w([
+		R(0, Dn),
+		R(1, ei),
+		R(2, si),
+		R(3, Le),
+		R(4, Ge),
+		R(5, ti),
+		R(6, u),
+		R(7, Ln),
+		R(8, Wn),
+		R(9, Ui),
+		R(10, de),
+		R(11, ki),
+		R(12, us),
+		R(13, mr),
+		R(14, Qn),
+		R(15, ke),
+		R(16, ns),
+		R(17, Yo)
+	], jl), Ml = class extends B {
+		get encodingOverrides() {
+			return this._encodingOverrides;
+		}
+		set encodingOverrides(e) {
+			this._encodingOverrides = e;
+		}
+		constructor(e, t, n, r) {
+			super(), this.textResourceConfigurationService = e, this.environmentService = t, this.contextService = n, this.uriIdentityService = r, this._encodingOverrides = this.getDefaultEncodingOverrides(), this.registerListeners();
+		}
+		registerListeners() {
+			this._register(this.contextService.onDidChangeWorkspaceFolders(() => this.encodingOverrides = this.getDefaultEncodingOverrides()));
+		}
+		getDefaultEncodingOverrides() {
+			let e = [];
+			return e.push({
+				parent: this.environmentService.userRoamingDataHome,
+				encoding: Q
+			}), e.push({
+				extension: Ot,
+				encoding: Q
+			}), e.push({
+				parent: this.environmentService.untitledWorkspacesHome,
+				encoding: Q
+			}), this.contextService.getWorkspace().folders.forEach((t) => {
+				e.push({
+					parent: _r(t.uri, ".vscode"),
+					encoding: Q
+				});
+			}), e;
+		}
+		async getWriteEncoding(e, t) {
+			let { encoding: n, hasBOM: r } = await this.getPreferredWriteEncoding(e, t ? t.encoding : void 0);
+			return {
+				encoding: n,
+				addBOM: r
+			};
+		}
+		async getPreferredWriteEncoding(e, t) {
+			let n = await this.getValidatedEncodingForResource(e, t);
+			return {
+				encoding: n,
+				hasBOM: n === "utf16be" || n === "utf16le" || n === "utf8bom"
+			};
+		}
+		async getPreferredReadEncoding(e, t, n) {
+			let r;
+			t?.encoding ? r = n === "utf8bom" && t.encoding === "utf8" ? rl : t.encoding : typeof n == "string" ? r = n : this.textResourceConfigurationService.getValue(e, "files.encoding") === "utf8bom" && (r = Q);
+			let i = await this.getValidatedEncodingForResource(e, r);
+			return {
+				encoding: i,
+				hasBOM: i === "utf16be" || i === "utf16le" || i === "utf8bom"
+			};
+		}
+		getUnvalidatedEncodingForResource(e, t) {
+			let n;
+			return n = this.getEncodingOverride(e) || t || this.textResourceConfigurationService.getValue(e, "files.encoding"), n || "utf8";
+		}
+		async getValidatedEncodingForResource(e, t) {
+			let n = this.getUnvalidatedEncodingForResource(e, t);
+			return n !== "utf8" && !await Jc(n) && (n = Q), n;
+		}
+		getEncodingOverride(e) {
+			if (e && this.encodingOverrides?.length) {
+				for (let t of this.encodingOverrides) if (t.parent && this.uriIdentityService.extUri.isEqualOrParent(e, t.parent) || t.extension && At(e) === `.${t.extension}`) return t.encoding;
+			}
+		}
+	}, Ml = w([
+		R(0, Wn),
+		R(1, ti),
+		R(2, tt),
+		R(3, mr)
+	], Ml);
+})), Pl, Fl = t((() => {
+	l(), Nl(), Mi(), m(), lt(), li(), Se(), nt(), wr(), sn(), Ve(), Sn(), jt(), rs(), $r(), fi(), Qr(), zi(), De(), ds(), Xo(), Pl = class extends jl {
+		constructor(e, t, n, r, i, a, o, s, c, l, u, d, f, ee, p, m, h, g) {
+			super(e, t, n, r, i, a, o, s, c, l, u, d, f, ee, p, h, m, g), this.registerListeners();
+		}
+		registerListeners() {
+			this._register(this.lifecycleService.onBeforeShutdown((e) => e.veto(this.onBeforeShutdown(), "veto.textFiles")));
+		}
+		onBeforeShutdown() {
+			return !!this.files.models.some((e) => e.hasState(G.PENDING_SAVE));
+		}
+	}, Pl = w([
+		R(0, Dn),
+		R(1, ei),
+		R(2, si),
+		R(3, Le),
+		R(4, Ge),
+		R(5, ti),
+		R(6, u),
+		R(7, Ln),
+		R(8, Wn),
+		R(9, Ui),
+		R(10, de),
+		R(11, ki),
+		R(12, us),
+		R(13, mr),
+		R(14, Qn),
+		R(15, ns),
+		R(16, ke),
+		R(17, Yo)
+	], Pl);
+})), Il, Ll = t((() => {
+	lt(), m(), Il = class {
+		isSupported(e) {
+			return !1;
+		}
+		async writeFileElevated(e, t, n) {
+			throw Error("Unsupported");
+		}
+	};
+})), Rl, zl, Bl = t((() => {
+	jn(), ne(), k(), c(), F(), vn(), yl(), Rl = rn.as(Wt.Configuration), zl = En ? {
+		type: "string",
+		scope: W.APPLICATION,
+		enum: [
+			x.OFF,
+			x.ON_EXIT,
+			x.ON_EXIT_AND_WINDOW_CLOSE
+		],
+		default: x.ON_EXIT,
+		markdownEnumDescriptions: [
+			_(8108, "Disable hot exit. A prompt will show when attempting to close a window with editors that have unsaved changes."),
+			_(8109, "Hot exit will be triggered when the last window is closed on Windows/Linux or when the `workbench.action.quit` command is triggered (command palette, keybinding, menu). All windows without folders opened will be restored upon next launch. A list of previously opened windows with unsaved files can be accessed via `File > Open Recent > More...`"),
+			_(8110, "Hot exit will be triggered when the last window is closed on Windows/Linux or when the `workbench.action.quit` command is triggered (command palette, keybinding, menu), and also for any window with a folder opened regardless of whether it's the last window. All windows without folders opened will be restored upon next launch. A list of previously opened windows with unsaved files can be accessed via `File > Open Recent > More...`")
+		],
+		markdownDescription: _(8111, "[Hot Exit](https://aka.ms/vscode-hot-exit) controls whether unsaved files are remembered between sessions, allowing the save prompt when exiting the editor to be skipped.", x.ON_EXIT, x.ON_EXIT_AND_WINDOW_CLOSE)
+	} : {
+		type: "string",
+		scope: W.APPLICATION,
+		enum: [x.OFF, x.ON_EXIT_AND_WINDOW_CLOSE],
+		default: x.ON_EXIT_AND_WINDOW_CLOSE,
+		markdownEnumDescriptions: [_(8108, "Disable hot exit. A prompt will show when attempting to close a window with editors that have unsaved changes."), _(8112, "Hot exit will be triggered when the browser quits or the window or tab is closed.")],
+		markdownDescription: _(8111, "[Hot Exit](https://aka.ms/vscode-hot-exit) controls whether unsaved files are remembered between sessions, allowing the save prompt when exiting the editor to be skipped.", x.ON_EXIT, x.ON_EXIT_AND_WINDOW_CLOSE)
+	}, Rl.registerConfiguration({
+		id: "files",
+		order: 9,
+		title: _(8113, "Files"),
+		type: "object",
+		properties: {
+			[Gt]: {
+				type: "object",
+				markdownDescription: _(8114, "Configure [glob patterns](https://aka.ms/vscode-glob-patterns) for excluding files and folders. For example, the File Explorer decides which files and folders to show or hide based on this setting. Refer to the `#search.exclude#` setting to define search-specific excludes. Refer to the `#explorer.excludeGitIgnore#` setting for ignoring files based on your `.gitignore`."),
+				default: {
+					"**/.git": !0,
+					"**/.svn": !0,
+					"**/.hg": !0,
+					"**/.DS_Store": !0,
+					"**/Thumbs.db": !0,
+					...Bt ? { "**/*.crswap": !0 } : void 0
+				},
+				scope: W.RESOURCE,
+				additionalProperties: { anyOf: [{
+					type: "boolean",
+					enum: [!0, !1],
+					enumDescriptions: [_(8115, "Enable the pattern."), _(8116, "Disable the pattern.")],
+					description: _(8117, "The glob pattern to match file paths against. Set to true or false to enable or disable the pattern.")
+				}, {
+					type: "object",
+					properties: { when: {
+						type: "string",
+						pattern: "\\w*\\$\\(basename\\)\\w*",
+						default: "$(basename).ext",
+						markdownDescription: _(8118, "Additional check on the siblings of a matching file. Use \\$(basename) as variable for the matching file name.")
+					} }
+				}] }
+			},
+			[Kr]: {
+				type: "object",
+				markdownDescription: _(8119, "Configure [glob patterns](https://aka.ms/vscode-glob-patterns) of file associations to languages (for example `\"*.extension\": \"html\"`). Patterns will match on the absolute path of a file if they contain a path separator and will match on the name of the file otherwise. These have precedence over the default associations of the languages installed."),
+				additionalProperties: { type: "string" }
+			},
+			"files.encoding": {
+				type: "string",
+				enum: Object.keys($),
+				default: "utf8",
+				description: _(8120, "The default character set encoding to use when reading and writing files. This setting can also be configured per language."),
+				scope: W.LANGUAGE_OVERRIDABLE,
+				enumDescriptions: Object.keys($).map((e) => $[e].labelLong),
+				enumItemLabels: Object.keys($).map((e) => $[e].labelLong)
+			},
+			"files.autoGuessEncoding": {
+				type: "boolean",
+				default: !1,
+				markdownDescription: _(8121, "When enabled, the editor will attempt to guess the character set encoding when opening files. This setting can also be configured per language. Note, this setting is not respected by text search. Only {0} is respected.", "`#files.encoding#`"),
+				scope: W.LANGUAGE_OVERRIDABLE
+			},
+			"files.candidateGuessEncodings": {
+				type: "array",
+				items: {
+					type: "string",
+					enum: Object.keys(vl),
+					enumDescriptions: Object.keys(vl).map((e) => vl[e].labelLong)
+				},
+				default: [],
+				markdownDescription: _(8122, "List of character set encodings that the editor should attempt to guess in the order they are listed. In case it cannot be determined, {0} is respected", "`#files.encoding#`"),
+				scope: W.LANGUAGE_OVERRIDABLE
+			},
+			"files.eol": {
+				type: "string",
+				enum: [
+					"\n",
+					"\r\n",
+					"auto"
+				],
+				enumDescriptions: [
+					_(8123, "LF"),
+					_(8124, "CRLF"),
+					_(8125, "Uses operating system specific end of line character.")
+				],
+				default: "auto",
+				description: _(8126, "The default end of line character."),
+				scope: W.LANGUAGE_OVERRIDABLE
+			},
+			"files.enableTrash": {
+				type: "boolean",
+				default: !0,
+				description: _(8127, "Moves files/folders to the OS trash (recycle bin on Windows) when deleting. Disabling this will delete files/folders permanently.")
+			},
+			"files.trimTrailingWhitespace": {
+				type: "boolean",
+				default: !1,
+				description: _(8128, "When enabled, will trim trailing whitespace when saving a file."),
+				scope: W.LANGUAGE_OVERRIDABLE
+			},
+			"files.trimTrailingWhitespaceInRegexAndStrings": {
+				type: "boolean",
+				default: !0,
+				description: _(8129, "When enabled, trailing whitespace will be removed from multiline strings and regexes will be removed on save or when executing 'editor.action.trimTrailingWhitespace'. This can cause whitespace to not be trimmed from lines when there isn't up-to-date token information."),
+				scope: W.LANGUAGE_OVERRIDABLE
+			},
+			"files.insertFinalNewline": {
+				type: "boolean",
+				default: !1,
+				description: _(8130, "When enabled, insert a final new line at the end of the file when saving it."),
+				scope: W.LANGUAGE_OVERRIDABLE
+			},
+			"files.trimFinalNewlines": {
+				type: "boolean",
+				default: !1,
+				description: _(8131, "When enabled, will trim all new lines after the final new line at the end of the file when saving it."),
+				scope: W.LANGUAGE_OVERRIDABLE
+			},
+			"files.autoSave": {
+				type: "string",
+				enum: [
+					P.OFF,
+					P.AFTER_DELAY,
+					P.ON_FOCUS_CHANGE,
+					P.ON_WINDOW_CHANGE
+				],
+				markdownEnumDescriptions: [
+					_(8132, "An editor with changes is never automatically saved."),
+					_(8133, "An editor with changes is automatically saved after the configured `#files.autoSaveDelay#`."),
+					_(8134, "An editor with changes is automatically saved when the editor loses focus."),
+					_(8135, "An editor with changes is automatically saved when the window loses focus.")
+				],
+				default: Bt ? P.AFTER_DELAY : P.OFF,
+				markdownDescription: _(8136, "Controls [auto save](https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save) of editors that have unsaved changes.", P.OFF, P.AFTER_DELAY, P.ON_FOCUS_CHANGE, P.ON_WINDOW_CHANGE, P.AFTER_DELAY),
+				scope: W.LANGUAGE_OVERRIDABLE
+			},
+			"files.autoSaveDelay": {
+				type: "number",
+				default: 1e3,
+				minimum: 0,
+				markdownDescription: _(8137, "Controls the delay in milliseconds after which an editor with unsaved changes is saved automatically. Only applies when `#files.autoSave#` is set to `{0}`.", P.AFTER_DELAY),
+				scope: W.LANGUAGE_OVERRIDABLE
+			},
+			"files.autoSaveWorkspaceFilesOnly": {
+				type: "boolean",
+				default: !1,
+				markdownDescription: _(8138, "When enabled, will limit [auto save](https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save) of editors to files that are inside the opened workspace. Only applies when {0} is enabled.", "`#files.autoSave#`"),
+				scope: W.LANGUAGE_OVERRIDABLE
+			},
+			"files.autoSaveWhenNoErrors": {
+				type: "boolean",
+				default: !1,
+				markdownDescription: _(8139, "When enabled, will limit [auto save](https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save) of editors to files that have no errors reported in them at the time the auto save is triggered. Only applies when {0} is enabled.", "`#files.autoSave#`"),
+				scope: W.LANGUAGE_OVERRIDABLE
+			},
+			"files.watcherExclude": {
+				type: "object",
+				patternProperties: { ".*": { type: "boolean" } },
+				default: {
+					"**/.git/objects/**": !0,
+					"**/.git/subtree-cache/**": !0,
+					"**/.hg/store/**": !0
+				},
+				markdownDescription: _(8140, "Configure paths or [glob patterns](https://aka.ms/vscode-glob-patterns) to exclude from file watching. Paths can either be relative to the watched folder or absolute. Glob patterns are matched relative from the watched folder. When you experience the file watcher process consuming a lot of CPU, make sure to exclude large folders that are of less interest (such as build output folders)."),
+				scope: W.RESOURCE
+			},
+			"files.watcherInclude": {
+				type: "array",
+				items: { type: "string" },
+				default: [],
+				description: _(8141, "Configure extra paths to watch for changes inside the workspace. By default, all workspace folders will be watched recursively, except for folders that are symbolic links. You can explicitly add absolute or relative paths to support watching folders that are symbolic links. Relative paths will be resolved to an absolute path using the currently opened workspace."),
+				scope: W.RESOURCE
+			},
+			"files.hotExit": zl,
+			"files.defaultLanguage": {
+				type: "string",
+				markdownDescription: _(8142, "The default language identifier that is assigned to new files. If configured to `${activeEditorLanguage}`, will use the language identifier of the currently active text editor if any.")
+			},
+			[ie]: {
+				type: "object",
+				patternProperties: { ".*": { type: "boolean" } },
+				default: {},
+				markdownDescription: _(8143, "Configure paths or [glob patterns](https://aka.ms/vscode-glob-patterns) to mark as read-only. Glob patterns are always evaluated relative to the path of the workspace folder unless they are absolute paths. You can exclude matching paths via the `#files.readonlyExclude#` setting. Files from readonly file system providers will always be read-only independent of this setting."),
+				scope: W.RESOURCE
+			},
+			[Ur]: {
+				type: "object",
+				patternProperties: { ".*": { type: "boolean" } },
+				default: {},
+				markdownDescription: _(8144, "Configure paths or [glob patterns](https://aka.ms/vscode-glob-patterns) to exclude from being marked as read-only if they match as a result of the `#files.readonlyInclude#` setting. Glob patterns are always evaluated relative to the path of the workspace folder unless they are absolute paths. Files from readonly file system providers will always be read-only independent of this setting."),
+				scope: W.RESOURCE
+			},
+			[_t]: {
+				type: "boolean",
+				markdownDescription: _(8145, "Marks files as read-only when their file permissions indicate as such. This can be overridden via `#files.readonlyInclude#` and `#files.readonlyExclude#` settings."),
+				default: !1
+			},
+			"files.restoreUndoStack": {
+				type: "boolean",
+				description: _(8146, "Restore the undo stack when a file is reopened."),
+				default: !0
+			},
+			"files.saveConflictResolution": {
+				type: "string",
+				enum: ["askUser", "overwriteFileOnDisk"],
+				enumDescriptions: [_(8147, "Will refuse to save and ask for resolving the save conflict manually."), _(8148, "Will resolve the save conflict by overwriting the file on disk with the changes in the editor.")],
+				description: _(8149, "A save conflict can occur when a file is saved to disk that was changed by another program in the meantime. To prevent data loss, the user is asked to compare the changes in the editor with the version on disk. This setting should only be changed if you frequently encounter save conflict errors and may result in data loss if used without caution."),
+				default: "askUser",
+				scope: W.LANGUAGE_OVERRIDABLE
+			},
+			"files.dialog.defaultPath": {
+				type: "string",
+				pattern: "^((\\/|\\\\\\\\|[a-zA-Z]:\\\\).*)?$",
+				patternErrorMessage: _(8150, "Default path for file dialogs must be an absolute path (e.g. C:\\\\myFolder or /myFolder)."),
+				description: _(8151, "Default path for file dialogs, overriding user's home path. Only used in the absence of a context-specific path, such as most recently opened file or folder."),
+				scope: W.MACHINE
+			},
+			"files.simpleDialog.enable": {
+				type: "boolean",
+				description: _(8152, "Enables the simple file dialog for opening and saving files and folders. The simple file dialog replaces the system file dialog when enabled."),
+				default: !1
+			},
+			"files.participants.timeout": {
+				type: "number",
+				default: 6e4,
+				markdownDescription: _(8153, "Timeout in milliseconds after which file participants for create, rename, and delete are cancelled. Use `0` to disable participants.")
+			}
+		}
+	}), Rl.registerConfiguration({
+		...gt,
+		properties: {
+			"editor.formatOnSave": {
+				type: "boolean",
+				markdownDescription: _(8154, "Format a file on save. A formatter must be available and the editor must not be shutting down. When {0} is set to `afterDelay`, the file will only be formatted when saved explicitly.", "`#files.autoSave#`"),
+				scope: W.LANGUAGE_OVERRIDABLE
+			},
+			"editor.formatOnSaveMode": {
+				type: "string",
+				default: "file",
+				enum: [
+					"file",
+					"modifications",
+					"modificationsIfAvailable"
+				],
+				enumDescriptions: [
+					_(8155, "Format the whole file."),
+					_(8156, "Format modifications. Requires source control and a formatter that supports 'Format Selection'."),
+					_(8157, "Will attempt to format modifications only (requires source control and a formatter that supports 'Format Selection'). If source control can't be used, then the whole file will be formatted.")
+				],
+				markdownDescription: _(8158, "Controls if format on save formats the whole file or only modifications. Only applies when `#editor.formatOnSave#` is enabled."),
+				scope: W.LANGUAGE_OVERRIDABLE
+			}
+		}
+	});
+}));
+//#endregion
+//#region node_modules/@codingame/monaco-vscode-files-service-override/index.js
+function Vl(e) {
+	return e instanceof Uint8Array ? e : Yl.encode(e);
+}
+function Hl(e) {
+	return e.status === "fulfilled";
+}
+function Ul(e = {}) {
+	return {
+		[Dn.toString()]: new fn(ru, [iu, e], !0),
+		[mi.toString()]: new fn(Pl, [], !0),
+		[Ui.toString()]: new fn(Pi, [], !0),
+		[ns.toString()]: new fn(Il, [], !0)
+	};
+}
+function Wl(e) {
+	return $l.registerFile(e);
+}
+async function Gl(e, t, n) {
+	mc();
+	let r = nu[e.scheme];
+	if (r == null || r.writeFile == null) throw Error(`${e.scheme} provider doesn't exist or doesn't support writing files`);
+	if (!(n?.overwrite ?? !1)) try {
+		await r.stat(e);
+		return;
+	} catch (e) {
+		(!(e instanceof it) || e.code !== v.FileNotFound) && console.error("Unable to check if file exists", e);
+	}
+	await r.writeFile(e, Vl(t), {
+		atomic: !1,
+		create: !0,
+		overwrite: !1,
+		unlock: !1,
+		...n
+	});
+}
+var Kl, ql, Jl, Yl, Xl, Zl, Ql, $l, eu, tu, nu, ru, iu, au = t((() => {
+	gr(), jr(), Fc(), re(), jt(), zc(), Gr(), Sn(), F(), O(), D(), H(), Ss(), ar(), Hc(), Uc(), Gc(), ni(), Fl(), Di(), $r(), Ll(), rs(), j(), Mt(), In(), Tc(), Rs(), Bl(), Kl = class {
+		constructor() {
+			this.type = b.Directory, this._onDidChange = new U(), this.onDidChange = this._onDidChange.event, this._onDidDelete = new U(), this.onDidDelete = this._onDidDelete.event, this.ctime = Date.now(), this.mtime = Date.now(), this.type = b.Directory, this.entries = /* @__PURE__ */ new Map();
+		}
+		async stats() {
+			return {
+				ctime: this.ctime,
+				mtime: this.mtime,
+				size: 0,
+				type: b.Directory
+			};
+		}
+		delete() {
+			this._onDidDelete.fire();
+		}
+		addChild(e, t) {
+			this.entries.set(e, t), this._onDidChange.fire();
+			let n = { dispose: () => {
+				this.deleteChild(e);
+			} };
+			return t.onDidDelete(() => {
+				n.dispose();
+			}), n;
+		}
+		deleteChild(e) {
+			return this.entries.delete(e) ? (this.mtime = Date.now(), this._onDidChange.fire(), this.entries.size === 0 && this.delete(), !0) : !1;
+		}
+		getChildren(e) {
+			return this.entries.get(e);
+		}
+		read() {
+			return Array.from(this.entries.entries()).map(([e, t]) => [e, t.type]);
+		}
+	}, ql = class {
+		constructor(e, t) {
+			this.uri = e, this.readonly = t, this.type = b.File, this._onDidChange = new U(), this.onDidChange = this._onDidChange.event, this._onDidDelete = new U(), this.onDidDelete = this._onDidDelete.event, this.ctime = Date.now(), this.mtime = Date.now(), this.onDidChange(() => {
+				this.mtime = Date.now();
+			});
+		}
+		async stats() {
+			return {
+				ctime: this.ctime,
+				mtime: this.mtime,
+				size: await this.getSize(),
+				type: b.File,
+				permissions: this.readonly ? He.Readonly : void 0
+			};
+		}
+		async delete() {
+			if (this.readonly) throw h("Not allowed", v.FileWriteLocked);
+			this._onDidDelete.fire();
+		}
+	}, Jl = class extends ql {
+		constructor(e, t, n) {
+			super(e, !0), this.url = t, this.metadata = n;
+		}
+		async fetch() {
+			let e = await fetch(this.url, { headers: this.metadata?.mimeType == null ? {} : { Accept: this.metadata.mimeType } });
+			if (e.status !== 200) throw Error(e.statusText);
+			return e;
+		}
+		async getSize() {
+			return this.metadata?.size ?? 0;
+		}
+		async read() {
+			let e = await this.fetch();
+			return new Uint8Array(await e.arrayBuffer());
+		}
+		async readStream() {
+			return (await this.fetch()).body;
+		}
+		write() {
+			throw h("Not allowed", v.FileWriteLocked);
+		}
+		async delete() {
+			throw h("Not allowed", v.FileWriteLocked);
+		}
+	}, Yl = new TextEncoder(), Xl = class extends B {
+		constructor(e) {
+			super(), this.memoryFdCounter = 0, this.fdMemory = /* @__PURE__ */ new Map(), this.onDidChangeCapabilities = Jn.None, this._onDidChangeFile = new U(), this.onDidChangeFile = this._onDidChangeFile.event, this._bufferedChanges = [], this.rootByAuthority = /* @__PURE__ */ new Map(), this.capabilities = S.FileReadWrite | S.PathCaseSensitive | S.FileReadStream, e && (this.capabilities |= S.Readonly);
+		}
+		async open(e) {
+			let t = await this.readFile(e), n = this.memoryFdCounter++;
+			return this.fdMemory.set(n, t), n;
+		}
+		async close(e) {
+			this.fdMemory.delete(e);
+		}
+		async read(e, t, n, r, i) {
+			let a = this.fdMemory.get(e);
+			if (a == null) throw h("No file with that descriptor open", v.Unavailable);
+			let o = y.wrap(a).slice(t, t + i);
+			return n.set(o.buffer, r), o.byteLength;
+		}
+		write(e, t, n, r, i) {
+			let a = this.fdMemory.get(e);
+			if (a == null) throw h("No file with that descriptor open", v.Unavailable);
+			let o = y.wrap(n).slice(r, r + i);
+			return a.set(o.buffer, t), Promise.resolve(o.byteLength);
+		}
+		_lookupRoot(e) {
+			let t = e.toLowerCase(), n = this.rootByAuthority.get(t);
+			return n ?? (n = new Kl(), this.rootByAuthority.set(t, n)), n;
+		}
+		_lookup(e, t) {
+			let n = e.path.split("/"), r = this._lookupRoot(e.authority);
+			for (let e of n) {
+				if (e.length === 0) continue;
+				let n;
+				if (r instanceof Kl && (n = r.getChildren(e)), n == null) {
+					if (t) return;
+					throw h("file not found", v.FileNotFound);
+				}
+				r = n;
+			}
+			return r;
+		}
+		_lookupAsDirectory(e, t) {
+			let n = this._lookup(e, t);
+			if (n instanceof Kl) return n;
+			throw h("file not a directory", v.FileNotADirectory);
+		}
+		_lookupAsFile(e, t) {
+			let n = this._lookup(e, t);
+			if (n != null && n.type === b.File) return n;
+			throw h("file is a directory", v.FileIsADirectory);
+		}
+		registerFile(e) {
+			let t = e.uri.path.split("/"), n = this._lookupRoot(e.uri.authority), r = e.uri.with({ path: "/" });
+			for (let e of t.slice(0, -1)) {
+				if (e === "") continue;
+				r = V.joinPath(r, e);
+				let t = n.getChildren(e);
+				if (t ??= this.mkdirSync(r), !(t instanceof Kl)) throw Error(`file '${r.toString()}' is not a directory`);
+				n = t;
+			}
+			let i = t[t.length - 1];
+			if (n.getChildren(i) != null) throw Error(`file '${V.joinPath(r, i).toString()}/' already exists`);
+			let a = new N();
+			return a.add(o(() => {
+				this._fireSoon({
+					resource: e.uri,
+					type: A.DELETED
+				});
+			})), a.add(e.onDidDelete(() => {
+				a.dispose();
+			})), a.add(e.onDidChange(() => {
+				this._fireSoon({
+					resource: e.uri,
+					type: A.UPDATED
+				});
+			})), a.add(n.addChild(i, e)), this._fireSoon({
+				resource: e.uri,
+				type: A.ADDED
+			}), a;
+		}
+		async stat(e) {
+			return await this._lookup(e, !1).stats();
+		}
+		readdirSync(e) {
+			return this._lookupAsDirectory(e, !1).read();
+		}
+		async readdir(e) {
+			return this.readdirSync(e);
+		}
+		async readFile(e) {
+			return await this._lookupAsFile(e, !1).read();
+		}
+		readFileStream(e, t, r) {
+			let i = this._lookupAsFile(e, !1), a = n((e) => y.concat(e.map((e) => y.wrap(e))).buffer, { highWaterMark: 10 });
+			return (async () => {
+				try {
+					if (i.readStream == null || typeof t.length == "number" || typeof t.position == "number") {
+						let e = await i.read();
+						(typeof t.position == "number" || typeof t.length == "number") && (e = e.slice(t.position ?? 0, t.length)), a.end(e);
+					} else {
+						let e = (await i.readStream()).getReader(), t = await e.read();
+						for (; !t.done && !(r.isCancellationRequested || (await a.write(t.value), r.isCancellationRequested));) t = await e.read();
+						a.end(void 0);
+					}
+				} catch (e) {
+					a.error(h(e, v.Unknown)), a.end();
+				}
+			})(), a;
+		}
+		watch() {
+			return B.None;
+		}
+		async writeFile(e, t, n) {
+			let r = this._lookup(e, !0);
+			if (r != null && !(r instanceof ql)) throw h("file is directory", v.FileIsADirectory);
+			if (r == null) throw h("file not found", v.FileNotFound);
+			if (!n.overwrite) throw h("file exists already", v.FileExists);
+			await r.write(t);
+		}
+		async rename() {
+			throw h("Not allowed", v.NoPermissions);
+		}
+		mkdirSync(e) {
+			if (this._lookup(e, !0) != null) throw h("file exists already", v.FileExists);
+			let t = M(e), n = Fe(e), r = this._lookupAsDirectory(n, !1), i = new Kl(), a = new N();
+			return a.add(i.onDidDelete(() => {
+				a.dispose(), this._fireSoon({
+					resource: e,
+					type: A.DELETED
+				});
+			})), a.add(i.onDidChange(() => {
+				this._fireSoon({
+					resource: e,
+					type: A.UPDATED
+				});
+			})), r.addChild(t, i), this._fireSoon({
+				type: A.ADDED,
+				resource: e
+			}), i;
+		}
+		async mkdir() {
+			throw h("Can' create a directory", v.NoPermissions);
+		}
+		deleteSync(e) {
+			let t = this._lookup(e, !0);
+			if (t == null) throw h("Not found", v.FileNotFound);
+			if (t.type === b.Directory) throw h("Can't delete a directory", v.NoPermissions);
+			t.delete();
+		}
+		async delete(e) {
+			this.deleteSync(e);
+		}
+		_fireSoon(...e) {
+			this._bufferedChanges.push(...e), this._fireSoonHandle != null && (clearTimeout(this._fireSoonHandle), this._fireSoonHandle = void 0), this._fireSoonHandle = window.setTimeout(() => {
+				this._onDidChangeFile.fire(this._bufferedChanges), this._bufferedChanges.length = 0;
+			}, 5);
+		}
+	}, Zl = class {
+		constructor() {
+			this.providers = [], this.onDidChangeCapabilities = Jn.None, this._onDidChangeFile = new U(), this.onDidChangeFile = this._onDidChangeFile.event, this._onDidChangeOverlays = new U(), this.onDidChangeOverlays = this._onDidChangeOverlays.event, this.capabilities = S.FileReadWrite | S.PathCaseSensitive | S.FileReadStream;
+		}
+		register(e, t) {
+			let n = {
+				priority: e,
+				provider: t
+			};
+			this.providers.push(n), this.providers.sort((e, t) => t.priority - e.priority);
+			let r = new N();
+			return r.add(t.onDidChangeFile((e) => {
+				this._onDidChangeFile.fire(e);
+			})), r.add({ dispose: () => {
+				let e = this.providers.indexOf(n);
+				e >= 0 && (this.providers.splice(e, 1), this._onDidChangeOverlays.fire());
+			} }), this._onDidChangeOverlays.fire(), r;
+		}
+		get delegates() {
+			return this.providers.map(({ provider: e }) => e);
+		}
+		async readFromDelegates(e, t) {
+			if (this.delegates.length === 0) throw h("No delegate", v.Unavailable);
+			let n;
+			for (let r of this.delegates) {
+				if (t != null && t.isCancellationRequested) throw Error("Cancelled");
+				try {
+					return await e(r);
+				} catch (e) {
+					if (n ??= e, e instanceof it && [
+						v.NoPermissions,
+						v.FileNotFound,
+						v.Unavailable
+					].includes(e.code)) continue;
+					throw e;
+				}
+			}
+			throw n;
+		}
+		async writeToDelegates(e, t) {
+			if (this.delegates.length === 0) throw h("No delegate", v.Unavailable);
+			for (let n of this.delegates) if (!((n.capabilities & S.Readonly) > 0)) {
+				try {
+					await Mc(V, n, V.dirname(e));
+				} catch {}
+				try {
+					return await t(n);
+				} catch (e) {
+					if (e instanceof it && [
+						v.NoPermissions,
+						v.FileNotFound,
+						v.Unavailable
+					].includes(e.code)) continue;
+					throw e;
+				}
+			}
+			throw h("Not allowed", v.NoPermissions);
+		}
+		async stat(e) {
+			return await this.readFromDelegates(async (t) => {
+				let n = await t.stat(e), r = (t.capabilities & S.Readonly) > 0;
+				return {
+					...n,
+					permissions: n.permissions ?? (r ? He.Readonly : void 0)
+				};
+			});
+		}
+		async readFile(e) {
+			return await this.readFromDelegates((t) => t.readFile(e));
+		}
+		readFileStream(e, t, r) {
+			let i = n((e) => y.concat(e.map((e) => y.wrap(e))).buffer);
+			return this.readFromDelegates(async (n) => {
+				if (Ft(n)) {
+					let a = n.readFileStream(e, t, r);
+					await new Promise((e, t) => {
+						let n = !1;
+						ot(a, {
+							onData(e) {
+								n = !0, i.write(e);
+							},
+							onEnd() {
+								i.end(), e();
+							},
+							onError(e) {
+								n ? i.error(e) : t(e);
+							}
+						}, r);
+					});
+				} else {
+					let n = await this.readFile(e);
+					return (typeof t.position == "number" || typeof t.length == "number") && (n = n.slice(t.position ?? 0, t.length)), i.end(n);
+				}
+			}, r).catch((e) => {
+				i.error(e);
+			}), i;
+		}
+		async readdir(e) {
+			let t = await Promise.allSettled(this.delegates.map(async (t) => await t.readdir(e)));
+			if (!t.some(Hl)) throw t[0].reason;
+			return Object.entries(Object.fromEntries(t.filter(Hl).map((e) => e.value).flat()));
+		}
+		watch(e, t) {
+			let n = new N();
+			for (let r of this.delegates) n.add(r.watch(e, t));
+			return n;
+		}
+		async writeFile(e, t, n) {
+			await this.writeToDelegates(e, async (r) => {
+				let i;
+				try {
+					i = await r.stat(e);
+				} catch {}
+				if (i != null && ((i.permissions ?? 0) & He.Readonly) > 0) throw h("Not allowed", v.NoPermissions);
+				return await r.writeFile(e, t, n);
+			});
+		}
+		async mkdir(e) {
+			await this.writeToDelegates(e, (t) => t.mkdir(e));
+		}
+		async delete(e, t) {
+			await this.writeToDelegates(e, (n) => n.delete(e, t));
+		}
+		async rename(e, t, n) {
+			await this.writeToDelegates(t, (r) => r.rename(e, t, n));
+		}
+	}, Ql = new Zl(), Ql.register(0, new Rc()), $l = new Xl(!0), eu = new Rc(), eu.mkdir(Lr.from({
+		scheme: I.vscodeUserData,
+		path: "/User/"
+	})), (function(e) {
+		e.extensionFile = "extension-file";
+	})(tu ||= {}), nu = {
+		[tu.extensionFile]: $l,
+		[Ls.scheme]: new Rc(),
+		[I.vscodeUserData]: eu,
+		[I.tmp]: new Rc(),
+		[I.file]: Ql
+	}, ru = class extends Pc {
+		constructor(e, t) {
+			super(e), this.options = t;
+			for (let [e, t] of Object.entries(nu)) {
+				let n = this.registerProvider(e, t);
+				t instanceof Zl && t.onDidChangeOverlays(() => {
+					n.dispose(), n = this.registerProvider(e, t);
+				});
+			}
+		}
+		async withProvider(e) {
+			if (e.scheme === "data") {
+				let e = this.getProvider("http");
+				if (e != null) return e;
+			}
+			return super.withProvider(e);
+		}
+		async toFileStat(e, t, n, r, i, a) {
+			let o = async () => await super.toFileStat(e, t, n, r, i, a);
+			return this.options.statMiddleware?.(t, o) ?? o();
+		}
+	}, ru.$di$dependencies = [], iu = new Wc(), uc(async (e) => {
+		iu.logger = e.get(ke);
+	});
+}));
+//#endregion
+export { ks as $, qa as $n, Ta as $t, pc as A, Ka as An, $o as At, Ks as B, ha as Bn, Mo as Bt, vc as C, Ca as Cn, is as Ct, bc as D, xa as Dn, es as Dt, yc as E, Sa as En, rs as Et, Z as F, So as Fn, Uo as Ft, Qs as G, io as Gn, ko as Gt, Xs as H, Ja as Hn, Ao as Ht, Y as I, bo as In, zo as It, Gs as J, _a as Jn, Ia as Jt, Hs as K, eo as Kn, ho as Kt, X as L, wo as Ln, Po as Lt, ic as M, po as Mn, Xo as Mt, rc as N, mo as Nn, Io as Nt, wc as O, to as On, ts as Ot, tc as P, da as Pn, Lo as Pt, Bs as Q, co as Qn, Fa as Qt, ec as R, xo as Rn, Jo as Rt, gc as S, wa as Sn, Ki as Sr, ss as St, uc as T, $a as Tn, ns as Tt, Js as U, ro as Un, jo as Ut, Zs as V, Eo as Vn, No as Vt, qs as W, za as Wn, Oo as Wt, Ws as X, La as Xn, Pa as Xt, Vs as Y, Ra as Yn, Na as Yt, zs as Z, so as Zn, Ma as Zt, Gc as _, pa as _n, qi as _r, us as _t, au as a, Aa as an, $i as ar, Ls as at, mc as b, ba as bn, Wi as br, ls as bt, Tl as c, ao as cn, ia as cr, xs as ct, $ as d, _o as dn, na as dr, bs as dt, Da as en, la as er, Os as et, Q as f, uo as fn, ta as fr, gs as ft, Wc as g, no as gn, aa as gr, _s as gt, qc as h, Ya as hn, Xi as hr, ps as ht, Gl as i, Ea as in, Do as ir, Ms as it, nc as j, fo as jn, Yo as jt, fc as k, Ga as kn, Qo as kt, xl as l, go as ln, q as lr, Ss as lt, Kc as m, Xa as mn, Qi as mr, fs as mt, Jl as n, Wa as nn, sa as nr, As as nt, Wl as o, ka as on, Zi as or, Cs as ot, yl as p, Ba as pn, K as pr, ms as pt, Us as q, oo as qn, ja as qt, Ul as r, Oa as rn, oa as rr, Rs as rt, wl as s, yo as sn, ea as sr, Es as st, tu as t, Va as tn, ua as tr, Ds as tt, Sl as u, vo as un, ra as ur, vs as ut, Bc as v, fa as vn, Ji as vr, ds as vt, dc as w, lo as wn, as as wt, Tc as x, Qa as xn, Gi as xr, os as xt, Vc as y, To as yn, Yi as yr, cs as yt, sc as z, Co as zn, Fo as zt };

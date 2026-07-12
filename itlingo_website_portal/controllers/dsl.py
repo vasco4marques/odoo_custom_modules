@@ -48,9 +48,35 @@ class ITLingoDslPortal(CustomerPortal):
     def _can_edit_dsl(self, dsl):
         return self._itlingo_is_admin() or request.env.user in dsl.maintainer_ids
 
+    def _can_view_dsl(self, dsl):
+        return dsl.status == 'active' or self._can_edit_dsl(dsl)
+
+    def _require_dsl_view(self, dsl):
+        if not self._can_view_dsl(dsl):
+            raise MissingError(_('DSL not found.'))
+
+    def _dsl_view_domain(self):
+        """Domain for DSLs visible to the current website visitor."""
+        if self._itlingo_is_admin():
+            return []
+        if request.env.user._is_public():
+            return [('status', '=', 'active')]
+        return [
+            '|',
+            ('status', '=', 'active'),
+            ('id', 'in', self._maintained_dsl_ids()),
+        ]
+
     def _require_dsl_edit(self, dsl):
         if not self._can_edit_dsl(dsl):
             raise AccessError(_('You can only edit DSLs you maintain.'))
+
+    def _require_grammar_edit(self, dsl):
+        self._require_dsl_edit(dsl)
+        if dsl.status != 'draft':
+            raise AccessError(_(
+                'Grammar files can only be changed while the DSL is in draft status.',
+            ))
 
     def _can_view_dsl_files(self, dsl):
         return self._can_edit_dsl(dsl)
@@ -124,7 +150,10 @@ class ITLingoDslPortal(CustomerPortal):
             if self._itlingo_is_admin():
                 values['dsl_count'] = request.env['itlingo.dsl'].sudo().search_count([])
             else:
-                values['dsl_count'] = len(self._maintained_dsl_ids())
+                maintained_ids = self._maintained_dsl_ids()
+                values['dsl_count'] = request.env['itlingo.dsl'].sudo().search_count([
+                    '|', ('status', '=', 'active'), ('id', 'in', maintained_ids),
+                ])
         return values
 
     # ──────────────────────────────────────────────
@@ -139,7 +168,7 @@ class ITLingoDslPortal(CustomerPortal):
 
         # Everyone (including anonymous users) can consult the catalog;
         # edit/delete actions are rendered per row based on the user's rights.
-        domain = []
+        domain = self._dsl_view_domain()
         name_q = (params.get('name') or '').strip()
         if name_q:
             domain = domain + [
@@ -230,6 +259,7 @@ class ITLingoDslPortal(CustomerPortal):
            methods=['GET', 'POST'])
     def portal_dsl_edit(self, dsl_id, **post):
         dsl = self._dsl_or_404(dsl_id)
+        self._require_dsl_view(dsl)
         if not self._can_edit_dsl(dsl):
             if request.httprequest.method == 'POST':
                 raise AccessError(_('You can only edit DSLs you maintain.'))
@@ -253,6 +283,12 @@ class ITLingoDslPortal(CustomerPortal):
             'error': {},
             'dsl_message': request.params.get('message'),
             'dsl_error': request.params.get('error'),
+            'can_edit_grammar': dsl.status == 'draft',
+            'dsl_versions': request.env['itlingo.dsl'].sudo().search(
+                [('acronym', '=', dsl.acronym)], order='version desc',
+            ),
+            'suggested_version': dsl._suggest_next_version(),
+            'publish_error': request.session.pop('dsl_publish_error', None),
         })
         if request.httprequest.method == 'POST':
             vals = self._dsl_form_values(post)
@@ -270,6 +306,38 @@ class ITLingoDslPortal(CustomerPortal):
         return request.render('itlingo_website_portal.portal_dsl_edit', values)
 
     # ──────────────────────────────────────────────
+    # Publication lifecycle
+    # ──────────────────────────────────────────────
+
+    @route('/dsl/<int:dsl_id>/publish', type='http', auth='user',
+           website=True, methods=['POST'])
+    def portal_dsl_publish(self, dsl_id, **post):
+        dsl = self._dsl_or_404(dsl_id)
+        self._require_dsl_edit(dsl)
+        try:
+            # ``dsl`` is sudo'd for access rights but keeps the request user,
+            # so the publication audit records the real publisher. The server
+            # revalidates the grammar; browser-reported validity is ignored.
+            dsl.action_publish()
+        except (UserError, ValidationError) as err:
+            request.session['dsl_publish_error'] = str(err)
+            return request.redirect(f'/dsl/{dsl.id}?error=publish_failed')
+        return request.redirect(f'/dsl/{dsl.id}?message=published')
+
+    @route('/dsl/<int:dsl_id>/create-draft', type='http', auth='user',
+           website=True, methods=['POST'])
+    def portal_dsl_create_draft(self, dsl_id, **post):
+        dsl = self._dsl_or_404(dsl_id)
+        self._require_dsl_edit(dsl)
+        version = (post.get('version') or '').strip()
+        try:
+            draft = dsl.action_create_draft_version(version or None)
+        except (UserError, ValidationError) as err:
+            request.session['dsl_publish_error'] = str(err)
+            return request.redirect(f'/dsl/{dsl.id}?error=draft_failed')
+        return request.redirect(f'/dsl/{draft.id}?message=draft_created')
+
+    # ──────────────────────────────────────────────
     # Files
     # ──────────────────────────────────────────────
 
@@ -281,6 +349,8 @@ class ITLingoDslPortal(CustomerPortal):
         file_type = post.get('file_type')
         if file_type not in DSL_FILE_TYPES:
             return request.redirect(f'/dsl/{dsl.id}?error=bad_type')
+        if file_type == 'grammar':
+            self._require_grammar_edit(dsl)
         upload = request.httprequest.files.get('file')
         if not upload or not upload.filename:
             return request.redirect(f'/dsl/{dsl.id}?error=no_file')
@@ -301,6 +371,8 @@ class ITLingoDslPortal(CustomerPortal):
         dsl = self._dsl_or_404(dsl_id)
         self._require_dsl_edit(dsl)
         line = self._dsl_file_or_404(dsl, file_id)
+        if line.file_type == 'grammar':
+            self._require_grammar_edit(dsl)
         line.unlink()
         return request.redirect(f'/dsl/{dsl.id}?message=file_removed')
 
@@ -310,6 +382,8 @@ class ITLingoDslPortal(CustomerPortal):
         dsl = self._dsl_or_404(dsl_id)
         self._require_dsl_edit(dsl)
         line = self._dsl_file_or_404(dsl, file_id)
+        if line.file_type == 'grammar':
+            self._require_grammar_edit(dsl)
         line.write({'is_enabled': not line.is_enabled})
         return request.redirect(f'/dsl/{dsl.id}?message=file_updated')
 
