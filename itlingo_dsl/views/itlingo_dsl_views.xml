@@ -28,6 +28,14 @@
         <field name="arch" type="xml">
             <form string="DSL">
                 <header>
+                    <button name="action_publish" type="object"
+                            string="Publish" class="btn-primary"
+                            invisible="status == 'active' or not id"
+                            confirm="Publishing validates the grammar server-side, deprecates any previously active version of this acronym, and refreshes the chatbot knowledge base. It does not build or deploy templating/ITOI parsers, which remain separately deployed. Continue?"/>
+                    <button name="action_create_draft_version_ui" type="object"
+                            string="Create Draft Version"
+                            invisible="status == 'draft' or not id"
+                            help="Copies this DSL's metadata and definition files into a new editable draft version without modifying this version."/>
                     <field name="status" widget="statusbar"
                            statusbar_visible="draft,active,deprecated,archived"/>
                 </header>
@@ -78,6 +86,32 @@
                         </page>
                         <page string="Maintainers">
                             <field name="maintainer_ids" widget="many2many_tags"/>
+                        </page>
+                        <page string="Publication">
+                            <group>
+                                <group string="Grammar Validation">
+                                    <field name="grammar_validation_result"/>
+                                    <field name="grammar_validation_is_current"/>
+                                    <field name="grammar_validation_time"/>
+                                    <field name="grammar_validator_version"/>
+                                </group>
+                                <group string="Publication Audit">
+                                    <field name="published_by_id"/>
+                                    <field name="published_at"/>
+                                    <field name="published_digest"/>
+                                    <field name="grammar_validation_digest"/>
+                                </group>
+                            </group>
+                            <group>
+                                <field name="grammar_validation_diagnostics" readonly="1"/>
+                            </group>
+                            <p class="text-muted">
+                                Publishing validates the grammar with the bundled
+                                Langium validator and refreshes the chatbot knowledge
+                                base. It does not build or deploy the templating or
+                                ITOI parsers, which bundle their own grammar copies
+                                and are deployed separately.
+                            </p>
                         </page>
                         <page string="Administration">
                             <group>

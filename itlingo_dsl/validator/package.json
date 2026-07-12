@@ -1,0 +1,20 @@
+{
+  "name": "itlingo-grammar-validator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Self-contained Langium grammar validator CLI for DSL publication.",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/validate.mjs --bundle --platform=node --format=esm --outfile=dist/validate.mjs --banner:js=\"import { createRequire } from 'module'; const require = createRequire(import.meta.url);\" && esbuild src/describe.mjs --bundle --platform=node --format=esm --outfile=dist/describe.mjs --banner:js=\"import { createRequire } from 'module'; const require = createRequire(import.meta.url);\"",
+    "test": "npm run build && node test/describe.test.mjs"
+  },
+  "dependencies": {
+    "langium": "4.3.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

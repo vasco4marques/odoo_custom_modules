@@ -1,8 +1,13 @@
 import base64
+import hashlib
+import json
 import logging
+import re
 
 from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
+from odoo.exceptions import UserError, ValidationError
+
+from ..services import grammar_validator
 
 _logger = logging.getLogger(__name__)
 
@@ -101,6 +106,73 @@ class ItlingoDsl(models.Model):
              "chatbot knowledge base.",
     )
 
+    # ------------------------------------------------------------------
+    # Grammar validation and publication audit (Phase 5 lifecycle)
+    # ------------------------------------------------------------------
+    grammar_validation_result = fields.Selection(
+        selection=[("valid", "Valid"), ("invalid", "Invalid")],
+        string="Grammar Validation Result",
+        readonly=True,
+        copy=False,
+        help="Result of the last server-side Langium validation of the "
+             "grammar file. Tied to an exact content digest: editing the "
+             "grammar makes the stored result stale.",
+    )
+
+    grammar_validation_digest = fields.Char(
+        string="Validated Content Digest",
+        readonly=True,
+        copy=False,
+        help="SHA-256 of the grammar file content that was validated.",
+    )
+
+    grammar_validation_time = fields.Datetime(
+        string="Validated On",
+        readonly=True,
+        copy=False,
+    )
+
+    grammar_validator_version = fields.Char(
+        string="Validator Version",
+        readonly=True,
+        copy=False,
+    )
+
+    grammar_validation_diagnostics = fields.Text(
+        string="Validation Diagnostics",
+        readonly=True,
+        copy=False,
+        help="JSON list of {severity, message, line, column, code} from the "
+             "last server-side validation.",
+    )
+
+    grammar_validation_is_current = fields.Boolean(
+        string="Validation Is Current",
+        compute="_compute_grammar_validation_is_current",
+        help="True when the stored validation result matches the current "
+             "grammar content digest.",
+    )
+
+    published_by_id = fields.Many2one(
+        "res.users",
+        string="Published By",
+        readonly=True,
+        copy=False,
+    )
+
+    published_at = fields.Datetime(
+        string="Published On",
+        readonly=True,
+        copy=False,
+    )
+
+    published_digest = fields.Char(
+        string="Published Content Digest",
+        readonly=True,
+        copy=False,
+        help="SHA-256 of the grammar content that was active at publication.",
+    )
+
     _unique_acronym_version = models.Constraint(
         "unique(acronym, version)",
         "A DSL with this acronym and version already exists.",
@@ -149,6 +221,202 @@ class ItlingoDsl(models.Model):
                     ))
 
     # ------------------------------------------------------------------
+    # Grammar validation and publication lifecycle
+    # ------------------------------------------------------------------
+    def _grammar_file(self):
+        self.ensure_one()
+        return self.file_ids.filtered(lambda f: f.file_type == "grammar")[:1]
+
+    def _grammar_digest(self):
+        """SHA-256 of the current grammar file bytes, or False without one."""
+        self.ensure_one()
+        grammar = self._grammar_file()
+        if not grammar:
+            return False
+        return hashlib.sha256(grammar._read_binary_bytes()).hexdigest()
+
+    @api.depends(
+        "file_ids.file", "file_ids.file_type", "file_ids.file_name",
+        "grammar_validation_result", "grammar_validation_digest",
+    )
+    def _compute_grammar_validation_is_current(self):
+        for dsl in self:
+            digest = dsl._grammar_digest()
+            dsl.grammar_validation_is_current = bool(
+                digest
+                and dsl.grammar_validation_result
+                and dsl.grammar_validation_digest == digest
+            )
+
+    def _run_grammar_validation(self):
+        """Validate the grammar server-side and store the audited result.
+
+        Publication relies on this stored result plus the content digest; a
+        browser-supplied validity flag is never consulted.
+        """
+        self.ensure_one()
+        grammar = self._grammar_file()
+        if not grammar:
+            raise UserError(_("This DSL has no grammar file to validate."))
+        text = grammar._read_text_utf8()
+        try:
+            result = grammar_validator.validate_grammar_text(self.env, text)
+        except grammar_validator.GrammarValidationUnavailable as err:
+            raise UserError(_(
+                "Server-side grammar validation is unavailable: %s", err,
+            )) from err
+        self.write({
+            "grammar_validation_result": "valid" if result["valid"] else "invalid",
+            "grammar_validation_digest": self._grammar_digest(),
+            "grammar_validation_time": fields.Datetime.now(),
+            "grammar_validator_version": result["validator_version"],
+            "grammar_validation_diagnostics": json.dumps(result["diagnostics"]),
+        })
+        return result
+
+    def _grammar_validation_error_summary(self):
+        self.ensure_one()
+        try:
+            diagnostics = json.loads(self.grammar_validation_diagnostics or "[]")
+        except json.JSONDecodeError:
+            diagnostics = []
+        errors = [d for d in diagnostics if d.get("severity") == "error"]
+        lines = [
+            _("line %(line)s: %(message)s",
+              line=d.get("line", "?"), message=d.get("message", ""))
+            for d in errors[:5]
+        ]
+        if len(errors) > 5:
+            lines.append(_("… and %s more errors.", len(errors) - 5))
+        return "\n".join(lines)
+
+    def _ensure_grammar_publishable(self):
+        """Block activation while the grammar is unvalidated, stale, or invalid.
+
+        DSLs without a grammar file (metadata-only entries) may activate
+        freely; this guard protects the grammar contract only.
+        """
+        for dsl in self:
+            if not dsl._grammar_file():
+                continue
+            if not dsl.grammar_validation_result:
+                raise ValidationError(_(
+                    "The grammar of %(dsl)s has not been validated. Publish "
+                    "through the Publish action, which runs server-side "
+                    "validation.", dsl=dsl.display_name,
+                ))
+            if dsl.grammar_validation_digest != dsl._grammar_digest():
+                raise ValidationError(_(
+                    "The grammar of %(dsl)s changed after its last "
+                    "validation. Publish again to revalidate the current "
+                    "content.", dsl=dsl.display_name,
+                ))
+            if dsl.grammar_validation_result != "valid":
+                raise ValidationError(_(
+                    "The grammar of %(dsl)s has validation errors and cannot "
+                    "be published:\n%(errors)s",
+                    dsl=dsl.display_name,
+                    errors=dsl._grammar_validation_error_summary(),
+                ))
+
+    def _active_acronym_sibling(self):
+        """The other DSL record that currently owns this acronym's KB entry."""
+        self.ensure_one()
+        acronym = (self.acronym or "").strip()
+        if not acronym:
+            return self.browse()
+        return self.sudo().search([
+            ("acronym", "=", acronym),
+            ("status", "=", "active"),
+            ("id", "!=", self.id),
+        ], limit=1)
+
+    def action_publish(self):
+        """Validate server-side and promote this version to active.
+
+        Publication is the only supported path to ``active`` for DSLs with a
+        grammar. It deprecates any previously active version of the same
+        acronym, records the audit trail, and is the single event that
+        refreshes the chatbot knowledge base. It does not build or deploy
+        templating/ITOI parsers, which bundle their own grammars.
+        """
+        for dsl in self:
+            if dsl.status == "active":
+                raise UserError(_(
+                    "%(dsl)s is already the active version.",
+                    dsl=dsl.display_name,
+                ))
+            grammar = dsl._grammar_file()
+            if grammar:
+                dsl._run_grammar_validation()
+            dsl._ensure_grammar_publishable()
+            previous = dsl._active_acronym_sibling()
+            previous.write({"status": "deprecated"})
+            dsl.write({
+                "status": "active",
+                "published_by_id": self.env.uid,
+                "published_at": fields.Datetime.now(),
+                "published_digest": dsl.grammar_validation_digest
+                if grammar else False,
+            })
+        return True
+
+    def _suggest_next_version(self):
+        """Next unused version string, bumping the trailing number."""
+        self.ensure_one()
+        match = re.match(r"^(.*?)(\d+)$", self.version or "")
+        if match:
+            prefix, number = match.group(1), int(match.group(2))
+        else:
+            prefix, number = f"{self.version or '1'}.", 0
+        candidate = f"{prefix}{number + 1}"
+        while self.sudo().search_count([
+            ("acronym", "=", self.acronym), ("version", "=", candidate),
+        ]):
+            number += 1
+            candidate = f"{prefix}{number + 1}"
+        return candidate
+
+    def action_create_draft_version(self, new_version=None):
+        """Copy this DSL (metadata + definition files) into a new draft.
+
+        The source version is not modified; published versions stay
+        immutable and iteration happens on the new draft.
+        """
+        self.ensure_one()
+        version = (new_version or self._suggest_next_version()).strip()
+        if not version:
+            raise ValidationError(_("A version is required for the new draft."))
+        draft = self.copy({
+            "version": version,
+            "status": "draft",
+        })
+        # One2many fields are not copied by copy(); carry the definition
+        # files (including the grammar) over to the new draft explicitly.
+        for definition_file in self.file_ids:
+            self.env["itlingo.dsl.file"].create({
+                "dsl_id": draft.id,
+                "file_type": definition_file.file_type,
+                "file_name": definition_file.file_name,
+                "file": definition_file._attachment_base64(),
+                "is_enabled": definition_file.is_enabled,
+                "sequence": definition_file.sequence,
+            })
+        return draft
+
+    def action_create_draft_version_ui(self):
+        """Backend button wrapper: create the draft and open its form."""
+        self.ensure_one()
+        draft = self.action_create_draft_version()
+        return {
+            "type": "ir.actions.act_window",
+            "res_model": "itlingo.dsl",
+            "res_id": draft.id,
+            "view_mode": "form",
+            "target": "current",
+        }
+
+    # ------------------------------------------------------------------
     # Chatbot KB sync
     # ------------------------------------------------------------------
     @api.model_create_multi
@@ -159,6 +427,10 @@ class ItlingoDsl(models.Model):
         return records
 
     def write(self, vals):
+        if vals.get("status") == "active":
+            self.filtered(
+                lambda dsl: dsl.status != "active"
+            )._ensure_grammar_publishable()
         result = super().write(vals)
         self._sync_kb_files()
         if "maintainer_ids" in vals:
@@ -166,7 +438,11 @@ class ItlingoDsl(models.Model):
         return result
 
     def unlink(self):
-        self._remove_kb_files()
+        for dsl in self:
+            # A draft or retired version must not clear the KB entry that the
+            # acronym's active version still owns.
+            if not dsl._active_acronym_sibling():
+                dsl._remove_kb_files()
         result = super().unlink()
         self._sync_maintainer_group()
         return result
@@ -188,6 +464,8 @@ class ItlingoDsl(models.Model):
 
     def _dsl_file_text(self, dsl_file):
         """Decode the textual content of a DSL definition file."""
+        if dsl_file.file_type == "grammar":
+            return dsl_file._read_text_utf8()
         raw_b64 = _read_attachment_base64(
             self.env, "itlingo.dsl.file", dsl_file.id, "file",
         )
@@ -219,9 +497,13 @@ class ItlingoDsl(models.Model):
             if not lang_name:
                 continue
 
-            # Only active DSLs are exposed to the chatbot.
+            # Only active DSLs are exposed to the chatbot. A non-active
+            # version (e.g. a draft being edited) must never clear the KB
+            # projection owned by the acronym's active version, so drafts
+            # are invisible to the chatbot until publication.
             if dsl.status != "active":
-                dsl._remove_kb_files()
+                if not dsl._active_acronym_sibling():
+                    dsl._remove_kb_files()
                 continue
 
             lang = kb_lang_model.sudo().search(
