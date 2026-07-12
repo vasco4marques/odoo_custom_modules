@@ -8,17 +8,66 @@
               inherit_id="itlingo_website_portal.portal_dsl_edit"
               name="DSL Edit Templating Warning">
         <xpath expr="//p[normalize-space()='Definition files']" position="after">
-            <div t-if="dsl.templating_builtin_generation"
-                 class="alert alert-warning small mb-3" role="alert">
-                For built-in RSL/ASL document generation, templating uses the
-                platform parser and template context shipped with ITLingoCloud.
-                Updating the grammar file here updates the DSL knowledge base,
-                but does not automatically update the templating parser or the
-                available template fields. Templates may miss concepts
-                introduced by newer grammar versions until templating support is
-                updated.
+            <div class="alert alert-info small mb-3" role="status">
+                <p class="mb-2">
+                    Published, self-contained grammars are available to document
+                    templates automatically. Every grammar exposes the generic
+                    <code>root</code>, <code>elements</code>, <code>by_type</code>,
+                    and <code>by_id</code> context; RSL and ASL also keep their
+                    built-in friendly aliases.
+                </p>
+                <a t-attf-href="/dsl/#{dsl.id}/template-reference"
+                   class="btn btn-sm btn-outline-primary">
+                    <i class="fa fa-book me-1" aria-hidden="true"/> Open Template Reference
+                </a>
             </div>
         </xpath>
     </template>
+
+    <template id="portal_dsl_list_template_reference_link"
+              inherit_id="itlingo_website_portal.portal_dsl_list"
+              name="DSL Catalog Template Reference Link">
+        <xpath expr="//div[hasclass('itlingo-portal-filter-card')]" position="before">
+            <div class="d-flex justify-content-end mb-3">
+                <a href="/dsl/template-reference" class="btn btn-outline-primary">
+                    <i class="fa fa-book me-1" aria-hidden="true"/> Template Reference
+                </a>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="portal_dsl_view_template_reference_link"
+              inherit_id="itlingo_website_portal.portal_dsl_view"
+              name="DSL View Template Reference Link">
+        <xpath expr="//div[hasclass('container')]/h1[1]" position="after">
+            <div class="mb-3">
+                <a t-attf-href="/dsl/#{dsl.id}/template-reference"
+                   class="btn btn-outline-primary">
+                    <i class="fa fa-book me-1" aria-hidden="true"/> Template Reference
+                </a>
+            </div>
+        </xpath>
+    </template>
+
+    <record id="itlingo_dsl_form_templating" model="ir.ui.view">
+        <field name="name">itlingo.dsl.form.templating</field>
+        <field name="model">itlingo.dsl</field>
+        <field name="inherit_id" ref="itlingo_dsl.view_itlingo_dsl_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="templating" string="Templating">
+                    <group>
+                        <field name="templating_generation_available"/>
+                        <field name="template_profile" widget="text"
+                               placeholder='{"bucket_aliases": {"Requirement": "requirements"}}'/>
+                    </group>
+                    <p class="text-muted">
+                        Profiles add friendly aliases without changing the generic
+                        context. Record-sourced grammars must be self-contained.
+                    </p>
+                </page>
+            </xpath>
+        </field>
+    </record>
 
 </odoo>

@@ -1,4 +1,4 @@
-"""Parse supported ITLingo DSL specifications into serialized Langium ASTs.
+"""Parse ITLingo DSL specifications into serialized Langium ASTs.
 
 Runs the self-contained ``parser/dist/parser.mjs`` bundle as a local Node
 subprocess. No network calls and no dependency on the chatbot/ITOI services.
@@ -7,6 +7,7 @@ subprocess. No network calls and no dependency on the chatbot/ITOI services.
 import json
 import logging
 import os
+import re
 import subprocess
 import tempfile
 
@@ -66,6 +67,12 @@ def supported_dsl_keys():
     return tuple(_SUPPORTED_DSLS.keys())
 
 
+def bundled_grammar_path(dsl_key):
+    """Return the committed grammar path for a built-in DSL key."""
+    config = _SUPPORTED_DSLS.get((dsl_key or "").strip().upper())
+    return config.get("grammar") if config else None
+
+
 def dsl_key_for_record(env, dsl):
     """Return the parser key for a DSL record.
 
@@ -85,9 +92,30 @@ def is_supported_dsl(dsl_key):
     return (dsl_key or "").strip().upper() in _SUPPORTED_DSLS
 
 
-def dsl_label(dsl_key):
-    config = _SUPPORTED_DSLS.get((dsl_key or "").strip().upper())
-    return config["label"] if config else "DSL specification"
+def is_templatable_dsl(env, dsl):
+    """Whether *dsl* has a parser source that is safe to use for generation."""
+    if not dsl:
+        return False
+    if dsl_key_for_record(env, dsl):
+        return True
+    grammar = dsl._grammar_file() if hasattr(dsl, "_grammar_file") else False
+    return bool(
+        dsl.status == "active"
+        and grammar
+        and dsl.grammar_validation_result == "valid"
+        and dsl.grammar_validation_is_current
+        and dsl.published_digest
+        and dsl.published_digest == dsl._grammar_digest()
+    )
+
+
+def dsl_label(dsl_or_key):
+    if isinstance(dsl_or_key, str):
+        config = _SUPPORTED_DSLS.get((dsl_or_key or "").strip().upper())
+        return config["label"] if config else "DSL specification"
+    return "%s specification" % (
+        dsl_or_key.acronym or dsl_or_key.name or "DSL"
+    )
 
 
 def default_dsl_extension(dsl_key):
@@ -113,31 +141,83 @@ def _parse_error_class(dsl_key):
     return DslParseError
 
 
-def parse_dsl(env, dsl_key, source_bytes):
-    """Parse supported DSL source bytes and return the serialized AST dict.
+_GRAMMAR_IMPORT_RE = re.compile(
+    r"^\s*import\s+['\"]([^'\"]+)['\"]\s*;?\s*$", re.MULTILINE,
+)
+
+
+def _record_parser_config(dsl):
+    """Build parser configuration from a published DSL record."""
+    grammar_file = dsl._grammar_file()
+    grammar_text = grammar_file._read_text_utf8()
+    imports = _GRAMMAR_IMPORT_RE.findall(grammar_text)
+    if imports:
+        raise RuntimeError(
+            "The published grammar imports %s. Record-sourced grammars must "
+            "be self-contained before they can be used for template generation."
+            % ", ".join(imports)
+        )
+    extensions = [
+        item.strip() for item in (dsl.file_extensions or "").split(",")
+        if item.strip()
+    ]
+    suffix = extensions[0] if extensions else ".dsl"
+    if not suffix.startswith("."):
+        suffix = "." + suffix
+    return {
+        "grammar_text": grammar_text,
+        "suffix": suffix,
+        "label": dsl_label(dsl),
+        "validation": "all",
+    }
+
+
+def parse_dsl(env, dsl_or_key, source_bytes):
+    """Parse DSL source bytes and return the serialized AST dict.
+
+    ``dsl_or_key`` may be the stable ``RSL``/``ASL`` parser key (legacy API) or
+    an ``itlingo.dsl`` record. Built-ins keep using their bundled grammars;
+    other records use their published, validated, self-contained grammar.
 
     Raises ``DslParseError`` on parse errors (with diagnostics) or
     ``RuntimeError`` on infrastructure problems (missing bundle, node not found,
     timeout).
     """
-    dsl_key = (dsl_key or "").strip().upper()
+    dsl = None if isinstance(dsl_or_key, str) else dsl_or_key
+    dsl_key = (
+        (dsl_or_key or "").strip().upper()
+        if isinstance(dsl_or_key, str)
+        else dsl_key_for_record(env, dsl)
+    )
     config = _SUPPORTED_DSLS.get(dsl_key)
     if not config:
-        raise RuntimeError("Template generation is not available for this DSL.")
+        if not dsl or not is_templatable_dsl(env, dsl):
+            raise RuntimeError(
+                "Template generation requires an active DSL with a current, "
+                "valid published grammar."
+            )
+        config = _record_parser_config(dsl)
 
-    grammar = config["grammar"]
     label = config["label"]
     if not os.path.exists(_PARSER_JS):
         raise RuntimeError(
             "DSL parser bundle is missing (%s). Rebuild it with `npm run build` "
             "in the parser/ folder." % _PARSER_JS
         )
-    if not os.path.exists(grammar):
+    grammar = config.get("grammar")
+    if grammar and not os.path.exists(grammar):
         raise RuntimeError(
             "%s grammar is missing (%s)." % (dsl_key, grammar)
         )
 
     node_path, timeout = _config(env)
+
+    grammar_path = None
+    if config.get("grammar_text") is not None:
+        with tempfile.NamedTemporaryFile(suffix=".langium", delete=False) as tmp:
+            tmp.write(config["grammar_text"].encode("utf-8"))
+            grammar_path = tmp.name
+        grammar = grammar_path
 
     with tempfile.NamedTemporaryFile(suffix=config["suffix"], delete=False) as tmp:
         tmp.write(source_bytes)
@@ -161,6 +241,11 @@ def parse_dsl(env, dsl_key, source_bytes):
             os.unlink(source_path)
         except OSError:
             pass
+        if grammar_path:
+            try:
+                os.unlink(grammar_path)
+            except OSError:
+                pass
 
     stdout = (proc.stdout or b"").decode("utf-8", "replace").strip()
     try:

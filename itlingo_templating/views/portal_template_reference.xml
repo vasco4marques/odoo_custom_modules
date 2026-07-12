@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Breadcrumb entries for the Template Reference pages -->
+    <template id="portal_template_reference_breadcrumbs" name="Portal breadcrumbs: Template Reference"
+              inherit_id="portal.portal_breadcrumbs" priority="60">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name in ('dsl_template_reference_list', 'dsl_template_reference_detail')"
+                class="breadcrumb-item">
+                <a href="/dsl">DSLs</a>
+            </li>
+            <li t-if="page_name == 'dsl_template_reference_list'" class="breadcrumb-item active">
+                Template Reference
+            </li>
+            <li t-if="page_name == 'dsl_template_reference_detail'" class="breadcrumb-item">
+                <a href="/dsl/template-reference">Template Reference</a>
+            </li>
+            <li t-if="page_name == 'dsl_template_reference_detail'" class="breadcrumb-item active text-truncate">
+                <t t-out="dsl.acronym"/>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="portal_template_reference_list" name="DSL Template References">
+        <t t-call="portal.portal_layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <section class="s_text_block pt32 pb64" data-name="Template Reference Catalog">
+                    <div class="container">
+                        <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-4">
+                            <div>
+                                <p class="text-uppercase text-muted small fw-semibold mb-2">DSL catalog</p>
+                                <h1 class="h2 mb-2">Template Reference</h1>
+                                <p class="text-muted mb-0">
+                                    Choose a DSL to inspect its template types, fields, aliases, and examples.
+                                </p>
+                            </div>
+                            <a href="/dsl" class="btn btn-outline-secondary">
+                                <i class="fa fa-arrow-left me-1" aria-hidden="true"/> DSL catalog
+                            </a>
+                        </div>
+
+                        <div t-if="not dsls" class="alert alert-warning" role="alert">
+                            No visible DSLs are available.
+                        </div>
+                        <div t-else="" class="card border-0 shadow-sm rounded-3 overflow-hidden">
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>DSL</th>
+                                            <th>Version</th>
+                                            <th>Status</th>
+                                            <th>Template generation</th>
+                                            <th class="text-end">Reference</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr t-foreach="dsls" t-as="dsl_rec">
+                                            <td>
+                                                <div class="fw-semibold"><t t-out="dsl_rec.acronym"/></div>
+                                                <div class="small text-muted"><t t-out="dsl_rec.name"/></div>
+                                            </td>
+                                            <td><t t-out="dsl_rec.version"/></td>
+                                            <td>
+                                                <span t-attf-class="badge #{'bg-success' if dsl_rec.status == 'active' else 'bg-secondary'}">
+                                                    <t t-out="dict(dsl_rec._fields['status'].selection).get(dsl_rec.status)"/>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span t-if="dsl_rec.templating_generation_available"
+                                                      class="badge bg-success">Available</span>
+                                                <span t-else="" class="badge bg-light text-dark border">Not yet available</span>
+                                            </td>
+                                            <td class="text-end">
+                                                <a t-attf-href="/dsl/#{dsl_rec.id}/template-reference"
+                                                   class="btn btn-sm btn-outline-primary">
+                                                    Open reference <i class="fa fa-arrow-right ms-1" aria-hidden="true"/>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <template id="portal_template_reference_detail" name="DSL Template Reference">
+        <t t-call="portal.portal_layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <section class="s_text_block pt32 pb64" data-name="DSL Template Reference">
+                    <div class="container">
+                        <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-4">
+                            <div>
+                                <p class="text-uppercase text-muted small fw-semibold mb-2">Template Reference</p>
+                                <h1 class="h2 mb-2">
+                                    <t t-out="dsl.acronym"/> <span class="text-muted">·</span>
+                                    <t t-out="dsl.name"/>
+                                </h1>
+                                <div class="d-flex flex-wrap align-items-center gap-2">
+                                    <span class="text-muted">Version <t t-out="dsl.version"/></span>
+                                    <span t-attf-class="badge #{'bg-success' if dsl.status == 'active' else 'bg-secondary'}">
+                                        <t t-out="dict(dsl._fields['status'].selection).get(dsl.status)"/>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a t-if="reference.get('success')"
+                                   t-attf-href="/dsl/#{dsl.id}/template-reference/starter.md"
+                                   class="btn btn-primary">
+                                    <i class="fa fa-download me-1" aria-hidden="true"/> Download starter template
+                                </a>
+                                <a href="/dsl/template-reference" class="btn btn-outline-secondary">All references</a>
+                                <a t-attf-href="/dsl/#{dsl.id}" class="btn btn-outline-primary">DSL details</a>
+                            </div>
+                        </div>
+
+                        <div t-if="dsl.status == 'draft'" class="alert alert-info" role="status">
+                            Templates can be authored against this draft now. Document generation requires an active,
+                            valid published grammar.
+                        </div>
+                        <div t-elif="not dsl.templating_generation_available" class="alert alert-warning" role="status">
+                            This reference is available for authoring, but template generation is not currently available
+                            for this DSL revision.
+                        </div>
+
+                        <div t-if="not reference.get('success')" class="alert alert-warning" role="alert">
+                            <strong>Grammar inventory unavailable.</strong>
+                            <span t-out="reference.get('message') or 'The generic template context remains available below.'"/>
+                        </div>
+
+                        <div class="card border-0 shadow-sm rounded-3 mb-4" id="template-checker">
+                            <div class="card-header bg-white p-3">
+                                <h2 class="h5 mb-1">Check your template</h2>
+                                <p class="small text-muted mb-0">
+                                    Find likely variable, type, and field-name mistakes before generating a document.
+                                </p>
+                            </div>
+                            <div class="card-body">
+                                <div t-if="request.env.user._is_public()" class="alert alert-light border mb-0">
+                                    <a t-attf-href="/web/login?redirect=/dsl/#{dsl.id}/template-reference%23template-checker">Sign in</a>
+                                    to check a template.
+                                </div>
+                                <form t-else="" t-attf-action="/dsl/#{dsl.id}/template-reference/check"
+                                      method="post" enctype="multipart/form-data">
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                    <div class="row g-3">
+                                        <div class="col-lg-6">
+                                            <label for="template-reference-file" class="form-label fw-semibold">Upload a template file</label>
+                                            <input id="template-reference-file" class="form-control"
+                                                   type="file" name="template_file"
+                                                   accept=".docx,.xlsx,.txt,.md,.rst,.html,.htm,.json,.xml,.yaml,.yml,.toml,.ini,.cfg,.properties,.sql,.csv,.tsv,.css,.js,.ts,.sh"/>
+                                            <p class="form-text mb-0">
+                                                DOCX, XLSX, or a text template; maximum <t t-out="max_template_check_mb"/> MiB.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label for="template-reference-jinja" class="form-label fw-semibold">Or paste Jinja</label>
+                                            <textarea id="template-reference-jinja" name="jinja_text" rows="5"
+                                                      class="form-control font-monospace"
+                                                      placeholder="{% for item in requirements %}&#10;{{ item.title }}&#10;{% endfor %}"
+                                                      t-out="pasted_template"/>
+                                            <p class="form-text mb-0">Pasted Jinja takes precedence when both inputs are provided.</p>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary mt-3">
+                                        <i class="fa fa-check-circle me-1" aria-hidden="true"/> Check template
+                                    </button>
+                                    <span class="small text-muted ms-2">Advisory only; the template is not stored.</span>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div t-if="template_check_error" class="alert alert-danger" role="alert">
+                            <strong>Template check failed.</strong> <span t-out="template_check_error"/>
+                        </div>
+
+                        <div t-if="template_lint_result"
+                             t-attf-class="alert #{'alert-secondary' if template_lint_result.get('skipped') else 'alert-warning' if template_lint_result.get('findings') else 'alert-success'}"
+                             role="status" id="template-check-results">
+                            <div t-if="template_lint_result.get('skipped')">
+                                Template checking could not be completed.
+                            </div>
+                            <div t-elif="not template_lint_result.get('findings')">
+                                No Jinja syntax, filter, or test problems were found.
+                                <span t-if="not template_lint_result.get('dsl_skipped')">
+                                    No known variable, type, or field-name problems were found.
+                                </span>
+                                <div t-if="template_lint_result.get('dsl_skipped')" class="small mt-2">
+                                    DSL variable checking was skipped because the grammar inventory is unavailable.
+                                </div>
+                            </div>
+                            <t t-else="">
+                                <div class="fw-semibold">
+                                    <span class="badge text-bg-warning me-1" t-out="len(template_lint_result['findings'])"/>
+                                    Advisory template finding(s)
+                                </div>
+                                <div t-foreach="template_lint_result.get('finding_groups', [])" t-as="group"
+                                     t-attf-class="mt-2 template-lint-group template-lint-group-#{group['category']}"
+                                     t-att-data-category="group['category']">
+                                    <div class="small fw-semibold text-uppercase" t-out="group['label']"/>
+                                    <ul class="mb-0">
+                                        <li t-foreach="group['findings']" t-as="finding">
+                                            <span t-if="finding.get('location')"><t t-out="finding['location']"/>: </span>
+                                            <t t-out="finding['message']"/>
+                                            <span t-if="finding.get('suggestion')">
+                                                Did you mean <code t-out="finding['suggestion']"/>?
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div t-if="template_lint_result.get('dsl_skipped')" class="small mt-2">
+                                    DSL variable checking was skipped because the grammar inventory is unavailable.
+                                </div>
+                                <div t-if="template_lint_result.get('degraded')" class="small mt-2">
+                                    Only top-level variables could be checked for this file.
+                                </div>
+                            </t>
+                        </div>
+
+                        <div class="card border-0 shadow-sm rounded-3 mb-4">
+                            <div class="card-header bg-white p-3">
+                                <h2 class="h5 mb-1">Generic context</h2>
+                                <p class="small text-muted mb-0">These variables are available for every templatable DSL.</p>
+                            </div>
+                            <div class="card-body p-0 table-responsive">
+                                <table class="table mb-0 align-middle">
+                                    <thead class="table-light"><tr><th>Variable</th><th>Contents</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>root</code></td><td>The parsed entry object (<code t-out="reference.get('entry_type') or 'Model'"/>).</td></tr>
+                                        <tr><td><code>elements</code></td><td>All named elements across grammar types.</td></tr>
+                                        <tr><td><code>by_type</code></td><td>Named elements grouped by their exact grammar type.</td></tr>
+                                        <tr><td><code>by_id</code></td><td>Lookup from an element name to its element.</td></tr>
+                                        <tr><td><code>schema_version</code></td><td>Template-context schema version, currently <code>1.0</code>.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card border-0 shadow-sm rounded-3 mb-4">
+                            <div class="card-header bg-white p-3">
+                                <h2 class="h5 mb-1">Uniform element aliases</h2>
+                                <p class="small text-muted mb-0">Every named element keeps its raw fields and gains these aliases.</p>
+                            </div>
+                            <div class="card-body p-0 table-responsive">
+                                <table class="table mb-0 align-middle">
+                                    <thead class="table-light"><tr><th>Alias</th><th>Meaning</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>id</code></td><td>The raw <code>name</code> value.</td></tr>
+                                        <tr><td><code>title</code></td><td>The configured friendly title, falling back to <code>name</code>.</td></tr>
+                                        <tr><td><code>kind</code></td><td>The exact Langium AST type.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card border-0 shadow-sm rounded-3 mb-4">
+                            <div class="card-header bg-white p-3">
+                                <h2 class="h5 mb-1">Template Profile aliases</h2>
+                                <p class="small text-muted mb-0">Friendly names are resolved at render time and do not alter the grammar inventory.</p>
+                            </div>
+                            <div class="card-body">
+                                <div t-if="reference.get('root_alias')" class="mb-3">
+                                    <code t-out="reference['root_alias']"/> <span class="text-muted">→</span> <code>root</code>
+                                </div>
+                                <div t-if="reference.get('profile_aliases')" class="table-responsive">
+                                    <table class="table table-sm align-middle mb-0">
+                                        <thead><tr><th>Alias</th><th>Raw collection</th></tr></thead>
+                                        <tbody>
+                                            <tr t-foreach="reference['profile_aliases']" t-as="profile_alias">
+                                                <td>
+                                                    <code t-out="profile_alias['alias']"/>
+                                                    <span class="text-muted ms-1">→</span>
+                                                </td>
+                                                <td><code t-out="profile_alias['collection']"/></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p t-if="not reference.get('root_alias') and not reference.get('profile_aliases')"
+                                   class="text-muted mb-0">This DSL does not define additional friendly aliases.</p>
+                            </div>
+                        </div>
+
+                        <t t-if="reference.get('success')">
+                            <div class="mb-4">
+                                <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-3">
+                                    <div>
+                                        <h2 class="h4 mb-1">Named types</h2>
+                                        <p class="text-muted mb-0">These exact names are valid keys in <code>by_type</code>.</p>
+                                    </div>
+                                    <span id="template-reference-type-count" class="badge bg-primary" aria-live="polite">
+                                        <t t-out="len(named_types)"/> types
+                                    </span>
+                                </div>
+                                <div t-if="not named_types" class="alert alert-light border">No named types were inferred from this grammar.</div>
+                                <div t-if="named_types" class="mb-3">
+                                    <label for="template-reference-filter" class="form-label">Filter named types</label>
+                                    <input id="template-reference-filter" type="search" class="form-control"
+                                           placeholder="Search by type or field name"
+                                           aria-describedby="template-reference-filter-help"/>
+                                    <div id="template-reference-filter-help" class="form-text">
+                                        Matches exact grammar type and field names.
+                                    </div>
+                                </div>
+                                <details t-foreach="named_types" t-as="type_item" t-att-id="type_item['anchor']"
+                                         t-att-data-filter-text="type_item['filter_text']"
+                                         class="card border-0 shadow-sm rounded-3 mb-3 js-template-reference-type">
+                                    <summary class="card-header bg-white p-3 d-flex flex-wrap align-items-center gap-2">
+                                        <strong><t t-out="type_item['name']"/></strong>
+                                        <span t-if="type_item.get('bucket_alias')" class="badge bg-info text-dark">
+                                            alias: <t t-out="type_item['bucket_alias']"/>
+                                        </span>
+                                        <span t-if="type_item.get('abstract')" class="badge bg-secondary">abstract</span>
+                                        <a t-attf-href="##{type_item['anchor']}" class="small ms-auto"
+                                           aria-label="Link to this type" title="Link to this type">
+                                            <i class="fa fa-link" aria-hidden="true"/> Link
+                                        </a>
+                                    </summary>
+                                    <div class="card-body">
+                                        <p t-if="type_item.get('super_types')" class="small text-muted">
+                                            Extends <code t-foreach="type_item['super_types']" t-as="super_type"
+                                                          class="me-1"><t t-out="super_type"/></code>
+                                        </p>
+                                        <div class="table-responsive mb-3">
+                                            <table class="table table-sm align-middle mb-0">
+                                                <thead><tr><th>Field</th><th>Shape</th></tr></thead>
+                                                <tbody>
+                                                    <tr t-foreach="type_item.get('properties', [])" t-as="property_item">
+                                                        <td><code t-out="property_item['name']"/></td>
+                                                        <td>
+                                                            <span t-if="property_item.get('kind') == 'primitive'"
+                                                                  class="badge bg-light text-dark border me-1"
+                                                                  t-out="property_item.get('type') or 'string'"/>
+                                                            <span t-elif="property_item.get('kind') == 'reference'"
+                                                                  class="badge bg-info text-dark me-1">
+                                                                reference → <t t-out="property_item.get('target')"/>
+                                                            </span>
+                                                            <span t-else="" class="badge bg-primary me-1">
+                                                                contained → <t t-out="property_item.get('target')"/>
+                                                            </span>
+                                                            <span t-if="property_item.get('list')" class="badge bg-secondary me-1">list</span>
+                                                            <span t-if="property_item.get('optional')" class="badge bg-warning text-dark">optional</span>
+                                                            <span t-if="property_item.get('values')" class="badge bg-success-subtle text-success-emphasis border border-success-subtle ms-1">
+                                                                one of: <t t-out="' | '.join(property_item['values'][:8])"/><t t-if="len(property_item['values']) &gt; 8"> | …</t>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr t-if="not type_item.get('properties')">
+                                                        <td colspan="2" class="text-muted">No fields.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="position-relative">
+                                            <pre t-attf-id="snippet-#{dsl.id}-#{type_item_index}"
+                                                 class="bg-dark text-light rounded p-3 mb-2"><code t-out="type_item['snippet']"/></pre>
+                                            <button type="button" class="btn btn-sm btn-outline-primary js-copy-template-snippet"
+                                                    t-attf-data-copy-target="snippet-#{dsl.id}-#{type_item_index}">
+                                                <i class="fa fa-copy me-1" aria-hidden="true"/> Copy snippet
+                                            </button>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+
+                            <details t-if="embedded_types" class="card border-0 shadow-sm rounded-3 mb-4">
+                                <summary class="card-header bg-white p-3">
+                                    <strong>Embedded types</strong>
+                                    <span class="badge bg-secondary ms-1"><t t-out="len(embedded_types)"/></span>
+                                </summary>
+                                <div class="card-body">
+                                    <p class="text-muted small">
+                                        These types are not indexed in <code>by_type</code>. Reach them through fields on their parent objects.
+                                    </p>
+                                    <div t-foreach="embedded_types" t-as="type_item" t-att-id="type_item['anchor']" class="border rounded p-3 mb-2">
+                                        <div class="d-flex justify-content-between gap-2">
+                                            <h3 class="h6"><t t-out="type_item['name']"/></h3>
+                                            <a t-attf-href="##{type_item['anchor']}" class="small"
+                                               aria-label="Link to this embedded type" title="Link to this embedded type">
+                                                <i class="fa fa-link" aria-hidden="true"/> Link
+                                            </a>
+                                        </div>
+                                        <div class="d-flex flex-wrap gap-1">
+                                            <code t-foreach="type_item.get('properties', [])" t-as="property_item"
+                                                  class="border rounded bg-light px-2 py-1"><t t-out="property_item['name']"/></code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+
+                            <div t-if="reference.get('compatibility_collections')"
+                                 class="card border-0 shadow-sm rounded-3 mb-4">
+                                <div class="card-header bg-white p-3">
+                                    <h2 class="h5 mb-1"><t t-out="dsl.acronym"/> compatibility collections</h2>
+                                    <p class="small text-muted mb-0">Built-in collections preserved for existing templates.</p>
+                                </div>
+                                <div class="card-body p-0 table-responsive">
+                                    <table class="table mb-0 align-middle">
+                                        <thead class="table-light"><tr><th>Variable</th><th>Collected types</th></tr></thead>
+                                        <tbody>
+                                            <tr t-foreach="reference['compatibility_collections']" t-as="collection">
+                                                <td><code t-out="collection['name']"/></td>
+                                                <td>
+                                                    <code t-if="collection.get('type_names')"
+                                                          t-out="', '.join(collection['type_names'])"/>
+                                                    <span t-else="" class="text-muted">Other named elements</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </section>
+                <script type="text/javascript">
+                    <![CDATA[
+                    document.addEventListener('click', function (event) {
+                        const button = event.target.closest('.js-copy-template-snippet');
+                        if (!button) return;
+                        const snippet = document.getElementById(button.dataset.copyTarget);
+                        if (!snippet) return;
+                        const text = snippet.textContent;
+                        const done = function () {
+                            button.textContent = 'Copied';
+                            window.setTimeout(function () { button.textContent = 'Copy snippet'; }, 1500);
+                        };
+                        if (navigator.clipboard && window.isSecureContext) {
+                            navigator.clipboard.writeText(text).then(done);
+                            return;
+                        }
+                        const input = document.createElement('textarea');
+                        input.value = text;
+                        input.style.position = 'fixed';
+                        input.style.opacity = '0';
+                        document.body.appendChild(input);
+                        input.select();
+                        document.execCommand('copy');
+                        input.remove();
+                        done();
+                    });
+                    const typeFilter = document.getElementById('template-reference-filter');
+                    if (typeFilter) {
+                        const cards = Array.from(document.querySelectorAll('.js-template-reference-type'));
+                        const count = document.getElementById('template-reference-type-count');
+                        typeFilter.addEventListener('input', function () {
+                            const query = typeFilter.value.trim().toLowerCase();
+                            let visible = 0;
+                            cards.forEach(function (card) {
+                                const matches = !query || (card.dataset.filterText || '').includes(query);
+                                card.classList.toggle('d-none', !matches);
+                                if (matches) visible += 1;
+                            });
+                            if (count) count.textContent = visible + (visible === 1 ? ' type' : ' types');
+                        });
+                    }
+                    ]]>
+                </script>
+            </div>
+        </t>
+    </template>
+
+</odoo>

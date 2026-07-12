@@ -1,10 +1,10 @@
 {
     'name': 'ITLingo Templating',
-    'version': '19.0.1.0.1',
+    'version': '19.0.1.1.0',
     'category': 'Services',
-    'summary': 'Generate office and text documents from RSL/ASL templates',
+    'summary': 'Generate office and text documents from any published DSL',
     'description': """
-Turn a DOCX, XLSX, or UTF-8 text template plus an uploaded RSL or ASL specification
+Turn a DOCX, XLSX, or UTF-8 text template plus an uploaded DSL specification
 into a generated document. The specification is parsed locally (embedded
 Langium parser, no dependency on the chatbot/ITOI services), normalized into a
 canonical model and rendered with docxtpl (DOCX), openpyxl + Jinja2 (XLSX), or
@@ -15,6 +15,7 @@ Jinja2 directly (text formats).
     'depends': ['itlingo_documents', 'itlingo_dsl', 'itlingo_website_portal'],
     'external_dependencies': {'python': ['docxtpl', 'openpyxl']},
     'data': [
+        'views/portal_template_reference.xml',
         'views/portal_dsl_templates.xml',
         'views/itlingo_document_views.xml',
         'views/portal_generate.xml',
