@@ -394,3 +394,62 @@ class ITLingoIntegrationAPI(http.Controller):
                 ('Content-Length', str(len(content))),
             ],
         )
+
+    @http.route('/token_api/get-dsls', type='http', auth='none',
+                methods=['GET'], csrf=False)
+    def token_api_get_dsls(self, **kw):
+        """List DSLs (with their Langium grammar) for the ITOI LSP service.
+
+        Returns every ``active`` and ``draft`` DSL that has a grammar file.
+        Drafts are included on purpose so maintainers can test unpublished
+        grammars in ITOI; the consumer decides which version to prefer.
+        Authenticated with the same forwarded launch token as
+        ``get-file-list`` / ``download-file``.
+        """
+        payload, error_resp = self._validate_launch_token()
+        if error_resp:
+            return error_resp
+
+        dsls = request.env['itlingo.dsl'].sudo().search([
+            ('status', 'in', ['active', 'draft']),
+        ])
+        result = []
+        for dsl in dsls:
+            grammar = dsl._grammar_file()
+            if not grammar:
+                continue
+            try:
+                grammar_text = grammar._read_text_utf8()
+            except Exception:
+                _logger.warning(
+                    'ITOI get-dsls: skipping DSL %s %s (unreadable grammar)',
+                    dsl.acronym, dsl.version,
+                )
+                continue
+            extensions = [
+                ext.strip().lstrip('.').lower()
+                for ext in (dsl.file_extensions or '').split(',')
+                if ext.strip()
+            ]
+            if not extensions:
+                # Sensible default so a DSL without configured extensions
+                # is still usable: lowercased acronym (e.g. PSL -> .psl).
+                extensions = [(dsl.acronym or '').strip().lower()]
+            result.append({
+                'acronym': dsl.acronym,
+                'name': dsl.name,
+                'version': dsl.version,
+                'status': dsl.status,
+                'file_extensions': extensions,
+                'grammar': grammar_text,
+                'digest': dsl._grammar_digest(),
+            })
+
+        _logger.info(
+            'ITOI get-dsls: user=%s dsls=%d',
+            payload.get('user'), len(result),
+        )
+        return Response(
+            json.dumps({'dsls': result}),
+            content_type='application/json',
+        )
