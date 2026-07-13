@@ -43,7 +43,7 @@ class TestDslGrammar(TransactionCase):
             })
 
     def test_invalid_name_nul_and_size_are_rejected(self):
-        with self.assertRaisesRegex(ValidationError, 'plain filename'):
+        with self.assertRaisesRegex(ValidationError, r"'\.\.' segments"):
             self.File._create_grammar_text(self.dsl, '../GTL.langium', '')
         with self.assertRaisesRegex(ValidationError, 'end in .langium'):
             self.File._create_grammar_text(self.dsl, 'GTL.txt', '')

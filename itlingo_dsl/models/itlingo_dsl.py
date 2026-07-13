@@ -7,7 +7,7 @@ import re
 from odoo import api, fields, models, _
 from odoo.exceptions import UserError, ValidationError
 
-from ..services import grammar_validator
+from ..services import grammar_flattener, grammar_validator
 
 _logger = logging.getLogger(__name__)
 
@@ -115,15 +115,15 @@ class ItlingoDsl(models.Model):
         readonly=True,
         copy=False,
         help="Result of the last server-side Langium validation of the "
-             "grammar file. Tied to an exact content digest: editing the "
-             "grammar makes the stored result stale.",
+             "flattened grammar workspace. Tied to an exact content digest: "
+             "editing any reachable grammar file makes the result stale.",
     )
 
     grammar_validation_digest = fields.Char(
         string="Validated Content Digest",
         readonly=True,
         copy=False,
-        help="SHA-256 of the grammar file content that was validated.",
+        help="SHA-256 of the flattened UTF-8 grammar text that was validated.",
     )
 
     grammar_validation_time = fields.Datetime(
@@ -170,7 +170,7 @@ class ItlingoDsl(models.Model):
         string="Published Content Digest",
         readonly=True,
         copy=False,
-        help="SHA-256 of the grammar content that was active at publication.",
+        help="SHA-256 of the flattened grammar text active at publication.",
     )
 
     _unique_acronym_version = models.Constraint(
@@ -202,41 +202,84 @@ class ItlingoDsl(models.Model):
     # Constraints
     # ------------------------------------------------------------------
     @api.constrains("file_ids")
-    def _check_single_grammar(self):
+    def _check_grammar_files(self):
         for dsl in self:
             grammars = dsl.file_ids.filtered(
                 lambda f: f.file_type == "grammar"
             )
-            if len(grammars) > 1:
+            paths = {}
+            for grammar in grammars:
+                path = grammar._normalize_grammar_path(grammar.relative_path)
+                folded_path = path.casefold()
+                if folded_path in paths:
+                    raise ValidationError(_(
+                        "Grammar paths must be unique within a DSL, ignoring "
+                        "case ('%(first)s' and '%(second)s').",
+                        first=paths[folded_path], second=path,
+                    ))
+                paths[folded_path] = path
+            entries = grammars.filtered("is_entry")
+            if grammars and len(entries) != 1:
                 raise ValidationError(_(
-                    "A DSL can have at most one grammar file (DSL: %s).",
+                    "A DSL with grammar files must have exactly one entry "
+                    "grammar (DSL: %s).",
                     dsl.display_name,
                 ))
-            for grammar in grammars:
-                if grammar.file_name and not grammar.file_name.endswith(".langium"):
-                    raise ValidationError(_(
-                        "The grammar file must have a .langium extension "
-                        "(file: %s).",
-                        grammar.file_name,
-                    ))
 
     # ------------------------------------------------------------------
     # Grammar validation and publication lifecycle
     # ------------------------------------------------------------------
     def _grammar_file(self):
+        """Return this workspace's entry grammar file."""
         self.ensure_one()
-        return self.file_ids.filtered(lambda f: f.file_type == "grammar")[:1]
+        return self.file_ids.filtered(
+            lambda f: f.file_type == "grammar" and f.is_entry
+        )[:1]
+
+    def _grammar_files(self):
+        """Return all grammar files in deterministic path order."""
+        self.ensure_one()
+        return self.file_ids.filtered(
+            lambda f: f.file_type == "grammar"
+        ).sorted(key=lambda f: (f.relative_path, f.id))
+
+    def _flatten_grammar_workspace(self):
+        """Flatten every structural grammar file, including disabled files."""
+        self.ensure_one()
+        grammars = self._grammar_files()
+        entry = self._grammar_file()
+        files = {
+            grammar.relative_path: grammar._read_text_utf8()
+            for grammar in grammars
+        }
+        return grammar_flattener.flatten_grammar(
+            files, entry.relative_path if entry else None,
+        )
+
+    def _flattened_grammar_text(self):
+        """Return the import-free grammar artifact used at external boundaries.
+
+        Grammar files are structural, so all files participate in import
+        resolution regardless of ``is_enabled``.
+        """
+        self.ensure_one()
+        text, _reached, _unreachable = self._flatten_grammar_workspace()
+        return text
 
     def _grammar_digest(self):
-        """SHA-256 of the current grammar file bytes, or False without one."""
+        """SHA-256 of flattened UTF-8 text, or False when it cannot flatten."""
         self.ensure_one()
-        grammar = self._grammar_file()
-        if not grammar:
+        if not self._grammar_files():
             return False
-        return hashlib.sha256(grammar._read_binary_bytes()).hexdigest()
+        try:
+            text = self._flattened_grammar_text()
+        except (grammar_flattener.GrammarFlattenError, ValidationError):
+            return False
+        return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
     @api.depends(
-        "file_ids.file", "file_ids.file_type", "file_ids.file_name",
+        "file_ids.file", "file_ids.file_type", "file_ids.relative_path",
+        "file_ids.is_entry",
         "grammar_validation_result", "grammar_validation_digest",
     )
     def _compute_grammar_validation_is_current(self):
@@ -255,16 +298,33 @@ class ItlingoDsl(models.Model):
         browser-supplied validity flag is never consulted.
         """
         self.ensure_one()
-        grammar = self._grammar_file()
-        if not grammar:
+        if not self._grammar_files():
             raise UserError(_("This DSL has no grammar file to validate."))
-        text = grammar._read_text_utf8()
+        try:
+            text, _reached, unreachable = self._flatten_grammar_workspace()
+        except grammar_flattener.GrammarFlattenError as err:
+            raise UserError(_(
+                "The grammar workspace cannot be flattened (%(code)s): %(error)s",
+                code=err.code, error=str(err),
+            )) from err
         try:
             result = grammar_validator.validate_grammar_text(self.env, text)
         except grammar_validator.GrammarValidationUnavailable as err:
             raise UserError(_(
                 "Server-side grammar validation is unavailable: %s", err,
             )) from err
+        result = dict(result)
+        result["diagnostics"] = list(result.get("diagnostics") or [])
+        for path in sorted(unreachable):
+            result["diagnostics"].append({
+                "severity": "warning",
+                "message": _(
+                    "Grammar file '%s' is unreachable from the entry grammar.", path,
+                ),
+                "line": 1,
+                "column": 1,
+                "code": "unreachable-grammar-file",
+            })
         self.write({
             "grammar_validation_result": "valid" if result["valid"] else "invalid",
             "grammar_validation_digest": self._grammar_digest(),
@@ -393,15 +453,20 @@ class ItlingoDsl(models.Model):
         })
         # One2many fields are not copied by copy(); carry the definition
         # files (including the grammar) over to the new draft explicitly.
+        copied_files = []
         for definition_file in self.file_ids:
-            self.env["itlingo.dsl.file"].create({
+            copied_files.append({
                 "dsl_id": draft.id,
                 "file_type": definition_file.file_type,
                 "file_name": definition_file.file_name,
+                "relative_path": definition_file.relative_path,
+                "is_entry": definition_file.is_entry,
                 "file": definition_file._attachment_base64(),
                 "is_enabled": definition_file.is_enabled,
                 "sequence": definition_file.sequence,
             })
+        if copied_files:
+            self.env["itlingo.dsl.file"].create(copied_files)
         return draft
 
     def action_create_draft_version_ui(self):

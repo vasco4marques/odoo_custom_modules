@@ -70,9 +70,10 @@
                             <p class="text-muted">
                                 Files that define this DSL and are pushed to the
                                 chatbot knowledge base when the DSL is Active.
-                                Use exactly one Grammar (.langium). Validation and
-                                Examples files are concatenated; Specifications are
-                                kept as separate files.
+                                Grammar workspaces may contain multiple .langium
+                                files and must identify exactly one entry file.
+                                Validation and Examples files are concatenated;
+                                Specifications are kept as separate files.
                             </p>
                             <field name="file_ids">
                                 <list editable="bottom">
@@ -80,6 +81,10 @@
                                     <field name="file_type"/>
                                     <field name="file" filename="file_name"/>
                                     <field name="file_name"/>
+                                    <field name="relative_path"
+                                           invisible="file_type != 'grammar'"/>
+                                    <field name="is_entry"
+                                           invisible="file_type != 'grammar'"/>
                                     <field name="is_enabled"/>
                                 </list>
                             </field>
