@@ -41,7 +41,10 @@ class TestDslGrammarPortal(HttpCase):
             cls.env,
             login='grammar_admin',
             password='grammar_admin',
-            groups='itlingo_organizations.group_itlingo_admin',
+            groups=(
+                'base.group_portal,'
+                'itlingo_organizations.group_itlingo_admin'
+            ),
         )
         cls.draft = cls.env['itlingo.dsl'].create({
             'name': 'Portal Grammar Draft',
@@ -337,6 +340,216 @@ class TestDslGrammarPortal(HttpCase):
             'grammar PGD\nentry Model: title=STRING;\n',
         )
 
+    def test_load_returns_all_grammar_files_sorted_by_path(self):
+        terminals = self.env['itlingo.dsl.file']._create_grammar_text(
+            self.draft,
+            'shared/Terminals.langium',
+            'terminal ID: /[_a-zA-Z][\\w_]*/;\n',
+        )
+        nested = self.env['itlingo.dsl.file']._create_grammar_text(
+            self.draft,
+            'features/Inventory.langium',
+            'grammar Inventory\ninterface Item { name: string }\n',
+        )
+
+        self.authenticate('grammar_maintainer', 'grammar_maintainer')
+        workspace = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/load',
+        )
+
+        self.assertEqual(
+            [item['path'] for item in workspace['files']],
+            ['PGD.langium', 'features/Inventory.langium',
+             'shared/Terminals.langium'],
+        )
+        by_id = {item['id']: item for item in workspace['files']}
+        self.assertTrue(by_id[self.grammar.id]['isEntry'])
+        self.assertFalse(by_id[terminals.id]['isEntry'])
+        self.assertEqual(
+            by_id[nested.id]['content'],
+            'grammar Inventory\ninterface Item { name: string }\n',
+        )
+
+    def test_save_is_content_only_for_existing_file(self):
+        grammar = self.env['itlingo.dsl.file']._create_grammar_text(
+            self.draft,
+            'shared/Terminals.langium',
+            'terminal ID: /old/;\n',
+        )
+        self.authenticate('grammar_maintainer', 'grammar_maintainer')
+
+        saved = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/save',
+            {
+                'file_id': grammar.id,
+                'path': 'shared/Terminals.langium',
+                'content': 'terminal ID: /new/;\n',
+            },
+        )
+        self.assertEqual(saved['path'], 'shared/Terminals.langium')
+        self.assertEqual(grammar._read_text_utf8(), 'terminal ID: /new/;\n')
+
+        with self.assertRaises(JsonRpcException), mute_logger('odoo.http'):
+            self.make_jsonrpc_request(
+                f'/dsl/{self.draft.id}/grammar/save',
+                {
+                    'file_id': grammar.id,
+                    'path': 'shared/Renamed.langium',
+                    'content': 'terminal ID: /changed/;\n',
+                },
+            )
+        self.assertEqual(grammar.relative_path, 'shared/Terminals.langium')
+        self.assertEqual(grammar._read_text_utf8(), 'terminal ID: /new/;\n')
+
+    def test_create_rename_delete_and_set_entry(self):
+        self.authenticate('grammar_maintainer', 'grammar_maintainer')
+        created = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/file/create',
+            {
+                'path': 'shared/Terminals.langium',
+                'content': 'terminal ID: /[_a-zA-Z][\\w_]*/;\n',
+            },
+        )
+        self.assertFalse(created['isEntry'])
+
+        renamed = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/file/rename',
+            {
+                'file_id': created['id'],
+                'path': 'common/Terminals.langium',
+            },
+        )
+        self.assertEqual(renamed['path'], 'common/Terminals.langium')
+        supporting = self.env['itlingo.dsl.file'].browse(created['id'])
+        self.assertEqual(supporting.file_name, 'Terminals.langium')
+
+        with self.assertRaises(JsonRpcException), mute_logger('odoo.http'):
+            self.make_jsonrpc_request(
+                f'/dsl/{self.draft.id}/grammar/file/delete',
+                {'file_id': self.grammar.id},
+            )
+
+        result = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/file/set-entry',
+            {'file_id': supporting.id},
+        )
+        flags = {item['id']: item['isEntry'] for item in result['files']}
+        self.assertFalse(flags[self.grammar.id])
+        self.assertTrue(flags[supporting.id])
+        supporting.invalidate_recordset(['is_entry'])
+
+        deleted = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/file/delete',
+            {'file_id': self.grammar.id},
+        )
+        self.assertTrue(deleted['deleted'])
+        self.assertFalse(self.env['itlingo.dsl.file'].search_count([
+            ('id', '=', self.grammar.id),
+        ]))
+        self.assertTrue(supporting.is_entry)
+
+    def _assert_repository_api_allowed(self, login):
+        self.authenticate(login, login)
+        baseline = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/export',
+        )
+        loaded = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/load',
+        )
+        current = loaded['files'][0]
+        self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/save',
+            {
+                'file_id': current['id'],
+                'path': current['path'],
+                'content': current['content'],
+            },
+        )
+        created = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/file/create',
+            {'path': 'Auth.langium', 'content': 'grammar Auth\n'},
+        )
+        renamed = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/file/rename',
+            {'file_id': created['id'], 'path': 'auth/Auth.langium'},
+        )
+        self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/file/set-entry',
+            {'file_id': renamed['id']},
+        )
+        exported = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/export',
+        )
+        imported = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/import', exported,
+        )
+        non_entry = next(
+            item for item in imported['files'] if not item['isEntry']
+        )
+        self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/file/delete',
+            {'file_id': non_entry['id']},
+        )
+        self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/import', baseline,
+        )
+
+    def test_maintainer_is_authorized_for_every_repository_endpoint(self):
+        self._assert_repository_api_allowed('grammar_maintainer')
+
+    def test_admin_is_authorized_for_every_repository_endpoint(self):
+        self._assert_repository_api_allowed('grammar_admin')
+
+    def test_export_import_round_trip_preserves_workspace(self):
+        self.env['itlingo.dsl.file']._create_grammar_text(
+            self.draft,
+            'shared/Terminals.langium',
+            '// Olá 🌍\nterminal ID: /[_a-zA-Z][\\w_]*/;\n',
+        )
+        self.authenticate('grammar_maintainer', 'grammar_maintainer')
+        exported = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/export',
+        )
+        self.assertNotIn('id', exported['files'][0])
+
+        replacement = {
+            'files': [{
+                'path': 'temporary/Replacement.langium',
+                'content': 'grammar Replacement\nentry Model: value=STRING;\n',
+                'isEntry': True,
+            }],
+        }
+        self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/import', replacement,
+        )
+        restored = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/import', exported,
+        )
+        round_trip = [
+            {key: item[key] for key in ('path', 'content', 'isEntry')}
+            for item in restored['files']
+        ]
+        self.assertEqual(round_trip, exported['files'])
+
+    def test_invalid_import_does_not_replace_workspace(self):
+        self.authenticate('grammar_maintainer', 'grammar_maintainer')
+        before = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/export',
+        )
+        with self.assertRaises(JsonRpcException), mute_logger('odoo.http'):
+            self.make_jsonrpc_request(
+                f'/dsl/{self.draft.id}/grammar/import',
+                {'files': [{
+                    'path': '../outside.langium',
+                    'content': 'grammar Outside\n',
+                    'isEntry': True,
+                }]},
+            )
+        after = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/export',
+        )
+        self.assertEqual(after, before)
+
     def test_save_creates_missing_grammar(self):
         empty_dsl = self.env['itlingo.dsl'].create({
             'name': 'Empty Grammar Draft',
@@ -382,15 +595,110 @@ class TestDslGrammarPortal(HttpCase):
 
     def test_cross_dsl_file_save_is_rejected(self):
         self.authenticate('grammar_maintainer', 'grammar_maintainer')
-        with self.assertRaises(JsonRpcException), mute_logger('odoo.http'):
-            self.make_jsonrpc_request(
-                f'/dsl/{self.draft.id}/grammar/save',
-                {
-                    'file_id': self.other_grammar.id,
-                    'path': 'PGD.langium',
-                    'content': 'grammar PGD',
-                },
-            )
+        attempts = [
+            ('save', {
+                'file_id': self.other_grammar.id,
+                'path': 'OPGD.langium',
+                'content': 'grammar PGD',
+            }),
+            ('file/rename', {
+                'file_id': self.other_grammar.id,
+                'path': 'Renamed.langium',
+            }),
+            ('file/delete', {'file_id': self.other_grammar.id}),
+            ('file/set-entry', {'file_id': self.other_grammar.id}),
+        ]
+        for suffix, params in attempts:
+            with self.subTest(endpoint=suffix), self.assertRaises(
+                JsonRpcException,
+            ), mute_logger('odoo.http'):
+                self.make_jsonrpc_request(
+                    f'/dsl/{self.draft.id}/grammar/{suffix}', params,
+                )
+
+    def test_traversal_is_rejected_by_path_endpoints(self):
+        self.authenticate('grammar_maintainer', 'grammar_maintainer')
+        attempts = [
+            ('save', {
+                'file_id': self.grammar.id,
+                'path': '../PGD.langium',
+                'content': 'grammar PGD\n',
+            }),
+            ('file/create', {
+                'path': 'nested/../Escape.langium',
+                'content': '',
+            }),
+            ('file/rename', {
+                'file_id': self.grammar.id,
+                'path': '/absolute.langium',
+            }),
+            ('import', {'files': [{
+                'path': 'nested\\Escape.langium',
+                'content': '',
+                'isEntry': True,
+            }]}),
+        ]
+        for suffix, params in attempts:
+            with self.subTest(endpoint=suffix), self.assertRaises(
+                JsonRpcException,
+            ), mute_logger('odoo.http'):
+                self.make_jsonrpc_request(
+                    f'/dsl/{self.draft.id}/grammar/{suffix}', params,
+                )
+
+    def test_unrelated_user_is_rejected_by_every_repository_endpoint(self):
+        self.authenticate('grammar_unrelated', 'grammar_unrelated')
+        attempts = [
+            ('load', {}),
+            ('save', {
+                'file_id': self.grammar.id,
+                'path': 'PGD.langium',
+                'content': 'grammar PGD\n',
+            }),
+            ('file/create', {'path': 'New.langium'}),
+            ('file/rename', {
+                'file_id': self.grammar.id,
+                'path': 'Renamed.langium',
+            }),
+            ('file/delete', {'file_id': self.grammar.id}),
+            ('file/set-entry', {'file_id': self.grammar.id}),
+            ('export', {}),
+            ('import', {'files': []}),
+        ]
+        for suffix, params in attempts:
+            with self.subTest(endpoint=suffix), self.assertRaises(
+                JsonRpcException,
+            ), mute_logger('odoo.http'):
+                self.make_jsonrpc_request(
+                    f'/dsl/{self.draft.id}/grammar/{suffix}', params,
+                )
+
+    def test_anonymous_user_is_rejected_by_every_repository_endpoint(self):
+        self.authenticate(None, None)
+        attempts = [
+            ('load', {}),
+            ('save', {
+                'file_id': self.grammar.id,
+                'path': 'PGD.langium',
+                'content': 'grammar PGD\n',
+            }),
+            ('file/create', {'path': 'New.langium'}),
+            ('file/rename', {
+                'file_id': self.grammar.id,
+                'path': 'Renamed.langium',
+            }),
+            ('file/delete', {'file_id': self.grammar.id}),
+            ('file/set-entry', {'file_id': self.grammar.id}),
+            ('export', {}),
+            ('import', {'files': []}),
+        ]
+        for suffix, params in attempts:
+            with self.subTest(endpoint=suffix), self.assertRaises(
+                JsonRpcException,
+            ), mute_logger('odoo.http'):
+                self.make_jsonrpc_request(
+                    f'/dsl/{self.draft.id}/grammar/{suffix}', params,
+                )
 
     def test_non_draft_is_read_only_for_maintainer_and_admin(self):
         for login in ('grammar_maintainer', 'grammar_admin'):
@@ -399,15 +707,28 @@ class TestDslGrammarPortal(HttpCase):
                 f'/dsl/{self.active.id}/grammar/load',
             )
             self.assertFalse(workspace['permissions']['canEdit'])
-            with self.assertRaises(JsonRpcException), mute_logger('odoo.http'):
-                self.make_jsonrpc_request(
-                    f'/dsl/{self.active.id}/grammar/save',
-                    {
+            attempts = [
+                ('save', {
                         'file_id': self.active_grammar.id,
                         'path': 'PPG.langium',
                         'content': 'grammar Changed',
-                    },
-                )
+                }),
+                ('file/create', {'path': 'New.langium'}),
+                ('file/rename', {
+                    'file_id': self.active_grammar.id,
+                    'path': 'Renamed.langium',
+                }),
+                ('file/delete', {'file_id': self.active_grammar.id}),
+                ('file/set-entry', {'file_id': self.active_grammar.id}),
+                ('import', {'files': []}),
+            ]
+            for suffix, params in attempts:
+                with self.subTest(login=login, endpoint=suffix), self.assertRaises(
+                    JsonRpcException,
+                ), mute_logger('odoo.http'):
+                    self.make_jsonrpc_request(
+                        f'/dsl/{self.active.id}/grammar/{suffix}', params,
+                    )
 
     def test_read_only_editor_page_has_no_mutation_controls(self):
         self.authenticate('grammar_maintainer', 'grammar_maintainer')
