@@ -7,6 +7,8 @@ from urllib.parse import urlencode
 from werkzeug.utils import redirect as wz_redirect
 
 from odoo import http
+from odoo.addons.itlingo_dsl.services.grammar_flattener import GrammarFlattenError
+from odoo.exceptions import ValidationError
 from odoo.http import request, Response
 
 _logger = logging.getLogger(__name__)
@@ -415,15 +417,15 @@ class ITLingoIntegrationAPI(http.Controller):
         ])
         result = []
         for dsl in dsls:
-            grammar = dsl._grammar_file()
-            if not grammar:
+            if not dsl._grammar_file():
                 continue
             try:
-                grammar_text = grammar._read_text_utf8()
-            except Exception:
+                grammar_text = dsl._flattened_grammar_text()
+            except (GrammarFlattenError, ValidationError) as err:
                 _logger.warning(
-                    'ITOI get-dsls: skipping DSL %s %s (unreadable grammar)',
-                    dsl.acronym, dsl.version,
+                    'ITOI get-dsls: skipping DSL %s %s '
+                    '(grammar cannot be flattened: %s)',
+                    dsl.acronym, dsl.version, err,
                 )
                 continue
             extensions = [

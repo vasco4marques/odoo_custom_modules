@@ -14,7 +14,7 @@ import {createLangiumGrammarServices} from 'langium/grammar';
 
 // Keep in sync with the pinned "langium" version in package.json.
 const LANGIUM_VERSION = '4.3.1';
-const BUNDLE_VERSION = '1.0.0';
+const BUNDLE_VERSION = '1.0.1';
 const VALIDATOR_VERSION = `langium ${LANGIUM_VERSION} / validator ${BUNDLE_VERSION}`;
 
 const SEVERITIES = {1: 'error', 2: 'warning', 3: 'info', 4: 'hint'};
@@ -43,15 +43,25 @@ async function main() {
     shared.workspace.LangiumDocuments.addDocument(document);
     await shared.workspace.DocumentBuilder.build([document], {validation: true});
 
-    const diagnostics = (document.diagnostics ?? []).map((diagnostic) => ({
-        severity: SEVERITIES[diagnostic.severity] ?? 'error',
-        message: diagnostic.message,
-        line: diagnostic.range.start.line + 1,
-        column: diagnostic.range.start.character + 1,
-        code: typeof diagnostic.code === 'object'
-            ? String(diagnostic.code?.value ?? '')
-            : String(diagnostic.code ?? ''),
-    }));
+    const diagnostics = (document.diagnostics ?? []).map((diagnostic) => {
+        let severity = SEVERITIES[diagnostic.severity] ?? 'error';
+        // Langium 4.3.1 reports guarded assignments as unsupported while its
+        // runtime grammar loader still consumes them successfully. ASL uses
+        // this syntax for an optional `else`, so keep the diagnostic visible
+        // but non-fatal. The describer applies the same compatibility rule.
+        if (diagnostic.message === 'Predicates are currently not supported.') {
+            severity = 'warning';
+        }
+        return {
+            severity,
+            message: diagnostic.message,
+            line: diagnostic.range.start.line + 1,
+            column: diagnostic.range.start.character + 1,
+            code: typeof diagnostic.code === 'object'
+                ? String(diagnostic.code?.value ?? '')
+                : String(diagnostic.code ?? ''),
+        };
+    });
 
     output({
         success: true,

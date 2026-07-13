@@ -22,7 +22,7 @@ class TestGrammarDescribeService(TransactionCase):
         result = grammar_describe.describe_grammar_text(self.env, VALID_GRAMMAR)
 
         self.assertTrue(result["success"])
-        self.assertEqual(result["schema_version"], "1.0")
+        self.assertEqual(result["schema_version"], "1.1")
         self.assertEqual(result["entry_type"], "Model")
         item = next(item for item in result["types"] if item["name"] == "Item")
         self.assertTrue(item["indexed"])

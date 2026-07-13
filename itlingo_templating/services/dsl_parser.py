@@ -148,8 +148,7 @@ _GRAMMAR_IMPORT_RE = re.compile(
 
 def _record_parser_config(dsl):
     """Build parser configuration from a published DSL record."""
-    grammar_file = dsl._grammar_file()
-    grammar_text = grammar_file._read_text_utf8()
+    grammar_text = dsl._flattened_grammar_text()
     imports = _GRAMMAR_IMPORT_RE.findall(grammar_text)
     if imports:
         raise RuntimeError(

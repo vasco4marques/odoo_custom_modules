@@ -62,6 +62,9 @@ class _Dsl:
     def _grammar_file(self):
         return _GrammarFile(self.grammar)
 
+    def _flattened_grammar_text(self):
+        return self.grammar
+
     def _grammar_digest(self):
         return hashlib.sha256(self.grammar.encode()).hexdigest()
 
@@ -75,6 +78,25 @@ class TestRecordSourcedDslParser(unittest.TestCase):
 
         self.assertEqual(ast["$type"], "Catalog")
         self.assertEqual(ast["items"][1]["owner"], {"$ref": "ana"})
+
+    def test_parses_record_sourced_flattened_multifile_grammar(self):
+        entry = (
+            "grammar Catalog\n"
+            "entry Catalog: 'catalog' name=ID items+=Item*;\n"
+            "Item: 'item' name=ID ('owner' owner=[Item])?;\n"
+        )
+        terminals = (
+            "hidden terminal WS: /\\s+/;\n"
+            "terminal ID: /[a-zA-Z_][a-zA-Z0-9_]*/;\n"
+        )
+        dsl = _Dsl(entry + "\n" + terminals)
+
+        ast = parse_dsl(
+            _Env(), dsl, b"catalog demo item ana item review owner ana",
+        )
+
+        self.assertEqual(ast["$type"], "Catalog")
+        self.assertNotIn("import ", dsl._flattened_grammar_text())
 
     def test_rejects_record_grammar_imports_clearly(self):
         with self.assertRaisesRegex(RuntimeError, "must be self-contained"):

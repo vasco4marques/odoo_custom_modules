@@ -1,7 +1,10 @@
 import json
+from unittest.mock import patch
 
 from odoo.exceptions import UserError, ValidationError
 from odoo.tests import TransactionCase, tagged
+
+from ..services.grammar_flattener import GrammarFlattenError
 
 VALID_GRAMMAR = (
     "grammar {name}\n"
@@ -183,15 +186,18 @@ class TestDslLifecycleKbSync(TransactionCase):
         self.File = self.env['itlingo.dsl.file']
 
     def _kb_grammar_content(self, acronym):
+        kb_file = self._kb_grammar_file(acronym)
+        return kb_file.content if kb_file else None
+
+    def _kb_grammar_file(self, acronym):
         lang = self.env['itlingo.kb.language'].sudo().search(
             [('name', '=', acronym)], limit=1,
         )
         if not lang:
-            return None
-        kb_file = self.KbFile.sudo().search([
+            return self.KbFile.browse()
+        return self.KbFile.sudo().search([
             ('language_id', '=', lang.id), ('file_type', '=', 'grammar'),
         ], limit=1)
-        return kb_file.content if kb_file else None
 
     def test_kb_changes_only_on_publication(self):
         acronym = 'LCKB'
@@ -226,3 +232,66 @@ class TestDslLifecycleKbSync(TransactionCase):
         v2.action_publish()
         self.assertEqual(self._kb_grammar_content(acronym), content_v2)
         self.assertEqual(v1.status, 'deprecated')
+
+    def test_active_multifile_grammar_is_one_flattened_kb_row(self):
+        acronym = 'LCKBMF'
+        entry_text = (
+            "grammar LCKBMF\n"
+            "import './Terminals'\n"
+            "entry Model: 'model' name=ID;\n"
+        )
+        terminals_text = (
+            "hidden terminal WS: /\\s+/;\n"
+            "terminal ID: /[_a-zA-Z][\\w_]*/;\n"
+        )
+        dsl = self.env['itlingo.dsl'].create({
+            'name': 'Lifecycle multi-file KB',
+            'acronym': acronym,
+            'version': 'test-1',
+            'status': 'draft',
+        })
+        self.File._create_grammar_text(
+            dsl, 'Main.langium', entry_text, is_entry=True,
+        )
+        self.File._create_grammar_text(
+            dsl, 'Terminals.langium', terminals_text, is_entry=False,
+        )
+
+        dsl.action_publish()
+
+        lang = self.env['itlingo.kb.language'].sudo().search([
+            ('name', '=', acronym),
+        ], limit=1)
+        grammar_rows = self.KbFile.sudo().search([
+            ('language_id', '=', lang.id), ('file_type', '=', 'grammar'),
+        ])
+        self.assertEqual(len(grammar_rows), 1)
+        self.assertEqual(grammar_rows.file_name, '%s.langium' % acronym)
+        self.assertEqual(grammar_rows.content, dsl._flattened_grammar_text())
+        self.assertIn("entry Model", grammar_rows.content)
+        self.assertIn("terminal ID", grammar_rows.content)
+        self.assertNotIn("import './Terminals'", grammar_rows.content)
+
+    def test_flatten_error_leaves_existing_kb_grammar_untouched(self):
+        acronym = 'LCKBSAFE'
+        content = VALID_GRAMMAR.format(name=acronym)
+        dsl = self.env['itlingo.dsl'].create({
+            'name': 'Lifecycle KB flatten safety',
+            'acronym': acronym,
+            'version': 'test-1',
+            'status': 'draft',
+        })
+        self.File._create_grammar_text(dsl, 'Main.langium', content)
+        dsl.action_publish()
+        kb_file = self._kb_grammar_file(acronym)
+        original = (kb_file.file_name, kb_file.content)
+
+        with patch(
+            'odoo.addons.itlingo_dsl.models.itlingo_dsl.'
+            'ItlingoDsl._flattened_grammar_text',
+            side_effect=GrammarFlattenError('cycle', 'simulated cycle'),
+        ):
+            dsl._sync_kb_files()
+
+        kb_file.invalidate_recordset(['file_name', 'content'])
+        self.assertEqual((kb_file.file_name, kb_file.content), original)

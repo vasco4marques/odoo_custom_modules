@@ -581,10 +581,34 @@ class ItlingoDsl(models.Model):
                 lambda f: f.is_enabled and f.file_name
             )
 
-            grammar_files = enabled.filtered(lambda f: f.file_type == "grammar")
-            dsl._upsert_single_kb_file(
-                kb_file_model, lang, "grammar", grammar_files[:1],
-            )
+            grammar_files = dsl._grammar_files()
+            if not grammar_files:
+                dsl._upsert_single_kb_file(
+                    kb_file_model, lang, "grammar", None, None,
+                )
+            else:
+                try:
+                    grammar_text = dsl._flattened_grammar_text()
+                except (
+                    grammar_flattener.GrammarFlattenError, ValidationError,
+                ) as err:
+                    # Active grammars normally cannot reach this branch: the
+                    # publication gate validates the same flattened artifact.
+                    # If stored data is corrupted, keep the last known-good KB
+                    # projection instead of replacing or deleting it.
+                    _logger.error(
+                        "Cannot flatten active DSL %s %s for chatbot KB sync; "
+                        "leaving its grammar row untouched: %s",
+                        dsl.acronym, dsl.version, err,
+                    )
+                else:
+                    dsl._upsert_single_kb_file(
+                        kb_file_model,
+                        lang,
+                        "grammar",
+                        "%s.langium" % lang_name,
+                        grammar_text,
+                    )
 
             validation_files = enabled.filtered(
                 lambda f: f.file_type == "validation"
@@ -605,19 +629,22 @@ class ItlingoDsl(models.Model):
             )
             dsl._sync_spec_kb_files(kb_file_model, lang, spec_files)
 
-    def _upsert_single_kb_file(self, kb_file_model, lang, file_type, dsl_files):
+    def _upsert_single_kb_file(
+        self, kb_file_model, lang, file_type, file_name, text,
+    ):
         """Upsert exactly one KB file for *file_type* (used for grammar)."""
         self.ensure_one()
         existing = kb_file_model.sudo().search([
             ("language_id", "=", lang.id), ("file_type", "=", file_type),
-        ], limit=1)
-        if not dsl_files:
+        ], order="id")
+        if file_name is None:
             if existing:
                 existing.sudo().unlink()
             return
-        dsl_file = dsl_files[0]
-        text = self._dsl_file_text(dsl_file)
-        file_name = dsl_file.file_name or ""
+        primary = existing[:1]
+        duplicates = existing[1:]
+        if duplicates:
+            duplicates.sudo().unlink()
         ext = file_name.rsplit(".", 1)[-1].lower() if "." in file_name else ""
         vals = {
             "file_name": file_name,
@@ -631,8 +658,8 @@ class ItlingoDsl(models.Model):
             "organization_id": False,
             "project_id": False,
         }
-        if existing:
-            existing.sudo().write(vals)
+        if primary:
+            primary.sudo().write(vals)
         else:
             kb_file_model.sudo().create(vals)
 
