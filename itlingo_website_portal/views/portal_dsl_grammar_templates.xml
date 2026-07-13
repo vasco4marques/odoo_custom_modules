@@ -12,6 +12,7 @@
                         <div id="itlingo-grammar-editor"
                              class="itlingo-grammar-shell"
                              t-att-data-dsl-id="dsl.id"
+                             data-grammar-file-errors="{}"
                              t-att-data-can-edit="'true' if can_edit_grammar else 'false'">
                             <header class="itlingo-grammar-toolbar">
                                 <div class="d-flex align-items-center gap-3 min-w-0">
@@ -23,7 +24,7 @@
                                         <h1 class="h5 mb-0 text-truncate">
                                             <t t-out="dsl.acronym"/> <t t-out="dsl.version"/> / Grammar
                                         </h1>
-                                        <small class="text-muted">Single-file Langium grammar</small>
+                                        <small class="text-muted">Multi-file Langium grammar workspace</small>
                                     </div>
                                 </div>
                                 <div class="d-flex flex-wrap align-items-center gap-2"
@@ -64,23 +65,43 @@
                                 read-only. You can inspect the source and its diagnostics, but only
                                 draft DSL versions can be edited.
                             </div>
-                            <div class="itlingo-grammar-filebar">
-                                <i class="fa fa-file-code-o me-2" aria-hidden="true"/>
-                                <span data-grammar-filename="true">Loading…</span>
-                                <span t-if="not can_edit_grammar" class="badge bg-secondary ms-2">Read-only</span>
+                            <div class="itlingo-grammar-workspace">
+                                <aside class="itlingo-grammar-explorer" aria-label="Grammar files">
+                                    <div class="itlingo-grammar-explorer-header">
+                                        <span>Files</span>
+                                        <button t-if="can_edit_grammar" type="button"
+                                                data-grammar-file-create="true"
+                                                class="btn btn-sm btn-link"
+                                                title="Create grammar file"
+                                                aria-label="Create grammar file">
+                                            <i class="fa fa-plus" aria-hidden="true"/>
+                                        </button>
+                                    </div>
+                                    <div data-grammar-files="true"
+                                         class="itlingo-grammar-files"
+                                         aria-live="polite">Loading…</div>
+                                </aside>
+                                <div class="itlingo-grammar-main">
+                                    <div class="itlingo-grammar-filebar">
+                                        <i class="fa fa-file-code-o me-2" aria-hidden="true"/>
+                                        <span data-grammar-filename="true">Loading…</span>
+                                        <span t-if="not can_edit_grammar" class="badge bg-secondary ms-2">Read-only</span>
+                                    </div>
+                                    <div data-grammar-editor="true" class="itlingo-grammar-editor"
+                                         aria-label="Langium grammar source editor"/>
+                                    <section class="itlingo-grammar-problems" aria-label="Grammar problems">
+                                        <h2 data-grammar-problems-summary="true"
+                                            class="itlingo-grammar-problems-header mb-0"
+                                            aria-live="polite">Problems: No problems</h2>
+                                        <div data-grammar-problems="true"
+                                             class="itlingo-grammar-problems-list" role="list"
+                                             aria-label="Reported grammar problems"/>
+                                    </section>
+                                </div>
                             </div>
-                            <div data-grammar-editor="true" class="itlingo-grammar-editor"
-                                 aria-label="Langium grammar source editor"/>
-                            <section class="itlingo-grammar-problems" aria-label="Grammar problems">
-                                <h2 data-grammar-problems-summary="true"
-                                    class="itlingo-grammar-problems-header mb-0"
-                                    aria-live="polite">Problems: No problems</h2>
-                                <div data-grammar-problems="true"
-                                     class="itlingo-grammar-problems-list" role="list"
-                                     aria-label="Reported grammar problems"/>
-                            </section>
                             <p class="itlingo-grammar-scope-note mb-0">
-                                Save and Validate only check this Langium grammar file. They do not
+                                Save persists every changed workspace file, and Validate checks the
+                                complete open Langium workspace. These actions do not
                                 generate or deploy a parser, validators, or editor support for
                                 documents written in this DSL — the templating and ITOI parsers are
                                 built and deployed separately.

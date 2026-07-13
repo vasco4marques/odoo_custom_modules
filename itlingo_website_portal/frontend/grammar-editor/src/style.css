@@ -36,6 +36,114 @@
     font-size: 0.875rem;
 }
 
+.itlingo-grammar-workspace {
+    display: flex;
+    min-height: 0;
+    flex: 1 1 auto;
+}
+
+.itlingo-grammar-explorer {
+    display: flex;
+    width: 17rem;
+    min-width: 13rem;
+    flex: 0 0 auto;
+    flex-direction: column;
+    overflow: hidden;
+    border-right: 1px solid #d8dce2;
+    background: #f8f9fa;
+}
+
+.itlingo-grammar-explorer-header {
+    display: flex;
+    min-height: 38px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem 0.5rem 0.25rem 0.75rem;
+    border-bottom: 1px solid #d8dce2;
+    color: #3d4654;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.itlingo-grammar-files {
+    overflow: auto;
+    padding: 0.25rem 0;
+}
+
+.itlingo-grammar-files-empty {
+    padding: 0.75rem;
+    color: #6c757d;
+    font-size: 0.8125rem;
+}
+
+.itlingo-grammar-file-row {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+}
+
+.itlingo-grammar-file-row:hover,
+.itlingo-grammar-file-row.active {
+    background: #e8edf5;
+}
+
+.itlingo-grammar-file-row.active {
+    box-shadow: inset 3px 0 #2563eb;
+}
+
+.itlingo-grammar-file-select {
+    display: flex;
+    min-width: 0;
+    flex: 1 1 auto;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.5rem 0.4rem 0.75rem;
+    border: 0;
+    background: transparent;
+    color: #343a40;
+    text-align: left;
+    font-family: var(--bs-font-monospace);
+    font-size: 0.75rem;
+}
+
+.itlingo-grammar-file-label {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.itlingo-grammar-file-dirty {
+    color: #0d6efd;
+    font-size: 0.6rem;
+}
+
+.itlingo-grammar-file-actions {
+    display: none;
+    flex: 0 0 auto;
+    padding-right: 0.25rem;
+}
+
+.itlingo-grammar-file-row:hover .itlingo-grammar-file-actions,
+.itlingo-grammar-file-row:focus-within .itlingo-grammar-file-actions {
+    display: flex;
+}
+
+.itlingo-grammar-file-actions .btn {
+    padding: 0.15rem 0.25rem;
+    color: #566172;
+}
+
+.itlingo-grammar-main {
+    display: flex;
+    min-width: 0;
+    min-height: 0;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
 .itlingo-grammar-save-status {
     min-width: 8rem;
     text-align: right;
@@ -104,6 +212,15 @@
     cursor: pointer;
 }
 
+.itlingo-grammar-problem-file {
+    padding: 0.3rem 1rem;
+    background: #f3f5f8;
+    color: #4b5563;
+    font-family: var(--bs-font-monospace);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
 .itlingo-grammar-problem:hover {
     background: #eef1f5;
 }
@@ -164,6 +281,18 @@
     .itlingo-grammar-toolbar {
         align-items: stretch;
         flex-direction: column;
+    }
+
+    .itlingo-grammar-workspace {
+        flex-direction: column;
+    }
+
+    .itlingo-grammar-explorer {
+        width: 100%;
+        max-height: 9rem;
+        min-height: 5rem;
+        border-right: 0;
+        border-bottom: 1px solid #d8dce2;
     }
 
     .itlingo-grammar-save-status {

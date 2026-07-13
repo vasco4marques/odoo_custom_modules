@@ -1,14 +1,14 @@
 import { $O as e, $j as t, $y as n, A_ as r, Ab as i, Af as a, Al as o, Aw as s, B as c, Bb as l, Bd as u, Bl as d, Bo as f, Df as p, Dg as m, Dh as h, Dj as g, Ej as _, Em as v, Eu as ee, Fh as te, G as ne, GD as re, Gf as ie, Gl as ae, Gm as y, H as oe, HD as se, HO as ce, H_ as le, Hl as ue, Ho as de, I as fe, If as pe, Jf as b, Jj as me, Jl as he, Jy as ge, K as _e, K_ as ve, Kd as ye, Kh as be, Kj as xe, Kl as x, Kw as Se, L as Ce, Lb as we, Ld as Te, Md as Ee, Mk as S, Ml as De, N as Oe, Nk as ke, Ob as Ae, Og as je, Om as Me, P as Ne, Pg as Pe, Ph as Fe, Qh as Ie, Qp as Le, Qw as Re, Qy as ze, R as Be, Sg as Ve, Sh as He, Sm as Ue, TA as We, Tj as C, Ts as Ge, U as Ke, UD as qe, U_ as Je, Ua as Ye, Ul as Xe, V as Ze, Vd as Qe, Vg as $e, Vo as et, W as tt, W_ as w, Wa as nt, Wh as rt, Wl as it, Wo as at, Xf as ot, Xw as st, Xy as ct, YD as lt, _A as ut, _c as dt, _j as ft, _m as T, aD as pt, ab as mt, ap as ht, b_ as gt, bb as _t, bm as vt, bo as yt, bv as bt, cD as xt, cb as St, cg as Ct, dN as wt, db as E, dr as Tt, eM as D, eT as Et, e_ as Dt, eb as Ot, ec as kt, em as At, ep as jt, fE as Mt, fN as Nt, fb as O, gb as Pt, gc as Ft, gm as k, gs as It, gv as A, gw as Lt, hb as Rt, hs as zt, ih as Bt, ij as Vt, ip as Ht, jc as Ut, jd as Wt, jk as Gt, kb as j, kc as Kt, kh as qt, kk as Jt, mA as Yt, nM as M, nT as Xt, nf as Zt, nv as Qt, pN as $t, pr as en, q as tn, qd as nn, ql as rn, rT as N, rb as an, rh as P, rv as on, sA as sn, sb as cn, tA as ln, t_ as un, tb as dn, tm as fn, uD as pn, uE as mn, ub as hn, v_ as gn, vg as _n, vm as vn, vo as yn, vw as bn, wD as xn, wg as Sn, wh as Cn, xD as wn, xb as Tn, xg as En, xm as Dn, xw as On, yh as kn, yo as An, z as jn, zg as Mn, zl as F, zo as Nn } from "./standaloneServices-C51B94Xh.js";
-import { Dt as Pn, Gt as Fn, Ot as In, Q as Ln, Sr as Rn, Wt as zn, Z as Bn, a as Vn, br as Hn, gt as Un, mt as Wn, r as Gn } from "./monaco-vscode-files-service-override-BUohVD35.js";
+import { At as Pn, Cr as Fn, Jt as In, Tr as Ln, _t as Rn, a as zn, et as Bn, jt as Vn, qt as Hn, s as Un, tt as Wn, yt as Gn } from "./monaco-vscode-files-service-override-DGMr6mGW.js";
 import { Ot as Kn, kt as qn } from "./filesConfigurationService-CxZOIrXS.js";
 import { n as Jn, o as Yn, r as Xn } from "./extensionManagement.service-ELKOh9mo.js";
 import { c as Zn, d as Qn, f as $n, l as er, n as tr, o as nr, r as rr, s as ir, t as ar, u as or } from "./environmentService.service-DtlNbSmC.js";
 import { i as sr, n as cr, r as lr, t as ur } from "./hostColorSchemeService.service-D8IIB8tu.js";
-import { a as dr, i as fr, n as pr, t as mr } from "./extensionFeatures-Dnpt_iIx.js";
+import { a as dr, i as fr, n as pr, t as mr } from "./extensionFeatures-CMMcwnLr.js";
 import { n as hr, t as gr } from "./jsonErrorMessages-CboTgU8y.js";
 import { t as I } from "./workbenchThemeService.service-Cz3TFQno.js";
 import { a as _r, i as vr, n as yr, r as br, t as xr } from "./tokenClassificationRegistry-BEKq9OqE.js";
-C(), l(), i(), In(), xe();
+C(), l(), i(), Vn(), xe();
 var Sr = /\[(.+?)\]/g, L;
 (function(e) {
 	e.COLOR_THEME = "workbench.colorTheme", e.FILE_ICON_THEME = "workbench.iconTheme", e.PRODUCT_ICON_THEME = "workbench.productIconTheme", e.COLOR_CUSTOMIZATIONS = "workbench.colorCustomizations", e.TOKEN_COLOR_CUSTOMIZATIONS = "editor.tokenColorCustomizations", e.SEMANTIC_TOKEN_COLOR_CUSTOMIZATIONS = "editor.semanticTokenColorCustomizations", e.PREFERRED_DARK_THEME = "workbench.preferredDarkColorTheme", e.PREFERRED_LIGHT_THEME = "workbench.preferredLightColorTheme", e.PREFERRED_HC_DARK_THEME = "workbench.preferredHighContrastColorTheme", e.PREFERRED_HC_LIGHT_THEME = "workbench.preferredHighContrastLightColorTheme", e.DETECT_COLOR_SCHEME = "window.autoDetectColorScheme", e.DETECT_HC = "window.autoDetectHighContrast", e.SYSTEM_COLOR_THEME = "window.systemColorTheme";
@@ -1850,7 +1850,7 @@ function si() {
 	let e = E.as(le.JSONContribution);
 	e.registerSchema(ai, oi), e.registerSchema(ni, ii);
 }
-Le(), Rn(), Fn(), Ln(), C(), xe(), Re(), dr(), pr(), Ut(), O(), fn(), vn();
+Le(), Ln(), In(), Wn(), C(), xe(), Re(), dr(), pr(), Ut(), O(), fn(), vn();
 function ci() {
 	return fr.registerExtensionPoint({
 		extensionPoint: "themes",
@@ -2884,7 +2884,7 @@ var sa = ci(), ca = li(), la = ui(), ua = class extends Yt {
 			!t && e instanceof U && (t = e), t ||= U.noIconTheme, await t.ensureLoaded(this.fileIconThemeLoader), this.applyAndSetFileIconTheme(t);
 		}
 		let r = this.currentFileIconTheme;
-		return r.isLoaded && t !== "preview" && (!r.location || !Hn(r.location)) && r.toStorage(this.storageService), await this.settings.setFileIconTheme(this.currentFileIconTheme, t), r;
+		return r.isLoaded && t !== "preview" && (!r.location || !Fn(r.location)) && r.toStorage(this.storageService), await this.settings.setFileIconTheme(this.currentFileIconTheme, t), r;
 	}
 	async getMarketplaceFileIconThemes(e, t, n) {
 		let r = await this.extensionResourceLoaderService.getExtensionGalleryResourceURL({
@@ -2934,7 +2934,7 @@ var sa = ci(), ca = li(), la = ui(), ua = class extends Yt {
 			!t && e instanceof Z && (t = e), t ||= Z.defaultTheme, await t.ensureLoaded(this.extensionResourceLoaderService, this.logService), this.applyAndSetProductIconTheme(t);
 		}
 		let r = this.currentProductIconTheme;
-		return r.isLoaded && t !== "preview" && (!r.location || !Hn(r.location)) && r.toStorage(this.storageService), await this.settings.setProductIconTheme(this.currentProductIconTheme, t), r;
+		return r.isLoaded && t !== "preview" && (!r.location || !Fn(r.location)) && r.toStorage(this.storageService), await this.settings.setProductIconTheme(this.currentProductIconTheme, t), r;
 	}
 	async getMarketplaceProductIconThemes(e, t, n) {
 		let r = await this.extensionResourceLoaderService.getExtensionGalleryResourceURL({
@@ -2972,7 +2972,7 @@ ua = Ae([
 	j(3, ze),
 	j(4, ar),
 	j(5, zt),
-	j(6, zn),
+	j(6, Hn),
 	j(7, Bn),
 	j(8, ge),
 	j(9, ur),
@@ -2999,7 +2999,7 @@ function fa(e, t) {
 		n.className = t, n.textContent = e;
 	} else n[0].textContent = e;
 }
-si(), Qr(), Hi(), nn(), Vn(), i(), C(), lt(), mt(), O(), Zn(), $n(), Yn(), je(), _n(), P(), Ie(), y(), Me(), v(), Bt(), Ct(), Ue(), Dn(), qn(), bt(), vn(), wt(), en(), dt(), s(), ct(), Un(), nt(), _e(), Tn(), sn(), Fn(), l(), hn(), Pt(), un(), De(), Te(), Ee(), mn(), sr(), We();
+si(), Qr(), Hi(), nn(), Un(), i(), C(), lt(), mt(), O(), Zn(), $n(), Yn(), je(), _n(), P(), Ie(), y(), Me(), v(), Bt(), Ct(), Ue(), Dn(), qn(), bt(), vn(), wt(), en(), dt(), s(), ct(), Gn(), nt(), _e(), Tn(), sn(), In(), l(), hn(), Pt(), un(), De(), Te(), Ee(), mn(), sr(), We();
 var pa = tn("theme-selection-manage-extension", xt.gear, _(12775, "Icon for the 'Manage' action in the theme selection quick pick.")), ma;
 (function(e) {
 	e.BROWSE_GALLERY = "marketplace", e.EXTENSIONS_VIEW = "extensions", e.CUSTOM_TOP_ENTRY = "customTopEntry";
@@ -3097,7 +3097,7 @@ var ha = class {
 		})).confirmed) return !1;
 		try {
 			return await this.progressService.withProgress({
-				location: Wn.Notification,
+				location: Rn.Notification,
 				title: _(12780, "Installing Extension {0}...", e.displayName)
 			}, async () => {
 				await this.extensionManagementService.installFromGallery(e, { isMachineScoped: !1 });
@@ -3165,7 +3165,7 @@ ga = Ae([
 	j(3, Ft),
 	j(4, Jn),
 	j(5, Qn),
-	j(6, zn),
+	j(6, Hn),
 	j(7, we)
 ], ga);
 var _a = "workbench.action.selectTheme";
@@ -3423,7 +3423,7 @@ cn(class extends Ot {
 		});
 	}
 	async run(e) {
-		let t = "category:themes", n = e.get(I), r = e.get(Jn), i = e.get(zn), a = e.get(Qn), o = e.get(we);
+		let t = "category:themes", n = e.get(I), r = e.get(Jn), i = e.get(Hn), a = e.get(Qn), o = e.get(we);
 		if (!r.isEnabled()) return;
 		if (!await i.supportsExtensionGalleryResources()) {
 			await a.openSearch(t);
@@ -3485,7 +3485,7 @@ var ka = class extends ua {
 };
 function Aa() {
 	return {
-		...Gn(),
+		...zn(),
 		[ye.toString()]: new At(ka, [], !1)
 	};
 }

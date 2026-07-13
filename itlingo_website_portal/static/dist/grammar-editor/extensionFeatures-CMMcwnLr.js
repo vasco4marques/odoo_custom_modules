@@ -1,11 +1,11 @@
 import { n as e } from "./rolldown-runtime-B1bRi_D7.js";
 import { Bd as t, Ej as n, H_ as r, Tj as i, U_ as a, Vd as o, dN as s, db as c, fb as l, pN as u } from "./standaloneServices-C51B94Xh.js";
-import { At as d, Nt as f, Rt as p, St as m, dr as h, gr as g, kt as _, sr as v, xt as y } from "./monaco-vscode-files-service-override-BUohVD35.js";
+import { It as d, Mt as f, Nt as p, Tt as m, Vt as h, mr as g, ur as _, wt as v, yr as y } from "./monaco-vscode-files-service-override-DGMr6mGW.js";
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/platform/product/common/productService.js
 var b, x = e((() => {
 	b = "vscode://schemas/vscode-product";
 })), S, C, w, T, E, D, O, k, A, j, M = e((() => {
-	i(), s(), o(), p(), a(), l(), g(), x(), d(), m(), S = c.as(r.JSONContribution), C = class {
+	i(), s(), o(), h(), a(), l(), y(), x(), p(), m(), S = c.as(r.JSONContribution), C = class {
 		constructor(e, t, n) {
 			this._messageHandler = e, this._extension = t, this._extensionPointId = n;
 		}
@@ -28,7 +28,7 @@ var b, x = e((() => {
 		}
 	}, w = class e {
 		static _toSet(e) {
-			let t = new h();
+			let t = new g();
 			for (let n = 0, r = e.length; n < r; n++) t.add(e[n].description.identifier);
 			return t;
 		}
@@ -89,7 +89,7 @@ var b, x = e((() => {
 			uniqueItems: !0,
 			items: { oneOf: [{
 				type: "string",
-				enum: v
+				enum: _
 			}, {
 				type: "string",
 				const: "Languages",
@@ -131,8 +131,8 @@ var b, x = e((() => {
 			uniqueItems: !0,
 			items: {
 				type: "string",
-				enum: Object.keys(y).map((e) => e),
-				markdownEnumDescriptions: Object.values(y).map((e) => e.proposal)
+				enum: Object.keys(v).map((e) => e),
+				markdownEnumDescriptions: Object.values(v).map((e) => e.proposal)
 			}
 		},
 		api: {
@@ -356,7 +356,7 @@ var b, x = e((() => {
 			uniqueItems: !0,
 			items: {
 				type: "string",
-				pattern: f
+				pattern: d
 			}
 		},
 		extensionPack: {
@@ -365,7 +365,7 @@ var b, x = e((() => {
 			uniqueItems: !0,
 			items: {
 				type: "string",
-				pattern: f
+				pattern: d
 			}
 		},
 		extensionKind: {
@@ -517,7 +517,7 @@ var b, x = e((() => {
 		registerExtensionPoint(e) {
 			if (this._extensionPoints.has(e.extensionPoint)) throw Error("Duplicate extension point: " + e.extensionPoint);
 			let t = new T(e.extensionPoint, e.defaultExtensionKind, e.canHandleResolver);
-			return this._extensionPoints.set(e.extensionPoint, t), e.activationEventsGenerator && _.register(e.extensionPoint, e.activationEventsGenerator), O.properties.contributes.properties[e.extensionPoint] = e.jsonSchema, S.registerSchema(D, O), t;
+			return this._extensionPoints.set(e.extensionPoint, t), e.activationEventsGenerator && f.register(e.extensionPoint, e.activationEventsGenerator), O.properties.contributes.properties[e.extensionPoint] = e.jsonSchema, S.registerSchema(D, O), t;
 		}
 		getExtensionPoints() {
 			return Array.from(this._extensionPoints.values());
@@ -531,8 +531,8 @@ var b, x = e((() => {
 			uniqueItems: !0,
 			items: {
 				type: "string",
-				enum: Object.keys(y),
-				markdownEnumDescriptions: Object.values(y).map((e) => e.proposal)
+				enum: Object.keys(v),
+				markdownEnumDescriptions: Object.values(v).map((e) => e.proposal)
 			}
 		}] }
 	} } });

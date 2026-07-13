@@ -3,14 +3,14 @@ import { $E as t, $j as n, $y as r, AA as i, Ab as a, BS as o, Bb as s, By as c,
 import { n as Dt, t as Ot } from "./webWorkerDescriptor-D8gBO8t7.js";
 import { a as kt, i as At, n as jt, r as Mt } from "./platformObservableUtils-D83yluRC.js";
 import { o as Nt, t as Pt } from "./editorBrowser-Bcg0bJo7.js";
-import { Gt as Ft, Wt as It, a as Lt, gt as Rt, mt as zt, r as Bt } from "./monaco-vscode-files-service-override-BUohVD35.js";
+import { Jt as Ft, _t as It, a as Lt, qt as Rt, s as zt, yt as Bt } from "./monaco-vscode-files-service-override-DGMr6mGW.js";
 import { D as Vt, E as Ht, O as Ut, T as Wt, b as Gt, v as Kt, y as qt } from "./filesConfigurationService-CxZOIrXS.js";
-import { a as Jt, i as z } from "./extensionFeatures-Dnpt_iIx.js";
+import { a as Jt, i as z } from "./extensionFeatures-CMMcwnLr.js";
 import { i as B, r as V, t as Yt } from "./semanticTokensConfig-DMlN5Qxc.js";
-import { n as Xt, r as Zt } from "./languageService-C5Ghz3ME.js";
+import { n as Xt, r as Zt } from "./languageService-CNIR0xe2.js";
 import { t as Qt } from "./workbenchThemeService.service-Cz3TFQno.js";
 import { o as H, r as $t, t as en } from "./tokenClassificationRegistry-BEKq9OqE.js";
-Re(), fe(), ie(), b(), Qe(), le(), $e(), je(), Ct(), qe(), P(), _e(), Ze(), o(), ce(), _(), Oe(), s(), a(), Ge(), r(), Ae(), xt(), Ie(), L(), R(), De(), mt(), ge(), g(), m(), ke(), ut(), Ft(), Ut(), B(), Rt(), ft(), y(), ht(), C(), x();
+Re(), fe(), ie(), b(), Qe(), le(), $e(), je(), Ct(), qe(), P(), _e(), Ze(), o(), ce(), _(), Oe(), s(), a(), Ge(), r(), Ae(), xt(), Ie(), L(), R(), De(), mt(), ge(), g(), m(), ke(), ut(), Ft(), Ut(), B(), Bt(), ft(), y(), ht(), C(), x();
 var tn = class extends j {
 	get onDidEncounterLanguage() {
 		return this._onDidEncounterLanguage.event;
@@ -282,7 +282,7 @@ var W, G = class {
 	}
 };
 G = W = v([
-	A(2, It),
+	A(2, Rt),
 	A(3, E),
 	A(4, N),
 	A(5, k),
@@ -547,7 +547,7 @@ var J, dn = class extends j {
 			return;
 		}
 		this._debugModePrintFunc = e, this._debugMode = !0, this._debugMode && this._progressService.withProgress({
-			location: zt.Notification,
+			location: It.Notification,
 			buttons: [p(14278, "Stop")]
 		}, (e) => (e.report({ message: p(14279, "Preparing to log TM Grammar parsing. Press Stop when finished.") }), this._getVSCodeOniguruma().then((t) => (t.setDefaultDebugCall(!0), e.report({ message: p(14280, "Now logging TM Grammar parsing. Press Stop when finished.") }), new Promise((e, t) => {})))), (e) => {
 			this._getVSCodeOniguruma().then((e) => {
@@ -642,7 +642,7 @@ var J, dn = class extends j {
 dn = J = v([
 	A(0, N),
 	A(1, Qt),
-	A(2, It),
+	A(2, Rt),
 	A(3, k),
 	A(4, re),
 	A(5, E),
@@ -683,7 +683,7 @@ function hn(e, t, n, r) {
 		r.affectsConfiguration(e, { overrideIdentifier: t }) && n(r);
 	}), () => r.getValue(e, { overrideIdentifier: t }) ?? n);
 }
-Ht(), Lt(), a(), b(), Jt(), qt(), s();
+Ht(), zt(), a(), b(), Jt(), qt(), s();
 var Y = $t(), gn = z.registerExtensionPoint({
 	extensionPoint: "semanticTokenTypes",
 	jsonSchema: {
@@ -1251,7 +1251,7 @@ $ = v([A(0, V)], $), Gt($.ID, $, Kt.BlockRestore), Je.registerCommand("_workbenc
 }), B();
 function On() {
 	return {
-		...Bt(),
+		...Lt(),
 		[V.toString()]: new Be(dn, [], !1)
 	};
 }

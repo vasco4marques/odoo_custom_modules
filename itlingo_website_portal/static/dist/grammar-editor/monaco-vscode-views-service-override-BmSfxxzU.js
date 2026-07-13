@@ -1,13 +1,13 @@
-import { $o as e, Ab as t, Aw as n, Bb as r, Bo as i, Dl as a, El as o, Fa as s, Jt as c, Jy as ee, Lb as l, Lp as u, Nl as d, Ob as f, PM as p, Pa as te, Pl as m, Vo as h, Wo as g, Xy as _, _j as ne, bM as v, cs as y, e_ as b, em as x, gs as S, hc as C, hs as w, ij as T, kb as E, mc as D, n as O, pw as k, r as A, rs as j, t_ as M, tm as N, vD as re, yD as P, zo as ie } from "./standaloneServices-C51B94Xh.js";
-import { it as F } from "./configuration.service-DJ_Qr0zd.js";
-import { _ as ae, a as oe, x as se } from "./editorResolverService-CZFxBDpH.js";
-import { F as ce, cx as le, lx as ue, oa as de, wf as I, yf as L } from "./monaco-vscode-extensions-service-override-B4FJQig8.js";
-import { C as R, Ct as z, Dt as B, I as V, L as H, Ot as fe, W as U, wt as pe, x as me, z as he } from "./monaco-vscode-files-service-override-BUohVD35.js";
+import { $o as e, Ab as t, Aw as n, Bb as r, Bo as i, Dl as a, El as o, Fa as s, Jt as c, Jy as ee, Lb as l, Lp as u, Nl as d, Ob as f, PM as p, Pa as te, Pl as m, Vo as h, Wo as g, Xy as _, _j as ne, bM as v, cs as y, e_ as re, em as b, gs as x, hc as S, hs as C, ij as w, kb as T, mc as E, n as D, pw as O, r as k, rs as A, t_ as j, tm as M, vD as ie, yD as N, zo as ae } from "./standaloneServices-C51B94Xh.js";
+import { it as P } from "./configuration.service-Bga69j3H.js";
+import { _ as oe, a as se, x as ce } from "./editorResolverService-CZFxBDpH.js";
+import { F as le, cx as ue, lx as de, oa as fe, wf as F, yf as I } from "./monaco-vscode-extensions-service-override-CcXiXb-p.js";
+import { At as L, B as R, Dt as z, E as B, Et as V, H as pe, jt as me, q as H, w as he, z as U } from "./monaco-vscode-files-service-override-DGMr6mGW.js";
 import { $t as ge, I as _e, L as ve, Ot as W, P as ye, R as be, U as G, W as xe, Y as Se, Z as Ce, gn as K, jt as we, kt as Te, ln as q } from "./filesConfigurationService-CxZOIrXS.js";
-import "./monaco-CmK_qFKQ.js";
+import "./monaco-BGOsyT4t.js";
 import { n as Ee, t as De } from "./editor-BOmHBVeV.js";
-import { _ as Oe, c as ke, i as Ae, l as je, n as Me, o as Ne, r as Pe, t as Fe, u as Ie } from "./views-BO0VClTM.js";
-t(), p(), n(), D(), T(), P(), A(), M(), a(), S(), N(), r(), m(), _(), g(), i(), j(), s(), ge(), I(), ue(), Ce(), xe(), Te(), fe(), he(), _e(), be(), pe(), me(), se(), ae(), de(), u(), we(), oe(), c(), ce();
+import { _ as Oe, c as ke, i as Ae, l as je, n as Me, o as Ne, r as Pe, t as Fe, u as Ie } from "./views-D2Wp5UKE.js";
+t(), p(), n(), E(), w(), N(), k(), j(), a(), x(), M(), r(), m(), _(), g(), i(), A(), s(), ge(), F(), de(), Ce(), xe(), Te(), me(), pe(), _e(), be(), z(), he(), ce(), oe(), fe(), u(), we(), se(), c(), le();
 function Le(e, t, n) {
 	let r = document.createElement(t === "status" ? "footer" : "div");
 	return r.classList.add("part", "monaco-workbench-part", ...n), r.id = e, r.setAttribute("role", t), t === "status" && r.setAttribute("aria-live", "off"), r;
@@ -26,7 +26,7 @@ function Re(e, t) {
 	}), n();
 }
 function Y(e) {
-	return O.get(d).getPart(e);
+	return D.get(d).getPart(e);
 }
 function ze(e, t) {
 	t.append(e.getContainer());
@@ -52,7 +52,7 @@ function Ve(e) {
 	}) : !1;
 }
 function Z() {
-	let e = O.get(G).mainPart.getContainer();
+	let e = D.get(G).mainPart.getContainer();
 	return e != null && Ve(e);
 }
 var Q = class extends De {
@@ -73,17 +73,17 @@ var Q = class extends De {
 		return this.delegate.activePart;
 	}
 };
-Q = f([E(1, l)], Q);
+Q = f([T(1, l)], Q);
 var $ = (e) => e;
-R(async (t) => {
-	let n = t.get(z), r = t.get(le), i = t.get(ve), a = t.get(ie), s = t.get(G), c = t.get(W), l = t.get(ee), u = t.get(B), f = t.get(o), p = t.get(te), m = t.get(b), g = t.get(w), _ = t.get(d);
-	function x() {
+B(async (t) => {
+	let n = t.get(V), r = t.get(ue), i = t.get(ve), a = t.get(ae), s = t.get(G), c = t.get(W), l = t.get(ee), u = t.get(L), f = t.get(o), p = t.get(te), m = t.get(re), g = t.get(C), _ = t.get(d);
+	function b() {
 		let e = f.options?.defaultLayout;
 		if ((e?.editors != null && e.editors.length > 0 || e?.layout?.editors != null) && ((e.force ?? !1) || a.isNew(h.WORKSPACE))) return {
 			layout: e.layout?.editors,
 			filesToOpenOrCreate: e.editors?.map((e) => ({
 				viewColumn: e.viewColumn,
-				fileUri: re.revive(e.uri),
+				fileUri: ie.revive(e.uri),
 				openOnlyIfExists: e.openOnlyIfExists,
 				options: e.options
 			}))
@@ -95,16 +95,16 @@ R(async (t) => {
 			filesToMerge: r
 		};
 	}
-	function S(e, t) {
+	function x(e, t) {
 		let n = e.options?.defaultLayout;
 		if (n == null || !(n.force ?? !1) && !t.isNew(h.WORKSPACE)) return;
 		let { views: r } = n;
 		if (r != null && r.length > 0) return r.map((e) => e.id);
 	}
-	function T(e, t) {
+	function w(e, t) {
 		return y(e.getWorkspace()) ? !1 : m.getValue("window.restoreWindows") === "preserve" || t === void 0;
 	}
-	async function E(t, n) {
+	async function T(t, n) {
 		if (n != null) {
 			let e = v(await K(n.filesToMerge, t, l));
 			if (e.length === 4 && q(e[0]) && q(e[1]) && q(e[2]) && q(e[3])) return [{ editor: {
@@ -132,86 +132,86 @@ R(async (t) => {
 		} else if (p.getWorkbenchState() === e.EMPTY && m.getValue("workbench.startupEditor") === "newUntitledFile") return s.mainPart.hasRestorableState ? [] : [{ editor: { resource: void 0 } }];
 		return [];
 	}
-	let D = x();
-	D != null && l.info("Initial editor state", D);
-	let O = {
-		layout: { editors: D?.layout },
+	let E = b();
+	E != null && l.info("Initial editor state", E);
+	let D = {
+		layout: { editors: E?.layout },
 		editor: {
-			restoreEditors: T(p, D),
-			editorsToOpen: E(g, D)
+			restoreEditors: w(p, E),
+			editorsToOpen: T(g, E)
 		},
 		views: {
-			defaults: S(f, a),
+			defaults: x(f, a),
 			containerToRestore: {}
 		}
 	};
-	function A(e) {
+	function k(e) {
 		return r.getDefaultViewContainer(e) ?? r.getViewContainersByLocation(e)[0];
 	}
-	function j() {
-		if (_.isVisible(V.SIDEBAR_PART)) {
+	function A() {
+		if (_.isVisible(U.SIDEBAR_PART)) {
 			let e;
-			e = !f.isBuilt || i.startupKind === ye.ReloadedWindow || ne ? a.get(ke.activeViewletSettingsKey, h.WORKSPACE, A(L.Sidebar)?.id) : A(L.Sidebar)?.id, O.views.containerToRestore.sideBar = e;
+			e = !f.isBuilt || i.startupKind === ye.ReloadedWindow || ne ? a.get(ke.activeViewletSettingsKey, h.WORKSPACE, k(I.Sidebar)?.id) : k(I.Sidebar)?.id, D.views.containerToRestore.sideBar = e;
 		}
-		if (_.isVisible(V.PANEL_PART)) {
-			let e = a.get(je.activePanelSettingsKey, h.WORKSPACE, A(L.Panel)?.id);
-			O.views.containerToRestore.panel = e;
+		if (_.isVisible(U.PANEL_PART)) {
+			let e = a.get(je.activePanelSettingsKey, h.WORKSPACE, k(I.Panel)?.id);
+			D.views.containerToRestore.panel = e;
 		}
-		if (_.isVisible(V.AUXILIARYBAR_PART)) {
-			let e = a.get(Oe.activeViewSettingsKey, h.WORKSPACE, A(L.AuxiliaryBar)?.id);
-			O.views.containerToRestore.auxiliaryBar = e;
+		if (_.isVisible(U.AUXILIARYBAR_PART)) {
+			let e = a.get(Oe.activeViewSettingsKey, h.WORKSPACE, k(I.AuxiliaryBar)?.id);
+			D.views.containerToRestore.auxiliaryBar = e;
 		}
 	}
-	j(), O = $(O), O.views.containerToRestore.sideBar ?? _.setPartHidden(!0, V.SIDEBAR_PART), O.views.containerToRestore.panel ?? _.setPartHidden(!0, V.PANEL_PART), O.views.containerToRestore.auxiliaryBar ?? _.setPartHidden(!0, V.AUXILIARYBAR_PART);
-	let M = document.createElement("div");
-	M.style.display = "none", document.body.append(M);
+	A(), D = $(D), D.views.containerToRestore.sideBar ?? _.setPartHidden(!0, U.SIDEBAR_PART), D.views.containerToRestore.panel ?? _.setPartHidden(!0, U.PANEL_PART), D.views.containerToRestore.auxiliaryBar ?? _.setPartHidden(!0, U.AUXILIARYBAR_PART);
+	let j = document.createElement("div");
+	j.style.display = "none", document.body.append(j);
 	for (let { id: e, role: t, classes: n, options: r, getPosition: i, onDidChangePosition: a } of [
 		{
-			id: V.TITLEBAR_PART,
+			id: U.TITLEBAR_PART,
 			role: "none",
 			classes: ["titlebar"]
 		},
 		{
-			id: V.BANNER_PART,
+			id: U.BANNER_PART,
 			role: "banner",
 			classes: ["banner"]
 		},
 		{
-			id: V.ACTIVITYBAR_PART,
+			id: U.ACTIVITYBAR_PART,
 			role: "none",
 			classes: ["activitybar"],
 			getPosition: () => _.getSideBarPosition(),
 			onDidChangePosition: _.onDidChangeSideBarPosition
 		},
 		{
-			id: V.SIDEBAR_PART,
+			id: U.SIDEBAR_PART,
 			role: "none",
 			classes: ["sidebar"],
 			getPosition: () => _.getSideBarPosition(),
 			onDidChangePosition: _.onDidChangeSideBarPosition
 		},
 		{
-			id: V.EDITOR_PART,
+			id: U.EDITOR_PART,
 			role: "main",
 			classes: ["editor"],
-			options: { restorePreviousState: O.editor.restoreEditors }
+			options: { restorePreviousState: D.editor.restoreEditors }
 		},
 		{
-			id: V.PANEL_PART,
+			id: U.PANEL_PART,
 			role: "none",
 			classes: ["panel", "basepanel"],
 			getPosition: () => _.getPanelPosition(),
 			onDidChangePosition: _.onDidChangePanelPosition
 		},
 		{
-			id: V.AUXILIARYBAR_PART,
+			id: U.AUXILIARYBAR_PART,
 			role: "none",
 			classes: ["auxiliarybar", "basepanel"],
-			getPosition: () => _.getSideBarPosition() === H.LEFT ? H.RIGHT : H.LEFT,
+			getPosition: () => _.getSideBarPosition() === R.LEFT ? R.RIGHT : R.LEFT,
 			onDidChangePosition: _.onDidChangeSideBarPosition
 		},
 		{
-			id: V.STATUSBAR_PART,
+			id: U.STATUSBAR_PART,
 			role: "status",
 			classes: ["statusbar"]
 		}
@@ -219,19 +219,19 @@ R(async (t) => {
 		let o = _.getPart(e);
 		if (o != null) {
 			let s = Le(e, t, n);
-			if (o.create(s, r), Re(s, o), o.layout(9999, 9999, 0, 0), M.append(s), i != null) {
+			if (o.create(s, r), Re(s, o), o.layout(9999, 9999, 0, 0), j.append(s), i != null) {
 				let e = i();
-				o.element.classList.add(U(e)), a?.(() => {
-					o.element.classList.remove(U(e)), e = i(), o.element.classList.add(U(e));
+				o.element.classList.add(H(e)), a?.(() => {
+					o.element.classList.remove(H(e)), e = i(), o.element.classList.add(H(e));
 				});
 			}
 		}
 	}
-	let N = [], P = [];
-	N.push((async () => {
-		C("code/willRestoreEditors"), await s.mainPart.whenReady, C("code/restoreEditors/editorGroupsReady"), O.layout?.editors != null && s.applyLayout(O.layout.editors);
-		let e = await O.editor.editorsToOpen;
-		C("code/restoreEditors/editorsToOpenResolved");
+	let M = [], N = [];
+	M.push((async () => {
+		S("code/willRestoreEditors"), await s.mainPart.whenReady, S("code/restoreEditors/editorGroupsReady"), D.layout?.editors != null && s.applyLayout(D.layout.editors);
+		let e = await D.editor.editorsToOpen;
+		S("code/restoreEditors/editorsToOpenResolved");
 		let t;
 		if (e.length > 0) {
 			let n = s.getGroups(Se.GRID_APPEARANCE), r = /* @__PURE__ */ new Map();
@@ -247,13 +247,13 @@ R(async (t) => {
 				}
 			}));
 		}
-		P.push(Promise.all([t?.finally(() => C("code/restoreEditors/editorsOpened")), s.mainPart.whenRestored.finally(() => C("code/restoreEditors/editorGroupsRestored"))]).finally(() => {
-			C("code/didRestoreEditors");
+		N.push(Promise.all([t?.finally(() => S("code/restoreEditors/editorsOpened")), s.mainPart.whenRestored.finally(() => S("code/restoreEditors/editorGroupsRestored"))]).finally(() => {
+			S("code/didRestoreEditors");
 		}));
 	})());
-	let F = (async () => {
-		if (O.views.defaults != null && O.views.defaults.length > 0) {
-			C("code/willOpenDefaultViews");
+	let P = (async () => {
+		if (D.views.defaults != null && D.views.defaults.length > 0) {
+			S("code/willOpenDefaultViews");
 			let e = [], t = (t) => {
 				let n = r.getViewLocationById(t.id);
 				if (n !== null) {
@@ -268,7 +268,7 @@ R(async (t) => {
 					}
 				}
 				return !1;
-			}, n = [...O.views.defaults].reverse().map((e, t) => ({
+			}, n = [...D.views.defaults].reverse().map((e, t) => ({
 				id: e,
 				order: t
 			})), i = n.length;
@@ -278,16 +278,16 @@ R(async (t) => {
 				let e = n.length;
 				for (; e > 0;) e--, t(n[e]) && n.splice(e, 1);
 			}
-			e[L.Sidebar] != null && (O.views.containerToRestore.sideBar = e[L.Sidebar].id), e[L.Panel] != null && (O.views.containerToRestore.panel = e[L.Panel].id), e[L.AuxiliaryBar] != null && (O.views.containerToRestore.auxiliaryBar = e[L.AuxiliaryBar].id), C("code/didOpenDefaultViews");
+			e[I.Sidebar] != null && (D.views.containerToRestore.sideBar = e[I.Sidebar].id), e[I.Panel] != null && (D.views.containerToRestore.panel = e[I.Panel].id), e[I.AuxiliaryBar] != null && (D.views.containerToRestore.auxiliaryBar = e[I.AuxiliaryBar].id), S("code/didOpenDefaultViews");
 		}
 	})();
-	N.push(F), N.push((async () => {
-		await F, O.views.containerToRestore.sideBar != null && (C("code/willRestoreViewlet"), await n.openPaneComposite(O.views.containerToRestore.sideBar, L.Sidebar) ?? await n.openPaneComposite(A(L.Sidebar)?.id, L.Sidebar), C("code/didRestoreViewlet"));
-	})()), N.push((async () => {
-		await F, O.views.containerToRestore.panel != null && (C("code/willRestorePanel"), await n.openPaneComposite(O.views.containerToRestore.panel, L.Panel) ?? await n.openPaneComposite(A(L.Panel)?.id, L.Panel), C("code/didRestorePanel"));
-	})()), N.push((async () => {
-		await F, O.views.containerToRestore.auxiliaryBar != null && (C("code/willRestoreAuxiliaryBar"), await n.openPaneComposite(O.views.containerToRestore.auxiliaryBar, L.AuxiliaryBar) ?? await n.openPaneComposite(A(L.AuxiliaryBar)?.id, L.AuxiliaryBar), C("code/didRestoreAuxiliaryBar"));
-	})()), await k.settled(N), await k.settled(P);
+	M.push(P), M.push((async () => {
+		await P, D.views.containerToRestore.sideBar != null && (S("code/willRestoreViewlet"), await n.openPaneComposite(D.views.containerToRestore.sideBar, I.Sidebar) ?? await n.openPaneComposite(k(I.Sidebar)?.id, I.Sidebar), S("code/didRestoreViewlet"));
+	})()), M.push((async () => {
+		await P, D.views.containerToRestore.panel != null && (S("code/willRestorePanel"), await n.openPaneComposite(D.views.containerToRestore.panel, I.Panel) ?? await n.openPaneComposite(k(I.Panel)?.id, I.Panel), S("code/didRestorePanel"));
+	})()), M.push((async () => {
+		await P, D.views.containerToRestore.auxiliaryBar != null && (S("code/willRestoreAuxiliaryBar"), await n.openPaneComposite(D.views.containerToRestore.auxiliaryBar, I.AuxiliaryBar) ?? await n.openPaneComposite(k(I.AuxiliaryBar)?.id, I.AuxiliaryBar), S("code/didRestoreAuxiliaryBar"));
+	})()), await O.settled(M), await O.settled(N);
 });
 function He(e, t, n) {
 	return n != null && ($ = typeof n == "boolean" ? (e) => ({
@@ -298,14 +298,14 @@ function He(e, t, n) {
 		}
 	}) : n), {
 		...Ae(t),
-		...F({
+		...P({
 			isKeybindingConfigurationVisible: Z,
 			shouldUseGlobalPicker: Z
 		}),
 		...Ne({ shouldUseGlobalKeybindings: Z }),
-		[G.toString()]: new x(Q, [e], !1),
-		[W.toString()]: new x(Ee, [e, Z], !1)
+		[G.toString()]: new b(Q, [e], !1),
+		[W.toString()]: new b(Ee, [e, Z], !1)
 	};
 }
 //#endregion
-export { V as Parts, H as Position, Be as attachPart, He as default, Fe as getSideBarPosition, Me as isPartVisibile, Pe as onDidChangeSideBarPosition, X as onPartVisibilityChange };
+export { U as Parts, R as Position, Be as attachPart, He as default, Fe as getSideBarPosition, Me as isPartVisibile, Pe as onDidChangeSideBarPosition, X as onPartVisibilityChange };

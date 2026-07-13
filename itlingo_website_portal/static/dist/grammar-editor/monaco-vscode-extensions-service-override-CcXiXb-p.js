@@ -5,15 +5,15 @@ import { n as Woe, t as Bp } from "./webWorkerDescriptor-D8gBO8t7.js";
 import { a as Vp, i as Hp, n as Up, r as Wp, t as Goe } from "./platformObservableUtils-D83yluRC.js";
 import { i as Koe, l as Gp, n as Kp, o as qp, r as Jp, s as Yp, t as Xp } from "./editorBrowser-Bcg0bJo7.js";
 import { i as qoe, n as Zp } from "./languageConfiguration-pd_q6saV.js";
-import { At as Joe, B as Yoe, Bn as Xoe, Bt as Zoe, Ct as Qp, Dt as $p, Et as Qoe, Ft as em, Gt as tm, Ht as nm, I as rm, J as $oe, Mt as im, Ot as am, P as ese, Pt as tse, Q as om, Rt as sm, Sr as nse, St as rse, Tt as ise, Ut as cm, Vt as ase, Wt as lm, Y as ose, Z as um, _r as sse, _t as dm, a as cse, ar as lse, br as use, bt as dse, ct as fse, dr as pse, dt as mse, fr as fm, gr as pm, gt as mm, ht as hse, ir as hm, jt as gm, kt as _m, lr as vm, lt as gse, mt as ym, pr as bm, pt as xm, sr as _se, t as vse, ur as Sm, ut as Cm, v as yse, vt as wm, wt as bse, xt as Tm, y as xse, yn as Em, yr as Sse, yt as Cse, z as Dm } from "./monaco-vscode-files-service-override-BUohVD35.js";
+import { At as Qp, Cr as Joe, Ct as Yoe, Dt as Xoe, Et as $p, Ft as em, Gt as tm, H as nm, Jt as rm, Kt as im, L as Zoe, Lt as Qoe, Mt as am, Nt as $oe, Ot as ese, Pt as om, Q as tse, Rt as sm, S as nse, Sn as cm, Sr as rse, St as ise, Tr as ase, Tt as ose, U as sse, Un as cse, Ut as lse, Vt as lm, Wt as use, Z as dse, _t as um, br as fse, bt as dm, cr as pse, dt as mse, et as fm, fr as pm, ft as hse, gr as mm, gt as hm, hr as gm, jt as _m, kt as gse, mr as _se, mt as vse, pr as vm, pt as ym, qt as bm, s as yse, sr as xm, t as bse, tt as Sm, ur as xse, vt as Sse, wt as Cm, x as Cse, xt as wm, yr as Tm, yt as Em, z as Dm } from "./monaco-vscode-files-service-override-DGMr6mGW.js";
 import { $t as Om, A as km, At as Am, B as jm, C as wse, Ct as Mm, D as Nm, Dt as Pm, E as Fm, F as Tse, Ft as Im, G as Ese, Gt as Lm, Ht as Rm, I as zm, K as Dse, Kt as Ose, L as Bm, Lt as Vm, N as kse, O as Hm, Ot as Um, Pt as Wm, R as Gm, Rt as Km, S as qm, T as Jm, Tt as Ym, U as Xm, Ut as Zm, Vt as Qm, W as $m, Xt as Ase, Y as eh, Yt as th, Z as nh, _ as jse, at as rh, b as Mse, c as ih, cn as Nse, ct as ah, et as oh, fn as Pse, j as sh, jt as ch, k as lh, kt as uh, l as Fse, ln as Ise, m as dh, mt as Lse, p as Rse, qt as fh, rt as ph, s as mh, tn as hh, tt as gh, u as zse, un as _h, v as Bse, w as Vse, wt as vh, x as yh, y as bh, z as xh } from "./filesConfigurationService-CxZOIrXS.js";
 import { i as Sh, n as Hse, r as Ch, t as Use } from "./languageStatusService.service-dYnhaUee.js";
 import { a as Wse, n as wh, o as Th, r as Eh } from "./extensionManagement.service-ELKOh9mo.js";
-import { A as Gse, B as Dh, C as Kse, D as qse, E as Oh, F as kh, G as Jse, H as Ah, J as jh, K as Mh, L as Yse, N as Nh, O as Ph, P as Fh, R as Ih, S as Lh, T as Xse, U as Rh, V as zh, W as Zse, Y as Bh, _ as Vh, b as Hh, c as Qse, d as $se, g as Uh, h as Wh, it as Gh, k as Kh, l as ece, m as tce, n as nce, nt as qh, q as Jh, r as rce, rt as Yh, s as ice, t as ace, tt as oce, u as sce, v as Xh, x as cce, y as lce, z as Zh } from "./extensions-DnX2FbG_.js";
+import { A as Gse, B as Dh, C as Kse, D as qse, E as Oh, F as kh, G as Jse, H as Ah, J as jh, K as Mh, L as Yse, N as Nh, O as Ph, P as Fh, R as Ih, S as Lh, T as Xse, U as Rh, V as zh, W as Zse, Y as Bh, _ as Vh, b as Hh, c as Qse, d as $se, g as Uh, h as Wh, it as Gh, k as Kh, l as ece, m as tce, n as nce, nt as qh, q as Jh, r as rce, rt as Yh, s as ice, t as ace, tt as oce, u as sce, v as Xh, x as cce, y as lce, z as Zh } from "./extensions-MEu2nHmY.js";
 import { a as Qh, o as $h } from "./tools-CGs0ihXi.js";
 import { c as eg, d as uce, f as dce, i as tg, l as ng, n as rg, o as ig, s as ag, t as og, u as sg } from "./environmentService.service-DtlNbSmC.js";
-import { a as cg, i as lg, n as ug, r as fce, t as dg } from "./extensionFeatures-Dnpt_iIx.js";
-import { n as pce, r as mce } from "./languageService-C5Ghz3ME.js";
+import { a as cg, i as lg, n as ug, r as fce, t as dg } from "./extensionFeatures-CMMcwnLr.js";
+import { n as pce, r as mce } from "./languageService-CNIR0xe2.js";
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/editor/common/diff/linesDiffComputer.js
 var fg, pg, mg = e((() => {
 	fg = class {
@@ -5597,7 +5597,7 @@ var Pb, Fb, Ib, Lb = e((() => {
 })), KS, qS = e((() => {
 	y(), KS = Z("testService");
 })), JS, Due = e((() => {
-	pm(), JS = "timeline";
+	Tm(), JS = "timeline";
 })), YS, XS = e((() => {
 	y(), Due(), YS = Z(JS);
 })), ZS, QS = e((() => {
@@ -5894,7 +5894,7 @@ function Uue(e) {
 	return e && "host" in e && typeof e.host == "string" && "port" in e && typeof e.port == "number" && (!("detail" in e) || typeof e.detail == "string") && (!("pid" in e) || typeof e.pid == "string");
 }
 var HC, UC, WC, GC, KC, qC, JC, YC, XC, ZC, QC, $C, ew, tw, nw = e((() => {
-	v(), A(), Vi(), K(), Ur(), k(), X(), Mu(), rr(), Oa(), tb(), pa(), Ae(), zC(), wb(), kt(), Hm(), am(), mc(), jn(), Hn(), Cc(), qc(), HC = 10 * 1e3, UC = "remote.tunnels.toRestore", WC = "remote.tunnels.toRestoreExpiration", GC = 1e3 * 60 * 60 * 24 * 14, KC = "onTunnel", qC = new E("forwardedPortsViewEnabled", !1, x(14255, "Whether the Ports view is enabled.")), JC = new E("forwardedPortsViewOnlyEnabled", !1, x(14255, "Whether the Ports view is enabled.")), (function(e) {
+	v(), A(), Vi(), K(), Ur(), k(), X(), Mu(), rr(), Oa(), tb(), pa(), Ae(), zC(), wb(), kt(), Hm(), _m(), mc(), jn(), Hn(), Cc(), qc(), HC = 10 * 1e3, UC = "remote.tunnels.toRestore", WC = "remote.tunnels.toRestoreExpiration", GC = 1e3 * 60 * 60 * 24 * 14, KC = "onTunnel", qC = new E("forwardedPortsViewEnabled", !1, x(14255, "Whether the Ports view is enabled.")), JC = new E("forwardedPortsViewOnlyEnabled", !1, x(14255, "Whether the Ports view is enabled.")), (function(e) {
 		e.Other = "Other", e.User = "User", e.AutoForwardEnd = "AutoForwardEnd";
 	})(YC ||= {}), (function(e) {
 		e[e.User = 0] = "User", e[e.Auto = 1] = "Auto", e[e.Extension = 2] = "Extension";
@@ -6386,7 +6386,7 @@ var HC, UC, WC, GC, KC, qC, JC, YC, XC, ZC, QC, $C, ew, tw, nw = e((() => {
 		V(5, Jr),
 		V(6, xn),
 		V(7, he),
-		V(8, $p),
+		V(8, Qp),
 		V(9, Nl)
 	], tw);
 })), rw, iw, aw, ow, sw, cw, lw, uw, dw, fw, pw, mw, hw, gw, _w, vw = e((() => {
@@ -6648,10 +6648,10 @@ var Kw, qw, Jw, Yw, Xw, Zw = e((() => {
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/contrib/mcp/common/mcpTypes.js
 function nT(e, t) {
-	return vm.toKey(e) + "/" + t;
+	return pm.toKey(e) + "/" + t;
 }
 var Yue, Xue, rT, iT, aT, Zue, oT, sT, Que, cT, lT, uT, dT, $ue, ede, tde, fT, nde, rde, ide, ade, pT = e((() => {
-	v(), Gr(), Nc(), na(), k(), Hn(), kr(), X(), A(), Cc(), pm(), Bw(), zx(), tT(), Jue(), (function(e) {
+	v(), Gr(), Nc(), na(), k(), Hn(), kr(), X(), A(), Cc(), Tm(), Bw(), zx(), tT(), Jue(), (function(e) {
 		e[e.WorkspaceFolder = 0] = "WorkspaceFolder", e[e.Workspace = 100] = "Workspace", e[e.User = 200] = "User", e[e.Extension = 300] = "Extension", e[e.Filesystem = 400] = "Filesystem", e[e.RemoteBoost = -50] = "RemoteBoost";
 	})(Yue ||= {}), (function(e) {
 		function t(e, t) {
@@ -7034,7 +7034,7 @@ function OT(e, t, n) {
 	});
 }
 var kT, AT, jT, MT, NT, PT, FT, IT, LT, RT = e((() => {
-	v(), Te(), ye(), mc(), K(), md(), k(), A(), Mu(), Cc(), qc(), rr(), y(), Oa(), cm(), ET(), sb(), pa(), Ae(), Ji(), ne(), vC(), Pd(), X(), Xi(), Hm(), ic(), zm(), Gm(), Gr(), ai(), kr(), we(), (function(e) {
+	v(), Te(), ye(), mc(), K(), md(), k(), A(), Mu(), Cc(), qc(), rr(), y(), Oa(), im(), ET(), sb(), pa(), Ae(), Ji(), ne(), vC(), Pd(), X(), Xi(), Hm(), ic(), zm(), Gm(), Gr(), ai(), kr(), we(), (function(e) {
 		e.Setup = {
 			hidden: new E("chatSetupHidden", !1, !0),
 			installed: new E("chatSetupInstalled", !1, !0),
@@ -7171,7 +7171,7 @@ var kT, AT, jT, MT, NT, PT, FT, IT, LT, RT = e((() => {
 		}
 	}, FT = D([
 		V(0, w),
-		V(1, nm),
+		V(1, tm),
 		V(2, Nm),
 		V(3, Nl),
 		V(4, ds),
@@ -21425,7 +21425,7 @@ var NN, PN, FN, IN, LN, RN, zN, BN, VN, HN, UN, WN, GN, KN = e((() => {
 		e.fromRaw = t;
 	})(YN ||= {}), z.vscodeChatEditor, z.walkThrough, z.vscodeLocalChatSession, z.vscodeSettings, z.webviewPanel, z.vscodeUserData, z.extension, new E("inModelsEditor", !1), new E("inModelsSearch", !1);
 })), ZN, xhe, QN = e((() => {
-	A(), Cc(), un(), hm(), RT(), XN(), (function(e) {
+	A(), Cc(), un(), xm(), RT(), XN(), (function(e) {
 		e.responseVote = new E("chatSessionResponseVote", "", {
 			type: "string",
 			description: x(5880, "When the response has been voted up, is set to 'up'. When voted down, is set to 'down'. Otherwise an empty string.")
@@ -21492,7 +21492,7 @@ var NN, PN, FN, IN, LN, RN, zN, BN, VN, HN, UN, WN, GN, KN = e((() => {
 		}), e.chatToolGroupingThreshold = new E("chat.toolGroupingThreshold", 0, {
 			type: "number",
 			description: x(5901, "The number of tools at which we start doing virtual grouping.")
-		}), e.supported = b.or(Sr.negate(), Xoe.notEqualsTo(""), b.has("config.chat.experimental.serverlessWebEnabled")), e.enabled = new E("chatIsEnabled", !1, {
+		}), e.supported = b.or(Sr.negate(), cse.notEqualsTo(""), b.has("config.chat.experimental.serverlessWebEnabled")), e.enabled = new E("chatIsEnabled", !1, {
 			type: "boolean",
 			description: x(5902, "True when chat is enabled because a default chat participant is activated with an implementation.")
 		}), e.lockedToCodingAgent = new E("lockedToCodingAgent", !1, {
@@ -22183,7 +22183,7 @@ function Dhe(e, t) {
 	return r === 0 ? n : "";
 }
 var yP, bP, xP, SP, CP, wP, Ohe = e((() => {
-	v(), k(), si(), i(), pu(), GO(), A(), st(), ms(), Hs(), zm(), Gm(), Oa(), kt(), mP(), cg(), pce(), vP(), tm(), Li(), pa(), Ae(), jn(), y(), Fm(), Ei(), Aw(), Gr(), (function(e) {
+	v(), k(), si(), i(), pu(), GO(), A(), st(), ms(), Hs(), zm(), Gm(), Oa(), kt(), mP(), cg(), pce(), vP(), rm(), Li(), pa(), Ae(), jn(), y(), Fm(), Ei(), Aw(), Gr(), (function(e) {
 		function t(e, t, n) {
 			if (al(t.path)) return e.collector.error(x(11013, "Expected string in `contributes.{0}.path`. Provided value: {1}", e.description.name, String(t.path))), null;
 			if (al(t.language) && !t.path.endsWith(".code-snippets")) return e.collector.error(x(11014, "When omitting the language, the value of `contributes.{0}.path` must be a `.code-snippets`-file. Provided value: {1}", e.description.name, String(t.path))), null;
@@ -22396,7 +22396,7 @@ var yP, bP, xP, SP, CP, wP, Ohe = e((() => {
 		V(4, xn),
 		V(5, Zs),
 		V(6, Jm),
-		V(7, lm),
+		V(7, bm),
 		V(8, Bm),
 		V(9, w),
 		V(10, Sd)
@@ -22709,7 +22709,7 @@ function RP(e) {
 	return t;
 }
 async function Nhe(e, t) {
-	if (Cm.supported(Ss)) {
+	if (ym.supported(Ss)) {
 		let n = t.dataTransfer?.items;
 		if (n) return Phe(e, n);
 	}
@@ -22718,7 +22718,7 @@ async function Nhe(e, t) {
 }
 async function Phe(e, t) {
 	let n = e.get(Zs).getProvider(z.file);
-	if (!(n instanceof fse)) return [];
+	if (!(n instanceof mse)) return [];
 	let r = [];
 	for (let e = 0; e < t.length; e++) {
 		let i = t[e];
@@ -22731,10 +22731,10 @@ async function Phe(e, t) {
 						e.complete(void 0);
 						return;
 					}
-					Cm.isFileSystemFileHandle(t) ? e.complete({
+					ym.isFileSystemFileHandle(t) ? e.complete({
 						resource: await n.registerFileHandle(t),
 						isDirectory: !1
-					}) : Cm.isFileSystemDirectoryHandle(t) ? e.complete({
+					}) : ym.isFileSystemDirectoryHandle(t) ? e.complete({
 						resource: await n.registerDirectoryHandle(t),
 						isDirectory: !0
 					}) : e.complete(void 0);
@@ -22793,7 +22793,7 @@ function BP(e) {
 	if (Are && typeof globalThis.vscode?.webUtils?.getPathForFile == "function") return globalThis.vscode?.webUtils?.getPathForFile(e);
 }
 var VP, HP, UP, WP, GP = e((() => {
-	Ml(), Uu(), Gr(), ye(), na(), k(), Li(), Rc(), jl(), ic(), X(), A(), rr(), gse(), mse(), ms(), Hs(), y(), ut(), Ts(), VP = {
+	Ml(), Uu(), Gr(), ye(), na(), k(), Li(), Rc(), jl(), ic(), X(), A(), rr(), hse(), vse(), ms(), Hs(), y(), ut(), Ts(), VP = {
 		EDITORS: "CodeEditors",
 		FILES: "CodeFiles",
 		SYMBOLS: "application/vnd.code.symbols",
@@ -23249,7 +23249,7 @@ var fF = e((() => {
 		V(7, fc)
 	], hF);
 })), _F, vF, yF, bF, xF, SF, CF = e((() => {
-	v(), M(), Gr(), ye(), mc(), FP(), R(), LP(), k(), o(), ic(), jn(), Bc(), A(), od(), $u(), Mu(), Cc(), y(), Oa(), mm(), sa(), oo(), Hoe(), YP(), Fr(), Dd(), qs(), Ou(), va(), Vp(), n_(), $P(), fy(), lF(), fF(), gF(), vF = "editor.changePasteType", yF = "editor.pasteAs.preferences", bF = new E("pasteWidgetVisible", !1, x(1018, "Whether the paste widget is showing")), xF = "application/vnd.code.copymetadata", SF = class extends H {
+	v(), M(), Gr(), ye(), mc(), FP(), R(), LP(), k(), o(), ic(), jn(), Bc(), A(), od(), $u(), Mu(), Cc(), y(), Oa(), Em(), sa(), oo(), Hoe(), YP(), Fr(), Dd(), qs(), Ou(), va(), Vp(), n_(), $P(), fy(), lF(), fF(), gF(), vF = "editor.changePasteType", yF = "editor.pasteAs.preferences", bF = new E("pasteWidgetVisible", !1, x(1018, "Whether the paste widget is showing")), xF = "application/vnd.code.copymetadata", SF = class extends H {
 		static {
 			_F = this;
 		}
@@ -23452,7 +23452,7 @@ var fF = e((() => {
 				}
 			});
 			this._progressService.withProgress({
-				location: ym.Window,
+				location: um.Window,
 				title: x(1026, "Running paste handlers")
 			}, () => a);
 		}
@@ -23697,7 +23697,7 @@ function Jhe(e) {
 	if (e instanceof Error && typeof e.message == "string") return e.message;
 }
 var NF, PF, FF, IF, LF, RF, zF, BF, VF, HF, UF, WF = e((() => {
-	Gr(), mc(), R(), LP(), k(), X(), A(), Tp(), Uc(), Is(), $u(), er(), mm(), ne(), Fr(), qs(), Dl(), va(), Vp(), Yr(), yo(), n_(), AF(), NF = "editor.action.codeAction", PF = "editor.action.quickFix", FF = "editor.action.autoFix", IF = "editor.action.refactor", LF = "editor.action.sourceAction", RF = "editor.action.organizeImports", zF = "editor.action.fixAll", BF = 1e3, VF = class e extends H {
+	Gr(), mc(), R(), LP(), k(), X(), A(), Tp(), Uc(), Is(), $u(), er(), Em(), ne(), Fr(), qs(), Dl(), va(), Vp(), Yr(), yo(), n_(), AF(), NF = "editor.action.codeAction", PF = "editor.action.quickFix", FF = "editor.action.autoFix", IF = "editor.action.refactor", LF = "editor.action.sourceAction", RF = "editor.action.organizeImports", zF = "editor.action.fixAll", BF = 1e3, VF = class e extends H {
 		static codeActionsPreferredComparator(e, t) {
 			return e.isPreferred && !t.isPreferred ? -1 : !e.isPreferred && t.isPreferred ? 1 : 0;
 		}
@@ -23734,7 +23734,7 @@ var NF, PF, FF, IF, LF, RF, zF, BF, VF, HF, UF, WF = e((() => {
 				includeSourceActions: !0,
 				include: c
 			}
-		}, xm.None, O.None), u = [], d = Math.min(l.validActions.length, typeof i == "number" ? i : 0);
+		}, hm.None, O.None), u = [], d = Math.min(l.validActions.length, typeof i == "number" ? i : 0);
 		for (let e = 0; e < d; e++) u.push(l.validActions[e].resolve(O.None));
 		try {
 			return await Promise.all(u), l.validActions.map((e) => e.action);
@@ -23869,7 +23869,7 @@ var qF, JF, Zhe = e((() => {
 		qF
 	]);
 })), YF, XF, ZF, QF, $F, eI = e((() => {
-	ye(), R(), K(), LP(), k(), si(), Cc(), mm(), Dd(), $a(), Dl(), va(), AF(), WF(), YF = new E("supportedCodeAction", ""), XF = class extends H {
+	ye(), R(), K(), LP(), k(), si(), Cc(), Em(), Dd(), $a(), Dl(), va(), AF(), WF(), YF = new E("supportedCodeAction", ""), XF = class extends H {
 		constructor(e, t, n, r = 250) {
 			super(), this._editor = e, this._markerService = t, this._signalChange = n, this._delay = r, this._autoTriggerTimer = this._register(new et()), this._register(this._markerService.onMarkerChanged((e) => this._onMarkerChanges(e))), this._register(this._editor.onDidChangeCursorPosition(() => this._tryAutoTrigger()));
 		}
@@ -23963,7 +23963,7 @@ var qF, JF, Zhe = e((() => {
 					}
 					let n = t.selection.getStartPosition(), r = mt(async (n) => {
 						if (this._settingEnabledNearbyQuickfixes() && t.trigger.type === Ol.Invoke && (t.trigger.triggerAction === DF.QuickFix || t.trigger.filter?.include?.contains(TF.QuickFix))) {
-							let r = await jF(this._registry, e, t.selection, t.trigger, xm.None, n);
+							let r = await jF(this._registry, e, t.selection, t.trigger, hm.None, n);
 							this.codeActionsDisposable.value = r;
 							let i = [...r.allActions];
 							if (n.isCancellationRequested) return r.dispose(), QF;
@@ -23996,7 +23996,7 @@ var qF, JF, Zhe = e((() => {
 												notAvailableMessage: t.trigger.context?.notAvailableMessage || "",
 												position: s
 											}
-										}, p = new Zo(s.lineNumber, s.column, s.lineNumber, s.column), m = await jF(this._registry, e, p, u, xm.None, n);
+										}, p = new Zo(s.lineNumber, s.column, s.lineNumber, s.column), m = await jF(this._registry, e, p, u, hm.None, n);
 										if (n.isCancellationRequested) return m.dispose(), QF;
 										if (m.validActions.length !== 0) {
 											for (let e of m.validActions) e.action.command?.arguments?.some((e) => typeof e == "string" && e.includes("_typescript.applyFixAllCodeAction")) && (e.action.diagnostics = [...o.filter((e) => e.relatedInformation)]);
@@ -24020,10 +24020,10 @@ var qF, JF, Zhe = e((() => {
 							}
 						}
 						if (t.trigger.type === Ol.Invoke) {
-							let r = await jF(this._registry, e, t.selection, t.trigger, xm.None, n);
+							let r = await jF(this._registry, e, t.selection, t.trigger, hm.None, n);
 							return this.codeActionsDisposable.value = r, r;
 						}
-						let r = await jF(this._registry, e, t.selection, t.trigger, xm.None, n);
+						let r = await jF(this._registry, e, t.selection, t.trigger, hm.None, n);
 						return this.codeActionsDisposable.value = r, r;
 					});
 					t.trigger.type === Ol.Invoke && this._progressService?.showWhile(r, 250);
@@ -27211,7 +27211,7 @@ var qR, JR = e((() => {
 		}
 	}));
 })), Lz, Rz, zz, Bz, Vz = e((() => {
-	v(), M(), Gr(), ye(), R(), k(), si(), Dd(), qs(), va(), Vp(), Mne(), WF(), pI(), AF(), Iz(), fL(), A(), Ni(), Pd(), mm(), vd(), Hu(), Lz = C, Rz = class {
+	v(), M(), Gr(), ye(), R(), k(), si(), Dd(), qs(), va(), Vp(), Mne(), WF(), pI(), AF(), Iz(), fL(), A(), Ni(), Pd(), Em(), vd(), Hu(), Lz = C, Rz = class {
 		constructor(e, t, n) {
 			this.owner = e, this.range = t, this.marker = n;
 		}
@@ -27357,7 +27357,7 @@ var qR, JR = e((() => {
 			return n;
 		}
 		getCodeActions(e) {
-			return mt((t) => jF(this._languageFeaturesService.codeActionProvider, this._editor.getModel(), new U(e.startLineNumber, e.startColumn, e.endLineNumber, e.endColumn), zz, xm.None, t));
+			return mt((t) => jF(this._languageFeaturesService.codeActionProvider, this._editor.getModel(), new U(e.startLineNumber, e.startColumn, e.endLineNumber, e.endColumn), zz, hm.None, t));
 		}
 	}, Bz = D([
 		V(1, ete),
@@ -28932,11 +28932,11 @@ function Xge(e, t) {
 	return i < a ? -1 : +(i > a);
 }
 function nV(e, t) {
-	let n = new pse(t);
+	let n = new _se(t);
 	return e.filter((e) => !n.has(e.identifier));
 }
 var rV, iV, aV, oV, sV, cV, lV, uV, dV = e((() => {
-	pm(), K(), cd(), k(), ye(), rV = class {
+	Tm(), K(), cd(), k(), ye(), rV = class {
 		constructor(e, t) {
 			this.versionId = e, this.removedDueToLooping = t;
 		}
@@ -28950,7 +28950,7 @@ var rV, iV, aV, oV, sV, cV, lV, uV, dV = e((() => {
 			super(), this._activationEventsReader = e, this._onDidChange = this._register(new q()), this.onDidChange = this._onDidChange.event, this._versionId = 0, this._extensionDescriptions = t, this._initialize();
 		}
 		_initialize() {
-			this._extensionDescriptions.sort(Xge), this._extensionsMap = new Sm(), this._extensionsArr = [], this._activationMap = /* @__PURE__ */ new Map();
+			this._extensionDescriptions.sort(Xge), this._extensionsMap = new vm(), this._extensionsArr = [], this._activationMap = /* @__PURE__ */ new Map();
 			for (let e of this._extensionDescriptions) {
 				if (this._extensionsMap.has(e.identifier)) {
 					console.error("Extension `" + e.identifier.value + "` is already registered");
@@ -28991,8 +28991,8 @@ var rV, iV, aV, oV, sV, cV, lV, uV, dV = e((() => {
 				getNodes() {
 					return this._nodesArr;
 				}
-			}(), n = new Sm();
-			for (let r of e) if (n.set(r.identifier, r), r.extensionDependencies) for (let e of r.extensionDependencies) t.addArc(vm.toKey(r.identifier), vm.toKey(e));
+			}(), n = new vm();
+			for (let r of e) if (n.set(r.identifier, r), r.extensionDependencies) for (let e of r.extensionDependencies) t.addArc(pm.toKey(r.identifier), pm.toKey(e));
 			let r = /* @__PURE__ */ new Set();
 			t.getNodes().filter((e) => t.getArcs(e).length === 0).forEach((e) => r.add(e));
 			let i = t.getNodes().filter((e) => !r.has(e)), a;
@@ -30151,7 +30151,7 @@ function r_e(e, t, n) {
 	});
 }
 var cH, lH = e((() => {
-	v(), jl(), Mu(), pm(), Oa(), Hm(), Lh(), OC(), oH(), cH = class {
+	v(), jl(), Mu(), Tm(), Oa(), Hm(), Lh(), OC(), oH(), cH = class {
 		get maxLocalProcessAffinity() {
 			return this._maxLocalProcessAffinity;
 		}
@@ -30159,7 +30159,7 @@ var cH, lH = e((() => {
 			return this._maxLocalWebWorkerAffinity;
 		}
 		constructor(e, t, n, r, i, a) {
-			this._registry = e, this._extensionHostKindPicker = t, this._environmentService = n, this._configurationService = r, this._logService = i, this._extensionManifestPropertiesService = a, this._runningLocation = new Sm(), this._maxLocalProcessAffinity = 0, this._maxLocalWebWorkerAffinity = 0;
+			this._registry = e, this._extensionHostKindPicker = t, this._environmentService = n, this._configurationService = r, this._logService = i, this._extensionManifestPropertiesService = a, this._runningLocation = new vm(), this._maxLocalProcessAffinity = 0, this._maxLocalWebWorkerAffinity = 0;
 		}
 		set(e, t) {
 			this._runningLocation.set(e, t);
@@ -30180,13 +30180,13 @@ var cH, lH = e((() => {
 			return sH(e, this._runningLocation, (e) => t.representsRunningLocation(e));
 		}
 		_computeAffinity(e, t, n) {
-			let r = new Sm();
+			let r = new vm();
 			for (let t of e) (t.main || t.browser) && r.set(t.identifier, t);
 			for (let e of this._registry.getAllExtensionDescriptions()) if (e.main || e.browser) {
 				let n = this._runningLocation.get(e.identifier);
 				n && n.kind === t && r.set(e.identifier, e);
 			}
-			let i = new Sm(), a = 0;
+			let i = new vm(), a = 0;
 			for (let [e, t] of r) i.set(t.identifier, ++a);
 			let o = (e, t) => {
 				for (let [n, r] of i) r === e && i.set(n, t);
@@ -30235,7 +30235,7 @@ var cH, lH = e((() => {
 					r.set(t, d), s.set(o, d);
 				}
 			}
-			let l = new Sm();
+			let l = new vm();
 			for (let t of e) {
 				let e = i.get(t.identifier) || 0, n = s.get(e) || 0;
 				l.set(t.identifier, n);
@@ -30255,10 +30255,10 @@ var cH, lH = e((() => {
 		}
 		_doComputeRunningLocation(e, t, n, r) {
 			t = t.filter((t) => !e.has(t.identifier)), n = n.filter((t) => !e.has(t.identifier));
-			let i = lce(t, n, (e) => this.readExtensionKinds(e), (e, t, n, r, i) => this._extensionHostKindPicker.pickExtensionHostKind(e, t, n, r, i)), a = new Sm();
+			let i = lce(t, n, (e) => this.readExtensionKinds(e), (e, t, n, r, i) => this._extensionHostKindPicker.pickExtensionHostKind(e, t, n, r, i)), a = new vm();
 			for (let e of t) a.set(e.identifier, e);
 			for (let e of n) a.set(e.identifier, e);
-			let o = new Sm(), s = [], c = [];
+			let o = new vm(), s = [], c = [];
 			for (let [e, t] of i) {
 				let n = null;
 				if (t === Vh.LocalProcess) {
@@ -30292,7 +30292,7 @@ var cH, lH = e((() => {
 			this._runningLocation = n, this._maxLocalProcessAffinity = r, this._maxLocalWebWorkerAffinity = i;
 		}
 		deltaExtensions(e, t) {
-			let n = new Sm();
+			let n = new vm();
 			for (let e of t) {
 				let t = e;
 				n.set(t, this._runningLocation.get(t) || null), this._runningLocation.delete(t);
@@ -30914,13 +30914,13 @@ function w_e(e, t, n, r) {
 	return i;
 }
 function T_e(e, t) {
-	for (let n of e) if (vm.equals(n.identifier, t)) return !0;
+	for (let n of e) if (pm.equals(n.identifier, t)) return !0;
 	return !1;
 }
 var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
-	v(), ye(), Ir(), K(), dc(), k(), jl(), Jc(), ic(), si(), Bu(), jn(), A(), Mu(), rr(), sm(), Joe(), pm(), Hs(), Ru(), y(), Yge(), Oa(), Bn(), er(), cm(), Ts(), tV(), tb(), rb(), ne(), kt(), Hm(), ug(), Bh(), dV(), pV(), Lh(), nH(), OC(), oH(), lH(), Fh(), cg(), i_e(), qV(), HH(), zm(), Gm(), bf(), Xi(), GH = Object.hasOwnProperty, KH = Promise.resolve(void 0), qH = WH = class extends H {
+	v(), ye(), Ir(), K(), dc(), k(), jl(), Jc(), ic(), si(), Bu(), jn(), A(), Mu(), rr(), lm(), $oe(), Tm(), Hs(), Ru(), y(), Yge(), Oa(), Bn(), er(), im(), Ts(), tV(), tb(), rb(), ne(), kt(), Hm(), ug(), Bh(), dV(), pV(), Lh(), nH(), OC(), oH(), lH(), Fh(), cg(), i_e(), qV(), HH(), zm(), Gm(), bf(), Xi(), GH = Object.hasOwnProperty, KH = Promise.resolve(void 0), qH = WH = class extends H {
 		constructor(e, t, n, r, i, a, o, s, c, l, u, d, f, p, m, h, g, ee, te, ne, _) {
-			super(), this._extensionsProposedApi = t, this._extensionHostFactory = n, this._extensionHostKindPicker = r, this._instantiationService = i, this._notificationService = a, this._environmentService = o, this._telemetryService = s, this._extensionEnablementService = c, this._fileService = l, this._productService = u, this._extensionManagementService = d, this._contextService = f, this._configurationService = p, this._extensionManifestPropertiesService = m, this._logService = h, this._remoteAgentService = g, this._remoteExtensionsScannerService = ee, this._lifecycleService = te, this._remoteAuthorityResolverService = ne, this._dialogService = _, this._onDidRegisterExtensions = this._register(new q()), this.onDidRegisterExtensions = this._onDidRegisterExtensions.event, this._onDidChangeExtensionsStatus = this._register(new q()), this.onDidChangeExtensionsStatus = this._onDidChangeExtensionsStatus.event, this._onDidChangeExtensions = this._register(new q({ leakWarningThreshold: 400 })), this.onDidChangeExtensions = this._onDidChangeExtensions.event, this._onWillActivateByEvent = this._register(new q()), this.onWillActivateByEvent = this._onWillActivateByEvent.event, this._onDidChangeResponsiveChange = this._register(new q()), this.onDidChangeResponsiveChange = this._onDidChangeResponsiveChange.event, this._onWillStop = this._register(new q()), this.onWillStop = this._onWillStop.event, this._activationEventReader = new nU(), this._registry = new oV(this._activationEventReader), this._installedExtensionsReady = new Cl(), this._extensionStatus = new Sm(), this._allRequestedActivateEvents = /* @__PURE__ */ new Set(), this._remoteCrashTracker = new tU(), this._deltaExtensionsQueue = [], this._inHandleDeltaExtensions = !1, this._extensionHostManagers = this._register(new JH()), this._resolveAuthorityAttempt = 0, this._initializePromise = null, this._hasLocalProcess = e.hasLocalProcess, this._allowRemoteExtensionsInLocalWebWorker = e.allowRemoteExtensionsInLocalWebWorker, this._register(this._fileService.onWillActivateFileSystemProvider((e) => {
+			super(), this._extensionsProposedApi = t, this._extensionHostFactory = n, this._extensionHostKindPicker = r, this._instantiationService = i, this._notificationService = a, this._environmentService = o, this._telemetryService = s, this._extensionEnablementService = c, this._fileService = l, this._productService = u, this._extensionManagementService = d, this._contextService = f, this._configurationService = p, this._extensionManifestPropertiesService = m, this._logService = h, this._remoteAgentService = g, this._remoteExtensionsScannerService = ee, this._lifecycleService = te, this._remoteAuthorityResolverService = ne, this._dialogService = _, this._onDidRegisterExtensions = this._register(new q()), this.onDidRegisterExtensions = this._onDidRegisterExtensions.event, this._onDidChangeExtensionsStatus = this._register(new q()), this.onDidChangeExtensionsStatus = this._onDidChangeExtensionsStatus.event, this._onDidChangeExtensions = this._register(new q({ leakWarningThreshold: 400 })), this.onDidChangeExtensions = this._onDidChangeExtensions.event, this._onWillActivateByEvent = this._register(new q()), this.onWillActivateByEvent = this._onWillActivateByEvent.event, this._onDidChangeResponsiveChange = this._register(new q()), this.onDidChangeResponsiveChange = this._onDidChangeResponsiveChange.event, this._onWillStop = this._register(new q()), this.onWillStop = this._onWillStop.event, this._activationEventReader = new nU(), this._registry = new oV(this._activationEventReader), this._installedExtensionsReady = new Cl(), this._extensionStatus = new vm(), this._allRequestedActivateEvents = /* @__PURE__ */ new Set(), this._remoteCrashTracker = new tU(), this._deltaExtensionsQueue = [], this._inHandleDeltaExtensions = !1, this._extensionHostManagers = this._register(new JH()), this._resolveAuthorityAttempt = 0, this._initializePromise = null, this._hasLocalProcess = e.hasLocalProcess, this._allowRemoteExtensionsInLocalWebWorker = e.allowRemoteExtensionsInLocalWebWorker, this._register(this._fileService.onWillActivateFileSystemProvider((e) => {
 				e.scheme !== z.vscodeRemote && e.join(this.activateByEvent(`onFileSystem:${e.scheme}`));
 			})), this._runningLocations = new cH(this._registry, this._extensionHostKindPicker, this._environmentService, this._configurationService, this._logService, this._extensionManifestPropertiesService), this._register(this._extensionEnablementService.onEnablementChanged((e) => {
 				let t = [], n = [];
@@ -30932,7 +30932,7 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 				e.length && (gl && this._logService.info("AbstractExtensionService.onDidEnableExtensions fired"), this._handleDeltaExtensions(new $H(e, [])));
 			})), this._register(this._extensionManagementService.onDidInstallExtensions((e) => {
 				let t = [], n = [];
-				for (let { local: r, operation: i } of e) r && r.isValid && i !== em.Migrate && this._safeInvokeIsEnabled(r) && (t.push(r), i === em.Update && n.push(r.identifier.id));
+				for (let { local: r, operation: i } of e) r && r.isValid && i !== sm.Migrate && this._safeInvokeIsEnabled(r) && (t.push(r), i === sm.Update && n.push(r.identifier.id));
 				t.length && (gl && this._logService.info(`AbstractExtensionService.onDidInstallExtensions fired for ${t.map((e) => e.identifier.id).join(", ")}`), this._handleDeltaExtensions(new $H(t, n)));
 			})), this._register(this._extensionManagementService.onDidUninstallExtension((e) => {
 				e.error || (gl && this._logService.info(`AbstractExtensionService.onDidUninstallExtension fired for ${e.identifier.id}`), this._handleDeltaExtensions(new $H([], [e.identifier.id])));
@@ -30996,7 +30996,7 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 			await Promise.all(i);
 		}
 		async _updateExtensionsOnExtHost(e, t, n, r, i) {
-			let a = this._runningLocations.filterByExtensionHostManager(n, e), o = r_e(r, i, (t) => e.representsRunningLocation(t)), s = _m.createActivationEventsMap(n);
+			let a = this._runningLocations.filterByExtensionHostManager(n, e), o = r_e(r, i, (t) => e.representsRunningLocation(t)), s = am.createActivationEventsMap(n);
 			if (gl) {
 				let e = (e) => e.map((e) => e.identifier.value).join(","), t = (e) => e.map((e) => e.value).join(",");
 				this._logService.info(`AbstractExtensionService: Calling deltaExtensions: toRemove: [${t(r)}], toAdd: [${e(n)}], myToRemove: [${t(o)}], myToAdd: [${e(a)}],`);
@@ -31014,7 +31014,7 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 			return this._canAddExtension(e, []);
 		}
 		_canAddExtension(e, t) {
-			if (this._registry.getExtensionDescriptionByIdOrUUID(e.identifier, e.id) && !t.some((t) => vm.equals(e.identifier, t.identifier))) return !1;
+			if (this._registry.getExtensionDescriptionByIdOrUUID(e.identifier, e.id) && !t.some((t) => pm.equals(e.identifier, t.identifier))) return !1;
 			let n = this._runningLocations.readExtensionKinds(e), r = e.extensionLocation.scheme === z.vscodeRemote;
 			return this._extensionHostKindPicker.pickExtensionHostKind(e.identifier, n, !r, r, Xh.None) !== null;
 		}
@@ -31080,8 +31080,8 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 			r = this._runningLocations.filterByExtensionHostKind(r, Vh.Remote);
 			for (let e of i) T_e(o, e.identifier) || o.push(e);
 			let s = r.concat(a).concat(o), c = s;
-			if (t.length && (c = s.filter((e) => !t.some((t) => vm.equals(t.identifier, e.identifier) && t.extensionLocation.toString() === e.extensionLocation.toString())), s.length < c.length + t.length)) {
-				let n = t.filter((e) => !s.some((t) => vm.equals(t.identifier, e.identifier) && t.extensionLocation.toString() === e.extensionLocation.toString()));
+			if (t.length && (c = s.filter((e) => !t.some((t) => pm.equals(t.identifier, e.identifier) && t.extensionLocation.toString() === e.extensionLocation.toString())), s.length < c.length + t.length)) {
+				let n = t.filter((e) => !s.some((t) => pm.equals(t.identifier, e.identifier) && t.extensionLocation.toString() === e.extensionLocation.toString()));
 				n.length && (this._registry.deltaExtensions(e, [], n.map((e) => e.identifier)), this._doHandleExtensionPoints(n, !0));
 			}
 			let l = this._registry.deltaExtensions(e, c, []);
@@ -31431,7 +31431,7 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 		V(7, li),
 		V(8, Jh),
 		V(9, Zs),
-		V(10, nm),
+		V(10, tm),
 		V(11, jh),
 		V(12, Jr),
 		V(13, ds),
@@ -31562,7 +31562,7 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 		}
 	}, nU = class {
 		readActivationEvents(e) {
-			return _m.readActivationEvents(e);
+			return am.readActivationEvents(e);
 		}
 	}, rU = class extends H {
 		constructor() {
@@ -31586,7 +31586,7 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 		renderer: new vs(rU)
 	});
 })), aU, oU, sU, cU, lU, uU, dU, fU, pU, mU, E_e = e((() => {
-	v(), K(), k(), xs(), jl(), X(), Mu(), ai(), tb(), nse(), $oe(), pa(), Ae(), du(), kt(), coe(), Ar(), nf(), Hm(), _n(), si(), ic(), Hs(), ye(), aU = "security.workspace.trust.enabled", oU = "security.workspace.trust.untrustedFiles", sU = "security.workspace.trust.emptyWindow", cU = "content.trust.model.key", lU = class {
+	v(), K(), k(), xs(), jl(), X(), Mu(), ai(), tb(), ase(), dse(), pa(), Ae(), du(), kt(), coe(), Ar(), nf(), Hm(), _n(), si(), ic(), Hs(), ye(), aU = "security.workspace.trust.enabled", oU = "security.workspace.trust.untrustedFiles", sU = "security.workspace.trust.emptyWindow", cU = "content.trust.model.key", lU = class {
 		constructor(e, t, n) {
 			this.originalWorkspace = e, this.canonicalFolderUris = t, this.canonicalConfiguration = n;
 		}
@@ -31723,10 +31723,10 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 			return e ? Jo(this.workspaceService.getWorkspace()) && e.folders.length === 0 : !1;
 		}
 		isTrustedVirtualResource(e) {
-			return ose(e) && e.scheme !== "vscode-vfs";
+			return tse(e) && e.scheme !== "vscode-vfs";
 		}
 		isTrustedByRemote(e) {
-			return !this.environmentService.remoteAuthority || !this._remoteAuthority ? !1 : qie(use(e), this._remoteAuthority.authority.authority) && !!this._remoteAuthority.options?.isTrusted;
+			return !this.environmentService.remoteAuthority || !this._remoteAuthority ? !1 : qie(Joe(e), this._remoteAuthority.authority.authority) && !!this._remoteAuthority.options?.isTrusted;
 		}
 		set isTrusted(e) {
 			this._isTrusted = e, e || (this._storedTrustState.acceptsOutOfWorkspaceFiles = !1), this.isEmptyWorkspace() && (this._storedTrustState.isEmptyWorkspaceTrusted = e);
@@ -31907,9 +31907,9 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 		}
 	};
 })), hU, D_e = e((() => {
-	v(), Mu(), pm(), cg(), Rh(), Gr(), cm(), ai(), k(), E_e(), jn(), Ar(), Oa(), ic(), y(), hU = class extends H {
+	v(), Mu(), Tm(), cg(), Rh(), Gr(), im(), ai(), k(), E_e(), jn(), Ar(), Oa(), ic(), y(), hU = class extends H {
 		constructor(e, t, n, r) {
-			super(), this.productService = e, this.configurationService = t, this.workspaceTrustEnablementService = n, this.logService = r, this._extensionPointExtensionKindsMap = null, this._productExtensionKindsMap = null, this._configuredExtensionKindsMap = null, this._productVirtualWorkspaceSupportMap = null, this._configuredVirtualWorkspaceSupportMap = null, this._configuredExtensionWorkspaceTrustRequestMap = new Sm();
+			super(), this.productService = e, this.configurationService = t, this.workspaceTrustEnablementService = n, this.logService = r, this._extensionPointExtensionKindsMap = null, this._productExtensionKindsMap = null, this._configuredExtensionKindsMap = null, this._productVirtualWorkspaceSupportMap = null, this._configuredVirtualWorkspaceSupportMap = null, this._configuredExtensionWorkspaceTrustRequestMap = new vm();
 			let i = t.inspect("extensions.supportUntrustedWorkspaces").userValue || {};
 			for (let e of Object.keys(i)) this._configuredExtensionWorkspaceTrustRequestMap.set(e, i[e]);
 			if (this._productExtensionWorkspaceTrustRequestMap = /* @__PURE__ */ new Map(), e.extensionUntrustedWorkspaceSupport) for (let t of Object.keys(e.extensionUntrustedWorkspaceSupport)) this._productExtensionWorkspaceTrustRequestMap.set(t, e.extensionUntrustedWorkspaceSupport[t]);
@@ -31946,7 +31946,7 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 		}
 		getUserConfiguredExtensionKind(e) {
 			if (this._configuredExtensionKindsMap === null) {
-				let e = new Sm(), t = this.configurationService.getValue("remote.extensionKind") || {};
+				let e = new vm(), t = this.configurationService.getValue("remote.extensionKind") || {};
 				for (let n of Object.keys(t)) e.set(n, t[n]);
 				this._configuredExtensionKindsMap = e;
 			}
@@ -31974,7 +31974,7 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 		deduceExtensionKind(e) {
 			if (e.main) return e.browser && co ? ["workspace", "web"] : ["workspace"];
 			if (e.browser) return ["web"];
-			let t = [...lse];
+			let t = [...pse];
 			if ((pi(e.extensionPack) || pi(e.extensionDependencies)) && (t = co ? ["workspace", "web"] : ["workspace"]), e.contributes) for (let n of Object.keys(e.contributes)) {
 				let e = this.getSupportedExtensionKindsForExtensionPoint(n);
 				e.length && (t = t.filter((t) => e.includes(t)));
@@ -31995,7 +31995,7 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 		}
 		getProductExtensionKind(e) {
 			if (this._productExtensionKindsMap === null) {
-				let e = new Sm();
+				let e = new vm();
 				if (this.productService.extensionKind) for (let t of Object.keys(this.productService.extensionKind)) e.set(t, this.productService.extensionKind[t]);
 				this._productExtensionKindsMap = e;
 			}
@@ -32004,7 +32004,7 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 		}
 		getProductVirtualWorkspaceSupport(e) {
 			if (this._productVirtualWorkspaceSupportMap === null) {
-				let e = new Sm();
+				let e = new vm();
 				if (this.productService.extensionVirtualWorkspacesSupport) for (let t of Object.keys(this.productService.extensionVirtualWorkspacesSupport)) e.set(t, this.productService.extensionVirtualWorkspacesSupport[t]);
 				this._productVirtualWorkspaceSupportMap = e;
 			}
@@ -32013,7 +32013,7 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 		}
 		getConfiguredVirtualWorkspaceSupport(e) {
 			if (this._configuredVirtualWorkspaceSupportMap === null) {
-				let e = new Sm(), t = this.configurationService.getValue("extensions.supportVirtualWorkspaces") || {};
+				let e = new vm(), t = this.configurationService.getValue("extensions.supportVirtualWorkspaces") || {};
 				for (let n of Object.keys(t)) t[n] !== void 0 && e.set(n, t[n]);
 				this._configuredVirtualWorkspaceSupportMap = e;
 			}
@@ -32032,16 +32032,16 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 			return Array.isArray(e) ? e : e === "ui" ? ["ui", "workspace"] : [e];
 		}
 	}, hU = D([
-		V(0, nm),
+		V(0, tm),
 		V(1, ds),
 		V(2, ki),
 		V(3, xn)
 	], hU);
 })), gU, _U, vU = e((() => {
-	v(), Gr(), A(), k(), pm(), rse(), Ru(), Oa(), cm(), Ts(), Hm(), ug(), dc(), gU = class {
+	v(), Gr(), A(), k(), Tm(), ose(), Ru(), Oa(), im(), Ts(), Hm(), ug(), dc(), gU = class {
 		constructor(e, t, n) {
-			if (this._logService = e, this._environmentService = t, this._envEnabledExtensions = new Set((t.extensionEnabledProposedApi ?? []).map((e) => vm.toKey(e))), this._envEnablesProposedApiForAll = !t.isBuilt || t.isExtensionDevelopment && n.quality !== "stable" || this._envEnabledExtensions.size === 0 && Array.isArray(t.extensionEnabledProposedApi), this._productEnabledExtensions = /* @__PURE__ */ new Map(), n.extensionEnabledApiProposals) for (let [t, r] of Object.entries(n.extensionEnabledApiProposals)) {
-				let n = vm.toKey(t), i = r.filter((t) => Tm[t] ? !0 : (e.warn(`Via 'product.json#extensionEnabledApiProposals' extension '${n}' wants API proposal '${t}' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.`), !1));
+			if (this._logService = e, this._environmentService = t, this._envEnabledExtensions = new Set((t.extensionEnabledProposedApi ?? []).map((e) => pm.toKey(e))), this._envEnablesProposedApiForAll = !t.isBuilt || t.isExtensionDevelopment && n.quality !== "stable" || this._envEnabledExtensions.size === 0 && Array.isArray(t.extensionEnabledProposedApi), this._productEnabledExtensions = /* @__PURE__ */ new Map(), n.extensionEnabledApiProposals) for (let [t, r] of Object.entries(n.extensionEnabledApiProposals)) {
+				let n = pm.toKey(t), i = r.filter((t) => Cm[t] ? !0 : (e.warn(`Via 'product.json#extensionEnabledApiProposals' extension '${n}' wants API proposal '${t}' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.`), !1));
 				this._productEnabledExtensions.set(n, i);
 			}
 		}
@@ -32049,9 +32049,9 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 			for (let t of e) this.doUpdateEnabledApiProposals(t);
 		}
 		doUpdateEnabledApiProposals(e) {
-			let t = vm.toKey(e.identifier);
+			let t = pm.toKey(e.identifier);
 			if (pi(e.enabledApiProposals) && (e.enabledApiProposals = e.enabledApiProposals.filter((e) => {
-				let n = !!Tm[e];
+				let n = !!Cm[e];
 				return n || this._logService.error(`Extension '${t}' wants API proposal '${e}' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.`), n;
 			})), this._productEnabledExtensions.has(t)) {
 				let n = this._productEnabledExtensions.get(t), r = new Set(n), i = new Set(e.enabledApiProposals), a = new Set([...i].filter((e) => !r.has(e)));
@@ -32063,7 +32063,7 @@ var WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU = e((() => {
 	}, gU = D([
 		V(0, xn),
 		V(1, Nm),
-		V(2, nm)
+		V(2, tm)
 	], gU), _U = class extends H {
 		constructor() {
 			super(...arguments), this.type = "markdown";
@@ -33241,7 +33241,7 @@ var EW, DW, OW, H_e, kW = e((() => {
 		e.Start = "START_NATIVE_LOG", e.End = "END_NATIVE_LOG";
 	})(H_e ||= {});
 })), AW, jW, MW = e((() => {
-	v(), M(), ce(), Uu(), ye(), na(), R(), K(), k(), jl(), ic(), si(), X(), Bc(), A(), En(), Zr(), Oa(), cm(), pa(), Ae(), ne(), qh(), $h(), Woe(), bae(), du(), kt(), rg(), Mx(), kW(), Fh(), eee(), AW = class extends H {
+	v(), M(), ce(), Uu(), ye(), na(), R(), K(), k(), jl(), ic(), si(), X(), Bc(), A(), En(), Zr(), Oa(), im(), pa(), Ae(), ne(), qh(), $h(), Woe(), bae(), du(), kt(), rg(), Mx(), kW(), Fh(), eee(), AW = class extends H {
 		constructor(e, t, n, r, i, a, o, s, c, l, u, d, f, p, m) {
 			super(), this.runningLocation = e, this.startup = t, this._initDataProvider = n, this._telemetryService = r, this._contextService = i, this._labelService = a, this._logService = o, this._loggerService = s, this._environmentService = c, this._userDataProfilesService = l, this._productService = u, this._layoutService = d, this._storageService = f, this._webWorkerService = p, this._defaultLogLevelsService = m, this.pid = null, this.remoteAuthority = null, this.extensions = null, this._onDidExit = this._register(new q()), this.onExit = this._onDidExit.event, this._isTerminating = !1, this._protocolPromise = null, this._protocol = null, this._extensionHostLogsLocation = au(this._environmentService.extHostLogsPath, "webWorker");
 		}
@@ -33405,7 +33405,7 @@ var EW, DW, OW, H_e, kW = e((() => {
 		V(7, Ba),
 		V(8, og),
 		V(9, Qh),
-		V(10, nm),
+		V(10, tm),
 		V(11, vr),
 		V(12, Kd),
 		V(13, pee),
@@ -33456,7 +33456,7 @@ var EW, DW, OW, H_e, kW = e((() => {
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-extensions-service-override/vscode/src/vs/workbench/services/extensions/common/extensionsUtil.js
 function W_e(e, t, n, r, i) {
-	let a = new Sm();
+	let a = new vm();
 	return e.forEach((e) => {
 		let t = a.get(e.identifier);
 		t && i.warn(x(14095, "Overwriting extension {0} with {1}.", t.extensionLocation.fsPath, e.extensionLocation.fsPath)), a.set(e.identifier, e);
@@ -33484,9 +33484,9 @@ function W_e(e, t, n, r, i) {
 	}), Array.from(a.values());
 }
 var G_e = e((() => {
-	pm(), A(), Wh();
+	Tm(), A(), Wh();
 })), PW, K_e = e((() => {
-	v(), na(), K(), k(), jl(), ic(), $le(), En(), Oa(), cm(), CW(), tb(), ab(), fb(), ne(), qh(), du(), kt(), Hm(), Mx(), pV(), kW(), Fh(), PW = class extends H {
+	v(), na(), K(), k(), jl(), ic(), $le(), En(), Oa(), im(), CW(), tb(), ab(), fb(), ne(), qh(), du(), kt(), Hm(), Mx(), pV(), kW(), Fh(), PW = class extends H {
 		constructor(e, t, n, r, i, a, o, s, c, l, u, d, f, p) {
 			super(), this.runningLocation = e, this._initDataProvider = t, this.remoteSocketFactoryService = n, this._contextService = r, this._environmentService = i, this._telemetryService = a, this._logService = o, this._loggerService = s, this._labelService = c, this.remoteAuthorityResolverService = l, this._extensionHostDebugService = u, this._productService = d, this._signService = f, this._defaultLogLevelsService = p, this.pid = null, this.startup = Kh.EagerAutoStart, this.extensions = null, this._onExit = this._register(new q()), this.onExit = this._onExit.event, this._hasDisconnected = !1, this.remoteAuthority = this._initDataProvider.remoteAuthority, this._protocol = null, this._hasLostConnection = !1, this._terminating = !1;
 			let m = fV(this._environmentService);
@@ -33626,12 +33626,12 @@ var G_e = e((() => {
 		V(8, Bt),
 		V(9, eb),
 		V(10, Ky),
-		V(11, nm),
+		V(11, tm),
 		V(12, db),
 		V(13, jx)
 	], PW);
 })), FW, IW, LW, RW, q_e = e((() => {
-	v(), Uu(), jl(), Mu(), rr(), Hs(), ai(), y(), xU(), Oa(), er(), cm(), CW(), tV(), tb(), rb(), ne(), kt(), Ar(), rg(), Bh(), MW(), U_e(), iU(), Lh(), OC(), lH(), Fh(), vU(), G_e(), K_e(), zm(), Gm(), bf(), bw(), sg(), Aw(), ye(), IW = class extends qH {
+	v(), Uu(), jl(), Mu(), rr(), Hs(), ai(), y(), xU(), Oa(), er(), im(), CW(), tV(), tb(), rb(), ne(), kt(), Ar(), rg(), Bh(), MW(), U_e(), iU(), Lh(), OC(), lH(), Fh(), vU(), G_e(), K_e(), zm(), Gm(), bf(), bw(), sg(), Aw(), ye(), IW = class extends qH {
 		constructor(e, t, n, r, i, a, o, s, c, l, u, d, f, p, m, h, g, ee, te, ne, _, re, ie, ae, oe, se) {
 			super(e, t, n, r, i, a, o, s, c, l, u, d, f, p, m, g, ee, te, ne, _, se), this._browserEnvironmentService = o, this._webExtensionsScannerService = h, this._userDataInitializationService = re, this._userDataProfileService = ie, this._workspaceTrustManagementService = ae, this._remoteExplorerService = oe, ne.when(sh.Ready).then(async () => {
 				await this._initializeIfNeeded();
@@ -33699,7 +33699,7 @@ var G_e = e((() => {
 		V(7, li),
 		V(8, Jh),
 		V(9, Zs),
-		V(10, nm),
+		V(10, tm),
 		V(11, jh),
 		V(12, Jr),
 		V(13, ds),
@@ -33850,7 +33850,7 @@ function Q_e(e, t) {
 	});
 }
 var HW, UW, WW = e((() => {
-	ic(), i(), X(), Y_e(), Ji(), qh(), jl(), pm(), VW(), k(), HW = "/web-extension-resource/", UW = class extends H {
+	ic(), i(), X(), Y_e(), Ji(), qh(), jl(), Tm(), VW(), k(), HW = "/web-extension-resource/", UW = class extends H {
 		constructor(e, t, n, r, i, a, o) {
 			super(), this._fileService = e, this._storageService = t, this._productService = n, this._environmentService = r, this._configurationService = i, this._extensionGalleryManifestService = a, this._logService = o, this._initPromise = this._init();
 		}
@@ -33873,7 +33873,7 @@ var HW, UW, WW = e((() => {
 				let i = J.parse(jie(this._extensionGalleryResourceUrlTemplate, {
 					publisher: e,
 					name: t,
-					version: r !== void 0 && r !== bm.UNDEFINED && r !== bm.UNKNOWN && r !== bm.UNIVERSAL ? `${n}+${r}` : n,
+					version: r !== void 0 && r !== mm.UNDEFINED && r !== mm.UNKNOWN && r !== mm.UNIVERSAL ? `${n}+${r}` : n,
 					path: "extension"
 				}));
 				return this._isWebExtensionResourceEndPoint(i) ? i.with({ scheme: Qo.getPreferredWebSchema() }) : i;
@@ -33903,7 +33903,7 @@ var HW, UW, WW = e((() => {
 		}
 	};
 })), GW, $_e = e((() => {
-	v(), ai(), Hs(), jl(), cm(), Ae(), st(), Oa(), Mu(), WW(), y(), tue(), GW = class extends UW {
+	v(), ai(), Hs(), jl(), im(), Ae(), st(), Oa(), Mu(), WW(), y(), tue(), GW = class extends UW {
 		constructor(e, t, n, r, i, a, o) {
 			super(e, t, n, r, i, a, o);
 		}
@@ -33918,14 +33918,14 @@ var HW, UW, WW = e((() => {
 	}, GW = D([
 		V(0, Zs),
 		V(1, Kd),
-		V(2, nm),
+		V(2, tm),
 		V(3, Ct),
 		V(4, ds),
 		V(5, Jy),
 		V(6, xn)
 	], GW);
 })), KW, qW, JW, YW, XW, eve = e((() => {
-	v(), A(), Th(), pa(), Ae(), pm(), ai(), Bn(), er(), cf(), _o(), Cc(), qc(), rr(), zm(), Ts(), bh(), $u(), Oa(), cm(), Hm(), Rh(), eg(), Bh(), wC(), Xi(), JW = class e {
+	v(), A(), Th(), pa(), Ae(), Tm(), ai(), Bn(), er(), cf(), _o(), Cc(), qc(), rr(), zm(), Ts(), bh(), $u(), Oa(), im(), Hm(), Rh(), eg(), Bh(), wC(), Xi(), JW = class e {
 		static fromJSON(t) {
 			if (t) try {
 				let n = JSON.parse(t);
@@ -33963,7 +33963,7 @@ var HW, UW, WW = e((() => {
 			return this._state ? this._state.high - this._state.mid : -1;
 		}
 		isDisabledByBisect(e) {
-			return !this._state || sse(e.manifest, this._envService.remoteAuthority) || this._isEnabledInEnv(e) ? !1 : this._disabled.get(e.identifier.id) ?? !1;
+			return !this._state || fse(e.manifest, this._envService.remoteAuthority) || this._isEnabledInEnv(e) ? !1 : this._disabled.get(e.identifier.id) ?? !1;
 		}
 		_isEnabledInEnv(e) {
 			return Array.isArray(this._envService.enableExtensions) && this._envService.enableExtensions.some((t) => Zh({ id: t }, e.identifier));
@@ -34045,7 +34045,7 @@ var HW, UW, WW = e((() => {
 			});
 		}
 		async run(e) {
-			let t = e.get(he), n = e.get(Ef), r = e.get(Eh), i = e.get(Jh), a = e.get(CC), o = (await r.getInstalled(fm.User)).filter((e) => i.isEnabled(e));
+			let t = e.get(he), n = e.get(Ef), r = e.get(Eh), i = e.get(Jh), a = e.get(CC), o = (await r.getInstalled(gm.User)).filter((e) => i.isEnabled(e));
 			(await t.confirm({
 				message: x(13898, "Extension Bisect"),
 				detail: x(13899, "Extension Bisect will use binary search to find an extension that causes a problem. During the process the window reloads repeatedly (~{0} times). Each time you must confirm if you are still seeing problems.", 2 + Math.log2(o.length) | 0),
@@ -34063,7 +34063,7 @@ var HW, UW, WW = e((() => {
 			});
 		}
 		async run(e, t) {
-			let n = e.get(he), r = e.get(Ef), i = e.get(CC), a = e.get(nm), o = e.get(Wse), s = e.get(ao);
+			let n = e.get(he), r = e.get(Ef), i = e.get(CC), a = e.get(tm), o = e.get(Wse), s = e.get(ao);
 			if (!i.isActive) return;
 			if (t === void 0) {
 				let e = await this._checkForBad(n, i);
@@ -34166,7 +34166,7 @@ function nve(e) {
 	return typeof t?.path == "string" && typeof t?.scheme == "string";
 }
 var tG, rve = e((() => {
-	v(), pm(), Qy(), rg(), Th(), y(), ic(), ai(), si(), X(), ms(), Hs(), ye(), na(), Oa(), mc(), Rh(), k(), ece(), A(), Wh(), jn(), R(), Li(), OC(), WW(), tm(), _o(), eg(), un(), uh(), cd(), Xy(), Gr(), zm(), Gm(), pa(), Ae(), cm(), $se(), Xi(), Aw(), $h(), _n(), tG = class extends H {
+	v(), Tm(), Qy(), rg(), Th(), y(), ic(), ai(), si(), X(), ms(), Hs(), ye(), na(), Oa(), mc(), Rh(), k(), ece(), A(), Wh(), jn(), R(), Li(), OC(), WW(), rm(), _o(), eg(), un(), uh(), cd(), Xy(), Gr(), zm(), Gm(), pa(), Ae(), im(), $se(), Xi(), Aw(), $h(), _n(), tG = class extends H {
 		constructor(e, t, n, r, i, a, o, s, c, l, u, d, f) {
 			super(), this.environmentService = e, this.builtinExtensionsScannerService = t, this.fileService = n, this.logService = r, this.galleryService = i, this.extensionManifestPropertiesService = a, this.extensionResourceLoaderService = o, this.extensionStorageService = s, this.storageService = c, this.productService = l, this.userDataProfilesService = u, this.uriIdentityService = d, this.systemExtensionsCacheResource = void 0, this.customBuiltinExtensionsCacheResource = void 0, this.resourcesAccessQueueMap = new ui(), co && (this.systemExtensionsCacheResource = au(e.userRoamingDataHome, "systemExtensionsCache.json"), this.customBuiltinExtensionsCacheResource = au(e.userRoamingDataHome, "customBuiltinExtensionsCache.json"), f.when(sh.Eventually).then(() => this.updateCaches())), this.extensionsEnabledWithApiProposalVersion = l.extensionsEnabledWithApiProposalVersion?.map((e) => e.toLowerCase()) ?? [];
 		}
@@ -34208,7 +34208,7 @@ var tG, rve = e((() => {
 			return n;
 		}
 		async readSystemExtensions() {
-			let e = await this.builtinExtensionsScannerService.scanBuiltinExtensions(), t = await Promise.all((await this.readSystemExtensionsCache()).map((e) => this.toScannedExtension(e, !0, fm.System))), n = /* @__PURE__ */ new Map();
+			let e = await this.builtinExtensionsScannerService.scanBuiltinExtensions(), t = await Promise.all((await this.readSystemExtensionsCache()).map((e) => this.toScannedExtension(e, !0, gm.System))), n = /* @__PURE__ */ new Map();
 			for (let r of [...e, ...t]) {
 				let e = n.get(r.identifier.id.toLowerCase());
 				e && Uh.gt(e.manifest.version, r.manifest.version) || n.set(r.identifier.id.toLowerCase(), r);
@@ -34375,7 +34375,7 @@ var tG, rve = e((() => {
 			if (e.length === 0) return n;
 			let r = await this.galleryService.getExtensions(e, {
 				compatible: !0,
-				targetPlatform: bm.WEB
+				targetPlatform: mm.WEB
 			}, O.None), i = /* @__PURE__ */ new Map();
 			for (let a of r) {
 				n.set(a.identifier.id.toLowerCase(), a);
@@ -34414,7 +34414,7 @@ var tG, rve = e((() => {
 			})), t;
 		}
 		async scanExistingExtension(e, t, n) {
-			return t === fm.System ? (await this.scanSystemExtensions()).find((t) => t.location.toString() === e.toString()) || null : (await this.scanUserExtensions(n)).find((t) => t.location.toString() === e.toString()) || null;
+			return t === gm.System ? (await this.scanSystemExtensions()).find((t) => t.location.toString() === e.toString()) || null : (await this.scanUserExtensions(n)).find((t) => t.location.toString() === e.toString()) || null;
 		}
 		async scanExtensionManifest(e) {
 			try {
@@ -34481,7 +34481,7 @@ var tG, rve = e((() => {
 				publisher: e.publisher,
 				name: e.name,
 				version: e.version,
-				targetPlatform: e.properties.targetPlatform === bm.WEB ? bm.WEB : void 0
+				targetPlatform: e.properties.targetPlatform === mm.WEB ? mm.WEB : void 0
 			}, "extension");
 			if (!n) throw Error("No extension gallery service configured.");
 			return this.toWebExtensionFromExtensionGalleryResource(n, e.identifier, e.assets.readme ? J.parse(e.assets.readme.uri) : void 0, e.assets.changelog ? J.parse(e.assets.changelog.uri) : void 0, t);
@@ -34526,7 +34526,7 @@ var tG, rve = e((() => {
 				metadata: s
 			};
 		}
-		async toScannedExtension(e, t, r = fm.User) {
+		async toScannedExtension(e, t, r = gm.User) {
 			let i = [], a = e.manifest;
 			if (!a) try {
 				a = await this.getExtensionManifest(e.location);
@@ -34548,7 +34548,7 @@ var tG, rve = e((() => {
 			i.push(...tce(this.productService.version, this.productService.date, e.location, a, !1, l));
 			let u = !0;
 			for (let [e, t] of i) e === De.Error && (u = !1, this.logService.error(t));
-			return a.enabledApiProposals && l && (a.enabledApiProposals = Sse([...a.enabledApiProposals])), {
+			return a.enabledApiProposals && l && (a.enabledApiProposals = rse([...a.enabledApiProposals])), {
 				identifier: {
 					id: e.identifier.id,
 					uuid: e.identifier.uuid || c
@@ -34560,7 +34560,7 @@ var tG, rve = e((() => {
 				readmeUrl: e.readmeUri,
 				changelogUrl: e.changelogUri,
 				metadata: e.metadata,
-				targetPlatform: bm.WEB,
+				targetPlatform: mm.WEB,
 				validations: i,
 				isValid: u,
 				preRelease: !!e.metadata?.preRelease
@@ -34663,7 +34663,7 @@ var tG, rve = e((() => {
 					this.logService.error("Error while fetching default manifest translations of an extension", e.identifier.id, Ho(t));
 				}
 				else n = !0, e.defaultManifestTranslations = null;
-				let r = Q_e(e.location, bm.WEB);
+				let r = Q_e(e.location, mm.WEB);
 				return r && (n = !0, e.location = r), el(e.metadata?.hasPreReleaseVersion) && e.metadata?.preRelease && (n = !0, e.metadata.hasPreReleaseVersion = !0), e;
 			})), n && await this.storeWebExtensions(e, t), e;
 		}
@@ -34698,10 +34698,10 @@ var tG, rve = e((() => {
 		V(3, xn),
 		V(4, wh),
 		V(5, DC),
-		V(6, lm),
+		V(6, bm),
 		V(7, Yy),
 		V(8, Kd),
-		V(9, nm),
+		V(9, tm),
 		V(10, Qh),
 		V(11, Xl),
 		V(12, Bm)
@@ -35219,7 +35219,7 @@ function wve(e) {
 	return !!e && typeof e == "object" && Array.isArray(e.editorInputs) && e.editorInputs.every((e) => e instanceof zG);
 }
 var RG, zG, BG = e((() => {
-	v(), Ao(), Om(), LG(), iS(), X(), si(), rr(), qx(), FG(), En(), jl(), Hs(), Boe(), R(), na(), jm(), am(), A(), uh(), os(), Rp(), Hm(), km(), cd(), zG = class extends goe {
+	v(), Ao(), Om(), LG(), iS(), X(), si(), rr(), qx(), FG(), En(), jl(), Hs(), Boe(), R(), na(), jm(), _m(), A(), uh(), os(), Rp(), Hm(), km(), cd(), zG = class extends goe {
 		static {
 			RG = this;
 		}
@@ -35360,7 +35360,7 @@ var RG, zG, BG = e((() => {
 		V(7, Bt),
 		V(8, Zs),
 		V(9, xh),
-		V(10, $p),
+		V(10, Qp),
 		V(11, Um),
 		V(12, Vc),
 		V(13, Af),
@@ -36279,7 +36279,7 @@ var MK, NK, PK = e((() => {
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostTypes.js
 function Hve(e, t) {
-	return `${vm.toKey(e)}.${t}`;
+	return `${pm.toKey(e)}.${t}`;
 }
 function QK(e) {
 	let t = "";
@@ -36299,7 +36299,7 @@ function $K(e) {
 	}
 }
 var eq, tq, nq, rq, iq, aq, oq, sq, Gve, cq, lq, uq, dq, fq, pq, mq, hq, gq, _q, vq, yq, bq, xq, Sq, Cq, wq, Tq, Eq, Dq, Oq, kq, Aq, jq, Mq, Nq, Pq, Fq, Iq, Lq, Rq, zq, Bq, Vq, Hq, Uq, Wq, Gq, Kq, qq, Jq, Yq, Xq, Zq, Qq, $q, eJ, tJ, nJ, rJ, iJ, aJ, Kve, oJ, sJ, cJ, lJ, uJ, dJ, fJ, pJ, mJ, hJ, gJ, _J, vJ, yJ, bJ, xJ, SJ, CJ, wJ, TJ, EJ, DJ, OJ, kJ, AJ, jJ, MJ, NJ, PJ, FJ, IJ, LJ, RJ, zJ, BJ, VJ, HJ, UJ, WJ, GJ, KJ, qJ, JJ, YJ, XJ, ZJ, QJ, $J, eY, tY, nY, rY, iY, aY, oY, sY, cY, lY, uY, dY, fY, pY, mY, hY, gY, _Y, vY, yY, bY, xY, SY, CY, wY, TY, EY, DY, OY, kY, AY, jY, MY, NY, PY, FY, IY, LY, RY, zY, BY, VY, HY, UY, WY, GY, KY, qY, JY, YY, XY, ZY, QY, $Y, eX, tX, nX, rX, iX, aX, oX, sX, cX, lX, uX, dX, fX, pX, mX, hX, gX, _X, vX, yX, bX, xX, SX, CX, wX, TX, EX, DX, OX, kX, AX, jX, MX, NX, PX, FX, IX, LX, RX, zX, BX, VX, HX, UX, WX, GX, KX, qX, JX, YX, XX, ZX, QX, $X, eZ, tZ, nZ, rZ, iZ, aZ, oZ, sZ, cZ, lZ, uZ, dZ, fZ, pZ, mZ, hZ, gZ, _Z, vZ, yZ, bZ, xZ, SZ, CZ, wZ, TZ, EZ, DZ, OZ, kZ, AZ, jZ, MZ, NZ, PZ, FZ, IZ, LZ, RZ, zZ, BZ, VZ, HZ = e((() => {
-	v(), Gr(), na(), R(), Bd(), o(), i(), jn(), X(), Bc(), Zl(), pm(), ms(), tV(), tK(), iK(), dK(), mK(), yK(), SK(), jK(), sK(), PK(), LK(), HK(), KK(), ZK(), (function(e) {
+	v(), Gr(), na(), R(), Bd(), o(), i(), jn(), X(), Bc(), Zl(), Tm(), ms(), tV(), tK(), iK(), dK(), mK(), yK(), SK(), jK(), sK(), PK(), LK(), HK(), KK(), ZK(), (function(e) {
 		e[e.Top = 0] = "Top", e[e.Bottom = 1] = "Bottom";
 	})(sq ||= {}), (function(e) {
 		e[e.TerminalCommand = 0] = "TerminalCommand", e[e.Opener = 1] = "Opener", e[e.Command = 3] = "Command";
@@ -37722,7 +37722,7 @@ var eq, tq, nq, rq, iq, aq, oq, sq, Gve, cq, lq, uq, dq, fq, pq, mq, hq, gq, _q,
 		}
 	};
 })), UZ, WZ, qve = e((() => {
-	v(), ye(), na(), Ir(), R(), K(), k(), X(), A(), Oa(), Bve(), xue(), mx(), uC(), $G(), vC(), vV(), am(), DV(), mG(), HZ(), UZ = class {
+	v(), ye(), na(), Ir(), R(), K(), k(), X(), A(), Oa(), Bve(), xue(), mx(), uC(), $G(), vC(), vV(), _m(), DV(), mG(), HZ(), UZ = class {
 		constructor(e, t, n, r, i, a, o) {
 			this._chatProviderService = t, this._logService = n, this._authenticationService = r, this._authenticationAccessService = i, this._extensionService = a, this._ignoredFilesService = o, this._store = new N(), this._providerRegistrations = new Ks(), this._lmProviderChange = new q(), this._pendingProgress = /* @__PURE__ */ new Map(), this._ignoredFileProviderRegistrations = new Ks(), this._proxy = e.getProxy(pG.ExtHostChatProvider);
 		}
@@ -37842,7 +37842,7 @@ var eq, tq, nq, rq, iq, aq, oq, sq, Gve, cq, lq, uq, dq, fq, pq, mq, hq, gq, _q,
 		V(2, xn),
 		V(3, gC),
 		V(4, lC),
-		V(5, $p),
+		V(5, Qp),
 		V(6, dx)
 	], UZ), WZ = class {
 		constructor(e, t, n) {
@@ -37887,7 +37887,7 @@ function Jve(e) {
 	return `${e.extensionId.value}.${e.id}`;
 }
 var GZ, KZ, qZ, JZ, Yve = e((() => {
-	v(), Or(), ye(), mc(), K(), Jn(), k(), Rc(), kr(), i(), Mu(), Cc(), qc(), pm(), Oa(), cm(), ET(), sb(), pa(), Ae(), QN(), XN(), aa(), KZ = class extends H {
+	v(), Or(), ye(), mc(), K(), Jn(), k(), Rc(), kr(), i(), Mu(), Cc(), qc(), Tm(), Oa(), im(), ET(), sb(), pa(), Ae(), QN(), XN(), aa(), KZ = class extends H {
 		static {
 			this.AGENT_LEADER = "@";
 		}
@@ -38164,7 +38164,7 @@ var GZ, KZ, qZ, JZ, Yve = e((() => {
 			this.disposed = !0;
 		}
 	}, JZ = GZ = D([
-		V(0, nm),
+		V(0, tm),
 		V(1, ob),
 		V(2, xn),
 		V(3, Kd)
@@ -38660,7 +38660,7 @@ function iye(e, t, n) {
 	};
 }
 var yQ, bQ, xQ, aye = e((() => {
-	v(), ye(), K(), k(), Rc(), jl(), i(), vd(), X(), qs(), kte(), va(), Vp(), pm(), y(), Oa(), _n(), Xb(), tx(), gx(), vue(), lQ(), nye(), ox(), cx(), XN(), vV(), am(), mG(), _Q(), rye(), yQ = class {
+	v(), ye(), K(), k(), Rc(), jl(), i(), vd(), X(), qs(), kte(), va(), Vp(), Tm(), y(), Oa(), _n(), Xb(), tx(), gx(), vue(), lQ(), nye(), ox(), cx(), XN(), vV(), _m(), mG(), _Q(), rye(), yQ = class {
 		get onDidAddProgress() {
 			return this._onDidAddProgress.event;
 		}
@@ -38740,7 +38740,7 @@ var yQ, bQ, xQ, aye = e((() => {
 			if (o?.alternativeIds?.includes(n)) return;
 			let c;
 			if (!a && i) {
-				let e = this._extensionService.extensions.find((e) => vm.equals(e.identifier, t));
+				let e = this._extensionService.extensions.find((e) => pm.equals(e.identifier, t));
 				c = this._chatAgentService.registerDynamicAgent({
 					id: n,
 					name: i.name,
@@ -38924,7 +38924,7 @@ var yQ, bQ, xQ, aye = e((() => {
 		V(6, Kb),
 		V(7, w),
 		V(8, xn),
-		V(9, $p),
+		V(9, Qp),
 		V(10, Xl),
 		V(11, hx)
 	], bQ), (function(e) {
@@ -39189,7 +39189,7 @@ function NQ(e) {
 	};
 }
 var PQ, FQ, IQ = e((() => {
-	v(), k(), jl(), ic(), i(), X(), A(), Pd(), cm(), DV(), mG(), jQ(), FQ = class extends H {
+	v(), k(), jl(), ic(), i(), X(), A(), Pd(), im(), DV(), mG(), jQ(), FQ = class extends H {
 		static {
 			PQ = this;
 		}
@@ -39261,7 +39261,7 @@ var PQ, FQ, IQ = e((() => {
 			<body>${x(2558, "An error occurred while loading view: {0}", zi(e))}</body>
 		</html>`;
 		}
-	}, FQ = PQ = D([V(1, id), V(2, nm)], FQ);
+	}, FQ = PQ = D([V(1, id), V(2, tm)], FQ);
 })), LQ, RQ, uye = e((() => {
 	v(), M(), k(), si(), X(), sn(), IQ(), mG(), eC(), vV(), LQ = class {
 		constructor(e, t, n, r) {
@@ -39326,13 +39326,13 @@ var PQ, FQ, IQ = e((() => {
 		V(2, $S)
 	], RQ);
 })), zQ, BQ, VQ, dye = e((() => {
-	v(), mc(), R(), jl(), si(), Wh(), X(), A(), sm(), Th(), Rh(), pm(), zQ = (e) => x(1848, "Extension '{0}' not found.", e), BQ = x(1849, "Make sure you use the full extension ID, including the publisher, e.g.: {0}", "ms-dotnettools.csharp"), VQ = class {
+	v(), mc(), R(), jl(), si(), Wh(), X(), A(), lm(), Th(), Rh(), Tm(), zQ = (e) => x(1848, "Extension '{0}' not found.", e), BQ = x(1849, "Make sure you use the full extension ID, including the publisher, e.g.: {0}", "ms-dotnettools.csharp"), VQ = class {
 		constructor(e, t, n) {
 			this.logger = e, this.extensionManagementService = t, this.extensionGalleryService = n;
 		}
 		get location() {}
 		async listExtensions(e, t, n) {
-			let r = await this.extensionManagementService.getInstalled(fm.User, n), i = _se.map((e) => e.toLowerCase());
+			let r = await this.extensionManagementService.getInstalled(gm.User, n), i = xse.map((e) => e.toLowerCase());
 			if (t && t !== "") {
 				if (i.indexOf(t.toLowerCase()) < 0) {
 					this.logger.info("Invalid category please enter a valid category. To list valid categories run --category without a category specified");
@@ -39401,7 +39401,7 @@ var PQ, FQ, IQ = e((() => {
 			if (i.length) throw Error(x(1854, "Failed Installing Extensions: {0}", i.join(", ")));
 		}
 		async updateExtensions(e) {
-			let t = await this.extensionManagementService.getInstalled(fm.User, e), n = [];
+			let t = await this.extensionManagementService.getInstalled(gm.User, e), n = [];
 			for (let e of t) e.identifier.uuid && n.push({
 				...e.identifier,
 				preRelease: e.preRelease
@@ -39411,7 +39411,7 @@ var PQ, FQ, IQ = e((() => {
 			for (let n of r) for (let r of t) Zh(r.identifier, n.identifier) && Uh.gt(n.version, r.manifest.version) && i.push({
 				extension: n,
 				options: {
-					operation: em.Update,
+					operation: sm.Update,
 					installPreReleaseVersion: r.preRelease,
 					profileLocation: e,
 					isApplicationScoped: r.isApplicationScoped
@@ -39486,7 +39486,7 @@ var PQ, FQ, IQ = e((() => {
 		}
 		async getGalleryExtensions(e) {
 			let t = /* @__PURE__ */ new Map(), n = e.some((e) => e.installOptions.installPreReleaseVersion), r = await this.extensionManagementService.getTargetPlatform(), i = [];
-			for (let t of e) tse.test(t.id) && i.push({
+			for (let t of e) Qoe.test(t.id) && i.push({
 				...t,
 				preRelease: n
 			});
@@ -39517,7 +39517,7 @@ var PQ, FQ, IQ = e((() => {
 			for (let i of e) {
 				let e = await r(i), a = (await this.extensionManagementService.getInstalled(void 0, n)).filter((t) => Zh(t.identifier, { id: e }));
 				if (!a.length) throw Error(`${this.notInstalled(e)}\n${BQ}`);
-				if (a.some((e) => e.type === fm.System)) {
+				if (a.some((e) => e.type === gm.System)) {
 					this.logger.info(x(1872, "Extension '{0}' is a Built-in extension and cannot be uninstalled", e));
 					return;
 				}
@@ -39632,7 +39632,7 @@ function mye(e) {
 	}
 }
 var WQ, hye = e((() => {
-	v(), k(), Rc(), Is(), $u(), vV(), am(), DV(), mG(), jn(), WQ = class {
+	v(), k(), Rc(), Is(), $u(), vV(), _m(), DV(), mG(), jn(), WQ = class {
 		constructor(e, t, n) {
 			this._commandService = t, this._extensionService = n, this._commandRegistrations = new Ks(), this._proxy = e.getProxy(pG.ExtHostCommands), this._generateCommandsDocumentationRegistration = Ys.registerCommand("_generateCommandsDocumentation", () => this._generateCommandsDocumentation());
 		}
@@ -39668,7 +39668,7 @@ var WQ, hye = e((() => {
 	}, WQ = D([
 		mV(fG.MainThreadCommands),
 		V(1, ao),
-		V(2, $p)
+		V(2, Qp)
 	], WQ);
 })), GQ, gye = e((() => {
 	v(), X(), Ts(), le(), du(), kt(), mG(), vV(), Tn(), Mu(), st(), GQ = class {
@@ -40017,7 +40017,7 @@ function i$(e, t) {
 var a$, Tye = e((() => {
 	i(), JB(), X(), cd(), Hn(), jl(), mc(), Gr(), a$ = /^[a-zA-Z][a-zA-Z0-9\+\-\.]+:/;
 })), o$, s$, Eye = e((() => {
-	v(), k(), X(), JB(), Sx(), mG(), vV(), Xi(), ZQ(), Tye(), R(), wx(), pm(), K(), jn(), o$ = class {
+	v(), k(), X(), JB(), Sx(), mG(), vV(), Xi(), ZQ(), Tye(), R(), wx(), Tm(), K(), jn(), o$ = class {
 		constructor(e, t, n) {
 			this.debugService = t, this.visualizerService = n, this._toDispose = new N(), this._debugAdaptersHandleCounter = 1, this._visualizerHandles = /* @__PURE__ */ new Map(), this._visualizerTreeHandles = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(pG.ExtHostDebugService);
 			let r = new Ks();
@@ -40064,7 +40064,7 @@ var a$, Tye = e((() => {
 		}
 		$registerDebugVisualizer(e, t) {
 			let n = this.visualizerService.register({
-				extensionId: new vm(e),
+				extensionId: new pm(e),
 				id: t,
 				disposeDebugVisualizers: (e) => this._proxy.$disposeDebugVisualizers(e),
 				executeDebugVisualizerCommand: (e) => this._proxy.$executeDebugVisualizerCommand(e),
@@ -40306,7 +40306,7 @@ var a$, Tye = e((() => {
 		}
 	};
 })), c$, l$, Dye = e((() => {
-	v(), X(), K(), k(), mG(), vV(), im(), mc(), ye(), R(), c$ = class {
+	v(), X(), K(), k(), mG(), vV(), em(), mc(), ye(), R(), c$ = class {
 		constructor(e, t) {
 			this._proxy = e, this._handle = t, this._idPool = 0, this._requests = /* @__PURE__ */ new Map(), this._resolver = /* @__PURE__ */ new Map();
 		}
@@ -40366,7 +40366,7 @@ var a$, Tye = e((() => {
 			let t = this._provider.get(e);
 			t && (Le(t), this._provider.delete(e));
 		}
-	}, l$ = D([mV(fG.MainThreadDecorations), V(1, gm)], l$);
+	}, l$ = D([mV(fG.MainThreadDecorations), V(1, om)], l$);
 })), u$, d$, Oye = e((() => {
 	v(), kae(), X(), mG(), vV(), _n(), Li(), d$ = class {
 		static {
@@ -41115,7 +41115,7 @@ var C$ = e((() => {
 		for (let e of t.dirtyWorkingCopies) await e.revert({ soft: !0 });
 	});
 })), D$, O$, k$, A$, j$, M$, Mye = e((() => {
-	v(), K(), k(), qp(), sn(), sc(), Yr(), Qn(), Hs(), vV(), v$(), jye(), E$(), mG(), C$(), uh(), $m(), Fm(), Hm(), wm(), _n(), od(), km(), Va(), bse(), zB(), Mu(), oS(), D$ = class {
+	v(), K(), k(), qp(), sn(), sc(), Yr(), Qn(), Hs(), vV(), v$(), jye(), E$(), mG(), C$(), uh(), $m(), Fm(), Hm(), wm(), _n(), od(), km(), Va(), Xoe(), zB(), Mu(), oS(), D$ = class {
 		constructor(e) {
 			this.editor = e, this.id = `${e.getId()},${e.getModel().id}`;
 		}
@@ -41195,7 +41195,7 @@ var C$ = e((() => {
 		V(1, pr),
 		V(2, At),
 		V(3, Um),
-		V(4, Qp)
+		V(4, $p)
 	], j$), M$ = class {
 		constructor(e, t, n, r, i, a, o, s, c, l, u, d, f, p, m, h) {
 			this._modelService = t, this._textFileService = n, this._editorService = r, this._editorGroupService = s, this._clipboardService = f, this._toDispose = new N(), this._textEditors = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(pG.ExtHostDocumentsAndEditors), this._mainThreadDocuments = this._toDispose.add(new _$(e, this._modelService, this._textFileService, a, o, l, d, u, p)), e.set(fG.MainThreadDocuments, this._mainThreadDocuments), this._mainThreadEditors = this._toDispose.add(new T$(this, e, i, this._editorService, this._editorGroupService, m, h, d)), e.set(fG.MainThreadTextEditors, this._mainThreadEditors), this._toDispose.add(new j$((e) => this._onDelta(e), t, i, this._editorService, c));
@@ -41262,7 +41262,7 @@ var C$ = e((() => {
 		V(5, Zs),
 		V(6, uc),
 		V(7, Xm),
-		V(8, Qp),
+		V(8, $p),
 		V(9, Nm),
 		V(10, dm),
 		V(11, Xl),
@@ -42045,7 +42045,7 @@ var q$, J$, Y$, X$, Z$, Q$ = e((() => {
 		}
 	}, n1 = t1 = D([V(2, On)], n1);
 })), i1, a1, o1, s1 = e((() => {
-	v(), M(), K(), k(), ic(), Bc(), A(), Cc(), qc(), Ae(), ne(), ql(), _oe(), e1(), r1(), $m(), uh(), cf(), Dm(), om(), a1 = new E("activeWebviewPanelId", "", {
+	v(), M(), K(), k(), ic(), Bc(), A(), Cc(), qc(), Ae(), ne(), ql(), _oe(), e1(), r1(), $m(), uh(), cf(), nm(), Sm(), a1 = new E("activeWebviewPanelId", "", {
 		type: "string",
 		description: x(13164, "The viewType of the currently active webview panel.")
 	}), o1 = class extends Noe {
@@ -42083,7 +42083,7 @@ var q$, J$, Y$, X$, Z$, Q$ = e((() => {
 		}
 		focus() {
 			super.focus(), !this._onFocusWindowHandler.value && !co && (this._onFocusWindowHandler.value = this._hostService.onDidChangeFocus((e) => {
-				e && this._editorService.activeEditorPane === this && this._workbenchLayoutService.hasFocus(rm.EDITOR_PART) && this.focus();
+				e && this._editorService.activeEditorPane === this && this._workbenchLayoutService.hasFocus(Dm.EDITOR_PART) && this.focus();
 			})), this.webview?.focus();
 		}
 		setEditorVisible(e) {
@@ -42102,7 +42102,7 @@ var q$, J$, Y$, X$, Z$, Q$ = e((() => {
 		}
 		synchronizeWebviewContainerDimensions(e, t) {
 			if (!this._element?.isConnected) return;
-			let n = this._workbenchLayoutService.getContainer(this.window, rm.EDITOR_PART);
+			let n = this._workbenchLayoutService.getContainer(this.window, Dm.EDITOR_PART);
 			e.layoutWebviewOverElement(this._element.parentElement, t, n);
 		}
 		trackFocus(e) {
@@ -42115,7 +42115,7 @@ var q$, J$, Y$, X$, Z$, Q$ = e((() => {
 		V(3, Kd),
 		V(4, Xm),
 		V(5, Um),
-		V(6, um),
+		V(6, fm),
 		V(7, Ef),
 		V(8, Nl)
 	], o1);
@@ -42249,7 +42249,7 @@ var l1, u1, d1, f1 = e((() => {
 		V(3, $S)
 	], d1);
 })), p1, m1, h1 = e((() => {
-	v(), M(), bt(), na(), jl(), cd(), si(), jn(), A(), rr(), Hs(), y(), En(), Es(), Om(), Rp(), bx(), eC(), f1(), nC(), $m(), jm(), om(), Vse(), ql(), m1 = class extends l1 {
+	v(), M(), bt(), na(), jl(), cd(), si(), jn(), A(), rr(), Hs(), y(), En(), Es(), Om(), Rp(), bx(), eC(), f1(), nC(), $m(), jm(), Sm(), Vse(), ql(), m1 = class extends l1 {
 		static {
 			p1 = this;
 		}
@@ -42439,7 +42439,7 @@ var l1, u1, d1, f1 = e((() => {
 		V(10, Zs),
 		V(11, xh),
 		V(12, Xm),
-		V(13, um),
+		V(13, fm),
 		V(14, Af)
 	], m1);
 })), g1, _1, Bye = e((() => {
@@ -44372,7 +44372,7 @@ var q0, J0, Y0, vbe = e((() => {
 		}
 	}, x(2088, "A single path to a shell executable or an array of paths that will be used as fallbacks when one fails."), x(2089, "Whether or not to replace the dynamic terminal title that detects what program is running with the static profile name."), { ...Y0 }, x(2090, "A path to a shell executable."), { ...Y0 }, x(2092, "Integrated Terminal"), mb.AutomationProfileLinux, x(2093, "The terminal profile to use on Linux for automation-related terminal usage like tasks and debug."), mb.AutomationProfileMacOs, x(2094, "The terminal profile to use on macOS for automation-related terminal usage like tasks and debug."), mb.AutomationProfileWindows, x(2095, "The terminal profile to use for automation-related terminal usage like tasks and debug. This setting will currently be ignored if {0} (now deprecated) is set.", "`terminal.integrated.automationShell.windows`"), mb.ProfilesWindows, K0(il.Windows), I.terminalPowershell.id, I.terminalCmd.id, I.terminalGitBash.id, x(2096, "A profile source that will auto detect the paths to the shell. Note that non-standard executable locations are not supported and must be created manually in a new profile."), { ...Y0 }, x(2097, "The extension that contributed this profile."), x(2098, "The id of the extension terminal"), x(2099, "The name of the extension terminal"), { ...Y0 }, mb.ProfilesMacOs, K0(il.Mac), I.terminalBash.id, I.terminalTmux.id, I.terminalPowershell.id, x(2100, "The extension that contributed this profile."), x(2101, "The id of the extension terminal"), x(2102, "The name of the extension terminal"), { ...Y0 }, mb.ProfilesLinux, K0(il.Linux), I.terminalBash.id, I.terminalTmux.id, I.terminalPowershell.id, x(2103, "The extension that contributed this profile."), x(2104, "The id of the extension terminal"), x(2105, "The name of the extension terminal"), { ...Y0 }, mb.UseWslProfiles, x(2106, "Controls whether or not WSL distros are shown in the terminal dropdown"), mb.InheritEnv, Qu.APPLICATION, x(2107, "Whether new shells should inherit their environment from VS Code, which may source a login shell to ensure $PATH and other development variables are initialized. This has no effect on Windows."), mb.PersistentSessionScrollback, Qu.APPLICATION, x(2108, "Controls the maximum amount of lines that will be restored when reconnecting to a persistent terminal session. Increasing this will restore more lines of scrollback at the cost of more memory and increase the time it takes to connect to terminals on start up. This setting requires a restart to take effect and should be set to a value less than or equal to `#terminal.integrated.scrollback#`."), mb.ShowLinkHover, Qu.APPLICATION, x(2109, "Whether to show hovers for links in the terminal output."), mb.IgnoreProcessNames, x(2110, "A set of process names to ignore when using the {0} setting.", "`#terminal.integrated.confirmOnKill#`");
 })), X0, Z0, Q0, $0, ybe = e((() => {
-	A(), Sb(), Te(), vbe(), ase(), (function(e) {
+	A(), Sb(), Te(), vbe(), use(), (function(e) {
 		e.EnableAutoApprove = "chat.tools.terminal.enableAutoApprove", e.AutoApprove = "chat.tools.terminal.autoApprove", e.AutoApproveWorkspaceNpmScripts = "chat.tools.terminal.autoApproveWorkspaceNpmScripts", e.IgnoreDefaultAutoApproveRules = "chat.tools.terminal.ignoreDefaultAutoApproveRules", e.BlockDetectedFileWrites = "chat.tools.terminal.blockDetectedFileWrites", e.ShellIntegrationTimeout = "chat.tools.terminal.shellIntegrationTimeout", e.AutoReplyToPrompts = "chat.tools.terminal.autoReplyToPrompts", e.OutputLocation = "chat.tools.terminal.outputLocation", e.PreventShellHistory = "chat.tools.terminal.preventShellHistory", e.TerminalProfileLinux = "chat.tools.terminal.terminalProfile.linux", e.TerminalProfileMacOs = "chat.tools.terminal.terminalProfile.osx", e.TerminalProfileWindows = "chat.tools.terminal.terminalProfile.windows", e.DeprecatedAutoApproveCompatible = "chat.agent.terminal.autoApprove", e.DeprecatedAutoApprove1 = "chat.agent.terminal.allowList", e.DeprecatedAutoApprove2 = "chat.agent.terminal.denyList", e.DeprecatedAutoApprove3 = "github.copilot.chat.agent.terminal.allowList", e.DeprecatedAutoApprove4 = "github.copilot.chat.agent.terminal.denyList";
 	})(X0 ||= {}), Z0 = {
 		type: "boolean",
@@ -44396,7 +44396,7 @@ var q0, J0, Y0, vbe = e((() => {
 			default: !0,
 			policy: {
 				name: "ChatToolsTerminalEnableAutoApprove",
-				category: Zoe.IntegratedTerminal,
+				category: lse.IntegratedTerminal,
 				minimumVersion: "1.104",
 				localization: { description: {
 					key: "autoApproveMode.description",
@@ -45534,7 +45534,7 @@ function Bbe(e) {
 	return e.type === XB.WebSocket ? new QB(e.host, e.port) : new ZB(e.id);
 }
 var M2, N2, Vbe = e((() => {
-	v(), bt(), mc(), R(), jl(), Xi(), X(), A(), $u(), Rh(), er(), tV(), mG(), dce(), Hm(), Pue(), Bh(), Lh(), am(), vV(), cf(), ww(), M2 = class {
+	v(), bt(), mc(), R(), jl(), Xi(), X(), A(), $u(), Rh(), er(), tV(), mG(), dce(), Hm(), Pue(), Bh(), Lh(), _m(), vV(), cf(), ww(), M2 = class {
 		constructor(e, t, n, r, i, a, o, s, c) {
 			this._extensionService = t, this._notificationService = n, this._extensionsWorkbenchService = r, this._hostService = i, this._extensionEnablementService = a, this._timerService = o, this._commandService = s, this._environmentService = c, this._extensionHostKind = e.extensionHostKind;
 			let l = e;
@@ -45643,7 +45643,7 @@ var M2, N2, Vbe = e((() => {
 		}
 	}, M2 = D([
 		mV(fG.MainThreadExtensionService),
-		V(1, $p),
+		V(1, Qp),
 		V(2, fc),
 		V(3, uce),
 		V(4, Ef),
@@ -45885,7 +45885,7 @@ var M2, N2, Vbe = e((() => {
 		}
 	};
 })), L2, R2, Ube = e((() => {
-	v(), k(), ms(), Hs(), vV(), mG(), A(), wm(), Fr(), mm(), sa(), ye(), mc(), rr(), Xi(), pa(), Ae(), _o(), Oa(), st(), _n(), ZG(), X(), R2 = class {
+	v(), k(), ms(), Hs(), vV(), mG(), A(), wm(), Fr(), Em(), sa(), ye(), mc(), rr(), Xi(), pa(), Ae(), _o(), Oa(), st(), _n(), ZG(), X(), R2 = class {
 		static {
 			L2 = this;
 		}
@@ -45904,7 +45904,7 @@ var M2, N2, Vbe = e((() => {
 				async participate(e, t, n, u, f) {
 					if (n?.isUndoing) return;
 					let p = new Oc(f), m = setTimeout(() => p.cancel(), u), h = await i.withProgress({
-						location: ym.Notification,
+						location: um.Notification,
 						title: this._progressLabel(t),
 						cancellable: !0,
 						delay: Math.min(u / 2, 3e3)
@@ -46169,7 +46169,7 @@ var B2, V2, H2, U2 = e((() => {
 		}
 	};
 })), W2, Wbe, Gbe, Kbe, G2, K2, q2, J2, Y2 = e((() => {
-	v(), ye(), mc(), K(), Jn(), k(), i(), A(), Mu(), Cc(), qc(), Oa(), pa(), Ae(), RT(), jue(), am(), cg(), QN(), (function(e) {
+	v(), ye(), mc(), K(), Jn(), k(), i(), A(), Mu(), Cc(), qc(), Oa(), pa(), Ae(), RT(), jue(), _m(), cg(), QN(), (function(e) {
 		e[e.System = 0] = "System", e[e.User = 1] = "User", e[e.Assistant = 2] = "Assistant";
 	})(W2 ||= {}), (function(e) {
 		e[e.Assistant = 0] = "Assistant", e[e.User = 1] = "User", e[e.Extension = 2] = "Extension";
@@ -46347,7 +46347,7 @@ var B2, V2, H2, U2 = e((() => {
 			return i.provideTokenCount(e, t, n);
 		}
 	}, J2 = D([
-		V(0, $p),
+		V(0, Qp),
 		V(1, xn),
 		V(2, Kd),
 		V(3, Nl),
@@ -47108,7 +47108,7 @@ function sxe(e) {
 	}
 }
 var cxe, V4, H4, lxe, U4, uxe, W4, dxe, G4, K4, fxe, q4, J4, Y4, pxe, mxe, X4, hxe, Z4, Q4, $4, gxe, e3, _xe, vxe, t3, yxe, bxe, xxe, Sxe, Cxe, n3, wxe, Txe, Exe, r3, Dxe, i3, Oxe, a3, o3, kxe, Axe, jxe, s3, Mxe, Nxe, Pxe, Fxe, Ixe, Lxe, c3, Rxe, zxe, l3, Bxe, u3, Vxe, Hxe, d3, f3, Uxe, p3, m3, h3, Wxe, Gxe, Kxe, qxe, Jxe, g3, _3, Yxe, v3, y3, Xxe, Zxe, Qxe, $xe, eSe, b3, x3, S3, C3, tSe, nSe, w3, T3, E3, D3, O3, rSe, k3, A3, j3, M3, iSe, aSe, oSe, N3, sSe, cSe, lSe, P3, F3, I3, L3, R3, z3, uSe, dSe, fSe, B3, V3, H3, U3, pSe, mSe, W3, hSe, gSe, G3, _Se, vSe, ySe, bSe, xSe, SSe, CSe, wSe, TSe, ESe, K3, DSe, OSe, kSe, q3 = e((() => {
-	Gr(), na(), FP(), Cn(), dc(), Li(), Sne(), Rc(), Bd(), o(), Hn(), U2(), si(), vd(), jn(), X(), Bc(), Dd(), qs(), mo(), va(), sc(), Ni(), mm(), Om(), G$(), eQ(), XN(), Zw(), Y2(), JB(), pT(), FG(), _T(), $2(), N4(), Jbe(), $d(), Fh(), DV(), rxe(), HZ(), HK(), sK(), PK(), dK(), SK(), yK(), iK(), KK(), ZK(), JK(), LK(), jK(), (function(e) {
+	Gr(), na(), FP(), Cn(), dc(), Li(), Sne(), Rc(), Bd(), o(), Hn(), U2(), si(), vd(), jn(), X(), Bc(), Dd(), qs(), mo(), va(), sc(), Ni(), Em(), Om(), G$(), eQ(), XN(), Zw(), Y2(), JB(), pT(), FG(), _T(), $2(), N4(), Jbe(), $d(), Fh(), DV(), rxe(), HZ(), HK(), sK(), PK(), dK(), SK(), yK(), iK(), KK(), ZK(), JK(), LK(), jK(), (function(e) {
 		function t(e) {
 			let { selectionStartLineNumber: t, selectionStartColumn: n, positionLineNumber: r, positionColumn: i } = e;
 			return new NK(new oK(t - 1, n - 1), new oK(r - 1, i - 1));
@@ -48030,9 +48030,9 @@ var cxe, V4, H4, lxe, U4, uxe, W4, dxe, G4, K4, fxe, q4, J4, Y4, pxe, mxe, X4, h
 		function t(e) {
 			if (typeof e == "object") return e.viewId;
 			switch (e) {
-				case OJ.SourceControl: return ym.Scm;
-				case OJ.Window: return ym.Window;
-				case OJ.Notification: return ym.Notification;
+				case OJ.SourceControl: return um.Scm;
+				case OJ.Window: return um.Window;
+				case OJ.Notification: return um.Notification;
 			}
 			throw Error("Unknown 'ProgressLocation'");
 		}
@@ -50685,7 +50685,7 @@ var t6, n6, r6, i6, VSe, HSe, a6, USe = e((() => {
 		return Fae(e.get(xn).getLevel());
 	});
 })), c6, l6, KSe = e((() => {
-	v(), A(), bt(), mG(), vV(), rr(), Bn(), er(), K(), $u(), am(), l6 = class {
+	v(), A(), bt(), mG(), vV(), rr(), Bn(), er(), K(), $u(), _m(), l6 = class {
 		static {
 			c6 = this;
 		}
@@ -50768,7 +50768,7 @@ var t6, n6, r6, i6, VSe, HSe, a6, USe = e((() => {
 		V(1, fc),
 		V(2, ao),
 		V(3, he),
-		V(4, $p)
+		V(4, Qp)
 	], l6);
 }));
 //#endregion
@@ -51004,7 +51004,7 @@ var f6, p6, m6, tCe, nCe = e((() => {
 		V(4, Rb)
 	], g6);
 })), _6, v6, iCe = e((() => {
-	v(), mm(), sa(), mG(), vV(), $u(), A(), R(), bt(), Bn(), v6 = class {
+	v(), Em(), sa(), mG(), vV(), $u(), A(), R(), bt(), Bn(), v6 = class {
 		static {
 			_6 = this;
 		}
@@ -51019,12 +51019,12 @@ var f6, p6, m6, tCe, nCe = e((() => {
 		}
 		async $startProgress(e, t, n) {
 			let r = this._createTask(e);
-			if (t.location === ym.Notification && n) {
+			if (t.location === um.Notification && n) {
 				let e = _6.URGENT_PROGRESS_SOURCES.includes(n);
 				t = {
 					...t,
 					priority: e ? jt.URGENT : jt.DEFAULT,
-					location: ym.Notification,
+					location: um.Notification,
 					secondaryActions: [it({
 						id: n,
 						label: x(2551, "Manage Extension"),
@@ -52158,7 +52158,7 @@ var PCe = e((() => {
 		V(4, xn)
 	], N6);
 })), P6, F6, ICe = e((() => {
-	v(), k(), Mu(), st(), cm(), Ji(), ne(), qh(), vV(), mG(), F6 = class extends H {
+	v(), k(), Mu(), st(), im(), Ji(), ne(), qh(), vV(), mG(), F6 = class extends H {
 		static {
 			P6 = this;
 		}
@@ -52184,7 +52184,7 @@ var PCe = e((() => {
 		V(1, li),
 		V(2, ds),
 		V(3, Ct),
-		V(4, nm)
+		V(4, tm)
 	], F6);
 })), I6, LCe = e((() => {
 	jn(), I6 = class {
@@ -52683,7 +52683,7 @@ function QCe(e) {
 	return e.shellLaunchConfig.type !== "Task";
 }
 var H6, $Ce = e((() => {
-	v(), K(), k(), KCe(), mG(), AS(), Hm(), vV(), HZ(), am(), H6 = class extends H {
+	v(), K(), k(), KCe(), mG(), AS(), Hm(), vV(), HZ(), _m(), H6 = class extends H {
 		constructor(e, t, n, r) {
 			super(), this._terminalService = t, this._extensionService = r, this._proxy = e.getProxy(pG.ExtHostTerminalShellIntegration);
 			let i = /* @__PURE__ */ new Map();
@@ -52732,7 +52732,7 @@ var H6, $Ce = e((() => {
 		mV(fG.MainThreadTerminalShellIntegration),
 		V(1, CS),
 		V(2, Nm),
-		V(3, $p)
+		V(3, Qp)
 	], H6);
 })), U6, ewe = e((() => {
 	v(), mG(), vV(), ql(), U6 = class {
@@ -52746,7 +52746,7 @@ var H6, $Ce = e((() => {
 		}
 	}, U6 = D([mV(fG.MainThreadTheming), V(1, On)], U6);
 })), W6, twe, nwe, rwe = e((() => {
-	v(), k(), mG(), zB(), vV(), Gr(), er(), jn(), Ts(), am(), Oa(), FP(), ASe(), q3(), Mw(), W6 = class extends H {
+	v(), k(), mG(), zB(), vV(), Gr(), er(), jn(), Ts(), _m(), Oa(), FP(), ASe(), q3(), Mw(), W6 = class extends H {
 		constructor(e, t, n, r, i) {
 			super(), this.viewsService = t, this.notificationService = n, this.extensionService = r, this.logService = i, this._dataProviders = this._register(new Ks()), this._dndControllers = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(pG.ExtHostTreeViews);
 		}
@@ -52844,7 +52844,7 @@ var H6, $Ce = e((() => {
 		mV(fG.MainThreadTreeViews),
 		V(1, jw),
 		V(2, fc),
-		V(3, $p),
+		V(3, Qp),
 		V(4, xn)
 	], W6), twe = class {
 		constructor(e, t, n, r, i) {
@@ -52947,12 +52947,12 @@ var H6, $Ce = e((() => {
 		}
 	}, G6 = D([mV(fG.MainThreadDownloadService), V(1, qy)], G6);
 })), awe, K6, owe = e((() => {
-	v(), mG(), vV(), Eb(), k(), Fue(), pm(), QS(), awe = class {
+	v(), mG(), vV(), Eb(), k(), Fue(), Tm(), QS(), awe = class {
 		constructor(e, t, n, r) {
 			this.proxy = e, this.handle = t, this.extensionId = n, this.extensionDisplayName = r;
 		}
 		async handleURL(e, t) {
-			return vm.equals(this.extensionId, e.authority) ? (await this.proxy.$handleExternalUri(this.handle, e), !0) : !1;
+			return pm.equals(this.extensionId, e.authority) ? (await this.proxy.$handleExternalUri(this.handle, e), !0) : !1;
 		}
 	}, K6 = class extends H {
 		constructor(e, t, n, r) {
@@ -53015,7 +53015,7 @@ var q6, J6, Y6, X6, Z6, Q6 = e((() => {
 		} }
 	};
 })), $6, e8, cwe = e((() => {
-	v(), k(), pa(), Ae(), nf(), Q6(), am(), e8 = class extends H {
+	v(), k(), pa(), Ae(), nf(), Q6(), _m(), e8 = class extends H {
 		static {
 			$6 = this;
 		}
@@ -53058,9 +53058,9 @@ var q6, J6, Y6, X6, Z6, Q6 = e((() => {
 			for (let [n, r] of this._openers) e.push(n), t.push(r.extensionId);
 			swe(e, t);
 		}
-	}, e8 = $6 = D([V(0, Kd), V(1, $p)], e8);
+	}, e8 = $6 = D([V(0, Kd), V(1, Qp)], e8);
 })), t8, lwe = e((() => {
-	v(), bt(), R(), k(), jl(), A(), Bn(), er(), Pd(), Ae(), mG(), Q6(), cwe(), Ex(), am(), vV(), Xi(), t8 = class extends H {
+	v(), bt(), R(), k(), jl(), A(), Bn(), er(), Pd(), Ae(), mG(), Q6(), cwe(), Ex(), _m(), vV(), Xi(), t8 = class extends H {
 		constructor(e, t, n, r, i, a) {
 			super(), this.extensionService = r, this.openerService = i, this.notificationService = a, this._registeredOpeners = /* @__PURE__ */ new Map(), this.proxy = e.getProxy(pG.ExtHostUriOpeners), this._register(n.registerExternalOpenerProvider(this)), this._contributedExternalUriOpenersStore = this._register(new e8(t, r));
 		}
@@ -53118,7 +53118,7 @@ var q6, J6, Y6, X6, Z6, Q6 = e((() => {
 		mV(fG.MainThreadUriOpeners),
 		V(1, Kd),
 		V(2, Tx),
-		V(3, $p),
+		V(3, Qp),
 		V(4, id),
 		V(5, fc)
 	], t8);
@@ -53160,7 +53160,7 @@ var q6, J6, Y6, X6, Z6, Q6 = e((() => {
 		V(3, Tw)
 	], n8);
 })), r8, i8, dwe = e((() => {
-	v(), K(), k(), cd(), si(), Qn(), A(), En(), am(), dh(), Fm(), i8 = r8 = class extends H {
+	v(), K(), k(), cd(), si(), Qn(), A(), En(), _m(), dh(), Fm(), i8 = r8 = class extends H {
 		static async create(e, t, n) {
 			return e.invokeFunction(async (r) => {
 				let i = await r.get(uc).createModelReference(n);
@@ -53205,7 +53205,7 @@ var q6, J6, Y6, X6, Z6, Q6 = e((() => {
 	}, i8 = r8 = D([
 		V(3, Jm),
 		V(4, Bt),
-		V(5, $p)
+		V(5, Qp)
 	], i8);
 }));
 //#endregion
@@ -53272,7 +53272,7 @@ var mwe, hwe, gwe, _we, a8, o8, s8 = e((() => {
 		}
 	}, c8 = D([V(1, Zs)], c8);
 })), l8, u8, d8, f8, p8, ywe = e((() => {
-	v(), i(), ye(), mc(), R(), K(), k(), jl(), cd(), si(), X(), Bc(), A(), rr(), ms(), Hs(), y(), En(), Ae(), dn(), Es(), IQ(), mG(), h1(), bx(), dwe(), s8(), nC(), C$(), $m(), uh(), Hm(), am(), km(), vwe(), ih(), wm(), qm(), _n(), (function(e) {
+	v(), i(), ye(), mc(), R(), K(), k(), jl(), cd(), si(), X(), Bc(), A(), rr(), ms(), Hs(), y(), En(), Ae(), dn(), Es(), IQ(), mG(), h1(), bx(), dwe(), s8(), nC(), C$(), $m(), uh(), Hm(), _m(), km(), vwe(), ih(), wm(), qm(), _n(), (function(e) {
 		e[e.Custom = 0] = "Custom", e[e.Text = 1] = "Text";
 	})(u8 ||= {}), d8 = class extends H {
 		constructor(e, t, n, r, i, a, o, s, c, l, u, d, f) {
@@ -53382,7 +53382,7 @@ var mwe, hwe, gwe, _we, a8, o8, s8 = e((() => {
 			})());
 		}
 	}, d8 = D([
-		V(3, $p),
+		V(3, Qp),
 		V(4, Kd),
 		V(5, yh),
 		V(6, dm),
@@ -53580,7 +53580,7 @@ var mwe, hwe, gwe, _we, a8, o8, s8 = e((() => {
 		V(11, Nm),
 		V(12, yh),
 		V(13, lh),
-		V(14, $p)
+		V(14, Qp)
 	], p8);
 }));
 //#endregion
@@ -53598,7 +53598,7 @@ function xwe(e) {
 	};
 }
 var Swe, Cwe, m8, wwe = e((() => {
-	v(), R(), K(), k(), X(), Bc(), Mu(), Ae(), ph(), s8(), r1(), nC(), C$(), nh(), $m(), $d(), uh(), am(), mG(), IQ(), vd(), Swe = class {
+	v(), R(), K(), k(), X(), Bc(), Mu(), Ae(), ph(), s8(), r1(), nC(), C$(), nh(), $m(), $d(), uh(), _m(), mG(), IQ(), vd(), Swe = class {
 		constructor() {
 			this._handlesToInputs = /* @__PURE__ */ new Map(), this._inputsToHandles = /* @__PURE__ */ new Map();
 		}
@@ -53761,7 +53761,7 @@ var Swe, Cwe, m8, wwe = e((() => {
 		V(2, ds),
 		V(3, Xm),
 		V(4, Um),
-		V(5, $p),
+		V(5, Qp),
 		V(6, Kd),
 		V(7, tC)
 	], m8);
@@ -54042,7 +54042,7 @@ function S8(e) {
 	if (e?.resource) return J.isUri(e.resource) ? e.resource : e.resource.primary;
 }
 var C8, w8, T8, E8, D8, jwe = e((() => {
-	v(), A(), X(), si(), Po(), pu(), kt(), Mu(), Yr(), Fm(), im(), jl(), ms(), ql(), K(), En(), ig(), k(), y(), rh(), xG(), Iue(), C8 = { onDidChangeVisibility: W.None }, w8 = class extends H {
+	v(), A(), X(), si(), Po(), pu(), kt(), Mu(), Yr(), Fm(), em(), jl(), ms(), ql(), K(), En(), ig(), k(), y(), rh(), xG(), Iue(), C8 = { onDidChangeVisibility: W.None }, w8 = class extends H {
 		get onDidChangeDecorations() {
 			return this._onDidChangeDecorations.event;
 		}
@@ -54104,7 +54104,7 @@ var C8, w8, T8, E8, D8, jwe = e((() => {
 		V(3, pr),
 		V(4, Jr),
 		V(5, ol),
-		V(6, gm),
+		V(6, om),
 		V(7, On),
 		V(8, Bt),
 		V(9, Jm)
@@ -54121,7 +54121,7 @@ var C8, w8, T8, E8, D8, jwe = e((() => {
 		V(4, pr),
 		V(5, Jr),
 		V(6, ol),
-		V(7, gm),
+		V(7, om),
 		V(8, On),
 		V(9, Bt),
 		V(10, Jm)
@@ -54313,7 +54313,7 @@ var C8, w8, T8, E8, D8, jwe = e((() => {
 	}, D8 = D([
 		V(2, ol),
 		V(3, pr),
-		V(4, gm),
+		V(4, om),
 		V(5, Bt),
 		V(6, Jm),
 		V(7, Jr),
@@ -54950,7 +54950,7 @@ var L8, R8 = e((() => {
 		}
 	};
 })), tTe, K8, q8, J8, nTe = e((() => {
-	K(), k(), mm(), Om(), tTe = class extends H {
+	K(), k(), Em(), Om(), tTe = class extends H {
 		constructor(e, t) {
 			super(), this.progressBar = e, this.group = t, this.registerListeners();
 		}
@@ -54960,7 +54960,7 @@ var L8, R8 = e((() => {
 			}));
 		}
 		show(e, t) {
-			return this.group.isEmpty ? hse : e === !0 ? this.doShow(!0, t) : this.doShow(e, t);
+			return this.group.isEmpty ? Sse : e === !0 ? this.doShow(!0, t) : this.doShow(e, t);
 		}
 		doShow(e, t) {
 			return typeof e == "boolean" ? this.progressBar.infinite().show(t) : this.progressBar.total(e).show(t), {
@@ -55603,7 +55603,7 @@ var e5, t5, n5, sTe, cTe, r5, i5, a5, o5, s5, c5 = e((() => {
 })), l5, lTe = e((() => {
 	Cc(), l5 = new E("commentsFilterFocus", !1);
 })), u5, d5, f5, p5, uTe, m5, dTe = e((() => {
-	ka(), k(), A(), Cc(), K(), lTe(), _o(), c5(), Gu(), G8(), hm(), iTe(), Hu(), (function(e) {
+	ka(), k(), A(), Cc(), K(), lTe(), _o(), c5(), Gu(), G8(), xm(), iTe(), Hu(), (function(e) {
 		e.ResourceAscending = "resourceAscending", e.UpdatedAtDescending = "updatedAtDescending";
 	})(u5 ||= {}), d5 = new E("commentsView.showResolvedFilter", !0), f5 = new E("commentsView.showUnResolvedFilter", !0), p5 = new E("commentsView.sortBy", u5.ResourceAscending), uTe = class extends H {
 		constructor(e, t) {
@@ -55665,7 +55665,7 @@ var e5, t5, n5, sTe, cTe, r5, i5, a5, o5, s5, c5 = e((() => {
 				id: "commentsFocusFilter",
 				title: x(6397, "Focus comments filter"),
 				keybinding: {
-					when: Em.isEqualTo(z8),
+					when: cm.isEqualTo(z8),
 					weight: L.WorkbenchContrib,
 					primary: S.CtrlCmd | j.KeyF
 				},
@@ -58132,7 +58132,7 @@ function ZTe() {
 	return nEe.isDraggedOver;
 }
 var QTe, $Te, U5, eEe, W5, G5, K5, q5, tEe, nEe, rEe = e((() => {
-	v(), Ml(), M(), Gr(), FP(), K(), k(), Rc(), o(), jl(), ic(), si(), X(), GP(), Hs(), y(), En(), ut(), Ts(), du(), kt(), Mb(), Om(), uh(), cf(), Fm(), Iw(), Uu(), xse(), QTe = class {
+	v(), Ml(), M(), Gr(), FP(), K(), k(), Rc(), o(), jl(), ic(), si(), X(), GP(), Hs(), y(), En(), ut(), Ts(), du(), kt(), Mb(), Om(), uh(), cf(), Fm(), Iw(), Uu(), nse(), QTe = class {
 		constructor(e) {
 			this.identifier = e;
 		}
@@ -58375,7 +58375,7 @@ var QTe, $Te, U5, eEe, W5, G5, K5, q5, tEe, nEe, rEe = e((() => {
 			this.CHANNEL_NAME = "monaco-workbench-global-dragged-over";
 		}
 		constructor() {
-			super(), this.broadcaster = this._register(new yse(e.CHANNEL_NAME)), this.draggedOver = !1, this.registerListeners();
+			super(), this.broadcaster = this._register(new Cse(e.CHANNEL_NAME)), this.draggedOver = !1, this.registerListeners();
 		}
 		registerListeners() {
 			this._register(W.runAndSubscribe(Vie, ({ window: e, disposables: t }) => {
@@ -58398,7 +58398,7 @@ var QTe, $Te, U5, eEe, W5, G5, K5, q5, tEe, nEe, rEe = e((() => {
 		}
 	}, nEe = new tEe();
 })), J5, Y5, X5, Z5, iEe, Q5, aEe = e((() => {
-	ll(), v(), M(), wc(), Rl(), h(), eTe(), ye(), K(), ka(), k(), jn(), Jwe(), A(), Ia(), _o(), Mu(), qc(), jd(), y(), Gu(), pa(), Ae(), ne(), Mr(), ed(), uu(), ni(), Wt(), Pr(), wt(), rc(), Ko(), Si(), yd(), xo(), ql(), kt(), rEe(), Eoe(), wp(), zB(), Gb(), Mw(), hm(), am(), Dm(), om(), Oa(), aTe(), Bo(qwe), J5 = new Pu("Views"), cu.appendMenuItem(Pu.ViewContainerTitle, {
+	ll(), v(), M(), wc(), Rl(), h(), eTe(), ye(), K(), ka(), k(), jn(), Jwe(), A(), Ia(), _o(), Mu(), qc(), jd(), y(), Gu(), pa(), Ae(), ne(), Mr(), ed(), uu(), ni(), Wt(), Pr(), wt(), rc(), Ko(), Si(), yd(), xo(), ql(), kt(), rEe(), Eoe(), wp(), zB(), Gb(), Mw(), xm(), _m(), nm(), Sm(), Oa(), aTe(), Bo(qwe), J5 = new Pu("Views"), cu.appendMenuItem(Pu.ViewContainerTitle, {
 		submenu: J5,
 		title: x(3702, "Views"),
 		order: 1
@@ -58586,7 +58586,7 @@ var QTe, $Te, U5, eEe, W5, G5, K5, q5, tEe, nEe, rEe = e((() => {
 			}));
 			o.length && this.onDidAddViewDescriptors(o), this.extensionService.whenInstalledExtensionsRegistered().then(() => {
 				this.areExtensionsReady = !0, this.panes.length && (this.updateTitleArea(), this.updateViewHeaders()), this._register(this.configurationService.onDidChangeConfiguration((e) => {
-					e.affectsConfiguration(ese.ACTIVITY_BAR_LOCATION) && this.updateViewHeaders();
+					e.affectsConfiguration(Zoe.ACTIVITY_BAR_LOCATION) && this.updateViewHeaders();
 				}));
 			}), this._register(this.viewContainerModel.onDidChangeActiveViewDescriptors(() => this._onTitleAreaUpdate.fire()));
 		}
@@ -58628,7 +58628,7 @@ var QTe, $Te, U5, eEe, W5, G5, K5, q5, tEe, nEe, rEe = e((() => {
 			switch (this.viewDescriptorService.getViewContainerLocation(this.viewContainer)) {
 				case AB.Sidebar:
 				case AB.AuxiliaryBar: return La.VERTICAL;
-				case AB.Panel: return Yoe(this.layoutService.getPanelPosition()) ? La.HORIZONTAL : La.VERTICAL;
+				case AB.Panel: return sse(this.layoutService.getPanelPosition()) ? La.HORIZONTAL : La.VERTICAL;
 			}
 			return La.VERTICAL;
 		}
@@ -58880,10 +58880,10 @@ var QTe, $Te, U5, eEe, W5, G5, K5, q5, tEe, nEe, rEe = e((() => {
 	}, Z5 = D([
 		V(2, w),
 		V(3, ds),
-		V(4, um),
+		V(4, fm),
 		V(5, lo),
 		V(6, li),
-		V(7, $p),
+		V(7, Qp),
 		V(8, On),
 		V(9, Kd),
 		V(10, Jr),
@@ -58902,7 +58902,7 @@ var QTe, $Te, U5, eEe, W5, G5, K5, q5, tEe, nEe, rEe = e((() => {
 			super(e), this.offset = t;
 		}
 		async run(e) {
-			let t = e.get(Wb), n = e.get(Nl), r = Em.getValue(n);
+			let t = e.get(Wb), n = e.get(Nl), r = cm.getValue(n);
 			if (r === void 0) return;
 			let i = t.getViewContainerByViewId(r), a = t.getViewContainerModel(i), o = a.visibleViewDescriptors.find((e) => e.id === r), s = a.visibleViewDescriptors.indexOf(o);
 			if (s + this.offset < 0 || s + this.offset >= a.visibleViewDescriptors.length) return;
@@ -58917,7 +58917,7 @@ var QTe, $Te, U5, eEe, W5, G5, K5, q5, tEe, nEe, rEe = e((() => {
 				keybinding: {
 					primary: Xt(S.CtrlCmd + j.KeyK, j.UpArrow),
 					weight: L.WorkbenchContrib + 1,
-					when: Em.notEqualsTo("")
+					when: cm.notEqualsTo("")
 				}
 			}, -1);
 		}
@@ -58929,7 +58929,7 @@ var QTe, $Te, U5, eEe, W5, G5, K5, q5, tEe, nEe, rEe = e((() => {
 				keybinding: {
 					primary: Xt(S.CtrlCmd + j.KeyK, j.LeftArrow),
 					weight: L.WorkbenchContrib + 1,
-					when: Em.notEqualsTo("")
+					when: cm.notEqualsTo("")
 				}
 			}, -1);
 		}
@@ -58941,7 +58941,7 @@ var QTe, $Te, U5, eEe, W5, G5, K5, q5, tEe, nEe, rEe = e((() => {
 				keybinding: {
 					primary: Xt(S.CtrlCmd + j.KeyK, j.DownArrow),
 					weight: L.WorkbenchContrib + 1,
-					when: Em.notEqualsTo("")
+					when: cm.notEqualsTo("")
 				}
 			}, 1);
 		}
@@ -58953,7 +58953,7 @@ var QTe, $Te, U5, eEe, W5, G5, K5, q5, tEe, nEe, rEe = e((() => {
 				keybinding: {
 					primary: Xt(S.CtrlCmd + j.KeyK, j.RightArrow),
 					weight: L.WorkbenchContrib + 1,
-					when: Em.notEqualsTo("")
+					when: cm.notEqualsTo("")
 				}
 			}, 1);
 		}
@@ -59981,7 +59981,7 @@ var t7, dEe = e((() => {
 		e[e.Save = 1] = "Save", e[e.Backup = 2] = "Backup";
 	})(l7 ||= {});
 })), u7, d7, f7, xEe = e((() => {
-	v(), A(), K(), mc(), ms(), Hs(), Om(), qm(), ih(), ye(), Oa(), jn(), wm(), jm(), dse(), Bn(), er(), Ur(), Ir(), bt(), ic(), Pw(), uh(), Qoe(), vwe(), bEe(), mm(), sa(), R(), Xi(), (function(e) {
+	v(), A(), K(), mc(), ms(), Hs(), Om(), qm(), ih(), ye(), Oa(), jn(), wm(), jm(), Yoe(), Bn(), er(), Ur(), Ir(), bt(), ic(), Pw(), uh(), gse(), vwe(), bEe(), Em(), sa(), R(), Xi(), (function(e) {
 		e[e.SAVED = 0] = "SAVED", e[e.DIRTY = 1] = "DIRTY", e[e.PENDING_SAVE = 2] = "PENDING_SAVE", e[e.CONFLICT = 3] = "CONFLICT", e[e.ORPHAN = 4] = "ORPHAN", e[e.ERROR = 5] = "ERROR";
 	})(d7 ||= {}), f7 = class extends c8 {
 		static {
@@ -60183,7 +60183,7 @@ var t7, dEe = e((() => {
 			let n = new Oc();
 			return this.progressService.withProgress({
 				title: x(14635, "Saving '{0}'", this.name),
-				location: ym.Window,
+				location: um.Window,
 				cancellable: !0,
 				delay: this.isDirty() ? 3e3 : 5e3
 			}, (r) => this.doSaveSequential(t, e, r, n), () => {
@@ -60371,12 +60371,12 @@ var t7, dEe = e((() => {
 		V(6, xn),
 		V(7, dm),
 		V(8, xh),
-		V(9, Cse),
+		V(9, ise),
 		V(10, yh),
 		V(11, fc),
 		V(12, Nw),
 		V(13, Um),
-		V(14, ise),
+		V(14, ese),
 		V(15, Bi)
 	], f7);
 }));
@@ -62365,7 +62365,7 @@ async function PDe(e, t) {
 	}
 }
 var FDe, IDe, l9, LDe = e((() => {
-	v(), K(), k(), i(), jn(), A(), ai(), uC(), $G(), y(), rg(), Fh(), am(), Oa(), cg(), Ao(), MDe(), ye(), mc(), FDe = {
+	v(), K(), k(), i(), jn(), A(), ai(), uC(), $G(), y(), rg(), Fh(), _m(), Oa(), cg(), Ao(), MDe(), ye(), mc(), FDe = {
 		type: "object",
 		additionalProperties: !1,
 		properties: {
@@ -62575,13 +62575,13 @@ var FDe, IDe, l9, LDe = e((() => {
 			}
 		}
 	}, l9 = D([
-		V(0, $p),
+		V(0, Qp),
 		V(1, lC),
 		V(2, og),
 		V(3, xn)
 	], l9);
 })), u9, RDe, d9, zDe = e((() => {
-	v(), k(), A(), vV(), $G(), vC(), mG(), rr(), Xi(), er(), Fh(), am(), ne(), K(), uC(), Aue(), LDe(), X(), Pd(), R(), Oa(), Lh(), Eb(), ye(), bC(), od(), oo(), cm(), u9 = class extends H {
+	v(), k(), A(), vV(), $G(), vC(), mG(), rr(), Xi(), er(), Fh(), _m(), ne(), K(), uC(), Aue(), LDe(), X(), Pd(), R(), Oa(), Lh(), Eb(), ye(), bC(), od(), oo(), im(), u9 = class extends H {
 		constructor(e, t, n, r, i, a, o) {
 			super(), this._proxy = e, this.id = t, this.label = n, this.supportsMultipleAccounts = r, this.authorizationServers = i, this.resourceServer = a, this.onDidChangeSessions = o.event;
 		}
@@ -62855,14 +62855,14 @@ var FDe, IDe, l9, LDe = e((() => {
 		}
 	}, d9 = D([
 		mV(fG.MainThreadAuthentication),
-		V(1, nm),
+		V(1, tm),
 		V(2, gC),
 		V(3, _C),
 		V(4, lC),
 		V(5, hC),
 		V(6, he),
 		V(7, fc),
-		V(8, $p),
+		V(8, Qp),
 		V(9, li),
 		V(10, id),
 		V(11, xn),
@@ -63626,7 +63626,7 @@ var FDe, IDe, l9, LDe = e((() => {
 		}
 	}, N9 = D([mV(fG.MainThreadAiSettingsSearch), V(1, Lw)], N9);
 })), P9, cOe, lOe, uOe = e((() => {
-	v(), Or(), ye(), R(), K(), k(), kr(), Xi(), X(), A(), Cc(), qc(), rr(), pm(), Xe(), ne(), Px(), pT(), fC(), Oue(), kue(), vC(), bC(), Lh(), am(), vV(), mG(), aa(), P9 = class extends H {
+	v(), Or(), ye(), R(), K(), k(), kr(), Xi(), X(), A(), Cc(), qc(), rr(), Tm(), Xe(), ne(), Px(), pT(), fC(), Oue(), kue(), vC(), bC(), Lh(), _m(), vV(), mG(), aa(), P9 = class extends H {
 		constructor(e, t, n, r, i, a, o, s, c, l, u) {
 			super(), this._extHostContext = e, this._mcpRegistry = t, this.dialogService = n, this._authenticationService = r, this.authenticationMcpServersService = i, this.authenticationMCPServerAccessService = a, this.authenticationMCPServerUsageService = o, this._dynamicAuthenticationProviderStorageService = s, this._extensionService = c, this._contextKeyService = l, this._telemetryService = u, this._serverIdCounter = 0, this._servers = /* @__PURE__ */ new Map(), this._serverDefinitions = /* @__PURE__ */ new Map(), this._serverAuthTracking = new lOe(), this._collectionDefinitions = this._register(new Ks()), this._register(r.onDidChangeSessions((e) => this._onDidChangeAuthSessions(e.providerId, e.label)));
 			let d = this._proxy = e.getProxy(pG.ExtHostMcp);
@@ -63656,7 +63656,7 @@ var FDe, IDe, l9, LDe = e((() => {
 			let n = t.map(iT.fromSerialized), r = this._collectionDefinitions.get(e.id);
 			if (r) r.servers.set(n, void 0);
 			else {
-				let t = zt("mcpServers", n), r = new vm(e.extensionId), i = new N(), a = i.add(new Cd()), o = () => {
+				let t = zt("mcpServers", n), r = new pm(e.extensionId), i = new N(), a = i.add(new Cd()), o = () => {
 					a.value ??= this._mcpRegistry.registerCollection({
 						...e,
 						source: r,
@@ -63668,7 +63668,7 @@ var FDe, IDe, l9, LDe = e((() => {
 						remoteAuthority: this._extHostContext.remoteAuthority,
 						serverDefinitions: t
 					});
-				}, s = Xre(this._extensionService.extensions, (t) => vm.equals(r, t.identifier) ? t.contributes?.mcpServerDefinitionProviders?.find((t) => nT(r, t.id) === e.id)?.when : void 0), c = s && b.deserialize(s);
+				}, s = Xre(this._extensionService.extensions, (t) => pm.equals(r, t.identifier) ? t.contributes?.mcpServerDefinitionProviders?.find((t) => nT(r, t.id) === e.id)?.when : void 0), c = s && b.deserialize(s);
 				if (!c) o();
 				else {
 					let e = () => {
@@ -63802,7 +63802,7 @@ var FDe, IDe, l9, LDe = e((() => {
 		V(5, dC),
 		V(6, mC),
 		V(7, yC),
-		V(8, $p),
+		V(8, Qp),
 		V(9, Nl),
 		V(10, li)
 	], P9), cOe = class extends H {
@@ -64620,16 +64620,16 @@ function zOe(e) {
 }
 function BOe({ enableWorkerExtensionHost: e, iframeAlternateDomain: t } = {}) {
 	return t != null && ($9 = t), {
-		[$p.toString()]: new vs(Z9, [e], !1),
+		[Qp.toString()]: new vs(Z9, [e], !1),
 		[DC.toString()]: new vs(hU, [], !0),
-		[lm.toString()]: new vs(VOe, [], !0),
+		[bm.toString()]: new vs(VOe, [], !0),
 		[CC.toString()]: new vs(YW, [], !0),
 		[Mh.toString()]: new vs(tG, [], !0),
 		[Zy.toString()]: new vs(Q9, [], !0)
 	};
 }
 var J9, Y9, X9, Z9, VOe, Q9, $9, HOe = e((() => {
-	v(), Hs(), Gm(), Fh(), am(), Oa(), pm(), kt(), y(), er(), iU(), ne(), rr(), tb(), rb(), bf(), Bh(), D_e(), OC(), Mu(), cm(), rg(), Ru(), sg(), vU(), q_e(), Lh(), lH(), _r(), Bd(), cd(), ic(), MW(), Aw(), Ar(), bw(), dV(), $_e(), tm(), eve(), wC(), QW(), cse(), eG(), rce(), rve(), Qy(), Qse(), Xse(), sve(), ZG(), qve(), aye(), oye(), sye(), cye(), uye(), fye(), pye(), hye(), gye(), Sye(), Eye(), Dye(), Oye(), kye(), Aye(), v$(), Mye(), K(), k(), Dd(), Dl(), Ou(), dk(), mG(), Gr(), n_(), _O(), E$(), Ibe(), Lbe(), Vbe(), Hbe(), Ube(), USe(), WSe(), GSe(), KSe(), QSe(), rCe(), iCe(), aCe(), oCe(), sCe(), lCe(), uCe(), fCe(), DCe(), jCe(), MCe(), FCe(), ICe(), XCe(), $Ce(), ewe(), rwe(), iwe(), owe(), lwe(), uwe(), Dwe(), Owe(), lEe(), dEe(), mEe(), vEe(), yEe(), TEe(), EEe(), nDe(), rDe(), uDe(), zDe(), BDe(), tOe(), nOe(), rOe(), iOe(), aOe(), oOe(), sOe(), uOe(), dOe(), fOe(), Ewe(), IOe(), LOe(), Y9 = class extends LW {
+	v(), Hs(), Gm(), Fh(), _m(), Oa(), Tm(), kt(), y(), er(), iU(), ne(), rr(), tb(), rb(), bf(), Bh(), D_e(), OC(), Mu(), im(), rg(), Ru(), sg(), vU(), q_e(), Lh(), lH(), _r(), Bd(), cd(), ic(), MW(), Aw(), Ar(), bw(), dV(), $_e(), rm(), eve(), wC(), QW(), yse(), eG(), rce(), rve(), Qy(), Qse(), Xse(), sve(), ZG(), qve(), aye(), oye(), sye(), cye(), uye(), fye(), pye(), hye(), gye(), Sye(), Eye(), Dye(), Oye(), kye(), Aye(), v$(), Mye(), K(), k(), Dd(), Dl(), Ou(), dk(), mG(), Gr(), n_(), _O(), E$(), Ibe(), Lbe(), Vbe(), Hbe(), Ube(), USe(), WSe(), GSe(), KSe(), QSe(), rCe(), iCe(), aCe(), oCe(), sCe(), lCe(), uCe(), fCe(), DCe(), jCe(), MCe(), FCe(), ICe(), XCe(), $Ce(), ewe(), rwe(), iwe(), owe(), lwe(), uwe(), Dwe(), Owe(), lEe(), dEe(), mEe(), vEe(), yEe(), TEe(), EEe(), nDe(), rDe(), uDe(), zDe(), BDe(), tOe(), nOe(), rOe(), iOe(), aOe(), oOe(), sOe(), uOe(), dOe(), fOe(), Ewe(), IOe(), LOe(), Y9 = class extends LW {
 		constructor(e, t, n, r, i, a, o, s, c) {
 			super(t, n, r, i, a, o, s, c), this.enableWorkerExtensionHost = e;
 		}
@@ -64682,7 +64682,7 @@ var J9, Y9, X9, Z9, VOe, Q9, $9, HOe = e((() => {
 		V(4, li),
 		V(5, Jh),
 		V(6, Zs),
-		V(7, nm),
+		V(7, tm),
 		V(8, jh),
 		V(9, Jr),
 		V(10, ds),
@@ -64700,7 +64700,7 @@ var J9, Y9, X9, Z9, VOe, Q9, $9, HOe = e((() => {
 		V(22, he)
 	], Z9), VOe = class extends GW {
 		async readExtensionResource(e) {
-			return e.scheme === vse.extensionFile ? (await this._fileService.readFile(e)).value.toString() : await super.readExtensionResource(e);
+			return e.scheme === bse.extensionFile ? (await this._fileService.readFile(e)).value.toString() : await super.readExtensionResource(e);
 		}
 	}, Q9 = class extends ice {
 		constructor(e, t, n) {
@@ -64721,7 +64721,7 @@ var J9, Y9, X9, Z9, VOe, Q9, $9, HOe = e((() => {
 		}
 	}, Q9 = D([
 		V(0, Zs),
-		V(1, lm),
+		V(1, bm),
 		V(2, xn)
 	], Q9), $W({ "vs/workbench/services/extensions/worker/webWorkerExtensionHostIframe.html": () => ZW(new URL("data:text/html;base64,PCFET0NUWVBFIGh0bWw+CjxodG1sPgoJPGhlYWQ+CgkJPG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1TZWN1cml0eS1Qb2xpY3kiIGNvbnRlbnQ9IgoJCQlkZWZhdWx0LXNyYyAnbm9uZSc7CgkJCWNoaWxkLXNyYyAnc2VsZicgZGF0YTogYmxvYjo7CgkJCXNjcmlwdC1zcmMgJ3NlbGYnICd1bnNhZmUtZXZhbCcgJ3NoYTI1Ni1ZZW5JUjB3MnVPSk1xMTJVaGJMMTVQbFFXZDdnZjR2M1RoVlRlL252WlpFPScgZGF0YTogZXh0ZW5zaW9uLWZpbGU6IGh0dHBzOiBodHRwOi8vbG9jYWxob3N0OiogYmxvYjo7CgkJCWNvbm5lY3Qtc3JjICdzZWxmJyBkYXRhOiBleHRlbnNpb24tZmlsZTogaHR0cHM6IHdzczogaHR0cDovL2xvY2FsaG9zdDoqIGh0dHA6Ly8xMjcuMC4wLjE6KiB3czovL2xvY2FsaG9zdDoqIHdzOi8vMTI3LjAuMC4xOio7Ii8+Cgk8L2hlYWQ+Cgk8Ym9keT4KCTxzY3JpcHQ+CihmdW5jdGlvbiAoKSB7Cgljb25zdCBzZWFyY2hQYXJhbXMgPSBuZXcgVVJMKGRvY3VtZW50LmxvY2F0aW9uLmhyZWYpLnNlYXJjaFBhcmFtczsKCWNvbnN0IHZzY29kZVdlYldvcmtlckV4dEhvc3RJZCA9IHNlYXJjaFBhcmFtcy5nZXQoJ3ZzY29kZVdlYldvcmtlckV4dEhvc3RJZCcpIHx8ICcnOwoJY29uc3QgbmFtZSA9IHNlYXJjaFBhcmFtcy5nZXQoJ2RlYnVnZ2VkJykgPyAnRGVidWdFeHRlbnNpb25Ib3N0V29ya2VyJyA6ICdFeHRlbnNpb25Ib3N0V29ya2VyJzsKCWNvbnN0IHBhcmVudE9yaWdpbiA9IHNlYXJjaFBhcmFtcy5nZXQoJ3BhcmVudE9yaWdpbicpIHx8IHdpbmRvdy5vcmlnaW47Cgljb25zdCBzYWx0ID0gc2VhcmNoUGFyYW1zLmdldCgnc2FsdCcpOwoKCShhc3luYyBmdW5jdGlvbiAoKSB7CgkJY29uc3QgaG9zdG5hbWVWYWxpZGF0aW9uTWFya2VyID0gJ3YtLSc7CgkJY29uc3QgaG9zdG5hbWUgPSBsb2NhdGlvbi5ob3N0bmFtZTsKCQlpZiAoIWhvc3RuYW1lLnN0YXJ0c1dpdGgoaG9zdG5hbWVWYWxpZGF0aW9uTWFya2VyKSkgewoJCQkvLyB2YWxpZGF0aW9uIG5vdCByZXF1ZXN0ZWQKCQkJcmV0dXJuIHN0YXJ0KCk7CgkJfQoJCWlmICghY3J5cHRvLnN1YnRsZSkgewoJCQkvLyBjYW5ub3QgdmFsaWRhdGUsIG5vdCBydW5uaW5nIGluIGEgc2VjdXJlIGNvbnRleHQKCQkJcmV0dXJuIHNlbmRFcnJvcihuZXcgRXJyb3IoYENhbm5vdCB2YWxpZGF0ZSBpbiBjdXJyZW50IGNvbnRleHQhYCkpOwoJCX0KCgkJLy8gSGVyZSB0aGUgYHBhcmVudE9yaWdpbkhhc2goKWAgZnVuY3Rpb24gZnJvbSBgc3JjL3ZzL2Jhc2UvYnJvd3Nlci9pZnJhbWUudHNgIGlzIGlubGluZWQKCQkvLyBjb21wdXRlIGEgc2hhLTI1NiBjb21wb3NlZCBvZiBgcGFyZW50T3JpZ2luYCBhbmQgYHNhbHRgIGNvbnZlcnRlZCB0byBiYXNlIDMyCgkJLyoqIEB0eXBlIHtzdHJpbmd9ICovCgkJbGV0IHBhcmVudE9yaWdpbkhhc2g7CgkJdHJ5IHsKCQkJY29uc3Qgc3RyRGF0YSA9IEpTT04uc3RyaW5naWZ5KHsgcGFyZW50T3JpZ2luLCBzYWx0IH0pOwoJCQljb25zdCBlbmNvZGVyID0gbmV3IFRleHRFbmNvZGVyKCk7CgkJCWNvbnN0IGFyckRhdGEgPSBlbmNvZGVyLmVuY29kZShzdHJEYXRhKTsKCQkJY29uc3QgaGFzaCA9IGF3YWl0IGNyeXB0by5zdWJ0bGUuZGlnZXN0KCdzaGEtMjU2JywgYXJyRGF0YSk7CgkJCWNvbnN0IGhhc2hBcnJheSA9IEFycmF5LmZyb20obmV3IFVpbnQ4QXJyYXkoaGFzaCkpOwoJCQljb25zdCBoYXNoSGV4ID0gaGFzaEFycmF5Lm1hcChiID0+IGIudG9TdHJpbmcoMTYpLnBhZFN0YXJ0KDIsICcwJykpLmpvaW4oJycpOwoJCQkvLyBzaGEyNTYgaGFzIDI1NiBiaXRzLCBzbyB3ZSBuZWVkIGF0IG1vc3QgY2VpbChsZygyXjI1Ni0xKS9sZygzMikpID0gNTIgY2hhcnMgdG8gcmVwcmVzZW50IGl0IGluIGJhc2UgMzIKCQkJcGFyZW50T3JpZ2luSGFzaCA9IEJpZ0ludChgMHgke2hhc2hIZXh9YCkudG9TdHJpbmcoMzIpLnBhZFN0YXJ0KDUyLCAnMCcpOwoJCX0gY2F0Y2ggKGVycikgewoJCQlyZXR1cm4gc2VuZEVycm9yKGVyciBpbnN0YW5jZW9mIEVycm9yID8gZXJyIDogbmV3IEVycm9yKFN0cmluZyhlcnIpKSk7CgkJfQoKCQljb25zdCByZXF1aXJlZFN1YmRvbWFpbiA9IGAke2hvc3RuYW1lVmFsaWRhdGlvbk1hcmtlcn0ke3BhcmVudE9yaWdpbkhhc2h9LmA7CgkJaWYgKGhvc3RuYW1lLnN1YnN0cmluZygwLCByZXF1aXJlZFN1YmRvbWFpbi5sZW5ndGgpID09PSByZXF1aXJlZFN1YmRvbWFpbikgewoJCQkvLyB2YWxpZGF0aW9uIHN1Y2NlZWRlZCEKCQkJcmV0dXJuIHN0YXJ0KCk7CgkJfQoKCQlyZXR1cm4gc2VuZEVycm9yKG5ldyBFcnJvcihgRXhwZWN0ZWQgJyR7cmVxdWlyZWRTdWJkb21haW59JyBhcyBzdWJkb21haW4hYCkpOwoJfSkoKTsKCglmdW5jdGlvbiBzZW5kRXJyb3IoZXJyb3IpIHsKCQl3aW5kb3cucGFyZW50LnBvc3RNZXNzYWdlKHsKCQkJdnNjb2RlV2ViV29ya2VyRXh0SG9zdElkLAoJCQllcnJvcjogewoJCQkJbmFtZTogZXJyb3IgPyBlcnJvci5uYW1lIDogJycsCgkJCQltZXNzYWdlOiBlcnJvciA/IGVycm9yLm1lc3NhZ2UgOiAnJywKCQkJCXN0YWNrOiBlcnJvciA/IGVycm9yLnN0YWNrIDogW10KCQkJfQoJCX0sICcqJyk7Cgl9CgoJZnVuY3Rpb24gc3RhcnQoKSB7CgoJCS8vIEJlZm9yZSB3ZSBjYW4gbG9hZCB0aGUgd29ya2VyLCB3ZSBuZWVkIHRvIGdldCB0aGUgY3VycmVudCBzZXQgb2YgTkxTCgkJLy8gY29uZmlndXJhdGlvbiBpbnRvIHRoaXMgaWZyYW1lLiBXZSBhc2sgdGhlIHBhcmVudCB3aW5kb3cgdG8gc2VuZCBpdAoJCS8vIHRvZ2V0aGVyIHdpdGggdGhlIG5lY2Vzc2FyeSBpbmZvcm1hdGlvbiB0byBsb2FkIHRoZSB3b3JrZXIgdmlhIEJsb2IuCgoJCWNvbnN0IGJvb3RzdHJhcE5sc1R5cGUgPSAndnNjb2RlLmJvb3RzdHJhcC5ubHMnOwoKCQlzZWxmLm9ubWVzc2FnZSA9IChldmVudCkgPT4gewoJCQlpZiAoZXZlbnQub3JpZ2luICE9PSBwYXJlbnRPcmlnaW4gfHwgZXZlbnQuZGF0YS50eXBlICE9PSBib290c3RyYXBObHNUeXBlKSB7CgkJCQlyZXR1cm47CgkJCX0KCQkJY29uc3QgeyBkYXRhIH0gPSBldmVudC5kYXRhOwoJCQljcmVhdGVXb3JrZXIoZGF0YS53b3JrZXJVcmwsIGRhdGEud29ya2VyT3B0aW9ucywgZGF0YS5maWxlUm9vdCwgZGF0YS5ubHMubWVzc2FnZXMsIGRhdGEubmxzLmxhbmd1YWdlKTsKCQl9OwoKCQl3aW5kb3cucGFyZW50LnBvc3RNZXNzYWdlKHsKCQkJdnNjb2RlV2ViV29ya2VyRXh0SG9zdElkLAoJCQl0eXBlOiBib290c3RyYXBObHNUeXBlCgkJfSwgJyonKTsKCX0KCglmdW5jdGlvbiBjcmVhdGVXb3JrZXIod29ya2VyVXJsLCB3b3JrZXJPcHRpb25zLCBmaWxlUm9vdCwgbmxzTWVzc2FnZXMsIG5sc0xhbmd1YWdlKSB7CgkJdHJ5IHsKCQkJaWYgKGdsb2JhbFRoaXMuY3Jvc3NPcmlnaW5Jc29sYXRlZCkgewoJCQkJd29ya2VyVXJsICs9ICc/dnNjb2RlLWNvaT0yJzsgLy8gQ09FUAoJCQl9CgoJCQkvLyBJbiBiZWxvdyBibG9iIGNvZGUsIHdlIGFyZSB1c2luZyBKU09OLnN0cmluZ2lmeSB0byBlbnN1cmUgdGhlIHBhc3NlZAoJCQkvLyBpbiB2YWx1ZXMgYXJlIG5vdCBicmVha2luZyBvdXIgc2NyaXB0LiBUaGUgdmFsdWVzIG1heSBjb250YWluIHN0cmluZwoJCQkvLyB0ZXJtaW5hdGluZyBjaGFyYWN0ZXJzIChzdWNoIGFzICcgb3IgIikuCgoJCQljb25zdCBibG9iID0gbmV3IEJsb2IoW1sKCQkJCWAvKmV4dGVuc2lvbkhvc3RXb3JrZXIqL2AsCgkJCQlgZ2xvYmFsVGhpcy5fVlNDT0RFX05MU19NRVNTQUdFUyA9ICR7SlNPTi5zdHJpbmdpZnkobmxzTWVzc2FnZXMpfTtgLAoJCQkJYGdsb2JhbFRoaXMuX1ZTQ09ERV9OTFNfTEFOR1VBR0UgPSAke0pTT04uc3RyaW5naWZ5KG5sc0xhbmd1YWdlKX07YCwKCQkJCWBnbG9iYWxUaGlzLl9WU0NPREVfRklMRV9ST09UID0gJHtKU09OLnN0cmluZ2lmeShmaWxlUm9vdCl9O2AsCgkJCQkod29ya2VyT3B0aW9ucz8udHlwZSA9PT0gJ21vZHVsZScpID8gYGF3YWl0IGltcG9ydCgnJHt3b3JrZXJVcmx9Jyk7YCA6IGBpbXBvcnRTY3JpcHRzKCcke3dvcmtlclVybH0nKTtgLAoJCQkJYC8qZXh0ZW5zaW9uSG9zdFdvcmtlciovYAoJCQldLmpvaW4oJycpXSwgeyB0eXBlOiAnYXBwbGljYXRpb24vamF2YXNjcmlwdCcgfSk7CgoJCQljb25zdCB3b3JrZXIgPSBuZXcgV29ya2VyKFVSTC5jcmVhdGVPYmplY3RVUkwoYmxvYiksIHsgbmFtZSwgLi4ud29ya2VyT3B0aW9ucyB9KTsKCQkJY29uc3QgbmVzdGVkV29ya2VycyA9IG5ldyBNYXAoKTsKCgkJCXdvcmtlci5vbm1lc3NhZ2UgPSAoZXZlbnQpID0+IHsKCQkJCWNvbnN0IHsgZGF0YSB9ID0gZXZlbnQ7CgoJCQkJaWYgKGRhdGE/LnR5cGUgPT09ICdfbmV3V29ya2VyJykgewoJCQkJCWNvbnN0IHsgaWQsIHBvcnQsIHVybCwgb3B0aW9ucyB9ID0gZGF0YTsKCQkJCQljb25zdCBuZXdXb3JrZXIgPSBuZXcgV29ya2VyKHVybCwgb3B0aW9ucyk7CgkJCQkJbmV3V29ya2VyLnBvc3RNZXNzYWdlKHBvcnQsIFtwb3J0XSk7CgkJCQkJbmV3V29ya2VyLm9uZXJyb3IgPSBjb25zb2xlLmVycm9yLmJpbmQoY29uc29sZSk7CgkJCQkJbmVzdGVkV29ya2Vycy5zZXQoaWQsIG5ld1dvcmtlcik7CgoJCQkJfSBlbHNlIGlmIChkYXRhPy50eXBlID09PSAnX3Rlcm1pbmF0ZVdvcmtlcicpIHsKCQkJCQljb25zdCB7IGlkIH0gPSBkYXRhOwoJCQkJCWlmIChuZXN0ZWRXb3JrZXJzLmhhcyhpZCkpIHsKCQkJCQkJbmVzdGVkV29ya2Vycy5nZXQoaWQpLnRlcm1pbmF0ZSgpOwoJCQkJCQluZXN0ZWRXb3JrZXJzLmRlbGV0ZShpZCk7CgkJCQkJfQoJCQkJfSBlbHNlIHsKCQkJCQl3b3JrZXIub25lcnJvciA9IGNvbnNvbGUuZXJyb3IuYmluZChjb25zb2xlKTsKCQkJCQl3aW5kb3cucGFyZW50LnBvc3RNZXNzYWdlKHsKCQkJCQkJdnNjb2RlV2ViV29ya2VyRXh0SG9zdElkLAoJCQkJCQlkYXRhCgkJCQkJfSwgcGFyZW50T3JpZ2luLCBbZGF0YV0pOwoJCQkJfQoJCQl9OwoKCQkJd29ya2VyLm9uZXJyb3IgPSAoZXZlbnQpID0+IHsKCQkJCWNvbnNvbGUuZXJyb3IoZXZlbnQubWVzc2FnZSwgZXZlbnQuZXJyb3IpOwoJCQkJc2VuZEVycm9yKGV2ZW50LmVycm9yKTsKCQkJfTsKCgkJCXNlbGYub25tZXNzYWdlID0gKGV2ZW50KSA9PiB7CgkJCQlpZiAoZXZlbnQub3JpZ2luICE9PSBwYXJlbnRPcmlnaW4pIHsKCQkJCQlyZXR1cm47CgkJCQl9CgkJCQl3b3JrZXIucG9zdE1lc3NhZ2UoZXZlbnQuZGF0YSwgZXZlbnQucG9ydHMpOwoJCQl9OwoJCX0gY2F0Y2ggKGVycikgewoJCQljb25zb2xlLmVycm9yKGVycik7CgkJCXNlbmRFcnJvcihlcnIpOwoJCX0KCX0KfSkoKTsKCTwvc2NyaXB0PgoJPC9ib2R5Pgo8L2h0bWw+Cg==", "" + import.meta.url).href, $9) });
 }));

@@ -317,6 +317,107 @@ class TestDslGrammarPortal(HttpCase):
             timeout=60,
         )
 
+    def test_multifile_imports_revalidate_and_survive_restart_in_browser(self):
+        browser_dsl = self.env['itlingo.dsl'].create({
+            'name': 'Grammar Multi-file Browser',
+            'acronym': 'GMB',
+            'version': 'test-1.0',
+            'status': 'draft',
+            'maintainer_ids': [(6, 0, self.maintainer.ids)],
+        })
+        self.env['itlingo.dsl.file']._create_grammar_text(
+            browser_dsl,
+            'grammar/Main File.langium',
+            "grammar GMB\n"
+            "import '../shared/Terminals'\n"
+            "entry Model: name=ID;\n",
+        )
+        self.env['itlingo.dsl.file']._create_grammar_text(
+            browser_dsl,
+            'shared/Terminals.langium',
+            "hidden terminal WS: /\\s+/;\n"
+            "terminal ID: /[_a-zA-Z][\\w_]*/;\n",
+            is_entry=False,
+        )
+        code = """
+        (async () => {
+            const root = document.querySelector('#itlingo-grammar-editor');
+            const waitFor = async (predicate, message) => {
+                const deadline = Date.now() + 30000;
+                while (!predicate()) {
+                    if (Date.now() > deadline) {
+                        throw new Error(message);
+                    }
+                    await new Promise((resolve) => setTimeout(resolve, 100));
+                }
+            };
+            await waitFor(
+                () => root.dataset.grammarServerState === 'ready',
+                'Langium grammar server did not become ready',
+            );
+            await waitFor(
+                () => root.querySelectorAll('[data-grammar-file-select]').length === 2,
+                'The explorer did not render both grammar files',
+            );
+            await waitFor(
+                () => Number(root.dataset.grammarDiagnostics) === 0,
+                'The valid cross-directory import did not resolve',
+            );
+
+            const terminals = root.querySelector(
+                '[data-grammar-file-select="shared/Terminals.langium"]',
+            );
+            terminals.click();
+            if (root.dataset.grammarActiveFile !== 'shared/Terminals.langium') {
+                throw new Error('Explorer switching did not activate Terminals.langium');
+            }
+
+            const script = document.querySelector('script[src*="grammar-editor.js"]');
+            const editorModule = await import(script.src);
+            editorModule.grammarEditorApp.setFileContent(
+                'shared/Terminals.langium',
+                'hidden terminal WS: /\\s+/;\nterminal OTHER: /x/;\n',
+            );
+            await waitFor(
+                () => JSON.parse(root.dataset.grammarFileErrors || '{}')[
+                    'grammar/Main File.langium'
+                ] > 0,
+                'Changing an imported terminal did not revalidate its importer',
+            );
+
+            editorModule.grammarEditorApp.setFileContent(
+                'shared/Terminals.langium',
+                'hidden terminal WS: /\\s+/;\n'
+                    + 'terminal ID: /[_a-zA-Z][\\w_]*/;\n',
+            );
+            await waitFor(
+                () => Number(root.dataset.grammarDiagnosticErrors) === 0,
+                'Restoring the imported terminal did not clear dependent errors',
+            );
+
+            const generation = Number(root.dataset.grammarServerGeneration);
+            root.querySelector('[data-grammar-server-restart]').click();
+            await waitFor(
+                () => root.dataset.grammarServerState === 'ready'
+                    && Number(root.dataset.grammarServerGeneration) > generation,
+                'Langium grammar server did not restart',
+            );
+            root.querySelector('[data-grammar-validate]').click();
+            await waitFor(
+                () => root.dataset.grammarValidityState === 'valid',
+                'Imports were not restored from all open models after restart',
+            );
+            console.log('test successful');
+        })();
+        """
+        self.browser_js(
+            f'/dsl/{browser_dsl.id}/grammar',
+            code,
+            ready="Boolean(document.querySelector('#itlingo-grammar-editor'))",
+            login='grammar_maintainer',
+            timeout=90,
+        )
+
     def test_maintainer_loads_and_saves_same_file(self):
         self.authenticate('grammar_maintainer', 'grammar_maintainer')
         workspace = self.make_jsonrpc_request(

@@ -1,7 +1,7 @@
 import { n as e } from "./rolldown-runtime-B1bRi_D7.js";
 import { Ab as t, Bb as n, Dl as r, Ej as i, El as a, Jy as o, Kj as s, NM as c, Ob as l, PM as u, Qp as d, Qw as f, TA as p, Tj as m, Xy as h, db as g, eM as _, e_ as v, ec as y, em as b, fb as x, ga as S, ha as C, jc as w, kb as T, kc as E, mA as D, ma as O, rT as k, t_ as A, tm as j, va as M, ya as N } from "./standaloneServices-C51B94Xh.js";
-import { Dt as P, Ot as F } from "./monaco-vscode-files-service-override-BUohVD35.js";
-import { a as I, i as L, n as R, t as z } from "./extensionFeatures-Dnpt_iIx.js";
+import { At as P, jt as F } from "./monaco-vscode-files-service-override-DGMr6mGW.js";
+import { a as I, i as L, n as R, t as z } from "./extensionFeatures-CMMcwnLr.js";
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/services/language/common/languageService.js
 function B(e) {
 	return e === void 0 ? !0 : Array.isArray(e) ? e.every((e) => typeof e == "string") : !1;

@@ -287,7 +287,7 @@
                 <div t-if="dsl_error == 'maint_user_not_found'" class="alert alert-danger" role="alert">No user found with that email. Maintainers must already have an ITLingo account.</div>
                 <div t-if="dsl_error == 'maint_already'" class="alert alert-warning" role="alert">That user is already a maintainer.</div>
                 <div t-if="dsl_error == 'upload_failed'" class="alert alert-danger" role="alert">
-                    Upload failed. A DSL can have at most one grammar file, and grammar files must use the <code>.langium</code> extension.
+                    Upload failed. Grammar files must use unique relative <code>.langium</code> paths.
                 </div>
                 <div t-if="dsl_error == 'no_file'" class="alert alert-danger" role="alert">Please choose a file to upload.</div>
                 <div t-if="dsl_error == 'bad_type'" class="alert alert-danger" role="alert">Invalid file type.</div>
@@ -321,6 +321,14 @@
                                 <t t-out="dsl.status"/>
                             </span>
                             <t t-if="lifecycle_grammar">
+                                <t t-set="lifecycle_entry" t-value="lifecycle_grammar.filtered(lambda f: f.is_entry)"/>
+                                <span class="badge bg-light text-dark">
+                                    <t t-out="len(lifecycle_grammar)"/>
+                                    <t t-out="'file' if len(lifecycle_grammar) == 1 else 'files'"/>
+                                </span>
+                                <small t-if="lifecycle_entry" class="text-muted">
+                                    Entry: <code t-out="lifecycle_entry.relative_path"/>
+                                </small>
                                 <span t-if="dsl.grammar_validation_result == 'valid' and dsl.grammar_validation_is_current"
                                       class="badge bg-success">Grammar valid</span>
                                 <span t-elif="dsl.grammar_validation_result == 'invalid' and dsl.grammar_validation_is_current"
@@ -492,7 +500,7 @@
 
                 <!-- Definition files -->
                 <t t-set="file_groups" t-value="[
-                    {'type': 'grammar', 'label': 'Grammar', 'accept': '.langium', 'single': True, 'hint': 'A single .langium file that defines the language.'},
+                    {'type': 'grammar', 'label': 'Grammar', 'accept': '.langium', 'single': False, 'hint': 'A .langium workspace with one entry file and optional imported files.'},
                     {'type': 'validation', 'label': 'Validation Rules', 'accept': '', 'single': False, 'hint': 'Multiple files are concatenated for the knowledge base.'},
                     {'type': 'examples', 'label': 'Examples', 'accept': '', 'single': False, 'hint': 'Multiple files are concatenated for the knowledge base.'},
                     {'type': 'specification', 'label': 'Specifications', 'accept': '', 'single': False, 'hint': 'Each file is synced individually.'},
@@ -502,12 +510,19 @@
                         <p class="text-muted small text-uppercase fw-semibold mb-3">Definition files</p>
                         <t t-foreach="file_groups" t-as="grp">
                             <t t-set="grp_files" t-value="dsl.file_ids.filtered(lambda f: f.file_type == grp['type'])"/>
+                            <t t-set="grammar_entry" t-value="grp_files.filtered(lambda f: f.is_entry) if grp['type'] == 'grammar' else False"/>
                             <div class="mb-4">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div>
                                         <h6 class="mb-1 d-inline-block"><t t-out="grp['label']"/></h6>
                                         <span t-if="grp['type'] == 'grammar' and dsl.status != 'draft'"
                                               class="badge bg-secondary ms-2">Read-only</span>
+                                        <small t-if="grp['type'] == 'grammar' and grp_files"
+                                               class="text-muted ms-2">
+                                            <t t-out="len(grp_files)"/>
+                                            <t t-out="'file' if len(grp_files) == 1 else 'files'"/>
+                                            <t t-if="grammar_entry"> · Entry: <code t-out="grammar_entry.relative_path"/></t>
+                                        </small>
                                     </div>
                                     <div class="d-flex align-items-center gap-2">
                                         <a t-if="grp['type'] == 'grammar' and grp_files"
@@ -529,11 +544,15 @@
                                             class="list-group-item d-flex align-items-center justify-content-between px-0">
                                             <span>
                                                 <i class="fa fa-file-o me-2 text-muted"/>
-                                                <a t-attf-href="/dsl/#{dsl.id}/files/#{f.id}/download"><t t-out="f.file_name"/></a>
+                                                <a t-attf-href="/dsl/#{dsl.id}/files/#{f.id}/download">
+                                                    <t t-out="f.relative_path if grp['type'] == 'grammar' else f.file_name"/>
+                                                </a>
+                                                <span t-if="grp['type'] == 'grammar' and f.is_entry"
+                                                      class="badge bg-primary ms-2">Entry</span>
                                                 <span t-if="not f.is_enabled" class="badge bg-warning text-dark ms-2">Disabled</span>
                                             </span>
                                             <span class="text-nowrap">
-                                                <form t-if="grp['type'] != 'grammar' or can_edit_grammar"
+                                                <form t-if="grp['type'] != 'grammar'"
                                                       t-attf-action="/dsl/#{dsl.id}/files/#{f.id}/toggle" method="post" class="d-inline">
                                                     <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                                                     <button type="submit" class="btn btn-sm btn-link p-1"
@@ -541,7 +560,7 @@
                                                         <i t-attf-class="fa #{'fa-toggle-on text-success' if f.is_enabled else 'fa-toggle-off text-muted'} fa-lg"/>
                                                     </button>
                                                 </form>
-                                                <form t-if="grp['type'] != 'grammar' or can_edit_grammar"
+                                                <form t-if="grp['type'] != 'grammar'"
                                                       t-attf-action="/dsl/#{dsl.id}/files/#{f.id}/delete" method="post" class="d-inline">
                                                     <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                                                     <button type="submit" class="btn btn-sm btn-link text-danger p-1" title="Delete file"
@@ -565,8 +584,8 @@
                                         </button>
                                     </form>
                                 </t>
-                                <t t-if="grp['single'] and grp_files and can_edit_grammar">
-                                    <small class="text-muted">Edit this grammar in the Grammar Editor, or delete it to upload a replacement.</small>
+                                <t t-if="grp['type'] == 'grammar' and grp_files and can_edit_grammar">
+                                    <small class="text-muted">Manage paths, entry selection, and imported files in the Grammar Editor.</small>
                                 </t>
                             </div>
                         </t>

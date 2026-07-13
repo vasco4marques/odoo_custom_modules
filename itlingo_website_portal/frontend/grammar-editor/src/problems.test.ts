@@ -2,6 +2,7 @@ import {describe, expect, it} from 'vitest';
 
 import {
     countProblems,
+    groupProblemsByPath,
     summarizeProblems,
     toProblemItems,
     waitForDiagnosticsQuiet,
@@ -49,6 +50,25 @@ describe('toProblemItems', () => {
             ['error', 9, 7],
             ['warning', 1, 1],
         ]);
+    });
+
+    it('carries resource and path metadata and groups problems by file', () => {
+        const main = toProblemItems([marker()], {
+            resource: 'file:///workspace/Main.langium',
+            path: 'Main.langium',
+        });
+        const terminals = toProblemItems([marker({severity: 4})], {
+            resource: 'file:///workspace/shared/Terminals.langium',
+            path: 'shared/Terminals.langium',
+        });
+        const groups = groupProblemsByPath([...main, ...terminals]);
+
+        expect([...groups.keys()]).toEqual([
+            'Main.langium', 'shared/Terminals.langium',
+        ]);
+        expect(groups.get('Main.langium')?.[0].resource).toBe(
+            'file:///workspace/Main.langium',
+        );
     });
 });
 

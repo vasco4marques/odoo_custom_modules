@@ -3940,25 +3940,25 @@ var Q, rl, il, al, ol, sl, cl, ll, ul, dl, fl, pl, ml, hl, gl, _l, $, vl, yl = t
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-files-service-override/index.js
 function Vl(e) {
-	return e instanceof Uint8Array ? e : Yl.encode(e);
+	return e instanceof Uint8Array ? e : Xl.encode(e);
 }
 function Hl(e) {
 	return e.status === "fulfilled";
 }
 function Ul(e = {}) {
 	return {
-		[Dn.toString()]: new fn(ru, [iu, e], !0),
+		[Dn.toString()]: new fn(au, [ou, e], !0),
 		[mi.toString()]: new fn(Pl, [], !0),
 		[Ui.toString()]: new fn(Pi, [], !0),
 		[ns.toString()]: new fn(Il, [], !0)
 	};
 }
 function Wl(e) {
-	return $l.registerFile(e);
+	return tu.registerFile(e);
 }
 async function Gl(e, t, n) {
 	mc();
-	let r = nu[e.scheme];
+	let r = iu[e.scheme];
 	if (r == null || r.writeFile == null) throw Error(`${e.scheme} provider doesn't exist or doesn't support writing files`);
 	if (!(n?.overwrite ?? !1)) try {
 		await r.stat(e);
@@ -3974,8 +3974,13 @@ async function Gl(e, t, n) {
 		...n
 	});
 }
-var Kl, ql, Jl, Yl, Xl, Zl, Ql, $l, eu, tu, nu, ru, iu, au = t((() => {
-	gr(), jr(), Fc(), re(), jt(), zc(), Gr(), Sn(), F(), O(), D(), H(), Ss(), ar(), Hc(), Uc(), Gc(), ni(), Fl(), Di(), $r(), Ll(), rs(), j(), Mt(), In(), Tc(), Rs(), Bl(), Kl = class {
+function Kl(e, t) {
+	let n = iu.file;
+	if (!(n instanceof $l)) throw Error("The overlay filesystem provider was replaced");
+	return n.register(e, t);
+}
+var ql, Jl, Yl, Xl, Zl, Ql, $l, eu, tu, nu, ru, iu, au, ou, su = t((() => {
+	gr(), jr(), Fc(), re(), jt(), zc(), Gr(), Sn(), F(), O(), D(), H(), Ss(), ar(), Hc(), Uc(), Gc(), ni(), Fl(), Di(), $r(), Ll(), rs(), j(), Mt(), In(), Tc(), Rs(), Bl(), ql = class {
 		constructor() {
 			this.type = b.Directory, this._onDidChange = new U(), this.onDidChange = this._onDidChange.event, this._onDidDelete = new U(), this.onDidDelete = this._onDidDelete.event, this.ctime = Date.now(), this.mtime = Date.now(), this.type = b.Directory, this.entries = /* @__PURE__ */ new Map();
 		}
@@ -4008,7 +4013,7 @@ var Kl, ql, Jl, Yl, Xl, Zl, Ql, $l, eu, tu, nu, ru, iu, au = t((() => {
 		read() {
 			return Array.from(this.entries.entries()).map(([e, t]) => [e, t.type]);
 		}
-	}, ql = class {
+	}, Jl = class {
 		constructor(e, t) {
 			this.uri = e, this.readonly = t, this.type = b.File, this._onDidChange = new U(), this.onDidChange = this._onDidChange.event, this._onDidDelete = new U(), this.onDidDelete = this._onDidDelete.event, this.ctime = Date.now(), this.mtime = Date.now(), this.onDidChange(() => {
 				this.mtime = Date.now();
@@ -4027,7 +4032,7 @@ var Kl, ql, Jl, Yl, Xl, Zl, Ql, $l, eu, tu, nu, ru, iu, au = t((() => {
 			if (this.readonly) throw h("Not allowed", v.FileWriteLocked);
 			this._onDidDelete.fire();
 		}
-	}, Jl = class extends ql {
+	}, Yl = class extends Jl {
 		constructor(e, t, n) {
 			super(e, !0), this.url = t, this.metadata = n;
 		}
@@ -4052,7 +4057,20 @@ var Kl, ql, Jl, Yl, Xl, Zl, Ql, $l, eu, tu, nu, ru, iu, au = t((() => {
 		async delete() {
 			throw h("Not allowed", v.FileWriteLocked);
 		}
-	}, Yl = new TextEncoder(), Xl = class extends B {
+	}, Xl = new TextEncoder(), Zl = class extends Jl {
+		constructor(e, t) {
+			super(e, !1), this.content = Vl(t);
+		}
+		async getSize() {
+			return this.content.length;
+		}
+		async read() {
+			return this.content;
+		}
+		async write(e) {
+			this.content = e, this._onDidChange.fire();
+		}
+	}, Ql = class extends B {
 		constructor(e) {
 			super(), this.memoryFdCounter = 0, this.fdMemory = /* @__PURE__ */ new Map(), this.onDidChangeCapabilities = Jn.None, this._onDidChangeFile = new U(), this.onDidChangeFile = this._onDidChangeFile.event, this._bufferedChanges = [], this.rootByAuthority = /* @__PURE__ */ new Map(), this.capabilities = S.FileReadWrite | S.PathCaseSensitive | S.FileReadStream, e && (this.capabilities |= S.Readonly);
 		}
@@ -4077,14 +4095,14 @@ var Kl, ql, Jl, Yl, Xl, Zl, Ql, $l, eu, tu, nu, ru, iu, au = t((() => {
 		}
 		_lookupRoot(e) {
 			let t = e.toLowerCase(), n = this.rootByAuthority.get(t);
-			return n ?? (n = new Kl(), this.rootByAuthority.set(t, n)), n;
+			return n ?? (n = new ql(), this.rootByAuthority.set(t, n)), n;
 		}
 		_lookup(e, t) {
 			let n = e.path.split("/"), r = this._lookupRoot(e.authority);
 			for (let e of n) {
 				if (e.length === 0) continue;
 				let n;
-				if (r instanceof Kl && (n = r.getChildren(e)), n == null) {
+				if (r instanceof ql && (n = r.getChildren(e)), n == null) {
 					if (t) return;
 					throw h("file not found", v.FileNotFound);
 				}
@@ -4094,7 +4112,7 @@ var Kl, ql, Jl, Yl, Xl, Zl, Ql, $l, eu, tu, nu, ru, iu, au = t((() => {
 		}
 		_lookupAsDirectory(e, t) {
 			let n = this._lookup(e, t);
-			if (n instanceof Kl) return n;
+			if (n instanceof ql) return n;
 			throw h("file not a directory", v.FileNotADirectory);
 		}
 		_lookupAsFile(e, t) {
@@ -4108,7 +4126,7 @@ var Kl, ql, Jl, Yl, Xl, Zl, Ql, $l, eu, tu, nu, ru, iu, au = t((() => {
 				if (e === "") continue;
 				r = V.joinPath(r, e);
 				let t = n.getChildren(e);
-				if (t ??= this.mkdirSync(r), !(t instanceof Kl)) throw Error(`file '${r.toString()}' is not a directory`);
+				if (t ??= this.mkdirSync(r), !(t instanceof ql)) throw Error(`file '${r.toString()}' is not a directory`);
 				n = t;
 			}
 			let i = t[t.length - 1];
@@ -4165,7 +4183,7 @@ var Kl, ql, Jl, Yl, Xl, Zl, Ql, $l, eu, tu, nu, ru, iu, au = t((() => {
 		}
 		async writeFile(e, t, n) {
 			let r = this._lookup(e, !0);
-			if (r != null && !(r instanceof ql)) throw h("file is directory", v.FileIsADirectory);
+			if (r != null && !(r instanceof Jl)) throw h("file is directory", v.FileIsADirectory);
 			if (r == null) throw h("file not found", v.FileNotFound);
 			if (!n.overwrite) throw h("file exists already", v.FileExists);
 			await r.write(t);
@@ -4175,7 +4193,7 @@ var Kl, ql, Jl, Yl, Xl, Zl, Ql, $l, eu, tu, nu, ru, iu, au = t((() => {
 		}
 		mkdirSync(e) {
 			if (this._lookup(e, !0) != null) throw h("file exists already", v.FileExists);
-			let t = M(e), n = Fe(e), r = this._lookupAsDirectory(n, !1), i = new Kl(), a = new N();
+			let t = M(e), n = Fe(e), r = this._lookupAsDirectory(n, !1), i = new ql(), a = new N();
 			return a.add(i.onDidDelete(() => {
 				a.dispose(), this._fireSoon({
 					resource: e,
@@ -4208,7 +4226,7 @@ var Kl, ql, Jl, Yl, Xl, Zl, Ql, $l, eu, tu, nu, ru, iu, au = t((() => {
 				this._onDidChangeFile.fire(this._bufferedChanges), this._bufferedChanges.length = 0;
 			}, 5);
 		}
-	}, Zl = class {
+	}, $l = class {
 		constructor() {
 			this.providers = [], this.onDidChangeCapabilities = Jn.None, this._onDidChangeFile = new U(), this.onDidChangeFile = this._onDidChangeFile.event, this._onDidChangeOverlays = new U(), this.onDidChangeOverlays = this._onDidChangeOverlays.event, this.capabilities = S.FileReadWrite | S.PathCaseSensitive | S.FileReadStream;
 		}
@@ -4334,23 +4352,23 @@ var Kl, ql, Jl, Yl, Xl, Zl, Ql, $l, eu, tu, nu, ru, iu, au = t((() => {
 		async rename(e, t, n) {
 			await this.writeToDelegates(t, (r) => r.rename(e, t, n));
 		}
-	}, Ql = new Zl(), Ql.register(0, new Rc()), $l = new Xl(!0), eu = new Rc(), eu.mkdir(Lr.from({
+	}, eu = new $l(), eu.register(0, new Rc()), tu = new Ql(!0), nu = new Rc(), nu.mkdir(Lr.from({
 		scheme: I.vscodeUserData,
 		path: "/User/"
 	})), (function(e) {
 		e.extensionFile = "extension-file";
-	})(tu ||= {}), nu = {
-		[tu.extensionFile]: $l,
+	})(ru ||= {}), iu = {
+		[ru.extensionFile]: tu,
 		[Ls.scheme]: new Rc(),
-		[I.vscodeUserData]: eu,
+		[I.vscodeUserData]: nu,
 		[I.tmp]: new Rc(),
-		[I.file]: Ql
-	}, ru = class extends Pc {
+		[I.file]: eu
+	}, au = class extends Pc {
 		constructor(e, t) {
 			super(e), this.options = t;
-			for (let [e, t] of Object.entries(nu)) {
+			for (let [e, t] of Object.entries(iu)) {
 				let n = this.registerProvider(e, t);
-				t instanceof Zl && t.onDidChangeOverlays(() => {
+				t instanceof $l && t.onDidChangeOverlays(() => {
 					n.dispose(), n = this.registerProvider(e, t);
 				});
 			}
@@ -4366,9 +4384,9 @@ var Kl, ql, Jl, Yl, Xl, Zl, Ql, $l, eu, tu, nu, ru, iu, au = t((() => {
 			let o = async () => await super.toFileStat(e, t, n, r, i, a);
 			return this.options.statMiddleware?.(t, o) ?? o();
 		}
-	}, ru.$di$dependencies = [], iu = new Wc(), uc(async (e) => {
-		iu.logger = e.get(ke);
+	}, au.$di$dependencies = [], ou = new Wc(), uc(async (e) => {
+		ou.logger = e.get(ke);
 	});
 }));
 //#endregion
-export { ks as $, qa as $n, Ta as $t, pc as A, Ka as An, $o as At, Ks as B, ha as Bn, Mo as Bt, vc as C, Ca as Cn, is as Ct, bc as D, xa as Dn, es as Dt, yc as E, Sa as En, rs as Et, Z as F, So as Fn, Uo as Ft, Qs as G, io as Gn, ko as Gt, Xs as H, Ja as Hn, Ao as Ht, Y as I, bo as In, zo as It, Gs as J, _a as Jn, Ia as Jt, Hs as K, eo as Kn, ho as Kt, X as L, wo as Ln, Po as Lt, ic as M, po as Mn, Xo as Mt, rc as N, mo as Nn, Io as Nt, wc as O, to as On, ts as Ot, tc as P, da as Pn, Lo as Pt, Bs as Q, co as Qn, Fa as Qt, ec as R, xo as Rn, Jo as Rt, gc as S, wa as Sn, Ki as Sr, ss as St, uc as T, $a as Tn, ns as Tt, Js as U, ro as Un, jo as Ut, Zs as V, Eo as Vn, No as Vt, qs as W, za as Wn, Oo as Wt, Ws as X, La as Xn, Pa as Xt, Vs as Y, Ra as Yn, Na as Yt, zs as Z, so as Zn, Ma as Zt, Gc as _, pa as _n, qi as _r, us as _t, au as a, Aa as an, $i as ar, Ls as at, mc as b, ba as bn, Wi as br, ls as bt, Tl as c, ao as cn, ia as cr, xs as ct, $ as d, _o as dn, na as dr, bs as dt, Da as en, la as er, Os as et, Q as f, uo as fn, ta as fr, gs as ft, Wc as g, no as gn, aa as gr, _s as gt, qc as h, Ya as hn, Xi as hr, ps as ht, Gl as i, Ea as in, Do as ir, Ms as it, nc as j, fo as jn, Yo as jt, fc as k, Ga as kn, Qo as kt, xl as l, go as ln, q as lr, Ss as lt, Kc as m, Xa as mn, Qi as mr, fs as mt, Jl as n, Wa as nn, sa as nr, As as nt, Wl as o, ka as on, Zi as or, Cs as ot, yl as p, Ba as pn, K as pr, ms as pt, Us as q, oo as qn, ja as qt, Ul as r, Oa as rn, oa as rr, Rs as rt, wl as s, yo as sn, ea as sr, Es as st, tu as t, Va as tn, ua as tr, Ds as tt, Sl as u, vo as un, ra as ur, vs as ut, Bc as v, fa as vn, Ji as vr, ds as vt, dc as w, lo as wn, as as wt, Tc as x, Qa as xn, Gi as xr, os as xt, Vc as y, To as yn, Yi as yr, cs as yt, sc as z, Co as zn, Fo as zt };
+export { Ws as $, La as $n, Pa as $t, bc as A, xa as An, es as At, X as B, wo as Bn, Po as Bt, mc as C, ba as Cn, Wi as Cr, ls as Ct, dc as D, lo as Dn, as as Dt, vc as E, Ca as En, is as Et, ic as F, po as Fn, Xo as Ft, Xs as G, Ja as Gn, Ao as Gt, sc as H, Co as Hn, Fo as Ht, rc as I, mo as In, Io as It, Qs as J, io as Jn, ko as Jt, Js as K, ro as Kn, jo as Kt, tc as L, da as Ln, Lo as Lt, fc as M, Ga as Mn, Qo as Mt, pc as N, Ka as Nn, $o as Nt, uc as O, $a as On, ns as Ot, nc as P, fo as Pn, Yo as Pt, Vs as Q, Ra as Qn, Na as Qt, Z as R, So as Rn, Uo as Rt, Vc as S, To as Sn, Yi as Sr, cs as St, gc as T, wa as Tn, Ki as Tr, ss as Tt, Ks as U, ha as Un, Mo as Ut, ec as V, xo as Vn, Jo as Vt, Zs as W, Eo as Wn, No as Wt, Us as X, oo as Xn, ja as Xt, Hs as Y, eo as Yn, ho as Yt, Gs as Z, _a as Zn, Ia as Zt, Kc as _, Xa as _n, Qi as _r, fs as _t, Ul as a, Wa as an, sa as ar, As as at, Gc as b, pa as bn, qi as br, us as bt, Wl as c, Aa as cn, $i as cr, Ls as ct, Tl as d, ao as dn, ia as dr, xs as dt, Ma as en, so as er, zs as et, xl as f, go as fn, q as fr, Ss as ft, yl as g, Ba as gn, K as gr, ms as gt, Q as h, uo as hn, ta as hr, gs as ht, Yl as i, Va as in, ua as ir, Ds as it, wc as j, to as jn, ts as jt, yc as k, Sa as kn, rs as kt, Kl as l, ka as ln, Zi as lr, Cs as lt, $ as m, _o as mn, na as mr, bs as mt, Ql as n, Ta as nn, qa as nr, ks as nt, Gl as o, Oa as on, oa as or, Rs as ot, Sl as p, vo as pn, ra as pr, vs as pt, qs as q, za as qn, Oo as qt, Zl as r, Da as rn, la as rr, Os as rt, su as s, Ea as sn, Do as sr, Ms as st, ru as t, Fa as tn, co as tr, Bs as tt, wl as u, yo as un, ea as ur, Es as ut, qc as v, Ya as vn, Xi as vr, ps as vt, Tc as w, Qa as wn, Gi as wr, os as wt, Bc as x, fa as xn, Ji as xr, ds as xt, Wc as y, no as yn, aa as yr, _s as yt, Y as z, bo as zn, zo as zt };

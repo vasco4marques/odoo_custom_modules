@@ -1,11 +1,11 @@
 import { $O as e, $j as t, Ab as n, Bb as r, Ej as i, H_ as a, IO as o, Kj as s, Lb as c, NC as l, Ob as u, PC as d, Qp as ee, Sy as f, TA as p, Tj as m, U_ as h, bo as g, db as _, em as v, fb as y, kb as b, mA as x, nA as S, nv as C, rv as w, sA as T, tm as E, vo as D, xy as O, yo as k } from "./standaloneServices-C51B94Xh.js";
 import { i as A, n as j } from "./languageConfiguration-pd_q6saV.js";
-import { Dt as M, Gt as N, Ot as P, Wt as F, a as I, r as te } from "./monaco-vscode-files-service-override-BUohVD35.js";
+import { At as M, Jt as N, a as P, jt as F, qt as I, s as te } from "./monaco-vscode-files-service-override-DGMr6mGW.js";
 import { b as L, v as R, y as z } from "./filesConfigurationService-CxZOIrXS.js";
 import { i as B, n as V, r as H, t as U } from "./languageStatusService.service-dYnhaUee.js";
-import { n as W, t as G } from "./languageService-C5Ghz3ME.js";
+import { n as W, t as G } from "./languageService-CNIR0xe2.js";
 import { n as K, t as q } from "./jsonErrorMessages-CboTgU8y.js";
-s(), m(), p(), n(), y(), w(), E(), P(), W(), T(), e(), B(), ee(), r();
+s(), m(), p(), n(), y(), w(), E(), F(), W(), T(), e(), B(), ee(), r();
 var J = class {
 	constructor() {
 		this._provider = new H(), this.onDidChange = S.map(this._provider.onDidChange, () => void 0);
@@ -20,7 +20,7 @@ var J = class {
 		});
 	}
 };
-V(), I(), k(), A(), f(), h(), K(), N(), d(), z(), r();
+V(), te(), k(), A(), f(), h(), K(), N(), d(), z(), r();
 var Y;
 function X(e) {
 	if (!Array.isArray(e)) return !1;
@@ -310,7 +310,7 @@ var Q = Y = class extends x {
 };
 Q = Y = u([
 	b(0, C),
-	b(1, F),
+	b(1, I),
 	b(2, M),
 	b(3, O)
 ], Q);
@@ -697,7 +697,7 @@ var $ = class {
 $ = u([b(0, c)], $), L($.ID, $, R.BlockStartup), w();
 function ie() {
 	return {
-		...te(),
+		...P(),
 		[C.toString()]: new v(G, [], !1),
 		[U.toString()]: new v(J, [], !0)
 	};

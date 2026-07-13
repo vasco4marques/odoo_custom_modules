@@ -1,42 +1,42 @@
 import { n as e } from "./rolldown-runtime-B1bRi_D7.js";
-import { $O as t, $j as n, Ab as r, Aw as i, Ba as a, Bb as o, Bd as s, DD as c, Dl as l, ED as u, Ej as d, El as f, Fj as p, IC as m, ID as h, Ia as ee, Jo as te, Jy as g, Kj as _, LO as ne, Lb as re, Lj as ie, ND as ae, Ob as v, PM as oe, Qw as y, RA as b, Ra as x, Sj as se, TA as ce, Tj as S, UA as le, Va as ue, Vb as de, Vd as fe, WC as pe, Ww as me, Xy as C, _A as he, bM as ge, bj as w, bo as T, cN as E, dN as D, dc as _e, dj as ve, eM as O, eT as ye, ec as k, fT as A, gs as be, hs as xe, ij as j, jj as Se, js as M, kb as N, lc as P, lp as Ce, mA as we, mw as Te, n as F, nA as I, nM as Ee, nT as De, nc as L, pT as Oe, qo as R, r as ke, rT as z, sA as Ae, tA as B, uT as je, vD as V, vo as H, wD as U, xD as W, xw as Me, yD as G, yo as K, za as Ne, zb as Pe } from "./standaloneServices-C51B94Xh.js";
-import { A as Fe, At as Ie, Dt as Le, Gt as Re, Ht as ze, Lt as Be, O as Ve, Ot as He, Rt as Ue, Sr as We, St as Ge, Ut as Ke, Wt as qe, a as Je, dr as Ye, fr as q, gr as J, hr as Xe, kt as Ze, lr as Qe, mr as $e, n as et, o as tt, or as nt, pr as rt, t as it, ur as at, vr as ot, x as st, xr as ct, xt as lt, yr as ut, zt as dt } from "./monaco-vscode-files-service-override-BUohVD35.js";
-import { D as ft, O as pt } from "./filesConfigurationService-CxZOIrXS.js";
-import { o as mt, r as ht } from "./extensionManagement.service-ELKOh9mo.js";
-import { a as gt, o as _t, r as vt, t as yt } from "./tools-CGs0ihXi.js";
-import { n as bt, t as xt } from "./jsonErrorMessages-CboTgU8y.js";
+import { $O as t, $j as n, Ab as r, Aw as i, Ba as a, Bb as o, Bd as s, DD as c, Dl as l, ED as u, Ej as d, El as f, Fj as p, IC as m, ID as h, Ia as ee, Jo as te, Jy as g, Kj as _, LO as ne, Lb as re, Lj as ie, ND as ae, Ob as v, PM as oe, Qw as y, RA as b, Ra as x, Sj as se, TA as ce, Tj as S, UA as le, Va as ue, Vb as de, Vd as fe, WC as pe, Ww as me, Xy as C, _A as he, bM as ge, bj as w, bo as T, cN as E, dN as D, dc as _e, dj as ve, eM as O, eT as ye, ec as k, fT as A, gs as be, hs as xe, ij as j, jj as Se, js as M, kb as N, lc as P, lp as Ce, mA as we, mw as Te, n as F, nA as I, nM as Ee, nT as De, nc as L, pT as Oe, qo as R, r as ke, rT as z, sA as Ae, tA as B, uT as je, vD as V, vo as H, wD as U, xD as W, xw as Me, yD as G, yo as K, za as q, zb as Ne } from "./standaloneServices-C51B94Xh.js";
+import { At as Pe, Bt as Fe, Gt as Ie, Ht as Le, Jt as Re, Kt as ze, Mt as Be, N as J, Nt as Ve, Sr as He, Tr as Ue, Tt as We, Vt as Ge, _r as Ke, c as qe, fr as Je, gr as Ye, hr as Y, i as Xe, j as Ze, jt as Qe, lr as $e, mr as et, pr as tt, qt as nt, s as rt, t as it, vr as at, w as ot, wr as st, wt as ct, xr as lt, yr as ut } from "./monaco-vscode-files-service-override-DGMr6mGW.js";
+import { D as dt, O as ft } from "./filesConfigurationService-CxZOIrXS.js";
+import { o as pt, r as mt } from "./extensionManagement.service-ELKOh9mo.js";
+import { a as ht, o as gt, r as _t, t as vt } from "./tools-CGs0ihXi.js";
+import { n as yt, t as bt } from "./jsonErrorMessages-CboTgU8y.js";
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/platform/extensionManagement/common/extensionsProfileScannerService.service.js
-var St, Ct = e((() => {
-	o(), St = Pe("IExtensionsProfileScannerService");
-})), wt = e((() => {
+var xt, St = e((() => {
+	o(), xt = Ne("IExtensionsProfileScannerService");
+})), Ct = e((() => {
 	j(), h(), Ce();
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/platform/telemetry/common/telemetryUtils.js
-function Tt(e, t) {
+function wt(e, t) {
 	return !t.isBuilt && !t.disableTelemetry || !(t.disableTelemetry || !e.enableTelemetry);
 }
-function Et(e, t) {
+function Tt(e, t) {
 	return t.extensionTestsLocationURI ? !0 : !(t.isBuilt || t.disableTelemetry || e.enableTelemetry && e.aiConfig?.ariaKey);
 }
-function Dt(e) {
+function Et(e) {
 	let t = e.getValue(x), n = e.getValue(ee);
 	if (e.getValue("telemetry.enableTelemetry") === !1 || n === !1) return a.NONE;
-	switch (t ?? Ne.ON) {
-		case Ne.ON: return a.USAGE;
-		case Ne.ERROR: return a.ERROR;
-		case Ne.CRASH: return a.CRASH;
-		case Ne.OFF: return a.NONE;
+	switch (t ?? q.ON) {
+		case q.ON: return a.USAGE;
+		case q.ERROR: return a.ERROR;
+		case q.CRASH: return a.CRASH;
+		case q.OFF: return a.NONE;
 	}
 }
-function Ot(e, t) {
+function Dt(e, t) {
 	if (!e) return "none";
-	let n = ct(e), r = t?.remoteExtensionTips;
+	let n = st(e), r = t?.remoteExtensionTips;
 	if (r && Object.prototype.hasOwnProperty.call(r, n)) return n;
 	let i = t?.virtualWorkspaceExtensionTips;
 	return i && Object.prototype.hasOwnProperty.call(i, n) ? n : "other";
 }
-function kt(e, t) {
+function Ot(e, t) {
 	if (!e || !e.includes("/") && !e.includes("\\")) return e;
 	let n = e, r = [];
 	for (let n of t) for (;;) {
@@ -53,7 +53,7 @@ function kt(e, t) {
 	}
 	return o < e.length && (n += e.substr(o)), n;
 }
-function At(e) {
+function kt(e) {
 	if (!e) return e;
 	for (let t of [
 		{
@@ -95,23 +95,23 @@ function At(e) {
 	]) if (t.regex.test(e)) return `<REDACTED: ${t.label}>`;
 	return e;
 }
-function jt(e, t) {
+function At(e, t) {
 	return e ? Se(e, (e) => {
-		if (e instanceof Mt || Object.hasOwnProperty.call(e, "isTrustedTelemetryValue")) return e.value;
+		if (e instanceof jt || Object.hasOwnProperty.call(e, "isTrustedTelemetryValue")) return e.value;
 		if (typeof e == "string") {
 			let n = e.replaceAll("%20", " ");
-			n = kt(n, t);
+			n = Ot(n, t);
 			for (let e of t) n = n.replace(e, "");
-			return n = At(n), n;
+			return n = kt(n), n;
 		}
 	}) : {};
 }
-var Mt, Nt, Pt, Ft, It, Lt = e((() => {
-	ie(), _(), S(), We(), wt(), ue(), Mt = class {
+var jt, Mt, Nt, Pt, Ft, It = e((() => {
+	ie(), _(), S(), Ue(), Ct(), ue(), jt = class {
 		constructor(e) {
 			this.value = e, this.isTrustedTelemetryValue = !0;
 		}
-	}, Nt = class {
+	}, Mt = class {
 		constructor() {
 			this.telemetryLevel = a.NONE, this.sessionId = "someValue.sessionId", this.machineId = "someValue.machineId", this.sqmId = "someValue.sqmId", this.devDeviceId = "someValue.devDeviceId", this.firstSessionDate = "someValue.firstSessionDate", this.sendErrorTelemetry = !1;
 		}
@@ -120,35 +120,35 @@ var Mt, Nt, Pt, Ft, It, Lt = e((() => {
 		publicLogError() {}
 		publicLogError2() {}
 		setExperimentProperty() {}
-	}, new Nt(), Pt = class {
+	}, new Mt(), Nt = class {
 		async publicLog(e, t, n) {}
 		async publicLogError(e, t, n) {}
-	}, Ft = "telemetry", It = {
-		id: Ft,
+	}, Pt = "telemetry", Ft = {
+		id: Pt,
 		name: d(2082, "Telemetry")
 	};
-})), Rt, zt, Bt, Vt, Ht, Ut = e((() => {
-	mt(), o(), Rt = de(ht), zt = Pe("extensionManagementServerService"), Bt = de(Rt), Vt = Pe("extensionEnablementService"), Ht = Pe("IWebExtensionsScannerService");
+})), Lt, Rt, zt, Bt, Vt, Ht = e((() => {
+	pt(), o(), Lt = de(mt), Rt = Ne("extensionManagementServerService"), zt = de(Lt), Bt = Ne("extensionEnablementService"), Vt = Ne("IWebExtensionsScannerService");
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/platform/extensionManagement/common/extensionManagementUtil.js
-function Y(e, t) {
+function X(e, t) {
 	return e.uuid && t.uuid ? e.uuid === t.uuid : e.id === t.id || ne(e.id, t.id) === 0;
 }
-function Wt(e) {
-	let t = Qt.exec(e);
-	return t && t[1] ? [Kt(t[1]), t[2]] : [Kt(e), void 0];
+function Ut(e) {
+	let t = Zt.exec(e);
+	return t && t[1] ? [Gt(t[1]), t[2]] : [Gt(e), void 0];
 }
-function Gt(e, t) {
+function Wt(e, t) {
 	return `${e}.${t}`;
 }
-function Kt(e) {
+function Gt(e) {
 	return e.toLowerCase();
 }
-function qt(e, t) {
-	return Kt(Gt(e ?? "undefined_publisher", t));
+function Kt(e, t) {
+	return Gt(Wt(e ?? "undefined_publisher", t));
 }
-async function Jt(e, t) {
+async function qt(e, t) {
 	if (!ve) return !1;
 	let n;
 	try {
@@ -162,38 +162,38 @@ async function Jt(e, t) {
 	}
 	return !!n && (n.match(/^ID=([^\u001b\r\n]*)/m) || [])[1] === "alpine";
 }
-async function Yt(e, t) {
-	let n = Be(await Jt(e, t) ? "alpine" : se, ae);
+async function Jt(e, t) {
+	let n = Fe(await qt(e, t) ? "alpine" : se, ae);
 	return t.debug("ComputeTargetPlatform:", n), n;
 }
+function Yt(e, t) {
+	return Xt(e, t) !== void 0;
+}
 function Xt(e, t) {
-	return Zt(e, t) !== void 0;
+	return t.find(({ extensionOrPublisher: t }) => O(t) ? ne(e.id.split(".")[0], t) === 0 : X(e, t));
 }
-function Zt(e, t) {
-	return t.find(({ extensionOrPublisher: t }) => O(t) ? ne(e.id.split(".")[0], t) === 0 : Y(e, t));
-}
-var Qt, $t = e((() => {
-	t(), Ue(), J(), j(), G(), D(), h(), Lt(), _(), Qt = /^([^.]+\..+)@((prerelease)|(\d+\.\d+\.\d+(-.*)?))$/, new Qe("pprice.better-merge");
+var Zt, Qt = e((() => {
+	t(), Ge(), ut(), j(), G(), D(), h(), It(), _(), Zt = /^([^.]+\..+)@((prerelease)|(\d+\.\d+\.\d+(-.*)?))$/, new Je("pprice.better-merge");
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/services/extensions/common/extensions.js
-function en(e) {
-	let t = new at();
+function $t(e) {
+	let t = new tt();
 	for (let n of e) t.set(n.identifier, n);
 	return t;
 }
-function tn(e, t) {
+function en(e, t) {
 	return e.enabledApiProposals ? e.enabledApiProposals.includes(t) : !1;
 }
-function nn(e, t) {
-	if (!tn(e, t)) throw Error(`Extension '${e.identifier.value}' CANNOT use API proposal: ${t}.\nIts package.json#enabledApiProposals-property declares: ${e.enabledApiProposals?.join(", ") ?? "[]"} but NOT ${t}.\n The missing proposal MUST be added and you must start in extension development mode or use the following command line switch: --enable-proposed-api ${e.identifier.value}`);
+function tn(e, t) {
+	if (!en(e, t)) throw Error(`Extension '${e.identifier.value}' CANNOT use API proposal: ${t}.\nIts package.json#enabledApiProposals-property declares: ${e.enabledApiProposals?.join(", ") ?? "[]"} but NOT ${t}.\n The missing proposal MUST be added and you must start in extension development mode or use the following command line switch: --enable-proposed-api ${e.identifier.value}`);
 }
-function rn(e) {
+function nn(e) {
 	return {
-		type: e.isBuiltin ? q.System : q.User,
+		type: e.isBuiltin ? Y.System : Y.User,
 		isBuiltin: e.isBuiltin || e.isUserBuiltin,
 		identifier: {
-			id: qt(e.publisher, e.name),
+			id: Kt(e.publisher, e.name),
 			uuid: e.uuid
 		},
 		manifest: e,
@@ -205,13 +205,13 @@ function rn(e) {
 		publisherDisplayName: e.publisherDisplayName
 	};
 }
-function an(e, t) {
-	let n = Gt(e.manifest.publisher, e.manifest.name);
+function rn(e, t) {
+	let n = Wt(e.manifest.publisher, e.manifest.name);
 	return {
 		id: n,
-		identifier: new Qe(n),
-		isBuiltin: e.type === q.System,
-		isUserBuiltin: e.type === q.User && e.isBuiltin,
+		identifier: new Je(n),
+		isBuiltin: e.type === Y.System,
+		isUserBuiltin: e.type === Y.User && e.isBuiltin,
 		isUnderDevelopment: !!t,
 		extensionLocation: e.location,
 		uuid: e.identifier.uuid,
@@ -221,26 +221,26 @@ function an(e, t) {
 		...e.manifest
 	};
 }
-var on, sn, cn, ln, un, dn, fn, pn, mn = e((() => {
-	Ae(), G(), $t(), Ie(), J(), on = Object.freeze({
-		identifier: new Qe("nullExtensionDescription"),
+var an, on, sn, cn, ln, un, dn, fn, pn = e((() => {
+	Ae(), G(), Qt(), Ve(), ut(), an = Object.freeze({
+		identifier: new Je("nullExtensionDescription"),
 		name: "Null Extension Description",
 		version: "0.0.0",
 		publisher: "vscode",
 		engines: { vscode: "" },
 		extensionLocation: V.parse("void:location"),
 		isBuiltin: !1,
-		targetPlatform: rt.UNDEFINED,
+		targetPlatform: Ye.UNDEFINED,
 		isUserBuiltin: !1,
 		isUnderDevelopment: !1,
 		preRelease: !1
-	}), sn = class {
+	}), on = class {
 		constructor(e) {
 			this.dependency = e;
 		}
 	}, (function(e) {
 		e[e.EagerAutoStart = 1] = "EagerAutoStart", e[e.EagerManualStart = 2] = "EagerManualStart", e[e.LazyAutoStart = 3] = "LazyAutoStart";
-	})(cn ||= {}), ln = class {
+	})(sn ||= {}), cn = class {
 		get versionId() {
 			return this._versionId;
 		}
@@ -258,12 +258,12 @@ var on, sn, cn, ln, un, dn, fn, pn, mn = e((() => {
 				versionId: this._versionId,
 				allExtensions: this._allExtensions,
 				myExtensions: this._myExtensions,
-				activationEvents: Ze.createActivationEventsMap(this._allExtensions)
+				activationEvents: Be.createActivationEventsMap(this._allExtensions)
 			};
 		}
 		set(e, t, n) {
 			if (this._versionId > e) throw Error(`ExtensionHostExtensions: invalid versionId ${e} (current: ${this._versionId})`);
-			let r = [], i = [], a = [], o = [], s = en(this._allExtensions), c = en(t), l = (e, t) => e.extensionLocation.toString() === t.extensionLocation.toString() || e.isBuiltin === t.isBuiltin || e.isUserBuiltin === t.isUserBuiltin || e.isUnderDevelopment === t.isUnderDevelopment;
+			let r = [], i = [], a = [], o = [], s = $t(this._allExtensions), c = $t(t), l = (e, t) => e.extensionLocation.toString() === t.extensionLocation.toString() || e.isBuiltin === t.isBuiltin || e.isUserBuiltin === t.isUserBuiltin || e.isUnderDevelopment === t.isUnderDevelopment;
 			for (let e of this._allExtensions) {
 				let t = c.get(e.identifier);
 				if (!t) {
@@ -286,14 +286,14 @@ var on, sn, cn, ln, un, dn, fn, pn, mn = e((() => {
 					continue;
 				}
 			}
-			let u = new Ye(this._myExtensions), d = new Ye(n);
+			let u = new et(this._myExtensions), d = new et(n);
 			for (let e of this._myExtensions) d.has(e) || a.push(e);
 			for (let e of n) u.has(e) || o.push(e);
 			let f = {
 				versionId: e,
 				toRemove: r,
 				toAdd: i,
-				addActivationEvents: Ze.createActivationEventsMap(i),
+				addActivationEvents: Be.createActivationEventsMap(i),
 				myToRemove: a,
 				myToAdd: o
 			};
@@ -301,7 +301,7 @@ var on, sn, cn, ln, un, dn, fn, pn, mn = e((() => {
 		}
 		delta(e) {
 			if (this._versionId >= e.versionId) return null;
-			let { toRemove: t, toAdd: n, myToRemove: r, myToAdd: i } = e, a = new Ye(t), o = new Ye(r);
+			let { toRemove: t, toAdd: n, myToRemove: r, myToAdd: i } = e, a = new et(t), o = new et(r);
 			for (let e = 0; e < this._allExtensions.length; e++) a.has(this._allExtensions[e].identifier) && (this._allExtensions.splice(e, 1), e--);
 			for (let e = 0; e < this._myExtensions.length; e++) o.has(this._myExtensions[e]) && (this._myExtensions.splice(e, 1), e--);
 			for (let e of n) this._allExtensions.push(e);
@@ -309,7 +309,7 @@ var on, sn, cn, ln, un, dn, fn, pn, mn = e((() => {
 			return this._myActivationEvents = null, e;
 		}
 		containsExtension(e) {
-			for (let t of this._myExtensions) if (Qe.equals(t, e)) return !0;
+			for (let t of this._myExtensions) if (Je.equals(t, e)) return !0;
 			return !1;
 		}
 		containsActivationEvent(e) {
@@ -319,22 +319,22 @@ var on, sn, cn, ln, un, dn, fn, pn, mn = e((() => {
 			let e = /* @__PURE__ */ new Set();
 			for (let t of this._allExtensions) {
 				if (!this.containsExtension(t.identifier)) continue;
-				let n = Ze.readActivationEvents(t);
+				let n = Be.readActivationEvents(t);
 				for (let t of n) e.add(t);
 			}
 			return e;
 		}
-	}, un = class {
+	}, ln = class {
 		constructor(e, t, n, r) {
 			this.codeLoadingTime = e, this.activateCallTime = t, this.activateResolvedTime = n, this.activationReason = r;
 		}
-	}, dn = class {
+	}, un = class {
 		constructor(e, t) {
 			this.description = e, this.value = t;
 		}
 	}, (function(e) {
 		e[e.Normal = 0] = "Normal", e[e.Immediate = 1] = "Immediate";
-	})(fn ||= {}), pn = class {
+	})(dn ||= {}), fn = class {
 		constructor() {
 			this.onDidRegisterExtensions = I.None, this.onDidChangeExtensionsStatus = I.None, this.onDidChangeExtensions = I.None, this.onWillActivateByEvent = I.None, this.onDidChangeResponsiveChange = I.None, this.onWillStop = I.None, this.extensions = [];
 		}
@@ -377,71 +377,71 @@ var on, sn, cn, ln, un, dn, fn, pn, mn = e((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/l10n.js
-function hn(e) {
-	return vn[e];
+function mn(e) {
+	return _n[e];
+}
+function hn() {
+	return vn;
 }
 function gn() {
 	return yn;
 }
-function _n() {
-	return bn;
-}
-var vn, yn, bn, xn = e((() => {
-	S(), vn = {};
+var _n, vn, yn, bn = e((() => {
+	S(), _n = {};
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/services/extensions/common/extensionHostKind.js
-function Sn(e) {
+function xn(e) {
 	if (e === null) return "None";
 	switch (e) {
-		case X.LocalProcess: return "LocalProcess";
-		case X.LocalWebWorker: return "LocalWebWorker";
-		case X.Remote: return "Remote";
-	}
-}
-function Cn(e) {
-	switch (e) {
-		case Z.None: return "None";
-		case Z.Local: return "Local";
+		case Z.LocalProcess: return "LocalProcess";
+		case Z.LocalWebWorker: return "LocalWebWorker";
 		case Z.Remote: return "Remote";
 	}
 }
-function wn(e, t, n, r) {
-	let i = Tn(e, n), a = Tn(t, n), o = /* @__PURE__ */ new Map(), s = (e) => {
+function Sn(e) {
+	switch (e) {
+		case Q.None: return "None";
+		case Q.Local: return "Local";
+		case Q.Remote: return "Remote";
+	}
+}
+function Cn(e, t, n, r) {
+	let i = wn(e, n), a = wn(t, n), o = /* @__PURE__ */ new Map(), s = (e) => {
 		if (o.has(e.key)) return;
-		let t = i.get(e.key) || null, n = a.get(e.key) || null, r = new Dn(t, n);
+		let t = i.get(e.key) || null, n = a.get(e.key) || null, r = new En(t, n);
 		o.set(r.key, r);
 	};
 	i.forEach((e) => s(e)), a.forEach((e) => s(e));
 	let c = /* @__PURE__ */ new Map();
 	return o.forEach((e) => {
-		let t = !!e.local, n = !!e.remote, i = !!(e.local && e.local.isUnderDevelopment), a = !!(e.remote && e.remote.isUnderDevelopment), o = Z.None;
-		i && !a ? o = Z.Local : a && !i && (o = Z.Remote), c.set(e.key, r(e.identifier, e.kind, t, n, o));
+		let t = !!e.local, n = !!e.remote, i = !!(e.local && e.local.isUnderDevelopment), a = !!(e.remote && e.remote.isUnderDevelopment), o = Q.None;
+		i && !a ? o = Q.Local : a && !i && (o = Q.Remote), c.set(e.key, r(e.identifier, e.kind, t, n, o));
 	}), c;
 }
-function Tn(e, t) {
+function wn(e, t) {
 	let n = /* @__PURE__ */ new Map();
 	return e.forEach((e) => {
-		let r = new En(e, t(e));
+		let r = new Tn(e, t(e));
 		n.set(r.key, r);
 	}), n;
 }
-var X, Z, En, Dn, On = e((() => {
-	J(), (function(e) {
+var Z, Q, Tn, En, Dn = e((() => {
+	ut(), (function(e) {
 		e[e.LocalProcess = 1] = "LocalProcess", e[e.LocalWebWorker = 2] = "LocalWebWorker", e[e.Remote = 3] = "Remote";
-	})(X ||= {}), (function(e) {
+	})(Z ||= {}), (function(e) {
 		e[e.None = 0] = "None", e[e.Local = 1] = "Local", e[e.Remote = 2] = "Remote";
-	})(Z ||= {}), En = class {
+	})(Q ||= {}), Tn = class {
 		constructor(e, t) {
 			this.desc = e, this.kind = t;
 		}
 		get key() {
-			return Qe.toKey(this.desc.identifier);
+			return Je.toKey(this.desc.identifier);
 		}
 		get isUnderDevelopment() {
 			return this.desc.isUnderDevelopment;
 		}
-	}, Dn = class {
+	}, En = class {
 		constructor(e, t) {
 			this.local = e, this.remote = t;
 		}
@@ -455,13 +455,13 @@ var X, Z, En, Dn, On = e((() => {
 			return this.local ? this.local.kind : this.remote.kind;
 		}
 	};
-})), kn, An = e((() => {
-	kn = { exports: {} };
+})), On, kn = e((() => {
+	On = { exports: {} };
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/external/vscode-semver/semver.js
-function jn() {
-	return Mn ? kn.exports : (Mn = 1, (function(e, t) {
+function An() {
+	return jn ? On.exports : (jn = 1, (function(e, t) {
 		t = e.exports = j;
 		var n = typeof process == "object" && process.env && process.env.NODE_DEBUG && /\bsemver\b/i.test(process.env.NODE_DEBUG) ? function() {
 			var e = Array.prototype.slice.call(arguments, 0);
@@ -780,8 +780,8 @@ function jn() {
 		}, H.prototype.intersects = function(e, t) {
 			if (!(e instanceof H)) throw TypeError("a Comparator is required");
 			var n;
-			if (this.operator === "") return n = new W(e.value, t), He(this.value, n, t);
-			if (e.operator === "") return n = new W(this.value, t), He(e.semver, n, t);
+			if (this.operator === "") return n = new W(e.value, t), J(this.value, n, t);
+			if (e.operator === "") return n = new W(this.value, t), J(e.semver, n, t);
 			var r = (this.operator === ">=" || this.operator === ">") && (e.operator === ">=" || e.operator === ">"), i = (this.operator === "<=" || this.operator === "<") && (e.operator === "<=" || e.operator === "<"), a = this.semver.version === e.semver.version, o = (this.operator === ">=" || this.operator === "<=") && (e.operator === ">=" || e.operator === "<="), s = V(this.semver, "<", e.semver, t) && (this.operator === ">=" || this.operator === ">") && (e.operator === "<=" || e.operator === "<"), c = V(this.semver, ">", e.semver, t) && (this.operator === "<=" || this.operator === "<") && (e.operator === ">=" || e.operator === ">");
 			return r || i || a && o || s || c;
 		}, t.Range = W;
@@ -806,7 +806,7 @@ function jn() {
 			var t = this.loose;
 			e = e.trim(), n("range", e, t);
 			var r = t ? o[O] : o[ve];
-			e = e.replace(r, Be), n("hyphen replace", e), e = e.replace(o[D], _e), n("comparator trim", e, o[D]), e = e.replace(o[ue], de), e = e.replace(o[C], he), e = e.split(/\s+/).join(" ");
+			e = e.replace(r, ze), n("hyphen replace", e), e = e.replace(o[D], _e), n("comparator trim", e, o[D]), e = e.replace(o[ue], de), e = e.replace(o[C], he), e = e.split(/\s+/).join(" ");
 			var i = t ? o[T] : o[E], a = e.split(" ").map(function(e) {
 				return G(e, t);
 			}).join(" ").split(/\s+/);
@@ -835,17 +835,17 @@ function jn() {
 			});
 		}
 		function G(e, t) {
-			return n("comp", e), e = Fe(e, t), n("caret", e), e = Ne(e, t), n("tildes", e), e = Le(e, t), n("xrange", e), e = ze(e, t), n("stars", e), e;
+			return n("comp", e), e = Pe(e, t), n("caret", e), e = q(e, t), n("tildes", e), e = Ie(e, t), n("xrange", e), e = Re(e, t), n("stars", e), e;
 		}
 		function K(e) {
 			return !e || e.toLowerCase() === "x" || e === "*";
 		}
-		function Ne(e, t) {
+		function q(e, t) {
 			return e.trim().split(/\s+/).map(function(e) {
-				return Pe(e, t);
+				return Ne(e, t);
 			}).join(" ");
 		}
-		function Pe(e, t) {
+		function Ne(e, t) {
 			var r = t ? o[pe] : o[fe];
 			return e.replace(r, function(t, r, i, a, o) {
 				n("tilde", e, t, r, i, a, o);
@@ -853,12 +853,12 @@ function jn() {
 				return K(r) ? s = "" : K(i) ? s = ">=" + r + ".0.0 <" + (+r + 1) + ".0.0" : K(a) ? s = ">=" + r + "." + i + ".0 <" + r + "." + (+i + 1) + ".0" : o ? (n("replaceTilde pr", o), o.charAt(0) !== "-" && (o = "-" + o), s = ">=" + r + "." + i + "." + a + o + " <" + r + "." + (+i + 1) + ".0") : s = ">=" + r + "." + i + "." + a + " <" + r + "." + (+i + 1) + ".0", n("tilde return", s), s;
 			});
 		}
-		function Fe(e, t) {
+		function Pe(e, t) {
 			return e.trim().split(/\s+/).map(function(e) {
-				return Ie(e, t);
+				return Fe(e, t);
 			}).join(" ");
 		}
-		function Ie(e, t) {
+		function Fe(e, t) {
 			n("caret", e, t);
 			var r = t ? o[w] : o[ge];
 			return e.replace(r, function(t, r, i, a, o) {
@@ -867,12 +867,12 @@ function jn() {
 				return K(r) ? s = "" : K(i) ? s = ">=" + r + ".0.0 <" + (+r + 1) + ".0.0" : K(a) ? s = r === "0" ? ">=" + r + "." + i + ".0 <" + r + "." + (+i + 1) + ".0" : ">=" + r + "." + i + ".0 <" + (+r + 1) + ".0.0" : o ? (n("replaceCaret pr", o), o.charAt(0) !== "-" && (o = "-" + o), s = r === "0" ? i === "0" ? ">=" + r + "." + i + "." + a + o + " <" + r + "." + i + "." + (+a + 1) : ">=" + r + "." + i + "." + a + o + " <" + r + "." + (+i + 1) + ".0" : ">=" + r + "." + i + "." + a + o + " <" + (+r + 1) + ".0.0") : (n("no pr"), s = r === "0" ? i === "0" ? ">=" + r + "." + i + "." + a + " <" + r + "." + i + "." + (+a + 1) : ">=" + r + "." + i + "." + a + " <" + r + "." + (+i + 1) + ".0" : ">=" + r + "." + i + "." + a + " <" + (+r + 1) + ".0.0"), n("caret return", s), s;
 			});
 		}
-		function Le(e, t) {
+		function Ie(e, t) {
 			return n("replaceXRanges", e, t), e.split(/\s+/).map(function(e) {
-				return Re(e, t);
+				return Le(e, t);
 			}).join(" ");
 		}
-		function Re(e, t) {
+		function Le(e, t) {
 			e = e.trim();
 			var r = t ? o[ce] : o[se];
 			return e.replace(r, function(t, r, i, a, o, s) {
@@ -881,19 +881,19 @@ function jn() {
 				return r === "=" && d && (r = ""), c ? t = r === ">" || r === "<" ? "<0.0.0" : "*" : r && d ? (l && (a = 0), u && (o = 0), r === ">" ? (r = ">=", l ? (i = +i + 1, a = 0, o = 0) : u && (a = +a + 1, o = 0)) : r === "<=" && (r = "<", l ? i = +i + 1 : a = +a + 1), t = r + i + "." + a + "." + o) : l ? t = ">=" + i + ".0.0 <" + (+i + 1) + ".0.0" : u && (t = ">=" + i + "." + a + ".0 <" + i + "." + (+a + 1) + ".0"), n("xRange return", t), t;
 			});
 		}
-		function ze(e, t) {
+		function Re(e, t) {
 			return n("replaceStars", e, t), e.trim().replace(o[ye], "");
 		}
-		function Be(e, t, n, r, i, a, o, s, c, l, u, d, f) {
+		function ze(e, t, n, r, i, a, o, s, c, l, u, d, f) {
 			return t = K(n) ? "" : K(r) ? ">=" + n + ".0.0" : K(i) ? ">=" + n + "." + r + ".0" : ">=" + t, s = K(c) ? "" : K(l) ? "<" + (+c + 1) + ".0.0" : K(u) ? "<" + c + "." + (+l + 1) + ".0" : d ? "<=" + c + "." + l + "." + u + "-" + d : "<=" + s, (t + " " + s).trim();
 		}
 		W.prototype.test = function(e) {
 			if (!e) return !1;
 			typeof e == "string" && (e = new j(e, this.loose));
-			for (var t = 0; t < this.set.length; t++) if (Ve(this.set[t], e)) return !0;
+			for (var t = 0; t < this.set.length; t++) if (Be(this.set[t], e)) return !0;
 			return !1;
 		};
-		function Ve(e, t) {
+		function Be(e, t) {
 			for (var r = 0; r < e.length; r++) if (!e[r].test(t)) return !1;
 			if (t.prerelease.length) {
 				for (var r = 0; r < e.length; r++) if (n(e[r].semver), e[r].semver !== U && e[r].semver.prerelease.length > 0) {
@@ -904,8 +904,8 @@ function jn() {
 			}
 			return !0;
 		}
-		t.satisfies = He;
-		function He(e, t, n) {
+		t.satisfies = J;
+		function J(e, t, n) {
 			try {
 				t = new W(t, n);
 			} catch {
@@ -913,8 +913,8 @@ function jn() {
 			}
 			return t.test(e);
 		}
-		t.maxSatisfying = Ue;
-		function Ue(e, t, n) {
+		t.maxSatisfying = Ve;
+		function Ve(e, t, n) {
 			var r = null, i = null;
 			try {
 				var a = new W(t, n);
@@ -925,8 +925,8 @@ function jn() {
 				a.test(e) && (!r || i.compare(e) === -1) && (r = e, i = new j(r, n));
 			}), r;
 		}
-		t.minSatisfying = We;
-		function We(e, t, n) {
+		t.minSatisfying = He;
+		function He(e, t, n) {
 			var r = null, i = null;
 			try {
 				var a = new W(t, n);
@@ -937,24 +937,24 @@ function jn() {
 				a.test(e) && (!r || i.compare(e) === 1) && (r = e, i = new j(r, n));
 			}), r;
 		}
-		t.validRange = Ge;
-		function Ge(e, t) {
+		t.validRange = Ue;
+		function Ue(e, t) {
 			try {
 				return new W(e, t).range || "*";
 			} catch {
 				return null;
 			}
 		}
-		t.ltr = Ke;
-		function Ke(e, t, n) {
-			return Je(e, t, "<", n);
+		t.ltr = We;
+		function We(e, t, n) {
+			return Ke(e, t, "<", n);
 		}
-		t.gtr = qe;
-		function qe(e, t, n) {
-			return Je(e, t, ">", n);
+		t.gtr = Ge;
+		function Ge(e, t, n) {
+			return Ke(e, t, ">", n);
 		}
-		t.outside = Je;
-		function Je(e, t, n, r) {
+		t.outside = Ke;
+		function Ke(e, t, n, r) {
 			e = new j(e, r), t = new W(t, r);
 			var i, a, o, s, c;
 			switch (n) {
@@ -966,7 +966,7 @@ function jn() {
 					break;
 				default: throw TypeError("Must provide a hilo val of \"<\" or \">\"");
 			}
-			if (He(e, t, r)) return !1;
+			if (J(e, t, r)) return !1;
 			for (var l = 0; l < t.set.length; ++l) {
 				var u = t.set[l], d = null, f = null;
 				if (u.forEach(function(e) {
@@ -975,36 +975,36 @@ function jn() {
 			}
 			return !0;
 		}
-		t.prerelease = Ye;
-		function Ye(e, t) {
+		t.prerelease = qe;
+		function qe(e, t) {
 			var n = A(e, t);
 			return n && n.prerelease.length ? n.prerelease : null;
 		}
-		t.intersects = q;
-		function q(e, t, n) {
+		t.intersects = Je;
+		function Je(e, t, n) {
 			return e = new W(e, n), t = new W(t, n), e.intersects(t);
 		}
-		t.coerce = J;
-		function J(e) {
+		t.coerce = Ye;
+		function Ye(e) {
 			if (e instanceof j) return e;
 			if (typeof e != "string") return null;
 			var t = e.match(o[S]);
 			return t == null ? null : A((t[1] || "0") + "." + (t[2] || "0") + "." + (t[3] || "0"));
 		}
-	})(kn, kn.exports), kn.exports);
+	})(On, On.exports), On.exports);
 }
-var Mn, Nn = e((() => {
-	An();
-})), Pn, Fn = e((() => {
-	Nn(), Pn = jn();
+var jn, Mn = e((() => {
+	kn();
+})), Nn, Pn = e((() => {
+	Mn(), Nn = An();
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/platform/extensions/common/extensionValidator.js
-function In(e) {
-	return e = e.trim(), e === "*" || Gn.test(e);
+function Fn(e) {
+	return e = e.trim(), e === "*" || Wn.test(e);
 }
-function Ln(e) {
-	if (!In(e)) return null;
+function In(e) {
+	if (!Fn(e)) return null;
 	if (e = e.trim(), e === "*") return {
 		hasCaret: !1,
 		hasGreaterEquals: !1,
@@ -1016,7 +1016,7 @@ function Ln(e) {
 		patchMustEqual: !1,
 		preRelease: null
 	};
-	let t = e.match(Gn);
+	let t = e.match(Wn);
 	return t ? {
 		hasCaret: t[1] === "^",
 		hasGreaterEquals: t[1] === ">=",
@@ -1029,13 +1029,13 @@ function Ln(e) {
 		preRelease: t[8] || null
 	} : null;
 }
-function Rn(e) {
+function Ln(e) {
 	if (!e) return null;
 	let t = e.majorBase, n = e.majorMustEqual, r = e.minorBase, i = e.minorMustEqual, a = e.patchBase, o = e.patchMustEqual;
 	e.hasCaret && (t === 0 || (i = !1), o = !1);
 	let s = 0;
 	if (e.preRelease) {
-		let t = Kn.exec(e.preRelease);
+		let t = Gn.exec(e.preRelease);
 		if (t) {
 			let [, e, n, r] = t;
 			s = Date.UTC(Number(e), Number(n) - 1, Number(r));
@@ -1052,26 +1052,26 @@ function Rn(e) {
 		notBefore: s
 	};
 }
-function zn(e, t, n) {
+function Rn(e, t, n) {
 	let r;
-	r = typeof e == "string" ? Rn(Ln(e)) : e;
+	r = typeof e == "string" ? Ln(In(e)) : e;
 	let i;
 	t instanceof Date ? i = t.getTime() : typeof t == "string" && (i = new Date(t).getTime());
 	let a;
-	if (a = typeof n == "string" ? Rn(Ln(n)) : n, !r || !a) return !1;
+	if (a = typeof n == "string" ? Ln(In(n)) : n, !r || !a) return !1;
 	let o = r.majorBase, s = r.minorBase, c = r.patchBase, l = a.majorBase, u = a.minorBase, d = a.patchBase, f = a.notBefore, p = a.majorMustEqual, m = a.minorMustEqual, h = a.patchMustEqual;
 	return a.isMinimum ? o > l ? !0 : o < l ? !1 : s > u ? !0 : s < u || i && i < f ? !1 : c >= d : (o === 1 && l === 0 && (!p || !m || !h) && (l = 1, u = 0, d = 0, p = !0, m = !1, h = !1), o < l ? !1 : o > l ? !p : s < u ? !1 : s > u ? !m : c < d ? !1 : c > d ? !h : !(i && i < f));
 }
-function Bn(e, t, n, r, i, a) {
+function zn(e, t, n, r, i, a) {
 	let o = [];
 	if (r.publisher !== void 0 && typeof r.publisher != "string") return o.push([s.Error, d(1885, "property publisher must be of type `string`.")]), o;
 	if (typeof r.name != "string") return o.push([s.Error, d(1886, "property `{0}` is mandatory and must be of type `string`", "name")]), o;
 	if (typeof r.version != "string") return o.push([s.Error, d(1887, "property `{0}` is mandatory and must be of type `string`", "version")]), o;
 	if (!r.engines) return o.push([s.Error, d(1888, "property `{0}` is mandatory and must be of type `object`", "engines")]), o;
 	if (typeof r.engines.vscode != "string") return o.push([s.Error, d(1889, "property `{0}` is mandatory and must be of type `string`", "engines.vscode")]), o;
-	if (r.extensionDependencies !== void 0 && !Wn(r.extensionDependencies)) return o.push([s.Error, d(1890, "property `{0}` can be omitted or must be of type `string[]`", "extensionDependencies")]), o;
+	if (r.extensionDependencies !== void 0 && !Un(r.extensionDependencies)) return o.push([s.Error, d(1890, "property `{0}` can be omitted or must be of type `string[]`", "extensionDependencies")]), o;
 	if (r.activationEvents !== void 0) {
-		if (!Wn(r.activationEvents)) return o.push([s.Error, d(1891, "property `{0}` can be omitted or must be of type `string[]`", "activationEvents")]), o;
+		if (!Un(r.activationEvents)) return o.push([s.Error, d(1891, "property `{0}` can be omitted or must be of type `string[]`", "activationEvents")]), o;
 		if (r.main === void 0 && r.browser === void 0) return o.push([s.Error, d(1892, "property `{0}` should be omitted if the extension doesn't have a `{1}` or `{2}` property.", "activationEvents", "main", "browser")]), o;
 	}
 	if (r.extensionKind !== void 0 && r.main === void 0 && o.push([s.Warning, d(1893, "property `{0}` can be defined only if property `main` is also defined.", "extensionKind")]), r.main !== void 0) {
@@ -1088,59 +1088,59 @@ function Bn(e, t, n, r, i, a) {
 			De(e, n) || o.push([s.Warning, d(1897, "Expected `browser` ({0}) to be included inside extension's folder ({1}). This might make the extension non-portable.", e.path, n.path)]);
 		}
 	}
-	if (!Pn.valid(r.version)) return o.push([s.Error, d(1898, "Extension version is not semver compatible.")]), o;
+	if (!Nn.valid(r.version)) return o.push([s.Error, d(1898, "Extension version is not semver compatible.")]), o;
 	let c = [];
-	if (!Vn(e, t, r, i, c)) for (let e of c) o.push([s.Error, e]);
+	if (!Bn(e, t, r, i, c)) for (let e of c) o.push([s.Error, e]);
 	if (a && r.enabledApiProposals?.length) {
 		let e = [];
-		if (!Hn([...r.enabledApiProposals], e)) for (let t of e) o.push([s.Error, t]);
+		if (!Vn([...r.enabledApiProposals], e)) for (let t of e) o.push([s.Error, t]);
 	}
 	return o;
 }
-function Vn(e, t, n, r, i) {
-	return r || n.main === void 0 && n.browser === void 0 ? !0 : Un(e, t, n.engines.vscode, i);
+function Bn(e, t, n, r, i) {
+	return r || n.main === void 0 && n.browser === void 0 ? !0 : Hn(e, t, n.engines.vscode, i);
 }
-function Hn(e, t) {
+function Vn(e, t) {
 	if (e.length === 0) return !0;
-	let n = Array.isArray(t) ? t : void 0, r = (Array.isArray(t) ? void 0 : t) ?? lt, i = [], a = ot(e);
+	let n = Array.isArray(t) ? t : void 0, r = (Array.isArray(t) ? void 0 : t) ?? ct, i = [], a = lt(e);
 	for (let { proposalName: e, version: t } of a) t && r[e]?.version !== t && i.push(e);
 	return i.length ? (n && (i.length === 1 ? n.push(d(1899, "This extension is using the API proposal '{0}' that is not compatible with the current version of VS Code.", i[0])) : n.push(d(1900, "This extension is using the API proposals {0} and '{1}' that are not compatible with the current version of VS Code.", i.slice(0, i.length - 1).map((e) => `'${e}'`).join(", "), i[i.length - 1]))), !1) : !0;
 }
-function Un(e, t, n, r = []) {
-	let i = Rn(Ln(n));
+function Hn(e, t, n, r = []) {
+	let i = Ln(In(n));
 	if (!i) return r.push(d(1901, "Could not parse `engines.vscode` value {0}. Please use, for example: ^1.22.0, ^1.22.x, etc.", n)), !1;
 	if (i.majorBase === 0) {
 		if (!i.majorMustEqual || !i.minorMustEqual) return r.push(d(1902, "Version specified in `engines.vscode` ({0}) is not specific enough. For vscode versions before 1.0.0, please define at a minimum the major and minor desired version. E.g. ^0.10.0, 0.10.x, 0.11.0, etc.", n)), !1;
 	} else if (!i.majorMustEqual) return r.push(d(1903, "Version specified in `engines.vscode` ({0}) is not specific enough. For vscode versions after 1.0.0, please define at a minimum the major desired version. E.g. ^1.10.0, 1.10.x, 1.x.x, 2.x.x, etc.", n)), !1;
-	return zn(e, t, i) ? !0 : (r.push(d(1904, "Extension is not compatible with Code {0}. Extension requires: {1}.", e, n)), !1);
+	return Rn(e, t, i) ? !0 : (r.push(d(1904, "Extension is not compatible with Code {0}. Extension requires: {1}.", e, n)), !1);
 }
-function Wn(e) {
+function Un(e) {
 	if (!Array.isArray(e)) return !1;
 	for (let t = 0, n = e.length; t < n; t++) if (typeof e[t] != "string") return !1;
 	return !0;
 }
-var Gn, Kn, qn = e((() => {
-	y(), fe(), S(), Fn(), J(), Ge(), Gn = /^(\^|>=)?((\d+)|x)\.((\d+)|x)\.((\d+)|x)(\-.*)?$/, Kn = /^-(\d{4})(\d{2})(\d{2})$/;
+var Wn, Gn, Kn = e((() => {
+	y(), fe(), S(), Pn(), ut(), We(), Wn = /^(\^|>=)?((\d+)|x)\.((\d+)|x)\.((\d+)|x)(\-.*)?$/, Gn = /^-(\d{4})(\d{2})(\d{2})$/;
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/platform/extensionManagement/common/extensionsProfileScannerService.js
-function Jn(e) {
+function qn(e) {
 	let t = e;
-	return n(t) && dt(t.identifier) && (Yn(t.location) || O(t.location) && !!t.location) && (Ee(t.relativeLocation) || O(t.relativeLocation)) && !!t.version && O(t.version);
+	return n(t) && Le(t.identifier) && (Jn(t.location) || O(t.location) && !!t.location) && (Ee(t.relativeLocation) || O(t.relativeLocation)) && !!t.version && O(t.version);
 }
-function Yn(e) {
+function Jn(e) {
 	if (!e) return !1;
 	let t = e;
 	return typeof t?.path == "string" && typeof t?.scheme == "string";
 }
-var Xn, Zn, Qn, $n = e((() => {
-	r(), i(), pe(), ce(), Ae(), le(), G(), Ue(), $t(), k(), be(), C(), _t(), te(), _(), D(), (function(e) {
+var Yn, Xn, Zn, Qn = e((() => {
+	r(), i(), pe(), ce(), Ae(), le(), G(), Ge(), Qt(), k(), be(), C(), gt(), te(), _(), D(), (function(e) {
 		e.ERROR_PROFILE_NOT_FOUND = "ERROR_PROFILE_NOT_FOUND", e.ERROR_INVALID_CONTENT = "ERROR_INVALID_CONTENT";
-	})(Xn ||= {}), Zn = class extends Error {
+	})(Yn ||= {}), Xn = class extends Error {
 		constructor(e, t) {
 			super(e), this.code = t;
 		}
-	}, Qn = class extends we {
+	}, Zn = class extends we {
 		constructor(e, t, n, r, i) {
 			super(), this.extensionsLocation = e, this.fileService = t, this.userDataProfilesService = n, this.uriIdentityService = r, this.logService = i, this._onAddExtensions = this._register(new B()), this.onAddExtensions = this._onAddExtensions.event, this._onDidAddExtensions = this._register(new B()), this.onDidAddExtensions = this._onDidAddExtensions.event, this._onRemoveExtensions = this._register(new B()), this.onRemoveExtensions = this._onRemoveExtensions.event, this._onDidRemoveExtensions = this._register(new B()), this.onDidRemoveExtensions = this._onDidRemoveExtensions.event, this.resourcesAccessQueueMap = new b();
 		}
@@ -1153,9 +1153,9 @@ var Xn, Zn, Qn, $n = e((() => {
 				return await this.withProfileExtensions(t, (a) => {
 					let o = [];
 					if (n) o.push(...a);
-					else for (let t of a) e.some(([e]) => Y(e.identifier, t.identifier) && e.manifest.version !== t.version) ? r.push(t) : o.push(t);
+					else for (let t of a) e.some(([e]) => X(e.identifier, t.identifier) && e.manifest.version !== t.version) ? r.push(t) : o.push(t);
 					for (let [t, n] of e) {
-						let e = o.findIndex((e) => Y(e.identifier, t.identifier) && e.version === t.manifest.version), r = {
+						let e = o.findIndex((e) => X(e.identifier, t.identifier) && e.version === t.manifest.version), r = {
 							identifier: t.identifier,
 							version: t.manifest.version,
 							location: t.location,
@@ -1194,7 +1194,7 @@ var Xn, Zn, Qn, $n = e((() => {
 			return await this.withProfileExtensions(t, (t) => {
 				let r = [];
 				for (let i of t) {
-					let t = e.find(([e]) => Y({ id: e.identifier.id }, { id: i.identifier.id }) && e.manifest.version === i.version);
+					let t = e.find(([e]) => X({ id: e.identifier.id }, { id: i.identifier.id }) && e.manifest.version === i.version);
 					t ? (i.metadata = {
 						...i.metadata,
 						...t[1]
@@ -1208,7 +1208,7 @@ var Xn, Zn, Qn, $n = e((() => {
 			try {
 				await this.withProfileExtensions(t, (r) => {
 					let i = [];
-					for (let t of r) e.some((e) => Y(t.identifier, e)) ? n.push(t) : i.push(t);
+					for (let t of r) e.some((e) => X(t.identifier, e)) ? n.push(t) : i.push(t);
 					return n.length && this._onRemoveExtensions.fire({
 						extensions: n,
 						profileLocation: t
@@ -1233,13 +1233,13 @@ var Xn, Zn, Qn, $n = e((() => {
 					i = JSON.parse(t.value.toString().trim() || "[]");
 				} catch (t) {
 					if (L(t) !== M.FILE_NOT_FOUND) throw t;
-					if (this.uriIdentityService.extUri.isEqual(e, this.userDataProfilesService.defaultProfile.extensionsResource) && (i = await this.migrateFromOldDefaultProfileExtensionsLocation()), !i && n?.bailOutWhenFileNotFound) throw new Zn(E(t), Xn.ERROR_PROFILE_NOT_FOUND);
+					if (this.uriIdentityService.extUri.isEqual(e, this.userDataProfilesService.defaultProfile.extensionsResource) && (i = await this.migrateFromOldDefaultProfileExtensionsLocation()), !i && n?.bailOutWhenFileNotFound) throw new Xn(E(t), Yn.ERROR_PROFILE_NOT_FOUND);
 				}
 				if (i) {
 					Array.isArray(i) || this.throwInvalidConentError(e);
 					let t = !1;
 					for (let n of i) {
-						Jn(n) || this.throwInvalidConentError(e);
+						qn(n) || this.throwInvalidConentError(e);
 						let i;
 						if (O(n.relativeLocation) && n.relativeLocation) i = this.resolveExtensionLocation(n.relativeLocation);
 						else if (O(n.location)) {
@@ -1279,7 +1279,7 @@ var Xn, Zn, Qn, $n = e((() => {
 			});
 		}
 		throwInvalidConentError(e) {
-			throw new Zn(`Invalid extensions content in ${e.toString()}`, Xn.ERROR_INVALID_CONTENT);
+			throw new Xn(`Invalid extensions content in ${e.toString()}`, Yn.ERROR_INVALID_CONTENT);
 		}
 		toRelativePath(e) {
 			return this.uriIdentityService.extUri.isEqual(this.uriIdentityService.extUri.dirname(e), this.extensionsLocation) ? this.uriIdentityService.extUri.basename(e) : void 0;
@@ -1300,7 +1300,7 @@ var Xn, Zn, Qn, $n = e((() => {
 				let r;
 				try {
 					let e = JSON.parse(n);
-					Array.isArray(e) && e.every((e) => Jn(e)) ? r = e : this.logService.warn("Skipping migrating from old default profile locaiton: Found invalid data", e);
+					Array.isArray(e) && e.every((e) => qn(e)) ? r = e : this.logService.warn("Skipping migrating from old default profile locaiton: Found invalid data", e);
 				} catch (e) {
 					this.logService.error(e);
 				}
@@ -1327,24 +1327,24 @@ var Xn, Zn, Qn, $n = e((() => {
 			let t = this.resourcesAccessQueueMap.get(e);
 			return t || (t = new Te(), this.resourcesAccessQueueMap.set(e, t)), t;
 		}
-	}, Qn = v([
+	}, Zn = v([
 		N(1, xe),
-		N(2, gt),
+		N(2, ht),
 		N(3, R),
 		N(4, g)
-	], Qn);
+	], Zn);
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/platform/extensionManagement/common/extensionNls.js
-function er(e, t, n, r) {
+function $n(e, t, n, r) {
 	try {
-		tr(e, t, n, r);
+		er(e, t, n, r);
 	} catch (t) {
 		e.error(t?.message ?? t);
 	}
 	return t;
 }
-function tr(e, t, r, i) {
+function er(e, t, r, i) {
 	let a = (o, s, c) => {
 		let l = o[s];
 		if (O(l)) {
@@ -1367,10 +1367,10 @@ function tr(e, t, r, i) {
 	};
 	for (let e in t) t.hasOwnProperty(e) && a(t, e);
 }
-var nr = e((() => {
+var tr = e((() => {
 	_(), S();
-})), rr, ir, Q, $, ar, or, sr = e((() => {
-	r(), oe(), i(), ie(), pe(), D(), K(), bt(), ce(), Oe(), U(), j(), y(), Fn(), fe(), G(), S(), l(), $t(), J(), qn(), k(), be(), o(), C(), Ke(), Ae(), P(), $n(), Ct(), _t(), te(), nr(), Re(), (function(e) {
+})), nr, rr, ir, ar, or, sr, cr = e((() => {
+	r(), oe(), i(), ie(), pe(), D(), K(), yt(), ce(), Oe(), U(), j(), y(), Pn(), fe(), G(), S(), l(), Qt(), ut(), Kn(), k(), be(), o(), C(), ze(), Ae(), P(), Qn(), St(), gt(), te(), tr(), Re(), (function(e) {
 		function t(e, t) {
 			if (e === t) return !0;
 			let n = Object.keys(e), r = /* @__PURE__ */ new Set();
@@ -1383,12 +1383,12 @@ var nr = e((() => {
 			return r.size === 0;
 		}
 		e.equals = t;
-	})(rr ||= {}), ir = class extends we {
+	})(nr ||= {}), rr = class extends we {
 		constructor(e, t, n, r, i, a, o, s, c, l, u, d, f) {
-			super(), this.systemExtensionsLocation = e, this.userExtensionsLocation = t, this.extensionsControlLocation = n, this.userDataProfilesService = i, this.extensionsProfileScannerService = a, this.extensionResourceLoaderService = o, this.fileService = s, this.logService = c, this.environmentService = l, this.productService = u, this.uriIdentityService = d, this.instantiationService = f, this._onDidChangeCache = this._register(new B()), this.onDidChangeCache = this._onDidChangeCache.event, this.initializeDefaultProfileExtensionsPromise = void 0, this.systemExtensionsCachedScanner = this._register(this.instantiationService.createInstance(or, r)), this.userExtensionsCachedScanner = this._register(this.instantiationService.createInstance(or, r)), this.extensionsScanner = this._register(this.instantiationService.createInstance(ar)), this._register(this.systemExtensionsCachedScanner.onDidChangeCache(() => this._onDidChangeCache.fire(q.System))), this._register(this.userExtensionsCachedScanner.onDidChangeCache(() => this._onDidChangeCache.fire(q.User)));
+			super(), this.systemExtensionsLocation = e, this.userExtensionsLocation = t, this.extensionsControlLocation = n, this.userDataProfilesService = i, this.extensionsProfileScannerService = a, this.extensionResourceLoaderService = o, this.fileService = s, this.logService = c, this.environmentService = l, this.productService = u, this.uriIdentityService = d, this.instantiationService = f, this._onDidChangeCache = this._register(new B()), this.onDidChangeCache = this._onDidChangeCache.event, this.initializeDefaultProfileExtensionsPromise = void 0, this.systemExtensionsCachedScanner = this._register(this.instantiationService.createInstance(sr, r)), this.userExtensionsCachedScanner = this._register(this.instantiationService.createInstance(sr, r)), this.extensionsScanner = this._register(this.instantiationService.createInstance(or)), this._register(this.systemExtensionsCachedScanner.onDidChangeCache(() => this._onDidChangeCache.fire(Y.System))), this._register(this.userExtensionsCachedScanner.onDidChangeCache(() => this._onDidChangeCache.fire(Y.User)));
 		}
 		getTargetPlatform() {
-			return this._targetPlatformPromise ||= Yt(this.fileService, this.logService), this._targetPlatformPromise;
+			return this._targetPlatformPromise ||= Jt(this.fileService, this.logService), this._targetPlatformPromise;
 		}
 		async scanAllExtensions(e, t) {
 			let [n, r] = await Promise.all([this.scanSystemExtensions(e), this.scanUserExtensions(t)]);
@@ -1398,18 +1398,18 @@ var nr = e((() => {
 			let t = [];
 			t.push(this.scanDefaultSystemExtensions(e.language)), t.push(this.scanDevSystemExtensions(e.language, !!e.checkControlFile));
 			let [n, r] = await Promise.all(t);
-			return this.applyScanOptions([...n, ...r], q.System, { pickLatest: !1 });
+			return this.applyScanOptions([...n, ...r], Y.System, { pickLatest: !1 });
 		}
 		async scanUserExtensions(e) {
 			this.logService.trace("Started scanning user extensions", e.profileLocation);
-			let t = this.uriIdentityService.extUri.isEqual(e.profileLocation, this.userDataProfilesService.defaultProfile.extensionsResource) ? { bailOutWhenFileNotFound: !0 } : void 0, n = await this.createExtensionScannerInput(e.profileLocation, !0, q.User, e.language, !0, t, e.productVersion ?? this.getProductVersion()), r = e.useCache && !n.devMode ? this.userExtensionsCachedScanner : this.extensionsScanner, i;
+			let t = this.uriIdentityService.extUri.isEqual(e.profileLocation, this.userDataProfilesService.defaultProfile.extensionsResource) ? { bailOutWhenFileNotFound: !0 } : void 0, n = await this.createExtensionScannerInput(e.profileLocation, !0, Y.User, e.language, !0, t, e.productVersion ?? this.getProductVersion()), r = e.useCache && !n.devMode ? this.userExtensionsCachedScanner : this.extensionsScanner, i;
 			try {
 				i = await r.scanExtensions(n);
 			} catch (e) {
-				if (e instanceof Zn && e.code === Xn.ERROR_PROFILE_NOT_FOUND) await this.doInitializeDefaultProfileExtensions(), i = await r.scanExtensions(n);
+				if (e instanceof Xn && e.code === Yn.ERROR_PROFILE_NOT_FOUND) await this.doInitializeDefaultProfileExtensions(), i = await r.scanExtensions(n);
 				else throw e;
 			}
-			return i = await this.applyScanOptions(i, q.User, {
+			return i = await this.applyScanOptions(i, Y.User, {
 				includeInvalid: e.includeInvalid,
 				pickLatest: !0
 			}), this.logService.trace("Scanned user extensions:", i.length), i;
@@ -1418,8 +1418,8 @@ var nr = e((() => {
 			includeInvalid: !0,
 			includeAllVersions: !0
 		}) {
-			let t = await this.createExtensionScannerInput(this.userExtensionsLocation, !1, q.User, void 0, !0, void 0, this.getProductVersion()), n = await this.extensionsScanner.scanExtensions(t);
-			return this.applyScanOptions(n, q.User, {
+			let t = await this.createExtensionScannerInput(this.userExtensionsLocation, !1, Y.User, void 0, !0, void 0, this.getProductVersion()), n = await this.extensionsScanner.scanExtensions(t);
+			return this.applyScanOptions(n, Y.User, {
 				includeAllVersions: e.includeAllVersions,
 				includeInvalid: e.includeInvalid
 			});
@@ -1427,8 +1427,8 @@ var nr = e((() => {
 		async scanExtensionsUnderDevelopment(e, t) {
 			if (this.environmentService.isExtensionDevelopment && this.environmentService.extensionDevelopmentLocationURI) {
 				let n = (await Promise.all(this.environmentService.extensionDevelopmentLocationURI.filter((e) => e.scheme === A.file).map(async (n) => {
-					let r = await this.createExtensionScannerInput(n, !1, q.User, t.language, !1, void 0, this.getProductVersion());
-					return (await this.extensionsScanner.scanOneOrMultipleExtensions(r)).map((t) => (t.type = e.find((e) => Y(e.identifier, t.identifier))?.type ?? t.type, this.extensionsScanner.validate(t, r)));
+					let r = await this.createExtensionScannerInput(n, !1, Y.User, t.language, !1, void 0, this.getProductVersion());
+					return (await this.extensionsScanner.scanOneOrMultipleExtensions(r)).map((t) => (t.type = e.find((e) => X(e.identifier, t.identifier))?.type ?? t.type, this.extensionsScanner.validate(t, r)));
 				}))).flat();
 				return this.applyScanOptions(n, "development", {
 					includeInvalid: t.includeInvalid,
@@ -1469,7 +1469,7 @@ var nr = e((() => {
 			try {
 				await this.extensionsProfileScannerService.scanProfileExtensions(this.userDataProfilesService.defaultProfile.extensionsResource, { bailOutWhenFileNotFound: !0 });
 			} catch (e) {
-				if (e instanceof Zn && e.code === Xn.ERROR_PROFILE_NOT_FOUND) await this.doInitializeDefaultProfileExtensions();
+				if (e instanceof Xn && e.code === Yn.ERROR_PROFILE_NOT_FOUND) await this.doInitializeDefaultProfileExtensions();
 				else throw e;
 			}
 		}
@@ -1493,7 +1493,7 @@ var nr = e((() => {
 			})(), this.initializeDefaultProfileExtensionsPromise;
 		}
 		async applyScanOptions(e, t, n = {}) {
-			return n.includeAllVersions || (e = this.dedupExtensions(t === q.System ? e : void 0, t === q.User ? e : void 0, t === "development" ? e : void 0, await this.getTargetPlatform(), !!n.pickLatest)), n.includeInvalid || (e = e.filter((e) => e.isValid)), e.sort((e, t) => {
+			return n.includeAllVersions || (e = this.dedupExtensions(t === Y.System ? e : void 0, t === Y.User ? e : void 0, t === "development" ? e : void 0, await this.getTargetPlatform(), !!n.pickLatest)), n.includeInvalid || (e = e.filter((e) => e.isValid)), e.sort((e, t) => {
 				let n = W(e.location.fsPath), r = W(t.location.fsPath);
 				return n < r ? -1 : +(n > r);
 			});
@@ -1506,20 +1506,20 @@ var nr = e((() => {
 				}
 				if (e.isValid && !t.isValid) return !1;
 				if (e.isValid === t.isValid) {
-					if (i && Pn.gt(e.manifest.version, t.manifest.version)) return this.logService.debug(`Skipping extension ${t.location.path} with lower version ${t.manifest.version} in favour of ${e.location.path} with version ${e.manifest.version}`), !1;
-					if (Pn.eq(e.manifest.version, t.manifest.version)) {
-						if (e.type === q.System) return this.logService.debug(`Skipping extension ${t.location.path} in favour of system extension ${e.location.path} with same version`), !1;
+					if (i && Nn.gt(e.manifest.version, t.manifest.version)) return this.logService.debug(`Skipping extension ${t.location.path} with lower version ${t.manifest.version} in favour of ${e.location.path} with version ${e.manifest.version}`), !1;
+					if (Nn.eq(e.manifest.version, t.manifest.version)) {
+						if (e.type === Y.System) return this.logService.debug(`Skipping extension ${t.location.path} in favour of system extension ${e.location.path} with same version`), !1;
 						if (e.targetPlatform === r) return this.logService.debug(`Skipping extension ${t.location.path} from different target platform ${t.targetPlatform}`), !1;
 					}
 				}
 				return n ? this.logService.warn(`Overwriting user extension ${e.location.path} with ${t.location.path}.`) : this.logService.debug(`Overwriting user extension ${e.location.path} with ${t.location.path}.`), !0;
-			}, o = new at();
+			}, o = new tt();
 			return e?.forEach((e) => {
 				let t = o.get(e.identifier.id);
 				(!t || a(t, e, !1)) && o.set(e.identifier.id, e);
 			}), t?.forEach((t) => {
 				let n = o.get(t.identifier.id);
-				if (!n && e && t.type === q.System) {
+				if (!n && e && t.type === Y.System) {
 					this.logService.debug(`Skipping obsolete system extension ${t.location.path}.`);
 					return;
 				}
@@ -1531,7 +1531,7 @@ var nr = e((() => {
 		}
 		async scanDefaultSystemExtensions(e) {
 			this.logService.trace("Started scanning system extensions");
-			let t = await this.createExtensionScannerInput(this.systemExtensionsLocation, !1, q.System, e, !0, void 0, this.getProductVersion()), n = await (t.devMode ? this.extensionsScanner : this.systemExtensionsCachedScanner).scanExtensions(t);
+			let t = await this.createExtensionScannerInput(this.systemExtensionsLocation, !1, Y.System, e, !0, void 0, this.getProductVersion()), n = await (t.devMode ? this.extensionsScanner : this.systemExtensionsCachedScanner).scanExtensions(t);
 			return this.logService.trace("Scanned system extensions:", n.length), n;
 		}
 		async scanDevSystemExtensions(e, t) {
@@ -1551,7 +1551,7 @@ var nr = e((() => {
 						break;
 				}
 			}
-			let o = await Promise.all(i.map(async (t) => this.extensionsScanner.scanExtension(await this.createExtensionScannerInput(t, !1, q.System, e, !0, void 0, this.getProductVersion()))));
+			let o = await Promise.all(i.map(async (t) => this.extensionsScanner.scanExtension(await this.createExtensionScannerInput(t, !1, Y.System, e, !0, void 0, this.getProductVersion()))));
 			return this.logService.trace("Scanned dev system extensions:", o.length), ge(o);
 		}
 		async getBuiltInExtensionControl() {
@@ -1564,7 +1564,7 @@ var nr = e((() => {
 		}
 		async createExtensionScannerInput(e, t, n, r, i, a, o) {
 			let s = await this.getTranslations(r ?? w), c = await this.getMtime(e), l = t && !this.uriIdentityService.extUri.isEqual(e, this.userDataProfilesService.defaultProfile.extensionsResource) ? this.userDataProfilesService.defaultProfile.extensionsResource : void 0, u = l ? await this.getMtime(l) : void 0;
-			return new Q(e, c, l, u, t, a, n, i, o.version, o.date, this.productService.commit, !this.environmentService.isBuilt, r, s);
+			return new ir(e, c, l, u, t, a, n, i, o.version, o.date, this.productService.commit, !this.environmentService.isBuilt, r, s);
 		}
 		async getMtime(e) {
 			try {
@@ -1578,17 +1578,17 @@ var nr = e((() => {
 				date: this.productService.date
 			};
 		}
-	}, ir = v([
-		N(4, gt),
-		N(5, St),
-		N(6, qe),
+	}, rr = v([
+		N(4, ht),
+		N(5, xt),
+		N(6, nt),
 		N(7, xe),
 		N(8, g),
 		N(9, f),
-		N(10, ze),
+		N(10, Ie),
 		N(11, R),
 		N(12, re)
-	], ir), Q = class {
+	], rr), ir = class {
 		constructor(e, t, n, r, i, a, o, s, c, l, u, d, f, p) {
 			this.location = e, this.mtime = t, this.applicationExtensionslocation = n, this.applicationExtensionslocationMtime = r, this.profile = i, this.profileScanOptions = a, this.type = o, this.validate = s, this.productVersion = c, this.productDate = l, this.productCommit = u, this.devMode = d, this.language = f, this.translations = p;
 		}
@@ -1601,16 +1601,16 @@ var nr = e((() => {
 			};
 		}
 		static equals(e, t) {
-			return ye(e.location, t.location) && e.mtime === t.mtime && ye(e.applicationExtensionslocation, t.applicationExtensionslocation) && e.applicationExtensionslocationMtime === t.applicationExtensionslocationMtime && e.profile === t.profile && p(e.profileScanOptions, t.profileScanOptions) && e.type === t.type && e.validate === t.validate && e.productVersion === t.productVersion && e.productDate === t.productDate && e.productCommit === t.productCommit && e.devMode === t.devMode && e.language === t.language && rr.equals(e.translations, t.translations);
+			return ye(e.location, t.location) && e.mtime === t.mtime && ye(e.applicationExtensionslocation, t.applicationExtensionslocation) && e.applicationExtensionslocationMtime === t.applicationExtensionslocationMtime && e.profile === t.profile && p(e.profileScanOptions, t.profileScanOptions) && e.type === t.type && e.validate === t.validate && e.productVersion === t.productVersion && e.productDate === t.productDate && e.productCommit === t.productCommit && e.devMode === t.devMode && e.language === t.language && nr.equals(e.translations, t.translations);
 		}
-	}, $ = class extends we {
+	}, ar = class extends we {
 		constructor(e, t, n) {
 			super(), this.extensionResourceLoaderService = e, this.fileService = t, this.logService = n;
 		}
 		async getLocalizedMessages(e, t, n) {
 			let r = z(e, "package.nls.json"), i = (t, n) => {
 				n.forEach((n) => {
-					this.logService.error(this.formatMessage(e, d(1880, "Failed to parse {0}: {1}.", t?.path, xt(n.error))));
+					this.logService.error(this.formatMessage(e, d(1880, "Failed to parse {0}: {1}.", t?.path, bt(n.error))));
 				});
 			}, a = (t) => {
 				this.logService.error(this.formatMessage(e, d(1881, "Invalid format {0}: JSON object expected.", t?.path)));
@@ -1670,11 +1670,11 @@ var nr = e((() => {
 			if (r) try {
 				let n = [], i = await this.resolveOriginalMessageBundle(r.default, n);
 				if (n.length > 0) return n.forEach((t) => {
-					this.logService.error(this.formatMessage(e, d(1880, "Failed to parse {0}: {1}.", r.default?.path, xt(t.error))));
+					this.logService.error(this.formatMessage(e, d(1880, "Failed to parse {0}: {1}.", r.default?.path, bt(t.error))));
 				}), t;
 				if (H(r) !== "object") return this.logService.error(this.formatMessage(e, d(1881, "Invalid format {0}: JSON object expected.", r.default?.path))), t;
 				let a = r.values || Object.create(null);
-				return er(this.logService, t, a, i);
+				return $n(this.logService, t, a, i);
 			} catch {}
 			return t;
 		}
@@ -1709,11 +1709,11 @@ var nr = e((() => {
 		formatMessage(e, t) {
 			return `[${e.path}]: ${t}`;
 		}
-	}, $ = v([
-		N(0, qe),
+	}, ar = v([
+		N(0, nt),
 		N(1, xe),
 		N(2, g)
-	], $), ar = class extends $ {
+	], ar), or = class extends ar {
 		constructor(e, t, n, r, i, a, o) {
 			super(n, r, o), this.extensionsProfileScannerService = e, this.uriIdentityService = t, this.environmentService = a, this.extensionsEnabledWithApiProposalVersion = i.extensionsEnabledWithApiProposalVersion?.map((e) => e.toLowerCase()) ?? [];
 		}
@@ -1723,8 +1723,8 @@ var nr = e((() => {
 		async scanExtensionsFromLocation(e) {
 			let t = await this.fileService.resolve(e.location);
 			return t.children?.length ? ge(await Promise.all(t.children.map(async (t) => {
-				if (!t.isDirectory || e.type === q.User && me(t.resource).indexOf(".") === 0) return null;
-				let n = new Q(t.resource, e.mtime, e.applicationExtensionslocation, e.applicationExtensionslocationMtime, e.profile, e.profileScanOptions, e.type, e.validate, e.productVersion, e.productDate, e.productCommit, e.devMode, e.language, e.translations);
+				if (!t.isDirectory || e.type === Y.User && me(t.resource).indexOf(".") === 0) return null;
+				let n = new ir(t.resource, e.mtime, e.applicationExtensionslocation, e.applicationExtensionslocationMtime, e.profile, e.profileScanOptions, e.type, e.validate, e.productVersion, e.productDate, e.productCommit, e.devMode, e.language, e.translations);
 				return this.scanExtension(n);
 			}))).sort((e, t) => e.location.path < t.location.path ? -1 : 1) : [];
 		}
@@ -1741,7 +1741,7 @@ var nr = e((() => {
 			let r = await this.extensionsProfileScannerService.scanProfileExtensions(e, n.profileScanOptions);
 			return r.length ? ge(await Promise.all(r.map(async (e) => {
 				if (t(e)) {
-					let t = new Q(e.location, n.mtime, n.applicationExtensionslocation, n.applicationExtensionslocationMtime, n.profile, n.profileScanOptions, n.type, n.validate, n.productVersion, n.productDate, n.productCommit, n.devMode, n.language, n.translations);
+					let t = new ir(e.location, n.mtime, n.applicationExtensionslocation, n.applicationExtensionslocationMtime, n.profile, n.profileScanOptions, n.type, n.validate, n.productVersion, n.productDate, n.productCommit, n.devMode, n.language, n.translations);
 					return this.scanExtension(t, e);
 				}
 				return null;
@@ -1771,9 +1771,9 @@ var nr = e((() => {
 						version: t.version,
 						engines: { vscode: "" }
 					};
-				} else return e.type !== q.System && this.logService.error(a), null;
+				} else return e.type !== Y.System && this.logService.error(a), null;
 			}
-			i.publisher ||= $e;
+			i.publisher ||= Ke;
 			let a;
 			t ? a = {
 				...t.metadata,
@@ -1783,12 +1783,12 @@ var nr = e((() => {
 				size: i.__metadata.size,
 				targetPlatform: i.__metadata.targetPlatform
 			}), delete i.__metadata;
-			let o = qt(i.publisher, i.name), c = a?.id ? {
+			let o = Kt(i.publisher, i.name), c = a?.id ? {
 				id: o,
 				uuid: a.id
-			} : { id: o }, l = a?.isSystem ? q.System : e.type, u = l === q.System || !!a?.isBuiltin;
+			} : { id: o }, l = a?.isSystem ? Y.System : e.type, u = l === Y.System || !!a?.isBuiltin;
 			try {
-				i = await this.translateManifest(e.location, i, Q.createNlsConfiguration(e));
+				i = await this.translateManifest(e.location, i, ir.createNlsConfiguration(e));
 			} catch (e) {
 				this.logService.warn("Failed to translate manifest", E(e));
 			}
@@ -1798,17 +1798,17 @@ var nr = e((() => {
 				manifest: i,
 				location: e.location,
 				isBuiltin: u,
-				targetPlatform: a?.targetPlatform ?? rt.UNDEFINED,
+				targetPlatform: a?.targetPlatform ?? Ye.UNDEFINED,
 				publisherDisplayName: a?.publisherDisplayName,
 				metadata: a,
 				isValid: r,
 				validations: n,
 				preRelease: !!a?.preRelease
 			};
-			return e.validate && (d = this.validate(d, e)), i.enabledApiProposals && (!this.environmentService.isBuilt || this.extensionsEnabledWithApiProposalVersion.includes(o.toLowerCase())) && (i.originalEnabledApiProposals = i.enabledApiProposals, i.enabledApiProposals = ut([...i.enabledApiProposals])), d;
+			return e.validate && (d = this.validate(d, e)), i.enabledApiProposals && (!this.environmentService.isBuilt || this.extensionsEnabledWithApiProposalVersion.includes(o.toLowerCase())) && (i.originalEnabledApiProposals = i.enabledApiProposals, i.enabledApiProposals = He([...i.enabledApiProposals])), d;
 		}
 		validate(e, t) {
-			let n = e.isValid, r = this.environmentService.isBuilt && this.extensionsEnabledWithApiProposalVersion.includes(e.identifier.id.toLowerCase()), i = Bn(t.productVersion, t.productDate, t.location, e.manifest, e.isBuiltin, r);
+			let n = e.isValid, r = this.environmentService.isBuilt && this.extensionsEnabledWithApiProposalVersion.includes(e.identifier.id.toLowerCase()), i = zn(t.productVersion, t.productDate, t.location, e.manifest, e.isBuiltin, r);
 			for (let [e, r] of i) e === s.Error && (n = !1, this.logService.error(this.formatMessage(t.location, r)));
 			return e.isValid = n, e.validations = [...e.validations, ...i], e;
 		}
@@ -1825,7 +1825,7 @@ var nr = e((() => {
 			} catch (r) {
 				let i = [];
 				T(n, i);
-				for (let n of i) this.logService.error(this.formatMessage(e, d(1883, "Failed to parse {0}: [{1}, {2}] {3}.", t.path, n.offset, n.length, xt(n.error))));
+				for (let n of i) this.logService.error(this.formatMessage(e, d(1883, "Failed to parse {0}: [{1}, {2}] {3}.", t.path, n.offset, n.length, bt(n.error))));
 				throw r;
 			}
 			if (H(r) !== "object") {
@@ -1834,21 +1834,21 @@ var nr = e((() => {
 			}
 			return r;
 		}
-	}, ar = v([
-		N(0, St),
+	}, or = v([
+		N(0, xt),
 		N(1, R),
-		N(2, qe),
+		N(2, nt),
 		N(3, xe),
-		N(4, ze),
+		N(4, Ie),
 		N(5, f),
 		N(6, g)
-	], ar), or = class extends ar {
+	], or), sr = class extends or {
 		constructor(e, t, n, r, i, a, o, s, c) {
 			super(n, r, i, a, o, s, c), this.currentProfile = e, this.userDataProfilesService = t, this.cacheValidatorThrottler = this._register(new Me(3e3)), this._onDidChangeCache = this._register(new B()), this.onDidChangeCache = this._onDidChangeCache.event;
 		}
 		async scanExtensions(e) {
 			let t = this.getCacheFile(e), n = await this.readExtensionCache(t);
-			if (this.input = e, n && n.input && Q.equals(n.input, this.input)) return this.logService.debug("Using cached extensions scan result", e.type === q.System ? "system" : "user", e.location.toString()), this.cacheValidatorThrottler.trigger(() => this.validateCache()), n.result.map((e) => (e.location = V.revive(e.location), e));
+			if (this.input = e, n && n.input && ir.equals(n.input, this.input)) return this.logService.debug("Using cached extensions scan result", e.type === Y.System ? "system" : "user", e.location.toString()), this.cacheValidatorThrottler.trigger(() => this.validateCache()), n.result.map((e) => (e.location = V.revive(e.location), e));
 			let r = await super.scanExtensions(e);
 			return await this.writeExtensionCache(t, {
 				input: e,
@@ -1887,79 +1887,79 @@ var nr = e((() => {
 		}
 		getCacheFile(e) {
 			let t = this.getProfile(e);
-			return this.uriIdentityService.extUri.joinPath(t.cacheHome, e.type === q.System ? nt : Xe);
+			return this.uriIdentityService.extUri.joinPath(t.cacheHome, e.type === Y.System ? $e : at);
 		}
 		getProfile(e) {
-			return e.type === q.System || !e.profile ? this.userDataProfilesService.defaultProfile : this.uriIdentityService.extUri.isEqual(e.location, this.currentProfile.extensionsResource) ? this.currentProfile : this.userDataProfilesService.profiles.find((t) => this.uriIdentityService.extUri.isEqual(e.location, t.extensionsResource)) ?? this.currentProfile;
+			return e.type === Y.System || !e.profile ? this.userDataProfilesService.defaultProfile : this.uriIdentityService.extUri.isEqual(e.location, this.currentProfile.extensionsResource) ? this.currentProfile : this.userDataProfilesService.profiles.find((t) => this.uriIdentityService.extUri.isEqual(e.location, t.extensionsResource)) ?? this.currentProfile;
 		}
-	}, or = v([
-		N(1, gt),
-		N(2, St),
+	}, sr = v([
+		N(1, ht),
+		N(2, xt),
 		N(3, R),
-		N(4, qe),
+		N(4, nt),
 		N(5, xe),
-		N(6, ze),
+		N(6, Ie),
 		N(7, f),
 		N(8, g)
-	], or);
+	], sr);
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/extensions.js
-function cr(e) {
-	mr = e;
-}
 function lr(e) {
 	hr = e;
 }
-function ur(e, t, n, r) {
+function ur(e) {
+	gr = e;
+}
+function dr(e, t, n, r) {
 	let i = new he();
 	i.add(je.registerStaticBrowserUri(z(e, t), V.parse(n)));
 	let a = typeof r == "string" ? { mimeType: r } : r;
-	return i.add(tt(new et(z(e, t), n, a))), i;
+	return i.add(qe(new Xe(z(e, t), n, a))), i;
 }
-function dr() {
-	return vr;
+function fr() {
+	return $;
 }
-function fr(e) {
-	return _r.get(e);
+function pr(e) {
+	return vr.get(e);
 }
-function pr(e, t, { path: n = "/extension", system: r = !1, readmePath: i, changelogPath: a } = {}) {
-	let o = Gt(e.publisher, e.name), s = V.from({
+function mr(e, t, { path: n = "/extension", system: r = !1, readmePath: i, changelogPath: a } = {}) {
+	let o = Wt(e.publisher, e.name), s = V.from({
 		scheme: it.extensionFile,
 		authority: o,
 		path: n
-	}), c = Fe(), l = {
+	}), c = J(), l = {
 		manifest: e,
-		type: r ? q.System : q.User,
+		type: r ? Y.System : Y.User,
 		isBuiltin: !0,
 		identifier: { id: o },
 		location: s,
-		targetPlatform: rt.WEB,
+		targetPlatform: Ye.WEB,
 		isValid: !0,
 		validations: [],
 		readmeUrl: i == null ? void 0 : V.joinPath(s, i),
 		changelogUrl: a == null ? void 0 : V.joinPath(s, a),
 		preRelease: !1
 	};
-	t != null && _r.set(o, t), !Ve && t !== X.Remote ? vr.push(l) : c = c.then(async () => {
-		let r = F.get(re), i = F.get(Vt), a = F.get(Le);
-		if (i.isEnabled(l) && a.canAddExtension(an(l, !1))) {
-			let i = F.get(ft).remoteAuthority, a = s;
-			t === X.Remote && (a = V.from({
+	t != null && vr.set(o, t), !Ze && t !== Z.Remote ? $.push(l) : c = c.then(async () => {
+		let r = F.get(re), i = F.get(Bt), a = F.get(Pe);
+		if (i.isEnabled(l) && a.canAddExtension(rn(l, !1))) {
+			let i = F.get(dt).remoteAuthority, a = s;
+			t === Z.Remote && (a = V.from({
 				scheme: A.vscodeRemote,
 				authority: i,
 				path: n
 			}));
-			let o = r.createInstance($), c = {
+			let o = r.createInstance(ar), c = {
 				devMode: !1,
 				language: w,
 				pseudo: w === "pseudo",
-				translations: hn(w) ?? {}
+				translations: mn(w) ?? {}
 			}, u = {
 				...l,
 				manifest: await o.translateManifest(a, e, c)
 			};
-			await gr({
+			await _r({
 				toAdd: [u],
 				toRemove: []
 			});
@@ -1971,48 +1971,48 @@ function pr(e, t, { path: n = "/extension", system: r = !1, readmePath: i, chang
 			await c;
 		},
 		async isEnabled() {
-			await Fe();
-			let e = F.get(Vt);
+			await J();
+			let e = F.get(Bt);
 			return await c, e.isEnabled(l);
 		},
 		async dispose() {
-			await c, vr.indexOf(l) >= 0 && vr.splice(vr.indexOf(l), 1), _r.delete(o), await gr({
+			await c, $.indexOf(l) >= 0 && $.splice($.indexOf(l), 1), vr.delete(o), await _r({
 				toAdd: [],
 				toRemove: [l]
 			});
 		}
 	};
-	if (t !== X.Remote) {
+	if (t !== Z.Remote) {
 		function e(e, t, n) {
-			return ur(s, e, t, n);
+			return dr(s, e, t, n);
 		}
 		u = {
 			...u,
 			registerFileUrl: e
 		};
 	}
-	if (t === X.LocalProcess) {
+	if (t === Z.LocalProcess) {
 		async function e() {
-			if (await c, mr == null) throw Error("The local api can't be used without registering the local extension host by importing `vscode/localExtensionHost`");
-			return await mr(o);
+			if (await c, hr == null) throw Error("The local api can't be used without registering the local extension host by importing `vscode/localExtensionHost`");
+			return await hr(o);
 		}
 		u = {
 			...u,
 			getApi: e,
 			async setAsDefaultApi() {
-				hr?.(await e());
+				gr?.(await e());
 			}
 		};
 	}
 	return u;
 }
-var mr, hr, gr, _r, vr, yr, br = e((() => {
-	J(), He(), G(), $t(), ce(), y(), Oe(), On(), pt(), K(), be(), o(), Ut(), ke(), sr(), j(), Je(), st(), yt(), xn(), mn(), gr = vt(async ({ toAdd: e, toRemove: t }) => {
-		await Fe(), await F.get(Le).deltaExtensions(e, t);
+var hr, gr, _r, vr, $, yr, br = e((() => {
+	ut(), Qe(), G(), Qt(), ce(), y(), Oe(), Dn(), ft(), K(), be(), o(), Ht(), ke(), cr(), j(), rt(), ot(), vt(), bn(), pn(), _r = _t(async ({ toAdd: e, toRemove: t }) => {
+		await J(), await F.get(Pe).deltaExtensions(e, t);
 	}, (e, t) => ({
 		toAdd: [...e.toAdd, ...t.toAdd],
 		toRemove: [...e.toRemove, ...t.toRemove]
-	}), 0), _r = /* @__PURE__ */ new Map(), vr = [], yr = _n(), yr != null && pr(yr, X.LocalWebWorker, { system: !0 });
+	}), 0), vr = /* @__PURE__ */ new Map(), $ = [], yr = gn(), yr != null && mr(yr, Z.LocalWebWorker, { system: !0 });
 }));
 //#endregion
-export { jt as $, dn as A, Gt as B, hn as C, un as D, fn as E, tn as F, zt as G, Wt as H, on as I, Bt as J, Ht as K, rn as L, pn as M, nn as N, ln as O, mn as P, Mt as Q, an as R, On as S, xn as T, $t as U, qt as V, Xt as W, Pt as X, Ut as Y, It as Z, X as _, pr as a, St as at, Sn as b, sr as c, qn as d, Ot as et, Rn as f, Pn as g, Fn as h, lr as i, Tt as it, sn as j, cn as k, nr as l, Bn as m, fr as n, Lt as nt, cr as o, Ct as ot, Ln as p, Vt as q, br as r, Et as rt, $ as s, dr as t, Dt as tt, er as u, Z as v, gn as w, Cn as x, wn as y, Y as z };
+export { At as $, un as A, Wt as B, mn as C, ln as D, dn as E, en as F, Rt as G, Ut as H, an as I, zt as J, Vt as K, nn as L, fn as M, tn as N, cn as O, pn as P, jt as Q, rn as R, Dn as S, bn as T, Qt as U, Kt as V, Yt as W, Nt as X, Ht as Y, Ft as Z, Z as _, mr as a, xt as at, xn as b, cr as c, Kn as d, Dt as et, Ln as f, Nn as g, Pn as h, ur as i, wt as it, on as j, sn as k, tr as l, zn as m, pr as n, It as nt, lr as o, St as ot, In as p, Bt as q, br as r, Tt as rt, ar as s, fr as t, Et as tt, $n as u, Q as v, hn as w, Sn as x, Cn as y, X as z };

@@ -1,5 +1,9 @@
 import * as monaco from '@codingame/monaco-vscode-editor-api';
-import {initFile} from '@codingame/monaco-vscode-files-service-override';
+import {
+    RegisteredFileSystemProvider,
+    RegisteredMemoryFile,
+    registerFileSystemOverlay,
+} from '@codingame/monaco-vscode-files-service-override';
 
 import {createGrammarLanguageService} from './grammar-language-service.js';
 import type {
@@ -9,11 +13,18 @@ import type {
 import {initializeMonacoServices} from './monaco-services.js';
 import {
     countProblems,
+    groupProblemsByPath,
     type ProblemItem,
     summarizeProblems,
     toProblemItems,
     waitForDiagnosticsQuiet,
 } from './problems.js';
+import {
+    buildFileUri,
+    validateGrammarPath,
+    type WorkspaceFile,
+    WorkspaceFileRegistry,
+} from './workspace-files.js';
 import './style.css';
 
 type DslStatus = 'draft' | 'active' | 'deprecated' | 'archived';
@@ -26,16 +37,8 @@ interface GrammarFile {
 }
 
 interface GrammarWorkspace {
-    dsl: {
-        id: number;
-        acronym: string;
-        version: string;
-        status: DslStatus;
-    };
-    permissions: {
-        canRead: boolean;
-        canEdit: boolean;
-    };
+    dsl: {id: number; acronym: string; version: string; status: DslStatus};
+    permissions: {canRead: boolean; canEdit: boolean};
     files: GrammarFile[];
     suggestedPath: string;
     suggestedContent: string;
@@ -43,9 +46,7 @@ interface GrammarWorkspace {
 
 interface JsonRpcError {
     message?: string;
-    data?: {
-        message?: string;
-    };
+    data?: {message?: string};
 }
 
 interface JsonRpcResponse<T> {
@@ -53,17 +54,22 @@ interface JsonRpcResponse<T> {
     error?: JsonRpcError;
 }
 
+interface SourceFile {
+    id?: number;
+    path: string;
+    content: string;
+    isEntry: boolean;
+    initiallyDirty?: boolean;
+}
+
+type Disposable = {dispose(): void};
+
 async function rpc<T>(url: string, params: Record<string, unknown> = {}): Promise<T> {
     const response = await fetch(url, {
         method: 'POST',
         credentials: 'same-origin',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({
-            jsonrpc: '2.0',
-            method: 'call',
-            id: Date.now(),
-            params,
-        }),
+        body: JSON.stringify({jsonrpc: '2.0', method: 'call', id: Date.now(), params}),
     });
     if (!response.ok) {
         throw new Error(`The server returned HTTP ${response.status}.`);
@@ -71,8 +77,7 @@ async function rpc<T>(url: string, params: Record<string, unknown> = {}): Promis
     const payload = await response.json() as JsonRpcResponse<T>;
     if (payload.error) {
         throw new Error(
-            payload.error.data?.message
-            || payload.error.message
+            payload.error.data?.message || payload.error.message
             || 'The grammar request failed.',
         );
     }
@@ -91,45 +96,48 @@ function requiredElement<T extends Element>(root: ParentNode, selector: string):
 }
 
 function registerLangiumLanguage(): void {
-    if (!monaco.languages.getLanguages().some((language) => language.id === 'langium')) {
-        monaco.languages.register({
-            id: 'langium',
-            extensions: ['.langium'],
-            aliases: ['Langium Grammar', 'langium'],
-        });
-        monaco.languages.setMonarchTokensProvider('langium', {
-            keywords: [
-                'grammar', 'entry', 'returns', 'infer', 'infers', 'terminal',
-                'hidden', 'fragment', 'interface', 'type', 'extends', 'import',
-                'with', 'current', 'true', 'false',
-            ],
-            tokenizer: {
-                root: [
-                    [/\/\*/, 'comment', '@comment'],
-                    [/\/\/.*$/, 'comment'],
-                    [/'([^'\\]|\\.)*'/, 'string'],
-                    [/"([^"\\]|\\.)*"/, 'string'],
-                    [/[A-Za-z_$][\w$]*/, {
-                        cases: {'@keywords': 'keyword', '@default': 'identifier'},
-                    }],
-                    [/[{}()[\]:;,.?*+|=&!<>@]/, 'delimiter'],
-                    [/\d+(?:\.\d+)?/, 'number'],
-                ],
-                comment: [
-                    [/[^/*]+/, 'comment'],
-                    [/\*\//, 'comment', '@pop'],
-                    [/[/*]/, 'comment'],
-                ],
-            },
-        });
+    if (monaco.languages.getLanguages().some((language) => language.id === 'langium')) {
+        return;
     }
+    monaco.languages.register({
+        id: 'langium',
+        extensions: ['.langium'],
+        aliases: ['Langium Grammar', 'langium'],
+    });
+    monaco.languages.setMonarchTokensProvider('langium', {
+        keywords: [
+            'grammar', 'entry', 'returns', 'infer', 'infers', 'terminal',
+            'hidden', 'fragment', 'interface', 'type', 'extends', 'import',
+            'with', 'current', 'true', 'false',
+        ],
+        tokenizer: {
+            root: [
+                [/\/\*/, 'comment', '@comment'],
+                [/\/\/.*$/, 'comment'],
+                [/'([^'\\]|\\.)*'/, 'string'],
+                [/"([^"\\]|\\.)*"/, 'string'],
+                [/[A-Za-z_$][\w$]*/, {
+                    cases: {'@keywords': 'keyword', '@default': 'identifier'},
+                }],
+                [/[{}()[\]:;,.?*+|=&!<>@]/, 'delimiter'],
+                [/\d+(?:\.\d+)?/, 'number'],
+            ],
+            comment: [
+                [/[^/*]+/, 'comment'],
+                [/\*\//, 'comment', '@pop'],
+                [/[/*]/, 'comment'],
+            ],
+        },
+    });
 }
 
 type ValidityState = 'not-validated' | 'validating' | 'valid' | 'invalid';
 
-class GrammarEditorApp {
+export class GrammarEditorApp {
     private readonly dslId: number;
     private readonly editorHost: HTMLElement;
+    private readonly filesHost: HTMLElement;
+    private readonly createButton: HTMLButtonElement | null;
     private readonly saveButton: HTMLButtonElement | null;
     private readonly validateButton: HTMLButtonElement;
     private readonly restartButton: HTMLButtonElement;
@@ -140,13 +148,18 @@ class GrammarEditorApp {
     private readonly filename: HTMLElement;
     private readonly problemsSummary: HTMLElement;
     private readonly problemsList: HTMLElement;
+    private readonly files = new WorkspaceFileRegistry<monaco.editor.ITextModel>();
+    private readonly viewStates = new Map<string, monaco.editor.ICodeEditorViewState | null>();
+    private readonly modelListeners = new Map<string, Disposable>();
+    private readonly fileNodes = new Map<string, RegisteredMemoryFile>();
+    private readonly fileRegistrations = new Map<string, Disposable>();
+    private readonly fileProvider = new RegisteredFileSystemProvider(false);
     private editor?: monaco.editor.IStandaloneCodeEditor;
-    private model?: monaco.editor.ITextModel;
     private languageService?: LanguageServiceLifecycle;
-    private fileId?: number;
-    private path = '';
+    private overlayRegistration?: Disposable;
+    private markerListener?: Disposable;
+    private activePath = '';
     private canEdit = false;
-    private dirty = false;
     private saving = false;
     private validating = false;
     private validatedClean = false;
@@ -154,8 +167,6 @@ class GrammarEditorApp {
     private disposed = false;
     private problems: ProblemItem[] = [];
     private lastActivityAt = Date.now();
-    private changeListener?: monaco.IDisposable;
-    private markerListener?: monaco.IDisposable;
 
     constructor(private readonly root: HTMLElement) {
         this.dslId = Number(root.dataset.dslId);
@@ -163,8 +174,9 @@ class GrammarEditorApp {
             throw new Error('The Grammar Editor has an invalid DSL identifier.');
         }
         this.editorHost = requiredElement(root, '[data-grammar-editor]');
-        // The Save button is intentionally absent in read-only presentation.
-        this.saveButton = root.querySelector<HTMLButtonElement>('[data-grammar-save]');
+        this.filesHost = requiredElement(root, '[data-grammar-files]');
+        this.createButton = root.querySelector('[data-grammar-file-create]');
+        this.saveButton = root.querySelector('[data-grammar-save]');
         this.validateButton = requiredElement(root, '[data-grammar-validate]');
         this.restartButton = requiredElement(root, '[data-grammar-server-restart]');
         this.status = requiredElement(root, '[data-grammar-status]');
@@ -182,53 +194,46 @@ class GrammarEditorApp {
         this.saveButton?.addEventListener('click', this.onSaveClick);
         this.validateButton.addEventListener('click', this.onValidateClick);
         this.restartButton.addEventListener('click', this.onRestartClick);
+        this.createButton?.addEventListener('click', this.onCreateClick);
+        this.filesHost.addEventListener('click', this.onFilesClick);
         this.problemsList.addEventListener('click', this.onProblemsClick);
         this.problemsList.addEventListener('keydown', this.onProblemsKeydown);
         window.addEventListener('beforeunload', this.onBeforeUnload);
         window.addEventListener('pagehide', this.onPageHide);
 
         try {
-            const workspace = await rpc<GrammarWorkspace>(
-                `/dsl/${this.dslId}/grammar/load`,
-            );
-            const file = workspace.files[0];
-            const path = file?.path || workspace.suggestedPath;
-            const uri = monaco.Uri.parse(
-                `file:///itlingo-dsl/${this.dslId}/${encodeURIComponent(path)}`,
-            );
-            // Files must be seeded before the VS Code services initialize.
-            // After initialization, the file service becomes immutable.
-            await initFile(uri, this.initialContent(workspace));
+            const workspace = await rpc<GrammarWorkspace>(`/dsl/${this.dslId}/grammar/load`);
+            this.canEdit = workspace.permissions.canEdit;
+            const sources: SourceFile[] = workspace.files.length
+                ? workspace.files
+                : this.canEdit ? [{
+                    path: workspace.suggestedPath,
+                    content: workspace.suggestedContent,
+                    isEntry: true,
+                    initiallyDirty: true,
+                }] : [];
+
+            // The overlay is installed before Monaco's services initialize, but
+            // unlike initFile it remains mutable for later create/rename/delete.
+            this.overlayRegistration = registerFileSystemOverlay(1, this.fileProvider);
+            for (const source of sources) {
+                this.registerOverlayFile(source.path, source.content);
+            }
             await initializeMonacoServices();
-            this.mount(workspace, uri);
+            this.mount(sources);
         } catch (error) {
             this.fail(error, 'Could not load the grammar editor.');
         }
     }
 
-    private initialContent(workspace: GrammarWorkspace): string {
-        const file = workspace.files[0];
-        if (file) {
-            return file.content;
-        }
-        // A new grammar starts from the server's minimal valid starter
-        // instead of an empty, invalid document.
-        return workspace.permissions.canEdit ? workspace.suggestedContent : '';
-    }
-
-    private mount(workspace: GrammarWorkspace, uri: monaco.Uri): void {
-        const file = workspace.files[0];
-        this.canEdit = workspace.permissions.canEdit;
-        this.fileId = file?.id;
-        this.path = file?.path || workspace.suggestedPath;
-        this.filename.textContent = this.path;
-
+    private mount(sources: SourceFile[]): void {
         registerLangiumLanguage();
-        this.model = monaco.editor.createModel(
-            this.initialContent(workspace), 'langium', uri,
-        );
+        for (const source of sources) {
+            this.addModel(source);
+        }
+        const initial = sources.find((source) => source.isEntry) || sources[0];
         this.editor = monaco.editor.create(this.editorHost, {
-            model: this.model,
+            model: initial ? this.files.get(initial.path)?.model : null,
             automaticLayout: true,
             readOnly: !this.canEdit,
             domReadOnly: !this.canEdit,
@@ -242,19 +247,12 @@ class GrammarEditorApp {
         this.editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyS, () => {
             void this.save();
         });
-        this.changeListener = this.model.onDidChangeContent(() => {
-            this.lastActivityAt = Date.now();
-            this.validatedClean = false;
-            this.refreshValidity();
-            if (this.canEdit) {
-                this.dirty = true;
-                if (!this.saving) {
-                    this.setState('Unsaved changes');
-                }
-            }
-        });
+        if (initial) {
+            this.activePath = initial.path;
+        }
         this.markerListener = monaco.editor.onDidChangeMarkers((resources) => {
-            if (resources.some((resource) => resource.toString() === this.model?.uri.toString())) {
+            const uris = new Set(this.files.sorted().map((file) => file.model.uri.toString()));
+            if (resources.some((resource) => uris.has(resource.toString()))) {
                 this.lastActivityAt = Date.now();
                 this.updateDiagnosticMetadata();
             }
@@ -270,16 +268,323 @@ class GrammarEditorApp {
             this.fail(error, 'The Langium grammar service failed to start.', 'server');
         });
 
-        if (!this.canEdit) {
-            this.setState('Read-only');
-        } else if (file) {
-            this.setState('Saved');
-        } else {
-            this.dirty = true;
-            this.setState('Unsaved changes');
-        }
+        this.renderFiles();
         this.updateDiagnosticMetadata();
+        this.refreshSaveState();
         this.editor.focus();
+    }
+
+    private addModel(source: SourceFile): WorkspaceFile<monaco.editor.ITextModel> {
+        const uri = monaco.Uri.parse(buildFileUri(this.dslId, source.path));
+        const model = monaco.editor.createModel(source.content, 'langium', uri);
+        const version = model.getAlternativeVersionId();
+        const file = this.files.add({
+            id: source.id,
+            path: source.path,
+            isEntry: source.isEntry,
+            model,
+            savedVersionId: source.initiallyDirty ? version - 1 : version,
+            dirty: Boolean(source.initiallyDirty),
+        });
+        this.attachModelListener(file);
+        return file;
+    }
+
+    private attachModelListener(file: WorkspaceFile<monaco.editor.ITextModel>): void {
+        this.modelListeners.set(file.path, file.model.onDidChangeContent(() => {
+            this.lastActivityAt = Date.now();
+            this.validatedClean = false;
+            this.files.refreshDirty(file.path);
+            const node = this.fileNodes.get(file.path);
+            if (node) {
+                void node.write(new TextEncoder().encode(file.model.getValue()));
+            }
+            this.refreshValidity();
+            this.refreshSaveState();
+            this.renderFiles();
+        }));
+    }
+
+    private registerOverlayFile(path: string, content: string): void {
+        const uri = monaco.Uri.parse(buildFileUri(this.dslId, path));
+        const node = new RegisteredMemoryFile(uri, content);
+        this.fileNodes.set(path, node);
+        this.fileRegistrations.set(path, this.fileProvider.registerFile(node));
+    }
+
+    private unregisterOverlayFile(path: string): void {
+        this.fileRegistrations.get(path)?.dispose();
+        this.fileRegistrations.delete(path);
+        this.fileNodes.delete(path);
+    }
+
+    private switchTo(path: string, focus = true): void {
+        const file = this.files.get(path);
+        if (!file || !this.editor || path === this.activePath) {
+            if (focus) {
+                this.editor?.focus();
+            }
+            return;
+        }
+        if (this.activePath) {
+            this.viewStates.set(this.activePath, this.editor.saveViewState());
+        }
+        this.activePath = path;
+        this.editor.setModel(file.model);
+        this.editor.restoreViewState(this.viewStates.get(path) || null);
+        this.filename.textContent = path;
+        this.root.dataset.grammarActiveFile = path;
+        this.renderFiles();
+        if (focus) {
+            this.editor.focus();
+        }
+    }
+
+    private renderFiles(): void {
+        const fileErrors = this.fileErrorCounts();
+        this.root.dataset.grammarFileErrors = JSON.stringify(fileErrors);
+        const nodes = this.files.sorted().map((file) => {
+            const row = document.createElement('div');
+            row.className = 'itlingo-grammar-file-row';
+            row.classList.toggle('active', file.path === this.activePath);
+            row.dataset.grammarFilePath = file.path;
+
+            const select = document.createElement('button');
+            select.type = 'button';
+            select.className = 'itlingo-grammar-file-select';
+            select.dataset.grammarFileSelect = file.path;
+            select.title = file.path;
+
+            const icon = document.createElement('i');
+            icon.className = file.isEntry ? 'fa fa-star text-warning' : 'fa fa-file-code-o';
+            icon.setAttribute('aria-hidden', 'true');
+            const label = document.createElement('span');
+            label.className = 'itlingo-grammar-file-label';
+            label.textContent = file.path;
+            select.append(icon, label);
+            if (file.dirty) {
+                const dirty = document.createElement('span');
+                dirty.className = 'itlingo-grammar-file-dirty';
+                dirty.title = 'Unsaved changes';
+                dirty.textContent = '●';
+                select.append(dirty);
+            }
+            const errorCount = fileErrors[file.path] || 0;
+            if (errorCount) {
+                const errors = document.createElement('span');
+                errors.className = 'badge rounded-pill bg-danger';
+                errors.dataset.grammarFileErrorCount = String(errorCount);
+                errors.textContent = String(errorCount);
+                select.append(errors);
+            }
+            row.append(select);
+
+            if (this.canEdit && file.id) {
+                const actions = document.createElement('div');
+                actions.className = 'itlingo-grammar-file-actions';
+                if (!file.isEntry) {
+                    actions.append(this.fileAction('star', 'Set as entry file', 'set-entry', file.path));
+                }
+                actions.append(
+                    this.fileAction('pencil', 'Rename file', 'rename', file.path),
+                    this.fileAction('trash', 'Delete file', 'delete', file.path),
+                );
+                row.append(actions);
+            }
+            return row;
+        });
+        this.filesHost.replaceChildren(...nodes);
+        this.filesHost.classList.toggle('itlingo-grammar-files-empty', nodes.length === 0);
+        if (!nodes.length) {
+            this.filesHost.textContent = this.canEdit
+                ? 'No grammar files. Create one to begin.'
+                : 'This DSL has no grammar files.';
+        }
+        const active = this.files.get(this.activePath);
+        this.filename.textContent = active?.path || 'No grammar file selected';
+        this.root.dataset.grammarActiveFile = active?.path || '';
+    }
+
+    private fileAction(icon: string, title: string, action: string, path: string): HTMLButtonElement {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'btn btn-sm btn-link';
+        button.dataset.grammarFileAction = action;
+        button.dataset.grammarFilePath = path;
+        button.title = title;
+        button.setAttribute('aria-label', `${title}: ${path}`);
+        const symbol = document.createElement('i');
+        symbol.className = `fa fa-${icon}`;
+        symbol.setAttribute('aria-hidden', 'true');
+        button.append(symbol);
+        return button;
+    }
+
+    private fileErrorCounts(): Record<string, number> {
+        const counts: Record<string, number> = {};
+        for (const problem of this.problems) {
+            if (problem.severity === 'error') {
+                counts[problem.path] = (counts[problem.path] || 0) + 1;
+            }
+        }
+        return counts;
+    }
+
+    private readonly onFilesClick = (event: Event): void => {
+        const target = event.target as HTMLElement;
+        const action = target.closest<HTMLElement>('[data-grammar-file-action]');
+        if (action) {
+            const path = action.dataset.grammarFilePath || '';
+            const name = action.dataset.grammarFileAction;
+            if (name === 'rename') {
+                void this.renameFile(path);
+            } else if (name === 'delete') {
+                void this.deleteFile(path);
+            } else if (name === 'set-entry') {
+                void this.setEntry(path);
+            }
+            return;
+        }
+        const select = target.closest<HTMLElement>('[data-grammar-file-select]');
+        if (select?.dataset.grammarFileSelect) {
+            this.switchTo(select.dataset.grammarFileSelect);
+        }
+    };
+
+    private readonly onCreateClick = (): void => {
+        const value = window.prompt('Relative path for the new .langium file:');
+        if (value !== null) {
+            void this.createFile(value);
+        }
+    };
+
+    private async createFile(value: string): Promise<void> {
+        try {
+            const path = validateGrammarPath(value);
+            this.hideError();
+            const created = await rpc<GrammarFile>(
+                `/dsl/${this.dslId}/grammar/file/create`, {path, content: ''},
+            );
+            this.registerOverlayFile(created.path, created.content);
+            this.addModel(created);
+            this.switchTo(created.path);
+            this.renderFiles();
+            this.refreshSaveState();
+        } catch (error) {
+            this.fail(error, 'Could not create the grammar file.', 'file');
+        }
+    }
+
+    private async renameFile(oldPath: string): Promise<void> {
+        const file = this.files.get(oldPath);
+        if (!file?.id) {
+            return;
+        }
+        const value = window.prompt('New relative .langium path:', oldPath);
+        if (value === null) {
+            return;
+        }
+        try {
+            const newPath = validateGrammarPath(value);
+            if (newPath === oldPath) {
+                return;
+            }
+            this.hideError();
+            const renamed = await rpc<GrammarFile>(
+                `/dsl/${this.dslId}/grammar/file/rename`,
+                {file_id: file.id, path: newPath},
+            );
+            const content = file.model.getValue();
+            const wasActive = this.activePath === oldPath;
+            if (wasActive && this.editor) {
+                this.viewStates.set(oldPath, this.editor.saveViewState());
+            }
+            this.registerOverlayFile(newPath, content);
+            const model = monaco.editor.createModel(
+                content, 'langium', monaco.Uri.parse(buildFileUri(this.dslId, newPath)),
+            );
+            const migrated = this.files.rename(oldPath, newPath, model);
+            migrated.id = renamed.id;
+            migrated.isEntry = renamed.isEntry;
+            this.modelListeners.get(oldPath)?.dispose();
+            this.modelListeners.delete(oldPath);
+            this.attachModelListener(migrated);
+            const oldViewState = this.viewStates.get(oldPath) || null;
+            this.viewStates.delete(oldPath);
+            this.viewStates.set(newPath, oldViewState);
+            if (wasActive && this.editor) {
+                this.activePath = newPath;
+                this.editor.setModel(model);
+                this.editor.restoreViewState(oldViewState);
+            }
+            file.model.dispose();
+            this.unregisterOverlayFile(oldPath);
+            this.renderFiles();
+            this.updateDiagnosticMetadata();
+            this.refreshSaveState();
+        } catch (error) {
+            this.fail(error, 'Could not rename the grammar file.', 'file');
+        }
+    }
+
+    private async deleteFile(path: string): Promise<void> {
+        const file = this.files.get(path);
+        if (!file?.id || !window.confirm(`Delete ${path}?`)) {
+            return;
+        }
+        try {
+            this.hideError();
+            await rpc(`/dsl/${this.dslId}/grammar/file/delete`, {file_id: file.id});
+            const wasActive = this.activePath === path;
+            this.modelListeners.get(path)?.dispose();
+            this.modelListeners.delete(path);
+            this.files.delete(path);
+            this.viewStates.delete(path);
+            this.unregisterOverlayFile(path);
+            if (wasActive) {
+                const next = this.files.sorted()[0];
+                this.activePath = next?.path || '';
+                this.editor?.setModel(next?.model || null);
+            }
+            file.model.dispose();
+            this.renderFiles();
+            this.updateDiagnosticMetadata();
+            this.refreshSaveState();
+        } catch (error) {
+            this.fail(error, 'Could not delete the grammar file.', 'file');
+        }
+    }
+
+    private async setEntry(path: string): Promise<void> {
+        const file = this.files.get(path);
+        if (!file?.id) {
+            return;
+        }
+        try {
+            this.hideError();
+            const result = await rpc<{files: GrammarFile[]}>(
+                `/dsl/${this.dslId}/grammar/file/set-entry`, {file_id: file.id},
+            );
+            for (const payload of result.files) {
+                const current = this.files.get(payload.path);
+                if (current) {
+                    current.isEntry = payload.isEntry;
+                }
+            }
+            this.renderFiles();
+        } catch (error) {
+            this.fail(error, 'Could not change the entry grammar.', 'file');
+        }
+    }
+
+    /** Programmatic edit hook used by browser integration tests and extensions. */
+    setFileContent(path: string, content: string): void {
+        const file = this.files.get(path);
+        if (!file) {
+            throw new Error(`Grammar file '${path}' is not registered.`);
+        }
+        file.model.setValue(content);
+        this.switchTo(path, false);
     }
 
     private readonly onLanguageServiceState = (change: LanguageServiceStateChange): void => {
@@ -288,17 +593,14 @@ class GrammarEditorApp {
         this.serverReady = change.state === 'ready';
         this.updateValidateButton();
         const labels = {
-            starting: 'Server: Starting…',
-            ready: 'Server: Ready',
-            failed: 'Server: Failed',
-            stopped: 'Server: Stopped',
+            starting: 'Server: Starting…', ready: 'Server: Ready',
+            failed: 'Server: Failed', stopped: 'Server: Stopped',
         } as const;
         this.serverStatus.textContent = labels[change.state];
         this.serverStatus.classList.toggle('text-success', change.state === 'ready');
         this.serverStatus.classList.toggle('text-danger', change.state === 'failed');
         this.serverStatus.classList.toggle(
-            'text-muted',
-            change.state !== 'ready' && change.state !== 'failed',
+            'text-muted', change.state !== 'ready' && change.state !== 'failed',
         );
         this.restartButton.disabled = change.state === 'starting' || change.state === 'stopped';
         if (change.state === 'ready' && this.root.dataset.grammarErrorKind === 'server') {
@@ -313,33 +615,28 @@ class GrammarEditorApp {
         this.restartButton.disabled = true;
         this.clearDiagnosticMarkers();
         void this.languageService.restart().catch((error) => {
-            this.fail(
-                error,
-                'The Langium grammar service could not be restarted.',
-                'server',
-            );
+            this.fail(error, 'The Langium grammar service could not be restarted.', 'server');
         });
     };
 
     private clearDiagnosticMarkers(): void {
-        if (!this.model) {
-            return;
-        }
-        const owners = new Set(
-            monaco.editor.getModelMarkers({resource: this.model.uri})
-                .map((marker) => marker.owner),
-        );
-        for (const owner of owners) {
-            monaco.editor.setModelMarkers(this.model, owner, []);
+        for (const file of this.files.sorted()) {
+            const owners = new Set(
+                monaco.editor.getModelMarkers({resource: file.model.uri})
+                    .map((marker) => marker.owner),
+            );
+            for (const owner of owners) {
+                monaco.editor.setModelMarkers(file.model, owner, []);
+            }
         }
         this.updateDiagnosticMetadata();
     }
 
     private updateDiagnosticMetadata(): void {
-        const markers = this.model
-            ? monaco.editor.getModelMarkers({resource: this.model.uri})
-            : [];
-        this.problems = toProblemItems(markers);
+        this.problems = this.files.sorted().flatMap((file) => toProblemItems(
+            monaco.editor.getModelMarkers({resource: file.model.uri}),
+            {resource: file.model.uri.toString(), path: file.path},
+        ));
         const counts = countProblems(this.problems);
         this.root.dataset.grammarDiagnostics = String(counts.total);
         this.root.dataset.grammarDiagnosticErrors = String(counts.errors);
@@ -348,46 +645,50 @@ class GrammarEditorApp {
             this.problems.map((problem) => problem.message),
         );
         this.renderProblems();
+        this.renderFiles();
         this.refreshValidity();
     }
 
     private renderProblems(): void {
         const counts = countProblems(this.problems);
         this.problemsSummary.textContent = `Problems: ${summarizeProblems(counts)}`;
-        this.problemsList.replaceChildren(...this.problems.map((problem, index) => {
-            const item = document.createElement('button');
-            item.type = 'button';
-            item.className = `itlingo-grammar-problem itlingo-grammar-problem-${problem.severity}`;
-            item.setAttribute('role', 'listitem');
-            item.dataset.grammarProblemIndex = String(index);
-            item.setAttribute(
-                'aria-label',
-                `${problem.severity} at line ${problem.startLineNumber}, `
-                + `column ${problem.startColumn}: ${problem.message}`,
-            );
-
-            const severity = document.createElement('span');
-            severity.className = 'itlingo-grammar-problem-severity';
-            severity.textContent = problem.severity;
-
-            const message = document.createElement('span');
-            message.className = 'itlingo-grammar-problem-message';
-            message.textContent = problem.message;
-
-            const origin = document.createElement('span');
-            origin.className = 'itlingo-grammar-problem-origin text-muted';
-            origin.textContent = [
-                problem.source,
-                problem.code ? `(${problem.code})` : '',
-            ].filter(Boolean).join(' ');
-
-            const position = document.createElement('span');
-            position.className = 'itlingo-grammar-problem-position text-muted';
-            position.textContent = `Ln ${problem.startLineNumber}, Col ${problem.startColumn}`;
-
-            item.append(severity, message, origin, position);
-            return item;
-        }));
+        const nodes: HTMLElement[] = [];
+        let problemIndex = 0;
+        for (const [path, problems] of groupProblemsByPath(this.problems)) {
+            const heading = document.createElement('div');
+            heading.className = 'itlingo-grammar-problem-file';
+            heading.textContent = path;
+            nodes.push(heading);
+            for (const problem of problems) {
+                const index = problemIndex++;
+                const item = document.createElement('button');
+                item.type = 'button';
+                item.className = `itlingo-grammar-problem itlingo-grammar-problem-${problem.severity}`;
+                item.setAttribute('role', 'listitem');
+                item.dataset.grammarProblemIndex = String(index);
+                item.setAttribute(
+                    'aria-label', `${problem.severity} in ${path} at line `
+                    + `${problem.startLineNumber}, column ${problem.startColumn}: ${problem.message}`,
+                );
+                const severity = document.createElement('span');
+                severity.className = 'itlingo-grammar-problem-severity';
+                severity.textContent = problem.severity;
+                const message = document.createElement('span');
+                message.className = 'itlingo-grammar-problem-message';
+                message.textContent = problem.message;
+                const origin = document.createElement('span');
+                origin.className = 'itlingo-grammar-problem-origin text-muted';
+                origin.textContent = [
+                    problem.source, problem.code ? `(${problem.code})` : '',
+                ].filter(Boolean).join(' ');
+                const position = document.createElement('span');
+                position.className = 'itlingo-grammar-problem-position text-muted';
+                position.textContent = `Ln ${problem.startLineNumber}, Col ${problem.startColumn}`;
+                item.append(severity, message, origin, position);
+                nodes.push(item);
+            }
+        }
+        this.problemsList.replaceChildren(...nodes);
     }
 
     private readonly onProblemsClick = (event: Event): void => {
@@ -399,8 +700,7 @@ class GrammarEditorApp {
     };
 
     private readonly onProblemsKeydown = (event: KeyboardEvent): void => {
-        const keys = ['ArrowDown', 'ArrowUp', 'Home', 'End'];
-        if (!keys.includes(event.key)) {
+        if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) {
             return;
         }
         const items = Array.from(this.problemsList
@@ -422,11 +722,10 @@ class GrammarEditorApp {
         if (!problem || !this.editor) {
             return;
         }
+        this.switchTo(problem.path, false);
         const range = new monaco.Range(
-            problem.startLineNumber,
-            problem.startColumn,
-            problem.endLineNumber,
-            problem.endColumn,
+            problem.startLineNumber, problem.startColumn,
+            problem.endLineNumber, problem.endColumn,
         );
         this.editor.setSelection(range);
         this.editor.revealRangeInCenterIfOutsideViewport(range);
@@ -434,24 +733,18 @@ class GrammarEditorApp {
         this.root.dataset.grammarFocusedProblem = String(index);
     }
 
-    private readonly onSaveClick = (): void => {
-        void this.save();
-    };
-
-    private readonly onValidateClick = (): void => {
-        void this.validate();
-    };
+    private readonly onSaveClick = (): void => { void this.save(); };
+    private readonly onValidateClick = (): void => { void this.validate(); };
 
     private async validate(): Promise<void> {
-        if (this.validating || !this.model) {
+        if (this.validating || this.files.sorted().length === 0) {
             return;
         }
         if (!this.serverReady) {
             this.fail(
-                new Error('The language service is not ready. Wait for '
-                    + '"Server: Ready" or restart the language service.'),
-                'Validation is unavailable.',
-                'validate',
+                new Error('The language service is not ready. Wait for "Server: Ready" '
+                    + 'or restart the language service.'),
+                'Validation is unavailable.', 'validate',
             );
             return;
         }
@@ -459,12 +752,8 @@ class GrammarEditorApp {
         this.setValidity('validating', 'Validating…');
         this.updateValidateButton();
         try {
-            // Diagnostics are pushed by the language server after document
-            // synchronization; wait until content and marker activity settle
-            // so the result describes the current source.
             const settled = await waitForDiagnosticsQuiet(
-                () => this.lastActivityAt,
-                {quietMs: 600, timeoutMs: 15000},
+                () => this.lastActivityAt, {quietMs: 600, timeoutMs: 15000},
             );
             if (this.disposed) {
                 return;
@@ -473,20 +762,17 @@ class GrammarEditorApp {
                 this.setValidity('not-validated', 'Not validated');
                 this.fail(
                     new Error('Validation timed out while waiting for diagnostics.'),
-                    'Validation timed out.',
-                    'validate',
+                    'Validation timed out.', 'validate',
                 );
                 return;
             }
             this.updateDiagnosticMetadata();
             const counts = countProblems(this.problems);
-            if (counts.errors === 0) {
-                this.validatedClean = true;
-                this.setValidity('valid', 'Valid');
-            } else {
-                this.validatedClean = false;
-                this.setValidity('invalid', summarizeProblems(counts));
-            }
+            this.validatedClean = counts.errors === 0;
+            this.setValidity(
+                counts.errors === 0 ? 'valid' : 'invalid',
+                counts.errors === 0 ? 'Valid' : summarizeProblems(counts),
+            );
             if (this.root.dataset.grammarErrorKind === 'validate') {
                 this.hideError();
             }
@@ -501,9 +787,7 @@ class GrammarEditorApp {
         this.validity.textContent = label;
         this.validity.classList.toggle('text-success', state === 'valid');
         this.validity.classList.toggle('text-danger', state === 'invalid');
-        this.validity.classList.toggle(
-            'text-muted', state !== 'valid' && state !== 'invalid',
-        );
+        this.validity.classList.toggle('text-muted', state !== 'valid' && state !== 'invalid');
     }
 
     private refreshValidity(): void {
@@ -522,56 +806,72 @@ class GrammarEditorApp {
     }
 
     private updateValidateButton(): void {
-        this.validateButton.disabled = this.validating || !this.serverReady;
+        this.validateButton.disabled = this.validating || !this.serverReady
+            || this.files.sorted().length === 0;
     }
 
     private async save(): Promise<void> {
-        if (!this.canEdit || !this.model || this.saving || !this.dirty) {
+        if (!this.canEdit || this.saving || !this.files.hasDirty()) {
             return;
         }
         this.saving = true;
-        const savingVersion = this.model.getAlternativeVersionId();
         this.hideError();
-        this.setState('Saving…');
+        const dirtyFiles = this.files.sorted().filter((file) => file.dirty);
         try {
-            const saved = await rpc<GrammarFile>(
-                `/dsl/${this.dslId}/grammar/save`,
-                {
-                    file_id: this.fileId || false,
-                    path: this.path,
-                    content: this.model.getValue(),
-                },
-            );
-            this.fileId = saved.id;
-            this.path = saved.path;
-            this.filename.textContent = saved.path;
-            if (this.model.getAlternativeVersionId() === savingVersion) {
-                this.dirty = false;
-                this.setState('Saved');
-            } else {
-                this.dirty = true;
-                this.setState('Unsaved changes');
+            for (const [index, file] of dirtyFiles.entries()) {
+                const savingVersion = file.model.getAlternativeVersionId();
+                this.setState(`Saving ${index + 1}/${dirtyFiles.length}…`);
+                const saved = await rpc<GrammarFile>(
+                    `/dsl/${this.dslId}/grammar/save`,
+                    {
+                        file_id: file.id || false,
+                        path: file.path,
+                        content: file.model.getValue(),
+                    },
+                );
+                file.id = saved.id;
+                file.isEntry = saved.isEntry;
+                if (file.model.getAlternativeVersionId() === savingVersion) {
+                    this.files.markSaved(file.path, savingVersion);
+                } else {
+                    this.files.refreshDirty(file.path);
+                }
+                this.renderFiles();
             }
         } catch (error) {
-            this.dirty = true;
             this.fail(error, 'Save failed.', 'save');
-            this.setState('Save failed');
         } finally {
             this.saving = false;
-            this.updateSaveButton();
+            this.refreshSaveState();
         }
+    }
+
+    private refreshSaveState(): void {
+        const dirtyCount = this.files.sorted().filter((file) => file.dirty).length;
+        this.root.dataset.grammarDirtyFiles = String(dirtyCount);
+        if (!this.saving) {
+            if (!this.canEdit) {
+                this.setState('Read-only');
+            } else if (dirtyCount) {
+                this.setState(dirtyCount === 1 ? 'Unsaved changes' : `${dirtyCount} unsaved files`);
+            } else {
+                this.setState('Saved');
+            }
+        }
+        this.updateSaveButton();
     }
 
     private setState(label: string): void {
         this.status.textContent = label;
-        this.status.classList.toggle('text-danger', label === 'Save failed');
-        this.status.classList.toggle('text-muted', label !== 'Save failed');
+        const failed = label === 'Save failed';
+        this.status.classList.toggle('text-danger', failed);
+        this.status.classList.toggle('text-muted', !failed);
         this.updateSaveButton();
     }
 
     private updateSaveButton(): void {
         if (this.saveButton) {
-            this.saveButton.disabled = !this.canEdit || !this.dirty || this.saving;
+            this.saveButton.disabled = !this.canEdit || !this.files.hasDirty() || this.saving;
         }
     }
 
@@ -592,15 +892,13 @@ class GrammarEditorApp {
     }
 
     private readonly onBeforeUnload = (event: BeforeUnloadEvent): void => {
-        if (this.dirty) {
+        if (this.files.hasDirty()) {
             event.preventDefault();
             event.returnValue = '';
         }
     };
 
-    private readonly onPageHide = (): void => {
-        this.dispose();
-    };
+    private readonly onPageHide = (): void => { this.dispose(); };
 
     private dispose(): void {
         if (this.disposed) {
@@ -612,18 +910,29 @@ class GrammarEditorApp {
         this.saveButton?.removeEventListener('click', this.onSaveClick);
         this.validateButton.removeEventListener('click', this.onValidateClick);
         this.restartButton.removeEventListener('click', this.onRestartClick);
+        this.createButton?.removeEventListener('click', this.onCreateClick);
+        this.filesHost.removeEventListener('click', this.onFilesClick);
         this.problemsList.removeEventListener('click', this.onProblemsClick);
         this.problemsList.removeEventListener('keydown', this.onProblemsKeydown);
-        this.changeListener?.dispose();
+        for (const listener of this.modelListeners.values()) {
+            listener.dispose();
+        }
         this.markerListener?.dispose();
         void this.languageService?.dispose();
         this.editor?.dispose();
-        this.model?.dispose();
+        for (const file of this.files.sorted()) {
+            file.model.dispose();
+        }
+        for (const registration of this.fileRegistrations.values()) {
+            registration.dispose();
+        }
+        this.overlayRegistration?.dispose();
+        this.fileProvider.dispose();
     }
 }
 
 const root = document.querySelector<HTMLElement>('#itlingo-grammar-editor');
-if (root) {
-    const app = new GrammarEditorApp(root);
-    void app.start();
+export const grammarEditorApp = root ? new GrammarEditorApp(root) : undefined;
+if (grammarEditorApp) {
+    void grammarEditorApp.start();
 }

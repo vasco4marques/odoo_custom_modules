@@ -2,19 +2,19 @@ import { n as e, r as t } from "./rolldown-runtime-B1bRi_D7.js";
 import { $ as n, $A as r, $M as i, $O as a, $a as o, $c as s, $f as c, $g as l, $k as u, $o as d, $p as f, $v as p, $y as m, AA as h, AC as ee, AE as te, A_ as ne, Ab as g, Ac as re, Ai as ie, Al as ae, Ap as oe, Ar as se, Aw as ce, Ay as le, BM as ue, BS as de, BT as fe, B_ as pe, Bb as _, Bc as me, Bd as he, Bi as ge, Bk as _e, Bl as ve, Bo as ye, Bp as be, Br as xe, Bx as Se, By as v, C as Ce, CA as we, CD as Te, CM as Ee, CN as De, CO as Oe, CT as ke, Ca as Ae, Cb as je, Cc as Me, Cd as Ne, Cg as Pe, Ck as Fe, Cl as Ie, Co as Le, Cp as Re, Cr as ze, Ct as Be, Cv as Ve, Cy as He, DM as Ue, DO as y, DT as We, Da as Ge, Db as Ke, Dj as b, Dl as qe, Ds as Je, Dt as Ye, Dv as Xe, Dw as Ze, E as Qe, EA as $e, EO as et, ET as tt, Ea as nt, Eb as rt, Ec as it, Ei as at, Ej as x, El as ot, Em as st, Ev as ct, Ex as lt, Ey as ut, F as dt, FM as ft, FO as pt, Fa as mt, Fb as ht, Fd as gt, Fj as _t, Fk as vt, Fn as yt, Fo as bt, Fr as xt, Fw as St, Fx as Ct, GA as wt, GD as S, GO as Tt, GS as Et, Ga as Dt, Gb as Ot, Gc as kt, Gk as At, Gl as jt, Gm as Mt, Go as Nt, Gp as Pt, Gr as Ft, Gw as It, Gy as Lt, HD as Rt, HE as zt, HM as Bt, HO as Vt, HT as Ht, Ha as Ut, Hk as Wt, Ho as Gt, Hv as Kt, Hx as qt, Hy as Jt, IA as Yt, IC as Xt, ID as Zt, IO as Qt, IT as $t, Ib as en, Ik as tn, In as nn, Io as rn, Ir as an, Is as on, It as sn, Iv as cn, Ix as ln, JD as un, JO as dn, JT as fn, Ja as pn, Jb as mn, Jl as hn, Jm as gn, Jo as _n, Jr as vn, Jy as yn, K as bn, KA as xn, KE as Sn, KO as Cn, K_ as wn, Ka as Tn, Kb as En, Kd as Dn, Kg as On, Kh as kn, Kj as An, Kk as jn, Km as Mn, Ko as Nn, Kp as Pn, Kr as Fn, Kw as In, Kx as Ln, LO as Rn, LT as zn, Lb as C, Lc as Bn, Ld as Vn, Lj as Hn, Lk as Un, Lo as Wn, Lp as Gn, Lr as Kn, Lv as qn, Lw as Jn, Lx as Yn, MA as Xn, MC as Zn, MD as Qn, MO as $n, MT as er, Mb as tr, Md as nr, Mg as rr, Mh as ir, Mi as ar, Mk as w, Ml as or, Mp as sr, Mr as cr, My as lr, NC as ur, NO as dr, NT as fr, Na as pr, Nb as mr, Ni as hr, Nk as gr, Nl as _r, Nn as vr, No as yr, Np as br, Nr as xr, Ns as Sr, Nt as Cr, Ny as wr, OA as Tr, OD as Er, OM as Dr, ON as Or, OO as kr, OS as Ar, Oa as jr, Ob as T, Og as Mr, Ok as Nr, Ol as Pr, Om as Fr, Oo as Ir, Op as Lr, Os as Rr, Ot as zr, Ow as Br, Oy as E, PA as Vr, PC as Hr, PM as Ur, PO as Wr, Pa as Gr, Pb as Kr, Pk as qr, Pl as Jr, Pm as Yr, Pn as Xr, Po as Zr, Pr as Qr, Pt as $r, Pv as ei, Px as ti, Py as ni, Q as ri, QS as ii, QT as ai, Qa as oi, Qb as si, Qc as ci, Qh as li, Qk as ui, Ql as di, Qp as fi, Qw as pi, Qx as mi, Qy as hi, RA as gi, RC as _i, RM as vi, Rc as yi, Rg as bi, Rk as xi, Rm as Si, Ro as Ci, Rr as wi, Rw as Ti, Ry as D, SA as Ei, SD as Di, SE as Oi, SO as ki, SS as Ai, Sa as ji, Sb as Mi, Sg as Ni, Sl as Pi, Sm as Fi, So as Ii, St as Li, Sy as Ri, T as zi, TA as O, TD as Bi, TE as Vi, TT as Hi, Ta as Ui, Tb as Wi, Tc as Gi, Tg as Ki, Tj as k, Tl as qi, Tr as Ji, Tx as Yi, Ty as Xi, UA as Zi, UD as A, UE as Qi, UO as $i, US as ea, UT as ta, U_ as na, Ua as ra, Ud as ia, Ug as aa, Uj as oa, Uk as sa, Uo as ca, Ut as la, Uv as ua, Uw as da, VE as fa, VS as pa, V_ as ma, Vb as ha, Vc as ga, Vd as _a, Vg as va, Vo as j, Vp as ya, Vv as ba, Vx as xa, Vy as Sa, W as Ca, WC as wa, WE as Ta, WM as Ea, WO as Da, WS as Oa, W_ as ka, Wa as Aa, Wc as ja, Wd as Ma, Wj as Na, Wk as Pa, Wo as Fa, Wt as Ia, Ww as La, Wx as Ra, Wy as za, X as Ba, XE as Va, XO as Ha, Xb as Ua, Xc as Wa, Xf as Ga, Xg as Ka, Xj as qa, Xo as Ja, Xp as M, Xr as Ya, Xv as Xa, Xy as Za, YD as Qa, YE as $a, YS as eo, Yb as to, Yc as no, Yf as ro, Yi as io, Yr as ao, Yy as oo, Z as so, ZS as co, ZT as lo, Za as uo, Zb as fo, Zc as po, Zg as mo, Zj as ho, Zl as go, Zr as _o, Zv as vo, Zy as yo, _A as N, _D as bo, _S as xo, _b as So, _c as Co, _j as wo, _l as To, _o as Eo, _p as Do, _r as Oo, _v as ko, a as Ao, aC as jo, aD as Mo, aO as No, ab as Po, al as Fo, ap as Io, av as Lo, ax as Ro, b as zo, bA as Bo, bE as Vo, bM as Ho, bT as Uo, b_ as Wo, ba as Go, bb as Ko, bj as qo, bl as Jo, bo as Yo, bp as Xo, br as Zo, bv as Qo, bx as $o, by as es, c as ts, cD as P, cE as ns, cb as F, cc as rs, cd as is, cg as as, ci as os, cl as ss, cp as cs, cs as ls, cw as us, cy as ds, d as fs, dA as ps, dD as ms, dE as hs, dN as gs, db as _s, dd as vs, dg as ys, di as bs, dj as xs, dm as Ss, dr as Cs, dv as ws, dw as Ts, dy as Es, eA as Ds, eE as Os, eM as ks, eN as As, eO as js, eT as Ms, e_ as I, eb as L, ec as Ns, ej as Ps, em as Fs, eo as Is, et as Ls, ex as Rs, ey as zs, f as Bs, fA as Vs, fE as Hs, fN as Us, fS as Ws, fT as Gs, fa as Ks, fb as qs, fd as Js, fl as Ys, fm as Xs, fp as Zs, fr as Qs, fs as $s, fv as ec, fy as tc, gD as nc, gM as rc, gb as ic, gc as ac, gi as oc, gj as sc, gk as cc, gl as lc, go as uc, gr as dc, gs as fc, gv as pc, gw as mc, gx as hc, gy as gc, hA as _c, hD as vc, hS as yc, hb as bc, hc as xc, hg as Sc, hi as Cc, hj as wc, hm as Tc, ho as Ec, hr as Dc, hs as Oc, hv as kc, hx as Ac, hy as jc, iC as Mc, iE as Nc, iM as Pc, iO as Fc, iT as Ic, ia as Lc, ib as Rc, ih as zc, ii as Bc, ij as Vc, ik as Hc, il as Uc, in as Wc, iu as Gc, iy as Kc, jA as qc, jD as Jc, jb as Yc, jc as Xc, jd as Zc, ji as Qc, jk as $c, jl as el, jp as tl, jr as nl, jt as rl, jw as il, jy as al, kC as ol, kD as sl, kO as cl, kT as ll, ka as ul, kb as R, kc as dl, kh as fl, kk as pl, kl as ml, kr as hl, kw as gl, ky as _l, l as vl, lA as yl, lM as bl, lN as xl, lb as Sl, lh as Cl, lj as wl, lk as Tl, ll as El, lp as Dl, ls as Ol, lu as kl, lv as Al, lx as jl, ly as Ml, m as Nl, mA as z, mD as B, mN as Pl, mT as Fl, mb as Il, mc as Ll, mi as Rl, mk as zl, mm as Bl, mo as Vl, ms as Hl, mu as Ul, mw as Wl, my as Gl, n as Kl, nA as V, nM as ql, nT as Jl, nb as Yl, ng as Xl, ni as Zl, nk as Ql, no as $l, nr as eu, nv as tu, o as nu, oD as ru, oE as iu, oN as au, oS as ou, oT as su, o_ as cu, ob as lu, oc as uu, od as du, og as fu, ok as pu, ol as mu, om as hu, op as gu, or as _u, os as vu, ot as yu, ov as bu, ow as xu, ox as Su, oy as Cu, p as wu, pD as Tu, pE as Eu, pN as Du, pT as Ou, pa as ku, pb as Au, pi as ju, pj as Mu, pm as Nu, pr as Pu, pu as Fu, pw as Iu, q as Lu, qD as Ru, qM as zu, qS as Bu, qa as Vu, qc as Hu, qd as Uu, qg as Wu, qi as Gu, qj as Ku, qm as qu, qo as Ju, qp as Yu, qr as Xu, r as Zu, rC as Qu, rD as $u, rM as ed, rO as H, rS as td, rT as nd, ra as rd, rb as id, rh as ad, rl as od, rs as sd, rv as cd, ry as ld, s as ud, sA as dd, sD as fd, sE as pd, sM as md, sS as hd, s_ as gd, sb as U, sg as _d, si as vd, sj as yd, sk as bd, sl as xd, sm as Sd, sn as Cd, sp as wd, sr as Td, sv as Ed, sw as Dd, tA as W, tT as Od, t_ as kd, tb as G, tj as Ad, tk as jd, tl as Md, tm as Nd, to as Pd, tr as Fd, ts as Id, tt as Ld, tx as Rd, u as zd, uA as Bd, uC as Vd, uD as Hd, uE as Ud, uS as Wd, ub as Gd, ug as Kd, uj as qd, uk as Jd, ur as Yd, us as Xd, uu as Zd, ux as Qd, vA as $d, vD as K, vM as ef, v_ as tf, vb as nf, vc as rf, vg as af, vk as of, vl as sf, vr as cf, vs as lf, vx as uf, w as df, wC as ff, wD as pf, wE as mf, wO as hf, wS as gf, wT as _f, wb as vf, wc as yf, wd as bf, wk as xf, wl as Sf, wt as Cf, wy as wf, xD as Tf, xE as Ef, xO as Df, xS as Of, xb as kf, xk as Af, xl as jf, xm as Mf, xo as Nf, xr as Pf, xv as Ff, xx as If, xy as Lf, y as Rf, yA as zf, yD as Bf, yO as Vf, yc as Hf, yh as Uf, yj as Wf, yl as Gf, yo as Kf, yp as qf, yr as Jf, yx as Yf, yy as Xf, zA as Zf, zD as Qf, zT as $f, zb as q, zc as ep, zg as tp, zi as np, zj as rp, zm as ip, zo as ap, zv as op, zw as sp, zx as cp, zy as lp } from "./standaloneServices-C51B94Xh.js";
 import { $ as up, $n as dp, A as fp, Ar as pp, C as mp, Ci as hp, D as gp, Di as _p, Dr as vp, E as yp, Ei as bp, F as xp, Fa as Sp, Hi as J, Hr as Cp, I as wp, Ii as Tp, J as Ep, Ja as Dp, Ji as Op, Jn as kp, L as Ap, Li as jp, M as Mp, N as Np, O as Pp, Oi as Fp, Or as Ip, P as Lp, Pa as Rp, Q as zp, Qi as Bp, Qn as Vp, R as Hp, Ri as Up, S as Wp, Sa as Gp, Si as Kp, T as qp, Ui as Jp, Vi as Yp, Vr as Xp, W as Zp, X as Qp, Xi as $p, Xn as em, Ya as tm, Yi as nm, Yn as rm, Z as im, Zi as am, Zr as om, _a as sm, _i as cm, aa as lm, at as um, ba as dm, bi as fm, ca as pm, co as mm, cr as hm, da as gm, di as _m, do as vm, dr as ym, ei as bm, er as xm, et as Sm, fa as Cm, fr as wm, ga as Tm, gi as Em, ha as Dm, ia as Om, ir as km, it as Am, j as jm, k as Mm, ki as Nm, kr as Pm, la as Fm, lo as Im, m as Lm, ma as Rm, mr as zm, na as Bm, ni as Vm, nr as Hm, nt as Um, oa as Wm, or as Gm, p as Km, pa as qm, pr as Jm, qa as Ym, qn as Xm, qr as Zm, ra as Qm, ri as $m, rr as eh, rt as th, sa as nh, sr as rh, ta as ih, ti as ah, tr as oh, tt as sh, ua as ch, uo as lh, vi as uh, w as dh, xa as fh, xi as ph, yi as mh, z as hh, zi as gh } from "./editorResolverService-CZFxBDpH.js";
 import { n as _h, t as vh } from "./webWorkerDescriptor-D8gBO8t7.js";
-import { $S as yh, $b as bh, $f as xh, $h as Sh, $p as Ch, $v as wh, $x as Th, $y as Eh, AS as Dh, A_ as Oh, Ab as kh, Af as Ah, Ag as jh, Ah as Mh, Am as Nh, Av as Ph, Ax as Fh, Ay as Ih, Bb as Lh, Bf as Rh, Bg as zh, Bh, Bm as Vh, Bp as Hh, Bv as Uh, Bx as Wh, By as Gh, CC as Kh, CS as qh, C_ as Jh, Cb as Yh, Cg as Xh, Ch as Zh, Cm as Qh, Cp as $h, Cv as eg, Cx as tg, Cy as ng, DC as rg, DS as ig, D_ as ag, Db as og, Df as sg, Dg as cg, Dh as lg, Dm as ug, Dv as dg, Dx as fg, Dy as pg, EC as mg, ES as hg, E_ as gg, Eb as _g, Ef as vg, Eg as yg, Eh as bg, Em as xg, Ev as Sg, Ex as Cg, Ey as wg, FS as Tg, F_ as Eg, Fb as Dg, Ff as Og, Fg as kg, Fh as Ag, Fm as jg, Fp as Mg, Fv as Ng, Fy as Pg, Gb as Fg, Gf as Ig, Gg as Lg, Gm as Rg, Gp as zg, Gv as Bg, Gx as Vg, Gy as Hg, H as Ug, H_ as Wg, Hb as Gg, Hf as Kg, Hg as qg, Hh as Jg, Hm as Yg, Hp as Xg, Hv as Zg, Hx as Qg, Hy as $g, I as e_, IS as t_, Ib as n_, If as r_, Ig as i_, Ih as a_, Im as o_, Ip as s_, Iv as c_, Ix as l_, Iy as u_, JS as d_, Jb as f_, Jf as p_, Jp as m_, Jv as h_, Jx as g_, Jy as __, KS as v_, Kb as y_, Kf as b_, Km as x_, Kp as S_, Kv as C_, Kx as w_, Ky as T_, LS as E_, Lb as D_, Lf as O_, Lg as k_, Lh as A_, Lm as j_, Lp as M_, Lv as N_, Lx as P_, Ly as F_, MS as I_, M_ as L_, Mb as R_, Mf as z_, Mg as B_, Mh as V_, Mm as H_, Mp as U_, Mv as W_, Mx as G_, My as K_, NS as q_, N_ as J_, Nb as Y_, Nf as X_, Ng as Z_, Nh as Q_, Nm as $_, Np as ev, Nv as tv, Ny as nv, OC as rv, OS as iv, O_ as av, Ob as ov, Of as sv, Og as cv, Oh as lv, Om as uv, Ov as dv, Ox as fv, Oy as pv, PS as mv, P_ as hv, Pb as gv, Pf as _v, Pg as vv, Ph as yv, Pm as bv, Pp as xv, Pv as Sv, Px as Cv, Py as wv, QS as Tv, Qb as Ev, Qf as Dv, Qg as Ov, Qh as kv, Qp as Av, Qv as jv, Qx as Mv, Qy as Nv, Rb as Pv, Rf as Fv, Rg as Iv, Rh as Lv, Rm as Rv, Rp as zv, Rv as Bv, Rx as Vv, Ry as Hv, SS as Uv, S_ as Wv, Sb as Gv, Sg as Kv, Sh as qv, Sm as Jv, Sp as Yv, Sv as Xv, Sy as Zv, TC as Qv, TS as $v, T_ as ey, Tb as ty, Tg as ny, Th as ry, Tm as iy, Tv as ay, Tx as oy, Ty as sy, Ub as cy, Uf as ly, Uh as uy, Um as dy, Up as fy, Uv as py, Ux as my, Uy as hy, Vb as gy, Vf as _y, Vg as vy, Vh as yy, Vm as by, Vp as xy, Vv as Sy, Vx as Cy, Vy as wy, W as Ty, Wb as Ey, Wf as Dy, Wg as Oy, Wm as ky, Wp as Ay, Wv as jy, Wx as My, Wy as Ny, XS as Py, Xb as Fy, Xf as Iy, Xh as Ly, Xp as Ry, Xv as zy, Xx as By, Xy as Vy, YS as Hy, Yb as Uy, Yf as Wy, Yh as Gy, Yp as Ky, Yv as qy, Yx as Jy, Yy, ZS as Xy, Zb as Zy, Zf as Qy, Zh as $y, Zp as eb, Zu as tb, Zv as nb, Zx as rb, Zy as ib, _C as ab, _S as ob, __ as sb, _b as cb, _h as lb, _m as ub, _p as db, _v as fb, _y as pb, aC as mb, aS as hb, ab as gb, ah as _b, am as vb, ap as yb, ax as bb, ay as xb, bC as Sb, bS as Cb, b_ as wb, bb as Tb, bf as Eb, bg as Db, bh as Ob, bm as kb, bp as Ab, bv as jb, by as Mb, c as Nb, cC as Pb, cS as Fb, c_ as Ib, cb as Lb, cg as Rb, ch as zb, cm as Bb, cp as Vb, cx as Hb, cy as Ub, dC as Wb, dS as Gb, d_ as Kb, db as qb, dg as Jb, dm as Yb, dp as Xb, dv as Zb, dx as Qb, dy as $b, eS as ex, eb as tx, eg as nx, em as rx, ep as ix, ex as ax, ey as ox, fC as sx, fS as cx, f_ as lx, fb as ux, ff as dx, fg as fx, fp as px, fv as mx, fx as hx, fy as gx, gC as _x, gS as vx, g_ as yx, gb as bx, gg as xx, gh as Sx, gm as Cx, gp as wx, gv as Tx, gy as Ex, hC as Dx, hS as Ox, h_ as kx, hb as Ax, hg as jx, hh as Mx, hm as Nx, hp as Px, hv as Fx, hx as Ix, hy as Lx, iC as Rx, iS as zx, i_ as Bx, ib as Vx, ig as Hx, im as Ux, ip as Wx, ix as Gx, iy as Kx, jS as qx, j_ as Jx, jb as Yx, jf as Xx, jg as Zx, jh as Qx, jm as $x, jv as eS, jx as tS, jy as nS, kS as rS, k_ as iS, kb as aS, kf as oS, kg as sS, kh as cS, km as lS, kp as uS, kv as dS, kx as fS, ky as pS, lS as mS, lb as hS, lg as gS, lh as _S, lm as vS, lp as yS, lx as bS, ly as xS, mC as SS, mS as CS, m_ as wS, mb as TS, mg as ES, mh as DS, mm as OS, mp as kS, mv as AS, mx as jS, my as MS, n as NS, nC as PS, nS as FS, n_ as IS, nb as LS, ng as RS, nh as zS, nm as BS, np as VS, nx as HS, ny as US, oC as WS, oS as GS, o_ as KS, ob as qS, og as JS, oh as YS, om as XS, op as ZS, ox as QS, oy as $S, pC as eC, pS as tC, p_ as nC, pb as rC, pg as iC, ph as aC, pm as oC, pp as sC, pv as cC, px as lC, py as uC, qS as dC, q_ as fC, qb as pC, qf as mC, qp as hC, qv as gC, qx as _C, qy as vC, rC as yC, rS as bC, rb as xC, rg as SC, rm as CC, rp as wC, rx as TC, ry as EC, s as DC, sC as OC, sS as kC, s_ as AC, sb as jC, sg as MC, sh as NC, sm as PC, sp as FC, sx as IC, sy as LC, t as RC, tC as zC, tS as BC, t_ as VC, tb as HC, tg as UC, th as WC, tm as GC, tp as KC, tx as qC, ty as JC, uC as YC, uS as XC, u_ as ZC, ub as QC, uf as $C, ug as ew, uh as tw, um as nw, up as rw, uy as iw, vC as aw, vS as ow, v_ as sw, vb as cw, vg as lw, vh as uw, vm as dw, vp as fw, vv as pw, vy as mw, wC as hw, wS as gw, w_ as _w, wb as vw, wf as yw, wg as bw, wh as xw, wm as Sw, wv as Cw, wx as ww, wy as Tw, xS as Ew, x_ as Dw, xb as Ow, xg as kw, xh as Aw, xm as jw, xp as Mw, xv as Nw, xy as Pw, yC as Fw, yS as Iw, y_ as Lw, yb as Rw, yf as zw, yg as Bw, yh as Vw, ym as Hw, yp as Uw, yv as Ww, yy as Gw, zS as Kw, zb as qw, zf as Jw, zg as Yw, zh as Xw, zm as Zw, zp as Qw, zv as $w, zx as eT, zy as tT } from "./monaco-vscode-extensions-service-override-B4FJQig8.js";
+import { $S as yh, $b as bh, $f as xh, $h as Sh, $p as Ch, $v as wh, $x as Th, $y as Eh, AS as Dh, A_ as Oh, Ab as kh, Af as Ah, Ag as jh, Ah as Mh, Am as Nh, Av as Ph, Ax as Fh, Ay as Ih, Bb as Lh, Bf as Rh, Bg as zh, Bh, Bm as Vh, Bp as Hh, Bv as Uh, Bx as Wh, By as Gh, CC as Kh, CS as qh, C_ as Jh, Cb as Yh, Cg as Xh, Ch as Zh, Cm as Qh, Cp as $h, Cv as eg, Cx as tg, Cy as ng, DC as rg, DS as ig, D_ as ag, Db as og, Df as sg, Dg as cg, Dh as lg, Dm as ug, Dv as dg, Dx as fg, Dy as pg, EC as mg, ES as hg, E_ as gg, Eb as _g, Ef as vg, Eg as yg, Eh as bg, Em as xg, Ev as Sg, Ex as Cg, Ey as wg, FS as Tg, F_ as Eg, Fb as Dg, Ff as Og, Fg as kg, Fh as Ag, Fm as jg, Fp as Mg, Fv as Ng, Fy as Pg, Gb as Fg, Gf as Ig, Gg as Lg, Gm as Rg, Gp as zg, Gv as Bg, Gx as Vg, Gy as Hg, H as Ug, H_ as Wg, Hb as Gg, Hf as Kg, Hg as qg, Hh as Jg, Hm as Yg, Hp as Xg, Hv as Zg, Hx as Qg, Hy as $g, I as e_, IS as t_, Ib as n_, If as r_, Ig as i_, Ih as a_, Im as o_, Ip as s_, Iv as c_, Ix as l_, Iy as u_, JS as d_, Jb as f_, Jf as p_, Jp as m_, Jv as h_, Jx as g_, Jy as __, KS as v_, Kb as y_, Kf as b_, Km as x_, Kp as S_, Kv as C_, Kx as w_, Ky as T_, LS as E_, Lb as D_, Lf as O_, Lg as k_, Lh as A_, Lm as j_, Lp as M_, Lv as N_, Lx as P_, Ly as F_, MS as I_, M_ as L_, Mb as R_, Mf as z_, Mg as B_, Mh as V_, Mm as H_, Mp as U_, Mv as W_, Mx as G_, My as K_, NS as q_, N_ as J_, Nb as Y_, Nf as X_, Ng as Z_, Nh as Q_, Nm as $_, Np as ev, Nv as tv, Ny as nv, OC as rv, OS as iv, O_ as av, Ob as ov, Of as sv, Og as cv, Oh as lv, Om as uv, Ov as dv, Ox as fv, Oy as pv, PS as mv, P_ as hv, Pb as gv, Pf as _v, Pg as vv, Ph as yv, Pm as bv, Pp as xv, Pv as Sv, Px as Cv, Py as wv, QS as Tv, Qb as Ev, Qf as Dv, Qg as Ov, Qh as kv, Qp as Av, Qv as jv, Qx as Mv, Qy as Nv, Rb as Pv, Rf as Fv, Rg as Iv, Rh as Lv, Rm as Rv, Rp as zv, Rv as Bv, Rx as Vv, Ry as Hv, SS as Uv, S_ as Wv, Sb as Gv, Sg as Kv, Sh as qv, Sm as Jv, Sp as Yv, Sv as Xv, Sy as Zv, TC as Qv, TS as $v, T_ as ey, Tb as ty, Tg as ny, Th as ry, Tm as iy, Tv as ay, Tx as oy, Ty as sy, Ub as cy, Uf as ly, Uh as uy, Um as dy, Up as fy, Uv as py, Ux as my, Uy as hy, Vb as gy, Vf as _y, Vg as vy, Vh as yy, Vm as by, Vp as xy, Vv as Sy, Vx as Cy, Vy as wy, W as Ty, Wb as Ey, Wf as Dy, Wg as Oy, Wm as ky, Wp as Ay, Wv as jy, Wx as My, Wy as Ny, XS as Py, Xb as Fy, Xf as Iy, Xh as Ly, Xp as Ry, Xv as zy, Xx as By, Xy as Vy, YS as Hy, Yb as Uy, Yf as Wy, Yh as Gy, Yp as Ky, Yv as qy, Yx as Jy, Yy, ZS as Xy, Zb as Zy, Zf as Qy, Zh as $y, Zp as eb, Zu as tb, Zv as nb, Zx as rb, Zy as ib, _C as ab, _S as ob, __ as sb, _b as cb, _h as lb, _m as ub, _p as db, _v as fb, _y as pb, aC as mb, aS as hb, ab as gb, ah as _b, am as vb, ap as yb, ax as bb, ay as xb, bC as Sb, bS as Cb, b_ as wb, bb as Tb, bf as Eb, bg as Db, bh as Ob, bm as kb, bp as Ab, bv as jb, by as Mb, c as Nb, cC as Pb, cS as Fb, c_ as Ib, cb as Lb, cg as Rb, ch as zb, cm as Bb, cp as Vb, cx as Hb, cy as Ub, dC as Wb, dS as Gb, d_ as Kb, db as qb, dg as Jb, dm as Yb, dp as Xb, dv as Zb, dx as Qb, dy as $b, eS as ex, eb as tx, eg as nx, em as rx, ep as ix, ex as ax, ey as ox, fC as sx, fS as cx, f_ as lx, fb as ux, ff as dx, fg as fx, fp as px, fv as mx, fx as hx, fy as gx, gC as _x, gS as vx, g_ as yx, gb as bx, gg as xx, gh as Sx, gm as Cx, gp as wx, gv as Tx, gy as Ex, hC as Dx, hS as Ox, h_ as kx, hb as Ax, hg as jx, hh as Mx, hm as Nx, hp as Px, hv as Fx, hx as Ix, hy as Lx, iC as Rx, iS as zx, i_ as Bx, ib as Vx, ig as Hx, im as Ux, ip as Wx, ix as Gx, iy as Kx, jS as qx, j_ as Jx, jb as Yx, jf as Xx, jg as Zx, jh as Qx, jm as $x, jv as eS, jx as tS, jy as nS, kS as rS, k_ as iS, kb as aS, kf as oS, kg as sS, kh as cS, km as lS, kp as uS, kv as dS, kx as fS, ky as pS, lS as mS, lb as hS, lg as gS, lh as _S, lm as vS, lp as yS, lx as bS, ly as xS, mC as SS, mS as CS, m_ as wS, mb as TS, mg as ES, mh as DS, mm as OS, mp as kS, mv as AS, mx as jS, my as MS, n as NS, nC as PS, nS as FS, n_ as IS, nb as LS, ng as RS, nh as zS, nm as BS, np as VS, nx as HS, ny as US, oC as WS, oS as GS, o_ as KS, ob as qS, og as JS, oh as YS, om as XS, op as ZS, ox as QS, oy as $S, pC as eC, pS as tC, p_ as nC, pb as rC, pg as iC, ph as aC, pm as oC, pp as sC, pv as cC, px as lC, py as uC, qS as dC, q_ as fC, qb as pC, qf as mC, qp as hC, qv as gC, qx as _C, qy as vC, rC as yC, rS as bC, rb as xC, rg as SC, rm as CC, rp as wC, rx as TC, ry as EC, s as DC, sC as OC, sS as kC, s_ as AC, sb as jC, sg as MC, sh as NC, sm as PC, sp as FC, sx as IC, sy as LC, t as RC, tC as zC, tS as BC, t_ as VC, tb as HC, tg as UC, th as WC, tm as GC, tp as KC, tx as qC, ty as JC, uC as YC, uS as XC, u_ as ZC, ub as QC, uf as $C, ug as ew, uh as tw, um as nw, up as rw, uy as iw, vC as aw, vS as ow, v_ as sw, vb as cw, vg as lw, vh as uw, vm as dw, vp as fw, vv as pw, vy as mw, wC as hw, wS as gw, w_ as _w, wb as vw, wf as yw, wg as bw, wh as xw, wm as Sw, wv as Cw, wx as ww, wy as Tw, xS as Ew, x_ as Dw, xb as Ow, xg as kw, xh as Aw, xm as jw, xp as Mw, xv as Nw, xy as Pw, yC as Fw, yS as Iw, y_ as Lw, yb as Rw, yf as zw, yg as Bw, yh as Vw, ym as Hw, yp as Uw, yv as Ww, yy as Gw, zS as Kw, zb as qw, zf as Jw, zg as Yw, zh as Xw, zm as Zw, zp as Qw, zv as $w, zx as eT, zy as tT } from "./monaco-vscode-extensions-service-override-CcXiXb-p.js";
 import { a as nT, i as rT } from "./platformObservableUtils-D83yluRC.js";
 import { a as iT, c as aT, i as oT, l as sT, n as cT, o as lT, r as uT, s as dT, t as fT } from "./editorBrowser-Bcg0bJo7.js";
 import { C as pT, O as mT, _ as hT, b as gT, v as _T, y as vT } from "./files-iACwD_Ow.js";
-import { $ as yT, A as bT, B as xT, C as ST, Cn as CT, Ct as wT, D as TT, Dn as ET, Dt as DT, E as OT, En as kT, Et as AT, Fn as jT, Gt as MT, Ht as NT, I as Y, J as PT, K as FT, L as IT, Ln as LT, M as RT, Mt as zT, N as BT, On as VT, Ot as HT, P as UT, Q as WT, R as GT, Rn as KT, Rt as qT, Sn as JT, Sr as YT, Tn as XT, Tt as ZT, U as QT, Un as $T, Ut as eE, W as tE, Wt as nE, Z as rE, Zn as iE, _t as aE, a as oE, at as sE, b as cE, br as lE, bt as uE, dn as dE, dr as fE, et as pE, fr as mE, gr as hE, gt as gE, ir as _E, it as vE, j as yE, jt as bE, k as xE, lr as SE, mt as CE, nt as wE, ot as TE, pt as EE, q as DE, r as OE, rt as kE, st as AE, tt as jE, un as ME, ur as NE, vt as PE, wt as FE, x as IE, xn as LE, yn as RE, yt as zE, z as BE, zn as VE } from "./monaco-vscode-files-service-override-BUohVD35.js";
+import { A as yT, An as bT, At as xT, B as ST, Bn as CT, C as wT, Cr as TT, Ct as ET, Dt as DT, E as OT, En as kT, Et as AT, F as jT, Ft as MT, Gt as NT, H as PT, Hn as FT, I as IT, Jt as LT, K as RT, Kn as zT, Kt as BT, L as VT, M as HT, N as UT, On as WT, Ot as GT, P as KT, Pt as qT, Rn as JT, Sn as YT, St as XT, Tn as ZT, Tr as QT, U as $T, V as eE, Vn as tE, Vt as nE, X as rE, Y as iE, Z as aE, _t as oE, a as sE, at as cE, bt as lE, ct as uE, er as dE, et as fE, fr as pE, gt as mE, hr as hE, it as gE, jn as _E, jt as vE, k as yE, kn as bE, kt as xE, lt as SE, mn as CE, mr as wE, nt as TE, ot as EE, pn as DE, pr as OE, q as kE, qt as AE, rt as jE, s as ME, sr as NE, st as PE, tt as FE, ut as IE, w as LE, wn as RE, xt as zE, yr as BE, yt as VE, z as Y } from "./monaco-vscode-files-service-override-DGMr6mGW.js";
 import { $t as HE, A as UE, B as WE, C as GE, Ct as KE, D as qE, E as JE, Ft as YE, Gt as XE, H as ZE, I as QE, L as $E, Lt as eD, M as tD, N as nD, O as rD, Ot as iD, P as aD, R as oD, S as sD, T as cD, U as lD, V as uD, Vt as dD, W as fD, Yt as pD, Z as mD, _ as hD, at as gD, b as _D, bt as vD, ct as yD, dt as bD, ft as xD, gn as SD, it as CD, j as wD, jt as TD, k as ED, kt as DD, ln as OD, pt as kD, q as AD, qt as jD, st as MD, ut as ND, v as PD, w as FD, wt as ID, x as LD, y as RD, yt as zD, z as BD } from "./filesConfigurationService-CxZOIrXS.js";
 import { a as VD, i as HD, n as UD, o as WD, r as GD, t as KD } from "./languageStatusService.service-dYnhaUee.js";
 import { a as qD, i as JD, n as YD, o as XD, r as ZD, t as QD } from "./extensionManagement.service-ELKOh9mo.js";
-import { C as $D, F as eO, G as tO, J as nO, K as rO, L as iO, M as aO, P as oO, T as sO, X as cO, Y as lO, at as uO, nt as dO, ot as fO, q as pO, w as mO } from "./extensions-DnX2FbG_.js";
+import { C as $D, F as eO, G as tO, J as nO, K as rO, L as iO, M as aO, P as oO, T as sO, X as cO, Y as lO, at as uO, nt as dO, ot as fO, q as pO, w as mO } from "./extensions-MEu2nHmY.js";
 import { a as hO, i as X, o as gO, t as _O } from "./tools-CGs0ihXi.js";
 import { c as vO, d as yO, f as bO, i as xO, l as SO, n as CO, o as wO, s as Z, t as TO, u as EO } from "./environmentService.service-DtlNbSmC.js";
 import { i as DO, n as OO, r as kO, t as AO } from "./hostColorSchemeService.service-D8IIB8tu.js";
-import { a as jO, i as MO, n as NO, t as PO } from "./extensionFeatures-Dnpt_iIx.js";
+import { a as jO, i as MO, n as NO, t as PO } from "./extensionFeatures-CMMcwnLr.js";
 import { i as FO, n as IO, r as LO } from "./semanticTokensConfig-DMlN5Qxc.js";
 import "./workbenchThemeService.service-Cz3TFQno.js";
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/editor/common/standalone/standaloneEnums.js
@@ -1440,9 +1440,9 @@ var VA = class e {
 		a.length === 1 && e._isFullModelReplaceEdit(t, a[0]) ? t.executeEdits("formatEditsCommand", a.map((e) => ru.replace(B.lift(e.range), e.text))) : t.executeEdits("formatEditsCommand", a.map((e) => ru.replaceMove(B.lift(e.range), e.text))), r && t.pushUndoStop(), i.restoreRelativeVerticalPositionOfCursor(t);
 	}
 };
-YT(), Ur(), $c(), gs(), Bf(), bo(), vc(), Tu(), hE(), nT(), Za();
+QT(), Ur(), $c(), gs(), Bf(), bo(), vc(), Tu(), BE(), nT(), Za();
 function HA(e, t, n) {
-	let r = [], i = new fE(), a = e.ordered(n);
+	let r = [], i = new wE(), a = e.ordered(n);
 	for (let e of a) r.push(e), e.extensionId && i.add(e.extensionId);
 	let o = t.ordered(n);
 	for (let e of o) {
@@ -2440,7 +2440,7 @@ var uj, dj = e((() => {
 })), yM, bM = e((() => {
 	_(), yM = q("IIgnoredExtensionsManagementService");
 })), xM, SM, CM, wM, TM, EM, DM = e((() => {
-	Ur(), An(), k(), qT(), (function(e) {
+	Ur(), An(), k(), nE(), (function(e) {
 		e.Settings = "settings", e.Keybindings = "keybindings", e.Snippets = "snippets", e.Prompts = "prompts", e.Tasks = "tasks", e.Mcp = "mcp", e.Extensions = "extensions", e.GlobalState = "globalState", e.Profiles = "profiles", e.WorkspaceState = "workspaceState";
 	})(xM ||= {}), xM.Settings, xM.Keybindings, xM.Snippets, xM.Prompts, xM.Tasks, xM.Extensions, xM.GlobalState, xM.Profiles, xM.Mcp, (function(e) {
 		e.Unauthorized = "Unauthorized", e.Forbidden = "Forbidden", e.NotFound = "NotFound", e.MethodNotFound = "MethodNotFound", e.Conflict = "Conflict", e.Gone = "Gone", e.PreconditionFailed = "PreconditionFailed", e.TooLarge = "TooLarge", e.UpgradeRequired = "UpgradeRequired", e.PreconditionRequired = "PreconditionRequired", e.TooManyRequests = "RemoteTooManyRequests", e.TooManyRequestsAndRetryAfter = "TooManyRequestsAndRetryAfter", e.RequestFailed = "RequestFailed", e.RequestCanceled = "RequestCanceled", e.RequestTimeout = "RequestTimeout", e.RequestProtocolNotSupported = "RequestProtocolNotSupported", e.RequestPathNotEscaped = "RequestPathNotEscaped", e.RequestHeadersNotObject = "RequestHeadersNotObject", e.NoCollection = "NoCollection", e.NoRef = "NoRef", e.EmptyResponse = "EmptyResponse", e.TurnedOff = "TurnedOff", e.SessionExpired = "SessionExpired", e.ServiceChanged = "ServiceChanged", e.DefaultServiceChanged = "DefaultServiceChanged", e.LocalTooManyProfiles = "LocalTooManyProfiles", e.LocalTooManyRequests = "LocalTooManyRequests", e.LocalPreconditionFailed = "LocalPreconditionFailed", e.LocalInvalidContent = "LocalInvalidContent", e.LocalError = "LocalError", e.IncompatibleLocalContent = "IncompatibleLocalContent", e.IncompatibleRemoteContent = "IncompatibleRemoteContent", e.Unknown = "Unknown";
@@ -2745,7 +2745,7 @@ function Q(e, t, n) {
 	}) : n.value == null ? n.get != null && (n.get = r) : n.value = r;
 }
 var zF, BF, VF, HF, UF, WF, GF, KF, qF, JF, YF, XF, ZF, QF, $F, eI, tI, nI, rI, iI, aI, oI, sI, cI, lI, uI, dI, fI, pI, mI, hI, gI, _I, vI, yI, bI, xI, SI, CI, wI, TI, EI, DI, OI, kI, AI, jI, MI, NI, PI, FI, II, LI, RI, zI, BI, VI, HI, UI, WI, GI, KI, qI, JI, YI, XI, ZI, QI, $I, eL, tL, nL, rL, iL, aL, oL, sL, cL, lL, uL, dL, fL, pL, mL, hL, gL, _L, vL, yL, bL, xL, SL, CL, wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, UL, WL, GL, KL, qL, JL, YL, XL, ZL, QL, $L, eR, tR, nR, rR, iR, aR, oR, sR, cR, lR, uR, dR, fR, pR, mR, hR, gR, _R, vR, yR, bR, xR, SR, CR, wR, TR, ER, DR, OR, kR, AR, jR, MR, NR, PR, FR, IR, LR, RR, zR, BR, VR, HR, UR, WR, GR, KR, qR, JR, YR, XR, ZR, QR, $R, ez, tz, nz, rz, iz, az, oz, sz, cz, lz, uz, dz, fz, pz, mz, hz, gz, _z, vz, yz, bz, xz, Sz, Cz, wz, Tz, Ez, Dz, Oz, kz, Az, jz, Mz, Nz, Pz, Fz, Iz, Lz, Rz, zz, Bz, Vz, Hz, Uz, Wz, Gz, Kz, qz, Jz, Yz, Xz, Zz, Qz, $z, eB, tB, nB, rB, iB, aB, oB, sB, cB, lB, uB, dB, fB, pB, mB, hB, gB, _B, vB, yB, bB, xB, SB, CB, wB, TB, EB, DB, OB, kB, AB, jB, MB, NB, PB, FB, IB, LB, RB, zB = e((() => {
-	g(), Ud(), dd(), O(), Zi(), pi(), Bf(), en(), ij(), Ri(), Pb(), nT(), oj(), Kr(), cj(), Rx(), mj(), gj(), PS(), vj(), Sj(), yh(), Ej(), Xy(), Ew(), qh(), Kw(), Tg(), Nj(), ow(), vx(), Lj(), Fb(), Il(), GS(), Bj(), Hj(), zx(), Wj(), FS(), XD(), ex(), fO(), Kj(), Jj(), MT(), Mv(), fc(), fi(), Xj(), By(), Za(), eM(), nM(), iM(), eE(), g_(), w_(), My(), Qg(), Wh(), Vv(), m(), dO(), l_(), oM(), G_(), dM(), pM(), gM(), Fh(), gO(), vM(), bM(), DM(), LM(), zM(), VM(), WM(), qM(), fv(), Cg(), rm(), ww(), lC(), YM(), Ep(), bS(), IC(), ZM(), $M(), tN(), HS(), ax(), Zy(), Uy(), pC(), Fg(), cy(), rN(), aN(), gy(), sN(), qw(), lN(), D_(), Dg(), Y_(), Yx(), aS(), og(), ty(), fN(), bO(), Yh(), mN(), gN(), Ow(), Rw(), vN(), xN(), cb(), Ax(), rC(), Lb(), CN(), TN(), qS(), DN(), Vx(), LS(), kN(), tx(), Nv(), jN(), Yy(), vC(), Hg(), FN(), LN(), zN(), hy(), wy(), tT(), VN(), UN(), GN(), qN(), u_(), wv(), K_(), YN(), ZN(), Ih(), pv(), wg(), mw(), Ex(), $N(), uC(), $b(), xS(), tP(), rP(), LC(), xb(), aP(), EC(), sP(), lP(), dP(), JC(), wh(), nb(), qy(), gC(), pP(), hP(), _P(), Bg(), py(), yP(), Sy(), $w(), N_(), Ng(), tv(), eS(), xP(), dv(), CP(), TP(), DP(), Sg(), kP(), Cw(), zT(), gT(), hh(), mD(), fD(), ZE(), Ap(), DD(), Xv(), jP(), jb(), lO(), PP(), IP(), pw(), Tx(), oO(), HT(), AT(), WE(), RP(), xp(), BP(), HP(), WP(), vD(), UD(), oD(), qP(), XP(), QP(), AS(), eF(), mx(), FE(), UE(), DO(), Np(), fC(), Eg(), J_(), Ix(), nF(), FO(), _T(), JE(), OO(), Jx(), iF(), FD(), iS(), EO(), oF(), ag(), cF(), fF(), mF(), Jh(), uE(), Dw(), PE(), gF(), sD(), Lw(), vF(), sb(), Hd(), bF(), kx(), SF(), nC(), Kb(), wF(), EF(), OF(), Ib(), AF(), IS(), Ov(), MF(), Oy(), Iv(), i_(), PF(), IF(), RF(), Wb(), sO(), _O(), f(Lf, Qm, M.Delayed), f(sj, Jo, M.Delayed), f(OC, Sf, M.Delayed), f(rT, aj, M.Delayed), f(ht, vT, M.Delayed), f(Pm, nj, M.Delayed), f(Py, wj, M.Delayed), f(Fw, ab, M.Delayed), f(mv, E_, M.Delayed), f(_j, zC, M.Delayed), f(Tv, xj, M.Delayed), f(ob, Mj, M.Delayed), f(hj, pj, M.Delayed), f(_u, rf, M.Delayed), f(Uv, Iw, M.Delayed), f(kC, Fj, M.Delayed), f(vs, Pr, M.Delayed), f(Wn, Zr, M.Delayed), f(YC, FA, M.Eager), f(oo, class extends Zs {
+	g(), Ud(), dd(), O(), Zi(), pi(), Bf(), en(), ij(), Ri(), Pb(), nT(), oj(), Kr(), cj(), Rx(), mj(), gj(), PS(), vj(), Sj(), yh(), Ej(), Xy(), Ew(), qh(), Kw(), Tg(), Nj(), ow(), vx(), Lj(), Fb(), Il(), GS(), Bj(), Hj(), zx(), Wj(), FS(), XD(), ex(), fO(), Kj(), Jj(), LT(), Mv(), fc(), fi(), Xj(), By(), Za(), eM(), nM(), iM(), BT(), g_(), w_(), My(), Qg(), Wh(), Vv(), m(), dO(), l_(), oM(), G_(), dM(), pM(), gM(), Fh(), gO(), vM(), bM(), DM(), LM(), zM(), VM(), WM(), qM(), fv(), Cg(), rm(), ww(), lC(), YM(), Ep(), bS(), IC(), ZM(), $M(), tN(), HS(), ax(), Zy(), Uy(), pC(), Fg(), cy(), rN(), aN(), gy(), sN(), qw(), lN(), D_(), Dg(), Y_(), Yx(), aS(), og(), ty(), fN(), bO(), Yh(), mN(), gN(), Ow(), Rw(), vN(), xN(), cb(), Ax(), rC(), Lb(), CN(), TN(), qS(), DN(), Vx(), LS(), kN(), tx(), Nv(), jN(), Yy(), vC(), Hg(), FN(), LN(), zN(), hy(), wy(), tT(), VN(), UN(), GN(), qN(), u_(), wv(), K_(), YN(), ZN(), Ih(), pv(), wg(), mw(), Ex(), $N(), uC(), $b(), xS(), tP(), rP(), LC(), xb(), aP(), EC(), sP(), lP(), dP(), JC(), wh(), nb(), qy(), gC(), pP(), hP(), _P(), Bg(), py(), yP(), Sy(), $w(), N_(), Ng(), tv(), eS(), xP(), dv(), CP(), TP(), DP(), Sg(), kP(), Cw(), MT(), gT(), hh(), mD(), fD(), ZE(), Ap(), DD(), Xv(), jP(), jb(), lO(), PP(), IP(), pw(), Tx(), oO(), vE(), xE(), WE(), RP(), xp(), BP(), HP(), WP(), vD(), UD(), oD(), qP(), XP(), QP(), AS(), eF(), mx(), DT(), UE(), DO(), Np(), fC(), Eg(), J_(), Ix(), nF(), FO(), _T(), JE(), OO(), Jx(), iF(), FD(), iS(), EO(), oF(), ag(), cF(), fF(), mF(), Jh(), ET(), Dw(), zE(), gF(), sD(), Lw(), vF(), sb(), Hd(), bF(), kx(), SF(), nC(), Kb(), wF(), EF(), OF(), Ib(), AF(), IS(), Ov(), MF(), Oy(), Iv(), i_(), PF(), IF(), RF(), Wb(), sO(), _O(), f(Lf, Qm, M.Delayed), f(sj, Jo, M.Delayed), f(OC, Sf, M.Delayed), f(rT, aj, M.Delayed), f(ht, vT, M.Delayed), f(Pm, nj, M.Delayed), f(Py, wj, M.Delayed), f(Fw, ab, M.Delayed), f(mv, E_, M.Delayed), f(_j, zC, M.Delayed), f(Tv, xj, M.Delayed), f(ob, Mj, M.Delayed), f(hj, pj, M.Delayed), f(_u, rf, M.Delayed), f(Uv, Iw, M.Delayed), f(kC, Fj, M.Delayed), f(vs, Pr, M.Delayed), f(Wn, Zr, M.Delayed), f(YC, FA, M.Eager), f(oo, class extends Zs {
 		constructor() {
 			super(Do.Info, K.file("logs.log"));
 		}
@@ -2769,7 +2769,7 @@ var zF, BF, VF, HF, UF, WF, GF, KF, qF, JF, YF, XF, ZF, QF, $F, eI, tI, nI, rI, 
 		constructor() {
 			this._serviceBrand = void 0, this.getPaneCompositeIds = () => [], this.onDidPaneCompositeOpen = V.None, this.onDidPaneCompositeClose = V.None, this.openPaneComposite = async () => void 0, this.getActivePaneComposite = () => void 0, this.getPaneComposite = () => void 0, this.getPaneComposites = () => [], this.getPinnedPaneCompositeIds = () => [], this.getVisiblePaneCompositeIds = () => [], this.getProgressIndicator = () => void 0, this.hideActivePaneComposite = () => {}, this.getLastActivePaneCompositeId = X;
 		}
-	}, T([Q], BF.prototype, "getLastActivePaneCompositeId", void 0), f(wT, BF, M.Eager), f(Ju, hM, M.Delayed), VF = class {
+	}, T([Q], BF.prototype, "getLastActivePaneCompositeId", void 0), f(AT, BF, M.Eager), f(Ju, hM, M.Delayed), VF = class {
 		constructor() {
 			this.resolveDecoding = X, this.resolveEncoding = X, this.validateDetectedEncoding = X, this.getEncoding = X, this.isDirty = X, this.save = X, this.saveAs = X, this.revert = X, this.read = X, this.readStream = X, this.write = X, this.create = X, this.getEncodedReadable = X, this.getDecodedStream = X, this.dispose = X;
 		}
@@ -2831,7 +2831,7 @@ var zF, BF, VF, HF, UF, WF, GF, KF, qF, JF, YF, XF, ZF, QF, $F, eI, tI, nI, rI, 
 		constructor() {
 			this.onWillRunWorkingCopyFileOperation = V.None, this.onDidFailWorkingCopyFileOperation = V.None, this.onDidRunWorkingCopyFileOperation = V.None, this.addFileOperationParticipant = X, this.hasSaveParticipants = !1, this.addSaveParticipant = X, this.runSaveParticipants = X, this.create = X, this.createFolder = X, this.move = X, this.copy = X, this.delete = X, this.registerWorkingCopyProvider = X, this.getDirty = () => [];
 		}
-	}, T([Q], YF.prototype, "addFileOperationParticipant", void 0), T([Q], YF.prototype, "addSaveParticipant", void 0), T([Q], YF.prototype, "runSaveParticipants", void 0), T([Q], YF.prototype, "create", void 0), T([Q], YF.prototype, "createFolder", void 0), T([Q], YF.prototype, "move", void 0), T([Q], YF.prototype, "copy", void 0), T([Q], YF.prototype, "delete", void 0), T([Q], YF.prototype, "registerWorkingCopyProvider", void 0), f(aE, YF, M.Eager), XF = class {
+	}, T([Q], YF.prototype, "addFileOperationParticipant", void 0), T([Q], YF.prototype, "addSaveParticipant", void 0), T([Q], YF.prototype, "runSaveParticipants", void 0), T([Q], YF.prototype, "create", void 0), T([Q], YF.prototype, "createFolder", void 0), T([Q], YF.prototype, "move", void 0), T([Q], YF.prototype, "copy", void 0), T([Q], YF.prototype, "delete", void 0), T([Q], YF.prototype, "registerWorkingCopyProvider", void 0), f(lE, YF, M.Eager), XF = class {
 		constructor() {
 			this.defaultUriScheme = "file", this.fileURI = X, this.userHome = X, this.hasValidBasename = X, this.resolvedUserHome = void 0;
 		}
@@ -2862,7 +2862,7 @@ var zF, BF, VF, HF, UF, WF, GF, KF, qF, JF, YF, XF, ZF, QF, $F, eI, tI, nI, rI, 
 		constructor() {
 			this.isEnabledForLanguage = () => !1, this.detectLanguage = async () => {};
 		}
-	}, f(zD, nI, M.Eager), f(DT, aO, M.Eager), rI = class {
+	}, f(zD, nI, M.Eager), f(xT, aO, M.Eager), rI = class {
 		constructor() {
 			this.onDidChangeKeyboardLayout = V.None, this.getRawKeyboardMapping = () => null, this.getCurrentKeyboardLayout = () => null, this.getAllKeyboardLayouts = () => [], this.getKeyboardMapper = () => new VP(!1, Ps), this.validateCurrentKeyboardMapping = () => {};
 		}
@@ -3085,7 +3085,7 @@ var zF, BF, VF, HF, UF, WF, GF, KF, qF, JF, YF, XF, ZF, QF, $F, eI, tI, nI, rI, 
 		constructor() {
 			this.hasBackupSync = () => !1, this.getBackups = async () => [], this.resolve = async () => {}, this.backup = async () => {}, this.discardBackup = async () => {}, this.discardBackups = async () => {};
 		}
-	}, f(zE, GI, M.Eager), KI = class {
+	}, f(XT, GI, M.Eager), KI = class {
 		constructor() {
 			this.onDidRegister = V.None, this.onDidUnregister = V.None, this.onDidChangeDirty = V.None, this.onDidChangeContent = V.None, this.onDidSave = V.None, this.dirtyCount = 0, this.dirtyWorkingCopies = [], this.modifiedCount = 0, this.modifiedWorkingCopies = [], this.hasDirty = !1, this.isDirty = () => !1, this.workingCopies = [], this.registerWorkingCopy = () => z.None, this.has = () => !1, this.get = () => void 0, this.getAll = () => void 0;
 		}
@@ -3093,11 +3093,11 @@ var zF, BF, VF, HF, UF, WF, GF, KF, qF, JF, YF, XF, ZF, QF, $F, eI, tI, nI, rI, 
 		constructor() {
 			this.onDidChangeDecorations = V.None, this.registerDecorationsProvider = X, this.getDecoration = () => void 0;
 		}
-	}, T([Q], qI.prototype, "registerDecorationsProvider", void 0), f(bE, qI, M.Eager), JI = class {
+	}, T([Q], qI.prototype, "registerDecorationsProvider", void 0), f(qT, qI, M.Eager), JI = class {
 		constructor() {
 			this.isSupported = () => !1, this.writeFileElevated = X;
 		}
-	}, T([Q], JI.prototype, "writeFileElevated", void 0), f(ZT, JI, M.Eager), YI = class {
+	}, T([Q], JI.prototype, "writeFileElevated", void 0), f(GT, JI, M.Eager), YI = class {
 		constructor() {
 			this.preferredHome = X, this.defaultFilePath = X, this.defaultFolderPath = X, this.defaultWorkspacePath = X, this.pickFileFolderAndOpen = X, this.pickFileAndOpen = X, this.pickFolderAndOpen = X, this.pickWorkspaceAndOpen = X, this.pickFileToSave = X, this.showSaveDialog = X, this.showSaveConfirm = X, this.showOpenDialog = X;
 		}
@@ -3128,7 +3128,7 @@ var zF, BF, VF, HF, UF, WF, GF, KF, qF, JF, YF, XF, ZF, QF, $F, eI, tI, nI, rI, 
 		constructor() {
 			this.readExtensionResource = X, this.supportsExtensionGalleryResources = async () => !1, this.isExtensionGalleryResource = async () => !1, this.getExtensionGalleryResourceURL = X;
 		}
-	}, T([Q], tL.prototype, "readExtensionResource", void 0), T([Q], tL.prototype, "getExtensionGalleryResourceURL", void 0), f(nE, tL, M.Eager), nL = class {
+	}, T([Q], tL.prototype, "readExtensionResource", void 0), T([Q], tL.prototype, "getExtensionGalleryResourceURL", void 0), f(AE, tL, M.Eager), nL = class {
 		constructor() {
 			this.scanBuiltinExtensions = () => Promise.resolve([]);
 		}
@@ -4850,7 +4850,7 @@ function AV(e, t) {
 	}
 	return null;
 }
-_E(), qx(), rS(), Z_(), sS(), bw(), Xh(), ew(), JS(), kv(), Ly(), Jg(), Lv(), Q_(), Qx(), cS(), bg(), xw(), Aw(), Sx(), DS(), aC(), _S(), NC(), YS(), zS(), gE(), x_(), Rg(), Zw(), o_(), ug(), kb(), dw(), Cx(), OS(), Yb(), XS(), vb(), db(), kS(), Vb(), Dy(), _y(), Rh(), Fv(), r_(), _v(), X_(), Qa(), k(), Po(), Gd();
+NE(), qx(), rS(), Z_(), sS(), bw(), Xh(), ew(), JS(), kv(), Ly(), Jg(), Lv(), Q_(), Qx(), cS(), bg(), xw(), Aw(), Sx(), DS(), aC(), _S(), NC(), YS(), zS(), VE(), x_(), Rg(), Zw(), o_(), ug(), kb(), dw(), Cx(), OS(), Yb(), XS(), vb(), db(), kS(), Vb(), Dy(), _y(), Rh(), Fv(), r_(), _v(), X_(), Qa(), k(), Po(), Gd();
 var jV = class e extends L {
 	static {
 		this.ID = "editor.action.toggleTabFocusMode";
@@ -5167,7 +5167,7 @@ Ur(), $c(), D(), vc(), Jp(), Kc(), Wb(), tr(), k(), cl(), _(), wy(), v(class ext
 		let n = e.get(C);
 		if (!t.hasModel()) return;
 		let r = await n.invokeFunction(eH, t.getModel());
-		if (vi(r)) return n.invokeFunction(KA, t, r, WA.Explicit, EE.None, Nr.None, !0);
+		if (vi(r)) return n.invokeFunction(KA, t, r, WA.Explicit, mE.None, Nr.None, !0);
 	}
 });
 async function eH(e, t) {
@@ -5184,7 +5184,7 @@ async function eH(e, t) {
 	}
 	return o;
 }
-g(), $c(), Xc(), O(), a(), lT(), en(), fd(), bo(), vc(), Va(), nT(), k(), kd(), _(), gE(), qs(), RD(), HE(), DD(), xp(), QE(), JE();
+g(), $c(), Xc(), O(), a(), lT(), en(), fd(), bo(), vc(), Va(), nT(), k(), kd(), _(), VE(), qs(), RD(), HE(), DD(), xp(), QE(), JE();
 var tH = class {
 	constructor(e, t) {
 		this.configurationService = e, this.codeEditorService = t;
@@ -5276,7 +5276,7 @@ var aH = class {
 		let i = e.textEditorModel, a = {
 			overrideIdentifier: i.getLanguageId(),
 			resource: i.uri
-		}, o = new EE((e) => {
+		}, o = new mE((e) => {
 			n.report({ message: x(6196, "Running '{0}' Formatter ([configure]({1})).", e.displayName || e.extensionId && e.extensionId.value || "???", re("workbench.action.openSettings", "editor.formatOnSave").toString()) });
 		});
 		if (!this.configurationService.getValue("editor.formatOnSave", a)) return;
@@ -5312,7 +5312,7 @@ var oH = class extends z {
 			if (!n || Array.isArray(n)) return;
 			let r = Object.keys(n).filter((e) => n[e] && n[e] === "always" && bv.Source.contains(new WC(e))), i = new pl(), a = [];
 			for (let e of r) a.push(new WC(e));
-			await this.applyOnSaveActions(e, a, [], EE.None, i.token);
+			await this.applyOnSaveActions(e, a, [], mE.None, i.token);
 		}
 	}
 	async participate(e, t, n, r) {
@@ -5726,7 +5726,7 @@ EH = T([
 	R(2, Ya),
 	R(3, Au),
 	R(4, C)
-], EH), Jt(EH.ID, EH, al.AfterFirstRender), g(), lT(), D(), Jp(), k(), cl(), $c(), _(), vc(), hE(), qs(), ne(), RD(), QE(), oO(), HT(), O(), kd(), Vn(), nr(), lO(), or(), nT(), UD(), DD(), ic(), _a();
+], EH), Jt(EH.ID, EH, al.AfterFirstRender), g(), lT(), D(), Jp(), k(), cl(), $c(), _(), vc(), BE(), qs(), ne(), RD(), QE(), oO(), vE(), O(), kd(), Vn(), nr(), lO(), or(), nT(), UD(), DD(), ic(), _a();
 var DH, OH = class extends z {
 	static {
 		DH = this;
@@ -5749,10 +5749,10 @@ var DH, OH = class extends z {
 	async _updateConfigValues() {
 		await this._extensionService.whenInstalledExtensionsRegistered();
 		let e = [...this._extensionService.extensions], t = this._languageFeaturesService.documentFormattingEditProvider.allNoModel(), n = this._languageFeaturesService.documentRangeFormattingEditProvider.allNoModel(), r = /* @__PURE__ */ new Set();
-		for (let e of t) e.extensionId && r.add(SE.toKey(e.extensionId));
-		for (let e of n) e.extensionId && r.add(SE.toKey(e.extensionId));
+		for (let e of t) e.extensionId && r.add(pE.toKey(e.extensionId));
+		for (let e of n) e.extensionId && r.add(pE.toKey(e.extensionId));
 		e = e.sort((e, t) => {
-			let n = r.has(SE.toKey(e.identifier)), i = r.has(SE.toKey(t.identifier));
+			let n = r.has(pE.toKey(e.identifier)), i = r.has(pE.toKey(t.identifier));
 			if (n && !i) return -1;
 			if (!n && i) return 1;
 			let a = e.categories?.find((e) => e === "Formatters" || e === "Programming Languages"), o = t.categories?.find((e) => e === "Formatters" || e === "Programming Languages");
@@ -5769,7 +5769,7 @@ var DH, OH = class extends z {
 			overrideIdentifier: n.getLanguageId()
 		});
 		if (r) {
-			let i = t.find((e) => SE.equals(e.extensionId, r));
+			let i = t.find((e) => pE.equals(e.extensionId, r));
 			if (i) return i;
 			let a = await this._extensionService.getExtension(r);
 			if (a && this._extensionEnablementService.isEnabled(iO(a))) {
@@ -5838,7 +5838,7 @@ var DH, OH = class extends z {
 	}
 };
 OH = DH = T([
-	R(0, DT),
+	R(0, xT),
 	R(1, pO),
 	R(2, I),
 	R(3, Zc),
@@ -5864,7 +5864,7 @@ async function kH(e, t, n) {
 		resource: t.uri,
 		overrideIdentifier: t.getLanguageId()
 	}, s = i.getValue(OH.configName, o), c, l = n.map((e, t) => {
-		let n = SE.equals(e.extensionId, s), r = {
+		let n = pE.equals(e.extensionId, s), r = {
 			index: t,
 			label: e.displayName || "",
 			description: n ? x(8292, "(default)") : void 0
@@ -5951,7 +5951,7 @@ v(class extends E {
 			n && r.openSearch(`category:formatters ${e}`);
 		}
 	}
-}), g(), O(), WS(), k(), qs(), RD(), ne(), Le(), QE(), HT(), kd();
+}), g(), O(), WS(), k(), qs(), RD(), ne(), Le(), QE(), vE(), kd();
 var AH, jH = class extends z {
 	static {
 		AH = this;
@@ -5984,7 +5984,7 @@ var AH, jH = class extends z {
 		if (n) return e.filter((e) => e.id === n);
 	}
 };
-jH = AH = T([R(0, DT), R(1, I)], jH), _s.as(Wo.Configuration).registerConfiguration({
+jH = AH = T([R(0, xT), R(1, I)], jH), _s.as(Wo.Configuration).registerConfiguration({
 	...Ii,
 	properties: { [jH.configName]: {
 		description: x(8277, "Defines a default folding range provider that takes precedence over all other folding range providers. Must be the identifier of an extension contributing a folding range provider."),
@@ -6326,7 +6326,7 @@ var YH = "rendererLog", XH = {
 	id: YH,
 	name: x(14189, "Window")
 }, ZH = "workbench.action.showWindowLog";
-iu(), k(), bf(), Qo(), dd(), O(), xa(), kd(), cl(), Il(), ce(), qs(), Po(), Fa(), ye(), Qa(), ne(), Za(), sD(), vO(), uE(), or(), mx(), Ns(), Co(), ag(), DD(), ic(), qe(), eE(), nu(), eS(), Sy(), zo(), ns(JH);
+iu(), k(), bf(), Qo(), dd(), O(), xa(), kd(), cl(), Il(), ce(), qs(), Po(), Fa(), ye(), Qa(), ne(), Za(), sD(), vO(), ET(), or(), mx(), Ns(), Co(), ag(), DD(), ic(), qe(), BT(), nu(), eS(), Sy(), zo(), ns(JH);
 var QH = class extends L {
 	constructor() {
 		super({
@@ -6481,7 +6481,7 @@ var QH = class extends L {
 		});
 	}
 	async run(e) {
-		let t = e.get(LD), n = e.get(zE), r = e.get(yn), i = e.get(Zb), a = await n.getBackups(), o = [
+		let t = e.get(LD), n = e.get(XT), r = e.get(yn), i = e.get(Zb), a = await n.getBackups(), o = [
 			"",
 			"[Working Copies]",
 			...t.workingCopies.length > 0 ? t.workingCopies.map((e) => `${e.isDirty() ? "● " : ""}${e.resource.toString(!0)} (typeId: ${e.typeId || "<no typeId>"})`) : ["<none>"],
@@ -10002,7 +10002,7 @@ var pG = class extends E {
 		sa.setZoomLevel(0);
 	}
 };
-v(pG), v(mG), v(hG), g(), Ur(), $c(), gs(), Qa(), O(), D(), en(), Vf(), gc(), vc(), Jp(), Wb(), nT(), k(), $m(), Nl(), ic(), nf(), cl(), _(), Gd(), gE(), Aa();
+v(pG), v(mG), v(hG), g(), Ur(), $c(), gs(), Qa(), O(), D(), en(), Vf(), gc(), vc(), Jp(), Wb(), nT(), k(), $m(), Nl(), ic(), nf(), cl(), _(), Gd(), VE(), Aa();
 var gG = class {
 	static {
 		this.ID = "editor.contrib.autoFormat";
@@ -10064,7 +10064,7 @@ var _G = class {
 		this._callOnModel.clear(), this.editor.getOption(H.formatOnPaste) && this.editor.hasModel() && this._languageFeaturesService.documentRangeFormattingEditProvider.has(this.editor.getModel()) && this._callOnModel.add(this.editor.onDidPaste(({ range: e }) => this._trigger(e)));
 	}
 	_trigger(e) {
-		this.editor.hasModel() && (this.editor.getSelections().length > 1 || this._instantiationService.invokeFunction(KA, this.editor, e, WA.Silent, EE.None, Nr.None, !1).catch(Du));
+		this.editor.hasModel() && (this.editor.getSelections().length > 1 || this._instantiationService.invokeFunction(KA, this.editor, e, WA.Silent, mE.None, Nr.None, !1).catch(Du));
 	}
 };
 _G = T([R(1, rT), R(2, C)], _G);
@@ -10089,7 +10089,7 @@ var vG = class extends E {
 	async run(e, t) {
 		if (t.hasModel()) {
 			let n = e.get(C);
-			await e.get(Ut).showWhile(n.invokeFunction(JA, t, WA.Explicit, EE.None, Nr.None, !0), 250);
+			await e.get(Ut).showWhile(n.invokeFunction(JA, t, WA.Explicit, mE.None, Nr.None, !0), 250);
 		}
 	}
 }, yG = class extends E {
@@ -10113,7 +10113,7 @@ var vG = class extends E {
 	async run(e, t) {
 		if (!t.hasModel()) return;
 		let n = e.get(C), r = t.getModel(), i = t.getSelections().map((e) => e.isEmpty() ? new B(e.startLineNumber, 1, e.startLineNumber, r.getLineMaxColumn(e.startLineNumber)) : e);
-		await e.get(Ut).showWhile(n.invokeFunction(KA, t, i, WA.Explicit, EE.None, Nr.None, !0), 250);
+		await e.get(Ut).showWhile(n.invokeFunction(KA, t, i, WA.Explicit, mE.None, Nr.None, !0), 250);
 	}
 };
 Jt(gG.ID, gG, al.BeforeFirstInteraction), Jt(_G.ID, _G, al.BeforeFirstInteraction), v(vG), v(yG), bc.registerCommand("editor.action.format", async (e) => {
@@ -15602,7 +15602,7 @@ var PX = class extends z {
 		return { preference: uT.BOTTOM_RIGHT_CORNER };
 	}
 };
-Jt(PX.ID, PX, al.Eventually), AE(), kE(), WT(), IE(), g(), O(), lT(), k(), cl(), bf(), Co(), fD(), DD();
+Jt(PX.ID, PX, al.Eventually), IE(), EE(), FE(), LE(), g(), O(), lT(), k(), cl(), bf(), Co(), fD(), DD();
 var IX = "inQuickOpen", LX = new kr(IX, !1, x(3708, "Whether keyboard focus is inside the quick open control")), RX = y.has(IX), zX = y.and(RX, y.has("inFilesPicker"));
 function BX(e, t) {
 	return (n) => {
@@ -16139,7 +16139,7 @@ function iZ(e) {
 	for (let e of bc.getCommands().keys()) r(e, !1);
 	return t;
 }
-g(), k(), Ur(), a(), Vc(), Hu(), Po(), bf(), An(), HT(), hE(), cl();
+g(), k(), Ur(), a(), Vc(), Hu(), Po(), bf(), An(), vE(), BE(), cl();
 var aZ, oZ = "keybinding.entry.template", sZ = x(14193, "System"), cZ = x(14194, "Extension"), lZ = x(14195, "User");
 function uZ(e, t) {
 	return `@command:${e}${t ? ` +when:${t}` : ""}`;
@@ -16190,7 +16190,7 @@ var dZ = Uc(Wa, od), fZ = /@command:\s*([^\+]+)/i, pZ = /\+when:\s*(.+)/i, mZ = 
 		return /@source:\s*default/i.test(t) || /@source:\s*system/i.test(t) ? e.filter((e) => e.source === sZ) : /@source:\s*user/i.test(t) ? e.filter((e) => e.source === lZ) : /@source:\s*extension/i.test(t) ? e.filter((e) => !ks(e.source) || e.source === cZ) : e;
 	}
 	filterByExtension(e, t) {
-		return t = t.toLowerCase().trim(), e.filter((e) => !ks(e.source) && (SE.equals(e.source.identifier, t) || e.source.displayName?.toLowerCase() === t.toLowerCase()));
+		return t = t.toLowerCase().trim(), e.filter((e) => !ks(e.source) && (pE.equals(e.source.identifier, t) || e.source.displayName?.toLowerCase() === t.toLowerCase()));
 	}
 	filterByText(e, t) {
 		let n = t.charAt(0) === "\"", r = t.charAt(t.length - 1) === "\"", i = n && r;
@@ -16242,7 +16242,7 @@ var dZ = Uc(Wa, od), fZ = /@command:\s*([^\+]+)/i, pZ = /\+when:\s*(.+)/i, mZ = 
 		return e.command + (e?.keybinding?.getAriaLabel() ?? "") + e.when + (ks(e.source) ? e.source : e.source.identifier.value);
 	}
 	getExtensionsMapping() {
-		let e = new NE();
+		let e = new OE();
 		for (let t of this.extensionService.extensions) e.set(t.identifier, t);
 		return e;
 	}
@@ -16280,7 +16280,7 @@ var dZ = Uc(Wa, od), fZ = /@command:\s*([^\+]+)/i, pZ = /\+when:\s*(.+)/i, mZ = 
 		return t || "";
 	}
 };
-_Z = aZ = T([R(1, Ne), R(2, DT)], _Z);
+_Z = aZ = T([R(1, Ne), R(2, xT)], _Z);
 var vZ = class {
 	constructor(e, t, n, r, i, a) {
 		this.modifierLabels = e, this.commandIdMatches = null, this.commandLabelMatches = null, this.commandDefaultLabelMatches = null, this.sourceMatches = null, this.whenMatches = null, this.keybindingMatches = null, this.extensionIdMatches = null, this.extensionLabelMatches = null, a || (this.commandIdMatches = this.matches(n, t.command, Uc(od, po), r), this.commandLabelMatches = t.commandLabel ? this.matches(n, t.commandLabel, (e, n) => od(e, t.commandLabel, !0), r) : null, this.commandDefaultLabelMatches = t.commandDefaultLabel ? this.matches(n, t.commandDefaultLabel, (e, n) => od(e, t.commandDefaultLabel, !0), r) : null, this.whenMatches = t.when ? this.matches(null, t.when, Uc(od, po), r) : null, ks(t.source) ? this.sourceMatches = this.matches(n, t.source, (e, n) => od(e, t.source, !0), r) : this.extensionLabelMatches = t.source.displayName ? this.matches(n, t.source.displayName, (e, n) => od(e, t.commandLabel, !0), r) : null), this.keybindingMatches = t.keybinding ? this.matchesKeybinding(t.keybinding, n, i, a) : null;
@@ -16376,7 +16376,7 @@ var vZ = class {
 		return !!(Vt(this.modifierLabels.ui.shiftKey, e) || Vt(this.modifierLabels.aria.shiftKey, e) || Vt(this.modifierLabels.user.shiftKey, e));
 	}
 };
-g(), fn(), ce(), Hd(), Bn(), Qa(), Vc(), kf(), k(), Qc(), Po(), _o(), nf(), kd(), or(), _(), bf(), Gd(), eE(), Co(), ye(), m(), py(), fD(), DD(), HT(), DO(), ax();
+g(), fn(), ce(), Hd(), Bn(), Qa(), Vc(), kf(), k(), Qc(), Po(), _o(), nf(), kd(), or(), _(), bf(), Gd(), BT(), Co(), ye(), m(), py(), fD(), DD(), vE(), DO(), ax();
 var yZ, bZ = class extends eZ {
 	static {
 		yZ = this;
@@ -16483,7 +16483,7 @@ var yZ, bZ = class extends eZ {
 bZ = yZ = T([
 	R(0, iD),
 	R(1, Ya),
-	R(2, DT),
+	R(2, xT),
 	R(3, C),
 	R(4, Ne),
 	R(5, So),
@@ -17619,7 +17619,7 @@ var wQ, TQ = class {
 		});
 	}
 };
-TQ = wQ = T([R(0, ac), R(1, Ne)], TQ), g(), k(), Pu(), Co(), yw(), bS(), Jh(), mx(), wg(), Il(), Hu(), a(), bf(), Po(), Qa(), Gd(), vO(), FE(), dx(), og();
+TQ = wQ = T([R(0, ac), R(1, Ne)], TQ), g(), k(), Pu(), Co(), yw(), bS(), Jh(), mx(), wg(), Il(), Hu(), a(), bf(), Po(), Qa(), Gd(), vO(), DT(), dx(), og();
 var EQ, DQ = class extends YX {
 	static {
 		EQ = this;
@@ -17723,7 +17723,7 @@ DQ = EQ = T([
 	R(3, sy),
 	R(4, ng),
 	R(5, _g),
-	R(6, wT),
+	R(6, AT),
 	R(7, Au)
 ], DQ);
 var OQ = class e extends L {
@@ -17878,7 +17878,7 @@ var FQ = class extends z {
 		}) }));
 	}
 };
-FQ = T([R(0, cf), R(1, TO)], FQ), Bf(), k(), eE(), Fa(), ye(), DD(), CO(), lT(), pi(), Kf();
+FQ = T([R(0, cf), R(1, TO)], FQ), Bf(), k(), BT(), Fa(), ye(), DD(), CO(), lT(), pi(), Kf();
 var IQ = K.parse("trustedDomains:/Trusted Domains"), LQ = "http.linkProtectionTrustedDomains", RQ = "http.linkProtectionTrustedDomainsContent";
 async function zQ(e, t) {
 	await e.openEditor({
@@ -18086,7 +18086,7 @@ var r$ = /^(.+\.)?localhost(:\d+)?$/i, i$ = /^127.0.0.1(:\d+)?$/, a$ = /^\[::1\]
 function o$(e) {
 	return r$.test(e) || i$.test(e) || a$.test(e);
 }
-g(), Ou(), _a(), Bf(), k(), df(), kd(), or(), _(), Jf(), eE(), Co(), ye(), m(), jr(), wh(), DD();
+g(), Ou(), _a(), Bf(), k(), df(), kd(), or(), _(), Jf(), BT(), Co(), ye(), m(), jr(), wh(), DD();
 var s$ = class {
 	constructor(e, t, n, r, i, a, o, s, c, l, u, d) {
 		this._openerService = e, this._storageService = t, this._dialogService = n, this._productService = r, this._quickInputService = i, this._editorService = a, this._clipboardService = o, this._telemetryService = s, this._instantiationService = c, this._configurationService = l, this._workspaceTrustService = u, this._trustedDomainService = d, this._openerService.registerValidator({ shouldOpen: (e, t) => this.validateLink(e, t) });
@@ -18298,11 +18298,11 @@ var l$, u$ = class extends z {
 		if (!(i === void 0 || i === "")) return i;
 	}
 };
-u$ = l$ = T([R(0, I), R(1, Gr)], u$), gD(), BE();
+u$ = l$ = T([R(0, I), R(1, Gr)], u$), gD(), PT();
 var d$;
 (function(e) {
 	e[e.SHORT = 0] = "SHORT", e[e.MEDIUM = 1] = "MEDIUM", e[e.LONG = 2] = "LONG";
-})(d$ ||= {}), g(), k(), pi(), kd(), DD(), O(), HE(), CO(), mt(), Vc(), a(), dd(), ce(), eE(), Ou(), PT(), ag(), Jh(), lT(), Il(), xa(), zT(), Wu();
+})(d$ ||= {}), g(), k(), pi(), kd(), DD(), O(), HE(), CO(), mt(), Vc(), a(), dd(), ce(), BT(), Ou(), aE(), ag(), Jh(), lT(), Il(), xa(), MT(), Wu();
 var f$, p$;
 (function(e) {
 	e.titleSeparator = "window.titleSeparator", e.title = "window.title";
@@ -18403,7 +18403,7 @@ var m$ = Mu && wc ? "${activeEditorShort}${separator}${rootName}${separator}${pr
 		let o;
 		if (this.environmentService.remoteAuthority && !wo) o = this.labelService.getHostLabel(Gs.vscodeRemote, this.environmentService.remoteAuthority);
 		else {
-			let e = FT(t);
+			let e = iE(t);
 			e && (o = this.labelService.getHostLabel(e.scheme, e.authority));
 		}
 		let s = e ? e.getTitle(pD.SHORT) : "", c = e ? e.getTitle(pD.MEDIUM) : s, l = e ? e.getTitle(pD.LONG) : c, u = i ? La(i) : "", f = i ? this.labelService.getUriLabel(i, { relative: !0 }) : "", p = i ? this.labelService.getUriLabel(i) : "", m = this.labelService.getWorkspaceLabel(t), h = this.labelService.getWorkspaceLabel(t, { verbose: d$.SHORT }), ee = n ? this.labelService.getUriLabel(n) : "", te = a ? a.name : "", ne = a ? this.labelService.getUriLabel(a.uri) : "", g = e?.isDirty() && !e.isSaving() ? f$.TITLE_DIRTY : "", re = this.productService.nameLong, ie = this.userDataProfileService.currentProfile.isDefault ? "" : this.userDataProfileService.currentProfile.name, ae = this.viewsService.getFocusedViewName(), oe = r ? this.decorationsService.getDecoration(r, !1)?.tooltip : void 0, se = this.editorService.activeTextEditorLanguageId, ce = {};
@@ -18450,7 +18450,7 @@ g$ = f$ = T([
 	R(7, gg),
 	R(8, NT),
 	R(9, Wv),
-	R(10, bE),
+	R(10, qT),
 	R(11, On)
 ], g$), fn(), Vc(), k(), ne(), pe(), qs(), Pp(), RD();
 var _$ = _s.as(Wo.Configuration);
@@ -18486,12 +18486,12 @@ var _$ = _s.as(Wo.Configuration);
 				description: x(3734, "Controls the visibility of the scrollbars used for tabs and breadcrumbs in the editor title area."),
 				default: "auto"
 			},
-			[UT.EDITOR_TABS_MODE]: {
+			[VT.EDITOR_TABS_MODE]: {
 				type: "string",
 				enum: [
-					BT.MULTIPLE,
-					BT.SINGLE,
-					BT.NONE
+					IT.MULTIPLE,
+					IT.SINGLE,
+					IT.NONE
 				],
 				enumDescriptions: [
 					x(3735, "Each editor is displayed as a tab in the editor title area."),
@@ -18501,12 +18501,12 @@ var _$ = _s.as(Wo.Configuration);
 				description: x(3738, "Controls whether opened editors should show as individual tabs, one single large tab or if the title area should not be shown."),
 				default: "multiple"
 			},
-			[UT.EDITOR_ACTIONS_LOCATION]: {
+			[VT.EDITOR_ACTIONS_LOCATION]: {
 				type: "string",
 				enum: [
-					RT.DEFAULT,
-					RT.TITLEBAR,
-					RT.HIDDEN
+					jT.DEFAULT,
+					jT.TITLEBAR,
+					jT.HIDDEN
 				],
 				markdownEnumDescriptions: [
 					x(3739, "Show editor actions in the window title bar when {0} is set to {1}. Otherwise, editor actions are shown in the editor tab bar.", "`#workbench.editor.showTabs#`", "`none`"),
@@ -19065,7 +19065,7 @@ var _$ = _s.as(Wo.Configuration);
 				default: !0,
 				description: x(3864, "Controls the visibility of the status bar at the bottom of the workbench.")
 			},
-			[UT.ACTIVITY_BAR_LOCATION]: {
+			[VT.ACTIVITY_BAR_LOCATION]: {
 				type: "string",
 				enum: [
 					"default",
@@ -19162,7 +19162,7 @@ var _$ = _s.as(Wo.Configuration);
 				default: !0,
 				markdownDescription: wo ? x(3890, "Controls whether the navigation control in the title bar is shown.") : x(3891, "Controls whether the navigation control is shown in the custom title bar. This setting only has an effect when {0} is not set to {1}.", "`#window.customTitleBarVisibility#`", "`never`")
 			},
-			[UT.LAYOUT_ACTIONS]: {
+			[VT.LAYOUT_ACTIONS]: {
 				type: "boolean",
 				default: !0,
 				markdownDescription: wo ? x(3892, "Controls whether the layout control in the title bar is shown.") : x(3893, "Controls whether the layout control is shown in the custom title bar. This setting only has an effect when {0} is not set to {1}.", "`#window.customTitleBarVisibility#`", "`never`")
@@ -19225,7 +19225,7 @@ var _$ = _s.as(Wo.Configuration);
 				default: h$,
 				markdownDescription: x(3921, "Separator used by {0}.", "`#window.title#`")
 			},
-			[UT.COMMAND_CENTER]: {
+			[VT.COMMAND_CENTER]: {
 				type: "boolean",
 				default: !0,
 				markdownDescription: wo ? x(3922, "Show command launcher together with the window title.") : x(3923, "Show command launcher together with the window title. This setting only has an effect when {0} is not set to {1}.", "`#window.customTitleBarVisibility#`", "`never`")
@@ -19383,13 +19383,13 @@ var _$ = _s.as(Wo.Configuration);
 	key: "workbench.activityBar.visible",
 	migrateFn: (e) => {
 		let t = [];
-		return e !== void 0 && t.push(["workbench.activityBar.visible", { value: void 0 }]), e === !1 && t.push([UT.ACTIVITY_BAR_LOCATION, { value: yE.HIDDEN }]), t;
+		return e !== void 0 && t.push(["workbench.activityBar.visible", { value: void 0 }]), e === !1 && t.push([VT.ACTIVITY_BAR_LOCATION, { value: KT.HIDDEN }]), t;
 	}
 }]), _s.as(gp.ConfigurationMigration).registerConfigurationMigrations([{
-	key: UT.ACTIVITY_BAR_LOCATION,
+	key: VT.ACTIVITY_BAR_LOCATION,
 	migrateFn: (e) => {
 		let t = [];
-		return e === "side" && t.push([UT.ACTIVITY_BAR_LOCATION, { value: yE.DEFAULT }]), t;
+		return e === "side" && t.push([VT.ACTIVITY_BAR_LOCATION, { value: KT.DEFAULT }]), t;
 	}
 }]), _s.as(gp.ConfigurationMigration).registerConfigurationMigrations([
 	{
@@ -19400,10 +19400,10 @@ var _$ = _s.as(Wo.Configuration);
 		}
 	},
 	{
-		key: UT.EDITOR_TABS_MODE,
+		key: VT.EDITOR_TABS_MODE,
 		migrateFn: (e) => {
 			let t = [];
-			return typeof e == "boolean" && (e = e ? BT.MULTIPLE : BT.SINGLE, t.push([UT.EDITOR_TABS_MODE, { value: e }])), t;
+			return typeof e == "boolean" && (e = e ? IT.MULTIPLE : IT.SINGLE, t.push([VT.EDITOR_TABS_MODE, { value: e }])), t;
 		}
 	},
 	{
@@ -19499,7 +19499,7 @@ x$ = T([R(0, C)], x$);
 function S$({ isKeybindingConfigurationVisible: e, shouldUseGlobalPicker: t } = {}) {
 	return e != null && (v$ = e), t != null && (y$ = t), { [ac.toString()]: new Fs(x$, [], !0) };
 }
-oE(), NS(), k(), xf(), Vc(), gs(), O(), $c(), Ou(), pf(), pi(), gr();
+ME(), NS(), k(), xf(), Vc(), gs(), O(), $c(), Ou(), pf(), pi(), gr();
 var C$ = /^([^.]+\..+)[:=](.+)$/;
 g(), Ou(), pi(), Bf(), gs(), Re(), An();
 var $ = class {
@@ -19724,10 +19724,10 @@ var $ = class {
 		}
 	}
 };
-$.__decorator = T([Ma], $.prototype, "remoteAuthority", null), $.__decorator = T([Ma], $.prototype, "expectsResolverExtension", null), $.__decorator = T([Ma], $.prototype, "isBuilt", null), $.__decorator = T([Ma], $.prototype, "logLevel", null), $.__decorator = T([Ma], $.prototype, "windowLogsPath", null), $.__decorator = T([Ma], $.prototype, "logFile", null), $.__decorator = T([Ma], $.prototype, "userRoamingDataHome", null), $.__decorator = T([Ma], $.prototype, "argvResource", null), $.__decorator = T([Ma], $.prototype, "cacheHome", null), $.__decorator = T([Ma], $.prototype, "workspaceStorageHome", null), $.__decorator = T([Ma], $.prototype, "localHistoryHome", null), $.__decorator = T([Ma], $.prototype, "stateResource", null), $.__decorator = T([Ma], $.prototype, "userDataSyncHome", null), $.__decorator = T([Ma], $.prototype, "sync", null), $.__decorator = T([Ma], $.prototype, "keyboardLayoutResource", null), $.__decorator = T([Ma], $.prototype, "untitledWorkspacesHome", null), $.__decorator = T([Ma], $.prototype, "serviceMachineIdResource", null), $.__decorator = T([Ma], $.prototype, "extHostLogsPath", null), $.__decorator = T([Ma], $.prototype, "debugExtensionHost", null), $.__decorator = T([Ma], $.prototype, "isExtensionDevelopment", null), $.__decorator = T([Ma], $.prototype, "extensionDevelopmentLocationURI", null), $.__decorator = T([Ma], $.prototype, "extensionDevelopmentLocationKind", null), $.__decorator = T([Ma], $.prototype, "extensionTestsLocationURI", null), $.__decorator = T([Ma], $.prototype, "extensionEnabledProposedApi", null), $.__decorator = T([Ma], $.prototype, "debugRenderer", null), $.__decorator = T([Ma], $.prototype, "enableSmokeTestDriver", null), $.__decorator = T([Ma], $.prototype, "disableExtensions", null), $.__decorator = T([Ma], $.prototype, "enableExtensions", null), $.__decorator = T([Ma], $.prototype, "webviewExternalEndpoint", null), $.__decorator = T([Ma], $.prototype, "extensionTelemetryLogResource", null), $.__decorator = T([Ma], $.prototype, "disableTelemetry", null), $.__decorator = T([Ma], $.prototype, "disableExperiments", null), $.__decorator = T([Ma], $.prototype, "verbose", null), $.__decorator = T([Ma], $.prototype, "logExtensionHostCommunication", null), $.__decorator = T([Ma], $.prototype, "skipReleaseNotes", null), $.__decorator = T([Ma], $.prototype, "skipWelcome", null), $.__decorator = T([Ma], $.prototype, "disableWorkspaceTrust", null), $.__decorator = T([Ma], $.prototype, "profile", null), $.__decorator = T([Ma], $.prototype, "editSessionId", null), $.__decorator = T([Ma], $.prototype, "filesToOpenOrCreate", null), $.__decorator = T([Ma], $.prototype, "filesToDiff", null), $.__decorator = T([Ma], $.prototype, "filesToMerge", null), g(), Nd(), qe(), _(), eE();
+$.__decorator = T([Ma], $.prototype, "remoteAuthority", null), $.__decorator = T([Ma], $.prototype, "expectsResolverExtension", null), $.__decorator = T([Ma], $.prototype, "isBuilt", null), $.__decorator = T([Ma], $.prototype, "logLevel", null), $.__decorator = T([Ma], $.prototype, "windowLogsPath", null), $.__decorator = T([Ma], $.prototype, "logFile", null), $.__decorator = T([Ma], $.prototype, "userRoamingDataHome", null), $.__decorator = T([Ma], $.prototype, "argvResource", null), $.__decorator = T([Ma], $.prototype, "cacheHome", null), $.__decorator = T([Ma], $.prototype, "workspaceStorageHome", null), $.__decorator = T([Ma], $.prototype, "localHistoryHome", null), $.__decorator = T([Ma], $.prototype, "stateResource", null), $.__decorator = T([Ma], $.prototype, "userDataSyncHome", null), $.__decorator = T([Ma], $.prototype, "sync", null), $.__decorator = T([Ma], $.prototype, "keyboardLayoutResource", null), $.__decorator = T([Ma], $.prototype, "untitledWorkspacesHome", null), $.__decorator = T([Ma], $.prototype, "serviceMachineIdResource", null), $.__decorator = T([Ma], $.prototype, "extHostLogsPath", null), $.__decorator = T([Ma], $.prototype, "debugExtensionHost", null), $.__decorator = T([Ma], $.prototype, "isExtensionDevelopment", null), $.__decorator = T([Ma], $.prototype, "extensionDevelopmentLocationURI", null), $.__decorator = T([Ma], $.prototype, "extensionDevelopmentLocationKind", null), $.__decorator = T([Ma], $.prototype, "extensionTestsLocationURI", null), $.__decorator = T([Ma], $.prototype, "extensionEnabledProposedApi", null), $.__decorator = T([Ma], $.prototype, "debugRenderer", null), $.__decorator = T([Ma], $.prototype, "enableSmokeTestDriver", null), $.__decorator = T([Ma], $.prototype, "disableExtensions", null), $.__decorator = T([Ma], $.prototype, "enableExtensions", null), $.__decorator = T([Ma], $.prototype, "webviewExternalEndpoint", null), $.__decorator = T([Ma], $.prototype, "extensionTelemetryLogResource", null), $.__decorator = T([Ma], $.prototype, "disableTelemetry", null), $.__decorator = T([Ma], $.prototype, "disableExperiments", null), $.__decorator = T([Ma], $.prototype, "verbose", null), $.__decorator = T([Ma], $.prototype, "logExtensionHostCommunication", null), $.__decorator = T([Ma], $.prototype, "skipReleaseNotes", null), $.__decorator = T([Ma], $.prototype, "skipWelcome", null), $.__decorator = T([Ma], $.prototype, "disableWorkspaceTrust", null), $.__decorator = T([Ma], $.prototype, "profile", null), $.__decorator = T([Ma], $.prototype, "editSessionId", null), $.__decorator = T([Ma], $.prototype, "filesToOpenOrCreate", null), $.__decorator = T([Ma], $.prototype, "filesToDiff", null), $.__decorator = T([Ma], $.prototype, "filesToMerge", null), g(), Nd(), qe(), _(), BT();
 var w$ = class extends $ {
-	constructor(e = wE().id, t = pE(), n) {
-		super(e, sE, t, n);
+	constructor(e = cE().id, t = jE(), n) {
+		super(e, uE, t, n);
 	}
 };
 w$ = T([R(2, NT)], w$);
@@ -19884,7 +19884,7 @@ var M$ = class {
 		super(e, void 0);
 	}
 };
-g(), k(), rt(), xa(), nf(), O(), Gf(), Uu(), _(), bf(), dd(), Ug(), Hd(), kf(), Td(), kd(), Mr(), af(), ad(), li(), Mt(), Fr(), st(), zc(), as(), Fi(), Mf(), Po(), FE(), Qe();
+g(), k(), rt(), xa(), nf(), O(), Gf(), Uu(), _(), bf(), dd(), Ug(), Hd(), kf(), Td(), kd(), Mr(), af(), ad(), li(), Mt(), Fr(), st(), zc(), as(), Fi(), Mf(), Po(), DT(), Qe();
 var I$ = class extends Mi {
 	constructor(e) {
 		super(e.id, e.name, e.classNames?.join(" "), !0), this.item = e, this._onDidChangeCompositeBarActionItem = this._register(new W()), this.onDidChangeCompositeBarActionItem = this._onDidChangeCompositeBarActionItem.event, this._onDidChangeActivity = this._register(new W()), this.onDidChangeActivity = this._onDidChangeActivity.event, this._activities = [];
@@ -20176,7 +20176,7 @@ var V$ = class extends Mi {
 		super(e), this.location = t, this.offset = n;
 	}
 	async run(e) {
-		let t = e.get(wT), n = t.getActivePaneComposite(this.location);
+		let t = e.get(AT), n = t.getActivePaneComposite(this.location);
 		if (!n) return;
 		let r, i = t.getVisiblePaneCompositeIds(this.location);
 		for (let e = 0; e < i.length; e++) if (i[e] === n.getId()) {
@@ -20186,7 +20186,7 @@ var V$ = class extends Mi {
 		r !== void 0 && await t.openPaneComposite(r, this.location, !0);
 	}
 }, W$ = /* @__PURE__ */ t({});
-iu(), k(), Qa(), Po(), vO(), BE(), cl(), Hd(), bn(), yw(), bS(), Jh(), FE(), nr(), Gd(), ns(W$);
+iu(), k(), Qa(), Po(), vO(), PT(), cl(), Hd(), bn(), yw(), bS(), Jh(), DT(), nr(), Gd(), ns(W$);
 var G$ = Lu("panel-maximize", P.screenFull, x(3596, "Icon to maximize a panel.")), K$ = Lu("panel-close", P.close, x(3597, "Icon to close a panel.")), q$ = Lu("panel-layout-icon", P.layoutPanel, x(3598, "Icon to toggle the panel off when it is on.")), J$ = Lu("panel-layout-icon-off", P.layoutPanelOff, x(3599, "Icon to toggle the panel on when it is off.")), Y$ = class e extends L {
 	static {
 		this.ID = "workbench.action.togglePanel";
@@ -20199,7 +20199,7 @@ var G$ = Lu("panel-maximize", P.screenFull, x(3596, "Icon to maximize a panel.")
 			id: e.ID,
 			title: e.LABEL,
 			toggled: {
-				condition: VE,
+				condition: FT,
 				title: x(3601, "Hide Panel"),
 				icon: K$,
 				mnemonicTitle: x(3602, "&&Panel")
@@ -20224,7 +20224,7 @@ var G$ = Lu("panel-maximize", P.screenFull, x(3596, "Icon to maximize a panel.")
 		});
 	}
 	async run(e) {
-		let t = e.get(rE);
+		let t = e.get(fE);
 		t.setPartHidden(t.isVisible(Y.PANEL_PART), Y.PANEL_PART);
 	}
 };
@@ -20242,12 +20242,12 @@ U(Y$), id.appendMenuItem(G.PanelTitle, {
 			id: "workbench.action.closePanel",
 			title: b(3601, "Hide Panel"),
 			category: Z.View,
-			precondition: VE,
+			precondition: FT,
 			f1: !0
 		});
 	}
 	run(e) {
-		e.get(rE).setPartHidden(!0, Y.PANEL_PART);
+		e.get(fE).setPartHidden(!0, Y.PANEL_PART);
 	}
 }), U(class extends L {
 	static {
@@ -20265,7 +20265,7 @@ U(Y$), id.appendMenuItem(G.PanelTitle, {
 		});
 	}
 	async run(e) {
-		let t = e.get(rE), n = e.get(wT);
+		let t = e.get(fE), n = e.get(AT);
 		t.isVisible(Y.PANEL_PART) || t.setPartHidden(!1, Y.PANEL_PART), n.getActivePaneComposite(zw.Panel)?.focus();
 	}
 });
@@ -20290,16 +20290,16 @@ function Q$(e, t, n, r, i) {
 	};
 }
 function $$(e, t, n, r) {
-	return Q$(e, t, n, r, KT.notEqualsTo(tE(r)));
+	return Q$(e, t, n, r, tE.notEqualsTo(kE(r)));
 }
 function e1(e, t, n, r) {
-	return Q$(e, t, n, r, jT.notEqualsTo(r));
+	return Q$(e, t, n, r, JT.notEqualsTo(r));
 }
 var t1 = [
-	$$(X$.TOP, b(3605, "Move Panel To Top"), x(3606, "Top"), IT.TOP),
-	$$(X$.LEFT, b(3607, "Move Panel Left"), x(3608, "Left"), IT.LEFT),
-	$$(X$.RIGHT, b(3609, "Move Panel Right"), x(3610, "Right"), IT.RIGHT),
-	$$(X$.BOTTOM, b(3611, "Move Panel To Bottom"), x(3612, "Bottom"), IT.BOTTOM)
+	$$(X$.TOP, b(3605, "Move Panel To Top"), x(3606, "Top"), ST.TOP),
+	$$(X$.LEFT, b(3607, "Move Panel Left"), x(3608, "Left"), ST.LEFT),
+	$$(X$.RIGHT, b(3609, "Move Panel Right"), x(3610, "Right"), ST.RIGHT),
+	$$(X$.BOTTOM, b(3611, "Move Panel To Bottom"), x(3612, "Bottom"), ST.BOTTOM)
 ], n1 = [
 	e1(Z$.LEFT, b(3613, "Set Panel Alignment to Left"), x(3614, "Left"), "left"),
 	e1(Z$.RIGHT, b(3615, "Set Panel Alignment to Right"), x(3616, "Right"), "right"),
@@ -20323,7 +20323,7 @@ id.appendMenuItem(G.MenubarAppearanceMenu, {
 			});
 		}
 		run(e) {
-			e.get(rE).setPanelPosition(a === void 0 ? IT.BOTTOM : a);
+			e.get(fE).setPanelPosition(a === void 0 ? ST.BOTTOM : a);
 		}
 	}), id.appendMenuItem(G.PanelPositionMenu, {
 		command: {
@@ -20351,7 +20351,7 @@ id.appendMenuItem(G.MenubarAppearanceMenu, {
 			});
 		}
 		run(e) {
-			e.get(rE).setPanelAlignment(i === void 0 ? "center" : i);
+			e.get(fE).setPanelAlignment(i === void 0 ? "center" : i);
 		}
 	}), id.appendMenuItem(G.PanelAlignmentMenu, {
 		command: {
@@ -20388,9 +20388,9 @@ id.appendMenuItem(G.MenubarAppearanceMenu, {
 			category: Z.View,
 			f1: !0,
 			icon: G$,
-			precondition: y.or(jT.isEqualTo("center"), y.and(KT.notEqualsTo("bottom"), KT.notEqualsTo("top"))),
+			precondition: y.or(JT.isEqualTo("center"), y.and(tE.notEqualsTo("bottom"), tE.notEqualsTo("top"))),
 			toggled: {
-				condition: LT,
+				condition: CT,
 				icon: G$,
 				tooltip: x(3627, "Restore Panel Size")
 			},
@@ -20398,13 +20398,13 @@ id.appendMenuItem(G.MenubarAppearanceMenu, {
 				id: G.PanelTitle,
 				group: "navigation",
 				order: 1,
-				when: y.or(jT.isEqualTo("center"), y.and(KT.notEqualsTo("bottom"), KT.notEqualsTo("top")))
+				when: y.or(JT.isEqualTo("center"), y.and(tE.notEqualsTo("bottom"), tE.notEqualsTo("top")))
 			}]
 		});
 	}
 	run(e) {
-		let t = e.get(rE), n = e.get(Zc);
-		if (t.getPanelAlignment() !== "center" && xT(t.getPanelPosition())) {
+		let t = e.get(fE), n = e.get(Zc);
+		if (t.getPanelAlignment() !== "center" && $T(t.getPanelPosition())) {
 			n.warn(x(3628, "Maximizing the panel is only supported when it is center aligned."));
 			return;
 		}
@@ -20419,11 +20419,11 @@ id.appendMenuItem(G.MenubarAppearanceMenu, {
 			title: x(3629, "Toggle Panel"),
 			icon: J$,
 			toggled: {
-				condition: VE,
+				condition: FT,
 				icon: q$
 			}
 		},
-		when: y.and(JT.negate(), y.or(y.equals("config.workbench.layoutControl.type", "toggles"), y.equals("config.workbench.layoutControl.type", "both"))),
+		when: y.and(ZT.negate(), y.or(y.equals("config.workbench.layoutControl.type", "toggles"), y.equals("config.workbench.layoutControl.type", "both"))),
 		order: 1
 	}
 }]);
@@ -20432,7 +20432,7 @@ var r1 = class extends L {
 		super(n), this.source = e, this.destination = t;
 	}
 	run(e, ...t) {
-		let n = e.get(Hb), r = e.get(rE), i = e.get(Wv), a = n.getViewContainersByLocation(this.source), o = n.getViewContainersByLocation(this.destination);
+		let n = e.get(Hb), r = e.get(fE), i = e.get(Wv), a = n.getViewContainersByLocation(this.source), o = n.getViewContainersByLocation(this.destination);
 		if (a.length) {
 			let e = i.getVisibleViewContainer(this.source);
 			a.forEach((e) => n.moveViewContainerToLocation(e, this.destination, void 0, this.desc.id)), r.setPartHidden(!1, this.destination === zw.Panel ? Y.PANEL_PART : Y.AUXILIARYBAR_PART), e && o.length === 0 && i.openViewContainer(e.id, !0);
@@ -20489,7 +20489,7 @@ var o1 = class e extends r1 {
 		});
 	}
 };
-U(o1), U(s1), Hd(), k(), Po(), cl(), bn(), vO(), mo(), _E(), yw(), BE(), WT(), FE(), Gd(), Qa();
+U(o1), U(s1), Hd(), k(), Po(), cl(), bn(), vO(), mo(), NE(), yw(), PT(), FE(), DT(), Gd(), Qa();
 var c1 = Lu("auxiliarybar-maximize", P.screenFull, x(3004, "Icon to maximize the secondary side bar.")), l1 = Lu("auxiliarybar-close", K$, x(3005, "Icon to close the secondary side bar.")), u1 = Lu("auxiliarybar-right-layout-icon", P.layoutSidebarRight, x(3006, "Icon to toggle the secondary side bar off in its right position.")), d1 = Lu("auxiliarybar-right-off-layout-icon", P.layoutSidebarRightOff, x(3007, "Icon to toggle the secondary side bar on in its right position.")), f1 = Lu("auxiliarybar-left-layout-icon", P.layoutSidebarLeft, x(3008, "Icon to toggle the secondary side bar in its left position.")), p1 = Lu("auxiliarybar-left-off-layout-icon", P.layoutSidebarLeftOff, x(3009, "Icon to toggle the secondary side bar on in its left position.")), m1 = class e extends L {
 	static {
 		this.ID = "workbench.action.toggleAuxiliaryBar";
@@ -20502,7 +20502,7 @@ var c1 = Lu("auxiliarybar-maximize", P.screenFull, x(3004, "Icon to maximize the
 			id: e.ID,
 			title: e.LABEL,
 			toggled: {
-				condition: dE,
+				condition: CE,
 				title: x(3011, "Hide Secondary Side Bar"),
 				icon: l1,
 				mnemonicTitle: x(3012, "&&Secondary Side Bar")
@@ -20527,7 +20527,7 @@ var c1 = Lu("auxiliarybar-maximize", P.screenFull, x(3004, "Icon to maximize the
 		});
 	}
 	async run(e) {
-		let t = e.get(rE), n = t.isVisible(Y.AUXILIARYBAR_PART);
+		let t = e.get(fE), n = t.isVisible(Y.AUXILIARYBAR_PART);
 		t.setPartHidden(n, Y.AUXILIARYBAR_PART), Ka(n ? x(3014, "Secondary Side Bar hidden") : x(3015, "Secondary Side Bar shown"));
 	}
 };
@@ -20539,19 +20539,19 @@ U(m1), id.appendMenuItem(G.AuxiliaryBarTitle, {
 	},
 	group: "navigation",
 	order: 2,
-	when: y.equals(`config.${UT.ACTIVITY_BAR_LOCATION}`, yE.DEFAULT)
+	when: y.equals(`config.${VT.ACTIVITY_BAR_LOCATION}`, KT.DEFAULT)
 }), U(class extends L {
 	constructor() {
 		super({
 			id: "workbench.action.closeAuxiliaryBar",
 			title: b(3011, "Hide Secondary Side Bar"),
 			category: Z.View,
-			precondition: dE,
+			precondition: CE,
 			f1: !0
 		});
 	}
 	run(e) {
-		e.get(rE).setPartHidden(!0, Y.AUXILIARYBAR_PART);
+		e.get(fE).setPartHidden(!0, Y.AUXILIARYBAR_PART);
 	}
 }), U(class e extends L {
 	static {
@@ -20569,7 +20569,7 @@ U(m1), id.appendMenuItem(G.AuxiliaryBarTitle, {
 		});
 	}
 	async run(e) {
-		let t = e.get(wT), n = e.get(rE);
+		let t = e.get(AT), n = e.get(fE);
 		n.isVisible(Y.AUXILIARYBAR_PART) || n.setPartHidden(!1, Y.AUXILIARYBAR_PART), t.getActivePaneComposite(zw.AuxiliaryBar)?.focus();
 	}
 }), id.appendMenuItems([
@@ -20581,12 +20581,12 @@ U(m1), id.appendMenuItem(G.AuxiliaryBarTitle, {
 				id: m1.ID,
 				title: x(3017, "Toggle Secondary Side Bar"),
 				toggled: {
-					condition: dE,
+					condition: CE,
 					icon: f1
 				},
 				icon: p1
 			},
-			when: y.and(JT.negate(), y.or(y.equals("config.workbench.layoutControl.type", "toggles"), y.equals("config.workbench.layoutControl.type", "both")), y.equals("config.workbench.sideBar.location", "right")),
+			when: y.and(ZT.negate(), y.or(y.equals("config.workbench.layoutControl.type", "toggles"), y.equals("config.workbench.layoutControl.type", "both")), y.equals("config.workbench.sideBar.location", "right")),
 			order: 0
 		}
 	},
@@ -20598,12 +20598,12 @@ U(m1), id.appendMenuItem(G.AuxiliaryBarTitle, {
 				id: m1.ID,
 				title: x(3017, "Toggle Secondary Side Bar"),
 				toggled: {
-					condition: dE,
+					condition: CE,
 					icon: u1
 				},
 				icon: d1
 			},
-			when: y.and(JT.negate(), y.or(y.equals("config.workbench.layoutControl.type", "toggles"), y.equals("config.workbench.layoutControl.type", "both")), y.equals("config.workbench.sideBar.location", "left")),
+			when: y.and(ZT.negate(), y.or(y.equals("config.workbench.layoutControl.type", "toggles"), y.equals("config.workbench.layoutControl.type", "both")), y.equals("config.workbench.sideBar.location", "left")),
 			order: 2
 		}
 	},
@@ -20615,7 +20615,7 @@ U(m1), id.appendMenuItem(G.AuxiliaryBarTitle, {
 				id: m1.ID,
 				title: b(3018, "Hide Secondary Side Bar")
 			},
-			when: y.and(dE, y.equals("viewContainerLocation", Eb(zw.AuxiliaryBar))),
+			when: y.and(CE, y.equals("viewContainerLocation", Eb(zw.AuxiliaryBar))),
 			order: 2
 		}
 	}
@@ -20648,18 +20648,18 @@ U(m1), id.appendMenuItem(G.AuxiliaryBarTitle, {
 			tooltip: x(3022, "Maximize Secondary Side Bar Size"),
 			category: Z.View,
 			f1: !0,
-			precondition: ME.negate(),
+			precondition: DE.negate(),
 			icon: c1,
 			menu: {
 				id: G.AuxiliaryBarTitle,
 				group: "navigation",
 				order: 1,
-				when: ME.negate()
+				when: DE.negate()
 			}
 		});
 	}
 	run(e) {
-		e.get(rE).setAuxiliaryBarMaximized(!0);
+		e.get(fE).setAuxiliaryBarMaximized(!0);
 	}
 }), U(class e extends L {
 	static {
@@ -20672,19 +20672,19 @@ U(m1), id.appendMenuItem(G.AuxiliaryBarTitle, {
 			tooltip: x(3024, "Restore Secondary Side Bar Size"),
 			category: Z.View,
 			f1: !0,
-			precondition: ME,
-			toggled: ME,
+			precondition: DE,
+			toggled: DE,
 			icon: c1,
 			menu: {
 				id: G.AuxiliaryBarTitle,
 				group: "navigation",
 				order: 1,
-				when: ME
+				when: DE
 			}
 		});
 	}
 	run(e) {
-		e.get(rE).setAuxiliaryBarMaximized(!1);
+		e.get(fE).setAuxiliaryBarMaximized(!1);
 	}
 }), U(class e extends L {
 	static {
@@ -20699,9 +20699,9 @@ U(m1), id.appendMenuItem(G.AuxiliaryBarTitle, {
 		});
 	}
 	run(e) {
-		e.get(rE).toggleMaximizedAuxiliaryBar();
+		e.get(fE).toggleMaximizedAuxiliaryBar();
 	}
-}), k(), Po(), vO(), kd(), mo(), BE(), WT(), _(), Qa(), Vc(), sn(), Gd(), cl(), Il(), yw(), bS(), Jh(), Co(), or(), FE(), nf(), _E(), Hd(), kf(), O(), bn(), Ud(), bf(), DO(), fD();
+}), k(), Po(), vO(), kd(), mo(), PT(), FE(), _(), Qa(), Vc(), sn(), Gd(), cl(), Il(), yw(), bS(), Jh(), Co(), or(), DT(), nf(), NE(), Hd(), kf(), O(), bn(), Ud(), bf(), DO(), fD();
 var h1 = Lu("menuBar", P.layoutMenubar, x(2774, "Represents the menu bar")), g1 = Lu("activity-bar-left", P.layoutActivitybarLeft, x(2775, "Represents the activity bar in the left position")), _1 = Lu("activity-bar-right", P.layoutActivitybarRight, x(2776, "Represents the activity bar in the right position")), v1 = Lu("panel-left", P.layoutSidebarLeft, x(2777, "Represents a side bar in the left position")), y1 = Lu("panel-left-off", P.layoutSidebarLeftOff, x(2778, "Represents a side bar in the left position toggled off")), b1 = Lu("panel-right", P.layoutSidebarRight, x(2779, "Represents side bar in the right position")), x1 = Lu("panel-right-off", P.layoutSidebarRightOff, x(2780, "Represents side bar in the right position toggled off")), S1 = Lu("panel-bottom", P.layoutPanel, x(2781, "Represents the bottom panel")), C1 = Lu("statusBar", P.layoutStatusbar, x(2782, "Represents the status bar")), w1 = Lu("panel-align-left", P.layoutPanelLeft, x(2783, "Represents the bottom panel alignment set to the left")), T1 = Lu("panel-align-right", P.layoutPanelRight, x(2784, "Represents the bottom panel alignment set to the right")), E1 = Lu("panel-align-center", P.layoutPanelCenter, x(2785, "Represents the bottom panel alignment set to the center")), D1 = Lu("panel-align-justify", P.layoutPanelJustify, x(2786, "Represents the bottom panel alignment set to justified")), O1 = Lu("quickInputAlignmentTop", P.arrowUp, x(2787, "Represents quick input alignment set to the top")), k1 = Lu("quickInputAlignmentCenter", P.circle, x(2788, "Represents quick input alignment set to the center")), A1 = Lu("fullscreen", P.screenFull, x(2789, "Represents full screen")), j1 = Lu("centerLayoutIcon", P.layoutCentered, x(2790, "Represents centered layout mode")), M1 = Lu("zenMode", P.target, x(2791, "Represents zen mode")), N1 = "workbench.action.toggleActivityBarVisibility";
 U(class extends L {
 	constructor() {
@@ -20711,10 +20711,10 @@ U(class extends L {
 				...b(2792, "Toggle Centered Layout"),
 				mnemonicTitle: x(2793, "&&Centered Layout")
 			},
-			precondition: CT.toNegated(),
+			precondition: kT.toNegated(),
 			category: Z.View,
 			f1: !0,
-			toggled: XT,
+			toggled: WT,
 			menu: [{
 				id: G.MenubarAppearanceMenu,
 				group: "1_toggle_view",
@@ -20723,7 +20723,7 @@ U(class extends L {
 		});
 	}
 	run(e) {
-		let t = e.get(rE), n = e.get(lD);
+		let t = e.get(fE), n = e.get(lD);
 		t.centerMainEditorLayout(!t.isMainEditorLayoutCentered()), n.activeGroup.focus();
 	}
 });
@@ -20736,22 +20736,22 @@ var P1 = "workbench.sideBar.location", F1 = class extends L {
 		}), this.position = n;
 	}
 	async run(e) {
-		let t = e.get(rE), n = e.get(I);
-		if (t.getSideBarPosition() !== this.position) return n.updateValue(P1, tE(this.position));
+		let t = e.get(fE), n = e.get(I);
+		if (t.getSideBarPosition() !== this.position) return n.updateValue(P1, kE(this.position));
 	}
 }, I1 = class e extends F1 {
 	static {
 		this.ID = "workbench.action.moveSideBarRight";
 	}
 	constructor() {
-		super(e.ID, b(2794, "Move Primary Side Bar Right"), IT.RIGHT);
+		super(e.ID, b(2794, "Move Primary Side Bar Right"), ST.RIGHT);
 	}
 }, L1 = class e extends F1 {
 	static {
 		this.ID = "workbench.action.moveSideBarLeft";
 	}
 	constructor() {
-		super(e.ID, b(2795, "Move Primary Side Bar Left"), IT.LEFT);
+		super(e.ID, b(2795, "Move Primary Side Bar Left"), ST.LEFT);
 	}
 };
 U(I1), U(L1);
@@ -20763,7 +20763,7 @@ var R1 = class e extends L {
 		this.LABEL = x(2796, "Toggle Primary Side Bar Position");
 	}
 	static getLabel(e) {
-		return e.getSideBarPosition() === IT.LEFT ? x(2794, "Move Primary Side Bar Right") : x(2795, "Move Primary Side Bar Left");
+		return e.getSideBarPosition() === ST.LEFT ? x(2794, "Move Primary Side Bar Right") : x(2795, "Move Primary Side Bar Left");
 	}
 	constructor() {
 		super({
@@ -20774,7 +20774,7 @@ var R1 = class e extends L {
 		});
 	}
 	run(e) {
-		let t = e.get(rE), n = e.get(I), r = t.getSideBarPosition() === IT.LEFT ? "right" : "left";
+		let t = e.get(fE), n = e.get(I), r = t.getSideBarPosition() === ST.LEFT ? "right" : "left";
 		return n.updateValue(P1, r);
 	}
 };
@@ -20785,7 +20785,7 @@ id.appendMenuItem(G.LayoutControlMenu, {
 	title: x(2798, "Configure Layout"),
 	icon: z1,
 	group: "1_workbench_layout",
-	when: y.and(JT.negate(), y.equals("config.workbench.layoutControl.type", "menu"))
+	when: y.and(ZT.negate(), y.equals("config.workbench.layoutControl.type", "menu"))
 }), id.appendMenuItems([
 	{
 		id: G.ViewContainerTitleContext,
@@ -20861,12 +20861,12 @@ id.appendMenuItem(G.LayoutControlMenu, {
 			},
 			category: Z.View,
 			f1: !0,
-			toggled: VT,
-			precondition: y.and(CT.toNegated(), y.or(jT.isEqualTo("center"), KT.notEqualsTo("bottom")))
+			toggled: _E,
+			precondition: y.and(kT.toNegated(), y.or(JT.isEqualTo("center"), tE.notEqualsTo("bottom")))
 		});
 	}
 	run(e) {
-		e.get(rE).toggleMaximizedPanel();
+		e.get(fE).toggleMaximizedPanel();
 	}
 }), id.appendMenuItem(G.MenubarViewMenu, {
 	group: "2_appearance",
@@ -20886,7 +20886,7 @@ var B1 = class e extends L {
 			id: e.ID,
 			title: b(2809, "Toggle Primary Side Bar Visibility"),
 			toggled: {
-				condition: $T,
+				condition: zT,
 				title: x(2810, "Primary Side Bar"),
 				mnemonicTitle: x(2811, "&&Primary Side Bar")
 			},
@@ -20909,7 +20909,7 @@ var B1 = class e extends L {
 		});
 	}
 	run(e) {
-		let t = e.get(rE), n = t.isVisible(Y.SIDEBAR_PART);
+		let t = e.get(fE), n = t.isVisible(Y.SIDEBAR_PART);
 		t.setPartHidden(n, Y.SIDEBAR_PART), Ka(n ? x(2813, "Primary Side Bar hidden") : x(2814, "Primary Side Bar shown"));
 	}
 };
@@ -20922,7 +20922,7 @@ U(B1), id.appendMenuItems([
 				id: B1.ID,
 				title: x(2808, "Hide Primary Side Bar")
 			},
-			when: y.and($T, y.equals("viewContainerLocation", Eb(zw.Sidebar))),
+			when: y.and(zT, y.equals("viewContainerLocation", Eb(zw.Sidebar))),
 			order: 2
 		}
 	},
@@ -20935,11 +20935,11 @@ U(B1), id.appendMenuItems([
 				title: x(2815, "Toggle Primary Side Bar"),
 				icon: y1,
 				toggled: {
-					condition: $T,
+					condition: zT,
 					icon: v1
 				}
 			},
-			when: y.and(JT.negate(), y.or(y.equals("config.workbench.layoutControl.type", "toggles"), y.equals("config.workbench.layoutControl.type", "both")), y.equals("config.workbench.sideBar.location", "left")),
+			when: y.and(ZT.negate(), y.or(y.equals("config.workbench.layoutControl.type", "toggles"), y.equals("config.workbench.layoutControl.type", "both")), y.equals("config.workbench.sideBar.location", "left")),
 			order: 0
 		}
 	},
@@ -20952,11 +20952,11 @@ U(B1), id.appendMenuItems([
 				title: x(2815, "Toggle Primary Side Bar"),
 				icon: x1,
 				toggled: {
-					condition: $T,
+					condition: zT,
 					icon: b1
 				}
 			},
-			when: y.and(JT.negate(), y.or(y.equals("config.workbench.layoutControl.type", "toggles"), y.equals("config.workbench.layoutControl.type", "both")), y.equals("config.workbench.sideBar.location", "right")),
+			when: y.and(ZT.negate(), y.or(y.equals("config.workbench.layoutControl.type", "toggles"), y.equals("config.workbench.layoutControl.type", "both")), y.equals("config.workbench.sideBar.location", "right")),
 			order: 2
 		}
 	}
@@ -20986,7 +20986,7 @@ var V1 = class e extends L {
 		});
 	}
 	run(t) {
-		let n = t.get(rE), r = t.get(I), i = !n.isVisible(Y.STATUSBAR_PART, Hs);
+		let n = t.get(fE), r = t.get(I), i = !n.isVisible(Y.STATUSBAR_PART, Hs);
 		return r.updateValue(e.statusbarVisibleKey, i);
 	}
 };
@@ -21010,48 +21010,48 @@ var H1 = class extends L {
 		this.ID = "workbench.action.hideEditorTabs";
 	}
 	constructor() {
-		let t = y.and(y.equals(`config.${UT.EDITOR_TABS_MODE}`, BT.NONE).negate(), LE.negate()), n = b(2818, "Hide Editor Tabs");
-		super(UT.EDITOR_TABS_MODE, BT.NONE, n, e.ID, t, b(2819, "Hide Tab Bar"));
+		let t = y.and(y.equals(`config.${VT.EDITOR_TABS_MODE}`, IT.NONE).negate(), RE.negate()), n = b(2818, "Hide Editor Tabs");
+		super(VT.EDITOR_TABS_MODE, IT.NONE, n, e.ID, t, b(2819, "Hide Tab Bar"));
 	}
 }, W1 = class e extends H1 {
 	static {
 		this.ID = "workbench.action.zenHideEditorTabs";
 	}
 	constructor() {
-		let t = y.and(y.equals(`config.${GT.SHOW_TABS}`, BT.NONE).negate(), LE), n = b(2820, "Hide Editor Tabs in Zen Mode");
-		super(GT.SHOW_TABS, BT.NONE, n, e.ID, t, b(2821, "Hide Tab Bar in Zen Mode"));
+		let t = y.and(y.equals(`config.${eE.SHOW_TABS}`, IT.NONE).negate(), RE), n = b(2820, "Hide Editor Tabs in Zen Mode");
+		super(eE.SHOW_TABS, IT.NONE, n, e.ID, t, b(2821, "Hide Tab Bar in Zen Mode"));
 	}
 }, G1 = class e extends H1 {
 	static {
 		this.ID = "workbench.action.showMultipleEditorTabs";
 	}
 	constructor() {
-		let t = y.and(y.equals(`config.${UT.EDITOR_TABS_MODE}`, BT.MULTIPLE).negate(), LE.negate()), n = b(2822, "Show Multiple Editor Tabs");
-		super(UT.EDITOR_TABS_MODE, BT.MULTIPLE, n, e.ID, t, b(2823, "Show Tab Bar with multiple tabs"));
+		let t = y.and(y.equals(`config.${VT.EDITOR_TABS_MODE}`, IT.MULTIPLE).negate(), RE.negate()), n = b(2822, "Show Multiple Editor Tabs");
+		super(VT.EDITOR_TABS_MODE, IT.MULTIPLE, n, e.ID, t, b(2823, "Show Tab Bar with multiple tabs"));
 	}
 }, K1 = class e extends H1 {
 	static {
 		this.ID = "workbench.action.zenShowMultipleEditorTabs";
 	}
 	constructor() {
-		let t = y.and(y.equals(`config.${GT.SHOW_TABS}`, BT.MULTIPLE).negate(), LE), n = b(2824, "Show Multiple Editor Tabs in Zen Mode");
-		super(GT.SHOW_TABS, BT.MULTIPLE, n, e.ID, t, b(2825, "Show Tab Bar in Zen Mode"));
+		let t = y.and(y.equals(`config.${eE.SHOW_TABS}`, IT.MULTIPLE).negate(), RE), n = b(2824, "Show Multiple Editor Tabs in Zen Mode");
+		super(eE.SHOW_TABS, IT.MULTIPLE, n, e.ID, t, b(2825, "Show Tab Bar in Zen Mode"));
 	}
 }, q1 = class e extends H1 {
 	static {
 		this.ID = "workbench.action.showEditorTab";
 	}
 	constructor() {
-		let t = y.and(y.equals(`config.${UT.EDITOR_TABS_MODE}`, BT.SINGLE).negate(), LE.negate()), n = b(2826, "Show Single Editor Tab");
-		super(UT.EDITOR_TABS_MODE, BT.SINGLE, n, e.ID, t, b(2827, "Show Tab Bar with one Tab"));
+		let t = y.and(y.equals(`config.${VT.EDITOR_TABS_MODE}`, IT.SINGLE).negate(), RE.negate()), n = b(2826, "Show Single Editor Tab");
+		super(VT.EDITOR_TABS_MODE, IT.SINGLE, n, e.ID, t, b(2827, "Show Tab Bar with one Tab"));
 	}
 }, J1 = class e extends H1 {
 	static {
 		this.ID = "workbench.action.zenShowEditorTab";
 	}
 	constructor() {
-		let t = y.and(y.equals(`config.${GT.SHOW_TABS}`, BT.SINGLE).negate(), LE), n = b(2828, "Show Single Editor Tab in Zen Mode");
-		super(GT.SHOW_TABS, BT.SINGLE, n, e.ID, t, b(2829, "Show Tab Bar in Zen Mode with one Tab"));
+		let t = y.and(y.equals(`config.${eE.SHOW_TABS}`, IT.SINGLE).negate(), RE), n = b(2828, "Show Single Editor Tab in Zen Mode");
+		super(eE.SHOW_TABS, IT.SINGLE, n, e.ID, t, b(2829, "Show Tab Bar in Zen Mode with one Tab"));
 	}
 };
 U(U1), U(W1), U(G1), U(K1), U(q1), U(J1), id.appendMenuItem(G.MenubarAppearanceMenu, {
@@ -21059,13 +21059,13 @@ U(U1), U(W1), U(G1), U(K1), U(q1), U(J1), id.appendMenuItem(G.MenubarAppearanceM
 	title: x(2830, "Tab Bar"),
 	group: "3_workbench_layout_move",
 	order: 10,
-	when: LE.negate()
+	when: RE.negate()
 }), id.appendMenuItem(G.MenubarAppearanceMenu, {
 	submenu: G.EditorTabsBarShowTabsZenModeSubmenu,
 	title: x(2830, "Tab Bar"),
 	group: "3_workbench_layout_move",
 	order: 10,
-	when: LE
+	when: RE
 });
 var Y1 = class e extends L {
 	static {
@@ -21076,13 +21076,13 @@ var Y1 = class e extends L {
 			id: e.ID,
 			title: b(2831, "Move Editor Actions to Title Bar"),
 			category: Z.View,
-			precondition: y.equals(`config.${UT.EDITOR_ACTIONS_LOCATION}`, RT.TITLEBAR).negate(),
+			precondition: y.equals(`config.${VT.EDITOR_ACTIONS_LOCATION}`, jT.TITLEBAR).negate(),
 			metadata: { description: b(2832, "Move Editor Actions from the tab bar to the title bar") },
 			f1: !0
 		});
 	}
 	run(e) {
-		return e.get(I).updateValue(UT.EDITOR_ACTIONS_LOCATION, RT.TITLEBAR);
+		return e.get(I).updateValue(VT.EDITOR_ACTIONS_LOCATION, jT.TITLEBAR);
 	}
 };
 U(Y1);
@@ -21095,13 +21095,13 @@ var X1 = class e extends L {
 			id: e.ID,
 			title: b(2833, "Move Editor Actions to Tab Bar"),
 			category: Z.View,
-			precondition: y.and(y.equals(`config.${UT.EDITOR_ACTIONS_LOCATION}`, RT.DEFAULT).negate(), y.equals(`config.${UT.EDITOR_TABS_MODE}`, BT.NONE).negate()),
+			precondition: y.and(y.equals(`config.${VT.EDITOR_ACTIONS_LOCATION}`, jT.DEFAULT).negate(), y.equals(`config.${VT.EDITOR_TABS_MODE}`, IT.NONE).negate()),
 			metadata: { description: b(2834, "Move Editor Actions from the title bar to the tab bar") },
 			f1: !0
 		});
 	}
 	run(e) {
-		return e.get(I).updateValue(UT.EDITOR_ACTIONS_LOCATION, RT.DEFAULT);
+		return e.get(I).updateValue(VT.EDITOR_ACTIONS_LOCATION, jT.DEFAULT);
 	}
 };
 U(X1);
@@ -21114,13 +21114,13 @@ var Z1 = class e extends L {
 			id: e.ID,
 			title: b(2835, "Hide Editor Actions"),
 			category: Z.View,
-			precondition: y.equals(`config.${UT.EDITOR_ACTIONS_LOCATION}`, RT.HIDDEN).negate(),
+			precondition: y.equals(`config.${VT.EDITOR_ACTIONS_LOCATION}`, jT.HIDDEN).negate(),
 			metadata: { description: b(2836, "Hide Editor Actions in the tab and title bar") },
 			f1: !0
 		});
 	}
 	run(e) {
-		return e.get(I).updateValue(UT.EDITOR_ACTIONS_LOCATION, RT.HIDDEN);
+		return e.get(I).updateValue(VT.EDITOR_ACTIONS_LOCATION, jT.HIDDEN);
 	}
 };
 U(Z1), U(class e extends L {
@@ -21132,13 +21132,13 @@ U(Z1), U(class e extends L {
 			id: e.ID,
 			title: b(2837, "Show Editor Actions"),
 			category: Z.View,
-			precondition: y.equals(`config.${UT.EDITOR_ACTIONS_LOCATION}`, RT.HIDDEN),
+			precondition: y.equals(`config.${VT.EDITOR_ACTIONS_LOCATION}`, jT.HIDDEN),
 			metadata: { description: b(2838, "Make Editor Actions visible.") },
 			f1: !0
 		});
 	}
 	run(e) {
-		return e.get(I).updateValue(UT.EDITOR_ACTIONS_LOCATION, RT.DEFAULT);
+		return e.get(I).updateValue(VT.EDITOR_ACTIONS_LOCATION, jT.DEFAULT);
 	}
 }), id.appendMenuItem(G.MenubarAppearanceMenu, {
 	submenu: G.EditorActionsPositionSubmenu,
@@ -21189,7 +21189,7 @@ if (U($1), U(class extends L {
 			id: "workbench.action.toggleSeparatePinnedEditorTabs",
 			title: b(2842, "Separate Pinned Editor Tabs"),
 			category: Z.View,
-			precondition: y.equals(`config.${UT.EDITOR_TABS_MODE}`, BT.MULTIPLE),
+			precondition: y.equals(`config.${VT.EDITOR_TABS_MODE}`, IT.MULTIPLE),
 			metadata: { description: b(2843, "Toggle whether pinned editor tabs are shown on a separate row above unpinned tabs.") },
 			f1: !0
 		});
@@ -21206,14 +21206,14 @@ if (U($1), U(class extends L {
 				...b(2844, "Toggle Zen Mode"),
 				mnemonicTitle: x(2845, "Zen Mode")
 			},
-			precondition: CT.toNegated(),
+			precondition: kT.toNegated(),
 			category: Z.View,
 			f1: !0,
 			keybinding: {
 				weight: F.WorkbenchContrib,
 				primary: Rt(S.CtrlCmd | A.KeyK, A.KeyZ)
 			},
-			toggled: LE,
+			toggled: RE,
 			menu: [{
 				id: G.MenubarAppearanceMenu,
 				group: "1_toggle_view",
@@ -21222,16 +21222,16 @@ if (U($1), U(class extends L {
 		});
 	}
 	run(e) {
-		return e.get(rE).toggleZenMode();
+		return e.get(fE).toggleZenMode();
 	}
 }), Sl.registerCommandAndKeybindingRule({
 	id: "workbench.action.exitZenMode",
 	weight: F.EditorContrib - 1e3,
 	handler(e) {
-		let t = e.get(rE), n = e.get(Au);
-		LE.getValue(n) && t.toggleZenMode();
+		let t = e.get(fE), n = e.get(Au);
+		RE.getValue(n) && t.toggleZenMode();
 	},
-	when: LE,
+	when: RE,
 	primary: Rt(A.Escape, A.Escape)
 }), Wf || xs || wo) {
 	U(class extends L {
@@ -21253,7 +21253,7 @@ if (U($1), U(class extends L {
 			});
 		}
 		run(e) {
-			return e.get(rE).toggleMenuBar();
+			return e.get(fE).toggleMenuBar();
 		}
 	});
 	for (let e of [G.TitleBarContext, G.TitleBarTitleContext]) id.appendMenuItem(e, {
@@ -21262,7 +21262,7 @@ if (U($1), U(class extends L {
 			title: x(2848, "Menu Bar"),
 			toggled: y.and(rl.toNegated(), y.notEquals(`config.${Zl.MenuBarVisibility}`, "hidden"), y.notEquals(`config.${Zl.MenuBarVisibility}`, "toggle"), y.notEquals(`config.${Zl.MenuBarVisibility}`, "compact"))
 		},
-		when: y.and(CT.toNegated(), y.notEquals(iE.key, Bc.NATIVE), kT.negate()),
+		when: y.and(kT.toNegated(), y.notEquals(dE.key, Bc.NATIVE), bE.negate()),
 		group: "2_config",
 		order: 0
 	});
@@ -21289,7 +21289,7 @@ U(class extends L {
 		});
 	}
 	async run(e) {
-		let t = e.get(Hb), n = e.get(C), r = e.get(ac), i = e.get(Au), a = e.get(wT), o = RE.getValue(i), s;
+		let t = e.get(Hb), n = e.get(C), r = e.get(ac), i = e.get(Au), a = e.get(AT), o = YT.getValue(i), s;
 		o && t.getViewDescriptorById(o)?.canMoveView && (s = o);
 		try {
 			if (s = await this.getView(r, t, a, s), !s) return;
@@ -21352,12 +21352,12 @@ var e0 = class extends L {
 			id: "workbench.action.moveFocusedView",
 			title: b(2855, "Move Focused View"),
 			category: Z.View,
-			precondition: RE.notEqualsTo(""),
+			precondition: YT.notEqualsTo(""),
 			f1: !0
 		});
 	}
 	run(e, t) {
-		let n = e.get(Hb), r = e.get(Wv), i = e.get(ac), a = e.get(Au), o = e.get(ae), s = e.get(wT), c = t || RE.getValue(a);
+		let n = e.get(Hb), r = e.get(Wv), i = e.get(ac), a = e.get(Au), o = e.get(ae), s = e.get(AT), c = t || YT.getValue(a);
 		if (c === void 0 || c.trim() === "") {
 			o.error(x(2856, "There is no view currently focused."));
 			return;
@@ -21416,11 +21416,11 @@ U(e0), U(class extends L {
 			title: b(2866, "Reset Focused View Location"),
 			category: Z.View,
 			f1: !0,
-			precondition: RE.notEqualsTo("")
+			precondition: YT.notEqualsTo("")
 		});
 	}
 	run(e) {
-		let t = e.get(Hb), n = e.get(Au), r = e.get(ae), i = e.get(Wv), a = RE.getValue(n), o = null;
+		let t = e.get(Hb), n = e.get(Au), r = e.get(ae), i = e.get(Wv), a = YT.getValue(n), o = null;
 		if (a !== void 0 && a.trim() !== "" && (o = t.getViewDescriptorById(a)), !o) {
 			r.error(x(2867, "There is no view currently focused."));
 			return;
@@ -21448,11 +21448,11 @@ var t0 = class extends L {
 			id: "workbench.action.increaseViewSize",
 			title: b(2868, "Increase Current View Size"),
 			f1: !0,
-			precondition: CT.toNegated()
+			precondition: kT.toNegated()
 		});
 	}
 	run(e) {
-		this.resizePart(t0.RESIZE_INCREMENT, t0.RESIZE_INCREMENT, e.get(rE));
+		this.resizePart(t0.RESIZE_INCREMENT, t0.RESIZE_INCREMENT, e.get(fE));
 	}
 }, r0 = class extends t0 {
 	constructor() {
@@ -21460,11 +21460,11 @@ var t0 = class extends L {
 			id: "workbench.action.increaseViewWidth",
 			title: b(2869, "Increase Editor Width"),
 			f1: !0,
-			precondition: CT.toNegated()
+			precondition: kT.toNegated()
 		});
 	}
 	run(e) {
-		this.resizePart(t0.RESIZE_INCREMENT, 0, e.get(rE), Y.EDITOR_PART);
+		this.resizePart(t0.RESIZE_INCREMENT, 0, e.get(fE), Y.EDITOR_PART);
 	}
 }, i0 = class extends t0 {
 	constructor() {
@@ -21472,11 +21472,11 @@ var t0 = class extends L {
 			id: "workbench.action.increaseViewHeight",
 			title: b(2870, "Increase Editor Height"),
 			f1: !0,
-			precondition: CT.toNegated()
+			precondition: kT.toNegated()
 		});
 	}
 	run(e) {
-		this.resizePart(0, t0.RESIZE_INCREMENT, e.get(rE), Y.EDITOR_PART);
+		this.resizePart(0, t0.RESIZE_INCREMENT, e.get(fE), Y.EDITOR_PART);
 	}
 }, a0 = class extends t0 {
 	constructor() {
@@ -21484,11 +21484,11 @@ var t0 = class extends L {
 			id: "workbench.action.decreaseViewSize",
 			title: b(2871, "Decrease Current View Size"),
 			f1: !0,
-			precondition: CT.toNegated()
+			precondition: kT.toNegated()
 		});
 	}
 	run(e) {
-		this.resizePart(-t0.RESIZE_INCREMENT, -t0.RESIZE_INCREMENT, e.get(rE));
+		this.resizePart(-t0.RESIZE_INCREMENT, -t0.RESIZE_INCREMENT, e.get(fE));
 	}
 }, o0 = class extends t0 {
 	constructor() {
@@ -21496,11 +21496,11 @@ var t0 = class extends L {
 			id: "workbench.action.decreaseViewWidth",
 			title: b(2872, "Decrease Editor Width"),
 			f1: !0,
-			precondition: CT.toNegated()
+			precondition: kT.toNegated()
 		});
 	}
 	run(e) {
-		this.resizePart(-t0.RESIZE_INCREMENT, 0, e.get(rE), Y.EDITOR_PART);
+		this.resizePart(-t0.RESIZE_INCREMENT, 0, e.get(fE), Y.EDITOR_PART);
 	}
 }, s0 = class extends t0 {
 	constructor() {
@@ -21508,11 +21508,11 @@ var t0 = class extends L {
 			id: "workbench.action.decreaseViewHeight",
 			title: b(2873, "Decrease Editor Height"),
 			f1: !0,
-			precondition: CT.toNegated()
+			precondition: kT.toNegated()
 		});
 	}
 	run(e) {
-		this.resizePart(0, -t0.RESIZE_INCREMENT, e.get(rE), Y.EDITOR_PART);
+		this.resizePart(0, -t0.RESIZE_INCREMENT, e.get(fE), Y.EDITOR_PART);
 	}
 };
 U(n0), U(r0), U(i0), U(a0), U(o0), U(s0), U(class extends L {
@@ -21564,24 +21564,24 @@ var l0 = (e, t, n, r) => ({
 	whenA: y.equals("config.workbench.sideBar.location", "left"),
 	iconA: g1,
 	iconB: _1
-}), l0(B1.ID, $T, x(2881, "Primary Side Bar"), {
+}), l0(B1.ID, zT, x(2881, "Primary Side Bar"), {
 	whenA: y.equals("config.workbench.sideBar.location", "left"),
 	iconA: v1,
 	iconB: b1
-}), l0(m1.ID, dE, x(2865, "Secondary Side Bar"), {
+}), l0(m1.ID, CE, x(2865, "Secondary Side Bar"), {
 	whenA: y.equals("config.workbench.sideBar.location", "left"),
 	iconA: b1,
 	iconB: v1
-}), l0(Y$.ID, VE, x(2864, "Panel"), S1), l0(V1.ID, y.equals("config.workbench.statusBar.visible", !0), x(2882, "Status Bar"), C1));
+}), l0(Y$.ID, FT, x(2864, "Panel"), S1), l0(V1.ID, y.equals("config.workbench.statusBar.visible", !0), x(2882, "Status Bar"), C1));
 var p0 = [u0(L1.ID, y.equals("config.workbench.sideBar.location", "left"), x(2883, "Left"), v1), u0(I1.ID, y.equals("config.workbench.sideBar.location", "right"), x(2884, "Right"), b1)], m0 = [
-	u0("workbench.action.alignPanelLeft", jT.isEqualTo("left"), x(2885, "Left"), w1),
-	u0("workbench.action.alignPanelRight", jT.isEqualTo("right"), x(2886, "Right"), T1),
-	u0("workbench.action.alignPanelCenter", jT.isEqualTo("center"), x(2887, "Center"), E1),
-	u0("workbench.action.alignPanelJustify", jT.isEqualTo("justify"), x(2888, "Justify"), D1)
+	u0("workbench.action.alignPanelLeft", JT.isEqualTo("left"), x(2885, "Left"), w1),
+	u0("workbench.action.alignPanelRight", JT.isEqualTo("right"), x(2886, "Right"), T1),
+	u0("workbench.action.alignPanelCenter", JT.isEqualTo("center"), x(2887, "Center"), E1),
+	u0("workbench.action.alignPanelJustify", JT.isEqualTo("justify"), x(2888, "Justify"), D1)
 ], h0 = [u0("workbench.action.alignQuickInputTop", Fd.isEqualTo("top"), x(2889, "Top"), O1), u0("workbench.action.alignQuickInputCenter", Fd.isEqualTo("center"), x(2890, "Center"), k1)], g0 = [
-	u0("workbench.action.toggleFullScreen", kT, x(2891, "Full Screen"), A1),
-	u0("workbench.action.toggleZenMode", LE, x(2892, "Zen Mode"), M1),
-	u0("workbench.action.toggleCenteredLayout", XT, x(2893, "Centered Layout"), j1)
+	u0("workbench.action.toggleFullScreen", bE, x(2891, "Full Screen"), A1),
+	u0("workbench.action.toggleZenMode", RE, x(2892, "Zen Mode"), M1),
+	u0("workbench.action.toggleCenteredLayout", WT, x(2893, "Centered Layout"), j1)
 ], _0 = /* @__PURE__ */ new Set();
 for (let { active: e } of [
 	...f0,
@@ -21602,7 +21602,7 @@ U(class extends L {
 				group: "z_end"
 			}, {
 				id: G.LayoutControlMenu,
-				when: y.and(JT.toNegated(), y.equals("config.workbench.layoutControl.type", "both")),
+				when: y.and(ZT.toNegated(), y.equals("config.workbench.layoutControl.type", "both")),
 				group: "1_layout"
 			}]
 		});
@@ -22016,7 +22016,7 @@ function R0(e, t, n, r, i) {
 		tabSize: 4,
 		eol: xs || Mu ? "\n" : "\r\n"
 	}, u = O0(e, T0(e, ["folders"], c, l));
-	return Od(a.remoteAuthority, lE(r)) && (u = O0(u, w0(u, ["remoteAuthority"], l))), u;
+	return Od(a.remoteAuthority, TT(r)) && (u = O0(u, w0(u, ["remoteAuthority"], l))), u;
 }
 function z0(e, t) {
 	let n = Yo(t);
@@ -22430,7 +22430,7 @@ function Y0(e) {
 function X0(e) {
 	return e?.hasOwnProperty("workspace");
 }
-k(), or(), Po(), Qa(), _E(), sn(), vO(), Gd(), Co(), sd(), mt(), Tn(), bf(), Kr(), cd(), ww(), Ns(), gD(), Vc(), cl(), xp(), Zi(), Hd(), kf(), ic(), kd(), xa();
+k(), or(), Po(), Qa(), NE(), sn(), vO(), Gd(), Co(), sd(), mt(), Tn(), bf(), Kr(), cd(), ww(), Ns(), gD(), Vc(), cl(), xp(), Zi(), Hd(), kf(), ic(), kd(), xa();
 var Z0 = "inRecentFilesPicker", Q0 = class extends L {
 	constructor() {
 		super(...arguments), this.removeFromRecentlyOpened = {
@@ -22559,12 +22559,12 @@ var Z0 = "inRecentFilesPicker", Q0 = class extends L {
 				primary: S.CtrlCmd | A.KeyR,
 				mac: { primary: S.WinCtrl | A.KeyR }
 			},
-			precondition: ET.toNegated(),
+			precondition: bT.toNegated(),
 			menu: {
 				id: G.MenubarRecentMenu,
 				group: "y_more",
 				order: 1,
-				when: ET.toNegated()
+				when: bT.toNegated()
 			}
 		});
 	}
@@ -22599,7 +22599,7 @@ var Z0 = "inRecentFilesPicker", Q0 = class extends L {
 				mac: { primary: S.CtrlCmd | S.WinCtrl | A.KeyF }
 			},
 			precondition: zr.toNegated(),
-			toggled: kT,
+			toggled: bE,
 			menu: [{
 				id: G.MenubarAppearanceMenu,
 				group: "1_toggle_view",
@@ -22665,12 +22665,12 @@ var Z0 = "inRecentFilesPicker", Q0 = class extends L {
 				primary: wo ? Wf ? Rt(S.CtrlCmd | A.KeyK, S.Shift | A.KeyN) : S.CtrlCmd | S.Alt | S.Shift | A.KeyN : S.CtrlCmd | S.Shift | A.KeyN,
 				secondary: wo ? [S.CtrlCmd | S.Shift | A.KeyN] : void 0
 			},
-			precondition: ET.toNegated(),
+			precondition: bT.toNegated(),
 			menu: {
 				id: G.MenubarFileMenu,
 				group: "1_new",
 				order: 3,
-				when: ET.toNegated()
+				when: bT.toNegated()
 			}
 		});
 	}
@@ -22718,14 +22718,14 @@ Sl.registerCommandAndKeybindingRule({
 		toggled: y.notEquals("config.window.confirmBeforeClose", "never")
 	},
 	order: 1,
-	when: y.and(ET.toNegated(), Cr)
+	when: y.and(bT.toNegated(), Cr)
 }), id.appendMenuItem(G.MenubarFileMenu, {
 	title: x(2956, "Open &&Recent"),
 	submenu: G.MenubarRecentMenu,
 	group: "2_open",
 	order: 4,
-	when: ET.toNegated()
-}), iu(), g(), k(), Po(), _o(), ju(), Il(), rt(), xa(), bf(), Vc(), kd(), dd(), O(), ww(), ce(), Tn(), dM(), pM(), Fa(), ye(), Vn(), nr(), DO(), xt(), gD(), Wu(), fn(), xp(), Qa(), Gd(), sn(), nf(), m(), Qc(), ao(), Ud(), BE(), _a(), ns(v0), id.appendMenuItem(G.MenubarMainMenu, {
+	when: bT.toNegated()
+}), iu(), g(), k(), Po(), _o(), ju(), Il(), rt(), xa(), bf(), Vc(), kd(), dd(), O(), ww(), ce(), Tn(), dM(), pM(), Fa(), ye(), Vn(), nr(), DO(), xt(), gD(), Wu(), fn(), xp(), Qa(), Gd(), sn(), nf(), m(), Qc(), ao(), Ud(), PT(), _a(), ns(v0), id.appendMenuItem(G.MenubarMainMenu, {
 	submenu: G.MenubarFileMenu,
 	title: {
 		value: "File",
@@ -22997,7 +22997,7 @@ var f2 = class extends l2 {
 	get currentCompactMenuMode() {
 		if (this.currentMenubarVisibility === "compact") return {
 			horizontal: this.configurationService.getValue("workbench.sideBar.location") === "right" ? hl.Left : hl.Right,
-			vertical: this.configurationService.getValue("workbench.activityBar.location") === yE.BOTTOM ? xr.Above : xr.Below
+			vertical: this.configurationService.getValue("workbench.activityBar.location") === KT.BOTTOM ? xr.Above : xr.Below
 		};
 	}
 	onDidVisibilityChange(e) {
@@ -23516,7 +23516,7 @@ var g2 = class {
 		return -1;
 	}
 };
-g(), k(), wi(), _P(), BE(), WT(), _(), O(), xa(), va(), Fa(), ye(), HT(), Bf(), yw(), bS(), cl(), Il(), An(), rD(), Vc(), kf(), rt(), Hr(), kd(), Jh();
+g(), k(), wi(), _P(), PT(), FE(), _(), O(), xa(), va(), Fa(), ye(), vE(), Bf(), yw(), bS(), cl(), Il(), An(), rD(), Vc(), kf(), rt(), Hr(), kd(), Jh();
 var _2, v2 = class extends z {
 	constructor(e, t, n, r, i, a, o, s, c, l, u) {
 		super(), this.options = e, this.part = t, this.paneCompositePart = n, this.instantiationService = r, this.storageService = i, this.extensionService = a, this.viewDescriptorService = o, this.viewService = s, this.contextKeyService = c, this.environmentService = l, this.layoutService = u, this.viewContainerDisposables = this._register(new _c()), this.compositeActions = /* @__PURE__ */ new Map(), this.hasExtensionsRegistered = !1, this._cachedViewContainers = void 0, this.location = n.partId === Y.PANEL_PART ? zw.Panel : n.partId === Y.AUXILIARYBAR_PART ? zw.AuxiliaryBar : zw.Sidebar, this.dndHandler = new p2(this.viewDescriptorService, this.location, this.options.orientation, async (e, t) => await this.paneCompositePart.openPaneComposite(e, t) ?? null, (e, t, n) => this.compositeBar.move(e, t, this.options.orientation === Kn.VERTICAL ? n?.verticallyBefore : n?.horizontallyBefore), () => this.compositeBar.getCompositeBarItems());
@@ -23894,12 +23894,12 @@ var _2, v2 = class extends z {
 v2 = T([
 	R(3, C),
 	R(4, ap),
-	R(5, DT),
+	R(5, xT),
 	R(6, Hb),
 	R(7, Wv),
 	R(8, Au),
 	R(9, qE),
-	R(10, rE)
+	R(10, fE)
 ], v2);
 var y2 = class extends I$ {
 	static {
@@ -23943,7 +23943,7 @@ var y2 = class extends I$ {
 	}
 };
 y2 = _2 = T([
-	R(3, rE),
+	R(3, fE),
 	R(4, I),
 	R(5, gP)
 ], y2);
@@ -23972,7 +23972,7 @@ var b2 = class extends y2 {}, x2 = class extends V$ {
 }, C2 = "workbench.actions.manage", w2 = "workbench.actions.accounts";
 tb(), Nb(), Hd(), k(), bn();
 var T2 = Lu("settings-view-bar-icon", P.settingsGear, x(14568, "Settings icon in the view bar."));
-P.vm, P.server, P.recordKeys, P.deviceMobile, P.watch, P.vr, P.piano, P.ruby, P.code, P.coffee, P.snake, P.project, P.window, P.library, P.extensions, P.terminal, P.terminalDebian, P.terminalLinux, P.terminalUbuntu, P.beaker, P.package, P.cloud, P.book, P.globe, P.database, P.notebook, P.robot, P.game, P.chip, P.music, P.remoteExplorer, P.github, P.azure, P.vscode, P.copilot, P.gift, P.send, P.bookmark, P.briefcase, P.megaphone, P.comment, P.telescope, P.creditCard, P.map, P.deviceCameraVideo, P.unmute, P.law, P.graphLine, P.heart, P.home, P.inbox, P.mortarBoard, P.rocket, P.magnet, P.lock, P.milestone, P.tag, P.pulse, P.radioTower, P.smiley, P.zap, P.squirrel, P.symbolColor, P.mail, P.key, P.pieChart, P.organization, P.preview, P.wand, P.starEmpty, P.lightbulb, P.symbolRuler, P.dashboard, P.calendar, P.shield, P.verified, P.debug, P.flame, P.compass, P.paintcan, P.archive, P.mic, P.jersey, g(), k(), wi(), _P(), _(), O(), Uu(), Fa(), ye(), HT(), Hd(), kf(), bn(), rt(), Po(), _o(), xa(), fr(), ll(), Nu(), xf(), ao(), kd(), Il(), Gf(), bf(), Za(), eE(), Wh(), eS(), rD(), Td(), QE(), oD(), ag(), An(), Qa(), nf();
+P.vm, P.server, P.recordKeys, P.deviceMobile, P.watch, P.vr, P.piano, P.ruby, P.code, P.coffee, P.snake, P.project, P.window, P.library, P.extensions, P.terminal, P.terminalDebian, P.terminalLinux, P.terminalUbuntu, P.beaker, P.package, P.cloud, P.book, P.globe, P.database, P.notebook, P.robot, P.game, P.chip, P.music, P.remoteExplorer, P.github, P.azure, P.vscode, P.copilot, P.gift, P.send, P.bookmark, P.briefcase, P.megaphone, P.comment, P.telescope, P.creditCard, P.map, P.deviceCameraVideo, P.unmute, P.law, P.graphLine, P.heart, P.home, P.inbox, P.mortarBoard, P.rocket, P.magnet, P.lock, P.milestone, P.tag, P.pulse, P.radioTower, P.smiley, P.zap, P.squirrel, P.symbolColor, P.mail, P.key, P.pieChart, P.organization, P.preview, P.wand, P.starEmpty, P.lightbulb, P.symbolRuler, P.dashboard, P.calendar, P.shield, P.verified, P.debug, P.flame, P.compass, P.paintcan, P.archive, P.mic, P.jersey, g(), k(), wi(), _P(), _(), O(), Uu(), Fa(), ye(), vE(), Hd(), kf(), bn(), rt(), Po(), _o(), xa(), fr(), ll(), Nu(), xf(), ao(), kd(), Il(), Gf(), bf(), Za(), BT(), Wh(), eS(), rD(), Td(), QE(), oD(), ag(), An(), Qa(), nf();
 var E2, D2 = class extends z {
 	static {
 		E2 = this;
@@ -24050,7 +24050,7 @@ D2 = E2 = T([
 	R(3, I),
 	R(4, C),
 	R(5, ap),
-	R(6, DT)
+	R(6, xT)
 ], D2);
 var O2 = class extends L$ {
 	constructor(e, t, n, r, i, a, o, s, c, l, u, d, f) {
@@ -24442,7 +24442,7 @@ function P2(e) {
 function F2(e, t) {
 	e.store(k2.ACCOUNTS_VISIBILITY_PREFERENCE_KEY, t, j.PROFILE, Gt.USER);
 }
-iu(), g(), k(), wi(), BE(), WT(), _(), O(), Io(), Uu(), Xm(), Mr(), af(), ad(), li(), Mt(), Fr(), st(), zc(), as(), Fi(), Mf(), xa(), An(), kd(), ju(), rt(), fr(), Qa(), ye(), Po(), _o(), cl(), Il(), vO(), ao(), yw(), bS(), HT(), rD(), Jh();
+iu(), g(), k(), wi(), PT(), FE(), _(), O(), Io(), Uu(), Xm(), Mr(), af(), ad(), li(), Mt(), Fr(), st(), zc(), as(), Fi(), Mf(), xa(), An(), kd(), ju(), rt(), fr(), Qa(), ye(), Po(), _o(), cl(), Il(), vO(), ao(), yw(), bS(), vE(), rD(), Jh();
 var I2;
 ns(A$), ns(j$);
 var L2 = class extends D$ {
@@ -24473,7 +24473,7 @@ var L2 = class extends D$ {
 			orientation: Kn.VERTICAL,
 			icon: !0,
 			iconSize: 24,
-			activityHoverOptions: { position: () => this.layoutService.getSideBarPosition() === IT.LEFT ? Ys.RIGHT : Ys.LEFT },
+			activityHoverOptions: { position: () => this.layoutService.getSideBarPosition() === ST.LEFT ? Ys.RIGHT : Ys.LEFT },
 			preventLoopNavigation: !0,
 			recomputeSizes: !1,
 			fillExtraContextMenuActions: (e, t) => {},
@@ -24532,7 +24532,7 @@ var L2 = class extends D$ {
 };
 L2 = I2 = T([
 	R(1, C),
-	R(2, rE),
+	R(2, fE),
 	R(3, Dn),
 	R(4, ap)
 ], L2);
@@ -24603,14 +24603,14 @@ var R2 = class extends v2 {
 R2 = T([
 	R(4, C),
 	R(5, ap),
-	R(6, DT),
+	R(6, xT),
 	R(7, Hb),
 	R(8, Wv),
 	R(9, Au),
 	R(10, qE),
 	R(11, I),
 	R(12, Ya),
-	R(13, rE)
+	R(13, fE)
 ], R2), U(class extends L {
 	constructor() {
 		super({
@@ -24621,18 +24621,18 @@ R2 = T([
 			},
 			shortTitle: x(2990, "Default"),
 			category: Z.View,
-			toggled: y.equals(`config.${UT.ACTIVITY_BAR_LOCATION}`, yE.DEFAULT),
+			toggled: y.equals(`config.${VT.ACTIVITY_BAR_LOCATION}`, KT.DEFAULT),
 			menu: [{
 				id: G.ActivityBarPositionMenu,
 				order: 1
 			}, {
 				id: G.CommandPalette,
-				when: y.notEquals(`config.${UT.ACTIVITY_BAR_LOCATION}`, yE.DEFAULT)
+				when: y.notEquals(`config.${VT.ACTIVITY_BAR_LOCATION}`, KT.DEFAULT)
 			}]
 		});
 	}
 	run(e) {
-		e.get(I).updateValue(UT.ACTIVITY_BAR_LOCATION, yE.DEFAULT);
+		e.get(I).updateValue(VT.ACTIVITY_BAR_LOCATION, KT.DEFAULT);
 	}
 }), U(class extends L {
 	constructor() {
@@ -24644,18 +24644,18 @@ R2 = T([
 			},
 			shortTitle: x(2993, "Top"),
 			category: Z.View,
-			toggled: y.equals(`config.${UT.ACTIVITY_BAR_LOCATION}`, yE.TOP),
+			toggled: y.equals(`config.${VT.ACTIVITY_BAR_LOCATION}`, KT.TOP),
 			menu: [{
 				id: G.ActivityBarPositionMenu,
 				order: 2
 			}, {
 				id: G.CommandPalette,
-				when: y.notEquals(`config.${UT.ACTIVITY_BAR_LOCATION}`, yE.TOP)
+				when: y.notEquals(`config.${VT.ACTIVITY_BAR_LOCATION}`, KT.TOP)
 			}]
 		});
 	}
 	run(e) {
-		e.get(I).updateValue(UT.ACTIVITY_BAR_LOCATION, yE.TOP);
+		e.get(I).updateValue(VT.ACTIVITY_BAR_LOCATION, KT.TOP);
 	}
 }), U(class extends L {
 	constructor() {
@@ -24667,18 +24667,18 @@ R2 = T([
 			},
 			shortTitle: x(2996, "Bottom"),
 			category: Z.View,
-			toggled: y.equals(`config.${UT.ACTIVITY_BAR_LOCATION}`, yE.BOTTOM),
+			toggled: y.equals(`config.${VT.ACTIVITY_BAR_LOCATION}`, KT.BOTTOM),
 			menu: [{
 				id: G.ActivityBarPositionMenu,
 				order: 3
 			}, {
 				id: G.CommandPalette,
-				when: y.notEquals(`config.${UT.ACTIVITY_BAR_LOCATION}`, yE.BOTTOM)
+				when: y.notEquals(`config.${VT.ACTIVITY_BAR_LOCATION}`, KT.BOTTOM)
 			}]
 		});
 	}
 	run(e) {
-		e.get(I).updateValue(UT.ACTIVITY_BAR_LOCATION, yE.BOTTOM);
+		e.get(I).updateValue(VT.ACTIVITY_BAR_LOCATION, KT.BOTTOM);
 	}
 }), U(class extends L {
 	constructor() {
@@ -24690,18 +24690,18 @@ R2 = T([
 			},
 			shortTitle: x(2999, "Hidden"),
 			category: Z.View,
-			toggled: y.equals(`config.${UT.ACTIVITY_BAR_LOCATION}`, yE.HIDDEN),
+			toggled: y.equals(`config.${VT.ACTIVITY_BAR_LOCATION}`, KT.HIDDEN),
 			menu: [{
 				id: G.ActivityBarPositionMenu,
 				order: 4
 			}, {
 				id: G.CommandPalette,
-				when: y.notEquals(`config.${UT.ACTIVITY_BAR_LOCATION}`, yE.HIDDEN)
+				when: y.notEquals(`config.${VT.ACTIVITY_BAR_LOCATION}`, KT.HIDDEN)
 			}]
 		});
 	}
 	run(e) {
-		e.get(I).updateValue(UT.ACTIVITY_BAR_LOCATION, yE.HIDDEN);
+		e.get(I).updateValue(VT.ACTIVITY_BAR_LOCATION, KT.HIDDEN);
 	}
 }), id.appendMenuItem(G.MenubarAppearanceMenu, {
 	submenu: G.ActivityBarPositionMenu,
@@ -24742,7 +24742,7 @@ R2 = T([
 		});
 	}
 	async run(e) {
-		e.get(rE).focusPart(Y.ACTIVITYBAR_PART);
+		e.get(fE).focusPart(Y.ACTIVITYBAR_PART);
 	}
 }), gu((e, t) => {
 	let n = e.getColor(im);
@@ -24798,9 +24798,9 @@ R2 = T([
 					}
 				`);
 	}
-}), Zu(), BE(), _(), Jr(), dd(), xa(), Nd(), FE(), yw(), bS(), Vc(), Ur(), fD(), Ix(), kd(), O(), CP(), xp(), en(), ju(), kE(), _O();
+}), Zu(), PT(), _(), Jr(), dd(), xa(), Nd(), DT(), yw(), bS(), Vc(), Ur(), fD(), Ix(), kd(), O(), CP(), xp(), en(), ju(), EE(), _O();
 var z2 = class extends z {
-	constructor(e = jE()) {
+	constructor(e = gE()) {
 		super(), this.mainContainer = e, this.onDidChangeAuxiliaryBarMaximized = V.None, this.toggleMaximizedAuxiliaryBar = X, this.setAuxiliaryBarMaximized = X, this.isAuxiliaryBarMaximized = () => !1, this.setSize = X, this.onDidChangeMainEditorCenteredLayout = V.None, this.whenActiveContainerStylesLoaded = Promise.resolve(), this._onDidLayoutContainer = this._register(new W()), this.onDidLayoutContainer = this._onDidLayoutContainer.event, this._onDidAddContainer = this._register(new W()), this.onDidAddContainer = this._onDidAddContainer.event, this._onDidRemoveContainer = this._register(new W()), this.onDidRemoveContainer = this._onDidRemoveContainer.event, this._onDidLayoutMainContainer = this._register(new W()), this.onDidLayoutMainContainer = this._onDidLayoutMainContainer.event, this._onDidLayoutActiveContainer = this._register(new W()), this.onDidLayoutActiveContainer = this._onDidLayoutActiveContainer.event, this._onDidChangeActiveContainer = this._register(new W()), this.onDidChangeActiveContainer = this._onDidChangeActiveContainer.event, this.mainContainerOffset = {
 			top: 0,
 			quickPickTop: 0
@@ -24846,9 +24846,9 @@ var z2 = class extends z {
 		return e === this.mainContainer.ownerDocument ? this.mainContainer : e.body.getElementsByClassName("monaco-workbench")[0];
 	}
 	init(e) {
-		this.editorGroupService = e.get(lD), this.paneCompositeService = e.get(wT), this.statusBarService = e.get(jS), this.viewDescriptorService = e.get(Hb), this.configurationService = e.get(I), this.auxiliaryWindowService = e.get(SP), this.hostService = e.get(Lp), this._register(this.configurationService.onDidChangeConfiguration((e) => {
-			e.affectsConfiguration(UT.ACTIVITY_BAR_LOCATION) && this.setPartHidden(this.isActivityBarHidden(), Y.ACTIVITYBAR_PART), e.affectsConfiguration("workbench.statusBar.visible") && this.setPartHidden(!this.configurationService.getValue("workbench.statusBar.visible"), Y.STATUSBAR_PART), e.affectsConfiguration("workbench.sideBar.location") && this.setSideBarPosition(QT(this.configurationService.getValue("workbench.sideBar.location") ?? "left")), e.affectsConfiguration("workbench.panel.defaultLocation") && this.setPanelPosition(QT(this.configurationService.getValue("workbench.panel.defaultLocation") ?? "bottom"));
-		})), this.setPartHidden(this.isActivityBarHidden(), Y.ACTIVITYBAR_PART), this.setPartHidden(!this.configurationService.getValue("workbench.statusBar.visible"), Y.STATUSBAR_PART), this.sideBarPosition = QT(this.configurationService.getValue("workbench.sideBar.location") ?? "left"), this.panelPosition = QT(this.configurationService.getValue("workbench.panel.defaultLocation") ?? "bottom"), this._register(this.hostService.onDidChangeActiveWindow(() => this.onActiveWindowChanged())), this._register(this.auxiliaryWindowService.onDidOpenAuxiliaryWindow(({ window: e, disposables: t }) => {
+		this.editorGroupService = e.get(lD), this.paneCompositeService = e.get(AT), this.statusBarService = e.get(jS), this.viewDescriptorService = e.get(Hb), this.configurationService = e.get(I), this.auxiliaryWindowService = e.get(SP), this.hostService = e.get(Lp), this._register(this.configurationService.onDidChangeConfiguration((e) => {
+			e.affectsConfiguration(VT.ACTIVITY_BAR_LOCATION) && this.setPartHidden(this.isActivityBarHidden(), Y.ACTIVITYBAR_PART), e.affectsConfiguration("workbench.statusBar.visible") && this.setPartHidden(!this.configurationService.getValue("workbench.statusBar.visible"), Y.STATUSBAR_PART), e.affectsConfiguration("workbench.sideBar.location") && this.setSideBarPosition(RT(this.configurationService.getValue("workbench.sideBar.location") ?? "left")), e.affectsConfiguration("workbench.panel.defaultLocation") && this.setPanelPosition(RT(this.configurationService.getValue("workbench.panel.defaultLocation") ?? "bottom"));
+		})), this.setPartHidden(this.isActivityBarHidden(), Y.ACTIVITYBAR_PART), this.setPartHidden(!this.configurationService.getValue("workbench.statusBar.visible"), Y.STATUSBAR_PART), this.sideBarPosition = RT(this.configurationService.getValue("workbench.sideBar.location") ?? "left"), this.panelPosition = RT(this.configurationService.getValue("workbench.panel.defaultLocation") ?? "bottom"), this._register(this.hostService.onDidChangeActiveWindow(() => this.onActiveWindowChanged())), this._register(this.auxiliaryWindowService.onDidOpenAuxiliaryWindow(({ window: e, disposables: t }) => {
 			this._onDidAddContainer.fire({
 				container: e.container,
 				disposables: new N()
@@ -24868,7 +24868,7 @@ var z2 = class extends z {
 	}
 	isActivityBarHidden() {
 		let e = this.configurationService.getValue("workbench.activityBar.visible");
-		return e === void 0 ? this.configurationService.getValue(UT.ACTIVITY_BAR_LOCATION) !== yE.DEFAULT : !e;
+		return e === void 0 ? this.configurationService.getValue(VT.ACTIVITY_BAR_LOCATION) !== KT.DEFAULT : !e;
 	}
 	focusPart(e) {
 		switch (e) {
@@ -24901,7 +24901,7 @@ var z2 = class extends z {
 		t = e === "visible" || e === "classic" ? os(this.configurationService) === "native" ? "toggle" : "compact" : "classic", this.configurationService.updateValue("window.menuBarVisibility", t);
 	}
 	setPanelPosition(e) {
-		this.panelPosition = e, this.getPart(Y.PANEL_PART)?.updateStyles(), this._onDidChangePanelPosition.fire(tE(e));
+		this.panelPosition = e, this.getPart(Y.PANEL_PART)?.updateStyles(), this._onDidChangePanelPosition.fire(kE(e));
 	}
 	getPanelAlignment() {
 		return "left";
@@ -24971,7 +24971,7 @@ var z2 = class extends z {
 	setSideBarPosition(e) {
 		this.sideBarPosition = e;
 		let t = this.getPart(Y.ACTIVITYBAR_PART), n = this.getPart(Y.SIDEBAR_PART), r = this.getPart(Y.AUXILIARYBAR_PART);
-		t?.updateStyles(), n?.updateStyles(), r?.updateStyles(), this._onDidChangeSideBarPosition.fire(tE(e));
+		t?.updateStyles(), n?.updateStyles(), r?.updateStyles(), this._onDidChangeSideBarPosition.fire(kE(e));
 	}
 	registerPart(e) {
 		let t = e.getId();
@@ -25001,7 +25001,7 @@ var z2 = class extends z {
 		} else this.editorGroupService.getPart(e).activeGroup.focus();
 	}
 };
-ST((e) => {
+OT((e) => {
 	let t = e.get(_r);
 	t instanceof z2 && t.init(e);
 });
@@ -25270,7 +25270,7 @@ var K2 = class extends z {
 		return r && !r.isDefault && n.push(["profile", r.name]), n.length ? n : void 0;
 	}
 	getRecentLabel(e) {
-		return Cc(e) ? this.labelService.getWorkspaceLabel(e.folderUri, { verbose: d$.LONG }) : oc(e) ? this.labelService.getWorkspaceLabel(TE(e.workspaceUri), { verbose: d$.LONG }) : this.labelService.getUriLabel(e.fileUri, { appendWorkspaceSuffix: !0 });
+		return Cc(e) ? this.labelService.getWorkspaceLabel(e.folderUri, { verbose: d$.LONG }) : oc(e) ? this.labelService.getWorkspaceLabel(SE(e.workspaceUri), { verbose: d$.LONG }) : this.labelService.getUriLabel(e.fileUri, { appendWorkspaceSuffix: !0 });
 	}
 	shouldReuse(e = Object.create(null), t) {
 		if (e.waitMarkerFileURI) return !0;
@@ -25847,7 +25847,7 @@ var f4 = class extends z {
 		return this.handlers.add(e), h(() => this.handlers.delete(e));
 	}
 };
-g(), _(), Bf(), fi(), CO(), Jf(), Ou(), eE();
+g(), _(), Bf(), fi(), CO(), Jf(), Ou(), BT();
 var p4 = class {
 	constructor(e, t) {
 		this.urlService = e, this.productService = t;
@@ -25901,7 +25901,7 @@ var g4 = class {
 		}
 	}
 };
-g4 = T([R(0, Cy), R(1, Oc)], g4), g(), Uo(), Ou(), pf(), Vc(), pi(), Bf(), PT(), mt(), rD(), Np();
+g4 = T([R(0, Cy), R(1, Oc)], g4), g(), Uo(), Ou(), pf(), Vc(), pi(), Bf(), aE(), mt(), rD(), Np();
 var _4, v4 = _4 = class {
 	constructor(e, t, n, r) {
 		this.localUserHome = e, this.remoteAgentService = t, this.environmentService = n, this.contextService = r, this.resolveOS = (async () => (await this.remoteAgentService.getEnvironment())?.os || Ps)(), this.resolveUserHome = (async () => {
@@ -25920,7 +25920,7 @@ var _4, v4 = _4 = class {
 	}
 	static findDefaultUriScheme(e, t) {
 		if (e.remoteAuthority) return Gs.vscodeRemote;
-		let n = DE(t.getWorkspace());
+		let n = rE(t.getWorkspace());
 		if (n) return n;
 		let r = t.getWorkspace().folders[0];
 		if (r) return r.uri.scheme;
@@ -26013,7 +26013,7 @@ var C4 = class extends z {
 		this.participants.clear(), super.dispose();
 	}
 };
-C4 = T([R(0, yn), R(1, I)], C4), g(), ce(), $c(), Za(), gE(), Aa(), O(), Vs(), gs(), Vn(), k();
+C4 = T([R(0, yn), R(1, I)], C4), g(), ce(), $c(), Za(), VE(), Aa(), O(), Vs(), gs(), Vn(), k();
 var w4 = class extends z {
 	get length() {
 		return this.saveParticipants.size;
@@ -26031,7 +26031,7 @@ var w4 = class extends z {
 		let a = !1;
 		if (await this.progressService.withProgress({
 			priority: gt.URGENT,
-			location: CE.Notification,
+			location: oE.Notification,
 			cancellable: x(14654, "Skip"),
 			delay: e.isDirty() ? 5e3 : 3e3
 		}, async (n) => {
@@ -26413,7 +26413,7 @@ N4 = T([
 	R(3, Mp),
 	R(4, ap),
 	R(5, $E)
-], N4), g(), Ur(), dd(), O(), kd(), cl(), Il(), XD(), hE(), fi(), eE(), yP(), jb(), lO(), HT(), _();
+], N4), g(), Ur(), dd(), O(), kd(), cl(), Il(), XD(), BE(), fi(), BT(), yP(), jb(), lO(), vE(), _();
 var P4 = "cmp-cht-", F4 = "cmp-ext-", I4 = "inlineCompletionsUnificationCode", L4 = "inlineCompletionsUnificationModel", R4 = new kr("isRunningUnificationExperiment", !1), z4 = "chat.extensionUnification.enabled", B4 = class extends z {
 	get state() {
 		return this._state;
@@ -26447,7 +26447,7 @@ var P4 = "cmp-cht-", F4 = "cmp-ext-", I4 = "inlineCompletionsUnificationCode", L
 		let [e, t, n] = await Promise.all([
 			this._extensionService.getExtension(this._completionsExtensionId),
 			this._extensionService.getExtension(this._chatExtensionId),
-			this._extensionManagementService.getInstalled(mE.User)
+			this._extensionManagementService.getInstalled(hE.User)
 		]);
 		if (!t || e) return !1;
 		let r = n.filter((e) => e.identifier.id.toLowerCase() === this._completionsExtensionId);
@@ -26462,7 +26462,7 @@ B4 = T([
 	R(2, I),
 	R(3, pO),
 	R(4, ZD),
-	R(5, DT),
+	R(5, xT),
 	R(6, NT)
 ], B4);
 var V4 = class {
@@ -26566,10 +26566,10 @@ var q4 = {
 	passive: !0,
 	capture: !0
 };
-g(), Zu(), Nd(), Qg(), zT(), kP(), Rx(), Fh(), fv(), iS(), zx(), UE(), PE(), Np(), rD(), mt(), wh(), Tn(), Wb(), kE(), i_(), mu(), IF(), BA();
+g(), Zu(), Nd(), Qg(), MT(), kP(), Rx(), Fh(), fv(), iS(), zx(), UE(), zE(), Np(), rD(), mt(), wh(), Tn(), Wb(), EE(), i_(), mu(), IF(), BA();
 var J4 = class extends v4 {
 	constructor(e, t, n) {
-		super(yT().userHome ?? y4(t, n), e, t, n);
+		super(TE().userHome ?? y4(t, n), e, t, n);
 	}
 };
 J4 = T([
@@ -26581,13 +26581,13 @@ function Y4() {
 	return {
 		[Cy.toString()]: new Fs(d4, [], !0),
 		[bC.toString()]: new Fs(g4, [], !0),
-		[bE.toString()]: new Fs(i4, [], !0),
+		[qT.toString()]: new Fs(i4, [], !0),
 		[OP.toString()]: new Fs(Q2, [], !0),
 		[yC.toString()]: new Fs(oC, [], !0),
 		[fS.toString()]: new Fs(m4, [], !0),
 		[fg.toString()]: new Fs(h4, [], !1),
 		[av.toString()]: new Fs(S4, [], !0),
-		[aE.toString()]: new Fs(T4, [], !1),
+		[lE.toString()]: new Fs(T4, [], !1),
 		[ED.toString()]: new Fs(J4, [], !0),
 		[jv.toString()]: new Fs(c$, [], !0),
 		[Dt.toString()]: new Fs(N4, [], !0),
@@ -26616,7 +26616,7 @@ var Q4;
 var $4;
 if ((function(e) {
 	e[e.DEFAULT = 0] = "DEFAULT", e[e.EDITOR_GROUP = 1] = "EDITOR_GROUP", e[e.EDITOR = 2] = "EDITOR";
-})($4 ||= {}), WS(), $v(), Lv(), fi(), Wb(), BA(), pr(), _a(), Fa(), Zu(), _(), O(), RD(), eE(), kE(), IE(), iu(), pe(), Hn(), ic(), Ur(), Po(), nf(), nr(), en(), cd(), Ri(), nT(), Kr(), tr(), df(), or(), fc(), Pf(), Jf(), Co(), m(), _n(), YM(), fD(), mD(), HE(), DD(), Ap(), _T(), rD(), xp(), UD(), FE(), UE(), JE(), PE(), kd(), Il(), Uu(), wv(), mt(), ye(), Nl(), og(), Za(), Re(), bS(), Jh(), Jr(), DO(), LN(), WP(), mx(), RP(), Np(), g_(), My(), WE(), Tn(), WT(), By(), XP(), Vn(), _P(), Td(), mN(), Ix(), iF(), TP(), jr(), bf(), Wh(), wn(), Eg(), G_(), Rx(), vx(), hm(), GS(), Hj(), zx(), Wj(), qe(), XD(), ex(), fO(), Kj(), Jj(), MT(), Mv(), Xj(), iM(), zo(), w_(), Qg(), Vv(), dO(), l_(), oM(), dM(), pM(), gM(), Fh(), Nt(), gO(), vM(), bM(), LM(), zM(), VM(), fv(), Cg(), rm(), ww(), lC(), Ep(), IC(), ax(), Zy(), Uy(), pC(), cy(), gy(), sN(), qw(), lN(), D_(), Dg(), Yx(), aS(), ty(), fN(), bO(), Yh(), gN(), Ow(), Rw(), vN(), xN(), cb(), Lb(), CN(), TN(), qS(), Vx(), LS(), kN(), tx(), Nv(), jN(), Yy(), vC(), Hg(), FN(), hy(), wy(), tT(), VN(), UN(), GN(), qN(), u_(), K_(), YN(), ZN(), Ih(), wg(), mw(), Ex(), $N(), uC(), $b(), xS(), tP(), rP(), LC(), xb(), aP(), EC(), sP(), lP(), dP(), JC(), wh(), nb(), qy(), gC(), pP(), hP(), Bg(), py(), yP(), Sy(), tv(), eS(), CP(), kP(), Cw(), zT(), hh(), ZE(), Xv(), jP(), lO(), PP(), IP(), pw(), Tx(), oO(), HT(), AT(), BP(), HP(), vD(), oD(), AS(), eF(), J_(), nF(), FO(), OO(), Jx(), FD(), iS(), EO(), oF(), ag(), cF(), fF(), mF(), uE(), Dw(), gF(), sD(), Lw(), vF(), $M(), sO(), Sg(), Y_(), ow(), Om(), cj(), Pb(), pp(), vj(), yh(), gj(), qh(), Xy(), Sb(), Tg(), Js(), Fb(), rC(), nM(), Ax(), FS(), qM(), nu(), aN(), Kb(), sb(), dv(), N_(), $w(), Ng(), DP(), tN(), eM(), Ul(), Zd(), ZM(), zN(), xP(), QP(), wF(), IS(), i_(), SF(), ts(), Aa(), mu(), nC(), OF(), AF(), Oy(), PF(), IF(), RF(), window.monacoVscodeApiBuildId != null && window.monacoVscodeApiBuildId !== "1.108.2-21930f76-a5a8-4dff-86b6-358ec12025e6") throw Error(`Another version of monaco-vscode-api has already been loaded. Trying to load 1.108.2-21930f76-a5a8-4dff-86b6-358ec12025e6, ${window.monacoVscodeApiBuildId} is already loaded`);
+})($4 ||= {}), WS(), $v(), Lv(), fi(), Wb(), BA(), pr(), _a(), Fa(), Zu(), _(), O(), RD(), BT(), EE(), LE(), iu(), pe(), Hn(), ic(), Ur(), Po(), nf(), nr(), en(), cd(), Ri(), nT(), Kr(), tr(), df(), or(), fc(), Pf(), Jf(), Co(), m(), _n(), YM(), fD(), mD(), HE(), DD(), Ap(), _T(), rD(), xp(), UD(), DT(), UE(), JE(), zE(), kd(), Il(), Uu(), wv(), mt(), ye(), Nl(), og(), Za(), Re(), bS(), Jh(), Jr(), DO(), LN(), WP(), mx(), RP(), Np(), g_(), My(), WE(), Tn(), FE(), By(), XP(), Vn(), _P(), Td(), mN(), Ix(), iF(), TP(), jr(), bf(), Wh(), wn(), Eg(), G_(), Rx(), vx(), hm(), GS(), Hj(), zx(), Wj(), qe(), XD(), ex(), fO(), Kj(), Jj(), LT(), Mv(), Xj(), iM(), zo(), w_(), Qg(), Vv(), dO(), l_(), oM(), dM(), pM(), gM(), Fh(), Nt(), gO(), vM(), bM(), LM(), zM(), VM(), fv(), Cg(), rm(), ww(), lC(), Ep(), IC(), ax(), Zy(), Uy(), pC(), cy(), gy(), sN(), qw(), lN(), D_(), Dg(), Yx(), aS(), ty(), fN(), bO(), Yh(), gN(), Ow(), Rw(), vN(), xN(), cb(), Lb(), CN(), TN(), qS(), Vx(), LS(), kN(), tx(), Nv(), jN(), Yy(), vC(), Hg(), FN(), hy(), wy(), tT(), VN(), UN(), GN(), qN(), u_(), K_(), YN(), ZN(), Ih(), wg(), mw(), Ex(), $N(), uC(), $b(), xS(), tP(), rP(), LC(), xb(), aP(), EC(), sP(), lP(), dP(), JC(), wh(), nb(), qy(), gC(), pP(), hP(), Bg(), py(), yP(), Sy(), tv(), eS(), CP(), kP(), Cw(), MT(), hh(), ZE(), Xv(), jP(), lO(), PP(), IP(), pw(), Tx(), oO(), vE(), xE(), BP(), HP(), vD(), oD(), AS(), eF(), J_(), nF(), FO(), OO(), Jx(), FD(), iS(), EO(), oF(), ag(), cF(), fF(), mF(), ET(), Dw(), gF(), sD(), Lw(), vF(), $M(), sO(), Sg(), Y_(), ow(), Om(), cj(), Pb(), pp(), vj(), yh(), gj(), qh(), Xy(), Sb(), Tg(), Js(), Fb(), rC(), nM(), Ax(), FS(), qM(), nu(), aN(), Kb(), sb(), dv(), N_(), $w(), Ng(), DP(), tN(), eM(), Ul(), Zd(), ZM(), zN(), xP(), QP(), wF(), IS(), i_(), SF(), ts(), Aa(), mu(), nC(), OF(), AF(), Oy(), PF(), IF(), RF(), window.monacoVscodeApiBuildId != null && window.monacoVscodeApiBuildId !== "1.108.2-21930f76-a5a8-4dff-86b6-358ec12025e6") throw Error(`Another version of monaco-vscode-api has already been loaded. Trying to load 1.108.2-21930f76-a5a8-4dff-86b6-358ec12025e6, ${window.monacoVscodeApiBuildId} is already loaded`);
 window.monacoVscodeApiBuildId = "1.108.2-21930f76-a5a8-4dff-86b6-358ec12025e6";
 function e3(e) {
 	function t(e) {
@@ -26633,17 +26633,17 @@ function e3(e) {
 	}
 }
 async function t3(e, t = document.body, n = {}, r) {
-	cE(), pd(t), e3(n), vE(t, n, r);
+	wT(), pd(t), e3(n), PE(t, n, r);
 	let i = rp({
 		_serviceBrand: void 0,
 		...ma
 	}, n.productConfiguration);
-	await xE(Kl.initialize({
+	await HT(Kl.initialize({
 		[NT.toString()]: i,
 		...B2(),
 		...T$(),
 		...RC(),
-		...OE(),
+		...sE(),
 		...S$(),
 		...Y2(),
 		...Y4(),
@@ -26651,11 +26651,11 @@ async function t3(e, t = document.body, n = {}, r) {
 	}));
 }
 async function n3(e) {
-	return await bT(), Kl.get(e);
+	return await UT(), Kl.get(e);
 }
 function r3(e) {
-	if (OT.isOpen()) return Kl.get(C).invokeFunction(e);
-	let t = new N(), n = t.add(TT.event(() => {
+	if (yE.isOpen()) return Kl.get(C).invokeFunction(e);
+	let t = new N(), n = t.add(yT.event(() => {
 		n.dispose(), t.add(Kl.get(C).invokeFunction(e));
 	}));
 	return t;

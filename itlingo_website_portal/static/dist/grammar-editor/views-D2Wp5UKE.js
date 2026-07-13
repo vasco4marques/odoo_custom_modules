@@ -1,24 +1,24 @@
 import { r as e } from "./rolldown-runtime-B1bRi_D7.js";
 import { $A as t, $M as n, $O as r, $T as i, $_ as a, $a as o, $b as s, $g as c, $h as l, $i as u, $j as d, $l as f, $m as p, $o as m, $p as ee, $r as te, $t as ne, $v as re, $x as ie, $y as ae, AA as oe, AC as se, AD as ce, AT as le, A_ as ue, Ab as h, Ai as de, Al as fe, An as pe, Ao as me, Ap as he, As as ge, Aw as _e, BD as ve, BS as ye, BT as be, B_ as xe, Bb as g, Bc as Se, Bd as Ce, Bi as we, Bj as Te, Bk as Ee, Bl as De, Bn as Oe, Bo as ke, Bp as Ae, Bt as je, Bw as Me, Bx as Ne, C as Pe, CA as Fe, CD as Ie, CM as Le, CN as Re, CS as ze, CT as Be, Ca as Ve, Cb as He, Cc as Ue, Cd as We, Cg as Ge, Ci as Ke, Ck as qe, Co as Je, Cp as Ye, Cr as Xe, Ct as Ze, DA as Qe, DD as $e, DM as et, DO as _, DS as tt, DT as nt, Db as rt, Dg as it, Di as at, Dj as v, Dk as ot, Dl as st, Do as ct, Ds as lt, EO as ut, ES as dt, Ea as ft, Eb as pt, Ej as y, Ek as mt, El as ht, Em as gt, Es as _t, FM as vt, FT as yt, Fa as bt, Fb as xt, Fd as St, Fj as Ct, Fm as wt, Fp as Tt, Fu as Et, Fx as Dt, Fy as Ot, GA as kt, GD as b, GM as At, GS as jt, Ga as Mt, Gb as x, Gg as Nt, Gi as Pt, Gl as Ft, Gm as It, Gp as Lt, Gr as Rt, Gt as zt, Gw as Bt, Gx as Vt, HA as Ht, HD as Ut, HT as Wt, H_ as Gt, Ha as Kt, Hb as qt, Hg as Jt, Hi as Yt, Hj as Xt, Hk as Zt, Hm as Qt, Ho as $t, Hp as en, Ht as tn, Hy as nn, IC as rn, ID as an, IO as on, IT as sn, Ib as cn, Id as ln, Ii as un, Ir as dn, It as fn, Iu as pn, Ix as mn, Iy as hn, JD as gn, JM as _n, JT as vn, Jb as yn, Jn as bn, Jo as xn, Jt as Sn, Jy as Cn, K as wn, KA as Tn, KD as En, KM as Dn, KO as On, K_ as kn, Ka as An, Kb as jn, Kd as Mn, Kg as Nn, Kj as Pn, Kn as Fn, Kp as In, Kr as Ln, Kt as Rn, Kv as zn, Kw as Bn, LD as Vn, LT as Hn, Lb as S, Lc as Un, Ld as Wn, Lg as Gn, Li as Kn, Lj as qn, Ln as Jn, Lp as Yn, Lr as Xn, Lt as Zn, Lx as Qn, Ly as $n, MA as er, MD as tr, MS as nr, MT as rr, Mb as ir, Md as ar, Mg as or, Mj as sr, Mk as C, Ml as cr, Mn as lr, Mo as ur, Mp as dr, Mu as fr, Mv as pr, Mw as mr, Mx as hr, My as gr, NA as _r, NC as vr, NM as yr, NS as br, NT as xr, Nb as Sr, Nc as Cr, Nd as wr, Ng as Tr, Ni as Er, Nk as Dr, Nl as Or, Np as kr, Ns as Ar, Nu as jr, Nv as Mr, Nw as Nr, Nx as Pr, OE as Fr, OM as Ir, ON as Lr, OO as Rr, OS as zr, Oa as Br, Ob as w, Og as Vr, Oi as Hr, Ok as Ur, Om as Wr, On as Gr, Oo as Kr, Op as qr, Os as Jr, Ox as Yr, PC as Xr, PM as Zr, PT as Qr, Pa as $r, Pb as ei, Pj as ti, Pl as ni, Pu as ri, Pw as ii, Px as ai, QS as oi, QT as si, Q_ as ci, Qa as li, Qf as ui, Qh as di, Qj as fi, Qm as pi, Qp as mi, Qv as hi, Qw as gi, Qx as _i, Qy as vi, RA as yi, RS as bi, RT as xi, Rd as Si, Rg as Ci, Ri as wi, Rn as Ti, Rr as Ei, Rt as Di, Rx as Oi, Ry as ki, SA as Ai, SM as ji, SS as Mi, Sb as Ni, Sc as Pi, Si as Fi, Sk as Ii, Sm as Li, Sn as Ri, Sr as zi, St as Bi, Sx as Vi, TA as T, TD as Hi, TS as Ui, Tb as Wi, Tj as E, Tk as Gi, Tr as Ki, Ts as qi, Tx as Ji, UA as Yi, UD as D, UE as Xi, U_ as Zi, Ua as Qi, Ub as $i, Uj as ea, Um as ta, Uo as na, Up as ra, Ur as ia, Us as aa, Ut as oa, Ux as sa, VD as ca, VM as la, VS as ua, VT as da, V_ as fa, Vd as pa, Vg as ma, Vi as ha, Vj as ga, Vn as _a, Vo as O, Vp as va, Vt as ya, Vw as ba, Vx as k, WC as xa, WD as Sa, WE as Ca, WS as wa, W_ as Ta, Wa as Ea, Wb as Da, Wc as Oa, Wi as ka, Wj as Aa, Wm as ja, Wo as Ma, Wp as Na, Wt as Pa, Ww as Fa, Wx as Ia, X as La, XD as Ra, XE as za, Xa as Ba, Xb as Va, Xf as Ha, Xg as Ua, Xh as Wa, Xk as Ga, Xl as Ka, Xm as qa, Xn as Ja, Xp as Ya, Xr as Xa, Xv as Za, Xw as Qa, Xy as $a, YD as eo, YS as to, Ya as no, Yb as A, Yh as ro, Yi as io, Yj as ao, Yl as oo, Ym as so, Yn as co, Yr as lo, Yt as uo, Yy as fo, ZM as po, ZS as mo, ZT as ho, Z_ as go, Zb as _o, Zf as vo, Zg as yo, Zh as bo, Zk as xo, Zm as So, Zn as Co, Zr as wo, Zt as To, Zx as Eo, _A as j, _D as Do, _S as Oo, __ as ko, _a as Ao, _b as jo, _c as Mo, _j as No, _l as Po, _n as Fo, _p as Io, _r as Lo, _t as Ro, _w as zo, _x as Bo, aC as Vo, aE as Ho, aS as Uo, aa as Wo, ab as Go, ag as Ko, al as qo, an as Jo, ao as Yo, ap as Xo, ar as Zo, ax as Qo, bM as $o, bS as es, bT as ts, b_ as ns, ba as rs, bb as is, bc as as, bi as os, bj as ss, bm as cs, bn as ls, bo as us, br as ds, bt as fs, bv as ps, bx as ms, cC as hs, cD as M, cE as gs, cM as _s, cT as vs, ca as ys, cb as N, cg as bs, ck as xs, cn as Ss, cp as Cs, cr as ws, cs as Ts, ct as Es, cw as Ds, cx as Os, dA as ks, dD as As, dE as js, dN as Ms, dS as Ns, da as Ps, db as P, dd as Fs, dg as Is, dj as Ls, dk as Rs, dm as zs, dn as Bs, ds as Vs, dt as Hs, dv as Us, dy as Ws, eE as Gs, eM as Ks, eS as qs, eT as Js, e_ as F, ea as Ys, eb as I, ec as Xs, eg as Zs, eh as Qs, ej as $s, em as ec, en as tc, eo as nc, ex as L, fA as rc, fE as ic, fN as ac, fS as oc, fT as sc, fb as cc, fd as lc, fl as uc, fm as dc, fn as fc, ft as pc, fx as mc, gD as hc, g_ as gc, gb as _c, gc as vc, gl as yc, gm as bc, gn as xc, go as Sc, gr as Cc, gs as wc, gt as Tc, gv as Ec, gw as Dc, hA as Oc, hD as kc, hT as Ac, hb as jc, hc as Mc, hg as Nc, hj as Pc, hk as Fc, hn as Ic, ho as Lc, hs as Rc, ht as zc, iA as Bc, iC as Vc, iE as Hc, iS as Uc, ib as Wc, ig as Gc, ih as Kc, ij as qc, io as Jc, ir as Yc, it as Xc, iu as Zc, iy as Qc, jA as $c, jC as el, jD as tl, jT as nl, jb as rl, jc as il, jd as al, ji as ol, jk as sl, jl as cl, jn as ll, jo as ul, jp as dl, js as fl, jt as pl, ju as ml, jx as hl, jy as gl, kA as _l, kC as vl, kD as yl, kO as bl, kT as xl, kb as R, kc as Sl, kk as Cl, kn as wl, ko as Tl, ks as El, kx as Dl, ky as Ol, lA as kl, lE as Al, lM as jl, lS as Ml, lT as Nl, la as Pl, lb as z, lc as Fl, lj as Il, ll as Ll, ln as Rl, lp as zl, lr as Bl, lt as Vl, lv as Hl, mA as B, mD as Ul, mS as Wl, mT as Gl, m_ as Kl, mb as ql, mc as Jl, mr as Yl, ms as Xl, mt as Zl, mx as Ql, n as $l, nA as V, nM as eu, nS as tu, na as nu, nk as ru, nn as iu, no as au, np as ou, ns as su, nt as cu, nv as lu, oD as uu, oE as du, oM as fu, oa as pu, og as mu, oi as hu, ol as gu, op as _u, or as vu, os as yu, ot as bu, ov as xu, ow as Su, ox as Cu, pD as wu, pM as Tu, pN as Eu, pT as Du, pa as Ou, pb as ku, pi as Au, pj as ju, pm as Mu, pn as Nu, pr as Pu, pw as Fu, px as Iu, q as Lu, qC as Ru, qD as H, qT as zu, qb as Bu, qc as Vu, qd as Hu, qg as Uu, qi as Wu, qn as Gu, qo as Ku, qp as qu, qr as Ju, qt as Yu, qw as Xu, qx as Zu, r as Qu, rA as $u, rC as ed, rM as td, rO as nd, rS as rd, rT as id, rb as U, rh as ad, rn as od, ro as sd, rp as cd, rr as ld, rs as ud, rt as dd, rv as fd, rx as pd, ry as md, sA as W, sD as hd, sS as gd, sa as _d, sb as G, sg as vd, sl as yd, sn as bd, sp as xd, sr as Sd, st as Cd, sv as wd, sw as Td, tA as K, tC as Ed, tO as Dd, tS as Od, t_ as kd, ta as Ad, tb as q, tj as jd, tm as Md, tn as Nd, to as Pd, tp as Fd, tu as Id, uA as Ld, uC as Rd, uD as zd, uE as Bd, uS as Vd, uT as Hd, ub as Ud, uc as Wd, ug as Gd, uh as Kd, ui as qd, uj as Jd, un as Yd, ur as Xd, us as Zd, ut as Qd, ux as $d, vD as J, v_ as ef, va as tf, vb as nf, vg as rf, vi as af, vk as of, vl as sf, vm as cf, vo as lf, vr as uf, vs as df, vt as ff, vx as pf, w as mf, wD as hf, wS as gf, wb as _f, wc as vf, wd as yf, wi as bf, wj as xf, wk as Sf, wo as Cf, wt as wf, xM as Tf, xS as Ef, xa as Df, xb as Of, xc as kf, xj as Af, xm as jf, xn as Mf, xo as Nf, xr as Pf, xt as Ff, xw as If, xx as Lf, yA as Rf, yD as zf, yO as Bf, yg as Vf, yh as Hf, yi as Uf, yj as Wf, yl as Gf, ym as Kf, yn as qf, yo as Jf, yr as Yf, ys as Xf, yt as Zf, yv as Qf, yx as $f, zA as ep, zS as tp, zT as np, zg as rp, zi as ip, zn as ap, zo as op, zr as sp, zs as cp, zt as lp, zw as up, zx as dp } from "./standaloneServices-C51B94Xh.js";
-import { $ as fp, At as pp, B as mp, Bt as hp, C as gp, F as _p, Ft as vp, Gt as yp, H as bp, I as xp, It as Sp, J as Cp, Jt as wp, K as Tp, Kt as Ep, L as Dp, Mt as Op, Nt as kp, Pt as Ap, Q as jp, R as Mp, Rt as Np, S as Pp, St as Fp, U as Ip, V as Lp, W as Rp, Wt as zp, X as Bp, Xt as Vp, Y as Hp, Yt as Up, Z as Wp, Zt as Gp, _t as Kp, a as qp, at as Jp, bt as Yp, cn as Xp, ct as Zp, d as Qp, dn as $p, dt as em, et as tm, ft as nm, g as rm, gt as im, h as am, hn as om, ht as sm, i as cm, jt as lm, ln as um, lt as dm, m as fm, mn as pm, mt as mm, nn as hm, o as gm, on as _m, ot as vm, p as ym, pt as bm, q as xm, qt as Sm, r as Cm, rn as wm, sn as Tm, st as Em, t as Dm, tt as Om, u as km, un as Am, ut as jm, vn as Mm, vt as Nm, x as Pm, xt as Fm, yn as Im, yt as Lm, z as Rm, zt as zm } from "./configuration.service-DJ_Qr0zd.js";
+import { $ as fp, At as pp, B as mp, Bt as hp, C as gp, F as _p, Ft as vp, Gt as yp, H as bp, I as xp, It as Sp, J as Cp, Jt as wp, K as Tp, Kt as Ep, L as Dp, Mt as Op, Nt as kp, Pt as Ap, Q as jp, R as Mp, Rt as Np, S as Pp, St as Fp, U as Ip, V as Lp, W as Rp, Wt as zp, X as Bp, Xt as Vp, Y as Hp, Yt as Up, Z as Wp, Zt as Gp, _t as Kp, a as qp, at as Jp, bt as Yp, cn as Xp, ct as Zp, d as Qp, dn as $p, dt as em, et as tm, ft as nm, g as rm, gt as im, h as am, hn as om, ht as sm, i as cm, jt as lm, ln as um, lt as dm, m as fm, mn as pm, mt as mm, nn as hm, o as gm, on as _m, ot as vm, p as ym, pt as bm, q as xm, qt as Sm, r as Cm, rn as wm, sn as Tm, st as Em, t as Dm, tt as Om, u as km, un as Am, ut as jm, vn as Mm, vt as Nm, x as Pm, xt as Fm, yn as Im, yt as Lm, z as Rm, zt as zm } from "./configuration.service-Bga69j3H.js";
 import { $t as Bm, Aa as Vm, Ai as Hm, An as Um, At as Wm, B as Gm, Bt as Km, C as qm, Cn as Jm, Dn as Ym, Dr as Xm, Dt as Zm, En as Qm, Et as $m, F as eh, Fa as th, Fn as nh, G as rh, Gt as ih, H as ah, Hi as oh, Ht as sh, I as ch, In as lh, J as uh, K as dh, Kn as fh, Kt as ph, L as mh, Ln as hh, M as gh, Mi as _h, Mn as vh, N as yh, Nn as bh, O as xh, On as Sh, Or as Ch, Ot as wh, P as Th, Pa as Eh, Pn as Dh, Qn as Oh, R as kh, Rn as Ah, S as jh, Sn as Mh, Tn as Nh, U as Ph, Ui as Fh, Ut as Ih, Vt as Lh, Wt as Rh, Xn as zh, Y as Bh, _ as Vh, _n as Hh, _o as Uh, _t as Wh, a as Gh, ar as Kh, bn as qh, bt as Jh, c as Yh, cr as Xh, ct as Zh, d as Qh, di as $h, dt as eg, en as tg, et as ng, f as rg, ft as ig, g as ag, gn as og, gt as sg, ht as cg, i as lg, ir as ug, j as dg, ja as fg, ji as pg, jn as mg, jt as hg, kn as gg, kt as _g, l as vg, lt as yg, mn as bg, mt as xg, n as Sg, o as Cg, or as wg, ot as Tg, pt as Eg, q as Dg, qn as Og, r as kg, rr as Ag, s as jg, sr as Mg, st as Ng, t as Pg, tt as Fg, u as Ig, ui as Lg, ut as Rg, vn as zg, vo as Bg, vt as Vg, wn as Hg, x as Ug, xn as Wg, yn as Gg, yt as Kg, z as qg, zn as Jg } from "./editorResolverService-CZFxBDpH.js";
-import { $ as Yg, $_ as Xg, $i as Zg, $m as Qg, $u as $g, Ag as e_, Ai as t_, Ap as n_, At as r_, B as i_, BS as a_, B_ as o_, Bi as s_, C_ as c_, Cb as l_, Cf as u_, Ci as d_, Cx as f_, D_ as p_, Db as m_, Di as h_, Dp as g_, Dt as __, E_ as v_, Eb as y_, Eg as b_, Ei as x_, Ep as S_, Et as C_, Ey as w_, F as T_, FS as E_, F_ as D_, Fi as O_, G as k_, GS as A_, G_ as j_, Gh as M_, Gi as N_, H as P_, HS as F_, H_ as I_, Hd as L_, Hi as R_, I as z_, IS as B_, I_ as V_, Ii as H_, J as U_, J_ as W_, Jh as G_, Ji as K_, Jm as q_, Jv as J_, Jx as Y_, K as X_, K_ as Z_, Kh as Q_, Ki as $_, Kv as ev, L as tv, Lh as nv, Li as rv, M as iv, Mg as av, Mi as ov, Mt as sv, Mx as cv, N as lv, Ng as uv, Ni as dv, Nt as fv, O_ as pv, Ob as mv, Od as hv, Of as gv, Oi as _v, Op as vv, Ot as yv, P as bv, PS as xv, P_ as Sv, Pi as Cv, Q as wv, Q_ as Tv, Qi as Ev, Qm as Dv, R as Ov, RS as kv, R_ as Av, Rh as jv, Ri as Mv, S_ as Nv, Sb as Pv, Sf as Fv, Si as Iv, Ti as Lv, Tp as Rv, Ty as zv, U as Bv, US as Vv, U_ as Hv, Ug as Uv, Ui as Wv, V as Gv, VS as Kv, V_ as qv, Vi as Jv, W as Yv, WS as Xv, W_ as Zv, Wg as Qv, Wh as $v, Wi as ey, X as ty, X_ as ny, Xi as ry, Xm as iy, Xv as ay, Y as oy, Y_ as sy, Yi as cy, Ym as ly, Yv as uy, Z as dy, Z_ as fy, Zi as py, Zm as my, Zv as hy, _f as gy, _i as _y, _x as vy, aC as yy, aa as by, ag as xy, at as Sy, av as Cy, b_ as wy, bd as Ty, bf as Ey, bi as Dy, ca as Oy, cp as ky, ct as Ay, cv as jy, cx as My, dC as Ny, da as Py, df as Fy, di as Iy, dt as Ly, eC as Ry, ed as zy, eh as By, et as Vy, ev as Hy, fa as Uy, ff as Wy, fi as Gy, fm as Ky, gf as qy, gi as Jy, gx as Yy, hf as Xy, hi as Zy, ht as Qy, hx as $y, iC as eb, ih as tb, it as nb, iv as rb, jg as ib, ji as ab, jp as ob, jt as sb, jx as cb, k_ as lb, kb as ub, kd as db, kf as fb, kg as pb, ki as mb, kp as hb, kt as gb, la as _b, li as vb, lt as yb, lv as bb, lx as xb, mi as Sb, mm as Cb, mt as wb, mx as Tb, nC as Eb, nd as Db, nt as Ob, nv as kb, oC as Ab, oa as jb, og as Mb, ot as Nb, ov as Pb, pa as Fb, pf as Ib, pi as Lb, pt as Rb, q as zb, q_ as Bb, qh as Vb, qi as Hb, qm as Ub, qv as Wb, qx as Gb, rC as Kb, rd as qb, rh as Jb, rt as Yb, rv as Xb, sa as Zb, sp as Qb, st as $b, sv as ex, td as tx, tt as nx, tv as rx, uC as ix, ua as ax, ui as ox, ut as sx, uv as cx, v_ as lx, vd as ux, vf as dx, vi as fx, wf as px, wi as mx, wp as hx, wx as gx, x_ as _x, xd as vx, xf as yx, xi as bx, y_ as xx, yd as Sx, yf as Cx, yi as wx, yx as Tx, z as Ex, zS as Dx, z_ as Ox, zd as kx, zi as Ax } from "./monaco-vscode-extensions-service-override-B4FJQig8.js";
+import { $ as Yg, $_ as Xg, $i as Zg, $m as Qg, $u as $g, Ag as e_, Ai as t_, Ap as n_, At as r_, B as i_, BS as a_, B_ as o_, Bi as s_, C_ as c_, Cb as l_, Cf as u_, Ci as d_, Cx as f_, D_ as p_, Db as m_, Di as h_, Dp as g_, Dt as __, E_ as v_, Eb as y_, Eg as b_, Ei as x_, Ep as S_, Et as C_, Ey as w_, F as T_, FS as E_, F_ as D_, Fi as O_, G as k_, GS as A_, G_ as j_, Gh as M_, Gi as N_, H as P_, HS as F_, H_ as I_, Hd as L_, Hi as R_, I as z_, IS as B_, I_ as V_, Ii as H_, J as U_, J_ as W_, Jh as G_, Ji as K_, Jm as q_, Jv as J_, Jx as Y_, K as X_, K_ as Z_, Kh as Q_, Ki as $_, Kv as ev, L as tv, Lh as nv, Li as rv, M as iv, Mg as av, Mi as ov, Mt as sv, Mx as cv, N as lv, Ng as uv, Ni as dv, Nt as fv, O_ as pv, Ob as mv, Od as hv, Of as gv, Oi as _v, Op as vv, Ot as yv, P as bv, PS as xv, P_ as Sv, Pi as Cv, Q as wv, Q_ as Tv, Qi as Ev, Qm as Dv, R as Ov, RS as kv, R_ as Av, Rh as jv, Ri as Mv, S_ as Nv, Sb as Pv, Sf as Fv, Si as Iv, Ti as Lv, Tp as Rv, Ty as zv, U as Bv, US as Vv, U_ as Hv, Ug as Uv, Ui as Wv, V as Gv, VS as Kv, V_ as qv, Vi as Jv, W as Yv, WS as Xv, W_ as Zv, Wg as Qv, Wh as $v, Wi as ey, X as ty, X_ as ny, Xi as ry, Xm as iy, Xv as ay, Y as oy, Y_ as sy, Yi as cy, Ym as ly, Yv as uy, Z as dy, Z_ as fy, Zi as py, Zm as my, Zv as hy, _f as gy, _i as _y, _x as vy, aC as yy, aa as by, ag as xy, at as Sy, av as Cy, b_ as wy, bd as Ty, bf as Ey, bi as Dy, ca as Oy, cp as ky, ct as Ay, cv as jy, cx as My, dC as Ny, da as Py, df as Fy, di as Iy, dt as Ly, eC as Ry, ed as zy, eh as By, et as Vy, ev as Hy, fa as Uy, ff as Wy, fi as Gy, fm as Ky, gf as qy, gi as Jy, gx as Yy, hf as Xy, hi as Zy, ht as Qy, hx as $y, iC as eb, ih as tb, it as nb, iv as rb, jg as ib, ji as ab, jp as ob, jt as sb, jx as cb, k_ as lb, kb as ub, kd as db, kf as fb, kg as pb, ki as mb, kp as hb, kt as gb, la as _b, li as vb, lt as yb, lv as bb, lx as xb, mi as Sb, mm as Cb, mt as wb, mx as Tb, nC as Eb, nd as Db, nt as Ob, nv as kb, oC as Ab, oa as jb, og as Mb, ot as Nb, ov as Pb, pa as Fb, pf as Ib, pi as Lb, pt as Rb, q as zb, q_ as Bb, qh as Vb, qi as Hb, qm as Ub, qv as Wb, qx as Gb, rC as Kb, rd as qb, rh as Jb, rt as Yb, rv as Xb, sa as Zb, sp as Qb, st as $b, sv as ex, td as tx, tt as nx, tv as rx, uC as ix, ua as ax, ui as ox, ut as sx, uv as cx, v_ as lx, vd as ux, vf as dx, vi as fx, wf as px, wi as mx, wp as hx, wx as gx, x_ as _x, xd as vx, xf as yx, xi as bx, y_ as xx, yd as Sx, yf as Cx, yi as wx, yx as Tx, z as Ex, zS as Dx, z_ as Ox, zd as kx, zi as Ax } from "./monaco-vscode-extensions-service-override-CcXiXb-p.js";
 import { n as jx, r as Mx } from "./platformObservableUtils-D83yluRC.js";
 import { i as Nx, l as Px, o as Fx, s as Ix } from "./editorBrowser-Bcg0bJo7.js";
 import { O as Lx, S as Rx, _ as zx, b as Bx, c as Vx, m as Hx, n as Ux, o as Wx, r as Gx, s as Kx, t as qx, v as Jx, x as Yx, y as Xx } from "./files-iACwD_Ow.js";
-import { $n as Zx, $t as Qx, An as $x, Cn as eS, Ct as tS, Dt as nS, G as rS, Gn as iS, Hn as aS, Ht as oS, I as Y, In as sS, Jt as cS, Kn as lS, Kt as uS, L as dS, Ot as fS, P as pS, Pn as mS, Q as hS, Qt as gS, Sn as _S, Un as vS, Ut as yS, Vn as bS, Wn as xS, Xn as SS, Xt as CS, Yn as wS, Yt as TS, Z as ES, Zt as DS, _n as OS, _t as kS, a as AS, an as jS, bn as MS, bt as NS, cn as PS, d as FS, dn as IS, dr as LS, en as RS, er as zS, ft as BS, gn as VS, gr as HS, gt as US, hn as WS, in as GS, ir as KS, j as qS, kn as JS, l as YS, ln as XS, lr as ZS, mn as QS, mt as $S, nn as eC, nr as tC, on as nC, p as rC, pn as iC, pt as aC, qt as oC, r as sC, rn as cC, rr as lC, sn as uC, tn as dC, tr as fC, u as pC, vn as mC, vt as hC, w as gC, wn as _C, wt as vC, x as yC, xn as bC, yn as xC, yt as SC, z as CC } from "./monaco-vscode-files-service-override-BUohVD35.js";
+import { $n as Zx, $t as Qx, At as $x, B as eS, Cn as tS, Ct as nS, D as rS, Dn as iS, Dt as aS, En as oS, Et as sS, Gn as cS, Gt as lS, H as uS, J as dS, Jn as fS, Kn as pS, Kt as mS, L as hS, Ln as gS, Mn as _S, Nn as vS, P as yS, Qn as bS, Qt as xS, Sn as SS, St as CS, Tn as wS, Wn as TS, Xt as ES, Yn as DS, Yt as OS, Zt as kS, _n as AS, _t as jS, a as MS, an as NS, ar as PS, bn as FS, bt as IS, cn as LS, dn as RS, en as zS, et as BS, f as VS, fn as HS, fr as US, g as WS, gn as GS, gt as KS, ht as qS, in as JS, ir as YS, jt as XS, ln as ZS, m as QS, mn as $S, mr as eC, nn as tC, nr as nC, on as rC, or as iC, p as aC, qn as oC, rn as sC, rr as cC, s as lC, sn as uC, sr as dC, tn as fC, tt as pC, un as mC, vn as hC, w as gC, wn as _C, xn as vC, xt as yC, yn as bC, yr as xC, yt as SC, z as Y, zn as CC } from "./monaco-vscode-files-service-override-DGMr6mGW.js";
 import { $t as wC, A as TC, B as EC, Bt as DC, C as OC, D as kC, Dt as AC, E as jC, Et as MC, Ft as NC, G as X, Gt as PC, H as FC, Ht as IC, I as LC, It as RC, J as zC, Jt as BC, K as VC, L as HC, Lt as UC, Mt as WC, N as GC, Nt as KC, O as qC, Ot as Z, Pt as JC, R as YC, Rt as XC, S as ZC, St as QC, T as $C, Tt as ew, U as Q, Ut as tw, V as nw, Vt as rw, W as iw, X as aw, Xt as ow, Y as sw, Yt as cw, Z as lw, Zt as uw, _ as dw, _n as fw, _t as pw, a as mw, an as hw, at as gw, b as _w, bt as vw, c as yw, cn as bw, dn as xw, et as Sw, f as Cw, fn as ww, gt as Tw, hn as Ew, ht as Dw, i as Ow, in as kw, j as Aw, jt as jw, k as Mw, kt as Nw, l as Pw, ln as Fw, lt as Iw, m as Lw, mn as Rw, n as zw, nn as Bw, nt as Vw, o as Hw, on as Uw, ot as Ww, pn as Gw, q as Kw, qt as qw, rn as Jw, rt as Yw, s as Xw, sn as Zw, tt as Qw, u as $w, un as eT, v as tT, vt as nT, w as rT, x as iT, xt as aT, y as oT, yt as sT, z as cT, zt as lT } from "./filesConfigurationService-CxZOIrXS.js";
 import { n as uT, t as dT } from "./languageStatusService.service-dYnhaUee.js";
 import { n as fT, o as pT } from "./extensionManagement.service-ELKOh9mo.js";
-import { F as mT, P as hT, Q as gT, nt as _T } from "./extensions-DnX2FbG_.js";
+import { F as mT, P as hT, Q as gT, nt as _T } from "./extensions-MEu2nHmY.js";
 import { o as vT } from "./tools-CGs0ihXi.js";
 import { a as yT, c as bT, i as xT, n as ST, o as CT, s as $, t as wT } from "./environmentService.service-DtlNbSmC.js";
 import { i as TT, r as ET } from "./hostColorSchemeService.service-D8IIB8tu.js";
-import { a as DT, i as OT, n as kT, t as AT } from "./extensionFeatures-Dnpt_iIx.js";
-import { n as jT, r as MT } from "./languageService-C5Ghz3ME.js";
+import { a as DT, i as OT, n as kT, t as AT } from "./extensionFeatures-CMMcwnLr.js";
+import { n as jT, r as MT } from "./languageService-CNIR0xe2.js";
 import { t as NT } from "./workbenchThemeService.service-Cz3TFQno.js";
 import { a as PT, c as FT, l as IT, n as LT, o as RT, r as zT, s as BT, t as VT } from "./fileCommands._save-BcixAh1E.js";
-Lr(), Ms(), Zr(), jl(), Pn(), qn(), E(), qc(), Tn(), Yi(), er(), T(), rc(), Ld(), W(), xo(), Zt(), Dr(), sl(), ot(), Sf(), r(), bl(), Bf(), eo(), an(), hf(), zf(), Do(), kc(), wu(), zd(), hd(), za(), Bd(), du(), vn(), Wt(), np(), xr(), le(), xl(), ts(), Du(), gi(), ba(), _e(), xa(), Xr(), se(), Rd(), Vc(), to(), wa(), ye(), bi(), br(), zr(), k(), Da(), g(), cn(), ei(), ir(), h(), pt(), Of(), nf(), _c(), ql(), cc(), Ud(), Go(), ae(), $a(), ki(), Ws(), Qc(), ps(), Us(), wd(), fd(), a(), kn(), Zi(), xe(), ue(), ko(), kd(), yo(), Uu(), Fx(), ma(), Vr(), rf(), bs(), di(), Kc(), ad(), It(), Wr(), gt(), Li(), jf(), cf(), Mu(), Md(), mi(), Fh(), qu(), va(), Yn(), dr(), qr(), Ye(), zl(), Xo(), Ha(), _h(), Hu(), pa(), Wn(), ar(), yf(), lc(), pn(), jr(), Zc(), Ka(), Ft(), ni(), cr(), st(), Gf(), Ll(), Vu(), Un(), il(), vf(), kf(), Mo(), Jl(), Fl(), Xs(), wc(), ud(), xn(), Ma(), ke(), ur(), Kr(), Je(), Jf(), Yo(), au(), nc(), Ba(), An(), Ea(), bt(), Br(), rs(), tf(), Ou(), Pl(), nu(), Ys(), Wu(), ka(), Yt(), we(), un(), ol(), de(), Au(), wo(), lo(), Ei(), Ki(), Pf(), Yf(), ws(), Sd(), Yc(), Co(), ap(), ll(), pe(), Fo(), Ic(), Bs(), od(), ne(), Sn(), Pa(), tn(), je(), Di(), fn(), wf(), Bi(), wn(), mf(), Qu(), HS(), wC(), jw(), Nw(), AC(), QC(), vw(), nT(), Tw(), gw(), Yw(), KS(), Im(), Y_(), cv(), vT(), gx(), Tx(), $y(), Og(), om(), uh(), xb(), ub(), hy(), uy(), Wb(), Tm(), lw(), Gm(), Rx(), Bx(), qg(), iw(), FC(), mh(), hT(), fS(), EC(), Gp(), eh(), Up(), YC(), LC(), vC(), TC(), yh(), ex(), qC(), DT(), Jx(), jC(), rT(), lb(), p_(), bT(), c_(), NS(), ZC(), xx(), kT(), oT(), xh(), Q_(), jv(), jT(), tb(), US(), By(), n_(), hb(), hS(), CC(), yC(), px(), yw(), rC(), pC(), Hw(), Ow(), AS(), L_(), qm(), rg(), Yh(), Zg(), py(), cy(), Hb(), N_(), Gh(), Ly(), P_(), T_(), cm();
+Lr(), Ms(), Zr(), jl(), Pn(), qn(), E(), qc(), Tn(), Yi(), er(), T(), rc(), Ld(), W(), xo(), Zt(), Dr(), sl(), ot(), Sf(), r(), bl(), Bf(), eo(), an(), hf(), zf(), Do(), kc(), wu(), zd(), hd(), za(), Bd(), du(), vn(), Wt(), np(), xr(), le(), xl(), ts(), Du(), gi(), ba(), _e(), xa(), Xr(), se(), Rd(), Vc(), to(), wa(), ye(), bi(), br(), zr(), k(), Da(), g(), cn(), ei(), ir(), h(), pt(), Of(), nf(), _c(), ql(), cc(), Ud(), Go(), ae(), $a(), ki(), Ws(), Qc(), ps(), Us(), wd(), fd(), a(), kn(), Zi(), xe(), ue(), ko(), kd(), yo(), Uu(), Fx(), ma(), Vr(), rf(), bs(), di(), Kc(), ad(), It(), Wr(), gt(), Li(), jf(), cf(), Mu(), Md(), mi(), Fh(), qu(), va(), Yn(), dr(), qr(), Ye(), zl(), Xo(), Ha(), _h(), Hu(), pa(), Wn(), ar(), yf(), lc(), pn(), jr(), Zc(), Ka(), Ft(), ni(), cr(), st(), Gf(), Ll(), Vu(), Un(), il(), vf(), kf(), Mo(), Jl(), Fl(), Xs(), wc(), ud(), xn(), Ma(), ke(), ur(), Kr(), Je(), Jf(), Yo(), au(), nc(), Ba(), An(), Ea(), bt(), Br(), rs(), tf(), Ou(), Pl(), nu(), Ys(), Wu(), ka(), Yt(), we(), un(), ol(), de(), Au(), wo(), lo(), Ei(), Ki(), Pf(), Yf(), ws(), Sd(), Yc(), Co(), ap(), ll(), pe(), Fo(), Ic(), Bs(), od(), ne(), Sn(), Pa(), tn(), je(), Di(), fn(), wf(), Bi(), wn(), mf(), Qu(), xC(), wC(), jw(), Nw(), AC(), QC(), vw(), nT(), Tw(), gw(), Yw(), dC(), Im(), Y_(), cv(), vT(), gx(), Tx(), $y(), Og(), om(), uh(), xb(), ub(), hy(), uy(), Wb(), Tm(), lw(), Gm(), Rx(), Bx(), qg(), iw(), FC(), mh(), hT(), XS(), EC(), Gp(), eh(), Up(), YC(), LC(), aS(), TC(), yh(), ex(), qC(), DT(), Jx(), jC(), rT(), lb(), p_(), bT(), c_(), nS(), ZC(), xx(), kT(), oT(), xh(), Q_(), jv(), jT(), tb(), SC(), By(), n_(), hb(), pC(), uS(), gC(), px(), yw(), WS(), aC(), Hw(), Ow(), lC(), L_(), qm(), rg(), Yh(), Zg(), py(), cy(), Hb(), N_(), Gh(), Ly(), P_(), T_(), cm();
 var HT = /* @__PURE__ */ e({});
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/browser/parts/media/paneCompositePart.css
@@ -103,7 +103,7 @@ WT = w([
 	R(3, S),
 	R(4, Mn),
 	R(5, Po),
-	R(6, nS),
+	R(6, $x),
 	R(7, $r)
 ], WT);
 var GT = class e extends Ig {
@@ -295,7 +295,7 @@ var JT = class extends Om {
 		}), this.instantiatedCompositeItems.clear(), super.dispose();
 	}
 };
-du(), h(), W(), g(), T(), k(), cc(), ke(), Gf(), Hu(), fS(), E(), Go(), Ei(), pt(), T_(), lo(), wg();
+du(), h(), W(), g(), T(), k(), cc(), ke(), Gf(), Hu(), XS(), E(), Go(), Ei(), pt(), T_(), lo(), wg();
 var YT;
 gs(UT);
 var XT;
@@ -582,16 +582,16 @@ ZT = YT = w([
 	R(9, al),
 	R(10, op),
 	R(11, Po),
-	R(12, ES),
+	R(12, BS),
 	R(13, We),
 	R(14, vu),
 	R(15, S),
 	R(16, Mn),
 	R(17, My),
 	R(18, ku),
-	R(19, nS),
+	R(19, $x),
 	R(20, Xa)
-], ZT), du(), h(), E(), ql(), Gf(), g(), yf(), ar(), ke(), Hu(), Og(), xb(), fS(), CC(), hS(), pt(), Pn(), Ei(), Go(), wo(), lo(), Sd();
+], ZT), du(), h(), E(), ql(), Gf(), g(), yf(), ar(), ke(), Hu(), Og(), xb(), XS(), uS(), pC(), pt(), Pn(), Ei(), Go(), wo(), lo(), Sd();
 var QT;
 gs(HT);
 var $T = class extends ZT {
@@ -624,12 +624,12 @@ var $T = class extends ZT {
 			hasTitle: !0,
 			trailingSeparator: !0,
 			borderWidth: () => this.getColor(Rh) || this.getColor(Is) ? 1 : 0
-		}, QT.activeViewSettingsKey, uS.bindTo(l), XS.bindTo(l), "auxiliarybar", "auxiliarybar", void 0, Bm, e, t, n, r, i, a, o, s, c, l, u, f), this.commandService = d, this.configurationService = p, this.minimumWidth = 170, this.maximumWidth = Infinity, this.minimumHeight = 0, this.maximumHeight = Infinity, this.priority = zt.Low, this.configuration = this.resolveConfiguration(), this._register(p.onDidChangeConfiguration((e) => {
-			e.affectsConfiguration(pS.ACTIVITY_BAR_LOCATION) ? (this.configuration = this.resolveConfiguration(), this.onDidChangeActivityBarLocation()) : e.affectsConfiguration("workbench.secondarySideBar.showLabels") && (this.configuration = this.resolveConfiguration(), this.updateCompositeBar(!0));
+		}, QT.activeViewSettingsKey, OS.bindTo(l), HS.bindTo(l), "auxiliarybar", "auxiliarybar", void 0, Bm, e, t, n, r, i, a, o, s, c, l, u, f), this.commandService = d, this.configurationService = p, this.minimumWidth = 170, this.maximumWidth = Infinity, this.minimumHeight = 0, this.maximumHeight = Infinity, this.priority = zt.Low, this.configuration = this.resolveConfiguration(), this._register(p.onDidChangeConfiguration((e) => {
+			e.affectsConfiguration(hS.ACTIVITY_BAR_LOCATION) ? (this.configuration = this.resolveConfiguration(), this.onDidChangeActivityBarLocation()) : e.affectsConfiguration("workbench.secondarySideBar.showLabels") && (this.configuration = this.resolveConfiguration(), this.updateCompositeBar(!0));
 		}));
 	}
 	resolveConfiguration() {
-		let e = this.configurationService.getValue(pS.ACTIVITY_BAR_LOCATION), t = e !== qS.TOP && e !== qS.BOTTOM;
+		let e = this.configurationService.getValue(hS.ACTIVITY_BAR_LOCATION), t = e !== yS.TOP && e !== yS.BOTTOM;
 		return {
 			position: e,
 			canShowLabels: t,
@@ -645,7 +645,7 @@ var $T = class extends ZT {
 		super.updateStyles();
 		let e = ea(this.getContainer());
 		e.style.backgroundColor = this.getColor(Ih) || "";
-		let t = this.getColor(Rh) || this.getColor(Is), n = this.layoutService.getSideBarPosition() === dS.RIGHT;
+		let t = this.getColor(Rh) || this.getColor(Is), n = this.layoutService.getSideBarPosition() === eS.RIGHT;
 		e.style.color = this.getColor(ph) || "", e.style.borderLeftColor = t ?? "", e.style.borderRightColor = t ?? "", e.style.borderLeftStyle = t && !n ? "solid" : "none", e.style.borderRightStyle = t && n ? "solid" : "none", e.style.borderLeftWidth = t && !n ? "1px" : "0px", e.style.borderRightWidth = t && n ? "1px" : "0px";
 	}
 	getCompositeBarOptions() {
@@ -687,7 +687,7 @@ var $T = class extends ZT {
 		};
 	}
 	fillExtraContextMenuActions(e) {
-		let t = this.layoutService.getSideBarPosition() === dS.LEFT;
+		let t = this.layoutService.getSideBarPosition() === eS.LEFT;
 		if (this.getCompositeBarPosition() === XT.TITLE) {
 			let t = this.getViewsSubmenuAction();
 			t && (e.push(new _f()), e.push(t));
@@ -712,14 +712,14 @@ var $T = class extends ZT {
 		}));
 	}
 	shouldShowCompositeBar() {
-		return this.configuration.position !== qS.HIDDEN;
+		return this.configuration.position !== yS.HIDDEN;
 	}
 	getCompositeBarPosition() {
 		switch (this.configuration.position) {
-			case qS.TOP: return XT.TOP;
-			case qS.BOTTOM: return XT.BOTTOM;
-			case qS.HIDDEN: return XT.TITLE;
-			case qS.DEFAULT: return XT.TITLE;
+			case yS.TOP: return XT.TOP;
+			case yS.BOTTOM: return XT.BOTTOM;
+			case yS.HIDDEN: return XT.TITLE;
+			case yS.DEFAULT: return XT.TITLE;
 			default: return XT.TITLE;
 		}
 	}
@@ -731,14 +731,14 @@ $T = QT = w([
 	R(0, al),
 	R(1, op),
 	R(2, Po),
-	R(3, ES),
+	R(3, BS),
 	R(4, We),
 	R(5, vu),
 	R(6, S),
 	R(7, Mn),
 	R(8, My),
 	R(9, ku),
-	R(10, nS),
+	R(10, $x),
 	R(11, jo),
 	R(12, Xa),
 	R(13, F)
@@ -1797,7 +1797,7 @@ function jE(e) {
 		height: r || 1
 	};
 }
-Mr(), th(), fg(), $h(), gu(), Lo(), Pu(), Ri(), ls(), jx(), Xm(), Ny(), Ab(), eb(), Oh(), Dx(), E_(), pT(), yS(), _T(), m_(), l_(), $p(), w_(), um(), wm(), uT(), TT(), Hy(), Bb(), D_(), _x(), hC(), Qv(), uv(), pb(), Mb(), G_(), CT(), Ub(), Cb(), ky(), Wy(), ST(), Lw(), db(), vx(), ux(), Ug(), qb(), tx(), Fb(), Vh(), jb(), Wv(), Ax(), rv(), Cv(), mb(), Lv(), bx(), Iy(), fv(), gb(), Qy(), nb(), k_();
+Mr(), th(), fg(), $h(), gu(), Lo(), Pu(), Ri(), ls(), jx(), Xm(), Ny(), Ab(), eb(), Oh(), Dx(), E_(), pT(), mS(), _T(), m_(), l_(), $p(), w_(), um(), wm(), uT(), TT(), Hy(), Bb(), D_(), _x(), yC(), Qv(), uv(), pb(), Mb(), G_(), CT(), Ub(), Cb(), ky(), Wy(), ST(), Lw(), db(), vx(), ux(), Ug(), qb(), tx(), Fb(), Vh(), jb(), Wv(), Ax(), rv(), Cv(), mb(), Lv(), bx(), Iy(), fv(), gb(), Qy(), nb(), k_();
 var ME = /* @__PURE__ */ e({}), NE = /* @__PURE__ */ e({});
 k(), Pl();
 var PE = class {
@@ -1965,7 +1965,7 @@ BE = LE = w([
 	R(4, Rc),
 	R(5, fe),
 	R(6, jo)
-], BE), Oy(), h(), E(), W(), pa(), T(), wC(), k(), cc(), hS(), g(), Ea(), Pn(), qu(), Ms(), qr(), cr();
+], BE), Oy(), h(), E(), W(), pa(), T(), wC(), k(), cc(), pC(), g(), Ea(), Pn(), qu(), Ms(), qr(), cr();
 var VE = class extends B {
 	get minimumWidth() {
 		return this._activeEditorPane?.minimumWidth ?? Ph.width;
@@ -1983,7 +1983,7 @@ var VE = class extends B {
 		return this._activeEditorPane;
 	}
 	constructor(e, t, n, r, i, a, o, s, c, l) {
-		super(), this.editorGroupParent = e, this.editorPanesParent = t, this.groupView = n, this.layoutService = r, this.instantiationService = i, this.workspaceTrustService = o, this.logService = s, this.dialogService = c, this.hostService = l, this._onDidFocus = this._register(new K()), this.onDidFocus = this._onDidFocus.event, this._onDidChangeSizeConstraints = this._register(new K()), this.onDidChangeSizeConstraints = this._onDidChangeSizeConstraints.event, this._activeEditorPane = null, this.editorPanes = [], this.mapEditorPaneToPendingSetInput = /* @__PURE__ */ new Map(), this.activeEditorPaneDisposables = this._register(new j()), this.editorPanesRegistry = P.as(UC.EditorPane), this.editorOperation = this._register(new BS(a)), this.registerListeners();
+		super(), this.editorGroupParent = e, this.editorPanesParent = t, this.groupView = n, this.layoutService = r, this.instantiationService = i, this.workspaceTrustService = o, this.logService = s, this.dialogService = c, this.hostService = l, this._onDidFocus = this._register(new K()), this.onDidFocus = this._onDidFocus.event, this._onDidChangeSizeConstraints = this._register(new K()), this.onDidChangeSizeConstraints = this._onDidChangeSizeConstraints.event, this._activeEditorPane = null, this.editorPanes = [], this.mapEditorPaneToPendingSetInput = /* @__PURE__ */ new Map(), this.activeEditorPaneDisposables = this._register(new j()), this.editorPanesRegistry = P.as(UC.EditorPane), this.editorOperation = this._register(new qS(a)), this.registerListeners();
 	}
 	registerListeners() {
 		this._register(this.workspaceTrustService.onDidChangeTrust(() => this.onDidChangeWorkspaceTrust()));
@@ -2136,7 +2136,7 @@ var VE = class extends B {
 	}
 };
 VE = w([
-	R(3, ES),
+	R(3, BS),
 	R(4, S),
 	R(5, Kt),
 	R(6, ft),
@@ -4029,7 +4029,7 @@ $D = QD = w([
 	R(7, Q),
 	R(8, Rc),
 	R(9, ET)
-], $D), eo(), gi(), zf(), Us(), E(), Go(), bl(), Ud(), KS(), Yw(), Nw(), iw();
+], $D), eo(), gi(), zf(), Us(), E(), Go(), bl(), Ud(), dC(), Yw(), Nw(), iw();
 var eO = "toggle.diff.renderSideBySide", tO = "workbench.action.compareEditor.nextChange", nO = "workbench.action.compareEditor.previousChange", rO = "workbench.action.compareEditor.focusPrimarySide", iO = "workbench.action.compareEditor.focusSecondarySide", aO = "workbench.action.compareEditor.focusOtherSide", oO = "workbench.action.compareEditor.openSide", sO = "toggle.diff.ignoreTrimWhitespace", cO = "workbench.action.compareEditor.swapSides";
 function lO() {
 	z.registerCommandAndKeybindingRule({
@@ -4049,7 +4049,7 @@ function lO() {
 	} }), z.registerCommandAndKeybindingRule({
 		id: tO,
 		weight: N.WorkbenchContrib,
-		when: SS,
+		when: Zx,
 		primary: b.Alt | D.F5,
 		handler: (e, ...n) => t(e, n, !0)
 	}), U.appendMenuItem(q.CommandPalette, { command: {
@@ -4058,7 +4058,7 @@ function lO() {
 	} }), z.registerCommandAndKeybindingRule({
 		id: nO,
 		weight: N.WorkbenchContrib,
-		when: SS,
+		when: Zx,
 		primary: b.Alt | b.Shift | D.F5,
 		handler: (e, ...n) => t(e, n, !1)
 	}), U.appendMenuItem(q.CommandPalette, { command: {
@@ -4173,17 +4173,17 @@ function lO() {
 			title: v(3114, "Toggle Inline View"),
 			category: y(3115, "Compare")
 		},
-		when: wS
+		when: bS
 	}), U.appendMenuItem(q.CommandPalette, {
 		command: {
 			id: cO,
 			title: v(3116, "Swap Left and Right Editor Side"),
 			category: y(3115, "Compare")
 		},
-		when: _.and(wS, oC)
+		when: _.and(bS, ES)
 	});
 }
-eo(), Du(), gi(), Pn(), zf(), Fh(), E(), bT(), Go(), _c(), nf(), kd(), bl(), qu(), g(), Ud(), wf(), Mo(), ae(), KS(), wC(), lw(), iw(), Gm(), Nw(), uh();
+eo(), Du(), gi(), Pn(), zf(), Fh(), E(), bT(), Go(), _c(), nf(), kd(), bl(), qu(), g(), Ud(), wf(), Mo(), ae(), dC(), wC(), lw(), iw(), Gm(), Nw(), uh();
 var uO = "workbench.action.closeUnmodifiedEditors", dO = "workbench.action.closeEditorsInGroup", fO = "workbench.action.closeEditorsAndGroup", pO = "workbench.action.closeEditorsToTheRight", mO = "workbench.action.closeActiveEditor", hO = "workbench.action.closeActivePinnedEditor", gO = "workbench.action.closeGroup", _O = "workbench.action.closeOtherEditors", vO = "moveActiveEditor", yO = "copyActiveEditor", bO = "layoutEditorGroups", xO = "workbench.action.keepEditor", SO = "workbench.action.toggleKeepEditors", CO = "workbench.action.toggleEditorGroupLock", wO = "workbench.action.lockEditorGroup", TO = "workbench.action.unlockEditorGroup", EO = "workbench.action.showEditorsInGroup", DO = "workbench.action.reopenWithEditor", OO = "reopenActiveEditorWith", kO = "workbench.action.pinEditor", AO = "workbench.action.unpinEditor", jO = "workbench.action.splitEditor", MO = "workbench.action.splitEditorUp", NO = "workbench.action.splitEditorDown", PO = "workbench.action.splitEditorLeft", FO = "workbench.action.splitEditorRight", IO = "workbench.action.moveEditorToAboveGroup", LO = "workbench.action.moveEditorToBelowGroup", RO = "workbench.action.moveEditorToLeftGroup", zO = "workbench.action.moveEditorToRightGroup", BO = "workbench.action.toggleMaximizeEditorGroup", VO = "workbench.action.splitEditorInGroup", HO = "workbench.action.toggleSplitEditorInGroup", UO = "workbench.action.joinEditorInGroup", WO = "workbench.action.toggleSplitEditorInGroupLayout", GO = "workbench.action.focusFirstSideEditor", KO = "workbench.action.focusSecondSideEditor", qO = "workbench.action.focusOtherSideEditor", JO = "workbench.action.focusLeftGroupWithoutWrap", YO = "workbench.action.focusRightGroupWithoutWrap", XO = "workbench.action.focusAboveGroupWithoutWrap", ZO = "workbench.action.focusBelowGroupWithoutWrap", QO = "workbench.action.openEditorAtIndex", $O = "workbench.action.moveEditorToNewWindow", ek = "workbench.action.copyEditorToNewWindow", tk = "workbench.action.moveEditorGroupToNewWindow", nk = "workbench.action.copyEditorGroupToNewWindow", rk = "workbench.action.newEmptyEditorWindow", ik = "_workbench.open", ak = "_workbench.diff", ok = "_workbench.openWith", sk = [
 	jO,
 	mO,
@@ -4661,7 +4661,7 @@ function gk() {
 	}), z.registerCommandAndKeybindingRule({
 		id: gO,
 		weight: N.WorkbenchContrib,
-		when: _.and(dC, JS),
+		when: _.and(JS, _S),
 		primary: b.CtrlCmd | D.KeyW,
 		win: {
 			primary: b.CtrlCmd | D.F4,
@@ -4803,11 +4803,11 @@ function vk() {
 				id: VO,
 				title: v(3388, "Split Editor in Group"),
 				category: $.View,
-				precondition: CS,
+				precondition: Qx,
 				f1: !0,
 				keybinding: {
 					weight: N.WorkbenchContrib,
-					when: CS,
+					when: Qx,
 					primary: Ut(b.CtrlCmd | D.KeyK, b.CtrlCmd | b.Shift | D.Backslash)
 				}
 			});
@@ -4839,11 +4839,11 @@ function vk() {
 				id: UO,
 				title: v(3389, "Join Editor in Group"),
 				category: $.View,
-				precondition: xS,
+				precondition: oC,
 				f1: !0,
 				keybinding: {
 					weight: N.WorkbenchContrib,
-					when: xS,
+					when: oC,
 					primary: Ut(b.CtrlCmd | D.KeyK, b.CtrlCmd | b.Shift | D.Backslash)
 				}
 			});
@@ -4857,7 +4857,7 @@ function vk() {
 				id: HO,
 				title: v(3390, "Toggle Split Editor in Group"),
 				category: $.View,
-				precondition: _.or(CS, xS),
+				precondition: _.or(Qx, oC),
 				f1: !0
 			});
 		}
@@ -4873,7 +4873,7 @@ function vk() {
 				id: WO,
 				title: v(3391, "Toggle Layout of Split Editor in Group"),
 				category: $.View,
-				precondition: xS,
+				precondition: oC,
 				f1: !0
 			});
 		}
@@ -4890,7 +4890,7 @@ function yk() {
 				id: GO,
 				title: v(3392, "Focus First Side in Active Editor"),
 				category: $.View,
-				precondition: _.or(xS, wS),
+				precondition: _.or(oC, bS),
 				f1: !0
 			});
 		}
@@ -4904,7 +4904,7 @@ function yk() {
 				id: KO,
 				title: v(3393, "Focus Second Side in Active Editor"),
 				category: $.View,
-				precondition: _.or(xS, wS),
+				precondition: _.or(oC, bS),
 				f1: !0
 			});
 		}
@@ -4918,7 +4918,7 @@ function yk() {
 				id: qO,
 				title: v(3394, "Focus Other Side in Active Editor"),
 				category: $.View,
-				precondition: _.or(xS, wS),
+				precondition: _.or(oC, bS),
 				f1: !0
 			});
 		}
@@ -4967,7 +4967,7 @@ function bk() {
 				id: wO,
 				title: v(3396, "Lock Editor Group"),
 				category: $.View,
-				precondition: eC.toNegated(),
+				precondition: NS.toNegated(),
 				f1: !0
 			});
 		}
@@ -4979,7 +4979,7 @@ function bk() {
 			super({
 				id: TO,
 				title: v(3397, "Unlock Editor Group"),
-				precondition: eC,
+				precondition: NS,
 				category: $.View,
 				f1: !0
 			});
@@ -4990,7 +4990,7 @@ function bk() {
 	}), z.registerCommandAndKeybindingRule({
 		id: kO,
 		weight: N.WorkbenchContrib,
-		when: nC.toNegated(),
+		when: ZS.toNegated(),
 		primary: Ut(b.CtrlCmd | D.KeyK, b.Shift | D.Enter),
 		handler: async (e, ...t) => {
 			let n = VT(t, e.get(Z), e.get(Q), e.get(Ze));
@@ -4999,7 +4999,7 @@ function bk() {
 	}), z.registerCommandAndKeybindingRule({
 		id: AO,
 		weight: N.WorkbenchContrib,
-		when: nC,
+		when: ZS,
 		primary: Ut(b.CtrlCmd | D.KeyK, b.Shift | D.Enter),
 		handler: async (e, ...t) => {
 			let n = VT(t, e.get(Z), e.get(Q), e.get(Ze));
@@ -5019,7 +5019,7 @@ function bk() {
 function xk() {
 	lk(), uk(), lO(), dk(), fk(), gk(), bk(), vk(), yk(), pk(), hk(), _k();
 }
-du(), h(), E(), k(), xl(), Ei(), pt(), T(), lo(), Go(), ql(), Gf(), g(), yf(), ar(), Mo(), Hu(), P_(), Yh(), wC(), KS(), Ll(), Pn(), Ms(), AC(), wg(), By(), mh(), lw(), qc(), eh(), Ka(), pu();
+du(), h(), E(), k(), xl(), Ei(), pt(), T(), lo(), Go(), ql(), Gf(), g(), yf(), ar(), Mo(), Hu(), P_(), Yh(), wC(), dC(), Ll(), Pn(), Ms(), AC(), wg(), By(), mh(), lw(), qc(), eh(), Ka(), pu();
 var Sk;
 gs(BD);
 var Ck = class extends He {
@@ -5048,7 +5048,7 @@ var Ck = class extends He {
 		let m = this.create(e);
 		this.contextMenuContextKeyService = this._register(this.contextKeyService.createScoped(m));
 		let ee = this._register(this.instantiationService.createChild(new oo([ku, this.contextMenuContextKeyService])));
-		this.resourceContext = this._register(ee.createInstance(bS)), this.editorPinnedContext = GS.bindTo(this.contextMenuContextKeyService), this.editorIsFirstContext = RS.bindTo(this.contextMenuContextKeyService), this.editorIsLastContext = cC.bindTo(this.contextMenuContextKeyService), this.editorStickyContext = nC.bindTo(this.contextMenuContextKeyService), this.editorAvailableEditorIds = cS.bindTo(this.contextMenuContextKeyService), this.editorCanSplitInGroupContext = CS.bindTo(this.contextMenuContextKeyService), this.sideBySideEditorContext = xS.bindTo(this.contextMenuContextKeyService), this.groupLockedContext = eC.bindTo(this.contextMenuContextKeyService);
+		this.resourceContext = this._register(ee.createInstance(TS)), this.editorPinnedContext = uC.bindTo(this.contextMenuContextKeyService), this.editorIsFirstContext = sC.bindTo(this.contextMenuContextKeyService), this.editorIsLastContext = rC.bindTo(this.contextMenuContextKeyService), this.editorStickyContext = ZS.bindTo(this.contextMenuContextKeyService), this.editorAvailableEditorIds = kS.bindTo(this.contextMenuContextKeyService), this.editorCanSplitInGroupContext = Qx.bindTo(this.contextMenuContextKeyService), this.sideBySideEditorContext = oC.bindTo(this.contextMenuContextKeyService), this.groupLockedContext = NS.bindTo(this.contextMenuContextKeyService);
 	}
 	create(e) {
 		return this.updateTabHeight(), e;
@@ -5152,7 +5152,7 @@ var Ck = class extends He {
 		})), t, { disableStandardTransfer: n }), !0) : !1;
 	}
 	onTabContextMenu(e, t, n) {
-		this.resourceContext.set(rw.getOriginalUri(e, { supportSideBySide: qw.PRIMARY })), this.editorPinnedContext.set(this.tabsModel.isPinned(e)), this.editorIsFirstContext.set(this.tabsModel.isFirst(e)), this.editorIsLastContext.set(this.tabsModel.isLast(e)), this.editorStickyContext.set(this.tabsModel.isSticky(e)), this.groupLockedContext.set(this.tabsModel.isLocked), this.editorCanSplitInGroupContext.set(e.hasCapability(XC.CanSplitInGroup)), this.sideBySideEditorContext.set(e.typeId === ew.ID), tC(this.editorAvailableEditorIds, e, this.editorResolverService);
+		this.resourceContext.set(rw.getOriginalUri(e, { supportSideBySide: qw.PRIMARY })), this.editorPinnedContext.set(this.tabsModel.isPinned(e)), this.editorIsFirstContext.set(this.tabsModel.isFirst(e)), this.editorIsLastContext.set(this.tabsModel.isLast(e)), this.editorStickyContext.set(this.tabsModel.isSticky(e)), this.groupLockedContext.set(this.tabsModel.isLocked), this.editorCanSplitInGroupContext.set(e.hasCapability(XC.CanSplitInGroup)), this.sideBySideEditorContext.set(e.typeId === ew.ID), PS(this.editorAvailableEditorIds, e, this.editorResolverService);
 		let r = n;
 		rd(t) && (r = new nt(ai(n), t)), this.contextMenuService.showContextMenu({
 			getAnchor: () => r,
@@ -5207,7 +5207,7 @@ wk = Sk = w([
 	R(11, Mn),
 	R(12, ch),
 	R(13, Th)
-], wk), h(), E(), pt(), wC(), AC(), CC(), hS(), yf(), nf(), lw(), iw(), Nw(), kd(), cr(), Pu(), Mo(), zd(), Of(), mh(), qc(), Go(), bl(), eo(), Ud(), $a(), bT(), KS(), k(), US(), Ea(), wf(), uh();
+], wk), h(), E(), pt(), wC(), AC(), uS(), pC(), yf(), nf(), lw(), iw(), Nw(), kd(), cr(), Pu(), Mo(), zd(), Of(), mh(), qc(), Go(), bl(), eo(), Ud(), $a(), bT(), dC(), k(), SC(), Ea(), wf(), uh();
 var Tk = class extends I {
 	constructor(e, t, n) {
 		super(e), this.commandId = t, this.commandArgs = n;
@@ -5652,7 +5652,7 @@ var Yk = class extends I {
 	}
 	revertEditors(e, t, n, r) {
 		return n.withProgress({
-			location: $S.Window,
+			location: jS.Window,
 			delay: 800,
 			title: y(3275, "Reverting Editors...")
 		}, () => this.doRevertEditors(e, t, r));
@@ -5879,7 +5879,7 @@ var Yk = class extends I {
 			title: v(3288, "Expand Editor Group"),
 			f1: !0,
 			category: $.View,
-			precondition: JS
+			precondition: _S
 		});
 	}
 	async run(e) {
@@ -5892,11 +5892,11 @@ var Yk = class extends I {
 			title: v(3289, "Expand Editor Group and Hide Side Bars"),
 			f1: !0,
 			category: $.View,
-			precondition: _.or(JS, vS, IS)
+			precondition: _.or(_S, pS, $S)
 		});
 	}
 	async run(e) {
-		let t = e.get(Q), n = e.get(ES);
+		let t = e.get(Q), n = e.get(BS);
 		n.setPartHidden(!0, Y.SIDEBAR_PART), n.setPartHidden(!0, Y.AUXILIARYBAR_PART), t.arrangeGroups(zC.EXPAND);
 	}
 }, hA = class extends I {
@@ -5930,11 +5930,11 @@ var Yk = class extends I {
 			title: v(3292, "Maximize Editor Group and Hide Side Bars"),
 			f1: !0,
 			category: $.View,
-			precondition: _.or(_.and(QS.negate(), WS), vS, IS)
+			precondition: _.or(_.and(AS.negate(), hC), pS, $S)
 		});
 	}
 	async run(e) {
-		let t = e.get(ES), n = e.get(Q);
+		let t = e.get(BS), n = e.get(Q);
 		e.get(Z).activeEditor && (t.setPartHidden(!0, Y.SIDEBAR_PART), t.setPartHidden(!0, Y.AUXILIARYBAR_PART), n.arrangeGroups(zC.MAXIMIZE));
 	}
 }, vA = class extends I {
@@ -5944,7 +5944,7 @@ var Yk = class extends I {
 			title: v(3293, "Toggle Maximize Editor Group"),
 			f1: !0,
 			category: $.View,
-			precondition: _.or(WS, QS),
+			precondition: _.or(hC, AS),
 			keybinding: {
 				weight: N.WorkbenchContrib,
 				primary: Ut(b.CtrlCmd | D.KeyK, b.CtrlCmd | D.KeyM)
@@ -5953,16 +5953,16 @@ var Yk = class extends I {
 				id: q.EditorTitle,
 				order: -1e4,
 				group: "navigation",
-				when: QS
+				when: AS
 			}, {
 				id: q.EmptyEditorGroup,
 				order: -1e4,
 				group: "navigation",
-				when: QS
+				when: AS
 			}],
 			icon: M.screenFull,
 			toggled: {
-				condition: QS,
+				condition: AS,
 				title: y(3294, "Unmaximize Group")
 			}
 		});
@@ -6454,7 +6454,7 @@ var Yk = class extends I {
 				primary: b.CtrlCmd | D.Tab,
 				mac: { primary: b.WinCtrl | D.Tab }
 			},
-			precondition: dC.toNegated(),
+			precondition: JS.toNegated(),
 			category: $.View
 		}, KD.PREFIX, void 0);
 	}
@@ -6469,7 +6469,7 @@ var Yk = class extends I {
 				primary: b.CtrlCmd | b.Shift | D.Tab,
 				mac: { primary: b.WinCtrl | b.Shift | D.Tab }
 			},
-			precondition: dC.toNegated(),
+			precondition: JS.toNegated(),
 			category: $.View
 		}, KD.PREFIX, Xd.LAST);
 	}
@@ -6547,7 +6547,7 @@ var Yk = class extends I {
 			id: "workbench.action.clearEditorHistoryWithoutConfirm",
 			title: v(3331, "Clear Editor History without Confirmation"),
 			f1: !0,
-			precondition: MS
+			precondition: tS
 		});
 	}
 	async run(e) {
@@ -6955,7 +6955,7 @@ var Yk = class extends I {
 		super(e), this.direction = t;
 	}
 	async run(e) {
-		let t = e.get(Q), n = e.get(ES), r = pf(), i = n.hasFocus(Y.EDITOR_PART) || r.activeElement === r.body, a = t.addGroup(t.activeGroup, this.direction);
+		let t = e.get(Q), n = e.get(BS), r = pf(), i = n.hasFocus(Y.EDITOR_PART) || r.activeElement === r.body, a = t.addGroup(t.activeGroup, this.direction);
 		t.activateGroup(a), i && a.focus();
 	}
 }, kj = class extends Oj {
@@ -7001,7 +7001,7 @@ var Yk = class extends I {
 			title: v(3366, "Toggle Editor Type"),
 			f1: !0,
 			category: $.View,
-			precondition: cS
+			precondition: kS
 		});
 	}
 	async run(e) {
@@ -7025,7 +7025,7 @@ var Yk = class extends I {
 			title: v(3367, "Reopen Editor with Text Editor"),
 			f1: !0,
 			category: $.View,
-			precondition: cS
+			precondition: kS
 		});
 	}
 	async run(e) {
@@ -7046,7 +7046,7 @@ var Yk = class extends I {
 			id: e,
 			title: t,
 			category: $.View,
-			precondition: gS,
+			precondition: fC,
 			keybinding: n,
 			f1: !0
 		}), this.move = r;
@@ -7110,7 +7110,7 @@ var Yk = class extends I {
 				mnemonicTitle: y(3377, "&&Restore Editors into Main Window")
 			},
 			f1: !0,
-			precondition: eS,
+			precondition: oS,
 			category: $.View
 		});
 	}
@@ -8646,7 +8646,7 @@ var Qj = class extends cd {
 		};
 	}
 };
-Qj = w([R(5, S), R(6, Mn)], Qj), du(), h(), wC(), KS(), AC(), W(), g(), k(), Ka(), ql(), _a(), Xo(), Hu(), Vr(), rf(), ad(), di(), It(), Wr(), gt(), Kc(), bs(), Li(), jf(), Og(), lw(), Ea(), Vy(), E(), Zr(), T(), ae(), _e(), Mu(), uh(), Ei(), yf(), Go(), wo(), xl(), lo(), Gf(), Nw(), gi(), Du(), qu(), jb(), cr(), Ow(), EC(), zf(), qc(), $a(), de(), Yh(), mh(), eh(), Yw(), Xs(), wc();
+Qj = w([R(5, S), R(6, Mn)], Qj), du(), h(), wC(), dC(), AC(), W(), g(), k(), Ka(), ql(), _a(), Xo(), Hu(), Vr(), rf(), ad(), di(), It(), Wr(), gt(), Kc(), bs(), Li(), jf(), Og(), lw(), Ea(), Vy(), E(), Zr(), T(), ae(), _e(), Mu(), uh(), Ei(), yf(), Go(), wo(), xl(), lo(), Gf(), Nw(), gi(), Du(), qu(), jb(), cr(), Ow(), EC(), zf(), qc(), $a(), de(), Yh(), mh(), eh(), Yw(), Xs(), wc();
 var $j;
 gs(ME);
 var eM = $j = class extends cd {
@@ -8660,15 +8660,15 @@ var eM = $j = class extends cd {
 		return a.createInstance($j, e, t, n, r, i, o);
 	}
 	constructor(e, t, n, r, i, a, o, s, c, l, u, d, f, p, m, ee, te, ne, re, ie, ae, oe) {
-		super(c), this.editorPartsView = t, this.groupsView = n, this.groupsLabel = r, this._index = i, this.instantiationService = o, this.contextKeyService = s, this.telemetryService = l, this.keybindingService = u, this.menuService = d, this.contextMenuService = f, this.fileDialogService = p, this.editorService = m, this.filesConfigurationService = ee, this.uriIdentityService = te, this.logService = ne, this.editorResolverService = re, this.hostService = ie, this.dialogService = ae, this.fileService = oe, this._onDidFocus = this._register(new K()), this.onDidFocus = this._onDidFocus.event, this._onWillDispose = this._register(new K()), this.onWillDispose = this._onWillDispose.event, this._onDidModelChange = this._register(new K()), this.onDidModelChange = this._onDidModelChange.event, this._onDidActiveEditorChange = this._register(new K()), this.onDidActiveEditorChange = this._onDidActiveEditorChange.event, this._onDidOpenEditorFail = this._register(new K()), this.onDidOpenEditorFail = this._onDidOpenEditorFail.event, this._onWillCloseEditor = this._register(new K()), this.onWillCloseEditor = this._onWillCloseEditor.event, this._onDidCloseEditor = this._register(new K()), this.onDidCloseEditor = this._onDidCloseEditor.event, this._onWillMoveEditor = this._register(new K()), this.onWillMoveEditor = this._onWillMoveEditor.event, this._onWillOpenEditor = this._register(new K()), this.onWillOpenEditor = this._onWillOpenEditor.event, this.disposedEditorsWorker = this._register(new zo((e) => this.handleDisposedEditors(e), 0)), this.mapEditorToPendingConfirmation = /* @__PURE__ */ new Map(), this.containerToolBarMenuDisposable = this._register(new Rf()), this.whenRestoredPromise = new Td(), this.whenRestored = this.whenRestoredPromise.p, this._disposed = !1, this.element = x("div"), this._onDidChange = this._register(new Bc()), this.onDidChange = this._onDidChange.event, e instanceof $j ? this.model = this._register(e.model.clone()) : Py(e) ? this.model = this._register(o.createInstance(Zb, e)) : this.model = this._register(o.createInstance(Zb, void 0)), this.scopedContextKeyService = this._register(this.contextKeyService.createScoped(this.element)), this.element.classList.add(...$o(["editor-group-container", this.model.isLocked ? "locked" : void 0])), this.registerContainerListeners(), this.createContainerToolbar(), this.createContainerContextMenu(), this._register(this.instantiationService.createInstance(oD, this.element)), this.progressBar = this._register(new Oe(this.element, at)), this.progressBar.hide(), this.scopedInstantiationService = this._register(this.instantiationService.createChild(new oo([ku, this.scopedContextKeyService], [Kt, this._register(new wv(this.progressBar, this))]))), this.resourceContext = this._register(this.scopedInstantiationService.createInstance(bS)), this.handleGroupContextKeys(), this.titleContainer = x(".title"), this.element.appendChild(this.titleContainer), this.titleControl = this._register(this.scopedInstantiationService.createInstance(Qj, this.titleContainer, this.editorPartsView, this.groupsView, this, this.model)), this.editorContainer = x(".editor-container"), this.element.appendChild(this.editorContainer), this.editorPane = this._register(this.scopedInstantiationService.createInstance(VE, this.element, this.editorContainer, this)), this._onDidChange.input = this.editorPane.onDidChangeSizeConstraints, this.doTrackFocus(), this.updateTitleContainer(), this.updateContainer(), this.updateStyles(), (this.restoreEditors(e, a) ?? Promise.resolve()).finally(() => {
+		super(c), this.editorPartsView = t, this.groupsView = n, this.groupsLabel = r, this._index = i, this.instantiationService = o, this.contextKeyService = s, this.telemetryService = l, this.keybindingService = u, this.menuService = d, this.contextMenuService = f, this.fileDialogService = p, this.editorService = m, this.filesConfigurationService = ee, this.uriIdentityService = te, this.logService = ne, this.editorResolverService = re, this.hostService = ie, this.dialogService = ae, this.fileService = oe, this._onDidFocus = this._register(new K()), this.onDidFocus = this._onDidFocus.event, this._onWillDispose = this._register(new K()), this.onWillDispose = this._onWillDispose.event, this._onDidModelChange = this._register(new K()), this.onDidModelChange = this._onDidModelChange.event, this._onDidActiveEditorChange = this._register(new K()), this.onDidActiveEditorChange = this._onDidActiveEditorChange.event, this._onDidOpenEditorFail = this._register(new K()), this.onDidOpenEditorFail = this._onDidOpenEditorFail.event, this._onWillCloseEditor = this._register(new K()), this.onWillCloseEditor = this._onWillCloseEditor.event, this._onDidCloseEditor = this._register(new K()), this.onDidCloseEditor = this._onDidCloseEditor.event, this._onWillMoveEditor = this._register(new K()), this.onWillMoveEditor = this._onWillMoveEditor.event, this._onWillOpenEditor = this._register(new K()), this.onWillOpenEditor = this._onWillOpenEditor.event, this.disposedEditorsWorker = this._register(new zo((e) => this.handleDisposedEditors(e), 0)), this.mapEditorToPendingConfirmation = /* @__PURE__ */ new Map(), this.containerToolBarMenuDisposable = this._register(new Rf()), this.whenRestoredPromise = new Td(), this.whenRestored = this.whenRestoredPromise.p, this._disposed = !1, this.element = x("div"), this._onDidChange = this._register(new Bc()), this.onDidChange = this._onDidChange.event, e instanceof $j ? this.model = this._register(e.model.clone()) : Py(e) ? this.model = this._register(o.createInstance(Zb, e)) : this.model = this._register(o.createInstance(Zb, void 0)), this.scopedContextKeyService = this._register(this.contextKeyService.createScoped(this.element)), this.element.classList.add(...$o(["editor-group-container", this.model.isLocked ? "locked" : void 0])), this.registerContainerListeners(), this.createContainerToolbar(), this.createContainerContextMenu(), this._register(this.instantiationService.createInstance(oD, this.element)), this.progressBar = this._register(new Oe(this.element, at)), this.progressBar.hide(), this.scopedInstantiationService = this._register(this.instantiationService.createChild(new oo([ku, this.scopedContextKeyService], [Kt, this._register(new wv(this.progressBar, this))]))), this.resourceContext = this._register(this.scopedInstantiationService.createInstance(TS)), this.handleGroupContextKeys(), this.titleContainer = x(".title"), this.element.appendChild(this.titleContainer), this.titleControl = this._register(this.scopedInstantiationService.createInstance(Qj, this.titleContainer, this.editorPartsView, this.groupsView, this, this.model)), this.editorContainer = x(".editor-container"), this.element.appendChild(this.editorContainer), this.editorPane = this._register(this.scopedInstantiationService.createInstance(VE, this.element, this.editorContainer, this)), this._onDidChange.input = this.editorPane.onDidChangeSizeConstraints, this.doTrackFocus(), this.updateTitleContainer(), this.updateContainer(), this.updateStyles(), (this.restoreEditors(e, a) ?? Promise.resolve()).finally(() => {
 			this.whenRestoredPromise.complete();
 		}), this.registerListeners();
 	}
 	handleGroupContextKeys() {
-		let e = this.editorPartsView.bind(Qx, this), t = this.editorPartsView.bind(GS, this), n = this.editorPartsView.bind(RS, this), r = this.editorPartsView.bind(cC, this), i = this.editorPartsView.bind(nC, this), a = this.editorPartsView.bind(iC, this), o = this.editorPartsView.bind(eC, this), s = $x.bindTo(this.scopedContextKeyService), c = Zx.bindTo(this.scopedContextKeyService), l = aS.bindTo(this.scopedContextKeyService), u = this.editorPartsView.bind(gS, this), d = this.editorPartsView.bind(jS, this), f = this.editorPartsView.bind(TS, this), p = this.editorPartsView.bind(DS, this), m = this.editorPartsView.bind(oC, this), ee = this.editorPartsView.bind(SS, this), te = this.editorPartsView.bind(wS, this), ne = this.editorPartsView.bind(cS, this), re = this.editorPartsView.bind(CS, this), ie = this.editorPartsView.bind(xS, this), ae = this._register(new Rf()), oe = () => {
+		let e = this.editorPartsView.bind(tC, this), t = this.editorPartsView.bind(uC, this), n = this.editorPartsView.bind(sC, this), r = this.editorPartsView.bind(rC, this), i = this.editorPartsView.bind(ZS, this), a = this.editorPartsView.bind(GS, this), o = this.editorPartsView.bind(NS, this), s = vS.bindTo(this.scopedContextKeyService), c = nC.bindTo(this.scopedContextKeyService), l = cS.bindTo(this.scopedContextKeyService), u = this.editorPartsView.bind(fC, this), d = this.editorPartsView.bind(LS, this), f = this.editorPartsView.bind(xS, this), p = this.editorPartsView.bind(zS, this), m = this.editorPartsView.bind(ES, this), ee = this.editorPartsView.bind(Zx, this), te = this.editorPartsView.bind(bS, this), ne = this.editorPartsView.bind(kS, this), re = this.editorPartsView.bind(Qx, this), ie = this.editorPartsView.bind(oC, this), ae = this._register(new Rf()), oe = () => {
 			ae.clear(), this.scopedContextKeyService.bufferChangeEvents(() => {
 				let t = this.activeEditor, n = this.activeEditorPane;
-				if (this.resourceContext.set(rw.getOriginalUri(t, { supportSideBySide: qw.PRIMARY })), tC(ne, t, this.editorResolverService), t ? (re.set(t.hasCapability(XC.CanSplitInGroup)), ie.set(t.typeId === ew.ID), e.set(t.isDirty() && !t.isSaving()), ae.value = t.onDidChangeDirty(() => {
+				if (this.resourceContext.set(rw.getOriginalUri(t, { supportSideBySide: qw.PRIMARY })), PS(ne, t, this.editorResolverService), t ? (re.set(t.hasCapability(XC.CanSplitInGroup)), ie.set(t.typeId === ew.ID), e.set(t.isDirty() && !t.isSaving()), ae.value = t.onDidChangeDirty(() => {
 					e.set(t.isDirty() && !t.isSaving());
 				})) : (re.set(!1), ie.set(!1), e.set(!1)), n) {
 					u.set(n.getId()), f.set(!n.input.hasCapability(XC.Untitled)), d.set(!!n.input.isReadonly());
@@ -9796,7 +9796,7 @@ var dM = class {
 		this.splitViewDisposables.dispose(), this.splitView &&= (this.splitView.dispose(), void 0);
 	}
 };
-h(), Hu(), k(), W(), Vr(), rf(), ad(), di(), It(), Wr(), gt(), Kc(), bs(), Li(), jf(), lw(), g(), wC(), Og(), Zr(), uh(), kd(), T(), Ma(), ke(), Oy(), ps(), Ms(), CC(), hS(), Pn(), P_(), _e(), Gm(), eh(), ql(), Ka(), KS(), Sn(), ne();
+h(), Hu(), k(), W(), Vr(), rf(), ad(), di(), It(), Wr(), gt(), Kc(), bs(), Li(), jf(), lw(), g(), wC(), Og(), Zr(), uh(), kd(), T(), Ma(), ke(), Oy(), ps(), Ms(), uS(), pC(), Pn(), P_(), _e(), Gm(), eh(), ql(), Ka(), dC(), Sn(), ne();
 var fM, pM = class {
 	constructor() {
 		this.element = x(".grid-view-container"), this._onDidChange = new Bc(), this.onDidChange = this._onDidChange.event;
@@ -10185,8 +10185,8 @@ var fM, pM = class {
 		}), this.container;
 	}
 	handleContextKeys() {
-		_S.bindTo(this.scopedContextKeyService).set(this.windowId !== ic.vscodeWindowId);
-		let e = WS.bindTo(this.scopedContextKeyService), t = QS.bindTo(this.scopedContextKeyService), n = () => {
+		wS.bindTo(this.scopedContextKeyService).set(this.windowId !== ic.vscodeWindowId);
+		let e = hC.bindTo(this.scopedContextKeyService), t = AS.bindTo(this.scopedContextKeyService), n = () => {
 			this.count > 1 ? e.set(!0) : e.reset(), this.hasMaximizedGroup() ? t.set(!0) : t.reset();
 		};
 		n(), this._register(this.onDidAddGroup(() => n())), this._register(this.onDidRemoveGroup(() => n())), this._register(this.onDidChangeGroupMaximized(() => n()));
@@ -10199,7 +10199,7 @@ var fM, pM = class {
 			onDragEnd: (e) => n.classList.remove("visible")
 		}));
 		let r, i, a, o, c = (e) => {
-			!this.layoutService.isVisible(Y.PANEL_PART) && e === this.layoutService.getPanelPosition() ? this.layoutService.setPartHidden(!1, Y.PANEL_PART) : !this.layoutService.isVisible(Y.AUXILIARYBAR_PART) && e === (this.layoutService.getSideBarPosition() === dS.RIGHT ? dS.LEFT : dS.RIGHT) && this.layoutService.setPartHidden(!1, Y.AUXILIARYBAR_PART);
+			!this.layoutService.isVisible(Y.PANEL_PART) && e === this.layoutService.getPanelPosition() ? this.layoutService.setPartHidden(!1, Y.PANEL_PART) : !this.layoutService.isVisible(Y.AUXILIARYBAR_PART) && e === (this.layoutService.getSideBarPosition() === eS.RIGHT ? eS.LEFT : eS.RIGHT) && this.layoutService.setPartHidden(!1, Y.AUXILIARYBAR_PART);
 		}, l = () => {
 			r &&= (clearTimeout(r), void 0), i &&= (clearTimeout(i), void 0);
 		};
@@ -10207,7 +10207,7 @@ var fM, pM = class {
 			onDragOver: (e) => {
 				yn.stop(e.eventData, !0), e.eventData.dataTransfer && (e.eventData.dataTransfer.dropEffect = "none");
 				let t = n.getBoundingClientRect(), s, l;
-				e.eventData.clientX < t.left + 100 && (s = dS.LEFT), e.eventData.clientX > t.right - 100 && (s = dS.RIGHT), e.eventData.clientY > t.bottom - 100 && (l = dS.BOTTOM), e.eventData.clientY < t.top + 100 && (l = dS.TOP), r && s !== a && (clearTimeout(r), r = void 0), i && l !== o && (clearTimeout(i), i = void 0), !r && s !== void 0 && (a = s, r = setTimeout(() => c(s), 200)), !i && l !== void 0 && (o = l, i = setTimeout(() => c(l), 200));
+				e.eventData.clientX < t.left + 100 && (s = eS.LEFT), e.eventData.clientX > t.right - 100 && (s = eS.RIGHT), e.eventData.clientY > t.bottom - 100 && (l = eS.BOTTOM), e.eventData.clientY < t.top + 100 && (l = eS.TOP), r && s !== a && (clearTimeout(r), r = void 0), i && l !== o && (clearTimeout(i), i = void 0), !r && s !== void 0 && (a = s, r = setTimeout(() => c(s), 200)), !i && l !== void 0 && (o = l, i = setTimeout(() => c(l), 200));
 			},
 			onDragLeave: () => l(),
 			onDragEnd: () => l(),
@@ -10346,7 +10346,7 @@ mM = fM = w([
 	R(5, Mn),
 	R(6, F),
 	R(7, op),
-	R(8, ES),
+	R(8, BS),
 	R(9, Th),
 	R(10, ku)
 ], mM);
@@ -10360,10 +10360,10 @@ hM = w([
 	R(2, Mn),
 	R(3, F),
 	R(4, op),
-	R(5, ES),
+	R(5, BS),
 	R(6, Th),
 	R(7, ku)
-], hM), h(), vn(), k(), W(), T(), qc(), kd(), bl(), ql(), g(), Ka(), ke(), Hu(), lw(), Nw(), eh(), CC(), hS(), yp(), Go(), E(), zd(), KS(), bT();
+], hM), h(), vn(), k(), W(), T(), qc(), kd(), bl(), ql(), g(), Ka(), ke(), Hu(), lw(), Nw(), eh(), uS(), pC(), yp(), Go(), E(), zd(), dC(), bT();
 var gM, _M, vM = Qe(new K());
 G(class extends I {
 	constructor() {
@@ -10372,7 +10372,7 @@ G(class extends I {
 			title: v(3049, "Toggle Window Compact Mode"),
 			category: $.View,
 			f1: !0,
-			precondition: eS
+			precondition: oS
 		});
 	}
 	async run() {
@@ -10389,7 +10389,7 @@ G(class extends I {
 			icon: M.screenFull,
 			menu: {
 				id: q.LayoutControlMenu,
-				when: _.and(_C.toNegated(), _S),
+				when: _.and(iS.toNegated(), wS),
 				order: 0
 			}
 		});
@@ -10408,7 +10408,7 @@ G(class extends I {
 			icon: M.screenNormal,
 			menu: {
 				id: q.LayoutControlMenu,
-				when: _.and(_C, _S),
+				when: _.and(iS, wS),
 				order: 0
 			}
 		});
@@ -10454,10 +10454,10 @@ var yM = class {
 		d.updateOptions({ compact: i }), r.add(this.editorPartsView.registerPart(d)), d.create(u);
 		let f = r.add(d.scopedInstantiationService.createChild(new oo([Z, this.editorService.createScoped(d, r)]))), p, m = !1;
 		if (Pc && qd()) {
-			p = r.add(this.titleService.createAuxiliaryTitlebarPart(l.container, d, f)), p.updateOptions({ compact: i }), m = rS(this.configurationService, l.window, void 0);
+			p = r.add(this.titleService.createAuxiliaryTitlebarPart(l.container, d, f)), p.updateOptions({ compact: i }), m = dS(this.configurationService, l.window, void 0);
 			let e = () => {
 				let e = m;
-				m = rS(this.configurationService, l.window, void 0), e !== m && s(!0);
+				m = dS(this.configurationService, l.window, void 0), e !== m && s(!0);
 			};
 			r.add(p.onDidChange(() => l.layout())), r.add(this.layoutService.onDidChangePartVisibility(() => e())), r.add(Hc((t) => {
 				t === l.window.vscodeWindowId && e();
@@ -10509,7 +10509,7 @@ yM = gM = w([
 	R(5, Tb),
 	R(6, zp),
 	R(7, Z),
-	R(8, ES)
+	R(8, BS)
 ], yM);
 var bM = class extends mM {
 	static {
@@ -10571,7 +10571,7 @@ bM = _M = w([
 	R(5, Mn),
 	R(6, F),
 	R(7, op),
-	R(8, ES),
+	R(8, BS),
 	R(9, Th),
 	R(10, ku)
 ], bM), h(), E(), lw(), g(), W(), T(), mi(), Zr(), _e(), Ma(), ke(), Hu(), wm(), ql(), k(), Ka(), Nw(), $y(), Bd();
@@ -10917,7 +10917,7 @@ SM = xM = w([
 	R(2, Mn),
 	R(3, hm),
 	R(4, ku)
-], SM), du(), h(), E(), pt(), Ei(), KS(), CC(), hS(), ke(), Gf(), yf(), g(), Hu(), Og(), Vr(), rf(), ad(), di(), It(), Wr(), gt(), Kc(), bs(), Li(), jf(), ar(), k(), ql(), Pn(), fS(), xb(), yc(), Go(), wo(), nf(), lo(), Sd(), kd();
+], SM), du(), h(), E(), pt(), Ei(), dC(), uS(), pC(), ke(), Gf(), yf(), g(), Hu(), Og(), Vr(), rf(), ad(), di(), It(), Wr(), gt(), Kc(), bs(), Li(), jf(), ar(), k(), ql(), Pn(), XS(), xb(), yc(), Go(), wo(), nf(), lo(), Sd(), kd();
 var CM;
 gs(Wp);
 var wM = class extends ZT {
@@ -10940,7 +10940,7 @@ var wM = class extends ZT {
 		super(Y.PANEL_PART, {
 			hasTitle: !0,
 			trailingSeparator: !0
-		}, CM.activePanelSettingsKey, uC.bindTo(l), sS.bindTo(l), "panel", "panel", void 0, sh, e, t, n, r, i, a, o, s, c, l, u, f), this.commandService = d, this.configurationService = p, this.minimumWidth = 300, this.maximumWidth = Infinity, this.minimumHeight = 77, this.maximumHeight = Infinity, this._register(this.configurationService.onDidChangeConfiguration((e) => {
+		}, CM.activePanelSettingsKey, mC.bindTo(l), CC.bindTo(l), "panel", "panel", void 0, sh, e, t, n, r, i, a, o, s, c, l, u, f), this.commandService = d, this.configurationService = p, this.minimumWidth = 300, this.maximumWidth = Infinity, this.minimumHeight = 77, this.maximumHeight = Infinity, this._register(this.configurationService.onDidChangeConfiguration((e) => {
 			e.affectsConfiguration("workbench.panel.showLabels") && this.updateCompositeBar(!0);
 		}));
 	}
@@ -10960,7 +10960,7 @@ var wM = class extends ZT {
 			icon: this.configurationService.getValue("workbench.panel.showLabels") === !1,
 			orientation: Xn.HORIZONTAL,
 			recomputeSizes: !0,
-			activityHoverOptions: { position: () => this.layoutService.getPanelPosition() === dS.BOTTOM && !this.layoutService.isPanelMaximized() ? uc.ABOVE : uc.BELOW },
+			activityHoverOptions: { position: () => this.layoutService.getPanelPosition() === eS.BOTTOM && !this.layoutService.isPanelMaximized() ? uc.ABOVE : uc.BELOW },
 			fillExtraContextMenuActions: (e) => this.fillExtraContextMenuActions(e),
 			compositeSize: 0,
 			iconSize: 16,
@@ -10997,10 +10997,10 @@ var wM = class extends ZT {
 	layout(e, t, n, r) {
 		let i;
 		switch (this.layoutService.getPanelPosition()) {
-			case dS.RIGHT:
+			case eS.RIGHT:
 				i = new jn(e - 1, t);
 				break;
-			case dS.TOP:
+			case eS.TOP:
 				i = new jn(e, t - 1);
 				break;
 			default:
@@ -11023,14 +11023,14 @@ wM = CM = w([
 	R(0, al),
 	R(1, op),
 	R(2, Po),
-	R(3, ES),
+	R(3, BS),
 	R(4, We),
 	R(5, vu),
 	R(6, S),
 	R(7, Mn),
 	R(8, My),
 	R(9, ku),
-	R(10, nS),
+	R(10, $x),
 	R(11, jo),
 	R(12, Xa),
 	R(13, F)
@@ -11038,18 +11038,18 @@ wM = CM = w([
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/browser/parts/sidebar/media/sidebarpart.css
 var TM = /* @__PURE__ */ e({});
-du(), E(), Go(), CC(), hS(), eo(), Ud(), bT(), px(), KS(), gs(TM), G(class extends I {
+du(), E(), Go(), uS(), pC(), eo(), Ud(), bT(), px(), dC(), gs(TM), G(class extends I {
 	constructor() {
 		super({
 			id: "workbench.action.closeSidebar",
 			title: v(3637, "Close Primary Side Bar"),
 			category: $.View,
 			f1: !0,
-			precondition: vS
+			precondition: pS
 		});
 	}
 	run(e) {
-		e.get(ES).setPartHidden(!0, Y.SIDEBAR_PART);
+		e.get(BS).setPartHidden(!0, Y.SIDEBAR_PART);
 	}
 }), G(class extends I {
 	constructor() {
@@ -11066,10 +11066,10 @@ du(), E(), Go(), CC(), hS(), eo(), Ud(), bT(), px(), KS(), gs(TM), G(class exten
 		});
 	}
 	async run(e) {
-		let t = e.get(ES), n = e.get(tS);
+		let t = e.get(BS), n = e.get(sS);
 		t.isVisible(Y.SIDEBAR_PART) || t.setPartHidden(!1, Y.SIDEBAR_PART), n.getActivePaneComposite(Cx.Sidebar)?.focus();
 	}
-}), du(), h(), CC(), hS(), KS(), Ma(), ke(), Gf(), yf(), g(), Hu(), Vr(), rf(), ad(), di(), It(), Wr(), gt(), Kc(), bs(), Li(), jf(), Og(), ar(), ql(), Ll(), fS(), Pn(), xb(), Ei(), yc(), kd(), Go(), wo(), pt(), E(), Sd(), Sn();
+}), du(), h(), uS(), pC(), dC(), Ma(), ke(), Gf(), yf(), g(), Hu(), Vr(), rf(), ad(), di(), It(), Wr(), gt(), Kc(), bs(), Li(), jf(), Og(), ar(), ql(), Ll(), XS(), Pn(), xb(), Ei(), yc(), kd(), Go(), wo(), pt(), E(), Sd(), Sn();
 var EM;
 gs(TM);
 var DM = class extends ZT {
@@ -11093,8 +11093,8 @@ var DM = class extends ZT {
 			hasTitle: !0,
 			trailingSeparator: !1,
 			borderWidth: () => this.getColor(Rh) || this.getColor(Is) ? 1 : 0
-		}, EM.activeViewletSettingsKey, PS.bindTo(l), iS.bindTo(l), "sideBar", "viewlet", tg, Bm, e, t, n, r, i, a, o, s, c, l, u, f), this.configurationService = d, this.minimumWidth = 170, this.maximumWidth = Infinity, this.minimumHeight = 0, this.maximumHeight = Infinity, this.priority = zt.Low, this.activityBarPart = this._register(this.instantiationService.createInstance(rm, this)), this.rememberActivityBarVisiblePosition(), this._register(d.onDidChangeConfiguration((e) => {
-			e.affectsConfiguration(pS.ACTIVITY_BAR_LOCATION) && this.onDidChangeActivityBarLocation();
+		}, EM.activeViewletSettingsKey, RS.bindTo(l), fS.bindTo(l), "sideBar", "viewlet", tg, Bm, e, t, n, r, i, a, o, s, c, l, u, f), this.configurationService = d, this.minimumWidth = 170, this.maximumWidth = Infinity, this.minimumHeight = 0, this.maximumHeight = Infinity, this.priority = zt.Low, this.activityBarPart = this._register(this.instantiationService.createInstance(rm, this)), this.rememberActivityBarVisiblePosition(), this._register(d.onDidChangeConfiguration((e) => {
+			e.affectsConfiguration(hS.ACTIVITY_BAR_LOCATION) && this.onDidChangeActivityBarLocation();
 		})), this.registerActions();
 	}
 	onDidChangeActivityBarLocation() {
@@ -11106,14 +11106,14 @@ var DM = class extends ZT {
 		super.updateStyles();
 		let e = ea(this.getContainer());
 		e.style.backgroundColor = this.getColor(Ih) || "", e.style.color = this.getColor(ph) || "";
-		let t = this.getColor(Rh) || this.getColor(Is), n = this.layoutService.getSideBarPosition() === dS.LEFT;
+		let t = this.getColor(Rh) || this.getColor(Is), n = this.layoutService.getSideBarPosition() === eS.LEFT;
 		e.style.borderRightWidth = t && n ? "1px" : "", e.style.borderRightStyle = t && n ? "solid" : "", e.style.borderRightColor = n && t || "", e.style.borderLeftWidth = t && !n ? "1px" : "", e.style.borderLeftStyle = t && !n ? "solid" : "", e.style.borderLeftColor = n ? "" : t || "", e.style.outlineColor = this.getColor(ih) ?? "";
 	}
 	layout(e, t, n, r) {
 		this.layoutService.isVisible(Y.SIDEBAR_PART) && super.layout(e, t, n, r);
 	}
 	getTitleAreaDropDownAnchorAlignment() {
-		return this.layoutService.getSideBarPosition() === dS.LEFT ? yd.LEFT : yd.RIGHT;
+		return this.layoutService.getSideBarPosition() === eS.LEFT ? yd.LEFT : yd.RIGHT;
 	}
 	createCompositeBar() {
 		return this.instantiationService.createInstance(am, this.getCompositeBarOptions(), this.partId, this, !1);
@@ -11151,30 +11151,30 @@ var DM = class extends ZT {
 		};
 	}
 	shouldShowCompositeBar() {
-		let e = this.configurationService.getValue(pS.ACTIVITY_BAR_LOCATION);
-		return e === qS.TOP || e === qS.BOTTOM;
+		let e = this.configurationService.getValue(hS.ACTIVITY_BAR_LOCATION);
+		return e === yS.TOP || e === yS.BOTTOM;
 	}
 	shouldShowActivityBar() {
-		return !this.shouldShowCompositeBar() && this.configurationService.getValue(pS.ACTIVITY_BAR_LOCATION) !== qS.HIDDEN;
+		return !this.shouldShowCompositeBar() && this.configurationService.getValue(hS.ACTIVITY_BAR_LOCATION) !== yS.HIDDEN;
 	}
 	getCompositeBarPosition() {
-		switch (this.configurationService.getValue(pS.ACTIVITY_BAR_LOCATION)) {
-			case qS.TOP: return XT.TOP;
-			case qS.BOTTOM: return XT.BOTTOM;
-			case qS.HIDDEN:
-			case qS.DEFAULT:
+		switch (this.configurationService.getValue(hS.ACTIVITY_BAR_LOCATION)) {
+			case yS.TOP: return XT.TOP;
+			case yS.BOTTOM: return XT.BOTTOM;
+			case yS.HIDDEN:
+			case yS.DEFAULT:
 			default: return XT.TITLE;
 		}
 	}
 	rememberActivityBarVisiblePosition() {
-		let e = this.configurationService.getValue(pS.ACTIVITY_BAR_LOCATION);
-		e !== qS.HIDDEN && this.storageService.store(pS.ACTIVITY_BAR_LOCATION, e, O.PROFILE, $t.USER);
+		let e = this.configurationService.getValue(hS.ACTIVITY_BAR_LOCATION);
+		e !== yS.HIDDEN && this.storageService.store(hS.ACTIVITY_BAR_LOCATION, e, O.PROFILE, $t.USER);
 	}
 	getRememberedActivityBarVisiblePosition() {
-		switch (this.storageService.get(pS.ACTIVITY_BAR_LOCATION, O.PROFILE)) {
-			case qS.TOP: return qS.TOP;
-			case qS.BOTTOM: return qS.BOTTOM;
-			default: return qS.DEFAULT;
+		switch (this.storageService.get(hS.ACTIVITY_BAR_LOCATION, O.PROFILE)) {
+			case yS.TOP: return yS.TOP;
+			case yS.BOTTOM: return yS.BOTTOM;
+			default: return yS.DEFAULT;
 		}
 	}
 	getPinnedPaneCompositeIds() {
@@ -11187,7 +11187,7 @@ var DM = class extends ZT {
 		return this.shouldShowCompositeBar() ? super.getPaneCompositeIds() : this.activityBarPart.getPaneCompositeIds();
 	}
 	async focusActivityBar() {
-		this.configurationService.getValue(pS.ACTIVITY_BAR_LOCATION) === qS.HIDDEN && (await this.configurationService.updateValue(pS.ACTIVITY_BAR_LOCATION, this.getRememberedActivityBarVisiblePosition()), this.onDidChangeActivityBarLocation()), this.shouldShowCompositeBar() ? this.focusCompositeBar() : (this.layoutService.isVisible(Y.ACTIVITYBAR_PART) || this.layoutService.setPartHidden(!1, Y.ACTIVITYBAR_PART), this.activityBarPart.show(!0));
+		this.configurationService.getValue(hS.ACTIVITY_BAR_LOCATION) === yS.HIDDEN && (await this.configurationService.updateValue(hS.ACTIVITY_BAR_LOCATION, this.getRememberedActivityBarVisiblePosition()), this.onDidChangeActivityBarLocation()), this.shouldShowCompositeBar() ? this.focusCompositeBar() : (this.layoutService.isVisible(Y.ACTIVITYBAR_PART) || this.layoutService.setPartHidden(!1, Y.ACTIVITYBAR_PART), this.activityBarPart.show(!0));
 	}
 	registerActions() {
 		let e = this;
@@ -11199,8 +11199,8 @@ var DM = class extends ZT {
 				});
 			}
 			run() {
-				let t = e.configurationService.getValue(pS.ACTIVITY_BAR_LOCATION) === qS.HIDDEN ? e.getRememberedActivityBarVisiblePosition() : qS.HIDDEN;
-				return e.configurationService.updateValue(pS.ACTIVITY_BAR_LOCATION, t);
+				let t = e.configurationService.getValue(hS.ACTIVITY_BAR_LOCATION) === yS.HIDDEN ? e.getRememberedActivityBarVisiblePosition() : yS.HIDDEN;
+				return e.configurationService.updateValue(hS.ACTIVITY_BAR_LOCATION, t);
 			}
 		}));
 	}
@@ -11212,14 +11212,14 @@ DM = EM = w([
 	R(0, al),
 	R(1, op),
 	R(2, Po),
-	R(3, ES),
+	R(3, BS),
 	R(4, We),
 	R(5, vu),
 	R(6, S),
 	R(7, Mn),
 	R(8, My),
 	R(9, ku),
-	R(10, nS),
+	R(10, $x),
 	R(11, F),
 	R(12, Xa)
 ], DM), h(), T(), mi(), xb(), W(), g();
@@ -12238,7 +12238,7 @@ var UM = class {
 		return this.writeLine(), this._lines.join("\n");
 	}
 };
-h(), E(), vn(), k(), xr(), Bd(), _e(), W(), np(), eo(), T(), qn(), qc(), gi(), Go(), _c(), nf(), bl(), ql(), Xs(), wc(), mi(), g(), Ud(), $a(), ar(), cc(), ae(), xn(), Zr(), fS(), DT(), eh();
+h(), E(), vn(), k(), xr(), Bd(), _e(), W(), np(), eo(), T(), qn(), qc(), gi(), Go(), _c(), nf(), bl(), ql(), Xs(), wc(), mi(), g(), Ud(), $a(), ar(), cc(), ae(), xn(), Zr(), XS(), DT(), eh();
 var WM;
 function GM(e, t) {
 	return e ? typeof e.command == "string" ? e.key && typeof e.key != "string" ? (t.push(y(14118, "property `{0}` can be omitted or must be of type `string`", "key")), !1) : e.when && typeof e.when != "string" ? (t.push(y(14118, "property `{0}` can be omitted or must be of type `string`", "when")), !1) : e.mac && typeof e.mac != "string" ? (t.push(y(14118, "property `{0}` can be omitted or must be of type `string`", "mac")), !1) : e.linux && typeof e.linux != "string" ? (t.push(y(14118, "property `{0}` can be omitted or must be of type `string`", "linux")), !1) : e.win && typeof e.win != "string" ? (t.push(y(14118, "property `{0}` can be omitted or must be of type `string`", "win")), !1) : !0 : (t.push(y(14117, "property `{0}` is mandatory and must be of type `string`", "command")), !1) : (t.push(y(14116, "expected non-empty value.")), !1);
@@ -12550,7 +12550,7 @@ XM = WM = w([
 	R(3, al),
 	R(4, v_),
 	R(5, Th),
-	R(6, nS),
+	R(6, $x),
 	R(7, Rc),
 	R(8, Ku),
 	R(9, Cn),
@@ -13640,7 +13640,7 @@ var SN = P.as(ns.Configuration), CN = {
 		description: y(14137, "Control the keyboard layout used in web.")
 	} }
 };
-SN.registerConfiguration(CN), h(), _e(), W(), T(), _c(), g(), mi(), $a(), fS();
+SN.registerConfiguration(CN), h(), _e(), W(), T(), _c(), g(), mi(), $a(), XS();
 var wN = class extends B {
 	constructor(e, t, n) {
 		super(), this._instantiationService = e, this._extensionService = t, this._logService = n, this._extensionHostIsReady = !1, this._onWillExecuteCommand = this._register(new K()), this.onWillExecuteCommand = this._onWillExecuteCommand.event, this._onDidExecuteCommand = new K(), this.onDidExecuteCommand = this._onDidExecuteCommand.event, this._extensionService.whenInstalledExtensionsRegistered().then((e) => this._extensionHostIsReady = e), this._starActivation = null;
@@ -13678,7 +13678,7 @@ var wN = class extends B {
 //#region node_modules/@codingame/monaco-vscode-keybindings-service-override/vscode/src/vs/workbench/contrib/preferences/common/smartSnippetInserter.js
 wN = w([
 	R(0, S),
-	R(1, nS),
+	R(1, $x),
 	R(2, Cn)
 ], wN), E(), Go(), yf(), bT(), nf(), T(), k(), ma(), W(), G(class e extends I {
 	constructor() {
@@ -14313,7 +14313,7 @@ nn(RN, VN, gl.AfterFirstRender), qn(), E(), Go(), nf(), $a(), ar(), G(class exte
 		let n, r;
 		return typeof t == "string" ? n = t : (n = t.command, r = t.args), r === void 0 ? e.executeCommand(n) : Array.isArray(r) ? e.executeCommand(n, ...r) : e.executeCommand(n, r);
 	}
-}), h(), Md(), yf(), Im(), wc(), nf(), T(), vf(), ql(), xn(), ae(), ar(), p_(), eh(), fS(), $a(), Du(), zf(), J.from({
+}), h(), Md(), yf(), Im(), wc(), nf(), T(), vf(), ql(), xn(), ae(), ar(), p_(), eh(), XS(), $a(), Du(), zf(), J.from({
 	scheme: sc.vscodeUserData,
 	path: "/User/keybindings.json"
 });
@@ -14357,7 +14357,7 @@ WN = w([
 	R(5, al),
 	R(6, v_),
 	R(7, Th),
-	R(8, nS),
+	R(8, $x),
 	R(9, Rc),
 	R(10, Ku),
 	R(11, Cn),
@@ -14367,7 +14367,7 @@ function GN({ shouldUseGlobalKeybindings: e = () => !1, lockKeyCodesOverride: t 
 	t(e);
 } } = {}) {
 	return {
-		...sC(),
+		...MS(),
 		[We.toString()]: new ec(WN, [e, t], !1),
 		[Mm.toString()]: new ec(xN, [], !0),
 		[jo.toString()]: new ec(wN, [], !0)
@@ -14792,7 +14792,7 @@ JN = w([
 	R(1, S),
 	R(2, ku),
 	R(3, fo)
-], JN), h(), px(), g(), bl(), ql(), Ma(), ke(), fS(), cc(), T(), T_(), Md(), mi(), W(), ae(), zl(), Go(), E(), $a(), Sf();
+], JN), h(), px(), g(), bl(), ql(), Ma(), ke(), XS(), cc(), T(), T_(), Md(), mi(), W(), ae(), zl(), Go(), E(), $a(), Sf();
 var YN;
 function XN(e) {
 	return `${e}.state`;
@@ -15290,10 +15290,10 @@ ZN = YN = w([
 	R(0, S),
 	R(1, ku),
 	R(2, op),
-	R(3, nS),
+	R(3, $x),
 	R(4, vi),
 	R(5, fo)
-], ZN), h(), rs(), Zr(), T(), gi(), zf(), kd(), qu(), wC(), iw(), Du(), g(), Mo(), E(), ar(), mi(), Ma(), ke(), fS(), $a(), AC(), W(), pa();
+], ZN), h(), rs(), Zr(), T(), gi(), zf(), kd(), qu(), wC(), iw(), Du(), g(), Mo(), E(), ar(), mi(), Ma(), ke(), XS(), $a(), AC(), W(), pa();
 var QN, $N = class extends B {
 	static {
 		QN = this;
@@ -15665,7 +15665,7 @@ $N = QN = w([
 	R(3, vc),
 	R(4, al),
 	R(5, op),
-	R(6, nS),
+	R(6, $x),
 	R(7, Cn)
 ], $N), h(), zf(), g(), kd(), W(), Yi(), Du(), T(), mi();
 var eP, tP = class extends B {
@@ -15721,7 +15721,7 @@ var eP, tP = class extends B {
 				}), e++;
 			while (this.mapResourceToModel.has(t));
 		}
-		let n = this._register(this.instantiationService.createInstance(YS, t, !!e.associatedResource, e.initialValue, e.languageId, e.encoding));
+		let n = this._register(this.instantiationService.createInstance(VS, t, !!e.associatedResource, e.initialValue, e.languageId, e.encoding));
 		return this.registerModel(n), n;
 	}
 	registerModel(e) {
@@ -15746,7 +15746,7 @@ var eP, tP = class extends B {
 		});
 	}
 };
-tP = eP = w([R(0, S), R(1, F)], tP), h(), E(), zf(), wC(), Nw(), Gp(), Xs(), wc(), bt(), T(), Ma(), ke(), W(), kd(), iw(), g(), hS(), bl(), ql(), Zr(), mi(), k(), gx(), Du(), Ms(), TC(), xn(), YC(), $a(), Bd();
+tP = eP = w([R(0, S), R(1, F)], tP), h(), E(), zf(), wC(), Nw(), Gp(), Xs(), wc(), bt(), T(), Ma(), ke(), W(), kd(), iw(), g(), pC(), bl(), ql(), Zr(), mi(), k(), gx(), Du(), Ms(), TC(), xn(), YC(), $a(), Bd();
 var nP, rP, iP = class extends B {
 	static {
 		nP = this;
@@ -16162,7 +16162,7 @@ iP = nP = w([
 	R(5, Rc),
 	R(6, f_),
 	R(7, S),
-	R(8, ES),
+	R(8, BS),
 	R(9, ku),
 	R(10, Cn)
 ], iP), ee(Vp, iP, Ya.Eager);
@@ -17721,7 +17721,7 @@ qP = w([
 	R(9, cb),
 	R(10, S),
 	R(11, Nn)
-], qP), h(), k(), Da(), W(), T(), zr(), zl(), ql(), hS(), Ly(), wa();
+], qP), h(), k(), Da(), W(), T(), zr(), zl(), ql(), pC(), Ly(), wa();
 var JP = class extends B {
 	get window() {
 		return Dt(this._windowId, !0).window;
@@ -17909,7 +17909,7 @@ var JP = class extends B {
 	}
 };
 JP = w([
-	R(1, ES),
+	R(1, BS),
 	R(2, ay),
 	R(3, ku)
 ], JP);
@@ -18242,7 +18242,7 @@ function rF(e, t, n, r = nF) {
 		...e
 	};
 }
-du(), h(), E(), T(), US(), g(), $y(), _e(), Tm(), Wn(), ar(), pt(), W(), mi(), ni(), yf(), px(), xb(), c_(), vC(), pa(), gs(QP);
+du(), h(), E(), T(), SC(), g(), $y(), _e(), Tm(), Wn(), ar(), pt(), W(), mi(), ni(), yf(), px(), xb(), c_(), aS(), pa(), gs(QP);
 var iF = class extends B {
 	constructor(e, t, n, r, i, a, o, s, c) {
 		super(), this.activityService = e, this.paneCompositeService = t, this.viewDescriptorService = n, this.viewsService = r, this.notificationService = i, this.statusbarService = a, this.layoutService = o, this.keybindingService = s, this.userActivityService = c, this.windowProgressStack = [], this.windowProgressStatusEntry = void 0;
@@ -18275,7 +18275,7 @@ var iF = class extends B {
 		};
 		if (typeof r == "string") return a(r);
 		switch (r) {
-			case $S.Notification: {
+			case jS.Notification: {
 				let t = e.priority;
 				return t !== St.URGENT && (this.notificationService.getFilter() === ln.ERROR || Si(e.source) && this.notificationService.getFilter(e.source) === ln.ERROR) && (t = St.SILENT), this.withNotificationProgress({
 					...e,
@@ -18283,7 +18283,7 @@ var iF = class extends B {
 					priority: t
 				}, i, n);
 			}
-			case $S.Window: {
+			case jS.Window: {
 				let t = e.type;
 				return e.command ? this.withWindowProgress({
 					...e,
@@ -18293,25 +18293,25 @@ var iF = class extends B {
 					delay: 150,
 					...e,
 					priority: St.SILENT,
-					location: $S.Notification,
+					location: jS.Notification,
 					type: t
 				}, i, n);
 			}
-			case $S.Explorer: return this.withPaneCompositeProgress("workbench.view.explorer", Cx.Sidebar, i, {
+			case jS.Explorer: return this.withPaneCompositeProgress("workbench.view.explorer", Cx.Sidebar, i, {
 				...e,
 				location: r
 			});
-			case $S.Scm: return a("workbench.scm");
-			case $S.Extensions: return this.withPaneCompositeProgress("workbench.view.extensions", Cx.Sidebar, i, {
+			case jS.Scm: return a("workbench.scm");
+			case jS.Extensions: return this.withPaneCompositeProgress("workbench.view.extensions", Cx.Sidebar, i, {
 				...e,
 				location: r
 			});
-			case $S.Dialog: return this.withDialogProgress(e, i, n);
+			case jS.Dialog: return this.withDialogProgress(e, i, n);
 			default: throw Error(`Bad progress location: ${r}`);
 		}
 	}
 	withWindowProgress(e, t) {
-		let n = [e, new aC(() => this.updateWindowProgress())], r = t(n[1]), i = setTimeout(() => {
+		let n = [e, new KS(() => this.updateWindowProgress())], r = t(n[1]), i = setTimeout(() => {
 			i = void 0, this.windowProgressStack.unshift(n), this.updateWindowProgress(), Promise.all([up(150), r]).finally(() => {
 				let e = this.windowProgressStack.indexOf(n);
 				this.windowProgressStack.splice(e, 1), this.updateWindowProgress();
@@ -18365,7 +18365,7 @@ var iF = class extends B {
 		}(), i = () => {
 			let t = new Td();
 			return this.withWindowProgress({
-				location: $S.Window,
+				location: jS.Window,
 				title: e.title ? Bl(e.title).toString() : void 0,
 				command: "notifications.showList",
 				type: e.type
@@ -18492,7 +18492,7 @@ var iF = class extends B {
 };
 iF = w([
 	R(0, _m),
-	R(1, tS),
+	R(1, sS),
 	R(2, My),
 	R(3, Nv),
 	R(4, al),
@@ -18766,7 +18766,7 @@ uF = w([
 function dF(e) {
 	Object.assign(ic, { driver: e.createInstance(uF) });
 }
-h(), vn(), k(), _e(), W(), T(), Du(), qc(), pa(), zf(), E(), _c(), cr(), g(), An(), Yf(), hS(), LC(), YC(), eh(), Bd(), Tn(), kd(), qC(), il(), Gf();
+h(), vn(), k(), _e(), W(), T(), Du(), qc(), pa(), zf(), E(), _c(), cr(), g(), An(), Yf(), pC(), LC(), YC(), eh(), Bd(), Tn(), kd(), qC(), il(), Gf();
 var fF, pF = class extends B {
 	static {
 		fF = this;
@@ -18859,7 +18859,7 @@ pF = fF = w([
 	R(2, Th),
 	R(3, kC),
 	R(4, Po),
-	R(5, ES)
+	R(5, BS)
 ], pF);
 var mF = class extends pF {
 	constructor(e, t, n, r, i, a, o, s, c, l) {
@@ -18957,13 +18957,13 @@ mF = w([
 	R(1, HC),
 	R(2, fe),
 	R(3, Mt),
-	R(4, oS),
+	R(4, lS),
 	R(5, wT),
-	R(6, ES),
+	R(6, BS),
 	R(7, S),
 	R(8, Th),
 	R(9, Po)
-], mF), h(), vn(), k(), ma(), Bd(), Zr(), _e(), Ms(), W(), il(), T(), qc(), pa(), E(), kd(), Gf(), cr(), mi(), ae(), Au(), qC(), eh(), hS(), g();
+], mF), h(), vn(), k(), ma(), Bd(), Zr(), _e(), Ms(), W(), il(), T(), qc(), pa(), E(), kd(), Gf(), cr(), mi(), ae(), Au(), qC(), eh(), pC(), g();
 var hF, gF;
 (function(e) {
 	e[e.Maximized = 0] = "Maximized", e[e.Normal = 1] = "Normal", e[e.Fullscreen = 2] = "Fullscreen";
@@ -19030,7 +19030,7 @@ vF = w([
 	R(4, Th),
 	R(5, kC),
 	R(6, Po),
-	R(7, ES)
+	R(7, BS)
 ], vF);
 var yF = class extends B {
 	static {
@@ -19188,14 +19188,14 @@ var yF = class extends B {
 	}
 };
 yF = hF = w([
-	R(0, ES),
+	R(0, BS),
 	R(1, fe),
 	R(2, F),
 	R(3, vi),
 	R(4, Th),
 	R(5, kC),
 	R(6, Po)
-], yF), h(), fS(), Gf(), xb(), ae(), Hu(), g(), ke(), bt(), T_(), kd(), hS(), $a();
+], yF), h(), XS(), Gf(), xb(), ae(), Hu(), g(), ke(), bt(), T_(), kd(), pC(), $a();
 var bF = class extends iv {
 	constructor(e, t, n, r, i, a, o, s, c, l, u, d, f) {
 		super(e, { mergeViewWithContainerWhenSingleView: !1 }, o, n, r, c, i, l, s, a, u, d, f), this.constantViewDescriptors = /* @__PURE__ */ new Map(), this.allViews = /* @__PURE__ */ new Map(), this._register(t((e) => {
@@ -19247,17 +19247,17 @@ var bF = class extends iv {
 };
 bF = w([
 	R(2, F),
-	R(3, ES),
+	R(3, BS),
 	R(4, vi),
 	R(5, op),
 	R(6, S),
 	R(7, Mn),
 	R(8, Po),
-	R(9, nS),
+	R(9, $x),
 	R(10, $r),
 	R(11, My),
 	R(12, Cn)
-], bF), h(), T(), px(), xb(), KS(), cc(), ke(), bl(), ql(), W(), Pn(), Go(), E(), Ud(), mi(), g(), ae(), Hu(), Gf(), fS(), bt(), CC(), hS(), zf(), bT(), iw(), vC(), Nw(), c_();
+], bF), h(), T(), px(), xb(), dC(), cc(), ke(), bl(), ql(), W(), Pn(), Go(), E(), Ud(), mi(), g(), ae(), Hu(), Gf(), XS(), bt(), uS(), pC(), zf(), bT(), iw(), aS(), Nw(), c_();
 var xF = class extends B {
 	constructor(e, t, n, r, i) {
 		super(), this.viewDescriptorService = e, this.paneCompositeService = t, this.contextKeyService = n, this.layoutService = r, this.editorService = i, this._onDidChangeViewVisibility = this._register(new K()), this.onDidChangeViewVisibility = this._onDidChangeViewVisibility.event, this._onDidChangeViewContainerVisibility = this._register(new K()), this.onDidChangeViewContainerVisibility = this._onDidChangeViewContainerVisibility.event, this._onDidChangeFocusedView = this._register(new K()), this.onDidChangeFocusedView = this._onDidChangeFocusedView.event, this.viewContainerDisposables = this._register(new Oc()), this.viewDisposable = /* @__PURE__ */ new Map(), this.enabledViewContainersContextKeys = /* @__PURE__ */ new Map(), this.visibleViewContextKeys = /* @__PURE__ */ new Map(), this.viewPaneContainers = /* @__PURE__ */ new Map(), this._register(oe(() => {
@@ -19270,7 +19270,7 @@ var xF = class extends B {
 			id: e.composite.getId(),
 			visible: !1,
 			location: e.viewContainerLocation
-		}))), this.focusedViewContextKey = xC.bindTo(n);
+		}))), this.focusedViewContextKey = SS.bindTo(n);
 	}
 	onViewsAdded(e) {
 		for (let t of e) this.onViewsVisibilityChanged(t, t.isBodyVisible());
@@ -19285,7 +19285,7 @@ var xF = class extends B {
 		for (let t of e) this.onViewsVisibilityChanged(t, !1);
 	}
 	getOrCreateActiveViewContextKey(e) {
-		let t = lC(e.id), n = this.visibleViewContextKeys.get(t);
+		let t = iC(e.id), n = this.visibleViewContextKeys.get(t);
 		return n || (n = new Rr(t, !1).bindTo(this.contextKeyService), this.visibleViewContextKeys.set(t, n)), n;
 	}
 	onDidChangeContainers(e, t) {
@@ -19380,7 +19380,7 @@ var xF = class extends B {
 		return null;
 	}
 	getFocusedView() {
-		let e = this.contextKeyService.getContextKeyValue(xC.key) ?? "";
+		let e = this.contextKeyService.getContextKeyValue(SS.key) ?? "";
 		return this.viewDescriptorService.getViewDescriptorById(e.toString());
 	}
 	getFocusedViewName() {
@@ -19457,7 +19457,7 @@ var xF = class extends B {
 					});
 				}
 				async run(t) {
-					let n = t.get(Q), r = t.get(My), i = t.get(ES), a = t.get(Nv), o = r.getViewContainerLocation(e);
+					let n = t.get(Q), r = t.get(My), i = t.get(BS), a = t.get(Nv), o = r.getViewContainerLocation(e);
 					switch (o) {
 						case Cx.AuxiliaryBar:
 						case Cx.Sidebar: {
@@ -19525,8 +19525,8 @@ var xF = class extends B {
 				});
 			}
 			async run(t, n) {
-				let r = t.get(Q), i = t.get(My), a = t.get(ES), o = t.get(Nv), s = t.get(ku);
-				if (xC.getValue(s) === e.id && !n?.preserveFocus) {
+				let r = t.get(Q), i = t.get(My), a = t.get(BS), o = t.get(Nv), s = t.get(ku);
+				if (SS.getValue(s) === e.id && !n?.preserveFocus) {
 					let t = i.getViewLocationById(e.id);
 					i.getViewLocationById(e.id) === Cx.Sidebar ? r.activeGroup.focus() : t !== null && a.setPartHidden(!0, wF(t));
 				} else await o.openView(e.id, !n?.preserveFocus);
@@ -19633,7 +19633,7 @@ var xF = class extends B {
 			R(3, S),
 			R(4, Mn),
 			R(5, Po),
-			R(6, nS)
+			R(6, $x)
 		], r), P.as(CF(t)).registerPaneComposite(GT.create(r, e.id, typeof e.title == "string" ? e.title : e.title.value, Ks(e.icon) ? e.icon : void 0, e.order, e.requestedIndex, e.icon instanceof J ? e.icon : void 0));
 	}
 	deregisterPaneComposite(e, t) {
@@ -19650,9 +19650,9 @@ var xF = class extends B {
 };
 xF = w([
 	R(0, My),
-	R(1, tS),
+	R(1, sS),
 	R(2, ku),
-	R(3, ES),
+	R(3, BS),
 	R(4, Z)
 ], xF);
 function SF(e) {
@@ -19746,7 +19746,7 @@ var DF, OF = class {
 		return `(rename ${this._edits.map((e) => `${e.oldUri} to ${e.newUri}`).join(", ")})`;
 	}
 };
-AF = DF = w([R(2, kS), R(3, Rc)], AF);
+AF = DF = w([R(2, IS), R(3, Rc)], AF);
 var jF = class {
 	constructor(e, t, n) {
 		this.newUri = e, this.oldUri = t, this.options = n, this.type = "copy";
@@ -19784,7 +19784,7 @@ var jF = class {
 	}
 };
 MF = w([
-	R(2, kS),
+	R(2, IS),
 	R(3, Rc),
 	R(4, S)
 ], MF);
@@ -19821,7 +19821,7 @@ var NF = class {
 };
 PF = w([
 	R(2, Rc),
-	R(3, kS),
+	R(3, IS),
 	R(4, S),
 	R(5, $C)
 ], PF);
@@ -19866,7 +19866,7 @@ var FF = class {
 	}
 };
 IF = w([
-	R(2, kS),
+	R(2, IS),
 	R(3, Rc),
 	R(4, F),
 	R(5, S),
@@ -20110,7 +20110,7 @@ var HF = class e extends Tl {
 		return e;
 	}
 };
-UF = w([R(5, Fs)], UF), h(), sl(), T(), Yi(), Fx(), ur(), g(), Bf(), E(), kd(), ue(), cr(), mi(), $a(), US(), cc(), pn(), Nw(), LC(), YC(), qc();
+UF = w([R(5, Fs)], UF), h(), sl(), T(), Yi(), Fx(), ur(), g(), Bf(), E(), kd(), ue(), cr(), mi(), $a(), SC(), cc(), pn(), Nw(), LC(), YC(), qc();
 function WF(e) {
 	return e.map((e) => {
 		if (ul.is(e)) return ul.lift(e);
@@ -20193,7 +20193,7 @@ var KF = class {
 			}
 		}
 		i || (i = new Et(), a = this._activeUndoRedoGroups.push(i));
-		let o = t?.quotableLabel || t?.label, s = this._instaService.createInstance(GF, o, t?.code, r, t?.progress ?? aC.None, t?.token ?? Ur.None, n, i, t?.undoRedoSource, !!t?.confirmBeforeUndo), c;
+		let o = t?.quotableLabel || t?.label, s = this._instaService.createInstance(GF, o, t?.code, r, t?.progress ?? KS.None, t?.token ?? Ur.None, n, i, t?.undoRedoSource, !!t?.confirmBeforeUndo), c;
 		try {
 			c = this._lifecycleService.onBeforeShutdown((e) => e.veto(this._shouldVeto(o, e.reason), "veto.blukEditService"));
 			let e = await s.perform(t?.reason);
@@ -20979,7 +20979,7 @@ EI = wI = w([
 	R(13, uf),
 	R(14, Mn),
 	R(15, vu)
-], EI), h(), cc(), oT(), px(), c_(), KS(), E(), T_(), bl(), ql(), iw(), Ud(), eo(), Bi(), Md(), Go(), wC(), sl(), cr(), pa(), zd(), wn(), vC();
+], EI), h(), cc(), oT(), px(), c_(), dC(), E(), T_(), bl(), ql(), iw(), Ud(), eo(), Bi(), Md(), Go(), wC(), sl(), cr(), pa(), zd(), wn(), aS();
 var DI;
 async function OI(e) {
 	let t = await e.openView(EI.ID, !0);
@@ -20997,7 +20997,7 @@ var kI = class {
 		}
 	}
 };
-kI = w([R(0, tS), R(1, Q)], kI);
+kI = w([R(0, sS), R(1, Q)], kI);
 var AI = class {
 	constructor(e, t = new Cl()) {
 		this.uxState = e, this.cts = t;
@@ -21038,7 +21038,7 @@ var AI = class {
 	}
 };
 jI = DI = w([
-	R(0, tS),
+	R(0, sS),
 	R(1, Nv),
 	R(2, Q),
 	R(3, fe),
@@ -21058,7 +21058,7 @@ jI = DI = w([
 			}],
 			keybinding: {
 				weight: N.EditorContrib - 10,
-				when: _.and(jI.ctxEnabled, xC.isEqualTo(EI.ID)),
+				when: _.and(jI.ctxEnabled, SS.isEqualTo(EI.ID)),
 				primary: b.CtrlCmd + D.Enter
 			}
 		});
@@ -22204,7 +22204,7 @@ var CL = class extends B {
 		for (let t of e) t.remove();
 	}
 };
-du(), h(), Ou(), k(), Ft(), Ei(), we(), Ic(), pt(), _e(), sl(), zd(), Ms(), W(), Vu(), il(), T(), a(), Du(), gi(), r(), Pn(), zf(), zl(), E(), lo(), Go(), wo(), _c(), nf(), kd(), bl(), ql(), Gf(), Xs(), g(), yf(), An(), Bi(), $a(), ar(), Yf(), Ea(), cc(), ae(), cf(), Xo(), Hu(), Of(), P_(), nb(), ty(), px(), xb(), Tm(), fS(), Sd(), By(), qc(), _T(), eb(), Cb(), ws(), Co(), de();
+du(), h(), Ou(), k(), Ft(), Ei(), we(), Ic(), pt(), _e(), sl(), zd(), Ms(), W(), Vu(), il(), T(), a(), Du(), gi(), r(), Pn(), zf(), zl(), E(), lo(), Go(), wo(), _c(), nf(), kd(), bl(), ql(), Gf(), Xs(), g(), yf(), An(), Bi(), $a(), ar(), Yf(), Ea(), cc(), ae(), cf(), Xo(), Hu(), Of(), P_(), nb(), ty(), px(), xb(), Tm(), XS(), Sd(), By(), qc(), _T(), eb(), Cb(), ws(), Co(), de();
 var TL;
 gs(xL);
 var EL = class extends zb {
@@ -23174,7 +23174,7 @@ UL = w([
 	R(11, My),
 	R(12, ku),
 	R(13, vu),
-	R(14, nS),
+	R(14, $x),
 	R(15, _m),
 	R(16, vi),
 	R(17, Cn),
@@ -24788,7 +24788,7 @@ var nz = class e extends B {
 		r && await this.notifier.doAction(r);
 	}
 };
-h(), k(), sl(), W(), T(), Go(), kd(), ql(), Gf(), g(), yf(), Yf(), Ea(), Ma(), ke(), Hu(), ty(), qm(), xb(), c_(), Ly(), hy(), Tm(), fS(), Sd();
+h(), k(), sl(), W(), T(), Go(), kd(), ql(), Gf(), g(), yf(), Yf(), Ea(), Ma(), ke(), Hu(), ty(), qm(), xb(), c_(), Ly(), hy(), Tm(), XS(), Sd();
 var az, oz = { webviewState: "webviewState" }, sz = class extends zb {
 	static {
 		az = this;
@@ -24933,7 +24933,7 @@ sz = az = w([
 	R(8, Mn),
 	R(9, My),
 	R(10, _m),
-	R(11, nS),
+	R(11, $x),
 	R(12, Qi),
 	R(13, op),
 	R(14, Nv),
@@ -25160,7 +25160,7 @@ var fz = {
 		});
 	}
 	removeCustomViewContainers(e) {
-		let t = P.as(Ib.ViewContainersRegistry), n = e.reduce((e, t) => (e.add(t.description.identifier), e), new LS());
+		let t = P.as(Ib.ViewContainersRegistry), n = e.reduce((e, t) => (e.add(t.description.identifier), e), new eC());
 		for (let e of t.all) if (e.extensionId && n.has(e.extensionId)) {
 			let t = this.viewsRegistry.getViews(e);
 			t.length && this.viewsRegistry.moveViews(t, this.getDefaultViewContainer()), this.deregisterCustomViewContainer(e);
@@ -25236,7 +25236,7 @@ var fz = {
 						i.error(y(2614, "A view with id `{0}` is already registered.", l.id));
 						continue;
 					}
-					let u = ZS.equals(r.description.identifier, s.extensionId) ? n + 1 : s.viewOrderDelegate ? s.viewOrderDelegate.getOrder(l.group) : void 0, d;
+					let u = US.equals(r.description.identifier, s.extensionId) ? n + 1 : s.viewOrderDelegate ? s.viewOrderDelegate.getOrder(l.group) : void 0, d;
 					typeof l.icon == "string" && (d = is.fromString(l.icon) || id(r.description.extensionLocation, l.icon));
 					let f = this.convertInitialVisibility(l.visibility), p = this.getViewType(l.type);
 					if (!p) {
@@ -25291,7 +25291,7 @@ var fz = {
 		return this.viewContainersRegistry.get(Vx);
 	}
 	removeViews(e) {
-		let t = e.reduce((e, t) => (e.add(t.description.identifier), e), new LS());
+		let t = e.reduce((e, t) => (e.add(t.description.identifier), e), new eC());
 		for (let e of this.viewContainersRegistry.all) {
 			let n = this.viewsRegistry.getViews(e).filter((e) => e.extensionId && t.has(e.extensionId));
 			if (n.length) {
@@ -26070,7 +26070,7 @@ var Iz = class extends B {
 		if (e && t?.hasModel()) {
 			let t = e.input ? jz(e.input) : null;
 			if (t) {
-				let e = t.getEncoding(), r = typeof e == "string" ? FS[e] : void 0;
+				let e = t.getEncoding(), r = typeof e == "string" ? QS[e] : void 0;
 				r ? n.encoding = r.labelShort : n.encoding = e;
 			}
 		}
@@ -26420,14 +26420,14 @@ var qz = class e extends I {
 			autoGuessEncoding: !0,
 			candidateGuessEncodings: o.getValue(m, "files.candidateGuessEncodings")
 		})).encoding);
-		let te = p === f, ne = o.getValue(m, "files.encoding"), re, ie, ae = Object.keys(FS).sort((e, t) => e === ne ? -1 : t === ne ? 1 : FS[e].order - FS[t].order).filter((e) => e === ee && ee !== ne ? !1 : !te || !FS[e].encodeOnly).map((e, t) => (e === u.getEncoding() ? re = t : FS[e].alias === u.getEncoding() && (ie = t), {
+		let te = p === f, ne = o.getValue(m, "files.encoding"), re, ie, ae = Object.keys(QS).sort((e, t) => e === ne ? -1 : t === ne ? 1 : QS[e].order - QS[t].order).filter((e) => e === ee && ee !== ne ? !1 : !te || !QS[e].encodeOnly).map((e, t) => (e === u.getEncoding() ? re = t : QS[e].alias === u.getEncoding() && (ie = t), {
 			id: e,
-			label: FS[e].labelLong,
+			label: QS[e].labelLong,
 			description: e
 		})), oe = ae.slice();
-		ee && ne !== ee && FS[ee] && (ae.unshift({ type: "separator" }), ae.unshift({
+		ee && ne !== ee && QS[ee] && (ae.unshift({ type: "separator" }), ae.unshift({
 			id: ee,
-			label: FS[ee].labelLong,
+			label: QS[ee].labelLong,
 			description: y(3498, "Guessed from content")
 		}));
 		let se = await r.pick(ae, {
@@ -26516,7 +26516,7 @@ Zz = w([
 	R(2, Mw),
 	R(3, zx),
 	R(4, OC)
-], Zz), h(), E(), cc(), T(), ue(), Gh(), mh(), fS(), Zr(), W(), qC(), Xs();
+], Zz), h(), E(), cc(), T(), ue(), Gh(), mh(), XS(), Zr(), W(), qC(), Xs();
 var Qz, $z = class extends B {
 	static {
 		Qz = this;
@@ -26641,9 +26641,9 @@ var Qz, $z = class extends B {
 };
 $z = Qz = w([
 	R(0, ch),
-	R(1, nS),
+	R(1, $x),
 	R(2, kC)
-], $z), cc(), E(), wC(), KS(), AC(), Yw(), Vh(), bT(), Go(), Md(), eo(), Ud(), bl(), qc(), oT(), Du(), zd(), wn(), Fh(), _h(), P.as(UC.EditorPane).registerEditorPane(ym.create(wz, wz.ID, y(3117, "Text Editor")), [new ec(IT), new ec(ag)]), P.as(UC.EditorPane).registerEditorPane(ym.create($D, $D.ID, y(3118, "Text Diff Editor")), [new ec(Qw)]), P.as(UC.EditorPane).registerEditorPane(ym.create(Ez, Ez.ID, y(3119, "Binary Diff Editor")), [new ec(Qw)]), P.as(UC.EditorPane).registerEditorPane(ym.create(RT, RT.ID, y(3120, "Side by Side Editor")), [new ec(ew)]), P.as(UC.EditorFactory).registerEditorSerializer(IT.ID, Xz), P.as(UC.EditorFactory).registerEditorSerializer(ew.ID, MC), P.as(UC.EditorFactory).registerEditorSerializer(Qw.ID, Vw), _w(Wz.ID, Wz, tT.BlockRestore), _w(Zz.ID, Zz, tT.BlockRestore), _w($z.ID, $z, tT.BlockRestore);
+], $z), cc(), E(), wC(), dC(), AC(), Yw(), Vh(), bT(), Go(), Md(), eo(), Ud(), bl(), qc(), oT(), Du(), zd(), wn(), Fh(), _h(), P.as(UC.EditorPane).registerEditorPane(ym.create(wz, wz.ID, y(3117, "Text Editor")), [new ec(IT), new ec(ag)]), P.as(UC.EditorPane).registerEditorPane(ym.create($D, $D.ID, y(3118, "Text Diff Editor")), [new ec(Qw)]), P.as(UC.EditorPane).registerEditorPane(ym.create(Ez, Ez.ID, y(3119, "Binary Diff Editor")), [new ec(Qw)]), P.as(UC.EditorPane).registerEditorPane(ym.create(RT, RT.ID, y(3120, "Side by Side Editor")), [new ec(ew)]), P.as(UC.EditorFactory).registerEditorSerializer(IT.ID, Xz), P.as(UC.EditorFactory).registerEditorSerializer(ew.ID, MC), P.as(UC.EditorFactory).registerEditorSerializer(Qw.ID, Vw), _w(Wz.ID, Wz, tT.BlockRestore), _w(Zz.ID, Zz, tT.BlockRestore), _w($z.ID, $z, tT.BlockRestore);
 var eB = P.as(Cc.Quickaccess), tB = "inEditorsPicker", nB = _.and(im, _.has(tB));
 eB.registerQuickAccessProvider({
 	ctor: KD,
@@ -26714,7 +26714,7 @@ z.registerCommandAndKeybindingRule({
 	},
 	group: "navigation",
 	order: 10,
-	when: _.and(_S, eC.toNegated())
+	when: _.and(wS, NS.toNegated())
 }), U.appendMenuItem(q.EmptyEditorGroup, {
 	command: {
 		id: TO,
@@ -26724,7 +26724,7 @@ z.registerCommandAndKeybindingRule({
 	},
 	group: "navigation",
 	order: 10,
-	when: eC
+	when: NS
 }), U.appendMenuItem(q.EmptyEditorGroup, {
 	command: {
 		id: gO,
@@ -26733,7 +26733,7 @@ z.registerCommandAndKeybindingRule({
 	},
 	group: "navigation",
 	order: 20,
-	when: _.or(_S, WS)
+	when: _.or(wS, hC)
 }), U.appendMenuItem(q.EmptyEditorGroupContext, {
 	command: {
 		id: MO,
@@ -26773,11 +26773,11 @@ z.registerCommandAndKeybindingRule({
 	command: {
 		id: CO,
 		title: y(3133, "Lock Group"),
-		toggled: eC
+		toggled: NS
 	},
 	group: "4_lock",
 	order: 10,
-	when: _S.toNegated()
+	when: wS.toNegated()
 }), U.appendMenuItem(q.EmptyEditorGroupContext, {
 	command: {
 		id: gO,
@@ -26785,7 +26785,7 @@ z.registerCommandAndKeybindingRule({
 	},
 	group: "5_close",
 	order: 10,
-	when: JS
+	when: _S
 }), U.appendMenuItem(q.EditorTabsBarContext, {
 	command: {
 		id: MO,
@@ -26833,7 +26833,7 @@ z.registerCommandAndKeybindingRule({
 	title: y(3137, "Tab Bar"),
 	group: "4_config",
 	order: 10,
-	when: bC.negate()
+	when: _C.negate()
 }), U.appendMenuItem(q.EditorTabsBarShowTabsSubmenu, {
 	command: {
 		id: Lp.ID,
@@ -26863,7 +26863,7 @@ z.registerCommandAndKeybindingRule({
 	title: y(3137, "Tab Bar"),
 	group: "4_config",
 	order: 10,
-	when: bC
+	when: _C
 }), U.appendMenuItem(q.EditorTabsBarShowTabsZenModeSubmenu, {
 	command: {
 		id: xm.ID,
@@ -26936,7 +26936,7 @@ z.registerCommandAndKeybindingRule({
 	command: {
 		id: _O,
 		title: y(3145, "Close Others"),
-		precondition: iC.notEqualsTo("1")
+		precondition: GS.notEqualsTo("1")
 	},
 	group: "1_close",
 	order: 20
@@ -26944,11 +26944,11 @@ z.registerCommandAndKeybindingRule({
 	command: {
 		id: pO,
 		title: y(3146, "Close to the Right"),
-		precondition: _.and(cC.toNegated(), $x.negate())
+		precondition: _.and(rC.toNegated(), vS.negate())
 	},
 	group: "1_close",
 	order: 30,
-	when: VS
+	when: bC
 }), U.appendMenuItem(q.EditorTitleContext, {
 	command: {
 		id: uO,
@@ -26970,12 +26970,12 @@ z.registerCommandAndKeybindingRule({
 	},
 	group: "1_open",
 	order: 10,
-	when: cS
+	when: kS
 }), U.appendMenuItem(q.EditorTitleContext, {
 	command: {
 		id: xO,
 		title: y(3150, "Keep Open"),
-		precondition: GS.toNegated()
+		precondition: uC.toNegated()
 	},
 	group: "3_preview",
 	order: 10,
@@ -26987,7 +26987,7 @@ z.registerCommandAndKeybindingRule({
 	},
 	group: "3_preview",
 	order: 20,
-	when: nC.toNegated()
+	when: ZS.toNegated()
 }), U.appendMenuItem(q.EditorTitleContext, {
 	command: {
 		id: AO,
@@ -26995,7 +26995,7 @@ z.registerCommandAndKeybindingRule({
 	},
 	group: "3_preview",
 	order: 20,
-	when: nC
+	when: ZS
 }), U.appendMenuItem(q.EditorTitleContext, {
 	command: {
 		id: jO,
@@ -27003,7 +27003,7 @@ z.registerCommandAndKeybindingRule({
 	},
 	group: "5_split",
 	order: 10,
-	when: lS.negate()
+	when: DS.negate()
 }), U.appendMenuItem(q.EditorTitleContext, {
 	command: {
 		id: jO,
@@ -27011,7 +27011,7 @@ z.registerCommandAndKeybindingRule({
 	},
 	group: "5_split",
 	order: 10,
-	when: lS
+	when: DS
 }), U.appendMenuItem(q.EditorTitleContext, {
 	submenu: q.EditorSplitMoveSubmenu,
 	title: y(3153, "Split & Move"),
@@ -27036,7 +27036,7 @@ z.registerCommandAndKeybindingRule({
 	title: y(3156, "Share"),
 	group: "11_share",
 	order: -1,
-	when: $x.negate()
+	when: vS.negate()
 }), U.appendMenuItem(q.EditorSplitMoveSubmenu, {
 	command: {
 		id: MO,
@@ -27097,20 +27097,20 @@ z.registerCommandAndKeybindingRule({
 	command: {
 		id: VO,
 		title: y(3161, "Split in Group"),
-		precondition: $x.negate()
+		precondition: vS.negate()
 	},
 	group: "3_split_in_group",
 	order: 10,
-	when: CS
+	when: Qx
 }), U.appendMenuItem(q.EditorSplitMoveSubmenu, {
 	command: {
 		id: UO,
 		title: y(3162, "Join in Group"),
-		precondition: $x.negate()
+		precondition: vS.negate()
 	},
 	group: "3_split_in_group",
 	order: 10,
-	when: xS
+	when: oC
 }), U.appendMenuItem(q.EditorTitle, {
 	command: {
 		id: eO,
@@ -27156,7 +27156,7 @@ z.registerCommandAndKeybindingRule({
 	},
 	group: "8_group_operations",
 	order: 5,
-	when: _.and(QS.negate(), WS)
+	when: _.and(AS.negate(), hC)
 }), U.appendMenuItem(q.EditorTitle, {
 	command: {
 		id: BO,
@@ -27164,16 +27164,16 @@ z.registerCommandAndKeybindingRule({
 	},
 	group: "8_group_operations",
 	order: 5,
-	when: QS
+	when: AS
 }), U.appendMenuItem(q.EditorTitle, {
 	command: {
 		id: CO,
 		title: y(3168, "Lock Group"),
-		toggled: eC
+		toggled: NS
 	},
 	group: "8_group_operations",
 	order: 10,
-	when: _S.toNegated()
+	when: wS.toNegated()
 }), U.appendMenuItem(q.EditorTitle, {
 	command: {
 		id: _p.ID,
@@ -27206,7 +27206,7 @@ aB({
 	id: jO,
 	title: y(3170, "Split Editor Right"),
 	icon: M.splitHorizontal
-}, lS.negate(), oB, {
+}, DS.negate(), oB, {
 	id: NO,
 	title: y(3171, "Split Editor Down"),
 	icon: M.splitVertical
@@ -27214,7 +27214,7 @@ aB({
 	id: jO,
 	title: y(3171, "Split Editor Down"),
 	icon: M.splitVertical
-}, lS, oB, {
+}, DS, oB, {
 	id: FO,
 	title: y(3170, "Split Editor Right"),
 	icon: M.splitHorizontal
@@ -27222,11 +27222,11 @@ aB({
 	id: WO,
 	title: y(3172, "Toggle Layout"),
 	icon: M.editorLayout
-}, xS, oB - 1), aB({
+}, oC, oB - 1), aB({
 	id: mO,
 	title: y(3134, "Close"),
 	icon: M.close
-}, _.and(VS.toNegated(), Qx.toNegated(), nC.toNegated()), sB, {
+}, _.and(bC.toNegated(), tC.toNegated(), ZS.toNegated()), sB, {
 	id: dO,
 	title: y(3148, "Close All"),
 	icon: M.closeAll
@@ -27234,7 +27234,7 @@ aB({
 	id: mO,
 	title: y(3134, "Close"),
 	icon: M.closeDirty
-}, _.and(VS.toNegated(), Qx, nC.toNegated()), sB, {
+}, _.and(bC.toNegated(), tC, ZS.toNegated()), sB, {
 	id: dO,
 	title: y(3148, "Close All"),
 	icon: M.closeAll
@@ -27242,7 +27242,7 @@ aB({
 	id: AO,
 	title: y(3152, "Unpin"),
 	icon: M.pinned
-}, _.and(VS.toNegated(), Qx.toNegated(), nC), sB, {
+}, _.and(bC.toNegated(), tC.toNegated(), ZS), sB, {
 	id: mO,
 	title: y(3134, "Close"),
 	icon: M.close
@@ -27250,7 +27250,7 @@ aB({
 	id: AO,
 	title: y(3152, "Unpin"),
 	icon: M.pinnedDirty
-}, _.and(VS.toNegated(), Qx, nC), sB, {
+}, _.and(bC.toNegated(), tC, ZS), sB, {
 	id: mO,
 	title: y(3134, "Close"),
 	icon: M.close
@@ -27258,39 +27258,39 @@ aB({
 	id: wO,
 	title: y(3173, "Lock Group"),
 	icon: M.unlock
-}, _.and(_S, eC.toNegated()), sB - 1), aB({
+}, _.and(wS, NS.toNegated()), sB - 1), aB({
 	id: TO,
 	title: y(3174, "Unlock Group"),
 	icon: M.lock,
 	toggled: _.true()
-}, eC, sB - 1);
+}, NS, sB - 1);
 var cB = Lu("diff-editor-previous-change", M.arrowUp, y(3175, "Icon for the previous change action in the diff editor."));
 aB({
 	id: nO,
 	title: y(3176, "Previous Change"),
 	icon: cB
-}, wS, 10, void 0, oh.hasChanges, !0);
+}, bS, 10, void 0, oh.hasChanges, !0);
 var lB = Lu("diff-editor-next-change", M.arrowDown, y(3177, "Icon for the next change action in the diff editor."));
 aB({
 	id: tO,
 	title: y(3178, "Next Change"),
 	icon: lB
-}, wS, 11, void 0, oh.hasChanges, !0), aB({
+}, bS, 11, void 0, oh.hasChanges, !0), aB({
 	id: cO,
 	title: y(3179, "Swap Left and Right Side"),
 	icon: M.arrowSwap
-}, _.and(wS, oC), 15, void 0, void 0);
+}, _.and(bS, ES), 15, void 0, void 0);
 var uB = Lu("diff-editor-toggle-whitespace", M.whitespace, y(3180, "Icon for the toggle whitespace action in the diff editor."));
 U.appendMenuItem(q.EditorTitle, {
 	command: {
 		id: sO,
 		title: y(3181, "Show Leading/Trailing Whitespace Differences"),
 		icon: uB,
-		precondition: wS,
+		precondition: bS,
 		toggled: _.equals("config.diffEditor.ignoreTrimWhitespace", !1)
 	},
 	group: "navigation",
-	when: wS,
+	when: bS,
 	order: 20
 }), U.appendMenuItem(q.CommandPalette, {
 	command: {
@@ -27333,21 +27333,21 @@ U.appendMenuItem(q.EditorTitle, {
 		title: v(3190, "Close Editors to the Right in Group"),
 		category: $.View
 	},
-	when: cC.toNegated()
+	when: rC.toNegated()
 }), U.appendMenuItem(q.CommandPalette, {
 	command: {
 		id: fO,
 		title: v(3191, "Close Editor Group"),
 		category: $.View
 	},
-	when: JS
+	when: _S
 }), U.appendMenuItem(q.CommandPalette, {
 	command: {
 		id: DO,
 		title: v(3149, "Reopen Editor With..."),
 		category: $.View
 	},
-	when: cS
+	when: kS
 }), U.appendMenuItem(q.MenubarRecentMenu, {
 	group: "1_editor",
 	command: {
@@ -27422,7 +27422,7 @@ U.appendMenuItem(q.EditorTitle, {
 			mnemonicTitle: y(3205, "Split in &&Group")
 		}
 	},
-	when: CS,
+	when: Qx,
 	order: 1
 }), U.appendMenuItem(q.MenubarLayoutMenu, {
 	group: "2_split_in_group",
@@ -27433,7 +27433,7 @@ U.appendMenuItem(q.EditorTitle, {
 			mnemonicTitle: y(3207, "Join in &&Group")
 		}
 	},
-	when: xS,
+	when: oC,
 	order: 1
 }), U.appendMenuItem(q.MenubarLayoutMenu, {
 	group: "3_new_window",
@@ -27549,7 +27549,7 @@ U.appendMenuItem(q.EditorTitle, {
 		id: GO,
 		title: y(3229, "&&First Side in Editor")
 	},
-	when: _.or(xS, wS),
+	when: _.or(oC, bS),
 	order: 1
 }), U.appendMenuItem(q.MenubarSwitchEditorMenu, {
 	group: "1_sideBySide",
@@ -27557,7 +27557,7 @@ U.appendMenuItem(q.EditorTitle, {
 		id: KO,
 		title: y(3230, "&&Second Side in Editor")
 	},
-	when: _.or(xS, wS),
+	when: _.or(oC, bS),
 	order: 2
 }), U.appendMenuItem(q.MenubarSwitchEditorMenu, {
 	group: "2_any",
@@ -27639,7 +27639,7 @@ U.appendMenuItem(q.EditorTitle, {
 	command: {
 		id: "workbench.action.focusThirdEditorGroup",
 		title: y(3242, "Group &&3"),
-		precondition: JS
+		precondition: _S
 	},
 	order: 3
 }), U.appendMenuItem(q.MenubarSwitchGroupMenu, {
@@ -27647,7 +27647,7 @@ U.appendMenuItem(q.EditorTitle, {
 	command: {
 		id: "workbench.action.focusFourthEditorGroup",
 		title: y(3243, "Group &&4"),
-		precondition: JS
+		precondition: _S
 	},
 	order: 4
 }), U.appendMenuItem(q.MenubarSwitchGroupMenu, {
@@ -27655,7 +27655,7 @@ U.appendMenuItem(q.EditorTitle, {
 	command: {
 		id: "workbench.action.focusFifthEditorGroup",
 		title: y(3244, "Group &&5"),
-		precondition: JS
+		precondition: _S
 	},
 	order: 5
 }), U.appendMenuItem(q.MenubarSwitchGroupMenu, {
@@ -27663,7 +27663,7 @@ U.appendMenuItem(q.EditorTitle, {
 	command: {
 		id: "workbench.action.focusNextGroup",
 		title: y(3245, "&&Next Group"),
-		precondition: JS
+		precondition: _S
 	},
 	order: 1
 }), U.appendMenuItem(q.MenubarSwitchGroupMenu, {
@@ -27671,7 +27671,7 @@ U.appendMenuItem(q.EditorTitle, {
 	command: {
 		id: "workbench.action.focusPreviousGroup",
 		title: y(3246, "&&Previous Group"),
-		precondition: JS
+		precondition: _S
 	},
 	order: 2
 }), U.appendMenuItem(q.MenubarSwitchGroupMenu, {
@@ -27679,7 +27679,7 @@ U.appendMenuItem(q.EditorTitle, {
 	command: {
 		id: "workbench.action.focusLeftGroup",
 		title: y(3247, "Group &&Left"),
-		precondition: JS
+		precondition: _S
 	},
 	order: 1
 }), U.appendMenuItem(q.MenubarSwitchGroupMenu, {
@@ -27687,7 +27687,7 @@ U.appendMenuItem(q.EditorTitle, {
 	command: {
 		id: "workbench.action.focusRightGroup",
 		title: y(3248, "Group &&Right"),
-		precondition: JS
+		precondition: _S
 	},
 	order: 2
 }), U.appendMenuItem(q.MenubarSwitchGroupMenu, {
@@ -27695,7 +27695,7 @@ U.appendMenuItem(q.EditorTitle, {
 	command: {
 		id: "workbench.action.focusAboveGroup",
 		title: y(3249, "Group &&Above"),
-		precondition: JS
+		precondition: _S
 	},
 	order: 3
 }), U.appendMenuItem(q.MenubarSwitchGroupMenu, {
@@ -27703,7 +27703,7 @@ U.appendMenuItem(q.EditorTitle, {
 	command: {
 		id: "workbench.action.focusBelowGroup",
 		title: y(3250, "Group &&Below"),
-		precondition: JS
+		precondition: _S
 	},
 	order: 4
 }), U.appendMenuItem(q.MenubarGoMenu, {
@@ -27711,7 +27711,7 @@ U.appendMenuItem(q.EditorTitle, {
 	title: y(3251, "Switch &&Group"),
 	submenu: q.MenubarSwitchGroupMenu,
 	order: 2
-}), Cf(pg), h(), zf(), HS(), Of();
+}), Cf(pg), h(), zf(), xC(), Of();
 var dB = class {
 	static {
 		this.ID = ry.typeId;
@@ -27785,7 +27785,7 @@ function fB(e, t) {
 	if (!e) return;
 	let n = mB(t);
 	if (n) return {
-		id: new ZS(e),
+		id: new US(e),
 		location: n
 	};
 }
@@ -27927,7 +27927,7 @@ var bB = class extends B {
 bB = w([
 	R(0, S),
 	R(1, wy),
-	R(2, SC),
+	R(2, CS),
 	R(3, ay),
 	R(4, mv)
 ], bB), Md(), mi(), cc(), oT(), wC(), g(), N_(), P.as(UC.EditorPane).registerEditorPane(ym.create(K_, K_.ID, "Webview Editor"), [new ec(ey)]), P.as(UC.EditorFactory).registerEditorSerializer(vB.ID, vB), _w(bB.ID, bB, tT.BlockStartup), eo(), Fh(), E(), Go(), bl(), Ud(), bT(), Ly(), hy(), cy(), py(), Nw();
@@ -30943,7 +30943,7 @@ SH = w([
 	R(0, wy),
 	R(1, zx),
 	R(2, Rc)
-], SH), h(), E(), Jl(), Pn(), TC(), pt(), Lw(), jC(), wC(), Rx(), Xs(), wc(), ae(), bt(), ke(), Us(), g(), Hu(), wd(), Nw(), iw(), qu(), xn(), vC(), px(), kd(), TT(), eh(), EC();
+], SH), h(), E(), Jl(), Pn(), TC(), pt(), Lw(), jC(), wC(), Rx(), Xs(), wc(), ae(), bt(), ke(), Us(), g(), Hu(), wd(), Nw(), iw(), qu(), xn(), aS(), px(), kd(), TT(), eh(), EC();
 var CH, wH = class extends xz {
 	static {
 		CH = this;
@@ -31051,7 +31051,7 @@ var CH, wH = class extends xz {
 wH = CH = w([
 	R(1, vi),
 	R(2, Rc),
-	R(3, tS),
+	R(3, sS),
 	R(4, S),
 	R(5, $r),
 	R(6, op),
@@ -31121,7 +31121,7 @@ TH = w([
 	R(4, xt),
 	R(5, cT),
 	R(6, wy)
-], TH), h(), E(), qr(), gi(), pt(), zf(), Xs(), jC(), g(), T(), ir(), Yi(), Yw(), bl(), ql(), Wn(), ar(), Yf(), Ma(), ke(), yS(), W(), Nw(), qc(), Du(), TT(), wC(), Xr(), pa();
+], TH), h(), E(), qr(), gi(), pt(), zf(), Xs(), jC(), g(), T(), ir(), Yi(), Yw(), bl(), ql(), Wn(), ar(), Yf(), Ma(), ke(), mS(), W(), Nw(), qc(), Du(), TT(), wC(), Xr(), pa();
 var EH = "saveConflictResolutionContext", DH = "conflictResolution", OH = "learnMoreDirtyWriteError", kH = y(7900, "Use the actions in the editor tool bar to either undo your changes or overwrite the content of the file with your changes."), AH = class extends B {
 	static {
 		this.ID = "workbench.contrib.textFileSaveErrorHandler";
@@ -31222,7 +31222,7 @@ PH = w([
 	R(1, Z),
 	R(2, al),
 	R(3, S),
-	R(4, oS)
+	R(4, lS)
 ], PH);
 var FH = class extends Ni {
 	constructor(e, t, n) {
@@ -31549,7 +31549,7 @@ var GH = class extends B {
 		this.deactivate(), super.dispose();
 	}
 };
-GH = w([R(0, Z), R(1, Tb)], GH), oT(), _w(GH.ID, GH, tT.Eventually), h(), pt(), E(), hS(), Gf(), T(), k(), oT(), mf(), xl(), W(), Sf(), $a();
+GH = w([R(0, Z), R(1, Tb)], GH), oT(), _w(GH.ID, GH, tT.Eventually), h(), pt(), E(), pC(), Gf(), T(), k(), oT(), mf(), xl(), W(), Sf(), $a();
 function KH(e, t) {
 	return [
 		rt({
@@ -31629,11 +31629,11 @@ var qH = class extends B {
 	}
 };
 qH = w([
-	R(0, ES),
+	R(0, BS),
 	R(1, Po),
 	R(2, Pe),
 	R(3, Cn)
-], qH), _w(qH.ID, qH, tT.BlockRestore), E(), qc(), ae(), Yf(), zf(), Go(), eo(), yS(), Ud(), bT(), nf(), bl();
+], qH), _w(qH.ID, qH, tT.BlockRestore), E(), qc(), ae(), Yf(), zf(), Go(), eo(), mS(), Ud(), bT(), nf(), bl();
 var JH = class e extends I {
 	static {
 		this.ID = "workbench.action.keybindingsReference";
@@ -31663,7 +31663,7 @@ var JH = class e extends I {
 		});
 	}
 	run(e) {
-		let t = e.get(oS), n = e.get(uf), r = Ls ? t.keyboardShortcutsUrlLinux : ju ? t.keyboardShortcutsUrlMac : t.keyboardShortcutsUrlWin;
+		let t = e.get(lS), n = e.get(uf), r = Ls ? t.keyboardShortcutsUrlLinux : ju ? t.keyboardShortcutsUrlMac : t.keyboardShortcutsUrlWin;
 		r && n.open(J.parse(r));
 	}
 }, YH = class e extends I {
@@ -31690,7 +31690,7 @@ var JH = class e extends I {
 		});
 	}
 	run(e) {
-		let t = e.get(oS), n = e.get(uf);
+		let t = e.get(lS), n = e.get(uf);
 		t.introductoryVideosUrl && n.open(J.parse(t.introductoryVideosUrl));
 	}
 }, XH = class e extends I {
@@ -31717,7 +31717,7 @@ var JH = class e extends I {
 		});
 	}
 	run(e) {
-		let t = e.get(oS), n = e.get(uf);
+		let t = e.get(lS), n = e.get(uf);
 		t.tipsAndTricksUrl && n.open(J.parse(t.tipsAndTricksUrl));
 	}
 }, ZH = class e extends I {
@@ -31744,7 +31744,7 @@ var JH = class e extends I {
 		});
 	}
 	run(e) {
-		let t = e.get(oS), n = e.get(uf), r = No ? t.serverDocumentationUrl : t.documentationUrl;
+		let t = e.get(lS), n = e.get(uf), r = No ? t.serverDocumentationUrl : t.documentationUrl;
 		r && n.open(J.parse(r));
 	}
 }, QH = class e extends I {
@@ -31763,7 +31763,7 @@ var JH = class e extends I {
 		});
 	}
 	run(e) {
-		let t = e.get(oS), n = e.get(uf), r = e.get(vi);
+		let t = e.get(lS), n = e.get(uf), r = e.get(vi);
 		n.open(J.parse(`${t.newsletterSignupUrl}?machineId=${encodeURIComponent(r.machineId)}`));
 	}
 }, $H = class e extends I {
@@ -31790,7 +31790,7 @@ var JH = class e extends I {
 		});
 	}
 	run(e) {
-		let t = e.get(oS), n = e.get(uf);
+		let t = e.get(lS), n = e.get(uf);
 		t.youTubeUrl && n.open(J.parse(t.youTubeUrl));
 	}
 }, eU = class e extends I {
@@ -31817,7 +31817,7 @@ var JH = class e extends I {
 		});
 	}
 	run(e) {
-		let t = e.get(oS), n = e.get(uf);
+		let t = e.get(lS), n = e.get(uf);
 		t.requestFeatureUrl && n.open(J.parse(t.requestFeatureUrl));
 	}
 }, tU = class e extends I {
@@ -31844,7 +31844,7 @@ var JH = class e extends I {
 		});
 	}
 	run(e) {
-		let t = e.get(oS), n = e.get(uf), r = No ? t.serverLicenseUrl : t.licenseUrl;
+		let t = e.get(lS), n = e.get(uf), r = No ? t.serverLicenseUrl : t.licenseUrl;
 		if (r) if (ss) {
 			let e = r.indexOf("?") > 0 ? "&" : "?";
 			n.open(J.parse(`${r}${e}lang=${ss}`));
@@ -31874,7 +31874,7 @@ var JH = class e extends I {
 		});
 	}
 	run(e) {
-		let t = e.get(oS), n = e.get(uf);
+		let t = e.get(lS), n = e.get(uf);
 		t.privacyStatementUrl && n.open(J.parse(t.privacyStatementUrl));
 	}
 }, rU = class e extends I {
@@ -32464,13 +32464,13 @@ z.registerCommandAndKeybindingRule({
 		let t = e.get(F), n = !t.getValue("workbench.tree.enableStickyScroll");
 		t.updateValue("workbench.tree.enableStickyScroll", n);
 	}
-}), E(), lw(), iw(), CC(), hS(), Go(), bT(), eo(), Nw(), vC(), px(), Ud(), k(), Bd();
+}), E(), lw(), iw(), uS(), pC(), Go(), bT(), eo(), Nw(), aS(), px(), Ud(), k(), Bd();
 var fU = class extends I {
 	constructor(e, t) {
 		super(e), this.direction = t;
 	}
 	run(e) {
-		let t = e.get(ES), n = e.get(Q), r = e.get(tS), i = t.hasFocus(Y.EDITOR_PART), a = t.hasFocus(Y.PANEL_PART), o = t.hasFocus(Y.SIDEBAR_PART), s = t.hasFocus(Y.AUXILIARYBAR_PART), c;
+		let t = e.get(BS), n = e.get(Q), r = e.get(sS), i = t.hasFocus(Y.EDITOR_PART), a = t.hasFocus(Y.PANEL_PART), o = t.hasFocus(Y.SIDEBAR_PART), s = t.hasFocus(Y.AUXILIARYBAR_PART), c;
 		if (i) {
 			if (this.navigateAcrossEditorGroup(this.toGroupDirection(this.direction), n)) return;
 			c = t.getVisibleNeighborPart(Y.EDITOR_PART, this.direction);
@@ -32572,7 +32572,7 @@ var pU = class extends I {
 		super(e), this.focusNext = t;
 	}
 	run(e) {
-		let t = e.get(ES), n = e.get(Z);
+		let t = e.get(BS), n = e.get(Z);
 		this.focusNextOrPreviousPart(t, n, this.focusNext);
 	}
 	findVisibleNeighbour(e, t, n) {
@@ -32773,7 +32773,7 @@ jc.registerCommand(_U, async function(e, t) {
 	}, n.addRecentlyOpened([o]);
 }), jc.registerCommand("_workbench.getRecentlyOpened", async function(e) {
 	return e.get(f_).getRecentlyOpened();
-}), E(), ud(), bt(), xx(), Nw(), nf(), cr(), Go(), KS(), eh(), eo(), bl(), qC(), gx(), Ud(), bT();
+}), E(), ud(), bt(), xx(), Nw(), nf(), cr(), Go(), dC(), eh(), eo(), bl(), qC(), gx(), Ud(), bT();
 var yU = v(2957, "Workspaces"), bU = class e extends I {
 	static {
 		this.ID = "workbench.action.files.openFile";
@@ -32807,7 +32807,7 @@ var yU = v(2957, "Workspaces"), bU = class e extends I {
 			title: v(2959, "Open Folder..."),
 			category: $.File,
 			f1: !0,
-			precondition: mS,
+			precondition: gS,
 			keybinding: {
 				weight: N.WorkbenchContrib,
 				primary: void 0,
@@ -32832,7 +32832,7 @@ var yU = v(2957, "Workspaces"), bU = class e extends I {
 			title: v(2959, "Open Folder..."),
 			category: $.File,
 			f1: !0,
-			precondition: _.and(mS.toNegated(), zS.isEqualTo("workspace")),
+			precondition: _.and(gS.toNegated(), cC.isEqualTo("workspace")),
 			keybinding: {
 				weight: N.WorkbenchContrib,
 				primary: b.CtrlCmd | D.KeyO
@@ -32855,7 +32855,7 @@ var yU = v(2957, "Workspaces"), bU = class e extends I {
 			title: e.LABEL,
 			category: $.File,
 			f1: !0,
-			precondition: _.and(pl, mS),
+			precondition: _.and(pl, gS),
 			keybinding: {
 				weight: N.WorkbenchContrib,
 				primary: b.CtrlCmd | D.KeyO
@@ -32878,7 +32878,7 @@ var yU = v(2957, "Workspaces"), bU = class e extends I {
 			title: v(2961, "Open Workspace from File..."),
 			category: $.File,
 			f1: !0,
-			precondition: mC
+			precondition: vC
 		});
 	}
 	async run(e, t) {
@@ -32894,7 +32894,7 @@ var yU = v(2957, "Workspaces"), bU = class e extends I {
 			title: v(2962, "Close Workspace"),
 			category: yU,
 			f1: !0,
-			precondition: _.and(zS.notEqualsTo("empty"), OS),
+			precondition: _.and(cC.notEqualsTo("empty"), FS),
 			keybinding: {
 				weight: N.WorkbenchContrib,
 				primary: Ut(b.CtrlCmd | D.KeyK, D.KeyF)
@@ -32918,7 +32918,7 @@ var yU = v(2957, "Workspaces"), bU = class e extends I {
 			title: v(2963, "Open Workspace Configuration File"),
 			category: yU,
 			f1: !0,
-			precondition: zS.isEqualTo("workspace")
+			precondition: cC.isEqualTo("workspace")
 		});
 	}
 	async run(e) {
@@ -32938,7 +32938,7 @@ var yU = v(2957, "Workspaces"), bU = class e extends I {
 			title: hU,
 			category: yU,
 			f1: !0,
-			precondition: _.or(mC, zS.isEqualTo("workspace"))
+			precondition: _.or(vC, cC.isEqualTo("workspace"))
 		});
 	}
 	run(e) {
@@ -32954,7 +32954,7 @@ var yU = v(2957, "Workspaces"), bU = class e extends I {
 			title: v(2964, "Remove Folder from Workspace..."),
 			category: yU,
 			f1: !0,
-			precondition: _.and(fC.notEqualsTo("0"), _.or(mC, zS.isEqualTo("workspace")))
+			precondition: _.and(YS.notEqualsTo("0"), _.or(vC, cC.isEqualTo("workspace")))
 		});
 	}
 	async run(e) {
@@ -32971,7 +32971,7 @@ var yU = v(2957, "Workspaces"), bU = class e extends I {
 			title: v(2965, "Save Workspace As..."),
 			category: yU,
 			f1: !0,
-			precondition: mC
+			precondition: vC
 		});
 	}
 	async run(e) {
@@ -32995,7 +32995,7 @@ var yU = v(2957, "Workspaces"), bU = class e extends I {
 			title: v(2966, "Duplicate As Workspace in New Window"),
 			category: yU,
 			f1: !0,
-			precondition: mC
+			precondition: vC
 		});
 	}
 	async run(e) {
@@ -33021,7 +33021,7 @@ G(DU), G(OU), G(bU), G(xU), G(SU), G(CU), G(wU), G(EU), G(TU), G(kU), G(AU), U.a
 		title: y(2968, "Open &&Folder...")
 	},
 	order: 2,
-	when: mS
+	when: gS
 }), U.appendMenuItem(q.MenubarFileMenu, {
 	group: "2_open",
 	command: {
@@ -33029,7 +33029,7 @@ G(DU), G(OU), G(bU), G(xU), G(SU), G(CU), G(wU), G(EU), G(TU), G(kU), G(AU), U.a
 		title: y(2968, "Open &&Folder...")
 	},
 	order: 2,
-	when: _.and(mS.toNegated(), zS.isEqualTo("workspace"))
+	when: _.and(gS.toNegated(), cC.isEqualTo("workspace"))
 }), U.appendMenuItem(q.MenubarFileMenu, {
 	group: "2_open",
 	command: {
@@ -33037,7 +33037,7 @@ G(DU), G(OU), G(bU), G(xU), G(SU), G(CU), G(wU), G(EU), G(TU), G(kU), G(AU), U.a
 		title: y(2969, "&&Open...")
 	},
 	order: 1,
-	when: _.and(pl, mS)
+	when: _.and(pl, gS)
 }), U.appendMenuItem(q.MenubarFileMenu, {
 	group: "2_open",
 	command: {
@@ -33045,14 +33045,14 @@ G(DU), G(OU), G(bU), G(xU), G(SU), G(CU), G(wU), G(EU), G(TU), G(kU), G(AU), U.a
 		title: y(2970, "Open Wor&&kspace from File...")
 	},
 	order: 3,
-	when: mC
+	when: vC
 }), U.appendMenuItem(q.MenubarFileMenu, {
 	group: "3_workspace",
 	command: {
 		id: mU,
 		title: y(2971, "A&&dd Folder to Workspace...")
 	},
-	when: _.or(mC, zS.isEqualTo("workspace")),
+	when: _.or(vC, cC.isEqualTo("workspace")),
 	order: 1
 }), U.appendMenuItem(q.MenubarFileMenu, {
 	group: "3_workspace",
@@ -33061,7 +33061,7 @@ G(DU), G(OU), G(bU), G(xU), G(SU), G(CU), G(wU), G(EU), G(TU), G(kU), G(AU), U.a
 		title: y(2972, "Save Workspace As...")
 	},
 	order: 2,
-	when: mC
+	when: vC
 }), U.appendMenuItem(q.MenubarFileMenu, {
 	group: "3_workspace",
 	command: {
@@ -33069,7 +33069,7 @@ G(DU), G(OU), G(bU), G(xU), G(SU), G(CU), G(wU), G(EU), G(TU), G(kU), G(AU), U.a
 		title: y(2973, "Duplicate Workspace")
 	},
 	order: 3,
-	when: mC
+	when: vC
 }), U.appendMenuItem(q.MenubarFileMenu, {
 	group: "6_close",
 	command: {
@@ -33077,7 +33077,7 @@ G(DU), G(OU), G(bU), G(xU), G(SU), G(CU), G(wU), G(EU), G(TU), G(kU), G(AU), U.a
 		title: y(2974, "Close &&Folder")
 	},
 	order: 3,
-	when: _.and(zS.isEqualTo("folder"), OS)
+	when: _.and(cC.isEqualTo("folder"), FS)
 }), U.appendMenuItem(q.MenubarFileMenu, {
 	group: "6_close",
 	command: {
@@ -33085,7 +33085,7 @@ G(DU), G(OU), G(bU), G(xU), G(SU), G(CU), G(wU), G(EU), G(TU), G(kU), G(AU), U.a
 		title: y(2975, "Close &&Workspace")
 	},
 	order: 3,
-	when: _.and(zS.isEqualTo("workspace"), OS)
+	when: _.and(cC.isEqualTo("workspace"), FS)
 }), Sx({
 	"vs/workbench/contrib/debug/browser/media/continue-tb.png": new URL("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7dlNbtNAGMbxZyaUBSuOYHOBYlYskEhPwscFoKsqIBRHCCKyKNADQLkAR0jCiqBIhH6wAim+AWyAVKlnmDdKJUNTimT7nVm8v13SStGjfyauG0AIIYQQQgghBKPu5HGzO0kjBEahYjRUN3QbFk33MHMvkW6tP3iDQFQ6eDFW68GpF1HYzfN5p5WkGTzTYGAtbmu9Nni29/QWPGMZvBS56bu9/SevfZ5tzsELvmvXO1jZoTGms+Inka/atRduJY9SY3SMxSf2n5a1+5y1Wd7SraSVba0/jM+oHXPWZj3DIdRm/9DyXZt98Alftb0NJlT7ornEWtvrYLKZbOL61RtU+woYansfTDbUBtWectQOYvCJ/6nd0GtvUUJQg8l5tS1wGSUEN5gM7ABHmMXuvvomKnYBAaGhB18PMN4f3dfatN1b+FRNdwP/DSUEM3j7cFt9+DSKVMO8cg+bK37F7Tcvf5m8gxK8D6aqH/feq+P86N4ZVd2xRebO8x33x8o7lOT1DO982YGrGh9r23f1nq/4QFpWnV+rYizxUpiqjj+P1eznD5aqReyDqerIVdXnnNWZO6tpkn5HxdgGF6s2mKsWsQz2XbWo9sG9w96/qpJp3VWL6h1sVWTNvA/PVYvqLhy5kxmteJ6q3nVVh2DGfR2mqi+W19UhPOC8LHmrWlRpYQNNZ3H619PeqxbV8HVpN9LI29CK/iWThVCVBQ1PJ2mpm3UhhBBCCCFEOH4DIKF0k8sm4ZEAAAAASUVORK5CYII=", "" + import.meta.url).href,
 	"vs/workbench/contrib/debug/browser/media/pause-tb.png": new URL("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADASURBVHgB7dmxDcIwEEbh3xGLMAIbgFiADWADKmqoEUPAJFY2YAOyBRUxR2GLjkgxzeV9VWLlFD+3lgAAAAAAmJ6gyg4x7ZW0KT8Iup5X4fZr7hiTntI2Je3ymj23l3U4qaKZKrNNLuwUl/n91asdMvc5+b7X3A6ozIZGD1XWaGII9o5g7wj2jmDvCPaOYO8I9o5g7wj2jmDvCPaO4NpGXG0k/UH1mwfbZmeVMb9acDdsrHwbv5bvAgAAAAAAo70BgzIgmYCKG/cAAAAASUVORK5CYII=", "" + import.meta.url).href,
@@ -33095,13 +33095,13 @@ G(DU), G(OU), G(bU), G(xU), G(SU), G(CU), G(wU), G(EU), G(TU), G(kU), G(AU), U.a
 	"vs/workbench/contrib/debug/browser/media/stepout-tb.png": new URL("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJSSURBVHgB7ZpRbtNAEIb/cYIAqQ/tCQg3qOACOEi8Aj1BOQIPEbw14amoIHECKBcA8cpDDTeAEyQ3oA9AK9XpdsbxSlGUNk60M62i+aRIlr3S5vPYuzvjBRzHcRzHcRwdCMa8KkKnBDpy3AZGb3MawRBT4V4RtkNAwZ1u1qeOUSI/eEK/YEQGI+bICpsc5qPe97ANI0wifInsNH840l2LSKsLN5CNmEirCi8hG1GXVhNeQTaiKq0yaF0mG4DPs23nnNvSHMiSC18l+65Lu7PtNwgvLKWTCi8rK/RzCpbSyYRXkY1YSqeLcMDXWdnzgMEi2Ugtvcs3bTBzSaS/IBHphEs8D7JUrBHZ94+pjyVgaWxk6E9LBxm1CTtIRDJhmUaI18UivYpsZFpaZIl4isrTTVFJBy2RLgn3V5WNROk24UFKWcE8PewdceymOOiS6X8wy5ZuCi687rjwuuPC604b9gRcI+bCYYwuHEcN03XsXhFAt7nP+i0OLQQ6mSQLVpj11GfZv0BOYzzldOGenAsZfvI08e0OMBwYSZv0IrL/UeW4e3MuS8778i6Xdyyk1efhBbLCFl/79K/EIxigLnzKn0avkI0QtfBR3nFt1IXLczxr2LRjEWX9pSWhcYmVssmHck3UhflxPm7aNiOuUCqjH+GAH02b8mj9G8qoC49blfBwQTNekeBw32C/h7rwh5xkH8dOVVCfjwzNwxbwBgaY5MNSr5YaMx8WmAhWv/qrwuEZ4eG+0W4e87r0a9m2VKJDPJid3cKoegIcx3Ecx3GcNeAC4UEBaURTA6MAAAAASUVORK5CYII=", "" + import.meta.url).href,
 	"vs/workbench/contrib/debug/browser/media/stepover-tb.png": new URL("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMnSURBVHgB7ZldTttAFIXPOA5Sfx5YgmEDzQ6agPpcdgB0BVQ09JHQp7a0aruBClZA+9qWOKygdAONl5BKhf4AuT0DQXKCG8cTzwik+SQLezzGc3zv3Dt3Ang8Ho/H4/F4PB4TFG4IrVjQA6J029uGSlAQp4LXYokqqUEHQO8ESDjwXt6zT2NRfUE/1SQnCvNFRYewiBY4AyyLoC5ATQlmR/tUeTTbkkDQUQE+vmyoD7CIFcHrsdQDwSYuhJ6T40oRO6zww6xo8Uphh9bffW7gsnkEKBG6XcQBxxQb87IOMyIKb50J2huxLKNkSrOwtioHuUdLzuZ0TVLn0Zh+cxS+s7Ev9/4GeMbrHyiBUgRrS+jBZd2jS/d47x3DTecsxOFogGp+khoqqPH0Id166crzCo+rnBp/FBarmJ6po/TGF1mSAHsZt/RcbDEI7WICdNr5TYuf0p05qCxXPuRRS10bRempBOs5Szf+esWNadGTAK1J0s0omxR+dIqGquA9xru8keCpghbzYjwqlm1b24tqzUSsZquhcDdEHCgsYHi+l4Kx4Oa+rGDEAlrs60XVwpS0KPoW0NWidQxAiZgHLcU8O0xiIjZryagZqJSqwhanyBuUhJHgdQYqjAyS1mjAgGN+uhlODRk/XzMJT8+fSQo8YubSnLdD6YOD7bywsCrKIQnD4nPcTHCA+0P/RGXnYIt0K5zfJkvPwoJZEOioHKXbaOFvcIexWE3hPNyMuTJi7k23bS+oG1NXFw5aun7lUm/18lpJuWnD4/F4xuE8uupq6PKlevtHFwsucfY2LfQX39fXWz/9wcIlwAEXAh0WCuJKuJO3nNe4YI0rmTVuImdYvROi40J0qZt4/2Mgto3sAiFisd9m0V+HA6x/Um3dY0EX+dVQ9zZ3MGxb2bqFjy62a6MJukY/HVjZumDpTyxCsQqbtK8x1gUXcFAZHFaxH7S4H22lryFO0hJ/fvnOP3M53bosM+dhGSdpiXn2Eca7q+hcDAc4EfzqgepQkN5n1ukpLVyfd3mvwT4HcIDztfSTz1LHZTTmnNUfAx6Px+PxeDwej8dz3fgHnygaDf8DyT4AAAAASUVORK5CYII=", "" + import.meta.url).href,
 	"vs/workbench/contrib/debug/browser/media/stop-tb.png": new URL("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADLSURBVHgB7dkxDoJAEEbhf4ml3gFvwpGsNFSWxEqPxEmMdzDRRHRXSGjsZIEQhvclhJaXHZodCQAAAAD+4BThXuwyeWWaUqJyk19KdbRSjDrWJe6oCQUfmlepjhItzOKC40b6122dn7ca2bM4uI9eXj0x0tYRbB3B1hFsHcHWEWwdwdYRbB3B1hFsHcHWEWzdEBfxepz2UUu5LqrwdklQb0MEp95XV41sqFEc5IRrqWZirv9waJ/O4k64Xka3+9mphOYbBAAAAABj+QJmPCRPyVBXxgAAAABJRU5ErkJggg==", "" + import.meta.url).href
-}), Md(), xb(), Tm(), vC(), mh(), om(), Gf(), cn(), Jx(), rT(), Gp(), ub(), Hb(), uy(), hy(), Wb(), Ea(), wm(), c_(), ux();
+}), Md(), xb(), Tm(), aS(), mh(), om(), Gf(), cn(), Jx(), rT(), Gp(), ub(), Hb(), uy(), hy(), Wb(), Ea(), wm(), c_(), ux();
 var jU;
 Sx({
 	"vs/workbench/contrib/webview/browser/pre/service-worker.js": () => Ty(new URL("data:text/javascript;base64,LyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLgogKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi4KICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovCi8vQHRzLWNoZWNrCi8vLyA8cmVmZXJlbmNlIGxpYj0id2Vid29ya2VyIiAvPgoKLyoqIEB0eXBlIHtTZXJ2aWNlV29ya2VyR2xvYmFsU2NvcGV9ICovCmNvbnN0IHN3ID0gLyoqIEB0eXBlIHthbnl9ICovIChzZWxmKTsKCmNvbnN0IFZFUlNJT04gPSA0OwoKY29uc3QgcmVzb3VyY2VDYWNoZU5hbWUgPSBgdnNjb2RlLXJlc291cmNlLWNhY2hlLSR7VkVSU0lPTn1gOwoKY29uc3Qgcm9vdFBhdGggPSBzdy5sb2NhdGlvbi5wYXRobmFtZS5yZXBsYWNlKC9cL3NlcnZpY2Utd29ya2VyLmpzJC8sICcnKTsKCmNvbnN0IHNlYXJjaFBhcmFtcyA9IG5ldyBVUkwobG9jYXRpb24udG9TdHJpbmcoKSkuc2VhcmNoUGFyYW1zOwoKY29uc3QgcmVtb3RlQXV0aG9yaXR5ID0gc2VhcmNoUGFyYW1zLmdldCgncmVtb3RlQXV0aG9yaXR5Jyk7CgovKiogQHR5cGUge01lc3NhZ2VQb3J0fHVuZGVmaW5lZH0gKi8KbGV0IG91dGVySWZyYW1lTWVzc2FnZVBvcnQ7CgovKioKICogT3JpZ2luIHVzZWQgZm9yIHJlc291cmNlcwogKi8KY29uc3QgcmVzb3VyY2VCYXNlQXV0aG9yaXR5ID0gc2VhcmNoUGFyYW1zLmdldCgndnNjb2RlLXJlc291cmNlLWJhc2UtYXV0aG9yaXR5Jyk7CgovKioKICogQHBhcmFtIHtzdHJpbmd9IG5hbWUKICogQHBhcmFtIHtSZWNvcmQ8c3RyaW5nLCBzdHJpbmc+fSBbb3B0aW9uc10KICovCmNvbnN0IHBlcmZNYXJrID0gKG5hbWUsIG9wdGlvbnMgPSB7fSkgPT4gewoJcGVyZm9ybWFuY2UubWFyayhgd2Vidmlldy9zZXJ2aWNlLXdvcmtlci8ke25hbWV9YCwgewoJCWRldGFpbDogewoJCQkuLi5vcHRpb25zCgkJfQoJfSk7Cn07CgpwZXJmTWFyaygnc2NyaXB0U3RhcnQnKTsKCi8qKiBAdHlwZSB7bnVtYmVyfSAqLwpjb25zdCByZXNvbHZlVGltZW91dCA9IDMwXzAwMDsKCgovKioKICogQHRlbXBsYXRlIFQKICogQHR5cGVkZWYge3sgc3RhdHVzOiAnb2snLCB2YWx1ZTogVCB9IHwgeyBzdGF0dXM6ICd0aW1lb3V0JyB9fSBSZXF1ZXN0U3RvcmVSZXN1bHQKICovCgoKLyoqCiAqIEB0ZW1wbGF0ZSBUCiAqIEB0eXBlZGVmIHt7IHJlc29sdmU6ICh4OiBSZXF1ZXN0U3RvcmVSZXN1bHQ8VD4pID0+IHZvaWQsIHByb21pc2U6IFByb21pc2U8UmVxdWVzdFN0b3JlUmVzdWx0PFQ+PiB9fSBSZXF1ZXN0U3RvcmVFbnRyeQogKi8KCgovKioKICogQHRlbXBsYXRlIFQKICovCmNsYXNzIFJlcXVlc3RTdG9yZSB7Cgljb25zdHJ1Y3RvcigpIHsKCQkvKiogQHR5cGUge01hcDxudW1iZXIsIFJlcXVlc3RTdG9yZUVudHJ5PFQ+Pn0gKi8KCQl0aGlzLm1hcCA9IG5ldyBNYXAoKTsKCQkvKiogQHR5cGUge251bWJlcn0gKi8KCQl0aGlzLnJlcXVlc3RQb29sID0gMDsKCX0KCgkvKioKCSAqIEByZXR1cm5zIHt7IHJlcXVlc3RJZDogbnVtYmVyLCBwcm9taXNlOiBQcm9taXNlPFJlcXVlc3RTdG9yZVJlc3VsdDxUPj4gfX0KCSAqLwoJY3JlYXRlKCkgewoJCWNvbnN0IHJlcXVlc3RJZCA9ICsrdGhpcy5yZXF1ZXN0UG9vbDsKCgkJLyoqIEB0eXBlIHsoeDogUmVxdWVzdFN0b3JlUmVzdWx0PFQ+KSA9PiB2b2lkfSAqLwoJCWxldCByZXNvbHZlOwoJCWNvbnN0IHByb21pc2UgPSBuZXcgUHJvbWlzZShyID0+IHJlc29sdmUgPSByKTsKCgkJLyoqIEB0eXBlIHtSZXF1ZXN0U3RvcmVFbnRyeTxUPn0gKi8KCQljb25zdCBlbnRyeSA9IHsgcmVzb2x2ZSwgcHJvbWlzZSB9OwoJCXRoaXMubWFwLnNldChyZXF1ZXN0SWQsIGVudHJ5KTsKCgkJY29uc3QgZGlzcG9zZSA9ICgpID0+IHsKCQkJY2xlYXJUaW1lb3V0KHRpbWVvdXQpOwoJCQljb25zdCBleGlzdGluZ0VudHJ5ID0gdGhpcy5tYXAuZ2V0KHJlcXVlc3RJZCk7CgkJCWlmIChleGlzdGluZ0VudHJ5ID09PSBlbnRyeSkgewoJCQkJZXhpc3RpbmdFbnRyeS5yZXNvbHZlKHsgc3RhdHVzOiAndGltZW91dCcgfSk7CgkJCQl0aGlzLm1hcC5kZWxldGUocmVxdWVzdElkKTsKCQkJfQoJCX07CgkJY29uc3QgdGltZW91dCA9IHNldFRpbWVvdXQoZGlzcG9zZSwgcmVzb2x2ZVRpbWVvdXQpOwoJCXJldHVybiB7IHJlcXVlc3RJZCwgcHJvbWlzZSB9OwoJfQoKCS8qKgoJICogQHBhcmFtIHtudW1iZXJ9IHJlcXVlc3RJZAoJICogQHBhcmFtIHtUfSByZXN1bHQKCSAqIEByZXR1cm5zIHtib29sZWFufQoJICovCglyZXNvbHZlKHJlcXVlc3RJZCwgcmVzdWx0KSB7CgkJY29uc3QgZW50cnkgPSB0aGlzLm1hcC5nZXQocmVxdWVzdElkKTsKCQlpZiAoIWVudHJ5KSB7CgkJCXJldHVybiBmYWxzZTsKCQl9CgkJZW50cnkucmVzb2x2ZSh7IHN0YXR1czogJ29rJywgdmFsdWU6IHJlc3VsdCB9KTsKCQl0aGlzLm1hcC5kZWxldGUocmVxdWVzdElkKTsKCQlyZXR1cm4gdHJ1ZTsKCX0KfQoKLyoqCiAqIE1hcCBvZiByZXF1ZXN0ZWQgcGF0aHMgdG8gcmVzcG9uc2VzLgogKi8KLyoqIEB0eXBlIHtSZXF1ZXN0U3RvcmU8UmVzb3VyY2VSZXNwb25zZT59ICovCmNvbnN0IHJlc291cmNlUmVxdWVzdFN0b3JlID0gbmV3IFJlcXVlc3RTdG9yZSgpOwoKLyoqCiAqIE1hcCBvZiByZXF1ZXN0ZWQgbG9jYWxob3N0IG9yaWdpbnMgdG8gb3B0aW9uYWwgcmVkaXJlY3RzLgogKi8KLyoqIEB0eXBlIHtSZXF1ZXN0U3RvcmU8c3RyaW5nfHVuZGVmaW5lZD59ICovCmNvbnN0IGxvY2FsaG9zdFJlcXVlc3RTdG9yZSA9IG5ldyBSZXF1ZXN0U3RvcmUoKTsKCmNvbnN0IHVuYXV0aG9yaXplZCA9ICgpID0+CgluZXcgUmVzcG9uc2UoJ1VuYXV0aG9yaXplZCcsIHsgc3RhdHVzOiA0MDEsIH0pOwoKY29uc3Qgbm90Rm91bmQgPSAoKSA9PgoJbmV3IFJlc3BvbnNlKCdOb3QgRm91bmQnLCB7IHN0YXR1czogNDA0LCB9KTsKCmNvbnN0IG1ldGhvZE5vdEFsbG93ZWQgPSAoKSA9PgoJbmV3IFJlc3BvbnNlKCdNZXRob2QgTm90IEFsbG93ZWQnLCB7IHN0YXR1czogNDA1LCB9KTsKCmNvbnN0IHJlcXVlc3RUaW1lb3V0ID0gKCkgPT4KCW5ldyBSZXNwb25zZSgnUmVxdWVzdCBUaW1lb3V0JywgeyBzdGF0dXM6IDQwOCwgfSk7Cgpzdy5hZGRFdmVudExpc3RlbmVyKCdtZXNzYWdlJywgYXN5bmMgKGV2ZW50KSA9PiB7CglpZiAoIWV2ZW50LnNvdXJjZSkgewoJCXJldHVybjsKCX0KCgkvKiogQHR5cGUge0NsaWVudH0gKi8KCWNvbnN0IHNvdXJjZSA9IGV2ZW50LnNvdXJjZTsKCXN3aXRjaCAoZXZlbnQuZGF0YS5jaGFubmVsKSB7CgkJY2FzZSAndmVyc2lvbic6IHsKCQkJcGVyZk1hcmsoJ3ZlcnNpb24vcmVxdWVzdCcpOwoJCQlvdXRlcklmcmFtZU1lc3NhZ2VQb3J0ID0gZXZlbnQucG9ydHNbMF07CgkJCXN3LmNsaWVudHMuZ2V0KHNvdXJjZS5pZCkudGhlbihjbGllbnQgPT4gewoJCQkJcGVyZk1hcmsoJ3ZlcnNpb24vcmVwbHknKTsKCQkJCWlmIChjbGllbnQpIHsKCQkJCQljbGllbnQucG9zdE1lc3NhZ2UoewoJCQkJCQljaGFubmVsOiAndmVyc2lvbicsCgkJCQkJCXZlcnNpb246IFZFUlNJT04KCQkJCQl9KTsKCQkJCX0KCQkJfSk7CgkJCXJldHVybjsKCQl9CgkJY2FzZSAnZGlkLWxvYWQtcmVzb3VyY2UnOiB7CgkJCS8qKiBAdHlwZSB7UmVzb3VyY2VSZXNwb25zZX0gKi8KCQkJY29uc3QgcmVzcG9uc2UgPSBldmVudC5kYXRhLmRhdGE7CgkJCWlmICghcmVzb3VyY2VSZXF1ZXN0U3RvcmUucmVzb2x2ZShyZXNwb25zZS5pZCwgcmVzcG9uc2UpKSB7CgkJCQljb25zb2xlLmxvZygnQ291bGQgbm90IHJlc29sdmUgdW5rbm93biByZXNvdXJjZScsIHJlc3BvbnNlLnBhdGgpOwoJCQl9CgkJCXJldHVybjsKCQl9CgkJY2FzZSAnZGlkLWxvYWQtbG9jYWxob3N0JzogewoJCQljb25zdCBkYXRhID0gZXZlbnQuZGF0YS5kYXRhOwoJCQlpZiAoIWxvY2FsaG9zdFJlcXVlc3RTdG9yZS5yZXNvbHZlKGRhdGEuaWQsIGRhdGEubG9jYXRpb24pKSB7CgkJCQljb25zb2xlLmxvZygnQ291bGQgbm90IHJlc29sdmUgdW5rbm93biBsb2NhbGhvc3QnLCBkYXRhLm9yaWdpbik7CgkJCX0KCQkJcmV0dXJuOwoJCX0KCQlkZWZhdWx0OiB7CgkJCWNvbnNvbGUubG9nKCdVbmtub3duIG1lc3NhZ2UnKTsKCQkJcmV0dXJuOwoJCX0KCX0KfSk7Cgpzdy5hZGRFdmVudExpc3RlbmVyKCdmZXRjaCcsIChldmVudCkgPT4gewoJY29uc3QgcmVxdWVzdFVybCA9IG5ldyBVUkwoZXZlbnQucmVxdWVzdC51cmwpOwoJaWYgKHR5cGVvZiByZXNvdXJjZUJhc2VBdXRob3JpdHkgPT09ICdzdHJpbmcnICYmIHJlcXVlc3RVcmwucHJvdG9jb2wgPT09ICdodHRwczonICYmIHJlcXVlc3RVcmwuaG9zdG5hbWUuZW5kc1dpdGgoJy4nICsgcmVzb3VyY2VCYXNlQXV0aG9yaXR5KSkgewoJCXN3aXRjaCAoZXZlbnQucmVxdWVzdC5tZXRob2QpIHsKCQkJY2FzZSAnR0VUJzoKCQkJY2FzZSAnSEVBRCc6IHsKCQkJCWNvbnN0IGZpcnN0SG9zdFNlZ21lbnQgPSByZXF1ZXN0VXJsLmhvc3RuYW1lLnNsaWNlKDAsIHJlcXVlc3RVcmwuaG9zdG5hbWUubGVuZ3RoIC0gKHJlc291cmNlQmFzZUF1dGhvcml0eS5sZW5ndGggKyAxKSk7CgkJCQljb25zdCBzY2hlbWUgPSBmaXJzdEhvc3RTZWdtZW50LnNwbGl0KCcrJywgMSlbMF07CgkJCQljb25zdCBhdXRob3JpdHkgPSBmaXJzdEhvc3RTZWdtZW50LnNsaWNlKHNjaGVtZS5sZW5ndGggKyAxKTsgLy8gbWF5IGJlIGVtcHR5CgkJCQlyZXR1cm4gZXZlbnQucmVzcG9uZFdpdGgocHJvY2Vzc1Jlc291cmNlUmVxdWVzdChldmVudCwgewoJCQkJCXNjaGVtZSwKCQkJCQlhdXRob3JpdHksCgkJCQkJcGF0aDogcmVxdWVzdFVybC5wYXRobmFtZSwKCQkJCQlxdWVyeTogcmVxdWVzdFVybC5zZWFyY2gucmVwbGFjZSgvXlw/LywgJycpLAoJCQkJfSkpOwoJCQl9CgkJCWRlZmF1bHQ6IHsKCQkJCXJldHVybiBldmVudC5yZXNwb25kV2l0aChtZXRob2ROb3RBbGxvd2VkKCkpOwoJCQl9CgkJfQoJfQoKCS8vIElmIHdlJ3JlIG1ha2luZyBhIHJlcXVlc3QgYWdhaW5zdCB0aGUgcmVtb3RlIGF1dGhvcml0eSwgd2Ugd2FudCB0byBnbwoJLy8gdGhyb3VnaCBWUyBDb2RlIGl0c2VsZiBzbyB0aGF0IHdlIGFyZSBhdXRoZW50aWNhdGVkIHByb3Blcmx5LiAgSWYgdGhlCgkvLyBzZXJ2aWNlIHdvcmtlciBpcyBob3N0ZWQgb24gdGhlIHNhbWUgb3JpZ2luIHdlIHdpbGwgaGF2ZSBjb29raWVzIGFuZAoJLy8gYXV0aGVudGljYXRpb24gd2lsbCBub3QgYmUgYW4gaXNzdWUuCglpZiAocmVxdWVzdFVybC5vcmlnaW4gIT09IHN3Lm9yaWdpbiAmJiByZXF1ZXN0VXJsLmhvc3QgPT09IHJlbW90ZUF1dGhvcml0eSkgewoJCXN3aXRjaCAoZXZlbnQucmVxdWVzdC5tZXRob2QpIHsKCQkJY2FzZSAnR0VUJzoKCQkJY2FzZSAnSEVBRCc6IHsKCQkJCXJldHVybiBldmVudC5yZXNwb25kV2l0aChwcm9jZXNzUmVzb3VyY2VSZXF1ZXN0KGV2ZW50LCB7CgkJCQkJcGF0aDogcmVxdWVzdFVybC5wYXRobmFtZSwKCQkJCQlzY2hlbWU6IHJlcXVlc3RVcmwucHJvdG9jb2wuc2xpY2UoMCwgcmVxdWVzdFVybC5wcm90b2NvbC5sZW5ndGggLSAxKSwKCQkJCQlhdXRob3JpdHk6IHJlcXVlc3RVcmwuaG9zdCwKCQkJCQlxdWVyeTogcmVxdWVzdFVybC5zZWFyY2gucmVwbGFjZSgvXlw/LywgJycpLAoJCQkJfSkpOwoJCQl9CgkJCWRlZmF1bHQ6IHsKCQkJCXJldHVybiBldmVudC5yZXNwb25kV2l0aChtZXRob2ROb3RBbGxvd2VkKCkpOwoJCQl9CgkJfQoJfQoKCS8vIFNlZSBpZiBpdCdzIGEgbG9jYWxob3N0IHJlcXVlc3QKCWlmIChyZXF1ZXN0VXJsLm9yaWdpbiAhPT0gc3cub3JpZ2luICYmIHJlcXVlc3RVcmwuaG9zdC5tYXRjaCgvXihsb2NhbGhvc3R8MTI3LjAuMC4xfDAuMC4wLjApOihcZCspJC8pKSB7CgkJcmV0dXJuIGV2ZW50LnJlc3BvbmRXaXRoKHByb2Nlc3NMb2NhbGhvc3RSZXF1ZXN0KGV2ZW50LCByZXF1ZXN0VXJsKSk7Cgl9Cn0pOwoKc3cuYWRkRXZlbnRMaXN0ZW5lcignaW5zdGFsbCcsIChldmVudCkgPT4gewoJZXZlbnQud2FpdFVudGlsKHN3LnNraXBXYWl0aW5nKCkpOyAvLyBBY3RpdmF0ZSB3b3JrZXIgaW1tZWRpYXRlbHkKfSk7Cgpzdy5hZGRFdmVudExpc3RlbmVyKCdhY3RpdmF0ZScsIChldmVudCkgPT4gewoJZXZlbnQud2FpdFVudGlsKHN3LmNsaWVudHMuY2xhaW0oKSk7IC8vIEJlY29tZSBhdmFpbGFibGUgdG8gYWxsIHBhZ2VzCn0pOwoKCi8qKgogKiBAdHlwZWRlZiB7T2JqZWN0fSBSZXNvdXJjZVJlcXVlc3RVcmxDb21wb25lbnRzCiAqIEBwcm9wZXJ0eSB7c3RyaW5nfSBzY2hlbWUKICogQHByb3BlcnR5IHtzdHJpbmd9IGF1dGhvcml0eQogKiBAcHJvcGVydHkge3N0cmluZ30gcGF0aAogKiBAcHJvcGVydHkge3N0cmluZ30gcXVlcnkKICovCgovKioKICogQHBhcmFtIHtGZXRjaEV2ZW50fSBldmVudAogKiBAcGFyYW0ge1Jlc291cmNlUmVxdWVzdFVybENvbXBvbmVudHN9IHJlcXVlc3RVcmxDb21wb25lbnRzCiAqIEByZXR1cm5zIHtQcm9taXNlPFJlc3BvbnNlPn0KICovCmFzeW5jIGZ1bmN0aW9uIHByb2Nlc3NSZXNvdXJjZVJlcXVlc3QoCglldmVudCwKCXJlcXVlc3RVcmxDb21wb25lbnRzCikgewoJbGV0IGNsaWVudCA9IGF3YWl0IHN3LmNsaWVudHMuZ2V0KGV2ZW50LmNsaWVudElkKTsKCWlmICghY2xpZW50KSB7CgkJY2xpZW50ID0gYXdhaXQgZ2V0V29ya2VyQ2xpZW50Rm9ySWQoZXZlbnQuY2xpZW50SWQpOwoJCWlmICghY2xpZW50KSB7CgkJCWNvbnNvbGUuZXJyb3IoJ0NvdWxkIG5vdCBmaW5kIGlubmVyIGNsaWVudCBmb3IgcmVxdWVzdCcpOwoJCQlyZXR1cm4gbm90Rm91bmQoKTsKCQl9Cgl9CgoJY29uc3Qgd2Vidmlld0lkID0gZ2V0V2Vidmlld0lkRm9yQ2xpZW50KGNsaWVudCk7CgoJLy8gUmVmcyBodHRwczovL2dpdGh1Yi5jb20vbWljcm9zb2Z0L3ZzY29kZS9pc3N1ZXMvMjQ0MTQzCgkvLyBXaXRoIFBsekRlZGljYXRlZFdvcmtlciwgd29ya2VyIHN1YnJlc291cmNlcyBhbmQgYmxvYiB3b2tlcnMKCS8vIHdpbGwgdXNlIGNsaWVudHMgZGlmZmVyZW50IGZyb20gdGhlIHdpbmRvdyBjbGllbnQuCgkvLyBTaW5jZSB3ZSBjYW5ub3QgZGlmZmVyZW50IGEgd29ya2VyIG1haW4gcmVzb3VyY2UgZnJvbSBhIHdvcmtlciBzdWJyZXNvdXJjZQoJLy8gd2Ugd2lsbCB1c2UgbWVzc2FnZSBjaGFubmVsIHRvIHRoZSBvdXRlciBpZnJhbWUgcHJvdmlkZWQgYXQgdGhlIHRpbWUKCS8vIG9mIHNlcnZpY2Ugd29ya2VyIGNvbnRyb2xsZXIgdmVyc2lvbiBpbml0aWFsaXphdGlvbi4KCWlmICghd2Vidmlld0lkICYmIGNsaWVudC50eXBlICE9PSAnd29ya2VyJyAmJiBjbGllbnQudHlwZSAhPT0gJ3NoYXJlZHdvcmtlcicpIHsKCQljb25zb2xlLmVycm9yKCdDb3VsZCBub3QgcmVzb2x2ZSB3ZWJ2aWV3IGlkJyk7CgkJcmV0dXJuIG5vdEZvdW5kKCk7Cgl9CgoJY29uc3Qgc2hvdWxkVHJ5Q2FjaGluZyA9IChldmVudC5yZXF1ZXN0Lm1ldGhvZCA9PT0gJ0dFVCcpOwoKCS8qKgoJICogQHBhcmFtIHtSZXF1ZXN0U3RvcmVSZXN1bHQ8UmVzb3VyY2VSZXNwb25zZT59IHJlc3VsdAoJICogQHBhcmFtIHtSZXNwb25zZXx1bmRlZmluZWR9IGNhY2hlZFJlc3BvbnNlCgkgKiBAcmV0dXJucyB7UmVzcG9uc2V9CgkgKi8KCWNvbnN0IHJlc29sdmVSZXNvdXJjZUVudHJ5ID0gKHJlc3VsdCwgY2FjaGVkUmVzcG9uc2UpID0+IHsKCQlpZiAocmVzdWx0LnN0YXR1cyA9PT0gJ3RpbWVvdXQnKSB7CgkJCXJldHVybiByZXF1ZXN0VGltZW91dCgpOwoJCX0KCgkJLyoqIEB0eXBlIHtSZWNvcmQ8c3RyaW5nLCBzdHJpbmc+fSAqLwoJCWNvbnN0IGFjY2Vzc0NvbnRyb2xIZWFkZXJzID0gewoJCQknQWNjZXNzLUNvbnRyb2wtQWxsb3ctT3JpZ2luJzogJyonLAoJCQknQ3Jvc3MtT3JpZ2luLVJlc291cmNlLVBvbGljeSc6ICdjcm9zcy1vcmlnaW4nLAoJCX07CgoJCWNvbnN0IGVudHJ5ID0gcmVzdWx0LnZhbHVlOwoJCWlmIChlbnRyeS5zdGF0dXMgPT09IDMwNCkgeyAvLyBOb3QgbW9kaWZpZWQKCQkJaWYgKGNhY2hlZFJlc3BvbnNlKSB7CgkJCQljb25zdCByID0gY2FjaGVkUmVzcG9uc2UuY2xvbmUoKTsKCQkJCWZvciAoY29uc3QgW2tleSwgdmFsdWVdIG9mIE9iamVjdC5lbnRyaWVzKGFjY2Vzc0NvbnRyb2xIZWFkZXJzKSkgewoJCQkJCXIuaGVhZGVycy5zZXQoa2V5LCB2YWx1ZSk7CgkJCQl9CgkJCQlyZXR1cm4gcjsKCQkJfSBlbHNlIHsKCQkJCXRocm93IG5ldyBFcnJvcignTm8gY2FjaGUgZm91bmQnKTsKCQkJfQoJCX0KCgkJaWYgKGVudHJ5LnN0YXR1cyA9PT0gNDAxKSB7CgkJCXJldHVybiB1bmF1dGhvcml6ZWQoKTsKCQl9CgoJCWlmIChlbnRyeS5zdGF0dXMgIT09IDIwMCkgewoJCQlyZXR1cm4gbm90Rm91bmQoKTsKCQl9CgoJCWNvbnN0IGJ5dGVMZW5ndGggPSBlbnRyeS5kYXRhLmJ5dGVMZW5ndGg7CgoJCWNvbnN0IHJhbmdlID0gZXZlbnQucmVxdWVzdC5oZWFkZXJzLmdldCgncmFuZ2UnKTsKCQlpZiAocmFuZ2UpIHsKCQkJLy8gVG8gc3VwcG9ydCBzZWVraW5nIGZvciB2aWRlb3MsIHdlIG5lZWQgdG8gaGFuZGxlIHJhbmdlIHJlcXVlc3RzCgkJCWNvbnN0IGJ5dGVzID0gcmFuZ2UubWF0Y2goL15ieXRlc1w9KFxkKylcLShcZCspPyQvZyk7CgkJCWlmIChieXRlcykgewoJCQkJLy8gVE9ETzogUmlnaHQgbm93IHdlIGFyZSBhbHdheXMgcmVhZGluZyB0aGUgZnVsbCBmaWxlIGNvbnRlbnQuIFRoaXMgaXMgYSBiYWQgaWRlYQoJCQkJLy8gZm9yIGxhcmdlIHZpZGVvIGZpbGVzIDopCgoJCQkJY29uc3Qgc3RhcnQgPSBOdW1iZXIoYnl0ZXNbMV0pOwoJCQkJY29uc3QgZW5kID0gTnVtYmVyKGJ5dGVzWzJdKSB8fCBieXRlTGVuZ3RoIC0gMTsKCQkJCXJldHVybiBuZXcgUmVzcG9uc2UoZW50cnkuZGF0YS5zbGljZShzdGFydCwgZW5kICsgMSksIHsKCQkJCQlzdGF0dXM6IDIwNiwKCQkJCQloZWFkZXJzOiB7CgkJCQkJCS4uLmFjY2Vzc0NvbnRyb2xIZWFkZXJzLAoJCQkJCQknQ29udGVudC1yYW5nZSc6IGBieXRlcyAwLSR7ZW5kfS8ke2J5dGVMZW5ndGh9YCwKCQkJCQl9CgkJCQl9KTsKCQkJfSBlbHNlIHsKCQkJCS8vIFdlIGRvbid0IHVuZGVyc3RhbmQgdGhlIHJlcXVlc3RlZCBieXRlcwoJCQkJcmV0dXJuIG5ldyBSZXNwb25zZShudWxsLCB7CgkJCQkJc3RhdHVzOiA0MTYsCgkJCQkJaGVhZGVyczogewoJCQkJCQkuLi5hY2Nlc3NDb250cm9sSGVhZGVycywKCQkJCQkJJ0NvbnRlbnQtcmFuZ2UnOiBgKi8ke2J5dGVMZW5ndGh9YAoJCQkJCX0KCQkJCX0pOwoJCQl9CgkJfQoKCQkvKiogQHR5cGUge1JlY29yZDxzdHJpbmcsIHN0cmluZz59ICovCgkJY29uc3QgaGVhZGVycyA9IHsKCQkJLi4uYWNjZXNzQ29udHJvbEhlYWRlcnMsCgkJCSdDb250ZW50LVR5cGUnOiBlbnRyeS5taW1lLAoJCQknQ29udGVudC1MZW5ndGgnOiBieXRlTGVuZ3RoLnRvU3RyaW5nKCksCgkJfTsKCgkJaWYgKGVudHJ5LmV0YWcpIHsKCQkJaGVhZGVyc1snRVRhZyddID0gZW50cnkuZXRhZzsKCQkJaGVhZGVyc1snQ2FjaGUtQ29udHJvbCddID0gJ25vLWNhY2hlJzsKCQl9CgkJaWYgKGVudHJ5Lm10aW1lKSB7CgkJCWhlYWRlcnNbJ0xhc3QtTW9kaWZpZWQnXSA9IG5ldyBEYXRlKGVudHJ5Lm10aW1lKS50b1VUQ1N0cmluZygpOwoJCX0KCgkJLy8gc3VwcG9ydCBDT0kgcmVxdWVzdHMsIHNlZSBuZXR3b3JrLnRzI0NPSS5nZXRIZWFkZXJzRnJvbVF1ZXJ5KC4uLikKCQljb25zdCBjb2lSZXF1ZXN0ID0gbmV3IFVSTChldmVudC5yZXF1ZXN0LnVybCkuc2VhcmNoUGFyYW1zLmdldCgndnNjb2RlLWNvaScpOwoJCWlmIChjb2lSZXF1ZXN0ID09PSAnMycpIHsKCQkJaGVhZGVyc1snQ3Jvc3MtT3JpZ2luLU9wZW5lci1Qb2xpY3knXSA9ICdzYW1lLW9yaWdpbic7CgkJCWhlYWRlcnNbJ0Nyb3NzLU9yaWdpbi1FbWJlZGRlci1Qb2xpY3knXSA9ICdyZXF1aXJlLWNvcnAnOwoJCX0gZWxzZSBpZiAoY29pUmVxdWVzdCA9PT0gJzInKSB7CgkJCWhlYWRlcnNbJ0Nyb3NzLU9yaWdpbi1FbWJlZGRlci1Qb2xpY3knXSA9ICdyZXF1aXJlLWNvcnAnOwoJCX0gZWxzZSBpZiAoY29pUmVxdWVzdCA9PT0gJzEnKSB7CgkJCWhlYWRlcnNbJ0Nyb3NzLU9yaWdpbi1PcGVuZXItUG9saWN5J10gPSAnc2FtZS1vcmlnaW4nOwoJCX0KCgkJY29uc3QgcmVzcG9uc2UgPSBuZXcgUmVzcG9uc2UoZW50cnkuZGF0YSwgewoJCQlzdGF0dXM6IDIwMCwKCQkJaGVhZGVycwoJCX0pOwoKCQlpZiAoc2hvdWxkVHJ5Q2FjaGluZyAmJiBlbnRyeS5ldGFnKSB7CgkJCWNhY2hlcy5vcGVuKHJlc291cmNlQ2FjaGVOYW1lKS50aGVuKGNhY2hlID0+IHsKCQkJCXJldHVybiBjYWNoZS5wdXQoZXZlbnQucmVxdWVzdCwgcmVzcG9uc2UpOwoJCQl9KTsKCQl9CgkJcmV0dXJuIHJlc3BvbnNlLmNsb25lKCk7Cgl9OwoKCS8qKiBAdHlwZSB7UmVzcG9uc2V8dW5kZWZpbmVkfSAqLwoJbGV0IGNhY2hlZDsKCWlmIChzaG91bGRUcnlDYWNoaW5nKSB7CgkJY29uc3QgY2FjaGUgPSBhd2FpdCBjYWNoZXMub3BlbihyZXNvdXJjZUNhY2hlTmFtZSk7CgkJY2FjaGVkID0gYXdhaXQgY2FjaGUubWF0Y2goZXZlbnQucmVxdWVzdCk7Cgl9CgoJY29uc3QgeyByZXF1ZXN0SWQsIHByb21pc2UgfSA9IHJlc291cmNlUmVxdWVzdFN0b3JlLmNyZWF0ZSgpOwoKCWlmICh3ZWJ2aWV3SWQpIHsKCQljb25zdCBwYXJlbnRDbGllbnRzID0gYXdhaXQgZ2V0T3V0ZXJJZnJhbWVDbGllbnQod2Vidmlld0lkKTsKCQlpZiAoIXBhcmVudENsaWVudHMubGVuZ3RoKSB7CgkJCWNvbnNvbGUubG9nKCdDb3VsZCBub3QgZmluZCBwYXJlbnQgY2xpZW50IGZvciByZXF1ZXN0Jyk7CgkJCXJldHVybiBub3RGb3VuZCgpOwoJCX0KCgkJZm9yIChjb25zdCBwYXJlbnRDbGllbnQgb2YgcGFyZW50Q2xpZW50cykgewoJCQlwYXJlbnRDbGllbnQucG9zdE1lc3NhZ2UoewoJCQkJY2hhbm5lbDogJ2xvYWQtcmVzb3VyY2UnLAoJCQkJaWQ6IHJlcXVlc3RJZCwKCQkJCXNjaGVtZTogcmVxdWVzdFVybENvbXBvbmVudHMuc2NoZW1lLAoJCQkJYXV0aG9yaXR5OiByZXF1ZXN0VXJsQ29tcG9uZW50cy5hdXRob3JpdHksCgkJCQlwYXRoOiByZXF1ZXN0VXJsQ29tcG9uZW50cy5wYXRoLAoJCQkJcXVlcnk6IHJlcXVlc3RVcmxDb21wb25lbnRzLnF1ZXJ5LAoJCQkJaWZOb25lTWF0Y2g6IGNhY2hlZD8uaGVhZGVycy5nZXQoJ0VUYWcnKSwKCQkJfSk7CgkJfQoJfSBlbHNlIGlmIChjbGllbnQudHlwZSA9PT0gJ3dvcmtlcicgfHwgY2xpZW50LnR5cGUgPT09ICdzaGFyZWR3b3JrZXInKSB7CgkJb3V0ZXJJZnJhbWVNZXNzYWdlUG9ydD8ucG9zdE1lc3NhZ2UoewoJCQljaGFubmVsOiAnbG9hZC1yZXNvdXJjZScsCgkJCWlkOiByZXF1ZXN0SWQsCgkJCXNjaGVtZTogcmVxdWVzdFVybENvbXBvbmVudHMuc2NoZW1lLAoJCQlhdXRob3JpdHk6IHJlcXVlc3RVcmxDb21wb25lbnRzLmF1dGhvcml0eSwKCQkJcGF0aDogcmVxdWVzdFVybENvbXBvbmVudHMucGF0aCwKCQkJcXVlcnk6IHJlcXVlc3RVcmxDb21wb25lbnRzLnF1ZXJ5LAoJCQlpZk5vbmVNYXRjaDogY2FjaGVkPy5oZWFkZXJzLmdldCgnRVRhZycpLAoJCX0pOwoJfQoKCXJldHVybiBwcm9taXNlLnRoZW4oZW50cnkgPT4gcmVzb2x2ZVJlc291cmNlRW50cnkoZW50cnksIGNhY2hlZCkpOwp9CgovKioKICogQHBhcmFtIHtGZXRjaEV2ZW50fSBldmVudAogKiBAcGFyYW0ge1VSTH0gcmVxdWVzdFVybAogKiBAcmV0dXJucyB7UHJvbWlzZTxSZXNwb25zZT59CiAqLwphc3luYyBmdW5jdGlvbiBwcm9jZXNzTG9jYWxob3N0UmVxdWVzdCgKCWV2ZW50LAoJcmVxdWVzdFVybAopIHsKCWNvbnN0IGNsaWVudCA9IGF3YWl0IHN3LmNsaWVudHMuZ2V0KGV2ZW50LmNsaWVudElkKTsKCWlmICghY2xpZW50KSB7CgkJLy8gVGhpcyBpcyBleHBlY3RlZCB3aGVuIHJlcXVlc3RpbmcgcmVzb3VyY2VzIG9uIG90aGVyIGxvY2FsaG9zdCBwb3J0cwoJCS8vIHRoYXQgYXJlIG5vdCBzcGF3bmVkIGJ5IHZzIGNvZGUKCQlyZXR1cm4gZmV0Y2goZXZlbnQucmVxdWVzdCk7Cgl9Cgljb25zdCB3ZWJ2aWV3SWQgPSBnZXRXZWJ2aWV3SWRGb3JDbGllbnQoY2xpZW50KTsKCS8vIFJlZnMgaHR0cHM6Ly9naXRodWIuY29tL21pY3Jvc29mdC92c2NvZGUvaXNzdWVzLzI0NDE0MwoJLy8gV2l0aCBQbHpEZWRpY2F0ZWRXb3JrZXIsIHdvcmtlciBzdWJyZXNvdXJjZXMgYW5kIGJsb2Igd29rZXJzCgkvLyB3aWxsIHVzZSBjbGllbnRzIGRpZmZlcmVudCBmcm9tIHRoZSB3aW5kb3cgY2xpZW50LgoJLy8gU2luY2Ugd2UgY2Fubm90IGRpZmZlcmVudCBhIHdvcmtlciBtYWluIHJlc291cmNlIGZyb20gYSB3b3JrZXIgc3VicmVzb3VyY2UKCS8vIHdlIHdpbGwgdXNlIG1lc3NhZ2UgY2hhbm5lbCB0byB0aGUgb3V0ZXIgaWZyYW1lIHByb3ZpZGVkIGF0IHRoZSB0aW1lCgkvLyBvZiBzZXJ2aWNlIHdvcmtlciBjb250cm9sbGVyIHZlcnNpb24gaW5pdGlhbGl6YXRpb24uCglpZiAoIXdlYnZpZXdJZCAmJiBjbGllbnQudHlwZSAhPT0gJ3dvcmtlcicgJiYgY2xpZW50LnR5cGUgIT09ICdzaGFyZWR3b3JrZXInKSB7CgkJY29uc29sZS5lcnJvcignQ291bGQgbm90IHJlc29sdmUgd2VidmlldyBpZCcpOwoJCXJldHVybiBmZXRjaChldmVudC5yZXF1ZXN0KTsKCX0KCgljb25zdCBvcmlnaW4gPSByZXF1ZXN0VXJsLm9yaWdpbjsKCgkvKioKCSAqIEBwYXJhbSB7UmVxdWVzdFN0b3JlUmVzdWx0PHN0cmluZ3x1bmRlZmluZWQ+fSByZXN1bHQKCSAqIEByZXR1cm5zIHtQcm9taXNlPFJlc3BvbnNlPn0KCSAqLwoJY29uc3QgcmVzb2x2ZVJlZGlyZWN0ID0gYXN5bmMgZnVuY3Rpb24gKHJlc3VsdCkgewoJCWlmIChyZXN1bHQuc3RhdHVzICE9PSAnb2snIHx8ICFyZXN1bHQudmFsdWUpIHsKCQkJcmV0dXJuIGZldGNoKGV2ZW50LnJlcXVlc3QpOwoJCX0KCgkJY29uc3QgcmVkaXJlY3RPcmlnaW4gPSByZXN1bHQudmFsdWU7CgkJY29uc3QgbG9jYXRpb24gPSBldmVudC5yZXF1ZXN0LnVybC5yZXBsYWNlKG5ldyBSZWdFeHAoYF4ke3JlcXVlc3RVcmwub3JpZ2lufSgvfCQpYCksIGAke3JlZGlyZWN0T3JpZ2lufSQxYCk7CgkJcmV0dXJuIG5ldyBSZXNwb25zZShudWxsLCB7CgkJCXN0YXR1czogMzAyLAoJCQloZWFkZXJzOiB7CgkJCQlMb2NhdGlvbjogbG9jYXRpb24KCQkJfQoJCX0pOwoJfTsKCgljb25zdCB7IHJlcXVlc3RJZCwgcHJvbWlzZSB9ID0gbG9jYWxob3N0UmVxdWVzdFN0b3JlLmNyZWF0ZSgpOwoJaWYgKHdlYnZpZXdJZCkgewoJCWNvbnN0IHBhcmVudENsaWVudHMgPSBhd2FpdCBnZXRPdXRlcklmcmFtZUNsaWVudCh3ZWJ2aWV3SWQpOwoJCWlmICghcGFyZW50Q2xpZW50cy5sZW5ndGgpIHsKCQkJY29uc29sZS5sb2coJ0NvdWxkIG5vdCBmaW5kIHBhcmVudCBjbGllbnQgZm9yIHJlcXVlc3QnKTsKCQkJcmV0dXJuIG5vdEZvdW5kKCk7CgkJfQoJCWZvciAoY29uc3QgcGFyZW50Q2xpZW50IG9mIHBhcmVudENsaWVudHMpIHsKCQkJcGFyZW50Q2xpZW50LnBvc3RNZXNzYWdlKHsKCQkJCWNoYW5uZWw6ICdsb2FkLWxvY2FsaG9zdCcsCgkJCQlvcmlnaW46IG9yaWdpbiwKCQkJCWlkOiByZXF1ZXN0SWQsCgkJCX0pOwoJCX0KCX0gZWxzZSBpZiAoY2xpZW50LnR5cGUgPT09ICd3b3JrZXInIHx8IGNsaWVudC50eXBlID09PSAnc2hhcmVkd29ya2VyJykgewoJCW91dGVySWZyYW1lTWVzc2FnZVBvcnQ/LnBvc3RNZXNzYWdlKHsKCQkJY2hhbm5lbDogJ2xvYWQtbG9jYWxob3N0JywKCQkJb3JpZ2luOiBvcmlnaW4sCgkJCWlkOiByZXF1ZXN0SWQsCgkJfSk7Cgl9CgoJcmV0dXJuIHByb21pc2UudGhlbihyZXNvbHZlUmVkaXJlY3QpOwp9CgovKioKICogQHBhcmFtIHtDbGllbnR9IGNsaWVudAogKiBAcmV0dXJucyB7c3RyaW5nfG51bGx9CiAqLwpmdW5jdGlvbiBnZXRXZWJ2aWV3SWRGb3JDbGllbnQoY2xpZW50KSB7Cgljb25zdCByZXF1ZXN0ZXJDbGllbnRVcmwgPSBuZXcgVVJMKGNsaWVudC51cmwpOwoJcmV0dXJuIHJlcXVlc3RlckNsaWVudFVybC5zZWFyY2hQYXJhbXMuZ2V0KCdpZCcpOwp9CgovKioKICogQHBhcmFtIHtzdHJpbmd9IHdlYnZpZXdJZAogKiBAcmV0dXJucyB7UHJvbWlzZTxDbGllbnRbXT59CiAqLwphc3luYyBmdW5jdGlvbiBnZXRPdXRlcklmcmFtZUNsaWVudCh3ZWJ2aWV3SWQpIHsKCWNvbnN0IGFsbENsaWVudHMgPSBhd2FpdCBzdy5jbGllbnRzLm1hdGNoQWxsKHsgaW5jbHVkZVVuY29udHJvbGxlZDogdHJ1ZSB9KTsKCXJldHVybiBhbGxDbGllbnRzLmZpbHRlcihjbGllbnQgPT4gewoJCWNvbnN0IGNsaWVudFVybCA9IG5ldyBVUkwoY2xpZW50LnVybCk7CgkJcmV0dXJuIGNsaWVudFVybC5zZWFyY2hQYXJhbXMuZ2V0KCdpZCcpID09PSB3ZWJ2aWV3SWQ7Cgl9KTsKfQoKLyoqCiAqIEBwYXJhbSB7c3RyaW5nfSBjbGllbnRJZAogKiBAcmV0dXJucyB7UHJvbWlzZTxDbGllbnR8dW5kZWZpbmVkPn0KICovCmFzeW5jIGZ1bmN0aW9uIGdldFdvcmtlckNsaWVudEZvcklkKGNsaWVudElkKSB7Cgljb25zdCBhbGxEZWRpY2F0ZWRXb3JrZXJDbGllbnRzID0gYXdhaXQgc3cuY2xpZW50cy5tYXRjaEFsbCh7IHR5cGU6ICd3b3JrZXInIH0pOwoJY29uc3QgYWxsU2hhcmVkV29ya2VyQ2xpZW50cyA9IGF3YWl0IHN3LmNsaWVudHMubWF0Y2hBbGwoeyB0eXBlOiAnc2hhcmVkd29ya2VyJyB9KTsKCWNvbnN0IGFsbFdvcmtlckNsaWVudHMgPSBbLi4uYWxsRGVkaWNhdGVkV29ya2VyQ2xpZW50cywgLi4uYWxsU2hhcmVkV29ya2VyQ2xpZW50c107CglyZXR1cm4gYWxsV29ya2VyQ2xpZW50cy5maW5kKGNsaWVudCA9PiB7CgkJcmV0dXJuIGNsaWVudC5pZCA9PT0gY2xpZW50SWQ7Cgl9KTsKfQoKCi8qKgogKiBAdHlwZWRlZiB7KAogKiAgIHwgeyByZWFkb25seSBzdGF0dXM6IDIwMCwgaWQ6IG51bWJlciwgcGF0aDogc3RyaW5nLCBtaW1lOiBzdHJpbmcsIGRhdGE6IFVpbnQ4QXJyYXksIGV0YWc6IHN0cmluZ3x1bmRlZmluZWQsIG10aW1lOiBudW1iZXJ8dW5kZWZpbmVkIH0KICogICB8IHsgcmVhZG9ubHkgc3RhdHVzOiAzMDQsIGlkOiBudW1iZXIsIHBhdGg6IHN0cmluZywgbWltZTogc3RyaW5nLCBtdGltZTogbnVtYmVyfHVuZGVmaW5lZCB9CiAqICAgfCB7IHJlYWRvbmx5IHN0YXR1czogNDAxLCBpZDogbnVtYmVyLCBwYXRoOiBzdHJpbmcgfQogKiAgIHwgeyByZWFkb25seSBzdGF0dXM6IDQwNCwgaWQ6IG51bWJlciwgcGF0aDogc3RyaW5nIH0KICogKX0gUmVzb3VyY2VSZXNwb25zZQogKi8K", "" + import.meta.url).href, jU),
 	"vs/workbench/contrib/webview/browser/pre/index.html": () => Ty(new URL("data:text/html;base64,PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIiBzdHlsZT0id2lkdGg6IDEwMCU7IGhlaWdodDogMTAwJTsiPgoKPGhlYWQ+Cgk8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CgoJPG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1TZWN1cml0eS1Qb2xpY3kiCgkJY29udGVudD0iZGVmYXVsdC1zcmMgJ25vbmUnOyBzY3JpcHQtc3JjICdzaGEyNTYtNGlYbkh4M3B1WThFTzBkanI1eVhrbXpTaG9naURvVHpyalVlSmpUWkJtVT0nICdzZWxmJzsgZnJhbWUtc3JjICdzZWxmJzsgc3R5bGUtc3JjICd1bnNhZmUtaW5saW5lJzsiPgoKCTwhLS0gRGlzYWJsZSBwaW5jaCB6b29taW5nIC0tPgoJPG1ldGEgbmFtZT0idmlld3BvcnQiCgkJY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCwgbWF4aW11bS1zY2FsZT0xLjAsIG1pbmltdW0tc2NhbGU9MS4wLCB1c2VyLXNjYWxhYmxlPW5vIj4KPC9oZWFkPgoKPGJvZHkgc3R5bGU9Im1hcmdpbjogMDsgb3ZlcmZsb3c6IGhpZGRlbjsgd2lkdGg6IDEwMCU7IGhlaWdodDogMTAwJTsgb3ZlcnNjcm9sbC1iZWhhdmlvci14OiBub25lOyIgcm9sZT0iZG9jdW1lbnQiPgoJPHNjcmlwdCBhc3luYyB0eXBlPSJtb2R1bGUiPgoJCS8vIEB0cy1jaGVjawoJCS8vLyA8cmVmZXJlbmNlIGxpYj0iZG9tIiAvPgoKCQljb25zdCBpc1NhZmFyaSA9ICgKCQkJbmF2aWdhdG9yLnZlbmRvciAmJiBuYXZpZ2F0b3IudmVuZG9yLmluZGV4T2YoJ0FwcGxlJykgPiAtMSAmJgoJCQluYXZpZ2F0b3IudXNlckFnZW50ICYmCgkJCW5hdmlnYXRvci51c2VyQWdlbnQuaW5kZXhPZignQ3JpT1MnKSA9PT0gLTEgJiYKCQkJbmF2aWdhdG9yLnVzZXJBZ2VudC5pbmRleE9mKCdGeGlPUycpID09PSAtMQoJCSk7CgoJCWNvbnN0IGlzRmlyZWZveCA9ICgKCQkJbmF2aWdhdG9yLnVzZXJBZ2VudCAmJgoJCQluYXZpZ2F0b3IudXNlckFnZW50LmluZGV4T2YoJ0ZpcmVmb3gnKSA+PSAwCgkJKTsKCgkJY29uc3Qgc2VhcmNoUGFyYW1zID0gbmV3IFVSTChsb2NhdGlvbi50b1N0cmluZygpKS5zZWFyY2hQYXJhbXM7CgkJY29uc3QgSUQgPSBzZWFyY2hQYXJhbXMuZ2V0KCdpZCcpOwoJCWNvbnN0IHdlYnZpZXdPcmlnaW4gPSBzZWFyY2hQYXJhbXMuZ2V0KCdvcmlnaW4nKTsKCQljb25zdCBvbkVsZWN0cm9uID0gc2VhcmNoUGFyYW1zLmdldCgncGxhdGZvcm0nKSA9PT0gJ2VsZWN0cm9uJzsKCQljb25zdCBkaXNhYmxlU2VydmljZVdvcmtlciA9IHNlYXJjaFBhcmFtcy5oYXMoJ2Rpc2FibGVTZXJ2aWNlV29ya2VyJyk7CgkJY29uc3QgZXhwZWN0ZWRXb3JrZXJWZXJzaW9uID0gcGFyc2VJbnQoc2VhcmNoUGFyYW1zLmdldCgnc3dWZXJzaW9uJykpOwoJCWNvbnN0IHNlcnZpY2VXb3JrZXJVcmkgPSBzZWFyY2hQYXJhbXMuZ2V0KCdzZXJ2aWNlV29ya2VyVXJpJyk7CgkJY29uc3QgZmFrZUh0bWxVcmkgPSBzZWFyY2hQYXJhbXMuZ2V0KCdmYWtlSHRtbFVyaScpOwoKCQkvKioKCQkgKiBAcGFyYW0ge3N0cmluZ30gbmFtZQoJCSAqIEBwYXJhbSB7UmVjb3JkPHN0cmluZywgc3RyaW5nPn0gW29wdGlvbnNdCgkJICovCgkJY29uc3QgcGVyZk1hcmsgPSAobmFtZSwgb3B0aW9ucyA9IHt9KSA9PiB7CgkJCXBlcmZvcm1hbmNlLm1hcmsoYHdlYnZpZXcvaW5kZXguaHRtbC8ke25hbWV9YCwgewoJCQkJZGV0YWlsOiB7CgkJCQkJaWQ6IElELAoJCQkJCS4uLm9wdGlvbnMKCQkJCX0KCQkJfSk7CgkJfQoKCQlwZXJmTWFyaygnc2NyaXB0U3RhcnQnKTsKCgkJLyoqIEB0eXBlIHtNZXNzYWdlQ2hhbm5lbCB8IHVuZGVmaW5lZH0gKi8KCQlsZXQgb3V0ZXJJZnJhbWVNZXNzYWdlQ2hhbm5lbDsKCgkJLyoqCgkJICogVXNlIHBvbGxpbmcgdG8gdHJhY2sgZm9jdXMgb2YgbWFpbiB3ZWJ2aWV3IGFuZCBpZnJhbWVzIHdpdGhpbiB0aGUgd2VidmlldwoJCSAqCgkJICogQHBhcmFtIHtPYmplY3R9IGhhbmRsZXJzCgkJICogQHBhcmFtIHsoKSA9PiB2b2lkfSBoYW5kbGVycy5vbkZvY3VzCgkJICogQHBhcmFtIHsoKSA9PiB2b2lkfSBoYW5kbGVycy5vbkJsdXIKCQkgKi8KCQljb25zdCB0cmFja0ZvY3VzID0gKHsgb25Gb2N1cywgb25CbHVyIH0pID0+IHsKCQkJY29uc3QgaW50ZXJ2YWwgPSAyNTA7CgkJCWxldCBpc0ZvY3VzZWQgPSBkb2N1bWVudC5oYXNGb2N1cygpOwoJCQlzZXRJbnRlcnZhbCgoKSA9PiB7CgkJCQljb25zdCB0YXJnZXQgPSBnZXRBY3RpdmVGcmFtZSgpOwoJCQkJY29uc3QgaXNDdXJyZW50bHlGb2N1c2VkID0gZG9jdW1lbnQuaGFzRm9jdXMoKSB8fCAhISh0YXJnZXQgJiYgdGFyZ2V0LmNvbnRlbnREb2N1bWVudCAmJiB0YXJnZXQuY29udGVudERvY3VtZW50LmJvZHkuY2xhc3NMaXN0LmNvbnRhaW5zKCd2c2NvZGUtY29udGV4dC1tZW51LXZpc2libGUnKSk7CgkJCQlpZiAoaXNDdXJyZW50bHlGb2N1c2VkID09PSBpc0ZvY3VzZWQpIHsKCQkJCQlyZXR1cm47CgkJCQl9CgkJCQlpc0ZvY3VzZWQgPSBpc0N1cnJlbnRseUZvY3VzZWQ7CgkJCQlpZiAoaXNDdXJyZW50bHlGb2N1c2VkKSB7CgkJCQkJb25Gb2N1cygpOwoJCQkJfSBlbHNlIHsKCQkJCQlvbkJsdXIoKTsKCQkJCX0KCQkJfSwgaW50ZXJ2YWwpOwoJCX07CgoJCWNvbnN0IGdldEFjdGl2ZUZyYW1lID0gKCkgPT4gewoJCQlyZXR1cm4gLyoqIEB0eXBlIHtIVE1MSUZyYW1lRWxlbWVudCB8IHVuZGVmaW5lZH0gKi8gKGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdhY3RpdmUtZnJhbWUnKSk7CgkJfTsKCgkJY29uc3QgZ2V0UGVuZGluZ0ZyYW1lID0gKCkgPT4gewoJCQlyZXR1cm4gLyoqIEB0eXBlIHtIVE1MSUZyYW1lRWxlbWVudCB8IHVuZGVmaW5lZH0gKi8gKGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdwZW5kaW5nLWZyYW1lJykpOwoJCX07CgoJCS8qKgoJCSAqIEB0ZW1wbGF0ZSBUCgkJICogQHBhcmFtIHtUIHwgdW5kZWZpbmVkIHwgbnVsbH0gb2JqCgkJICogQHJldHVybiB7VH0KCQkgKi8KCQlmdW5jdGlvbiBhc3NlcnRJc0RlZmluZWQob2JqKSB7CgkJCWlmICh0eXBlb2Ygb2JqID09PSAndW5kZWZpbmVkJyB8fCBvYmogPT09IG51bGwpIHsKCQkJCXRocm93IG5ldyBFcnJvcignRm91bmQgdW5leHBlY3RlZCBudWxsJyk7CgkJCX0KCQkJcmV0dXJuIG9iajsKCQl9CgoJCWNvbnN0IHZzY29kZVBvc3RNZXNzYWdlRnVuY05hbWUgPSAnX192c2NvZGVfcG9zdF9tZXNzYWdlX18nOwoKCQljb25zdCBkZWZhdWx0U3R5bGVzID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc3R5bGUnKTsKCQlkZWZhdWx0U3R5bGVzLmlkID0gJ19kZWZhdWx0U3R5bGVzJzsKCQlkZWZhdWx0U3R5bGVzLnRleHRDb250ZW50ID0gYAoJCUBsYXllciB2c2NvZGUtZGVmYXVsdCB7CgkJCWh0bWwgewoJCQkJc2Nyb2xsYmFyLWNvbG9yOiB2YXIoLS12c2NvZGUtc2Nyb2xsYmFyU2xpZGVyLWJhY2tncm91bmQpIHZhcigtLXZzY29kZS1lZGl0b3ItYmFja2dyb3VuZCk7CgkJCX0KCgkJCWJvZHkgewoJCQkJb3ZlcnNjcm9sbC1iZWhhdmlvci14OiBub25lOwoJCQkJYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7CgkJCQljb2xvcjogdmFyKC0tdnNjb2RlLWVkaXRvci1mb3JlZ3JvdW5kKTsKCQkJCWZvbnQtZmFtaWx5OiB2YXIoLS12c2NvZGUtZm9udC1mYW1pbHkpOwoJCQkJZm9udC13ZWlnaHQ6IHZhcigtLXZzY29kZS1mb250LXdlaWdodCk7CgkJCQlmb250LXNpemU6IHZhcigtLXZzY29kZS1mb250LXNpemUpOwoJCQkJbWFyZ2luOiAwOwoJCQkJcGFkZGluZzogMCAyMHB4OwoJCQl9CgoJCQlpbWcsIHZpZGVvIHsKCQkJCW1heC13aWR0aDogMTAwJTsKCQkJCW1heC1oZWlnaHQ6IDEwMCU7CgkJCX0KCgkJCWEsIGEgY29kZSB7CgkJCQljb2xvcjogdmFyKC0tdnNjb2RlLXRleHRMaW5rLWZvcmVncm91bmQpOwoJCQl9CgoJCQlwID4gYSB7CgkJCQl0ZXh0LWRlY29yYXRpb246IHZhcigtLXRleHQtbGluay1kZWNvcmF0aW9uKTsKCQkJfQoKCQkJYTpob3ZlciB7CgkJCQljb2xvcjogdmFyKC0tdnNjb2RlLXRleHRMaW5rLWFjdGl2ZUZvcmVncm91bmQpOwoJCQl9CgoJCQlhOmZvY3VzLAoJCQlpbnB1dDpmb2N1cywKCQkJc2VsZWN0OmZvY3VzLAoJCQl0ZXh0YXJlYTpmb2N1cyB7CgkJCQlvdXRsaW5lOiAxcHggc29saWQgLXdlYmtpdC1mb2N1cy1yaW5nLWNvbG9yOwoJCQkJb3V0bGluZS1vZmZzZXQ6IC0xcHg7CgkJCX0KCgkJCWNvZGUgewoJCQkJZm9udC1mYW1pbHk6IHZhcigtLW1vbmFjby1tb25vc3BhY2UtZm9udCk7CgkJCQljb2xvcjogdmFyKC0tdnNjb2RlLXRleHRQcmVmb3JtYXQtZm9yZWdyb3VuZCk7CgkJCQliYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS12c2NvZGUtdGV4dFByZWZvcm1hdC1iYWNrZ3JvdW5kKTsKCQkJCXBhZGRpbmc6IDFweCAzcHg7CgkJCQlib3JkZXItcmFkaXVzOiA0cHg7CgkJCX0KCgkJCXByZSBjb2RlIHsKCQkJCXBhZGRpbmc6IDA7CgkJCX0KCgkJCWJsb2NrcXVvdGUgewoJCQkJYmFja2dyb3VuZDogdmFyKC0tdnNjb2RlLXRleHRCbG9ja1F1b3RlLWJhY2tncm91bmQpOwoJCQkJYm9yZGVyLWNvbG9yOiB2YXIoLS12c2NvZGUtdGV4dEJsb2NrUXVvdGUtYm9yZGVyKTsKCQkJfQoKCQkJa2JkIHsKCQkJCWJhY2tncm91bmQtY29sb3I6IHZhcigtLXZzY29kZS1rZXliaW5kaW5nTGFiZWwtYmFja2dyb3VuZCk7CgkJCQljb2xvcjogdmFyKC0tdnNjb2RlLWtleWJpbmRpbmdMYWJlbC1mb3JlZ3JvdW5kKTsKCQkJCWJvcmRlci1zdHlsZTogc29saWQ7CgkJCQlib3JkZXItd2lkdGg6IDFweDsKCQkJCWJvcmRlci1yYWRpdXM6IDNweDsKCQkJCWJvcmRlci1jb2xvcjogdmFyKC0tdnNjb2RlLWtleWJpbmRpbmdMYWJlbC1ib3JkZXIpOwoJCQkJYm9yZGVyLWJvdHRvbS1jb2xvcjogdmFyKC0tdnNjb2RlLWtleWJpbmRpbmdMYWJlbC1ib3R0b21Cb3JkZXIpOwoJCQkJYm94LXNoYWRvdzogaW5zZXQgMCAtMXB4IDAgdmFyKC0tdnNjb2RlLXdpZGdldC1zaGFkb3cpOwoJCQkJdmVydGljYWwtYWxpZ246IG1pZGRsZTsKCQkJCXBhZGRpbmc6IDFweCAzcHg7CgkJCX0KCgkJCTo6LXdlYmtpdC1zY3JvbGxiYXIgewoJCQkJd2lkdGg6IDEwcHg7CgkJCQloZWlnaHQ6IDEwcHg7CgkJCX0KCgkJCTo6LXdlYmtpdC1zY3JvbGxiYXItY29ybmVyIHsKCQkJCWJhY2tncm91bmQtY29sb3I6IHZhcigtLXZzY29kZS1lZGl0b3ItYmFja2dyb3VuZCk7CgkJCX0KCgkJCTo6LXdlYmtpdC1zY3JvbGxiYXItdGh1bWIgewoJCQkJYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tdnNjb2RlLXNjcm9sbGJhclNsaWRlci1iYWNrZ3JvdW5kKTsKCQkJfQoJCQk6Oi13ZWJraXQtc2Nyb2xsYmFyLXRodW1iOmhvdmVyIHsKCQkJCWJhY2tncm91bmQtY29sb3I6IHZhcigtLXZzY29kZS1zY3JvbGxiYXJTbGlkZXItaG92ZXJCYWNrZ3JvdW5kKTsKCQkJfQoJCQk6Oi13ZWJraXQtc2Nyb2xsYmFyLXRodW1iOmFjdGl2ZSB7CgkJCQliYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS12c2NvZGUtc2Nyb2xsYmFyU2xpZGVyLWFjdGl2ZUJhY2tncm91bmQpOwoJCQl9CgkJCTo6aGlnaGxpZ2h0KGZpbmQtaGlnaGxpZ2h0KSB7CgkJCQliYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS12c2NvZGUtZWRpdG9yLWZpbmRNYXRjaEhpZ2hsaWdodEJhY2tncm91bmQpOwoJCQl9CgkJCTo6aGlnaGxpZ2h0KGN1cnJlbnQtZmluZC1oaWdobGlnaHQpIHsKCQkJCWJhY2tncm91bmQtY29sb3I6IHZhcigtLXZzY29kZS1lZGl0b3ItZmluZE1hdGNoQmFja2dyb3VuZCk7CgkJCX0KCQkJfWA7CgoJCS8qKgoJCSAqIEBwYXJhbSB7Ym9vbGVhbn0gYWxsb3dNdWx0aXBsZUFQSUFjcXVpcmUKCQkgKiBAcGFyYW0geyp9IFtzdGF0ZV0KCQkgKiBAcmV0dXJuIHtzdHJpbmd9CgkJICovCgkJZnVuY3Rpb24gZ2V0VnNDb2RlQXBpU2NyaXB0KGFsbG93TXVsdGlwbGVBUElBY3F1aXJlLCBzdGF0ZSkgewoJCQljb25zdCBlbmNvZGVkU3RhdGUgPSBzdGF0ZSA/IGVuY29kZVVSSUNvbXBvbmVudChzdGF0ZSkgOiB1bmRlZmluZWQ7CgkJCXJldHVybiAvKiBqcyAqL2AKCQkJCQlnbG9iYWxUaGlzLmFjcXVpcmVWc0NvZGVBcGkgPSAoZnVuY3Rpb24oKSB7CgkJCQkJCWNvbnN0IG9yaWdpbmFsUG9zdE1lc3NhZ2UgPSB3aW5kb3cucGFyZW50Wycke3ZzY29kZVBvc3RNZXNzYWdlRnVuY05hbWV9J10uYmluZCh3aW5kb3cucGFyZW50KTsKCQkJCQkJY29uc3QgZG9Qb3N0TWVzc2FnZSA9IChjaGFubmVsLCBkYXRhLCB0cmFuc2ZlcikgPT4gewoJCQkJCQkJb3JpZ2luYWxQb3N0TWVzc2FnZShjaGFubmVsLCBkYXRhLCB0cmFuc2Zlcik7CgkJCQkJCX07CgoJCQkJCQlsZXQgYWNxdWlyZWQgPSBmYWxzZTsKCgkJCQkJCWxldCBzdGF0ZSA9ICR7c3RhdGUgPyBgSlNPTi5wYXJzZShkZWNvZGVVUklDb21wb25lbnQoIiR7ZW5jb2RlZFN0YXRlfSIpKWAgOiB1bmRlZmluZWR9OwoKCQkJCQkJcmV0dXJuICgpID0+IHsKCQkJCQkJCWlmIChhY3F1aXJlZCAmJiAhJHthbGxvd011bHRpcGxlQVBJQWNxdWlyZX0pIHsKCQkJCQkJCQl0aHJvdyBuZXcgRXJyb3IoJ0FuIGluc3RhbmNlIG9mIHRoZSBWUyBDb2RlIEFQSSBoYXMgYWxyZWFkeSBiZWVuIGFjcXVpcmVkJyk7CgkJCQkJCQl9CgkJCQkJCQlhY3F1aXJlZCA9IHRydWU7CgkJCQkJCQlyZXR1cm4gT2JqZWN0LmZyZWV6ZSh7CgkJCQkJCQkJcG9zdE1lc3NhZ2U6IGZ1bmN0aW9uKG1lc3NhZ2UsIHRyYW5zZmVyKSB7CgkJCQkJCQkJCWRvUG9zdE1lc3NhZ2UoJ29ubWVzc2FnZScsIHsgbWVzc2FnZSwgdHJhbnNmZXIgfSwgdHJhbnNmZXIpOwoJCQkJCQkJCX0sCgkJCQkJCQkJc2V0U3RhdGU6IGZ1bmN0aW9uKG5ld1N0YXRlKSB7CgkJCQkJCQkJCXN0YXRlID0gbmV3U3RhdGU7CgkJCQkJCQkJCWRvUG9zdE1lc3NhZ2UoJ2RvLXVwZGF0ZS1zdGF0ZScsIEpTT04uc3RyaW5naWZ5KG5ld1N0YXRlKSk7CgkJCQkJCQkJCXJldHVybiBuZXdTdGF0ZTsKCQkJCQkJCQl9LAoJCQkJCQkJCWdldFN0YXRlOiBmdW5jdGlvbigpIHsKCQkJCQkJCQkJcmV0dXJuIHN0YXRlOwoJCQkJCQkJCX0KCQkJCQkJCX0pOwoJCQkJCQl9OwoJCQkJCX0pKCk7CgkJCQkJd2luZG93LnBhcmVudCA9IHdpbmRvdzsKCQkJCQl3aW5kb3cudG9wID0gd2luZG93OwoJCQkJCXdpbmRvdy5mcmFtZUVsZW1lbnQgPSBudWxsOwoJCQkJYDsKCQl9CgoJCS8qKiBAdHlwZSB7UHJvbWlzZTx2b2lkPn0gKi8KCQljb25zdCB3b3JrZXJSZWFkeSA9IG5ldyBQcm9taXNlKChyZXNvbHZlLCByZWplY3QpID0+IHsKCQkJaWYgKGRpc2FibGVTZXJ2aWNlV29ya2VyKSB7CgkJCQlyZXR1cm4gcmVzb2x2ZSgpOwoJCQl9CgoJCQlpZiAoIWFyZVNlcnZpY2VXb3JrZXJzRW5hYmxlZCgpKSB7CgkJCQlyZXR1cm4gcmVqZWN0KG5ldyBFcnJvcignU2VydmljZSBXb3JrZXJzIGFyZSBub3QgZW5hYmxlZC4gV2Vidmlld3Mgd2lsbCBub3Qgd29yay4gVHJ5IGRpc2FibGluZyBwcml2YXRlL2luY29nbml0byBtb2RlLicpKTsKCQkJfQoKCQkJY29uc3Qgc3dQYXRoID0gZW5jb2RlVVJJKGAke3NlcnZpY2VXb3JrZXJVcml9P3Y9JHtleHBlY3RlZFdvcmtlclZlcnNpb259JnZzY29kZS1yZXNvdXJjZS1iYXNlLWF1dGhvcml0eT0ke3NlYXJjaFBhcmFtcy5nZXQoJ3ZzY29kZS1yZXNvdXJjZS1iYXNlLWF1dGhvcml0eScpfSZyZW1vdGVBdXRob3JpdHk9JHtzZWFyY2hQYXJhbXMuZ2V0KCdyZW1vdGVBdXRob3JpdHknKSA/PyAnJ31gKTsKCQkJbmF2aWdhdG9yLnNlcnZpY2VXb3JrZXIucmVnaXN0ZXIoc3dQYXRoLCB7IHR5cGU6ICdtb2R1bGUnIH0pCgkJCQkudGhlbihhc3luYyByZWdpc3RyYXRpb24gPT4gewoJCQkJCS8qKgoJCQkJCSAqIEBwYXJhbSB7TWVzc2FnZUV2ZW50fSBldmVudAoJCQkJCSAqLwoJCQkJCWNvbnN0IHZlcnNpb25IYW5kbGVyID0gYXN5bmMgKGV2ZW50KSA9PiB7CgkJCQkJCWlmIChldmVudC5kYXRhLmNoYW5uZWwgIT09ICd2ZXJzaW9uJykgewoJCQkJCQkJcmV0dXJuOwoJCQkJCQl9CgoJCQkJCQluYXZpZ2F0b3Iuc2VydmljZVdvcmtlci5yZW1vdmVFdmVudExpc3RlbmVyKCdtZXNzYWdlJywgdmVyc2lvbkhhbmRsZXIpOwoJCQkJCQlpZiAoZXZlbnQuZGF0YS52ZXJzaW9uID09PSBleHBlY3RlZFdvcmtlclZlcnNpb24pIHsKCQkJCQkJCXJldHVybiByZXNvbHZlKCk7CgkJCQkJCX0gZWxzZSB7CgkJCQkJCQljb25zb2xlLmxvZyhgRm91bmQgdW5leHBlY3RlZCBzZXJ2aWNlIHdvcmtlciB2ZXJzaW9uLiBGb3VuZDogJHtldmVudC5kYXRhLnZlcnNpb259LiBFeHBlY3RlZDogJHtleHBlY3RlZFdvcmtlclZlcnNpb259YCk7CgkJCQkJCQljb25zb2xlLmxvZyhgQXR0ZW1wdGluZyB0byByZWxvYWQgc2VydmljZSB3b3JrZXJgKTsKCgkJCQkJCQkvLyBJZiB3ZSBoYXZlIHRoZSB3cm9uZyB2ZXJzaW9uLCB0cnkgb25jZSAoYW5kIG9ubHkgb25jZSkgdG8gdW5yZWdpc3RlciBhbmQgcmUtcmVnaXN0ZXIKCQkJCQkJCS8vIE5vdGUgdGhhdCBgLnVwZGF0ZWAgZG9lc24ndCBzZWVtIHRvIHdvcmsgZGVza3RvcCBlbGVjdHJvbiBhdCB0aGUgbW9tZW50IHNvIHdlIHVzZQoJCQkJCQkJLy8gYHVucmVnaXN0ZXJgIGFuZCBgcmVnaXN0ZXJgIGhlcmUuCgkJCQkJCQlyZXR1cm4gcmVnaXN0cmF0aW9uLnVucmVnaXN0ZXIoKQoJCQkJCQkJCS50aGVuKCgpID0+IG5hdmlnYXRvci5zZXJ2aWNlV29ya2VyLnJlZ2lzdGVyKHN3UGF0aCkpCgkJCQkJCQkJLmZpbmFsbHkoKCkgPT4geyByZXNvbHZlKCk7IH0pOwoJCQkJCQl9CgkJCQkJfTsKCQkJCQluYXZpZ2F0b3Iuc2VydmljZVdvcmtlci5hZGRFdmVudExpc3RlbmVyKCdtZXNzYWdlJywgdmVyc2lvbkhhbmRsZXIpOwoKCQkJCQljb25zdCBwb3N0VmVyc2lvbk1lc3NhZ2UgPSAoLyoqIEB0eXBlIHtTZXJ2aWNlV29ya2VyfSAqLyBjb250cm9sbGVyKSA9PiB7CgkJCQkJCW91dGVySWZyYW1lTWVzc2FnZUNoYW5uZWwgPSBuZXcgTWVzc2FnZUNoYW5uZWwoKTsKCQkJCQkJY29udHJvbGxlci5wb3N0TWVzc2FnZSh7IGNoYW5uZWw6ICd2ZXJzaW9uJyB9LCBbb3V0ZXJJZnJhbWVNZXNzYWdlQ2hhbm5lbC5wb3J0Ml0pOwoJCQkJCX07CgoJCQkJCS8vIEF0IHRoaXMgcG9pbnQsIGVpdGhlciB0aGUgc2VydmljZSB3b3JrZXIgaXMgcmVhZHkgYW5kCgkJCQkJLy8gYmVjYW1lIG91ciBjb250cm9sbGVyLCBvciB3ZSBuZWVkIHRvIHdhaXQgZm9yIGl0LgoJCQkJCS8vIE5vdGUgdGhhdCBuYXZpZ2F0b3Iuc2VydmljZVdvcmtlci5jb250cm9sbGVyIGNvdWxkIGJlIGEKCQkJCQkvLyBjb250cm9sbGVyIGZyb20gYSBwcmV2aW91c2x5IGxvYWRlZCBzZXJ2aWNlIHdvcmtlci4KCQkJCQljb25zdCBjdXJyZW50Q29udHJvbGxlciA9IG5hdmlnYXRvci5zZXJ2aWNlV29ya2VyLmNvbnRyb2xsZXI7CgkJCQkJaWYgKGN1cnJlbnRDb250cm9sbGVyPy5zY3JpcHRVUkwuZW5kc1dpdGgoc3dQYXRoKSkgewoJCQkJCQkvLyBzZXJ2aWNlIHdvcmtlciBhbHJlYWR5IGxvYWRlZCAmIHJlYWR5IHRvIHJlY2VpdmUgbWVzc2FnZXMKCQkJCQkJcG9zdFZlcnNpb25NZXNzYWdlKGN1cnJlbnRDb250cm9sbGVyKTsKCQkJCQl9IGVsc2UgewoJCQkJCQlpZiAoY3VycmVudENvbnRyb2xsZXIpIHsKCQkJCQkJCWNvbnNvbGUubG9nKGBGb3VuZCB1bmV4cGVjdGVkIHNlcnZpY2Ugd29ya2VyIGNvbnRyb2xsZXIuIEZvdW5kOiAke2N1cnJlbnRDb250cm9sbGVyLnNjcmlwdFVSTH0uIEV4cGVjdGVkOiAke3N3UGF0aH0uIFdhaXRpbmcgZm9yIGNvbnRyb2xsZXJjaGFuZ2UuYCk7CgkJCQkJCX0gZWxzZSB7CgkJCQkJCQljb25zb2xlLmxvZyhgTm8gc2VydmljZSB3b3JrZXIgY29udHJvbGxlciBmb3VuZC4gV2FpdGluZyBmb3IgY29udHJvbGxlcmNoYW5nZS5gKTsKCQkJCQkJfQoKCQkJCQkJLy8gRWl0aGVyIHRoZXJlJ3Mgbm8gY29udHJvbGxpbmcgc2VydmljZSB3b3JrZXIsIG9yIGl0J3MgYW4gb2xkIG9uZS4KCQkJCQkJLy8gV2FpdCBmb3IgaXQgdG8gY2hhbmdlIGJlZm9yZSBwb3N0aW5nIHRoZSBtZXNzYWdlCgkJCQkJCWNvbnN0IG9uQ29udHJvbGxlckNoYW5nZSA9ICgpID0+IHsKCQkJCQkJCW5hdmlnYXRvci5zZXJ2aWNlV29ya2VyLnJlbW92ZUV2ZW50TGlzdGVuZXIoJ2NvbnRyb2xsZXJjaGFuZ2UnLCBvbkNvbnRyb2xsZXJDaGFuZ2UpOwoJCQkJCQkJaWYgKG5hdmlnYXRvci5zZXJ2aWNlV29ya2VyLmNvbnRyb2xsZXIpIHsKCQkJCQkJCQlwb3N0VmVyc2lvbk1lc3NhZ2UobmF2aWdhdG9yLnNlcnZpY2VXb3JrZXIuY29udHJvbGxlcik7CgkJCQkJCQl9IGVsc2UgewoJCQkJCQkJCXJldHVybiByZWplY3QobmV3IEVycm9yKCdObyBjb250cm9sbGVyIGZvdW5kLicpKTsKCQkJCQkJCX0KCQkJCQkJfTsKCQkJCQkJbmF2aWdhdG9yLnNlcnZpY2VXb3JrZXIuYWRkRXZlbnRMaXN0ZW5lcignY29udHJvbGxlcmNoYW5nZScsIG9uQ29udHJvbGxlckNoYW5nZSk7CgkJCQkJfQoJCQkJfSkuY2F0Y2goZXJyb3IgPT4gewoJCQkJCWlmICghb25FbGVjdHJvbiAmJiBlcnJvciBpbnN0YW5jZW9mIEVycm9yICYmIGVycm9yLm1lc3NhZ2UuaW5jbHVkZXMoJ3VzZXIgZGVuaWVkIHBlcm1pc3Npb24nKSkgewoJCQkJCQlyZXR1cm4gcmVqZWN0KG5ldyBFcnJvcihgQ291bGQgbm90IHJlZ2lzdGVyIHNlcnZpY2Ugd29ya2VyLiBQbGVhc2UgbWFrZSBzdXJlIHRoaXJkIHBhcnR5IGNvb2tpZXMgYXJlIGVuYWJsZWQ6ICR7ZXJyb3J9YCkpOwoJCQkJCX0KCQkJCQlyZXR1cm4gcmVqZWN0KG5ldyBFcnJvcihgQ291bGQgbm90IHJlZ2lzdGVyIHNlcnZpY2Ugd29ya2VyOiAke2Vycm9yfS5gKSk7CgkJCQl9KTsKCQl9KTsKCgkJLyoqCgkJICogIEB0eXBlIHtpbXBvcnQoJy4uL3dlYnZpZXdNZXNzYWdlcycpLldlYnZpZXdIb3N0TWVzc2FnaW5nfQoJCSAqLwoJCWNvbnN0IGhvc3RNZXNzYWdpbmcgPSBuZXcgY2xhc3MgSG9zdE1lc3NhZ2luZyB7CgoJCQljb25zdHJ1Y3RvcigpIHsKCQkJCXRoaXMuY2hhbm5lbCA9IG5ldyBNZXNzYWdlQ2hhbm5lbCgpOwoKCQkJCS8qKiBAdHlwZSB7TWFwPHN0cmluZywgQXJyYXk8KGV2ZW50OiBNZXNzYWdlRXZlbnQsIGRhdGE6IGFueSkgPT4gdm9pZD4+fSAqLwoJCQkJdGhpcy5oYW5kbGVycyA9IG5ldyBNYXAoKTsKCgkJCQl0aGlzLmNoYW5uZWwucG9ydDEub25tZXNzYWdlID0gKGUpID0+IHsKCQkJCQljb25zdCBjaGFubmVsID0gZS5kYXRhLmNoYW5uZWw7CgkJCQkJY29uc3QgaGFuZGxlcnMgPSB0aGlzLmhhbmRsZXJzLmdldChjaGFubmVsKTsKCQkJCQlpZiAoaGFuZGxlcnMpIHsKCQkJCQkJZm9yIChjb25zdCBoYW5kbGVyIG9mIGhhbmRsZXJzKSB7CgkJCQkJCQloYW5kbGVyKGUsIGUuZGF0YS5hcmdzKTsKCQkJCQkJfQoJCQkJCX0gZWxzZSB7CgkJCQkJCWNvbnNvbGUubG9nKCdubyBoYW5kbGVyIGZvciAnLCBlKTsKCQkJCQl9CgkJCQl9OwoJCQl9CgoJCQlwb3N0TWVzc2FnZShjaGFubmVsLCBkYXRhLCB0cmFuc2ZlcikgewoJCQkJdGhpcy5jaGFubmVsLnBvcnQxLnBvc3RNZXNzYWdlKHsgY2hhbm5lbCwgZGF0YSB9LCB0cmFuc2Zlcik7CgkJCX0KCgkJCW9uTWVzc2FnZShjaGFubmVsLCBoYW5kbGVyKSB7CgkJCQlsZXQgaGFuZGxlcnMgPSB0aGlzLmhhbmRsZXJzLmdldChjaGFubmVsKTsKCQkJCWlmICghaGFuZGxlcnMpIHsKCQkJCQloYW5kbGVycyA9IFtdOwoJCQkJCXRoaXMuaGFuZGxlcnMuc2V0KGNoYW5uZWwsIGhhbmRsZXJzKTsKCQkJCX0KCQkJCWhhbmRsZXJzLnB1c2goaGFuZGxlcik7CgkJCX0KCgkJCWFzeW5jIHNpZ25hbFJlYWR5KCkgewoJCQkJY29uc3Qgc3RhcnQgPSAoLyoqIEB0eXBlIHtzdHJpbmd9ICovIHBhcmVudE9yaWdpbikgPT4gewoJCQkJCXBlcmZNYXJrKCdzaWduYWxpbmdSZWFkeScpOwoJCQkJCXdpbmRvdy5wYXJlbnQucG9zdE1lc3NhZ2UoeyB0YXJnZXQ6IElELCBjaGFubmVsOiAnd2Vidmlldy1yZWFkeScsIGRhdGE6IHt9IH0sIHBhcmVudE9yaWdpbiwgW3RoaXMuY2hhbm5lbC5wb3J0Ml0pOwoJCQkJfTsKCgkJCQljb25zdCBwYXJlbnRPcmlnaW4gPSBzZWFyY2hQYXJhbXMuZ2V0KCdwYXJlbnRPcmlnaW4nKTsKCgkJCQlyZXR1cm4gc3RhcnQocGFyZW50T3JpZ2luKTsKCQkJfQoJCX0oKTsKCgkJY29uc3QgdW5sb2FkTW9uaXRvciA9IG5ldyBjbGFzcyB7CgoJCQljb25zdHJ1Y3RvcigpIHsKCQkJCXRoaXMuY29uZmlybUJlZm9yZUNsb3NlID0gJ2tleWJvYXJkT25seSc7CgkJCQl0aGlzLmlzTW9kaWZpZXJLZXlEb3duID0gZmFsc2U7CgoJCQkJaG9zdE1lc3NhZ2luZy5vbk1lc3NhZ2UoJ3NldC1jb25maXJtLWJlZm9yZS1jbG9zZScsIChfZSwgZGF0YSkgPT4gewoJCQkJCXRoaXMuY29uZmlybUJlZm9yZUNsb3NlID0gZGF0YTsKCQkJCX0pOwoKCQkJCWhvc3RNZXNzYWdpbmcub25NZXNzYWdlKCdjb250ZW50JywgKF9lLCBkYXRhKSA9PiB7CgkJCQkJdGhpcy5jb25maXJtQmVmb3JlQ2xvc2UgPSBkYXRhLmNvbmZpcm1CZWZvcmVDbG9zZTsKCQkJCX0pOwoKCQkJCXdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdiZWZvcmV1bmxvYWQnLCAoZXZlbnQpID0+IHsKCQkJCQlpZiAob25FbGVjdHJvbikgewoJCQkJCQlyZXR1cm47CgkJCQkJfQoKCQkJCQlzd2l0Y2ggKHRoaXMuY29uZmlybUJlZm9yZUNsb3NlKSB7CgkJCQkJCWNhc2UgJ2Fsd2F5cyc6IHsKCQkJCQkJCWV2ZW50LnByZXZlbnREZWZhdWx0KCk7CgkJCQkJCQlldmVudC5yZXR1cm5WYWx1ZSA9ICcnOwoJCQkJCQkJcmV0dXJuICcnOwoJCQkJCQl9CgkJCQkJCWNhc2UgJ25ldmVyJzogewoJCQkJCQkJYnJlYWs7CgkJCQkJCX0KCQkJCQkJY2FzZSAna2V5Ym9hcmRPbmx5JzoKCQkJCQkJZGVmYXVsdDogewoJCQkJCQkJaWYgKHRoaXMuaXNNb2RpZmllcktleURvd24pIHsKCQkJCQkJCQlldmVudC5wcmV2ZW50RGVmYXVsdCgpOwoJCQkJCQkJCWV2ZW50LnJldHVyblZhbHVlID0gJyc7CgkJCQkJCQkJcmV0dXJuICcnOwoJCQkJCQkJfQoJCQkJCQkJYnJlYWs7CgkJCQkJCX0KCQkJCQl9CgkJCQl9KTsKCQkJfQoKCQkJb25JZnJhbWVMb2FkZWQoLyoqIEB0eXBlIHtIVE1MSUZyYW1lRWxlbWVudH0gKi8gZnJhbWUpIHsKCQkJCWFzc2VydElzRGVmaW5lZChmcmFtZS5jb250ZW50V2luZG93KS5hZGRFdmVudExpc3RlbmVyKCdrZXlkb3duJywgZSA9PiB7CgkJCQkJdGhpcy5pc01vZGlmaWVyS2V5RG93biA9IGUubWV0YUtleSB8fCBlLmN0cmxLZXkgfHwgZS5hbHRLZXk7CgkJCQl9KTsKCgkJCQlhc3NlcnRJc0RlZmluZWQoZnJhbWUuY29udGVudFdpbmRvdykuYWRkRXZlbnRMaXN0ZW5lcigna2V5dXAnLCAoKSA9PiB7CgkJCQkJdGhpcy5pc01vZGlmaWVyS2V5RG93biA9IGZhbHNlOwoJCQkJfSk7CgkJCX0KCQl9OwoKCQkvLyBzdGF0ZQoJCWxldCBmaXJzdExvYWQgPSB0cnVlOwoJCS8qKiBAdHlwZSB7YW55fSAqLwoJCWxldCBsb2FkVGltZW91dDsKCQlsZXQgc3R5bGVWZXJzaW9uID0gMDsKCgkJLyoqIEB0eXBlIHtBcnJheTx7IHJlYWRvbmx5IG1lc3NhZ2U6IGFueSwgdHJhbnNmZXI/OiBBcnJheUJ1ZmZlcltdIH0+fSAqLwoJCWxldCBwZW5kaW5nTWVzc2FnZXMgPSBbXTsKCgkJY29uc3QgaW5pdERhdGEgPSB7CgkJCS8qKiBAdHlwZSB7bnVtYmVyIHwgdW5kZWZpbmVkfSAqLwoJCQlpbml0aWFsU2Nyb2xsUHJvZ3Jlc3M6IHVuZGVmaW5lZCwKCgkJCS8qKiBAdHlwZSB7eyBba2V5OiBzdHJpbmddOiBzdHJpbmcgfSB8IHVuZGVmaW5lZH0gKi8KCQkJc3R5bGVzOiB1bmRlZmluZWQsCgoJCQkvKiogQHR5cGUge3N0cmluZyB8IHVuZGVmaW5lZH0gKi8KCQkJYWN0aXZlVGhlbWU6IHVuZGVmaW5lZCwKCgkJCS8qKiBAdHlwZSB7c3RyaW5nIHwgdW5kZWZpbmVkfSAqLwoJCQl0aGVtZUlkOiB1bmRlZmluZWQsCgoJCQkvKiogQHR5cGUge3N0cmluZyB8IHVuZGVmaW5lZH0gKi8KCQkJdGhlbWVMYWJlbDogdW5kZWZpbmVkLAoKCQkJLyoqIEB0eXBlIHtib29sZWFufSAqLwoJCQlzY3JlZW5SZWFkZXI6IGZhbHNlLAoKCQkJLyoqIEB0eXBlIHtib29sZWFufSAqLwoJCQlyZWR1Y2VNb3Rpb246IGZhbHNlLAoJCX07CgoJCWlmICghZGlzYWJsZVNlcnZpY2VXb3JrZXIpIHsKCQkJaG9zdE1lc3NhZ2luZy5vbk1lc3NhZ2UoJ2RpZC1sb2FkLXJlc291cmNlJywgKF9ldmVudCwgZGF0YSkgPT4gewoJCQkJYXNzZXJ0SXNEZWZpbmVkKG5hdmlnYXRvci5zZXJ2aWNlV29ya2VyLmNvbnRyb2xsZXIpLnBvc3RNZXNzYWdlKHsgY2hhbm5lbDogJ2RpZC1sb2FkLXJlc291cmNlJywgZGF0YSB9LCBkYXRhLmRhdGE/LmJ1ZmZlciA/IFtkYXRhLmRhdGEuYnVmZmVyXSA6IFtdKTsKCQkJfSk7CgoJCQlob3N0TWVzc2FnaW5nLm9uTWVzc2FnZSgnZGlkLWxvYWQtbG9jYWxob3N0JywgKF9ldmVudCwgZGF0YSkgPT4gewoJCQkJYXNzZXJ0SXNEZWZpbmVkKG5hdmlnYXRvci5zZXJ2aWNlV29ya2VyLmNvbnRyb2xsZXIpLnBvc3RNZXNzYWdlKHsgY2hhbm5lbDogJ2RpZC1sb2FkLWxvY2FsaG9zdCcsIGRhdGEgfSk7CgkJCX0pOwoKCQkJbmF2aWdhdG9yLnNlcnZpY2VXb3JrZXIuYWRkRXZlbnRMaXN0ZW5lcignbWVzc2FnZScsIGV2ZW50ID0+IHsKCQkJCXN3aXRjaCAoZXZlbnQuZGF0YS5jaGFubmVsKSB7CgkJCQkJY2FzZSAnbG9hZC1yZXNvdXJjZSc6CgkJCQkJY2FzZSAnbG9hZC1sb2NhbGhvc3QnOgoJCQkJCQlob3N0TWVzc2FnaW5nLnBvc3RNZXNzYWdlKGV2ZW50LmRhdGEuY2hhbm5lbCwgZXZlbnQuZGF0YSk7CgkJCQkJCXJldHVybjsKCQkJCX0KCQkJfSk7CgkJfQoKCQkvKioKCQkgKiBAcGFyYW0ge0hUTUxEb2N1bWVudD99IGRvY3VtZW50CgkJICogQHBhcmFtIHtIVE1MRWxlbWVudD99IGJvZHkKCQkgKi8KCQljb25zdCBhcHBseVN0eWxlcyA9IChkb2N1bWVudCwgYm9keSkgPT4gewoJCQlpZiAoIWRvY3VtZW50KSB7CgkJCQlyZXR1cm47CgkJCX0KCgkJCWlmIChib2R5KSB7CgkJCQlib2R5LmNsYXNzTGlzdC5yZW1vdmUoJ3ZzY29kZS1saWdodCcsICd2c2NvZGUtZGFyaycsICd2c2NvZGUtaGlnaC1jb250cmFzdCcsICd2c2NvZGUtaGlnaC1jb250cmFzdC1saWdodCcsICd2c2NvZGUtcmVkdWNlLW1vdGlvbicsICd2c2NvZGUtdXNpbmctc2NyZWVuLXJlYWRlcicpOwoKCQkJCWlmIChpbml0RGF0YS5hY3RpdmVUaGVtZSkgewoJCQkJCWJvZHkuY2xhc3NMaXN0LmFkZChpbml0RGF0YS5hY3RpdmVUaGVtZSk7CgkJCQkJaWYgKGluaXREYXRhLmFjdGl2ZVRoZW1lID09PSAndnNjb2RlLWhpZ2gtY29udHJhc3QtbGlnaHQnKSB7CgkJCQkJCS8vIGJhY2t3YXJkcyBjb21wYXRpYmlsaXR5CgkJCQkJCWJvZHkuY2xhc3NMaXN0LmFkZCgndnNjb2RlLWhpZ2gtY29udHJhc3QnKTsKCQkJCQl9CgkJCQl9CgoJCQkJaWYgKGluaXREYXRhLnJlZHVjZU1vdGlvbikgewoJCQkJCWJvZHkuY2xhc3NMaXN0LmFkZCgndnNjb2RlLXJlZHVjZS1tb3Rpb24nKTsKCQkJCX0KCgkJCQlpZiAoaW5pdERhdGEuc2NyZWVuUmVhZGVyKSB7CgkJCQkJYm9keS5jbGFzc0xpc3QuYWRkKCd2c2NvZGUtdXNpbmctc2NyZWVuLXJlYWRlcicpOwoJCQkJfQoKCQkJCWJvZHkuZGF0YXNldC52c2NvZGVUaGVtZUtpbmQgPSBpbml0RGF0YS5hY3RpdmVUaGVtZTsKCQkJCS8qKiBAZGVwcmVjYXRlZCBkYXRhLXZzY29kZS10aGVtZS1uYW1lIHdpbGwgYmUgcmVtb3ZlZCwgdXNlIGRhdGEtdnNjb2RlLXRoZW1lLWlkIGluc3RlYWQgKi8KCQkJCWJvZHkuZGF0YXNldC52c2NvZGVUaGVtZU5hbWUgPSBpbml0RGF0YS50aGVtZUxhYmVsIHx8ICcnOwoJCQkJYm9keS5kYXRhc2V0LnZzY29kZVRoZW1lSWQgPSBpbml0RGF0YS50aGVtZUlkIHx8ICcnOwoJCQl9CgoJCQlpZiAoaW5pdERhdGEuc3R5bGVzKSB7CgkJCQljb25zdCBkb2N1bWVudFN0eWxlID0gZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LnN0eWxlOwoKCQkJCS8vIFJlbW92ZSBzdGFsZSBwcm9wZXJ0aWVzCgkJCQlmb3IgKGxldCBpID0gZG9jdW1lbnRTdHlsZS5sZW5ndGggLSAxOyBpID49IDA7IGktLSkgewoJCQkJCWNvbnN0IHByb3BlcnR5ID0gZG9jdW1lbnRTdHlsZVtpXTsKCgkJCQkJLy8gRG9uJ3QgcmVtb3ZlIHByb3BlcnRpZXMgdGhhdCB0aGUgd2VidmlldyBtaWdodCBoYXZlIGFkZGVkIHNlcGFyYXRlbHkKCQkJCQlpZiAocHJvcGVydHkgJiYgcHJvcGVydHkuc3RhcnRzV2l0aCgnLS12c2NvZGUtJykpIHsKCQkJCQkJZG9jdW1lbnRTdHlsZS5yZW1vdmVQcm9wZXJ0eShwcm9wZXJ0eSk7CgkJCQkJfQoJCQkJfQoKCQkJCS8vIFJlLWFkZCBuZXcgcHJvcGVydGllcwoJCQkJZm9yIChjb25zdCBbdmFyaWFibGUsIHZhbHVlXSBvZiBPYmplY3QuZW50cmllcyhpbml0RGF0YS5zdHlsZXMpKSB7CgkJCQkJZG9jdW1lbnRTdHlsZS5zZXRQcm9wZXJ0eShgLS0ke3ZhcmlhYmxlfWAsIHZhbHVlKTsKCQkJCX0KCQkJfQoJCX07CgoJCS8qKgoJCSAqIEBwYXJhbSB7TW91c2VFdmVudH0gZXZlbnQKCQkgKi8KCQljb25zdCBoYW5kbGVJbm5lckNsaWNrID0gKGV2ZW50KSA9PiB7CgkJCWlmICghZXZlbnQ/LnZpZXc/LmRvY3VtZW50KSB7CgkJCQlyZXR1cm47CgkJCX0KCgkJCWNvbnN0IGJhc2VFbGVtZW50ID0gZXZlbnQudmlldy5kb2N1bWVudC5xdWVyeVNlbGVjdG9yKCdiYXNlJyk7CgoJCQlmb3IgKGNvbnN0IHBhdGhFbGVtZW50IG9mIGV2ZW50LmNvbXBvc2VkUGF0aCgpKSB7CgkJCQkvKiogQHR5cGUge2FueX0gKi8KCQkJCWNvbnN0IG5vZGUgPSBwYXRoRWxlbWVudDsKCQkJCWlmIChub2RlLnRhZ05hbWUgJiYgbm9kZS50YWdOYW1lLnRvTG93ZXJDYXNlKCkgPT09ICdhJyAmJiBub2RlLmhyZWYpIHsKCQkJCQlpZiAobm9kZS5nZXRBdHRyaWJ1dGUoJ2hyZWYnKSA9PT0gJyMnKSB7CgkJCQkJCWV2ZW50LnZpZXcuc2Nyb2xsVG8oMCwgMCk7CgkJCQkJfSBlbHNlIGlmIChub2RlLmhhc2ggJiYgKG5vZGUuZ2V0QXR0cmlidXRlKCdocmVmJykgPT09IG5vZGUuaGFzaCB8fCAoYmFzZUVsZW1lbnQgJiYgbm9kZS5ocmVmID09PSBiYXNlRWxlbWVudC5ocmVmICsgbm9kZS5oYXNoKSkpIHsKCQkJCQkJY29uc3QgZnJhZ21lbnQgPSBub2RlLmhhc2guc2xpY2UoMSk7CgkJCQkJCWNvbnN0IGRlY29kZWRGcmFnbWVudCA9IGRlY29kZVVSSUNvbXBvbmVudChmcmFnbWVudCk7CgkJCQkJCWNvbnN0IHNjcm9sbFRhcmdldCA9IGV2ZW50LnZpZXcuZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoZnJhZ21lbnQpID8/IGV2ZW50LnZpZXcuZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoZGVjb2RlZEZyYWdtZW50KTsKCQkJCQkJaWYgKHNjcm9sbFRhcmdldCkgewoJCQkJCQkJc2Nyb2xsVGFyZ2V0LnNjcm9sbEludG9WaWV3KCk7CgkJCQkJCX0gZWxzZSBpZiAoZGVjb2RlZEZyYWdtZW50LnRvTG93ZXJDYXNlKCkgPT09ICd0b3AnKSB7CgkJCQkJCQlldmVudC52aWV3LnNjcm9sbFRvKDAsIDApOwoJCQkJCQl9CgkJCQkJfSBlbHNlIHsKCQkJCQkJaG9zdE1lc3NhZ2luZy5wb3N0TWVzc2FnZSgnZGlkLWNsaWNrLWxpbmsnLCB7IHVyaTogbm9kZS5ocmVmLmJhc2VWYWwgfHwgbm9kZS5ocmVmIH0pOwoJCQkJCX0KCQkJCQlldmVudC5wcmV2ZW50RGVmYXVsdCgpOwoJCQkJCXJldHVybjsKCQkJCX0KCQkJfQoJCX07CgoJCS8qKgoJCSAqIEBwYXJhbSB7TW91c2VFdmVudH0gZXZlbnQKCQkgKi8KCQljb25zdCBoYW5kbGVBdXhDbGljayA9IChldmVudCkgPT4gewoJCQkvLyBQcmV2ZW50IG1pZGRsZSBjbGlja3Mgb3BlbmluZyBhIGJyb2tlbiBsaW5rIGluIHRoZSBicm93c2VyCgkJCWlmICghZXZlbnQ/LnZpZXc/LmRvY3VtZW50KSB7CgkJCQlyZXR1cm47CgkJCX0KCgkJCWlmIChldmVudC5idXR0b24gPT09IDEpIHsKCQkJCWZvciAoY29uc3QgcGF0aEVsZW1lbnQgb2YgZXZlbnQuY29tcG9zZWRQYXRoKCkpIHsKCQkJCQkvKiogQHR5cGUge2FueX0gKi8KCQkJCQljb25zdCBub2RlID0gcGF0aEVsZW1lbnQ7CgkJCQkJaWYgKG5vZGUudGFnTmFtZSAmJiBub2RlLnRhZ05hbWUudG9Mb3dlckNhc2UoKSA9PT0gJ2EnICYmIG5vZGUuaHJlZikgewoJCQkJCQlldmVudC5wcmV2ZW50RGVmYXVsdCgpOwoJCQkJCQlyZXR1cm47CgkJCQkJfQoJCQkJfQoJCQl9CgkJfTsKCgkJLyoqCgkJICogQHBhcmFtIHtLZXlib2FyZEV2ZW50fSBlCgkJICovCgkJY29uc3QgaGFuZGxlSW5uZXJLZXlkb3duID0gKGUpID0+IHsKCQkJLy8gSWYgdGhlIGtleXByZXNzIHdvdWxkIHRyaWdnZXIgYSBicm93c2VyIGV2ZW50LCBzdWNoIGFzIGNvcHkgb3IgcGFzdGUsCgkJCS8vIG1ha2Ugc3VyZSB3ZSBibG9jayB0aGUgYnJvd3NlciBmcm9tIGRpc3BhdGNoaW5nIGl0LiBJbnN0ZWFkIFZTIENvZGUKCQkJLy8gaGFuZGxlcyB0aGVzZSBldmVudHMgYW5kIHdpbGwgZGlzcGF0Y2ggYSBjb3B5L3Bhc3RlIGJhY2sgdG8gdGhlIHdlYnZpZXcKCQkJLy8gaWYgbmVlZGVkCgkJCWlmIChpc1VuZG9SZWRvKGUpIHx8IGlzUHJpbnQoZSkgfHwgaXNGaW5kRXZlbnQoZSkgfHwgaXNTYXZlRXZlbnQoZSkpIHsKCQkJCWUucHJldmVudERlZmF1bHQoKTsKCQkJfSBlbHNlIGlmIChpc0NvcHlQYXN0ZU9yQ3V0KGUpKSB7CgkJCQlpZiAob25FbGVjdHJvbikgewoJCQkJCWUucHJldmVudERlZmF1bHQoKTsKCQkJCX0gZWxzZSB7CgkJCQkJcmV0dXJuOyAvLyBsZXQgdGhlIGJyb3dzZXIgaGFuZGxlIHRoaXMKCQkJCX0KCQkJfSBlbHNlIGlmICghb25FbGVjdHJvbiAmJiAoaXNDbG9zZVRhYihlKSB8fCBpc05ld1dpbmRvdyhlKSB8fCBpc0hlbHAoZSkgfHwgaXNSZWZyZXNoKGUpKSkgewoJCQkJLy8gUHJldmVudCBDdHJsK1cgY2xvc2luZyB3aW5kb3cgLyBDdHJsK04gb3BlbmluZyBuZXcgd2luZG93IGluIFBXQS4KCQkJCS8vIChObyBlZmZlY3QgaW4gYSByZWd1bGFyIGJyb3dzZXIgdGFiLikKCQkJCWUucHJldmVudERlZmF1bHQoKTsKCQkJfQoKCQkJaG9zdE1lc3NhZ2luZy5wb3N0TWVzc2FnZSgnZGlkLWtleWRvd24nLCB7CgkJCQlrZXk6IGUua2V5LAoJCQkJa2V5Q29kZTogZS5rZXlDb2RlLAoJCQkJY29kZTogZS5jb2RlLAoJCQkJc2hpZnRLZXk6IGUuc2hpZnRLZXksCgkJCQlhbHRLZXk6IGUuYWx0S2V5LAoJCQkJY3RybEtleTogZS5jdHJsS2V5LAoJCQkJbWV0YUtleTogZS5tZXRhS2V5LAoJCQkJcmVwZWF0OiBlLnJlcGVhdAoJCQl9KTsKCQl9OwoJCS8qKgoJCSAqIEBwYXJhbSB7S2V5Ym9hcmRFdmVudH0gZQoJCSAqLwoJCWNvbnN0IGhhbmRsZUlubmVyS2V5dXAgPSAoZSkgPT4gewoJCQlob3N0TWVzc2FnaW5nLnBvc3RNZXNzYWdlKCdkaWQta2V5dXAnLCB7CgkJCQlrZXk6IGUua2V5LAoJCQkJa2V5Q29kZTogZS5rZXlDb2RlLAoJCQkJY29kZTogZS5jb2RlLAoJCQkJc2hpZnRLZXk6IGUuc2hpZnRLZXksCgkJCQlhbHRLZXk6IGUuYWx0S2V5LAoJCQkJY3RybEtleTogZS5jdHJsS2V5LAoJCQkJbWV0YUtleTogZS5tZXRhS2V5LAoJCQkJcmVwZWF0OiBlLnJlcGVhdAoJCQl9KTsKCQl9OwoKCQkvKioKCQkgKiBAcGFyYW0ge0tleWJvYXJkRXZlbnR9IGUKCQkgKiBAcmV0dXJuIHtib29sZWFufQoJCSAqLwoJCWZ1bmN0aW9uIGlzQ29weVBhc3RlT3JDdXQoZSkgewoJCQljb25zdCBoYXNNZXRhID0gZS5jdHJsS2V5IHx8IGUubWV0YUtleTsKCQkJLy8gNDU6IGtleUNvZGUgb2YgIkluc2VydCIKCQkJY29uc3Qgc2hpZnRJbnNlcnQgPSBlLnNoaWZ0S2V5ICYmIGUua2V5Q29kZSA9PT0gNDU7CgkJCS8vIDY3LCA4NiwgODg6IGtleUNvZGUgb2YgIkMiLCAiViIsICJYIgoJCQlyZXR1cm4gKGhhc01ldGEgJiYgWzY3LCA4NiwgODhdLmluY2x1ZGVzKGUua2V5Q29kZSkpIHx8IHNoaWZ0SW5zZXJ0OwoJCX0KCgkJLyoqCgkJICogQHBhcmFtIHtLZXlib2FyZEV2ZW50fSBlCgkJICogQHJldHVybiB7Ym9vbGVhbn0KCQkgKi8KCQlmdW5jdGlvbiBpc1VuZG9SZWRvKGUpIHsKCQkJY29uc3QgaGFzTWV0YSA9IGUuY3RybEtleSB8fCBlLm1ldGFLZXk7CgkJCS8vIDkwLCA4OToga2V5Q29kZSBvZiAiWiIsICJZIgoJCQlyZXR1cm4gaGFzTWV0YSAmJiBbOTAsIDg5XS5pbmNsdWRlcyhlLmtleUNvZGUpOwoJCX0KCgkJLyoqCgkJICogQHBhcmFtIHtLZXlib2FyZEV2ZW50fSBlCgkJICogQHJldHVybiB7Ym9vbGVhbn0KCQkgKi8KCQlmdW5jdGlvbiBpc1ByaW50KGUpIHsKCQkJY29uc3QgaGFzTWV0YSA9IGUuY3RybEtleSB8fCBlLm1ldGFLZXk7CgkJCS8vIDgwOiBrZXlDb2RlIG9mICJQIgoJCQlyZXR1cm4gaGFzTWV0YSAmJiBlLmtleUNvZGUgPT09IDgwOwoJCX0KCgkJLyoqCgkJICogQHBhcmFtIHtLZXlib2FyZEV2ZW50fSBlCgkJICogQHJldHVybiB7Ym9vbGVhbn0KCQkgKi8KCQlmdW5jdGlvbiBpc0ZpbmRFdmVudChlKSB7CgkJCWNvbnN0IGhhc01ldGEgPSBlLmN0cmxLZXkgfHwgZS5tZXRhS2V5OwoJCQkvLyA3MDoga2V5Q29kZSBvZiAiRiIKCQkJcmV0dXJuIGhhc01ldGEgJiYgZS5rZXlDb2RlID09PSA3MDsKCQl9CgoJCS8qKgoJCSAqIEBwYXJhbSB7S2V5Ym9hcmRFdmVudH0gZQoJCSAqIEByZXR1cm4ge2Jvb2xlYW59CgkJICovCgkJZnVuY3Rpb24gaXNTYXZlRXZlbnQoZSkgewoJCQljb25zdCBoYXNNZXRhID0gZS5jdHJsS2V5IHx8IGUubWV0YUtleTsKCQkJLy8gODM6IGtleUNvZGUgb2YgIlMiCgkJCXJldHVybiBoYXNNZXRhICYmIGUua2V5Q29kZSA9PT0gODM7CgkJfQoKCQkvKioKCQkgKiBAcGFyYW0ge0tleWJvYXJkRXZlbnR9IGUKCQkgKiBAcmV0dXJuIHtib29sZWFufQoJCSAqLwoJCWZ1bmN0aW9uIGlzQ2xvc2VUYWIoZSkgewoJCQljb25zdCBoYXNNZXRhID0gZS5jdHJsS2V5IHx8IGUubWV0YUtleTsKCQkJLy8gODc6IGtleUNvZGUgb2YgIlciCgkJCXJldHVybiBoYXNNZXRhICYmIGUua2V5Q29kZSA9PT0gODc7CgkJfQoKCQkvKioKCQkgKiBAcGFyYW0ge0tleWJvYXJkRXZlbnR9IGUKCQkgKiBAcmV0dXJuIHtib29sZWFufQoJCSAqLwoJCWZ1bmN0aW9uIGlzTmV3V2luZG93KGUpIHsKCQkJY29uc3QgaGFzTWV0YSA9IGUuY3RybEtleSB8fCBlLm1ldGFLZXk7CgkJCS8vIDc4OiBrZXlDb2RlIG9mICJOIgoJCQlyZXR1cm4gaGFzTWV0YSAmJiBlLmtleUNvZGUgPT09IDc4OwoJCX0KCgkJLyoqCgkJICogQHBhcmFtIHtLZXlib2FyZEV2ZW50fSBlCgkJICogQHJldHVybiB7Ym9vbGVhbn0KCQkgKi8KCQkgZnVuY3Rpb24gaXNIZWxwKGUpIHsKCQkJLy8gMTEyOiBrZXlDb2RlIG9mICJGMSIKCQkJcmV0dXJuIGUua2V5Q29kZSA9PT0gMTEyOwoJCX0KCgkJLyoqCgkJICogQHBhcmFtIHtLZXlib2FyZEV2ZW50fSBlCgkJICogQHJldHVybiB7Ym9vbGVhbn0KCQkgKi8KCQlmdW5jdGlvbiBpc1JlZnJlc2goZSkgewoJCQkvLyAxMTY6IGtleUNvZGUgb2YgIkY1IgoJCQlyZXR1cm4gZS5rZXlDb2RlID09PSAxMTY7CgkJfQoKCQlsZXQgaXNIYW5kbGluZ1Njcm9sbCA9IGZhbHNlOwoKCQkvKioKCQkgKiBAcGFyYW0ge1doZWVsRXZlbnR9IGV2ZW50CgkJICovCgkJY29uc3QgaGFuZGxlV2hlZWwgPSAoZXZlbnQpID0+IHsKCQkJaWYgKGlzSGFuZGxpbmdTY3JvbGwpIHsKCQkJCXJldHVybjsKCQkJfQoKCQkJaG9zdE1lc3NhZ2luZy5wb3N0TWVzc2FnZSgnZGlkLXNjcm9sbC13aGVlbCcsIHsKCQkJCWRlbHRhTW9kZTogZXZlbnQuZGVsdGFNb2RlLAoJCQkJZGVsdGFYOiBldmVudC5kZWx0YVgsCgkJCQlkZWx0YVk6IGV2ZW50LmRlbHRhWSwKCQkJCWRlbHRhWjogZXZlbnQuZGVsdGFaLAoJCQkJZGV0YWlsOiBldmVudC5kZXRhaWwsCgkJCQl0eXBlOiBldmVudC50eXBlCgkJCX0pOwoJCX07CgoJCS8qKgoJCSAqIEBwYXJhbSB7RXZlbnR9IGV2ZW50CgkJICovCgkJY29uc3QgaGFuZGxlSW5uZXJTY3JvbGwgPSAoZXZlbnQpID0+IHsKCQkJaWYgKGlzSGFuZGxpbmdTY3JvbGwpIHsKCQkJCXJldHVybjsKCQkJfQoKCQkJY29uc3QgdGFyZ2V0ID0gLyoqIEB0eXBlIHtIVE1MRG9jdW1lbnQgfCBudWxsfSAqLyAoZXZlbnQudGFyZ2V0KTsKCQkJY29uc3QgY3VycmVudFRhcmdldCA9IC8qKiBAdHlwZSB7V2luZG93IHwgbnVsbH0gKi8gKGV2ZW50LmN1cnJlbnRUYXJnZXQpOwoJCQlpZiAoIWN1cnJlbnRUYXJnZXQgfHwgIXRhcmdldD8uYm9keSkgewoJCQkJcmV0dXJuOwoJCQl9CgoJCQljb25zdCBwcm9ncmVzcyA9IGN1cnJlbnRUYXJnZXQuc2Nyb2xsWSAvIHRhcmdldC5ib2R5LmNsaWVudEhlaWdodDsKCQkJaWYgKGlzTmFOKHByb2dyZXNzKSkgewoJCQkJcmV0dXJuOwoJCQl9CgoJCQlpc0hhbmRsaW5nU2Nyb2xsID0gdHJ1ZTsKCQkJd2luZG93LnJlcXVlc3RBbmltYXRpb25GcmFtZSgoKSA9PiB7CgkJCQl0cnkgewoJCQkJCWhvc3RNZXNzYWdpbmcucG9zdE1lc3NhZ2UoJ2RpZC1zY3JvbGwnLCB7IHNjcm9sbFlQZXJjZW50YWdlOiBwcm9ncmVzcyB9KTsKCQkJCX0gY2F0Y2ggKGUpIHsKCQkJCQkvLyBub29wCgkJCQl9CgkJCQlpc0hhbmRsaW5nU2Nyb2xsID0gZmFsc2U7CgkJCX0pOwoJCX07CgoJCWZ1bmN0aW9uIGhhbmRsZUlubmVyRHJhZ1N0YXJ0RXZlbnQoLyoqIEB0eXBlIHtEcmFnRXZlbnR9ICovIGUpIHsKCQkJaWYgKGUuZGVmYXVsdFByZXZlbnRlZCkgewoJCQkJLy8gRXh0ZW5zaW9uIGNvZGUgaGFzIGFscmVhZHkgaGFuZGxlZCB0aGlzIGV2ZW50CgkJCQlyZXR1cm47CgkJCX0KCgkJCWlmICghZS5kYXRhVHJhbnNmZXIgfHwgZS5zaGlmdEtleSkgewoJCQkJcmV0dXJuOwoJCQl9CgoJCQkvLyBPbmx5IGhhbmRsZSBkcmFncyBmcm9tIG91dHNpZGUgZWRpdG9yIGZvciBub3cKCQkJaWYgKGUuZGF0YVRyYW5zZmVyLml0ZW1zLmxlbmd0aCAmJiBBcnJheS5wcm90b3R5cGUuZXZlcnkuY2FsbChlLmRhdGFUcmFuc2Zlci5pdGVtcywgaXRlbSA9PiBpdGVtLmtpbmQgPT09ICdmaWxlJykpIHsKCQkJCWhvc3RNZXNzYWdpbmcucG9zdE1lc3NhZ2UoJ2RyYWctc3RhcnQnLCB1bmRlZmluZWQpOwoJCQl9CgkJfQoKCgkJZnVuY3Rpb24gaGFuZGxlSW5uZXJEcmFnRXZlbnQoLyoqIEB0eXBlIHtEcmFnRXZlbnR9ICovIGUpIHsKCQkJLyoqCgkJCSAqIFRvIGVuc3VyZSB0aGF0IHRoZSBkcm9wIGV2ZW50IGFsd2F5cyBmaXJlcyBhcyBleHBlY3RlZCwgeW91IHNob3VsZCBhbHdheXMgaW5jbHVkZSBhIHByZXZlbnREZWZhdWx0KCkgY2FsbCBpbiB0aGUgcGFydCBvZiB5b3VyIGNvZGUgd2hpY2ggaGFuZGxlcyB0aGUgZHJhZ292ZXIgZXZlbnQuCgkJCSAqIHNvdXJjZTogaHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvZW4tVVMvZG9jcy9XZWIvQVBJL0hUTUxFbGVtZW50L2Ryb3BfZXZlbnQKCQkJICoqLwoJCQllLnByZXZlbnREZWZhdWx0KCk7CgoJCQlpZiAoIWUuZGF0YVRyYW5zZmVyKSB7CgkJCQlyZXR1cm47CgkJCX0KCgoJCQkvLyBPbmx5IGhhbmRsZSBkcmFncyBmcm9tIG91dHNpZGUgZWRpdG9yIGZvciBub3cKCQkJaWYgKGUuZGF0YVRyYW5zZmVyLml0ZW1zLmxlbmd0aCAmJiBBcnJheS5wcm90b3R5cGUuZXZlcnkuY2FsbChlLmRhdGFUcmFuc2Zlci5pdGVtcywgaXRlbSA9PiBpdGVtLmtpbmQgPT09ICdmaWxlJykpIHsKCQkJCWhvc3RNZXNzYWdpbmcucG9zdE1lc3NhZ2UoJ2RyYWcnLCB7CgkJCQkJc2hpZnRLZXk6IGUuc2hpZnRLZXkKCQkJCX0pOwoJCQl9CgoJCX0KCgkJZnVuY3Rpb24gaGFuZGxlSW5uZXJEcm9wRXZlbnQoLyoqQHR5cGUge0RyYWdFdmVudH0gKi9lKSB7CgkJCWUucHJldmVudERlZmF1bHQoKTsKCQl9CgoJCS8qKgoJCSAqIEBwYXJhbSB7KCkgPT4gdm9pZH0gY2FsbGJhY2sKCQkgKi8KCQlmdW5jdGlvbiBvbkRvbVJlYWR5KGNhbGxiYWNrKSB7CgkJCWlmIChkb2N1bWVudC5yZWFkeVN0YXRlID09PSAnaW50ZXJhY3RpdmUnIHx8IGRvY3VtZW50LnJlYWR5U3RhdGUgPT09ICdjb21wbGV0ZScpIHsKCQkJCWNhbGxiYWNrKCk7CgkJCX0gZWxzZSB7CgkJCQlkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCdET01Db250ZW50TG9hZGVkJywgY2FsbGJhY2spOwoJCQl9CgkJfQoKCQlmdW5jdGlvbiBhcmVTZXJ2aWNlV29ya2Vyc0VuYWJsZWQoKSB7CgkJCXRyeSB7CgkJCQlyZXR1cm4gISFuYXZpZ2F0b3Iuc2VydmljZVdvcmtlcjsKCQkJfSBjYXRjaCAoZSkgewoJCQkJcmV0dXJuIGZhbHNlOwoJCQl9CgkJfQoKCQkvKioKCQkgKiBAcGFyYW0ge2ltcG9ydCgnLi4vd2Vidmlld01lc3NhZ2VzJykuVXBkYXRlQ29udGVudEV2ZW50fSBkYXRhCgkJICogQHJldHVybiB7c3RyaW5nfQoJCSAqLwoJCWZ1bmN0aW9uIHRvQ29udGVudEh0bWwoZGF0YSkgewoJCQljb25zdCBvcHRpb25zID0gZGF0YS5vcHRpb25zOwoJCQljb25zdCB0ZXh0ID0gZGF0YS5jb250ZW50czsKCQkJY29uc3QgbmV3RG9jdW1lbnQgPSBuZXcgRE9NUGFyc2VyKCkucGFyc2VGcm9tU3RyaW5nKHRleHQsICd0ZXh0L2h0bWwnKTsKCgkJCW5ld0RvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJ2EnKS5mb3JFYWNoKGEgPT4gewoJCQkJaWYgKCFhLnRpdGxlKSB7CgkJCQkJY29uc3QgaHJlZiA9IGEuZ2V0QXR0cmlidXRlKCdocmVmJyk7CgkJCQkJaWYgKHR5cGVvZiBocmVmID09PSAnc3RyaW5nJykgewoJCQkJCQlhLnRpdGxlID0gaHJlZjsKCQkJCQl9CgkJCQl9CgkJCX0pOwoKCQkJLy8gU2V0IGRlZmF1bHQgYXJpYSByb2xlCgkJCWlmICghbmV3RG9jdW1lbnQuYm9keS5oYXNBdHRyaWJ1dGUoJ3JvbGUnKSkgewoJCQkJbmV3RG9jdW1lbnQuYm9keS5zZXRBdHRyaWJ1dGUoJ3JvbGUnLCAnZG9jdW1lbnQnKTsKCQkJfQoKCQkJLy8gSW5qZWN0IGRlZmF1bHQgc2NyaXB0CgkJCWlmIChvcHRpb25zLmFsbG93U2NyaXB0cykgewoJCQkJY29uc3QgZGVmYXVsdFNjcmlwdCA9IG5ld0RvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpOwoJCQkJZGVmYXVsdFNjcmlwdC5pZCA9ICdfdnNjb2RlQXBpU2NyaXB0JzsKCQkJCWRlZmF1bHRTY3JpcHQudGV4dENvbnRlbnQgPSBnZXRWc0NvZGVBcGlTY3JpcHQob3B0aW9ucy5hbGxvd011bHRpcGxlQVBJQWNxdWlyZSwgZGF0YS5zdGF0ZSk7CgkJCQluZXdEb2N1bWVudC5oZWFkLnByZXBlbmQoZGVmYXVsdFNjcmlwdCk7CgkJCX0KCgkJCS8vIEluamVjdCBkZWZhdWx0IHN0eWxlcwoJCQluZXdEb2N1bWVudC5oZWFkLnByZXBlbmQoZGVmYXVsdFN0eWxlcy5jbG9uZU5vZGUodHJ1ZSkpOwoKCQkJYXBwbHlTdHlsZXMobmV3RG9jdW1lbnQsIG5ld0RvY3VtZW50LmJvZHkpOwoKCQkJLy8gU3RyaXAgb3V0IHVuc3VwcG9ydGVkIGh0dHAtZXF1aXYgdGFncwoJCQlmb3IgKGNvbnN0IG1ldGFFbGVtZW50IG9mIEFycmF5LmZyb20obmV3RG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnbWV0YScpKSkgewoJCQkJY29uc3QgaHR0cEVxdWl2ID0gbWV0YUVsZW1lbnQuZ2V0QXR0cmlidXRlKCdodHRwLWVxdWl2Jyk7CgkJCQlpZiAoaHR0cEVxdWl2ICYmICEvXihjb250ZW50LXNlY3VyaXR5LXBvbGljeXxkZWZhdWx0LXN0eWxlfGNvbnRlbnQtdHlwZSkkL2kudGVzdChodHRwRXF1aXYpKSB7CgkJCQkJY29uc29sZS53YXJuKGBSZW1vdmluZyB1bnN1cHBvcnRlZCBtZXRhIGh0dHAtZXF1aXY6ICR7aHR0cEVxdWl2fWApOwoJCQkJCW1ldGFFbGVtZW50LnJlbW92ZSgpOwoJCQkJfQoJCQl9CgoJCQkvLyBDaGVjayBmb3IgQ1NQCgkJCWNvbnN0IGNzcCA9IG5ld0RvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJ21ldGFbaHR0cC1lcXVpdj0iQ29udGVudC1TZWN1cml0eS1Qb2xpY3kiXScpOwoJCQlpZiAoIWNzcCkgewoJCQkJaG9zdE1lc3NhZ2luZy5wb3N0TWVzc2FnZSgnbm8tY3NwLWZvdW5kJywgdW5kZWZpbmVkKTsKCQkJfSBlbHNlIHsKCQkJCXRyeSB7CgkJCQkJLy8gQXR0ZW1wdCB0byByZXdyaXRlIENTUHMgdGhhdCBoYXJkY29kZSBvbGQtc3R5bGUgcmVzb3VyY2UgZW5kcG9pbnQKCQkJCQljb25zdCBjc3BDb250ZW50ID0gY3NwLmdldEF0dHJpYnV0ZSgnY29udGVudCcpOwoJCQkJCWlmIChjc3BDb250ZW50KSB7CgkJCQkJCWNvbnN0IG5ld0NzcCA9IGNzcENvbnRlbnQucmVwbGFjZSgvKHZzY29kZS13ZWJ2aWV3LXJlc291cmNlfHZzY29kZS1yZXNvdXJjZSk6KD89KFxzfDt8JCkpL2csIGRhdGEuY3NwU291cmNlKTsKCQkJCQkJY3NwLnNldEF0dHJpYnV0ZSgnY29udGVudCcsIG5ld0NzcCk7CgkJCQkJfQoJCQkJfSBjYXRjaCAoZSkgewoJCQkJCWNvbnNvbGUuZXJyb3IoYENvdWxkIG5vdCByZXdyaXRlIGNzcDogJHtlfWApOwoJCQkJfQoJCQl9CgoJCQkvLyBzZXQgRE9DVFlQRSBmb3IgbmV3RG9jdW1lbnQgZXhwbGljaXRseSBhcyBET01QYXJzZXIucGFyc2VGcm9tU3RyaW5nIHN0cmlwcyBpdCBvZmYKCQkJLy8gYW5kIERPQ1RZUEUgaXMgbmVlZGVkIGluIHRoZSBpZnJhbWUgdG8gZW5zdXJlIHRoYXQgdGhlIHVzZXIgYWdlbnQgc3R5bGVzaGVldCBpcyBjb3JyZWN0bHkgb3ZlcnJpZGRlbgoJCQlyZXR1cm4gJzwhRE9DVFlQRSBodG1sPlxuJyArIG5ld0RvY3VtZW50LmRvY3VtZW50RWxlbWVudC5vdXRlckhUTUw7CgkJfQoKCQkvLyBBbHNvIGZvcndhcmQgZXZlbnRzIGJlZm9yZSB0aGUgY29udGVudHMgb2YgdGhlIHdlYnZpZXcgaGF2ZSBsb2FkZWQKCQl3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcigna2V5ZG93bicsIGhhbmRsZUlubmVyS2V5ZG93bik7CgkJd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ2tleXVwJywgaGFuZGxlSW5uZXJLZXl1cCk7CgkJd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ2RyYWdlbnRlcicsIGhhbmRsZUlubmVyRHJhZ1N0YXJ0RXZlbnQpOwoJCXdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdkcmFnb3ZlcicsIGhhbmRsZUlubmVyRHJhZ0V2ZW50KTsKCQl3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcignZHJhZycsIGhhbmRsZUlubmVyRHJhZ0V2ZW50KTsKCQl3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcignZHJvcCcsIGhhbmRsZUlubmVyRHJvcEV2ZW50KTsKCgoJCW9uRG9tUmVhZHkoKCkgPT4gewoJCQlpZiAoIWRvY3VtZW50LmJvZHkpIHsKCQkJCXJldHVybjsKCQkJfQoKCQkJaG9zdE1lc3NhZ2luZy5vbk1lc3NhZ2UoJ3N0eWxlcycsIChfZXZlbnQsIGRhdGEpID0+IHsKCQkJCSsrc3R5bGVWZXJzaW9uOwoKCQkJCWluaXREYXRhLnN0eWxlcyA9IGRhdGEuc3R5bGVzOwoJCQkJaW5pdERhdGEuYWN0aXZlVGhlbWUgPSBkYXRhLmFjdGl2ZVRoZW1lOwoJCQkJaW5pdERhdGEudGhlbWVMYWJlbCA9IGRhdGEudGhlbWVMYWJlbDsKCQkJCWluaXREYXRhLnRoZW1lSWQgPSBkYXRhLnRoZW1lSWQ7CgkJCQlpbml0RGF0YS5yZWR1Y2VNb3Rpb24gPSBkYXRhLnJlZHVjZU1vdGlvbjsKCQkJCWluaXREYXRhLnNjcmVlblJlYWRlciA9IGRhdGEuc2NyZWVuUmVhZGVyOwoKCQkJCWNvbnN0IHRhcmdldCA9IGdldEFjdGl2ZUZyYW1lKCk7CgkJCQlpZiAoIXRhcmdldCkgewoJCQkJCXJldHVybjsKCQkJCX0KCgkJCQlpZiAodGFyZ2V0LmNvbnRlbnREb2N1bWVudCkgewoJCQkJCWFwcGx5U3R5bGVzKHRhcmdldC5jb250ZW50RG9jdW1lbnQsIHRhcmdldC5jb250ZW50RG9jdW1lbnQuYm9keSk7CgkJCQl9CgkJCX0pOwoKCQkJLy8gcHJvcGFnYXRlIGZvY3VzCgkJCWhvc3RNZXNzYWdpbmcub25NZXNzYWdlKCdmb2N1cycsICgpID0+IHsKCQkJCWNvbnN0IGFjdGl2ZUZyYW1lID0gZ2V0QWN0aXZlRnJhbWUoKTsKCQkJCWlmICghYWN0aXZlRnJhbWUgfHwgIWFjdGl2ZUZyYW1lLmNvbnRlbnRXaW5kb3cpIHsKCQkJCQkvLyBGb2N1cyB0aGUgdG9wIGxldmVsIHdlYnZpZXcgaW5zdGVhZAoJCQkJCXdpbmRvdy5mb2N1cygpOwoJCQkJCXJldHVybjsKCQkJCX0KCgkJCQlpZiAoZG9jdW1lbnQuYWN0aXZlRWxlbWVudCA9PT0gYWN0aXZlRnJhbWUpIHsKCQkJCQkvLyBXZSBhcmUgYWxyZWFkeSBmb2N1c2VkIG9uIHRoZSBpZnJhbWUgKG9yIG9uZSBvZiBpdHMgY2hpbGRyZW4pIHNvIG5vIG5lZWQKCQkJCQkvLyB0byByZWZvY3VzLgoJCQkJCXJldHVybjsKCQkJCX0KCgkJCQlhY3RpdmVGcmFtZS5jb250ZW50V2luZG93LmZvY3VzKCk7CgkJCX0pOwoKCQkJLy8gdXBkYXRlIGlmcmFtZS1jb250ZW50cwoJCQlsZXQgdXBkYXRlSWQgPSAwOwoJCQlob3N0TWVzc2FnaW5nLm9uTWVzc2FnZSgnY29udGVudCcsIGFzeW5jIChfZXZlbnQsIC8qKiBAdHlwZSB7aW1wb3J0KCcuLi93ZWJ2aWV3TWVzc2FnZXMnKS5VcGRhdGVDb250ZW50RXZlbnR9ICovIGRhdGEpID0+IHsKCQkJCXBlcmZNYXJrKCdjb250ZW50L3N0YXJ0ZWQnKTsKCgkJCQljb25zdCBjdXJyZW50VXBkYXRlSWQgPSArK3VwZGF0ZUlkOwoJCQkJdHJ5IHsKCQkJCQlhd2FpdCB3b3JrZXJSZWFkeTsKCQkJCQlwZXJmTWFyaygnY29udGVudC93b3JrZXJSZWFkeScpOwoJCQkJfSBjYXRjaCAoZSkgewoJCQkJCWNvbnNvbGUuZXJyb3IoYFdlYnZpZXcgZmF0YWwgZXJyb3I6ICR7ZX1gKTsKCQkJCQlob3N0TWVzc2FnaW5nLnBvc3RNZXNzYWdlKCdmYXRhbC1lcnJvcicsIHsgbWVzc2FnZTogZSArICcnIH0pOwoJCQkJCXJldHVybjsKCQkJCX0KCgkJCQlpZiAoY3VycmVudFVwZGF0ZUlkICE9PSB1cGRhdGVJZCkgewoJCQkJCXJldHVybjsKCQkJCX0KCgkJCQljb25zdCBvcHRpb25zID0gZGF0YS5vcHRpb25zOwoJCQkJY29uc3QgbmV3RG9jdW1lbnQgPSB0b0NvbnRlbnRIdG1sKGRhdGEpOwoKCQkJCWNvbnN0IGluaXRpYWxTdHlsZVZlcnNpb24gPSBzdHlsZVZlcnNpb247CgoJCQkJY29uc3QgZnJhbWUgPSBnZXRBY3RpdmVGcmFtZSgpOwoJCQkJY29uc3Qgd2FzRmlyc3RMb2FkID0gZmlyc3RMb2FkOwoJCQkJLy8ga2VlcCBjdXJyZW50IHNjcm9sbFkgYXJvdW5kIGFuZCB1c2UgbGF0ZXIKCQkJCS8qKiBAdHlwZSB7KGJvZHk6IEhUTUxFbGVtZW50LCB3aW5kb3c6IFdpbmRvdykgPT4gdm9pZH0gKi8KCQkJCWxldCBzZXRJbml0aWFsU2Nyb2xsUG9zaXRpb247CgkJCQlpZiAoZmlyc3RMb2FkKSB7CgkJCQkJZmlyc3RMb2FkID0gZmFsc2U7CgkJCQkJc2V0SW5pdGlhbFNjcm9sbFBvc2l0aW9uID0gKGJvZHksIHdpbmRvdykgPT4gewoJCQkJCQlpZiAodHlwZW9mIGluaXREYXRhLmluaXRpYWxTY3JvbGxQcm9ncmVzcyA9PT0gJ251bWJlcicgJiYgIWlzTmFOKGluaXREYXRhLmluaXRpYWxTY3JvbGxQcm9ncmVzcykpIHsKCQkJCQkJCWlmICh3aW5kb3cuc2Nyb2xsWSA9PT0gMCkgewoJCQkJCQkJCXdpbmRvdy5zY3JvbGwoMCwgYm9keS5jbGllbnRIZWlnaHQgKiBpbml0RGF0YS5pbml0aWFsU2Nyb2xsUHJvZ3Jlc3MpOwoJCQkJCQkJfQoJCQkJCQl9CgkJCQkJfTsKCQkJCX0gZWxzZSB7CgkJCQkJY29uc3Qgc2Nyb2xsWSA9IGZyYW1lICYmIGZyYW1lLmNvbnRlbnREb2N1bWVudCAmJiBmcmFtZS5jb250ZW50RG9jdW1lbnQuYm9keSA/IGFzc2VydElzRGVmaW5lZChmcmFtZS5jb250ZW50V2luZG93KS5zY3JvbGxZIDogMDsKCQkJCQlzZXRJbml0aWFsU2Nyb2xsUG9zaXRpb24gPSAoYm9keSwgd2luZG93KSA9PiB7CgkJCQkJCWlmICh3aW5kb3cuc2Nyb2xsWSA9PT0gMCkgewoJCQkJCQkJd2luZG93LnNjcm9sbCgwLCBzY3JvbGxZKTsKCQkJCQkJfQoJCQkJCX07CgkJCQl9CgoJCQkJLy8gQ2xlYW4gdXAgb2xkIHBlbmRpbmcgZnJhbWVzIGFuZCBzZXQgY3VycmVudCBvbmUgYXMgbmV3IG9uZQoJCQkJY29uc3QgcHJldmlvdXNQZW5kaW5nRnJhbWUgPSBnZXRQZW5kaW5nRnJhbWUoKTsKCQkJCWlmIChwcmV2aW91c1BlbmRpbmdGcmFtZSkgewoJCQkJCXByZXZpb3VzUGVuZGluZ0ZyYW1lLnNldEF0dHJpYnV0ZSgnaWQnLCAnJyk7CgkJCQkJcHJldmlvdXNQZW5kaW5nRnJhbWUucmVtb3ZlKCk7CgkJCQl9CgkJCQlpZiAoIXdhc0ZpcnN0TG9hZCkgewoJCQkJCXBlbmRpbmdNZXNzYWdlcyA9IFtdOwoJCQkJfQoKCQkJCWNvbnN0IG5ld0ZyYW1lID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnaWZyYW1lJyk7CgkJCQluZXdGcmFtZS50aXRsZSA9IGRhdGEudGl0bGU7CgkJCQluZXdGcmFtZS5zZXRBdHRyaWJ1dGUoJ2lkJywgJ3BlbmRpbmctZnJhbWUnKTsKCQkJCW5ld0ZyYW1lLnNldEF0dHJpYnV0ZSgnZnJhbWVib3JkZXInLCAnMCcpOwoKCQkJCWNvbnN0IHNhbmRib3hSdWxlcyA9IG5ldyBTZXQoWydhbGxvdy1zYW1lLW9yaWdpbicsICdhbGxvdy1wb2ludGVyLWxvY2snXSk7CgkJCQlpZiAob3B0aW9ucy5hbGxvd1NjcmlwdHMpIHsKCQkJCQlzYW5kYm94UnVsZXMuYWRkKCdhbGxvdy1zY3JpcHRzJyk7CgkJCQkJc2FuZGJveFJ1bGVzLmFkZCgnYWxsb3ctZG93bmxvYWRzJyk7CgkJCQl9CgkJCQlpZiAob3B0aW9ucy5hbGxvd0Zvcm1zKSB7CgkJCQkJc2FuZGJveFJ1bGVzLmFkZCgnYWxsb3ctZm9ybXMnKTsKCQkJCX0KCQkJCW5ld0ZyYW1lLnNldEF0dHJpYnV0ZSgnc2FuZGJveCcsIEFycmF5LmZyb20oc2FuZGJveFJ1bGVzKS5qb2luKCcgJykpOwoKCQkJCWNvbnN0IGFsbG93UnVsZXMgPSBbJ2Nyb3NzLW9yaWdpbi1pc29sYXRlZDsnLCAnYXV0b3BsYXk7JywgJ2xvY2FsLW5ldHdvcmstYWNjZXNzOyddOwoJCQkJaWYgKCFpc0ZpcmVmb3ggJiYgb3B0aW9ucy5hbGxvd1NjcmlwdHMpIHsKCQkJCQlhbGxvd1J1bGVzLnB1c2goJ2NsaXBib2FyZC1yZWFkOycsICdjbGlwYm9hcmQtd3JpdGU7Jyk7CgkJCQl9CgkJCQluZXdGcmFtZS5zZXRBdHRyaWJ1dGUoJ2FsbG93JywgYWxsb3dSdWxlcy5qb2luKCcgJykpOwoJCQkJLy8gV2Ugc2hvdWxkIGp1c3QgYmUgYWJsZSB0byB1c2Ugc3JjZG9jLCBidXQgSSB3YXNuJ3QKCQkJCS8vIHNlZWluZyB0aGUgc2VydmljZSB3b3JrZXIgYXBwbHlpbmcgcHJvcGVybHkuCgkJCQkvLyBGYWtlIGxvYWQgYW4gZW1wdHkgb24gdGhlIGNvcnJlY3Qgb3JpZ2luIGFuZCB0aGVuIHdyaXRlIHJlYWwgaHRtbAoJCQkJLy8gaW50byBpdCB0byBnZXQgYXJvdW5kIHRoaXMuCgkJCQljb25zdCBmYWtlVXJsUGFyYW1zID0gbmV3IFVSTFNlYXJjaFBhcmFtcyh7IGlkOiBJRCB9KTsKCQkJCWlmIChnbG9iYWxUaGlzLmNyb3NzT3JpZ2luSXNvbGF0ZWQpIHsKCQkJCQlmYWtlVXJsUGFyYW1zLnNldCgndnNjb2RlLWNvaScsICczJyk7IC8qQ09PUCtDT0VQKi8KCQkJCX0KCQkJCW5ld0ZyYW1lLnNyYyA9IGAke2Zha2VIdG1sVXJpfT8ke2Zha2VVcmxQYXJhbXMudG9TdHJpbmcoKX1gOwoKCQkJCW5ld0ZyYW1lLnN0eWxlLmNzc1RleHQgPSAnZGlzcGxheTogYmxvY2s7IG1hcmdpbjogMDsgb3ZlcmZsb3c6IGhpZGRlbjsgcG9zaXRpb246IGFic29sdXRlOyB3aWR0aDogMTAwJTsgaGVpZ2h0OiAxMDAlOyB2aXNpYmlsaXR5OiBoaWRkZW4nOwoJCQkJZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChuZXdGcmFtZSk7CgoJCQkJbmV3RnJhbWUuY29udGVudFdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdrZXlkb3duJywgaGFuZGxlSW5uZXJLZXlkb3duKTsKCQkJCW5ld0ZyYW1lLmNvbnRlbnRXaW5kb3cuYWRkRXZlbnRMaXN0ZW5lcigna2V5dXAnLCBoYW5kbGVJbm5lcktleXVwKTsKCgkJCQkvKioKCQkJCSAqIEBwYXJhbSB7RG9jdW1lbnR9IGNvbnRlbnREb2N1bWVudAoJCQkJICovCgkJCQlmdW5jdGlvbiBvbkZyYW1lTG9hZGVkKGNvbnRlbnREb2N1bWVudCkgewoJCQkJCXBlcmZNYXJrKCdjb250ZW50L2lubmVyRnJhbWVMb2FkZWQnKQoKCQkJCQkvLyBXb3JrYXJvdW5kIGZvciBodHRwczovL2J1Z3MuY2hyb21pdW0ub3JnL3AvY2hyb21pdW0vaXNzdWVzL2RldGFpbD9pZD05NzgzMjUKCQkJCQlzZXRUaW1lb3V0KCgpID0+IHsKCQkJCQkJY29udGVudERvY3VtZW50Lm9wZW4oKTsKCQkJCQkJY29udGVudERvY3VtZW50LndyaXRlKG5ld0RvY3VtZW50KTsKCQkJCQkJY29udGVudERvY3VtZW50LmNsb3NlKCk7CgkJCQkJCWhvb2t1cE9uTG9hZEhhbmRsZXJzKG5ld0ZyYW1lKTsKCQkJCQkJcGVyZk1hcmsoJ2NvbnRlbnQvd3JvdGVJbm5lckNvbnRlbnQnKQoKCQkJCQkJaWYgKGluaXRpYWxTdHlsZVZlcnNpb24gIT09IHN0eWxlVmVyc2lvbikgewoJCQkJCQkJYXBwbHlTdHlsZXMoY29udGVudERvY3VtZW50LCBjb250ZW50RG9jdW1lbnQuYm9keSk7CgkJCQkJCX0KCQkJCQl9LCAwKTsKCQkJCX0KCgkJCQlpZiAoIW9wdGlvbnMuYWxsb3dTY3JpcHRzICYmIGlzU2FmYXJpKSB7CgkJCQkJLy8gT24gU2FmYXJpIGZvciBpZnJhbWVzIHdpdGggc2NyaXB0cyBkaXNhYmxlZCwgdGhlIGBET01Db250ZW50TG9hZGVkYCBuZXZlciBzZWVtcyB0byBiZSBmaXJlZDogaHR0cHM6Ly9idWdzLndlYmtpdC5vcmcvc2hvd19idWcuY2dpP2lkPTMzNjA0CgkJCQkJLy8gVXNlIHBvbGxpbmcgaW5zdGVhZC4KCQkJCQljb25zdCBpbnRlcnZhbCA9IHNldEludGVydmFsKCgpID0+IHsKCQkJCQkJLy8gSWYgdGhlIGZyYW1lIGlzIG5vIGxvbmdlciBtb3VudGVkLCBsb2FkaW5nIGhhcyBzdG9wcGVkCgkJCQkJCWlmICghbmV3RnJhbWUucGFyZW50RWxlbWVudCkgewoJCQkJCQkJY2xlYXJJbnRlcnZhbChpbnRlcnZhbCk7CgkJCQkJCQlyZXR1cm47CgkJCQkJCX0KCgkJCQkJCWNvbnN0IGNvbnRlbnREb2N1bWVudCA9IGFzc2VydElzRGVmaW5lZChuZXdGcmFtZS5jb250ZW50RG9jdW1lbnQpOwoJCQkJCQlpZiAoY29udGVudERvY3VtZW50LmxvY2F0aW9uLnBhdGhuYW1lLmVuZHNXaXRoKCcvZmFrZS5odG1sJykgJiYgY29udGVudERvY3VtZW50LnJlYWR5U3RhdGUgIT09ICdsb2FkaW5nJykgewoJCQkJCQkJY2xlYXJJbnRlcnZhbChpbnRlcnZhbCk7CgkJCQkJCQlvbkZyYW1lTG9hZGVkKGNvbnRlbnREb2N1bWVudCk7CgkJCQkJCX0KCQkJCQl9LCAxMCk7CgkJCQl9IGVsc2UgewoJCQkJCWFzc2VydElzRGVmaW5lZChuZXdGcmFtZS5jb250ZW50V2luZG93KS5hZGRFdmVudExpc3RlbmVyKCdET01Db250ZW50TG9hZGVkJywgZSA9PiB7CgkJCQkJCWNvbnN0IGNvbnRlbnREb2N1bWVudCA9IGUudGFyZ2V0ID8gKC8qKiBAdHlwZSB7SFRNTERvY3VtZW50fSAqLyAoZS50YXJnZXQpKSA6IHVuZGVmaW5lZDsKCQkJCQkJb25GcmFtZUxvYWRlZChhc3NlcnRJc0RlZmluZWQoY29udGVudERvY3VtZW50KSk7CgkJCQkJfSk7CgkJCQl9CgoJCQkJLyoqCgkJCQkgKiBAcGFyYW0ge0RvY3VtZW50fSBjb250ZW50RG9jdW1lbnQKCQkJCSAqIEBwYXJhbSB7V2luZG93fSBjb250ZW50V2luZG93CgkJCQkgKi8KCQkJCWNvbnN0IG9uTG9hZCA9IChjb250ZW50RG9jdW1lbnQsIGNvbnRlbnRXaW5kb3cpID0+IHsKCQkJCQlpZiAoY29udGVudERvY3VtZW50ICYmIGNvbnRlbnREb2N1bWVudC5ib2R5KSB7CgkJCQkJCS8vIFdvcmthcm91bmQgZm9yIGh0dHBzOi8vZ2l0aHViLmNvbS9taWNyb3NvZnQvdnNjb2RlL2lzc3Vlcy8xMjg2NQoJCQkJCQkvLyBjaGVjayBuZXcgc2Nyb2xsWSBhbmQgcmVzZXQgaWYgbmVjZXNzYXJ5CgkJCQkJCXNldEluaXRpYWxTY3JvbGxQb3NpdGlvbihjb250ZW50RG9jdW1lbnQuYm9keSwgY29udGVudFdpbmRvdyk7CgkJCQkJfQoKCQkJCQljb25zdCBuZXdGcmFtZSA9IGdldFBlbmRpbmdGcmFtZSgpOwoJCQkJCWlmIChuZXdGcmFtZSAmJiBuZXdGcmFtZS5jb250ZW50RG9jdW1lbnQgJiYgbmV3RnJhbWUuY29udGVudERvY3VtZW50ID09PSBjb250ZW50RG9jdW1lbnQpIHsKCQkJCQkJY29uc3Qgd2FzRm9jdXNlZCA9IGRvY3VtZW50Lmhhc0ZvY3VzKCk7CgkJCQkJCWNvbnN0IG9sZEFjdGl2ZUZyYW1lID0gZ2V0QWN0aXZlRnJhbWUoKTsKCQkJCQkJb2xkQWN0aXZlRnJhbWU/LnJlbW92ZSgpOwoJCQkJCQkvLyBTdHlsZXMgbWF5IGhhdmUgY2hhbmdlZCBzaW5jZSB3ZSBjcmVhdGVkIHRoZSBlbGVtZW50LiBNYWtlIHN1cmUgd2UgcmUtc3R5bGUKCQkJCQkJaWYgKGluaXRpYWxTdHlsZVZlcnNpb24gIT09IHN0eWxlVmVyc2lvbikgewoJCQkJCQkJYXBwbHlTdHlsZXMobmV3RnJhbWUuY29udGVudERvY3VtZW50LCBuZXdGcmFtZS5jb250ZW50RG9jdW1lbnQuYm9keSk7CgkJCQkJCX0KCQkJCQkJbmV3RnJhbWUuc2V0QXR0cmlidXRlKCdpZCcsICdhY3RpdmUtZnJhbWUnKTsKCQkJCQkJbmV3RnJhbWUuc3R5bGUudmlzaWJpbGl0eSA9ICd2aXNpYmxlJzsKCgkJCQkJCWNvbnRlbnRXaW5kb3cuYWRkRXZlbnRMaXN0ZW5lcignc2Nyb2xsJywgaGFuZGxlSW5uZXJTY3JvbGwpOwoJCQkJCQljb250ZW50V2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ3doZWVsJywgaGFuZGxlV2hlZWwpOwoKCQkJCQkJaWYgKHdhc0ZvY3VzZWQpIHsKCQkJCQkJCWNvbnRlbnRXaW5kb3cuZm9jdXMoKTsKCQkJCQkJfQoKCQkJCQkJLy8gR2V0IGJvZHkgc2l6ZQoJCQkJCQljb25zdCBkb2NFbCA9IGNvbnRlbnREb2N1bWVudC5kb2N1bWVudEVsZW1lbnQ7CgkJCQkJCWlmIChkb2NFbCkgewoJCQkJCQkJY29uc3QgcG9zdFNpemUgPSAoKSA9PiB7CgkJCQkJCQkJaG9zdE1lc3NhZ2luZy5wb3N0TWVzc2FnZSgndXBkYXRlZC1pbnRyaW5zaWMtY29udGVudC1zaXplJywgewoJCQkJCQkJCQl3aWR0aDogZG9jRWwub2Zmc2V0V2lkdGgsCgkJCQkJCQkJCWhlaWdodDogZG9jRWwub2Zmc2V0SGVpZ2h0CgkJCQkJCQkJfSk7CgkJCQkJCQl9OwoKCQkJCQkJCWNvbnN0IHJlc2l6ZU9ic2VydmVyID0gbmV3IFJlc2l6ZU9ic2VydmVyKHBvc3RTaXplKTsKCQkJCQkJCXJlc2l6ZU9ic2VydmVyLm9ic2VydmUoZG9jRWwpOwoJCQkJCQkJcG9zdFNpemUoKTsKCQkJCQkJfQoKCQkJCQkJcGVuZGluZ01lc3NhZ2VzLmZvckVhY2goKG1lc3NhZ2UpID0+IHsKCQkJCQkJCWNvbnRlbnRXaW5kb3cucG9zdE1lc3NhZ2UobWVzc2FnZS5tZXNzYWdlLCB3aW5kb3cub3JpZ2luLCBtZXNzYWdlLnRyYW5zZmVyKTsKCQkJCQkJfSk7CgkJCQkJCXBlbmRpbmdNZXNzYWdlcyA9IFtdOwoJCQkJCX0KCQkJCX07CgoJCQkJLyoqCgkJCQkgKiBAcGFyYW0ge0hUTUxJRnJhbWVFbGVtZW50fSBuZXdGcmFtZQoJCQkJICovCgkJCQlmdW5jdGlvbiBob29rdXBPbkxvYWRIYW5kbGVycyhuZXdGcmFtZSkgewoJCQkJCWNsZWFyVGltZW91dChsb2FkVGltZW91dCk7CgkJCQkJbG9hZFRpbWVvdXQgPSB1bmRlZmluZWQ7CgkJCQkJbG9hZFRpbWVvdXQgPSBzZXRUaW1lb3V0KCgpID0+IHsKCQkJCQkJY2xlYXJUaW1lb3V0KGxvYWRUaW1lb3V0KTsKCQkJCQkJbG9hZFRpbWVvdXQgPSB1bmRlZmluZWQ7CgkJCQkJCW9uTG9hZChhc3NlcnRJc0RlZmluZWQobmV3RnJhbWUuY29udGVudERvY3VtZW50KSwgYXNzZXJ0SXNEZWZpbmVkKG5ld0ZyYW1lLmNvbnRlbnRXaW5kb3cpKTsKCQkJCQl9LCAyMDApOwoKCQkJCQljb25zdCBjb250ZW50V2luZG93ID0gYXNzZXJ0SXNEZWZpbmVkKG5ld0ZyYW1lLmNvbnRlbnRXaW5kb3cpOwoKCQkJCQljb250ZW50V2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ2xvYWQnLCBmdW5jdGlvbiAoZSkgewoJCQkJCQljb25zdCBjb250ZW50RG9jdW1lbnQgPSAvKiogQHR5cGUge0RvY3VtZW50fSAqLyAoZS50YXJnZXQpOwoKCQkJCQkJaWYgKGxvYWRUaW1lb3V0KSB7CgkJCQkJCQljbGVhclRpbWVvdXQobG9hZFRpbWVvdXQpOwoJCQkJCQkJbG9hZFRpbWVvdXQgPSB1bmRlZmluZWQ7CgkJCQkJCQlvbkxvYWQoY29udGVudERvY3VtZW50LCB0aGlzKTsKCQkJCQkJfQoJCQkJCX0pOwoKCQkJCQkvLyBCdWJibGUgb3V0IHZhcmlvdXMgZXZlbnRzCgkJCQkJY29udGVudFdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsIGhhbmRsZUlubmVyQ2xpY2spOwoJCQkJCWNvbnRlbnRXaW5kb3cuYWRkRXZlbnRMaXN0ZW5lcignYXV4Y2xpY2snLCBoYW5kbGVBdXhDbGljayk7CgkJCQkJY29udGVudFdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdrZXlkb3duJywgaGFuZGxlSW5uZXJLZXlkb3duKTsKCQkJCQljb250ZW50V2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ2tleXVwJywgaGFuZGxlSW5uZXJLZXl1cCk7CgkJCQkJY29udGVudFdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdjb250ZXh0bWVudScsIGUgPT4gewoJCQkJCQlpZiAoZS5kZWZhdWx0UHJldmVudGVkKSB7CgkJCQkJCQkvLyBFeHRlbnNpb24gY29kZSBoYXMgYWxyZWFkeSBoYW5kbGVkIHRoaXMgZXZlbnQKCQkJCQkJCXJldHVybjsKCQkJCQkJfQoKCQkJCQkJZS5wcmV2ZW50RGVmYXVsdCgpOwoKCQkJCQkJLyoqIEB0eXBlIHsgUmVjb3JkPHN0cmluZywgYm9vbGVhbj59ICovCgkJCQkJCWxldCBjb250ZXh0ID0ge307CgoJCQkJCQkvKiogQHR5cGUge0hUTUxFbGVtZW50IHwgbnVsbH0gKi8KCQkJCQkJbGV0IGVsID0gZS50YXJnZXQ7CgkJCQkJCXdoaWxlICh0cnVlKSB7CgkJCQkJCQlpZiAoIWVsKSB7CgkJCQkJCQkJYnJlYWs7CgkJCQkJCQl9CgoJCQkJCQkJLy8gU2VhcmNoIHNlbGYvYW5jZXN0b3JzIGZvciB0aGUgY2xvc2VzdCBjb250ZXh0IGRhdGEgYXR0cmlidXRlCgkJCQkJCQllbCA9IGVsLmNsb3Nlc3QoJ1tkYXRhLXZzY29kZS1jb250ZXh0XScpOwoJCQkJCQkJaWYgKCFlbCkgewoJCQkJCQkJCWJyZWFrOwoJCQkJCQkJfQoKCQkJCQkJCXRyeSB7CgkJCQkJCQkJY29udGV4dCA9IHsgLi4uSlNPTi5wYXJzZShlbC5kYXRhc2V0LnZzY29kZUNvbnRleHQpLCAuLi5jb250ZXh0IH07CgkJCQkJCQl9IGNhdGNoIChlKSB7CgkJCQkJCQkJY29uc29sZS5lcnJvcihgRXJyb3IgcGFyc2luZyAnZGF0YS12c2NvZGUtY29udGV4dCcgYXMganNvbmAsIGVsLCBlKTsKCQkJCQkJCX0KCgkJCQkJCQllbCA9IGVsLnBhcmVudEVsZW1lbnQ7CgkJCQkJCX0KCgkJCQkJCWhvc3RNZXNzYWdpbmcucG9zdE1lc3NhZ2UoJ2RpZC1jb250ZXh0LW1lbnUnLCB7CgkJCQkJCQljbGllbnRYOiBlLmNsaWVudFgsCgkJCQkJCQljbGllbnRZOiBlLmNsaWVudFksCgkJCQkJCQljb250ZXh0OiBjb250ZXh0CgkJCQkJCX0pOwoJCQkJCX0pOwoKCQkJCQljb250ZW50V2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ2RyYWdlbnRlcicsIGhhbmRsZUlubmVyRHJhZ1N0YXJ0RXZlbnQpOwoJCQkJCWNvbnRlbnRXaW5kb3cuYWRkRXZlbnRMaXN0ZW5lcignZHJhZ292ZXInLCBoYW5kbGVJbm5lckRyYWdFdmVudCk7CgkJCQkJY29udGVudFdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdkcmFnJywgaGFuZGxlSW5uZXJEcmFnRXZlbnQpOwoJCQkJCWNvbnRlbnRXaW5kb3cuYWRkRXZlbnRMaXN0ZW5lcignZHJvcCcsIGhhbmRsZUlubmVyRHJvcEV2ZW50KTsKCgkJCQkJdW5sb2FkTW9uaXRvci5vbklmcmFtZUxvYWRlZChuZXdGcmFtZSk7CgkJCQl9CgoJCQkJaWYgKCFkaXNhYmxlU2VydmljZVdvcmtlciAmJiBvdXRlcklmcmFtZU1lc3NhZ2VDaGFubmVsKSB7CgkJCQkJb3V0ZXJJZnJhbWVNZXNzYWdlQ2hhbm5lbC5wb3J0MS5vbm1lc3NhZ2UgPSBldmVudCA9PiB7CgkJCQkJCXN3aXRjaCAoZXZlbnQuZGF0YS5jaGFubmVsKSB7CgkJCQkJCQljYXNlICdsb2FkLXJlc291cmNlJzoKCQkJCQkJCWNhc2UgJ2xvYWQtbG9jYWxob3N0JzoKCQkJCQkJCQlob3N0TWVzc2FnaW5nLnBvc3RNZXNzYWdlKGV2ZW50LmRhdGEuY2hhbm5lbCwgZXZlbnQuZGF0YSk7CgkJCQkJCQkJcmV0dXJuOwoJCQkJCQl9CgkJCQkJfTsKCQkJCX0KCQkJfSk7CgoJCQkvLyBwcm9wYWdhdGUgdnNjb2RlLWNvbnRleHQtbWVudS12aXNpYmxlIGNsYXNzCgkJCWhvc3RNZXNzYWdpbmcub25NZXNzYWdlKCdzZXQtY29udGV4dC1tZW51LXZpc2libGUnLCAoX2V2ZW50LCBkYXRhKSA9PiB7CgkJCQljb25zdCB0YXJnZXQgPSBnZXRBY3RpdmVGcmFtZSgpOwoJCQkJaWYgKHRhcmdldCAmJiB0YXJnZXQuY29udGVudERvY3VtZW50KSB7CgkJCQkJdGFyZ2V0LmNvbnRlbnREb2N1bWVudC5ib2R5LmNsYXNzTGlzdC50b2dnbGUoJ3ZzY29kZS1jb250ZXh0LW1lbnUtdmlzaWJsZScsIGRhdGEudmlzaWJsZSk7CgkJCQl9CgkJCX0pOwoKCQkJaG9zdE1lc3NhZ2luZy5vbk1lc3NhZ2UoJ3NldC10aXRsZScsIGFzeW5jIChfZXZlbnQsIGRhdGEpID0+IHsKCQkJCWNvbnN0IHRhcmdldCA9IGdldEFjdGl2ZUZyYW1lKCk7CgkJCQlpZiAodGFyZ2V0KSB7CgkJCQkJdGFyZ2V0LnRpdGxlID0gZGF0YTsKCQkJCX0KCQkJfSk7CgoJCQkvLyBGb3J3YXJkIG1lc3NhZ2UgdG8gdGhlIGVtYmVkZGVkIGlmcmFtZQoJCQlob3N0TWVzc2FnaW5nLm9uTWVzc2FnZSgnbWVzc2FnZScsIChfZXZlbnQsIGRhdGEpID0+IHsKCQkJCWNvbnN0IHBlbmRpbmcgPSBnZXRQZW5kaW5nRnJhbWUoKTsKCQkJCWlmICghcGVuZGluZykgewoJCQkJCWNvbnN0IHRhcmdldCA9IGdldEFjdGl2ZUZyYW1lKCk7CgkJCQkJaWYgKHRhcmdldCkgewoJCQkJCQlhc3NlcnRJc0RlZmluZWQodGFyZ2V0LmNvbnRlbnRXaW5kb3cpLnBvc3RNZXNzYWdlKGRhdGEubWVzc2FnZSwgd2luZG93Lm9yaWdpbiwgZGF0YS50cmFuc2Zlcik7CgkJCQkJCXJldHVybjsKCQkJCQl9CgkJCQl9CgkJCQlwZW5kaW5nTWVzc2FnZXMucHVzaChkYXRhKTsKCQkJfSk7CgoJCQlob3N0TWVzc2FnaW5nLm9uTWVzc2FnZSgnaW5pdGlhbC1zY3JvbGwtcG9zaXRpb24nLCAoX2V2ZW50LCBwcm9ncmVzcykgPT4gewoJCQkJaW5pdERhdGEuaW5pdGlhbFNjcm9sbFByb2dyZXNzID0gcHJvZ3Jlc3M7CgkJCX0pOwoKCQkJaG9zdE1lc3NhZ2luZy5vbk1lc3NhZ2UoJ2V4ZWNDb21tYW5kJywgKF9ldmVudCwgZGF0YSkgPT4gewoJCQkJY29uc3QgdGFyZ2V0ID0gZ2V0QWN0aXZlRnJhbWUoKTsKCQkJCWlmICghdGFyZ2V0KSB7CgkJCQkJcmV0dXJuOwoJCQkJfQoJCQkJYXNzZXJ0SXNEZWZpbmVkKHRhcmdldC5jb250ZW50RG9jdW1lbnQpLmV4ZWNDb21tYW5kKGRhdGEpOwoJCQl9KTsKCgkJCS8qKiBAdHlwZSB7c3RyaW5nIHwgdW5kZWZpbmVkfSAqLwoJCQlsZXQgbGFzdEZpbmRWYWx1ZSA9IHVuZGVmaW5lZDsKCgkJCWhvc3RNZXNzYWdpbmcub25NZXNzYWdlKCdmaW5kJywgKF9ldmVudCwgZGF0YSkgPT4gewoJCQkJY29uc3QgdGFyZ2V0ID0gZ2V0QWN0aXZlRnJhbWUoKTsKCQkJCWlmICghdGFyZ2V0KSB7CgkJCQkJcmV0dXJuOwoJCQkJfQoKCQkJCWlmICghZGF0YS5wcmV2aW91cyAmJiBsYXN0RmluZFZhbHVlICE9PSBkYXRhLnZhbHVlICYmIHRhcmdldC5jb250ZW50V2luZG93KSB7CgkJCQkJLy8gUmVzZXQgc2VsZWN0aW9uIHNvIHdlIHN0YXJ0IHNlYXJjaCBhdCB0aGUgaGVhZCBvZiB0aGUgbGFzdCBzZWFyY2gKCQkJCQljb25zdCBzZWxlY3Rpb24gPSB0YXJnZXQuY29udGVudFdpbmRvdy5nZXRTZWxlY3Rpb24oKTsKCQkJCQlpZiAoc2VsZWN0aW9uKSB7CgkJCQkJCXNlbGVjdGlvbi5jb2xsYXBzZShzZWxlY3Rpb24uYW5jaG9yTm9kZSk7CgkJCQkJfQoJCQkJfQoJCQkJbGFzdEZpbmRWYWx1ZSA9IGRhdGEudmFsdWU7CgoJCQkJY29uc3QgZGlkRmluZCA9ICgvKiogQHR5cGUge2FueX0gKi8gKHRhcmdldC5jb250ZW50V2luZG93KSkuZmluZCgKCQkJCQlkYXRhLnZhbHVlLAoJCQkJCS8qIGNhc2VTZW5zaXRpdmUqLyBmYWxzZSwKCQkJCQkvKiBiYWNrd2FyZHMqLyBkYXRhLnByZXZpb3VzLAoJCQkJCS8qIHdyYXBBcm91bmQqLyB0cnVlLAoJCQkJCS8qIHdob2xlV29yZCAqLyBmYWxzZSwKCQkJCQkvKiBzZWFyY2hJbkZyYW1lcyovIGZhbHNlLAoJCQkJCWZhbHNlKTsKCQkJCWhvc3RNZXNzYWdpbmcucG9zdE1lc3NhZ2UoJ2RpZC1maW5kJywgZGlkRmluZCk7CgkJCX0pOwoKCQkJaG9zdE1lc3NhZ2luZy5vbk1lc3NhZ2UoJ2ZpbmQtc3RvcCcsIChfZXZlbnQsIGRhdGEpID0+IHsKCQkJCWNvbnN0IHRhcmdldCA9IGdldEFjdGl2ZUZyYW1lKCk7CgkJCQlpZiAoIXRhcmdldCkgewoJCQkJCXJldHVybjsKCQkJCX0KCgkJCQlsYXN0RmluZFZhbHVlID0gdW5kZWZpbmVkOwoKCQkJCWlmICghZGF0YS5jbGVhclNlbGVjdGlvbiAmJiB0YXJnZXQuY29udGVudFdpbmRvdykgewoJCQkJCWNvbnN0IHNlbGVjdGlvbiA9IHRhcmdldC5jb250ZW50V2luZG93LmdldFNlbGVjdGlvbigpOwoJCQkJCWlmIChzZWxlY3Rpb24pIHsKCQkJCQkJZm9yIChsZXQgaSA9IDA7IGkgPCBzZWxlY3Rpb24ucmFuZ2VDb3VudDsgaSsrKSB7CgkJCQkJCQlzZWxlY3Rpb24ucmVtb3ZlUmFuZ2Uoc2VsZWN0aW9uLmdldFJhbmdlQXQoaSkpOwoJCQkJCQl9CgkJCQkJfQoJCQkJfQoJCQl9KTsKCgkJCXRyYWNrRm9jdXMoewoJCQkJb25Gb2N1czogKCkgPT4gaG9zdE1lc3NhZ2luZy5wb3N0TWVzc2FnZSgnZGlkLWZvY3VzJywgdW5kZWZpbmVkKSwKCQkJCW9uQmx1cjogKCkgPT4gaG9zdE1lc3NhZ2luZy5wb3N0TWVzc2FnZSgnZGlkLWJsdXInLCB1bmRlZmluZWQpCgkJCX0pOwoKCQkJKC8qKiBAdHlwZSB7YW55fSAqLyAod2luZG93KSlbdnNjb2RlUG9zdE1lc3NhZ2VGdW5jTmFtZV0gPSAoLyoqIEB0eXBlIHtzdHJpbmd9ICovIGNvbW1hbmQsIC8qKiBAdHlwZSB7YW55fSAqLyBkYXRhKSA9PiB7CgkJCQlzd2l0Y2ggKGNvbW1hbmQpIHsKCQkJCQljYXNlICdvbm1lc3NhZ2UnOgoJCQkJCWNhc2UgJ2RvLXVwZGF0ZS1zdGF0ZSc6CgkJCQkJCWhvc3RNZXNzYWdpbmcucG9zdE1lc3NhZ2UoY29tbWFuZCwgZGF0YSk7CgkJCQkJCWJyZWFrOwoJCQkJfQoJCQl9OwoKCQkJaG9zdE1lc3NhZ2luZy5zaWduYWxSZWFkeSgpOwoJCX0pOwoJPC9zY3JpcHQ+CjwvYm9keT4KCjwvaHRtbD4K", "" + import.meta.url).href, jU),
 	"vs/workbench/contrib/webview/browser/pre/fake.html": () => Ty(new URL("data:text/html;base64,PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+Cgk8bWV0YSBjaGFyc2V0PSJVVEYtOCI+Cgk8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+Cgk8dGl0bGU+RmFrZTwvdGl0bGU+CjwvaGVhZD4KPGJvZHk+CjwvYm9keT4KPC9odG1sPgo=", "" + import.meta.url).href, jU)
-}), gC(async (e) => {
+}), rS(async (e) => {
 	e.get(Vp);
 });
 function MU(e) {
@@ -33110,7 +33110,7 @@ function MU(e) {
 		[Nv.toString()]: new ec(xF, [], !1),
 		[My.toString()]: new ec(ZN, [], !0),
 		[_m.toString()]: new ec(kM, [], !0),
-		[tS.toString()]: new ec(aF, [], !0),
+		[sS.toString()]: new ec(aF, [], !0),
 		[xt.toString()]: new ec(Xx, [], !0),
 		[zx.toString()]: new ec(FT, [], !1),
 		[ch.toString()]: new ec($N, [], !1),
@@ -33129,13 +33129,13 @@ function MU(e) {
 		[Mg.toString()]: new ec(EF, [], !0)
 	};
 }
-px(), T(), k(), ty(), cc(), T_(), zf(), zd(), Gh(), mh(), wC(), Go(), bT(), bl(), Yh(), ae(), ke(), Hu(), sl(), Yn(), Pn(), xo(), jb(), Vh(), CC(), hS(), Qu(), W(), Sn(), P.as(Ib.ViewContainersRegistry), P.as(Ib.ViewsRegistry);
+px(), T(), k(), ty(), cc(), T_(), zf(), zd(), Gh(), mh(), wC(), Go(), bT(), bl(), Yh(), ae(), ke(), Hu(), sl(), Yn(), Pn(), xo(), jb(), Vh(), uS(), pC(), Qu(), W(), Sn(), P.as(Ib.ViewContainersRegistry), P.as(Ib.ViewsRegistry);
 function NU(e) {
-	return $l.get(ES).isVisible(e, window);
+	return $l.get(BS).isVisible(e, window);
 }
-var PU = (e) => $l.get(ES).onDidChangeSideBarPosition(e);
+var PU = (e) => $l.get(BS).onDidChangeSideBarPosition(e);
 function FU() {
-	return $l.get(ES).getSideBarPosition();
+	return $l.get(BS).getSideBarPosition();
 }
 //#endregion
 export { $T as _, mF as a, DM as c, Ck as d, sk as f, wE as g, EE as h, MU as i, wM as l, fE as m, NU as n, GN as o, PE as p, PU as r, kM as s, FU as t, SM as u };

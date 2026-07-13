@@ -1,4 +1,4 @@
-import { a as e, r as t } from "./extensions-DnX2FbG_.js";
+import { a as e, r as t } from "./extensions-MEu2nHmY.js";
 //#region node_modules/@codingame/monaco-vscode-theme-defaults-default-extension/index.js
 t();
 var { registerFileUrl: n, whenReady: r } = e({

@@ -20,6 +20,7 @@ export interface MarkerLike {
     endColumn: number;
     source?: string;
     code?: string | {value: string};
+    resource?: string | {toString(): string};
 }
 
 export interface ProblemItem {
@@ -31,6 +32,8 @@ export interface ProblemItem {
     endColumn: number;
     source: string;
     code: string;
+    resource: string;
+    path: string;
 }
 
 export interface ProblemCounts {
@@ -60,7 +63,10 @@ const SEVERITY_ORDER: Record<ProblemSeverity, number> = {
     hint: 3,
 };
 
-export function toProblemItems(markers: readonly MarkerLike[]): ProblemItem[] {
+export function toProblemItems(
+    markers: readonly MarkerLike[],
+    context: {resource?: string; path?: string} = {},
+): ProblemItem[] {
     return markers
         .map((marker) => ({
             severity: toSeverity(marker.severity),
@@ -73,6 +79,8 @@ export function toProblemItems(markers: readonly MarkerLike[]): ProblemItem[] {
             code: typeof marker.code === 'object'
                 ? marker.code?.value || ''
                 : marker.code || '',
+            resource: context.resource || marker.resource?.toString() || '',
+            path: context.path || '',
         }))
         .sort((left, right) => (
             SEVERITY_ORDER[left.severity] - SEVERITY_ORDER[right.severity]
@@ -80,6 +88,19 @@ export function toProblemItems(markers: readonly MarkerLike[]): ProblemItem[] {
             || left.startColumn - right.startColumn
             || left.message.localeCompare(right.message)
         ));
+}
+
+export function groupProblemsByPath(
+    problems: readonly ProblemItem[],
+): Map<string, ProblemItem[]> {
+    const groups = new Map<string, ProblemItem[]>();
+    for (const problem of problems) {
+        const path = problem.path || problem.resource || 'Grammar';
+        const group = groups.get(path) || [];
+        group.push(problem);
+        groups.set(path, group);
+    }
+    return groups;
 }
 
 export function countProblems(problems: readonly ProblemItem[]): ProblemCounts {

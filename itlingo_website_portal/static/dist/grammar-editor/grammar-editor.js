@@ -1,28 +1,28 @@
 import { i as e, n as t, r as n, t as r } from "./rolldown-runtime-B1bRi_D7.js";
 import { $A as i, $D as a, $E as o, $M as s, $O as c, $_ as l, $j as u, $k as d, $o as f, $p as p, $v as m, $y as h, AA as g, AC as _, AD as v, A_ as y, Ab as b, Al as ee, Ap as x, Au as te, Aw as S, Ay as ne, BC as C, BE as re, BS as w, B_ as T, Ba as ie, Bb as E, Bd as D, Bj as ae, Bo as oe, Bv as se, CA as ce, CD as le, CM as ue, C_ as O, Ca as de, Cd as k, Ck as fe, Cp as pe, Cr as me, Cy as he, D as ge, DD as _e, DE as A, DM as ve, DO as ye, D_ as be, Dj as j, Dl as xe, EC as Se, ED as Ce, EM as we, E_ as Te, Ea as Ee, Eb as De, Ej as M, El as Oe, Em as ke, Ep as Ae, FC as je, FD as Me, FE as Ne, F_ as Pe, Fa as Fe, Fb as Ie, Fd as Le, Fj as Re, Fs as ze, Fw as Be, GA as Ve, GS as He, G_ as Ue, Ga as We, Gd as Ge, Gj as Ke, Gm as qe, Gw as Je, HC as Ye, HE as Xe, HM as Ze, H_ as Qe, Hd as $e, Hk as et, Ho as tt, Hs as nt, Hv as rt, IC as it, ID as at, IO as ot, I_ as st, Ib as ct, Ij as lt, Ik as ut, Ip as dt, Is as ft, Iw as pt, JA as mt, JC as ht, JE as gt, JS as _t, JT as vt, J_ as yt, Jj as bt, Jo as xt, Jw as St, Jy as Ct, KA as wt, KC as Tt, KE as Et, K_ as Dt, Ka as Ot, Kj as kt, Kn as At, Kw as jt, LE as Mt, LM as Nt, LS as Pt, L_ as Ft, Lb as It, Lc as Lt, Ld as Rt, Lj as zt, Lk as Bt, Lp as Vt, Lv as Ht, MA as Ut, MM as Wt, M_ as Gt, Mb as Kt, Md as qt, Mg as Jt, Mj as Yt, Mk as Xt, Ml as Zt, Ms as Qt, NA as $t, NC as en, NE as tn, NS as nn, N_ as rn, Nb as an, Nc as on, Nd as sn, Nj as cn, Nk as ln, Ns as un, Nu as dn, O as fn, OC as pn, OM as mn, ON as hn, OO as gn, OS as _n, O_ as vn, Oa as yn, Ob as N, Og as bn, Ok as xn, Om as Sn, Op as Cn, Os as wn, Ow as Tn, PA as En, PC as Dn, PD as On, PE as kn, PM as An, PO as jn, P_ as Mn, Pa as Nn, Pb as Pn, Ps as Fn, Px as In, QE as Ln, QS as Rn, Qh as zn, Qi as Bn, Qj as Vn, Qk as Hn, Qo as Un, Qp as Wn, Qw as Gn, Qy as Kn, RA as qn, RC as Jn, RD as Yn, RM as Xn, R_ as Zn, Rk as Qn, Ry as $n, S as er, SA as tr, SD as nr, S_ as rr, Sa as ir, Sb as ar, Sm as or, Sp as sr, Sw as cr, Sy as lr, TA as P, TD as ur, T_ as dr, Tj as fr, Tp as pr, Tr as mr, Ts as hr, Tw as gr, UA as _r, UE as vr, US as yr, U_ as br, Ud as xr, Uj as Sr, Uk as Cr, Ur as wr, Uw as Tr, VO as Er, VS as Dr, V_ as Or, Va as kr, Vd as Ar, Vk as jr, Vo as Mr, Vx as Nr, WC as Pr, WO as Fr, WS as Ir, WT as Lr, W_ as F, Wj as Rr, Wk as zr, Wo as Br, Wv as Vr, Ww as Hr, XE as Ur, X_ as Wr, Xj as Gr, Xk as Kr, Xl as qr, Xo as Jr, Xp as Yr, Xy as Xr, YC as Zr, YM as Qr, YS as $r, Yj as ei, Yk as ti, Yl as ni, Yr as ri, Yw as ii, Yy as ai, ZA as oi, ZD as si, ZS as ci, Zk as li, Zn as ui, Zo as di, Zp as fi, _ as pi, _A as I, _D as mi, _E as hi, _N as gi, _S as _i, __ as vi, _b as yi, _c as bi, _j as xi, _p as L, aC as Si, aD as Ci, aM as wi, aN as Ti, aT as Ei, ab as Di, ad as Oi, as as ki, aw as Ai, b as ji, bD as Mi, bE as Ni, bM as Pi, bN as Fi, b_ as Ii, ba as Li, bb as Ri, bj as zi, bk as Bi, bo as Vi, br as Hi, bv as Ui, cC as Wi, cD as Gi, cE as Ki, cN as qi, c_ as Ji, cc as Yi, cg as Xi, co as Zi, cp as Qi, cs as $i, cw as ea, d as ta, dA as na, dD as ra, dN as ia, d_ as aa, db as oa, dc as sa, dd as ca, dj as la, do as ua, ds as da, dv as fa, dw as pa, dy as ma, eD as ha, eM as ga, eN as _a, eO as va, eT as ya, e_ as ba, ea as xa, eb as Sa, ec as Ca, ej as wa, em as Ta, es as Ea, ev as Da, f as Oa, fA as ka, fE as Aa, fN as ja, fT as Ma, f_ as Na, fb as Pa, fd as Fa, fo as Ia, fp as La, fs as Ra, g as za, gA as Ba, gD as Va, gM as Ha, gN as Ua, gb as Wa, gc as Ga, gk as Ka, gs as qa, gv as Ja, gw as Ya, h as Xa, hA as Za, hD as Qa, hN as $a, hS as eo, hT as to, hb as no, hc as ro, hp as io, hs as ao, hw as oo, iC as so, iN as co, iO as lo, i_ as uo, ic as fo, ih as po, ij as mo, iv as ho, iw as go, iy as _o, jA as vo, jD as yo, jO as bo, j_ as xo, jb as So, jc as Co, jd as wo, jj as To, jk as Eo, jl as Do, js as Oo, ju as ko, jw as Ao, kD as jo, kE as Mo, kO as No, kb as R, kc as Po, kk as Fo, ks as Io, ku as Lo, lA as Ro, lM as zo, lN as Bo, lO as Vo, l_ as Ho, lc as Uo, lo as Wo, lp as Go, ls as Ko, lv as qo, mA as z, mD as Jo, mN as Yo, mT as Xo, m_ as Zo, mb as Qo, mc as $o, mk as es, mp as ts, ms as ns, mw as rs, n as B, nA as is, nD as as, nM as os, nN as ss, nc as cs, nd as ls, nj as us, nk as ds, ns as fs, nv as ps, ny as ms, oD as hs, oE as gs, oT as _s, oc as vs, oj as ys, on as bs, oo as xs, os as Ss, ow as Cs, pA as ws, pD as Ts, pN as Es, pT as Ds, p_ as Os, pb as ks, pc as As, pp as js, ps as Ms, pw as Ns, py as Ps, qE as Fs, qO as Is, q_ as Ls, qo as Rs, qv as zs, qw as Bs, r as Vs, rC as Hs, rM as Us, rN as Ws, rT as Gs, rb as Ks, rc as qs, rh as Js, rj as Ys, rs as Xs, rv as Zs, rw as Qs, sA as $s, sD as ec, sN as tc, sT as nc, s_ as rc, sb as ic, sc as ac, sn as oc, so as sc, sv as cc, sw as lc, t as uc, tA as V, tD as dc, tN as fc, t_ as pc, tb as mc, tj as hc, tm as gc, ts as _c, uA as vc, uC as yc, uD as bc, uE as xc, uM as Sc, uN as Cc, uO as wc, u_ as Tc, uo as Ec, uv as Dc, v as Oc, vD as H, vE as kc, v_ as Ac, vb as jc, vg as Mc, vj as Nc, vk as Pc, vp as Fc, vr as Ic, vs as Lc, vw as Rc, wC as zc, wD as Bc, w_ as Vc, wa as Hc, wd as Uc, wj as Wc, wk as Gc, wp as Kc, ws as qc, wy as Jc, x as Yc, xA as Xc, xD as Zc, x_ as Qc, xb as $c, xm as el, xp as tl, xr as nl, xw as rl, xy as il, y as al, yA as ol, yD as U, yE as sl, yO as cl, y_ as ll, yb as ul, yh as dl, yj as fl, yo as pl, yp as ml, yr as hl, yw as gl, zA as _l, zD as vl, zM as yl, z_ as bl, zb as xl, zj as Sl, zk as Cl, zo as wl, zv as Tl, zw as El, zx as Dl } from "./standaloneServices-C51B94Xh.js";
-import { $n as Ol, $t as kl, A as Al, An as jl, Bn as Ml, Cn as Nl, Ct as Pl, D as Fl, Dn as Il, Dt as Ll, E as Rl, En as zl, Et as Bl, Fn as Vl, Ft as Hl, Gn as Ul, Hn as Wl, Ht as Gl, In as Kl, Jn as ql, Kn as Jl, Ln as Yl, Lt as Xl, M as Zl, Mn as Ql, N as $l, Nn as eu, O as tu, On as nu, Ot as ru, P as iu, Pn as au, Qn as ou, Qt as su, Rn as cu, Sn as lu, T as uu, Tn as du, Tt as fu, Un as pu, Ut as mu, Vn as hu, Vt as gu, Wn as _u, Xn as vu, Yn as yu, Zn as bu, _n as xu, _r as Su, a as Cu, an as wu, ar as Tu, bn as Eu, br as Du, c as Ou, cr as ku, dr as Au, er as ju, f as Mu, fn as Nu, fr as Pu, gn as Fu, gr as Iu, hr as Lu, i as Ru, in as zu, ir as Bu, j as Vu, jn as Hu, k as Uu, kn as Wu, kt as Gu, l as Ku, lr as qu, mr as Ju, n as Yu, nr as Xu, nt as Zu, or as Qu, pn as $u, pr as ed, qn as td, rr as nd, rt as rd, sr as id, t as ad, tr as od, ur as sd, vr as cd, wn as ld, wt as ud, xn as dd, xr as fd, yr as pd, zn as md } from "./configuration.service-DJ_Qr0zd.js";
+import { $n as Ol, $t as kl, A as Al, An as jl, Bn as Ml, Cn as Nl, Ct as Pl, D as Fl, Dn as Il, Dt as Ll, E as Rl, En as zl, Et as Bl, Fn as Vl, Ft as Hl, Gn as Ul, Hn as Wl, Ht as Gl, In as Kl, Jn as ql, Kn as Jl, Ln as Yl, Lt as Xl, M as Zl, Mn as Ql, N as $l, Nn as eu, O as tu, On as nu, Ot as ru, P as iu, Pn as au, Qn as ou, Qt as su, Rn as cu, Sn as lu, T as uu, Tn as du, Tt as fu, Un as pu, Ut as mu, Vn as hu, Vt as gu, Wn as _u, Xn as vu, Yn as yu, Zn as bu, _n as xu, _r as Su, a as Cu, an as wu, ar as Tu, bn as Eu, br as Du, c as Ou, cr as ku, dr as Au, er as ju, f as Mu, fn as Nu, fr as Pu, gn as Fu, gr as Iu, hr as Lu, i as Ru, in as zu, ir as Bu, j as Vu, jn as Hu, k as Uu, kn as Wu, kt as Gu, l as Ku, lr as qu, mr as Ju, n as Yu, nr as Xu, nt as Zu, or as Qu, pn as $u, pr as ed, qn as td, rr as nd, rt as rd, sr as id, t as ad, tr as od, ur as sd, vr as cd, wn as ld, wt as ud, xn as dd, xr as fd, yr as pd, zn as md } from "./configuration.service-Bga69j3H.js";
 import { F as hd, Hi as gd, Ia as _d, La as vd, M as yd, N as bd, O as xd, P as Sd, Ra as Cd, Ui as wd, Ur as Td, Va as Ed, Zr as Dd, a as Od, ci as kd, dr as Ad, fr as jd, i as Md, ir as Nd, j as Pd, li as Fd, mo as Id, or as Ld, po as Rd, t as zd, v as Bd, y as Vd, za as Hd } from "./editorResolverService-CZFxBDpH.js";
-import { $a as Ud, $b as Wd, $c as Gd, $d as Kd, $g as qd, $l as Jd, $n as Yd, $o as Xd, $r as Zd, $s as Qd, $t as $d, A as ef, Aa as tf, Ac as nf, Ad as rf, Al as af, An as of, Ao as sf, Ar as cf, As as lf, Au as uf, Ba as df, Bc as ff, Bd as pf, Bl as mf, Bn as hf, Bo as gf, Br as _f, Bs as vf, Bt as yf, Bu as bf, C as xf, Ca as Sf, Cc as Cf, Cd as wf, Cl as Tf, Cn as Ef, Co as Df, Cr as Of, Cs as kf, Ct as Af, Cu as jf, Cv as Mf, Cx as Nf, D as Pf, D_ as Ff, Da as If, Dc as Lf, Dd as Rf, Df as zf, Dl as Bf, Dn as Vf, Do as Hf, Dr as Uf, Ds as Wf, Du as Gf, E as Kf, E_ as qf, Ea as Jf, Ec as Yf, Ed as Xf, Ef as Zf, El as Qf, En as $f, Eo as ep, Er as tp, Es as np, Eu as rp, Fa as ip, Fb as ap, Fc as op, Fd as sp, Fl as cp, Fn as lp, Fo as up, Fr as dp, Fs as fp, Ft as pp, Fu as mp, Fx as hp, Ga as gp, Gc as _p, Gd as vp, Gl as yp, Gn as bp, Go as xp, Gr as Sp, Gs as Cp, Gt as wp, Gu as Tp, Gy as Ep, Ha as Dp, Hc as Op, Hd as kp, Hl as Ap, Hn as jp, Ho as Mp, Hr as Np, Hs as Pp, Ht as Fp, Hu as Ip, Ia as Lp, Ib as Rp, Ic as zp, Il as Bp, In as Vp, Io as Hp, Ir as Up, Is as Wp, It as Gp, Iu as Kp, Ix as qp, Ja as Jp, Jc as Yp, Jd as Xp, Jg as Zp, Jl as Qp, Jn as $p, Jo as em, Jr as tm, Js as nm, Jt as rm, Ju as im, Ka as am, Kb as om, Kc as sm, Kd as cm, Kg as lm, Kl as um, Kn as dm, Ko as fm, Kr as pm, Ks as mm, Kt as hm, Ku as gm, La as _m, Lb as vm, Lc as ym, Ld as bm, Ll as xm, Ln as Sm, Lo as Cm, Lr as wm, Ls as Tm, Lt as Em, Lu as Dm, Ma as Om, Mb as km, Mc as Am, Ml as jm, Mn as Mm, Mo as Nm, Mr as Pm, Ms as Fm, Mu as Im, Na as Lm, Nb as Rm, Nc as zm, Nd as Bm, Nl as Vm, Nn as Hm, No as Um, Nr as Wm, Ns as Gm, Nu as Km, Nx as qm, O as Jm, Oa as Ym, Oc as Xm, Ol as Zm, On as Qm, Oo as $m, Or as eh, Os as th, Ou as nh, Pa as rh, Pb as ih, Pc as ah, Pd as oh, Pl as sh, Pn as ch, Po as lh, Pr as uh, Ps as dh, Pt as fh, Pu as ph, Qa as mh, Qc as hh, Qd as gh, Qg as _h, Ql as vh, Qn as yh, Qo as bh, Qr as xh, Qs as Sh, Qt as Ch, Qu as wh, Ra as Th, Rc as Eh, Rd as Dh, Rl as Oh, Rn as kh, Ro as Ah, Rr as jh, Rs as Mh, Rt as Nh, Ru as Ph, S as Fh, SC as Ih, Sa as Lh, Sc as Rh, Sd as zh, Sl as Bh, Sn as Vh, So as Hh, Sr as Uh, Ss as Wh, St as Gh, Su as Kh, T as qh, Ta as Jh, Tc as Yh, Td as Xh, Tf as Zh, Tl as Qh, Tn as $h, To as eg, Tr as tg, Ts as ng, Tt as rg, Tu as ig, Ua as ag, Uc as og, Ud as sg, Ul as cg, Un as lg, Uo as ug, Ur as dg, Us as fg, Ut as pg, Uu as mg, Va as hg, Vc as gg, Vd as _g, Vl as vg, Vn as yg, Vo as bg, Vr as xg, Vs as Sg, Vt as Cg, Vu as wg, Wa as Tg, Wc as Eg, Wd as Dg, Wl as Og, Wn as kg, Wo as Ag, Wr as jg, Ws as Mg, Wt as Ng, Wu as Pg, Wy as Fg, Xa as Ig, Xb as Lg, Xc as Rg, Xd as zg, Xg as Bg, Xl as Vg, Xn as Hg, Xo as Ug, Xr as Wg, Xs as Gg, Xt as Kg, Xu as qg, Ya as Jg, Yc as Yg, Yd as Xg, Yg as Zg, Yl as Qg, Yn as $g, Yo as e_, Yr as t_, Ys as n_, Yt as r_, Yu as i_, Za as a_, Zb as o_, Zc as s_, Zd as c_, Zg as l_, Zl as u_, Zn as d_, Zo as f_, Zr as p_, Zs as m_, Zt as h_, Zu as g_, _ as __, _a as v_, _b as y_, _c as b_, _d as W, _l as x_, _n as S_, _o as C_, _r as w_, _s as T_, _t as E_, _u as D_, a as O_, a_ as k_, ac as A_, ad as j_, af as M_, ai as N_, al as P_, an as F_, ao as I_, ar as L_, as as R_, au as z_, b as B_, ba as V_, bc as H_, bl as U_, bn as W_, bo as G_, br as K_, bs as q_, bt as J_, bu as Y_, c_ as X_, cc as Z_, cd as Q_, cf as $_, ci as ev, cl as tv, cn as nv, co as rv, cr as iv, cs as av, cu as ov, d as sv, dc as cv, dd as lv, dh as uv, dl as dv, dn as fv, do as pv, dr as mv, ds as hv, du as gv, dv as _v, e_ as vv, ea as yv, ec as bv, ef as xv, ei as Sv, el as Cv, en as wv, eo as Tv, er as Ev, es as Dv, eu as Ov, ex as kv, f as Av, fc as jv, fd as G, ff as Mv, fh as Nv, fl as Pv, fn as Fv, fo as Iv, fr as Lv, fs as Rv, fu as zv, fv as Bv, g as Vv, ga as Hv, gb as Uv, gc as Wv, gd as Gv, gl as Kv, gn as qv, go as Jv, gr as Yv, gs as Xv, gt as Zv, gu as Qv, h as $v, ha as ey, hc as ty, hd as ny, hl as ry, hn as iy, ho as ay, hr as oy, hs as sy, hu as cy, i as ly, i_ as uy, ia as dy, ic as fy, id as py, if as my, ii as hy, il as gy, in as _y, io as vy, ir as yy, is as by, iu as xy, j as Sy, ja as Cy, jc as wy, jd as Ty, jl as Ey, jn as Dy, jo as Oy, jr as ky, js as Ay, ju as jy, k as My, ka as Ny, kc as Py, kl as Fy, kn as Iy, ko as Ly, kr as Ry, ks as zy, ku as By, l as Vy, l_ as Hy, lc as Uy, ld as K, lf as Wy, ll as Gy, ln as Ky, lo as qy, lr as Jy, ls as Yy, lu as Xy, m as Zy, ma as Qy, mc as $y, md as eb, mf as tb, ml as nb, mm as rb, mn as ib, mo as ab, mr as ob, ms as sb, mu as cb, n as lb, na as ub, nc as db, nf as fb, ni as pb, nl as mb, nn as hb, no as gb, nr as _b, ns as vb, nu as yb, o as bb, o_ as xb, oc as Sb, od as Cb, of as wb, oi as Tb, ol as Eb, on as Db, oo as Ob, or as kb, os as Ab, ou as jb, p as Mb, pc as Nb, pd as Pb, ph as Fb, pl as Ib, pm as Lb, pn as Rb, po as zb, pr as Bb, ps as Vb, pu as Hb, qa as Ub, qb as Wb, qc as Gb, qd as Kb, qg as qb, ql as Jb, qn as Yb, qo as Xb, qr as Zb, qs as Qb, qt as $b, qu as ex, r_ as tx, ra as nx, rc as rx, rf as ix, ri as ax, rl as ox, rn as sx, ro as cx, rr as lx, rs as ux, ru as dx, s_ as fx, sc as px, sd as mx, sf as hx, si as gx, sl as _x, sn as vx, so as yx, sr as bx, ss as xx, su as Sx, ta as Cx, tc as wx, tf as Tx, ti as Ex, tl as Dx, tn as Ox, to as kx, tr as Ax, ts as jx, tu as Mx, u as Nx, uc as Px, ud as Fx, uh as Ix, ul as Lx, un as Rx, uo as zx, ur as q, us as Bx, uu as Vx, v as Hx, v_ as Ux, va as Wx, vc as Gx, vl as Kx, vn as qx, vo as Jx, vr as Yx, vs as Xx, vt as Zx, vu as Qx, w as $x, wa as eS, wc as tS, wd as nS, wf as rS, wl as iS, wn as aS, wo as oS, wr as sS, ws as cS, wt as lS, wu as uS, wv as dS, wx as fS, x as pS, xC as mS, xa as hS, xc as gS, xl as _S, xn as vS, xo as yS, xr as bS, xs as xS, xt as SS, xu as CS, y as wS, y_ as TS, ya as ES, yc as DS, yl as OS, yn as kS, yo as AS, yr as jS, ys as MS, yt as NS, yu as PS, za as FS, zc as IS, zl as LS, zn as RS, zo as zS, zr as BS, zs as VS, zt as HS, zu as US } from "./monaco-vscode-extensions-service-override-B4FJQig8.js";
+import { $a as Ud, $b as Wd, $c as Gd, $d as Kd, $g as qd, $l as Jd, $n as Yd, $o as Xd, $r as Zd, $s as Qd, $t as $d, A as ef, Aa as tf, Ac as nf, Ad as rf, Al as af, An as of, Ao as sf, Ar as cf, As as lf, Au as uf, Ba as df, Bc as ff, Bd as pf, Bl as mf, Bn as hf, Bo as gf, Br as _f, Bs as vf, Bt as yf, Bu as bf, C as xf, Ca as Sf, Cc as Cf, Cd as wf, Cl as Tf, Cn as Ef, Co as Df, Cr as Of, Cs as kf, Ct as Af, Cu as jf, Cv as Mf, Cx as Nf, D as Pf, D_ as Ff, Da as If, Dc as Lf, Dd as Rf, Df as zf, Dl as Bf, Dn as Vf, Do as Hf, Dr as Uf, Ds as Wf, Du as Gf, E as Kf, E_ as qf, Ea as Jf, Ec as Yf, Ed as Xf, Ef as Zf, El as Qf, En as $f, Eo as ep, Er as tp, Es as np, Eu as rp, Fa as ip, Fb as ap, Fc as op, Fd as sp, Fl as cp, Fn as lp, Fo as up, Fr as dp, Fs as fp, Ft as pp, Fu as mp, Fx as hp, Ga as gp, Gc as _p, Gd as vp, Gl as yp, Gn as bp, Go as xp, Gr as Sp, Gs as Cp, Gt as wp, Gu as Tp, Gy as Ep, Ha as Dp, Hc as Op, Hd as kp, Hl as Ap, Hn as jp, Ho as Mp, Hr as Np, Hs as Pp, Ht as Fp, Hu as Ip, Ia as Lp, Ib as Rp, Ic as zp, Il as Bp, In as Vp, Io as Hp, Ir as Up, Is as Wp, It as Gp, Iu as Kp, Ix as qp, Ja as Jp, Jc as Yp, Jd as Xp, Jg as Zp, Jl as Qp, Jn as $p, Jo as em, Jr as tm, Js as nm, Jt as rm, Ju as im, Ka as am, Kb as om, Kc as sm, Kd as cm, Kg as lm, Kl as um, Kn as dm, Ko as fm, Kr as pm, Ks as mm, Kt as hm, Ku as gm, La as _m, Lb as vm, Lc as ym, Ld as bm, Ll as xm, Ln as Sm, Lo as Cm, Lr as wm, Ls as Tm, Lt as Em, Lu as Dm, Ma as Om, Mb as km, Mc as Am, Ml as jm, Mn as Mm, Mo as Nm, Mr as Pm, Ms as Fm, Mu as Im, Na as Lm, Nb as Rm, Nc as zm, Nd as Bm, Nl as Vm, Nn as Hm, No as Um, Nr as Wm, Ns as Gm, Nu as Km, Nx as qm, O as Jm, Oa as Ym, Oc as Xm, Ol as Zm, On as Qm, Oo as $m, Or as eh, Os as th, Ou as nh, Pa as rh, Pb as ih, Pc as ah, Pd as oh, Pl as sh, Pn as ch, Po as lh, Pr as uh, Ps as dh, Pt as fh, Pu as ph, Qa as mh, Qc as hh, Qd as gh, Qg as _h, Ql as vh, Qn as yh, Qo as bh, Qr as xh, Qs as Sh, Qt as Ch, Qu as wh, Ra as Th, Rc as Eh, Rd as Dh, Rl as Oh, Rn as kh, Ro as Ah, Rr as jh, Rs as Mh, Rt as Nh, Ru as Ph, S as Fh, SC as Ih, Sa as Lh, Sc as Rh, Sd as zh, Sl as Bh, Sn as Vh, So as Hh, Sr as Uh, Ss as Wh, St as Gh, Su as Kh, T as qh, Ta as Jh, Tc as Yh, Td as Xh, Tf as Zh, Tl as Qh, Tn as $h, To as eg, Tr as tg, Ts as ng, Tt as rg, Tu as ig, Ua as ag, Uc as og, Ud as sg, Ul as cg, Un as lg, Uo as ug, Ur as dg, Us as fg, Ut as pg, Uu as mg, Va as hg, Vc as gg, Vd as _g, Vl as vg, Vn as yg, Vo as bg, Vr as xg, Vs as Sg, Vt as Cg, Vu as wg, Wa as Tg, Wc as Eg, Wd as Dg, Wl as Og, Wn as kg, Wo as Ag, Wr as jg, Ws as Mg, Wt as Ng, Wu as Pg, Wy as Fg, Xa as Ig, Xb as Lg, Xc as Rg, Xd as zg, Xg as Bg, Xl as Vg, Xn as Hg, Xo as Ug, Xr as Wg, Xs as Gg, Xt as Kg, Xu as qg, Ya as Jg, Yc as Yg, Yd as Xg, Yg as Zg, Yl as Qg, Yn as $g, Yo as e_, Yr as t_, Ys as n_, Yt as r_, Yu as i_, Za as a_, Zb as o_, Zc as s_, Zd as c_, Zg as l_, Zl as u_, Zn as d_, Zo as f_, Zr as p_, Zs as m_, Zt as h_, Zu as g_, _ as __, _a as v_, _b as y_, _c as b_, _d as W, _l as x_, _n as S_, _o as C_, _r as w_, _s as T_, _t as E_, _u as D_, a as O_, a_ as k_, ac as A_, ad as j_, af as M_, ai as N_, al as P_, an as F_, ao as I_, ar as L_, as as R_, au as z_, b as B_, ba as V_, bc as H_, bl as U_, bn as W_, bo as G_, br as K_, bs as q_, bt as J_, bu as Y_, c_ as X_, cc as Z_, cd as Q_, cf as $_, ci as ev, cl as tv, cn as nv, co as rv, cr as iv, cs as av, cu as ov, d as sv, dc as cv, dd as lv, dh as uv, dl as dv, dn as fv, do as pv, dr as mv, ds as hv, du as gv, dv as _v, e_ as vv, ea as yv, ec as bv, ef as xv, ei as Sv, el as Cv, en as wv, eo as Tv, er as Ev, es as Dv, eu as Ov, ex as kv, f as Av, fc as jv, fd as G, ff as Mv, fh as Nv, fl as Pv, fn as Fv, fo as Iv, fr as Lv, fs as Rv, fu as zv, fv as Bv, g as Vv, ga as Hv, gb as Uv, gc as Wv, gd as Gv, gl as Kv, gn as qv, go as Jv, gr as Yv, gs as Xv, gt as Zv, gu as Qv, h as $v, ha as ey, hc as ty, hd as ny, hl as ry, hn as iy, ho as ay, hr as oy, hs as sy, hu as cy, i as ly, i_ as uy, ia as dy, ic as fy, id as py, if as my, ii as hy, il as gy, in as _y, io as vy, ir as yy, is as by, iu as xy, j as Sy, ja as Cy, jc as wy, jd as Ty, jl as Ey, jn as Dy, jo as Oy, jr as ky, js as Ay, ju as jy, k as My, ka as Ny, kc as Py, kl as Fy, kn as Iy, ko as Ly, kr as Ry, ks as zy, ku as By, l as Vy, l_ as Hy, lc as Uy, ld as K, lf as Wy, ll as Gy, ln as Ky, lo as qy, lr as Jy, ls as Yy, lu as Xy, m as Zy, ma as Qy, mc as $y, md as eb, mf as tb, ml as nb, mm as rb, mn as ib, mo as ab, mr as ob, ms as sb, mu as cb, n as lb, na as ub, nc as db, nf as fb, ni as pb, nl as mb, nn as hb, no as gb, nr as _b, ns as vb, nu as yb, o as bb, o_ as xb, oc as Sb, od as Cb, of as wb, oi as Tb, ol as Eb, on as Db, oo as Ob, or as kb, os as Ab, ou as jb, p as Mb, pc as Nb, pd as Pb, ph as Fb, pl as Ib, pm as Lb, pn as Rb, po as zb, pr as Bb, ps as Vb, pu as Hb, qa as Ub, qb as Wb, qc as Gb, qd as Kb, qg as qb, ql as Jb, qn as Yb, qo as Xb, qr as Zb, qs as Qb, qt as $b, qu as ex, r_ as tx, ra as nx, rc as rx, rf as ix, ri as ax, rl as ox, rn as sx, ro as cx, rr as lx, rs as ux, ru as dx, s_ as fx, sc as px, sd as mx, sf as hx, si as gx, sl as _x, sn as vx, so as yx, sr as bx, ss as xx, su as Sx, ta as Cx, tc as wx, tf as Tx, ti as Ex, tl as Dx, tn as Ox, to as kx, tr as Ax, ts as jx, tu as Mx, u as Nx, uc as Px, ud as Fx, uh as Ix, ul as Lx, un as Rx, uo as zx, ur as q, us as Bx, uu as Vx, v as Hx, v_ as Ux, va as Wx, vc as Gx, vl as Kx, vn as qx, vo as Jx, vr as Yx, vs as Xx, vt as Zx, vu as Qx, w as $x, wa as eS, wc as tS, wd as nS, wf as rS, wl as iS, wn as aS, wo as oS, wr as sS, ws as cS, wt as lS, wu as uS, wv as dS, wx as fS, x as pS, xC as mS, xa as hS, xc as gS, xl as _S, xn as vS, xo as yS, xr as bS, xs as xS, xt as SS, xu as CS, y as wS, y_ as TS, ya as ES, yc as DS, yl as OS, yn as kS, yo as AS, yr as jS, ys as MS, yt as NS, yu as PS, za as FS, zc as IS, zl as LS, zn as RS, zo as zS, zr as BS, zs as VS, zt as HS, zu as US } from "./monaco-vscode-extensions-service-override-CcXiXb-p.js";
 import { a as WS, i as GS } from "./platformObservableUtils-D83yluRC.js";
 import { l as KS, o as qS, s as JS } from "./editorBrowser-Bcg0bJo7.js";
 import { i as YS, n as XS } from "./languageConfiguration-pd_q6saV.js";
 import { E as ZS, O as QS, T as $S, k as eC, o as tC, w as nC } from "./files-iACwD_Ow.js";
-import { Dt as rC, Ht as iC, It as aC, J as oC, Jn as sC, Ot as cC, Qt as lC, Rt as uC, Sr as dC, T as fC, Ut as pC, Vn as mC, X as hC, _ as gC, a as _C, at as vC, c as yC, cr as bC, dr as xC, et as SC, g as CC, gr as wC, gt as TC, h as EC, i as DC, ir as OC, l as kC, lr as AC, m as jC, nt as MC, ot as NC, p as PC, pt as FC, r as IC, rt as LC, s as RC, st as zC, u as BC, ur as VC, w as HC, x as UC, xr as WC } from "./monaco-vscode-files-service-override-BUohVD35.js";
-import { $t as GC, A as KC, B as qC, D as JC, E as YC, Gt as XC, I as ZC, L as QC, O as $C, Ot as ew, R as tw, T as nw, Vt as rw, _ as iw, at as aw, b as ow, ct as sw, h as cw, j as lw, k as uw, kt as dw, m as fw, p as pw, qt as mw, v as hw, y as gw, z as _w } from "./filesConfigurationService-CxZOIrXS.js";
-import { i as vw, n as yw, r as bw, t as xw } from "./monaco-CmK_qFKQ.js";
-import { a as Sw, o as Cw, s as ww } from "./languageStatusService.service-dYnhaUee.js";
-import { $ as Tw, E as Ew, F as Dw, I as Ow, N as J, P as kw, Q as Aw, S as jw, U as Mw, Z as Nw, _ as Pw, a as Fw, d as Iw, et as Lw, f as Rw, i as zw, j as Bw, k as Vw, nt as Hw, o as Uw, p as Ww, r as Gw, rt as Kw, t as qw, z as Jw } from "./extensions-DnX2FbG_.js";
-import { a as Yw, i as Xw, n as Zw, o as Qw, t as $w } from "./tools-CGs0ihXi.js";
-import { c as eT, d as tT, f as nT, n as rT, s as iT, t as aT } from "./environmentService.service-DtlNbSmC.js";
-import { i as oT, r as sT } from "./hostColorSchemeService.service-D8IIB8tu.js";
-import { a as cT, i as lT, n as uT, t as dT } from "./extensionFeatures-Dnpt_iIx.js";
+import { $ as rC, At as iC, D as aC, Gt as oC, Kt as sC, O as cC, Tr as lC, Vt as uC, Wn as dC, Z as fC, Zn as pC, _ as mC, a as hC, at as gC, b as _C, ct as vC, d as yC, dr as bC, f as xC, fr as SC, g as CC, gt as wC, jt as TC, l as EC, lt as DC, mr as OC, n as kC, o as AC, ot as jC, p as MC, pr as NC, r as PC, rt as FC, s as IC, sr as LC, tn as RC, u as zC, ut as BC, v as VC, w as HC, wr as UC, y as WC, yr as GC, yt as KC, zt as qC } from "./monaco-vscode-files-service-override-DGMr6mGW.js";
+import { $t as JC, A as YC, B as XC, D as ZC, E as QC, Gt as $C, I as ew, L as tw, O as nw, Ot as rw, R as iw, T as aw, Vt as ow, _ as sw, at as cw, b as lw, ct as uw, h as dw, j as fw, k as pw, kt as mw, m as hw, p as gw, qt as _w, v as vw, y as yw, z as bw } from "./filesConfigurationService-CxZOIrXS.js";
+import { i as xw, n as Sw, r as Cw, t as ww } from "./monaco-BGOsyT4t.js";
+import { a as Tw, o as Ew, s as Dw } from "./languageStatusService.service-dYnhaUee.js";
+import { $ as Ow, E as kw, F as Aw, I as jw, N as J, P as Mw, Q as Nw, S as Pw, U as Fw, Z as Iw, _ as Lw, a as Rw, d as zw, et as Bw, f as Vw, i as Hw, j as Uw, k as Ww, nt as Gw, o as Kw, p as qw, r as Jw, rt as Yw, t as Xw, z as Zw } from "./extensions-MEu2nHmY.js";
+import { a as Qw, i as $w, n as eT, o as tT, t as nT } from "./tools-CGs0ihXi.js";
+import { c as rT, d as iT, f as aT, n as oT, s as sT, t as cT } from "./environmentService.service-DtlNbSmC.js";
+import { i as lT, r as uT } from "./hostColorSchemeService.service-D8IIB8tu.js";
+import { a as dT, i as fT, n as pT, t as mT } from "./extensionFeatures-CMMcwnLr.js";
 hn(), ia(), An(), zo(), kt(), zt(), fr(), mo(), oi(), wt(), _r(), Ut(), P(), ka(), vc(), $s(), li(), zr(), et(), Qn(), ln(), Eo(), Gc(), c(), cl(), vl(), at(), Bc(), U(), mi(), Qa(), Ts(), bc(), ec(), Ur(), fd(), jl(), xc(), gs();
-var fT = /* @__PURE__ */ n({});
+var hT = /* @__PURE__ */ n({});
 No(), vt(), Ds(), Gn(), S(), Zr(), Pr(), Dn(), _(), zc(), yc(), so(), $r(), Ir(), w(), nn(), _n(), Nr(), Id(), E(), ct(), Pn(), Kt(), b(), De(), $c(), jc(), Wa(), Qo(), Pa(), Di(), h(), Xr(), $n(), lu();
-function pT(e, t, n) {
-	return new mT(e, t, n);
+function gT(e, t, n) {
+	return new _T(e, t, n);
 }
-var mT = class extends dd {
+var _T = class extends dd {
 	constructor(e, t, n) {
 		super(n.worker, n.keepIdleModels || !1, e, t), this._foreignModuleHost = n.host || null, this._foreignProxy = this._getProxy().then((e) => new Proxy({}, { get(t, n, r) {
 			if (n !== "then") {
@@ -47,50 +47,50 @@ var mT = class extends dd {
 	}
 };
 Ci(), Jc(), lr(), _o(), Tl(), fa(), WS(), cc(), Zs(), l(), Dt(), br(), T(), y(), vi(), aa(), Ho(), rc(), Hd(), vd();
-var hT;
+var vT;
 (function(e) {
 	e[e.None = 0] = "None", e[e.Open = 1] = "Open", e[e.Close = -1] = "Close";
-})(hT ||= {});
-function gT(e) {
+})(vT ||= {});
+function yT(e) {
 	return Array.isArray(e);
 }
-function _T(e) {
-	return !gT(e);
+function bT(e) {
+	return !yT(e);
 }
-function vT(e) {
+function xT(e) {
 	return typeof e == "string";
 }
-function yT(e) {
-	return !vT(e);
+function ST(e) {
+	return !xT(e);
 }
-function bT(e) {
+function CT(e) {
 	return !e;
 }
-function xT(e, t) {
+function wT(e, t) {
 	return e.ignoreCase && t ? t.toLowerCase() : t;
 }
-function ST(e) {
+function TT(e) {
 	return e.replace(/[&<>'"_]/g, "-");
 }
-function CT(e, t) {
+function ET(e, t) {
 	console.log(`${e.languageId}: ${t}`);
 }
-function wT(e, t) {
+function DT(e, t) {
 	return /* @__PURE__ */ Error(`${e.languageId}: ${t}`);
 }
-function TT(e, t, n, r, i) {
+function OT(e, t, n, r, i) {
 	let a = /\$((\$)|(#)|(\d\d?)|[sS](\d\d?)|@(\w+))/g, o = null;
 	return t.replace(a, function(t, a, s, c, l, u, d, f, p) {
-		return bT(s) ? bT(c) ? !bT(l) && l < r.length ? xT(e, r[l]) : !bT(d) && e && typeof e[d] == "string" ? e[d] : (o === null && (o = i.split("."), o.unshift(i)), !bT(u) && u < o.length ? xT(e, o[u]) : "") : xT(e, n) : "$";
+		return CT(s) ? CT(c) ? !CT(l) && l < r.length ? wT(e, r[l]) : !CT(d) && e && typeof e[d] == "string" ? e[d] : (o === null && (o = i.split("."), o.unshift(i)), !CT(u) && u < o.length ? wT(e, o[u]) : "") : wT(e, n) : "$";
 	});
 }
-function ET(e, t, n) {
+function kT(e, t, n) {
 	let r = /\$[sS](\d\d?)/g, i = null;
 	return t.replace(r, function(t, r) {
-		return i === null && (i = n.split("."), i.unshift(n)), !bT(r) && r < i.length ? Fr(xT(e, i[r])) : "";
+		return i === null && (i = n.split("."), i.unshift(n)), !CT(r) && r < i.length ? Fr(wT(e, i[r])) : "";
 	});
 }
-function DT(e, t) {
+function AT(e, t) {
 	let n = t;
 	for (; n && n.length > 0;) {
 		let t = e.tokenizer[n];
@@ -100,7 +100,7 @@ function DT(e, t) {
 	}
 	return null;
 }
-function OT(e, t) {
+function jT(e, t) {
 	let n = t;
 	for (; n && n.length > 0;) {
 		if (e.stateNames[n]) return !0;
@@ -112,9 +112,9 @@ function OT(e, t) {
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-editor-api/vscode/src/vs/editor/standalone/common/monarch/monarchLexer.js
 pc();
-var kT, AT = 5, jT = class e {
+var MT, NT = 5, PT = class e {
 	static {
-		this._INSTANCE = new e(AT);
+		this._INSTANCE = new e(NT);
 	}
 	static create(e, t) {
 		return this._INSTANCE.create(e, t);
@@ -123,13 +123,13 @@ var kT, AT = 5, jT = class e {
 		this._maxCacheDepth = e, this._entries = Object.create(null);
 	}
 	create(e, t) {
-		if (e !== null && e.depth >= this._maxCacheDepth) return new MT(e, t);
-		let n = MT.getStackElementId(e);
+		if (e !== null && e.depth >= this._maxCacheDepth) return new FT(e, t);
+		let n = FT.getStackElementId(e);
 		n.length > 0 && (n += "|"), n += t;
 		let r = this._entries[n];
-		return r || (r = new MT(e, t), this._entries[n] = r, r);
+		return r || (r = new FT(e, t), this._entries[n] = r, r);
 	}
-}, MT = class e {
+}, FT = class e {
 	constructor(e, t) {
 		this.parent = e, this.state = t, this.depth = (this.parent ? this.parent.depth : 0) + 1;
 	}
@@ -150,7 +150,7 @@ var kT, AT = 5, jT = class e {
 		return e._equals(this, t);
 	}
 	push(e) {
-		return jT.create(this, e);
+		return PT.create(this, e);
 	}
 	pop() {
 		return this.parent;
@@ -161,9 +161,9 @@ var kT, AT = 5, jT = class e {
 		return e;
 	}
 	switchTo(e) {
-		return jT.create(this.parent, e);
+		return PT.create(this.parent, e);
 	}
-}, NT = class e {
+}, IT = class e {
 	constructor(e, t) {
 		this.languageId = e, this.state = t;
 	}
@@ -173,9 +173,9 @@ var kT, AT = 5, jT = class e {
 	clone() {
 		return this.state.clone() === this.state ? this : new e(this.languageId, this.state);
 	}
-}, PT = class e {
+}, LT = class e {
 	static {
-		this._INSTANCE = new e(AT);
+		this._INSTANCE = new e(NT);
 	}
 	static create(e, t) {
 		return this._INSTANCE.create(e, t);
@@ -184,21 +184,21 @@ var kT, AT = 5, jT = class e {
 		this._maxCacheDepth = e, this._entries = Object.create(null);
 	}
 	create(e, t) {
-		if (t !== null || e !== null && e.depth >= this._maxCacheDepth) return new FT(e, t);
-		let n = MT.getStackElementId(e), r = this._entries[n];
-		return r || (r = new FT(e, null), this._entries[n] = r, r);
+		if (t !== null || e !== null && e.depth >= this._maxCacheDepth) return new RT(e, t);
+		let n = FT.getStackElementId(e), r = this._entries[n];
+		return r || (r = new RT(e, null), this._entries[n] = r, r);
 	}
-}, FT = class e {
+}, RT = class e {
 	constructor(e, t) {
 		this.stack = e, this.embeddedLanguageData = t;
 	}
 	clone() {
-		return (this.embeddedLanguageData ? this.embeddedLanguageData.clone() : null) === this.embeddedLanguageData ? this : PT.create(this.stack, this.embeddedLanguageData);
+		return (this.embeddedLanguageData ? this.embeddedLanguageData.clone() : null) === this.embeddedLanguageData ? this : LT.create(this.stack, this.embeddedLanguageData);
 	}
 	equals(t) {
 		return !(t instanceof e) || !this.stack.equals(t.stack) ? !1 : this.embeddedLanguageData === null && t.embeddedLanguageData === null ? !0 : this.embeddedLanguageData === null || t.embeddedLanguageData === null ? !1 : this.embeddedLanguageData.equals(t.embeddedLanguageData);
 	}
-}, IT = class {
+}, zT = class {
 	constructor() {
 		this._tokens = [], this._languageId = null, this._lastTokenType = null, this._lastTokenLanguage = null;
 	}
@@ -219,7 +219,7 @@ var kT, AT = 5, jT = class e {
 	finalize(e) {
 		return new gt(this._tokens, e);
 	}
-}, LT = class e {
+}, BT = class e {
 	constructor(e, t) {
 		this._languageService = e, this._theme = t, this._prependTokens = null, this._tokens = [], this._currentLanguageId = dc.Null, this._lastTokenMetadata = 0;
 	}
@@ -250,7 +250,7 @@ var kT, AT = 5, jT = class e {
 	finalize(t) {
 		return new A(e._merge(this._prependTokens, this._tokens, null), [], t);
 	}
-}, RT = kT = class extends z {
+}, VT = MT = class extends z {
 	constructor(e, t, n, r, i) {
 		super(), this._configurationService = i, this._languageService = e, this._standaloneThemeService = t, this._languageId = n, this._lexer = r, this._embeddedLanguages = Object.create(null), this.embeddedLoaded = Promise.resolve(void 0);
 		let a = !1;
@@ -274,7 +274,7 @@ var kT, AT = 5, jT = class e {
 		for (let t in this._embeddedLanguages) {
 			let n = Fs.get(t);
 			if (n) {
-				if (n instanceof kT) {
+				if (n instanceof MT) {
 					let t = n.getLoadStatus();
 					t.loaded === !1 && e.push(t.promise);
 				}
@@ -288,17 +288,17 @@ var kT, AT = 5, jT = class e {
 		};
 	}
 	getInitialState() {
-		let e = jT.create(null, this._lexer.start);
-		return PT.create(e, null);
+		let e = PT.create(null, this._lexer.start);
+		return LT.create(e, null);
 	}
 	tokenize(e, t, n) {
 		if (e.length >= this._maxTokenizationLineLength) return Na(this._languageId, n);
-		let r = new IT(), i = this._tokenize(e, t, n, r);
+		let r = new zT(), i = this._tokenize(e, t, n, r);
 		return r.finalize(i);
 	}
 	tokenizeEncoded(e, t, n) {
 		if (e.length >= this._maxTokenizationLineLength) return Os(this._languageService.languageIdCodec.encodeLanguageId(this._languageId), n);
-		let r = new LT(this._languageService, this._standaloneThemeService.getColorTheme().tokenTheme), i = this._tokenize(e, t, n, r);
+		let r = new BT(this._languageService, this._standaloneThemeService.getColorTheme().tokenTheme), i = this._tokenize(e, t, n, r);
 		return r.finalize(i);
 	}
 	_tokenize(e, t, n, r) {
@@ -306,10 +306,10 @@ var kT, AT = 5, jT = class e {
 	}
 	_findLeavingNestedLanguageOffset(e, t) {
 		let n = this._lexer.tokenizer[t.stack.state];
-		if (!n && (n = DT(this._lexer, t.stack.state), !n)) throw wT(this._lexer, "tokenizer state is not defined: " + t.stack.state);
+		if (!n && (n = AT(this._lexer, t.stack.state), !n)) throw DT(this._lexer, "tokenizer state is not defined: " + t.stack.state);
 		let r = -1, i = !1;
 		for (let a of n) {
-			if (!yT(a.action) || !(a.action.nextEmbedded === "@pop" || a.action.hasEmbeddedEndInCases)) continue;
+			if (!ST(a.action) || !(a.action.nextEmbedded === "@pop" || a.action.hasEmbeddedEndInCases)) continue;
 			i = !0;
 			let n = a.resolveRegex(t.stack.state), o = n.source;
 			if (o.substr(0, 4) === "^(?:" && o.substr(o.length - 1, 1) === ")") {
@@ -319,14 +319,14 @@ var kT, AT = 5, jT = class e {
 			let s = e.search(n);
 			s === -1 || s !== 0 && a.matchOnlyAtLineStart || (r === -1 || s < r) && (r = s);
 		}
-		if (!i) throw wT(this._lexer, "no rule containing nextEmbedded: \"@pop\" in tokenizer embedded state: " + t.stack.state);
+		if (!i) throw DT(this._lexer, "no rule containing nextEmbedded: \"@pop\" in tokenizer embedded state: " + t.stack.state);
 		return r;
 	}
 	_nestedTokenize(e, t, n, r, i) {
 		let a = this._findLeavingNestedLanguageOffset(e, n);
 		if (a === -1) {
 			let a = i.nestedLanguageTokenize(e, t, n.embeddedLanguageData, r);
-			return PT.create(n.stack, new NT(n.embeddedLanguageData.languageId, a));
+			return LT.create(n.stack, new IT(n.embeddedLanguageData.languageId, a));
 		}
 		let o = e.substring(0, a);
 		o.length > 0 && i.nestedLanguageTokenize(o, !1, n.embeddedLanguageData, r);
@@ -349,7 +349,7 @@ var kT, AT = 5, jT = class e {
 				if (!f && u >= s) break;
 				f = !1;
 				let e = this._lexer.tokenizer[h];
-				if (!e && (e = DT(this._lexer, h), !e)) throw wT(this._lexer, "tokenizer state is not defined: " + h);
+				if (!e && (e = AT(this._lexer, h), !e)) throw DT(this._lexer, "tokenizer state is not defined: " + h);
 				let t = o.substr(u);
 				for (let n of e) if ((u === 0 || !n.matchOnlyAtLineStart) && (g = t.match(n.resolveRegex(h)), g)) {
 					_ = g[0], v = n.action;
@@ -357,49 +357,49 @@ var kT, AT = 5, jT = class e {
 				}
 			}
 			if (g || (g = [""], _ = ""), v ||= (u < s && (g = [o.charAt(u)], _ = g[0]), this._lexer.defaultToken), _ === null) break;
-			for (u += _.length; _T(v) && yT(v) && v.test;) v = v.test(_, g, h, u === s);
+			for (u += _.length; bT(v) && ST(v) && v.test;) v = v.test(_, g, h, u === s);
 			let ee = null;
 			if (typeof v == "string" || Array.isArray(v)) ee = v;
 			else if (v.group) ee = v.group;
 			else if (v.token !== null && v.token !== void 0) {
-				if (ee = v.tokenSubst ? TT(this._lexer, v.token, _, g, h) : v.token, v.nextEmbedded) if (v.nextEmbedded === "@pop") {
-					if (!c) throw wT(this._lexer, "cannot pop embedded language if not inside one");
+				if (ee = v.tokenSubst ? OT(this._lexer, v.token, _, g, h) : v.token, v.nextEmbedded) if (v.nextEmbedded === "@pop") {
+					if (!c) throw DT(this._lexer, "cannot pop embedded language if not inside one");
 					c = null;
-				} else if (c) throw wT(this._lexer, "cannot enter embedded language from within an embedded language");
-				else b = TT(this._lexer, v.nextEmbedded, _, g, h);
+				} else if (c) throw DT(this._lexer, "cannot enter embedded language from within an embedded language");
+				else b = OT(this._lexer, v.nextEmbedded, _, g, h);
 				if (v.goBack && (u = Math.max(0, u - v.goBack)), v.switchTo && typeof v.switchTo == "string") {
-					let e = TT(this._lexer, v.switchTo, _, g, h);
-					if (e[0] === "@" && (e = e.substr(1)), DT(this._lexer, e)) l = l.switchTo(e);
-					else throw wT(this._lexer, "trying to switch to a state '" + e + "' that is undefined in rule: " + this._safeRuleName(y));
-				} else if (v.transform && typeof v.transform == "function") throw wT(this._lexer, "action.transform not supported");
+					let e = OT(this._lexer, v.switchTo, _, g, h);
+					if (e[0] === "@" && (e = e.substr(1)), AT(this._lexer, e)) l = l.switchTo(e);
+					else throw DT(this._lexer, "trying to switch to a state '" + e + "' that is undefined in rule: " + this._safeRuleName(y));
+				} else if (v.transform && typeof v.transform == "function") throw DT(this._lexer, "action.transform not supported");
 				else if (v.next) if (v.next === "@push") {
-					if (l.depth >= this._lexer.maxStack) throw wT(this._lexer, "maximum tokenizer stack size reached: [" + l.state + "," + l.parent.state + ",...]");
+					if (l.depth >= this._lexer.maxStack) throw DT(this._lexer, "maximum tokenizer stack size reached: [" + l.state + "," + l.parent.state + ",...]");
 					l = l.push(h);
 				} else if (v.next === "@pop") {
-					if (l.depth <= 1) throw wT(this._lexer, "trying to pop an empty stack in rule: " + this._safeRuleName(y));
+					if (l.depth <= 1) throw DT(this._lexer, "trying to pop an empty stack in rule: " + this._safeRuleName(y));
 					l = l.pop();
 				} else if (v.next === "@popall") l = l.popall();
 				else {
-					let e = TT(this._lexer, v.next, _, g, h);
-					if (e[0] === "@" && (e = e.substr(1)), DT(this._lexer, e)) l = l.push(e);
-					else throw wT(this._lexer, "trying to set a next state '" + e + "' that is undefined in rule: " + this._safeRuleName(y));
+					let e = OT(this._lexer, v.next, _, g, h);
+					if (e[0] === "@" && (e = e.substr(1)), AT(this._lexer, e)) l = l.push(e);
+					else throw DT(this._lexer, "trying to set a next state '" + e + "' that is undefined in rule: " + this._safeRuleName(y));
 				}
-				v.log && typeof v.log == "string" && CT(this._lexer, this._lexer.languageId + ": " + TT(this._lexer, v.log, _, g, h));
+				v.log && typeof v.log == "string" && ET(this._lexer, this._lexer.languageId + ": " + OT(this._lexer, v.log, _, g, h));
 			}
-			if (ee === null) throw wT(this._lexer, "lexer rule has no well-defined action in rule: " + this._safeRuleName(y));
+			if (ee === null) throw DT(this._lexer, "lexer rule has no well-defined action in rule: " + this._safeRuleName(y));
 			let x = (n) => {
 				let a = this._languageService.getLanguageIdByLanguageName(n) || this._languageService.getLanguageIdByMimeType(n) || n, o = this._getNestedEmbeddedLanguageData(a);
 				if (u < s) {
 					let n = e.substr(u);
-					return this._nestedTokenize(n, t, PT.create(l, o), r + u, i);
-				} else return PT.create(l, o);
+					return this._nestedTokenize(n, t, LT.create(l, o), r + u, i);
+				} else return LT.create(l, o);
 			};
 			if (Array.isArray(ee)) {
-				if (d && d.groups.length > 0) throw wT(this._lexer, "groups cannot be nested: " + this._safeRuleName(y));
-				if (g.length !== ee.length + 1) throw wT(this._lexer, "matched number of groups does not match the number of actions in rule: " + this._safeRuleName(y));
+				if (d && d.groups.length > 0) throw DT(this._lexer, "groups cannot be nested: " + this._safeRuleName(y));
+				if (g.length !== ee.length + 1) throw DT(this._lexer, "matched number of groups does not match the number of actions in rule: " + this._safeRuleName(y));
 				let e = 0;
 				for (let t = 1; t < g.length; t++) e += g[t].length;
-				if (e !== _.length) throw wT(this._lexer, "with groups, all characters should be matched in consecutive groups in rule: " + this._safeRuleName(y));
+				if (e !== _.length) throw DT(this._lexer, "with groups, all characters should be matched in consecutive groups in rule: " + this._safeRuleName(y));
 				d = {
 					rule: y,
 					matches: g,
@@ -415,44 +415,44 @@ var kT, AT = 5, jT = class e {
 				if (ee === "@rematch" && (u -= _.length, _ = "", g = null, ee = "", b !== null)) return x(b);
 				if (_.length === 0) {
 					if (s === 0 || p !== l.depth || h !== l.state || (d ? d.groups.length : 0) !== m) continue;
-					throw wT(this._lexer, "no progress in tokenizer in rule: " + this._safeRuleName(y));
+					throw DT(this._lexer, "no progress in tokenizer in rule: " + this._safeRuleName(y));
 				}
 				let e = null;
-				if (vT(ee) && ee.indexOf("@brackets") === 0) {
-					let t = ee.substr(9), n = zT(this._lexer, _);
-					if (!n) throw wT(this._lexer, "@brackets token returned but no bracket defined as: " + _);
-					e = ST(n.token + t);
-				} else e = ST(ee === "" ? "" : ee + this._lexer.tokenPostfix);
+				if (xT(ee) && ee.indexOf("@brackets") === 0) {
+					let t = ee.substr(9), n = HT(this._lexer, _);
+					if (!n) throw DT(this._lexer, "@brackets token returned but no bracket defined as: " + _);
+					e = TT(n.token + t);
+				} else e = TT(ee === "" ? "" : ee + this._lexer.tokenPostfix);
 				n < a && i.emit(n + r, e);
 			}
 			if (b !== null) return x(b);
 		}
-		return PT.create(l, c);
+		return LT.create(l, c);
 	}
 	_getNestedEmbeddedLanguageData(e) {
-		if (!this._languageService.isRegisteredLanguageId(e)) return new NT(e, Tc);
+		if (!this._languageService.isRegisteredLanguageId(e)) return new IT(e, Tc);
 		e !== this._languageId && (this._languageService.requestBasicLanguageFeatures(e), Fs.getOrCreate(e), this._embeddedLanguages[e] = !0);
 		let t = Fs.get(e);
-		return t ? new NT(e, t.getInitialState()) : new NT(e, Tc);
+		return t ? new IT(e, t.getInitialState()) : new IT(e, Tc);
 	}
 };
-RT = kT = N([R(4, ba)], RT);
-function zT(e, t) {
+VT = MT = N([R(4, ba)], VT);
+function HT(e, t) {
 	if (!t) return null;
-	t = xT(e, t);
+	t = wT(e, t);
 	let n = e.brackets;
 	for (let e of n) if (e.open === t) return {
 		token: e.token,
-		bracketType: hT.Open
+		bracketType: vT.Open
 	};
 	else if (e.close === t) return {
 		token: e.token,
-		bracketType: hT.Close
+		bracketType: vT.Close
 	};
 	return null;
 }
 c(), Ci(), Ur();
-var BT = Ji("standaloneColorizer", { createHTML: (e) => e }), VT = class {
+var UT = Ji("standaloneColorizer", { createHTML: (e) => e }), WT = class {
 	static colorizeElement(e, t, n, r) {
 		r ||= {};
 		let i = r.theme || "vs", a = r.mimeType || n.getAttribute("lang") || n.getAttribute("data-lang");
@@ -461,16 +461,16 @@ var BT = Ji("standaloneColorizer", { createHTML: (e) => e }), VT = class {
 		e.setTheme(i);
 		let s = n.firstChild ? n.firstChild.nodeValue : "";
 		return n.className += " " + i, this.colorize(t, s || "", o, r).then((e) => {
-			n.innerHTML = BT?.createHTML(e) ?? e;
+			n.innerHTML = UT?.createHTML(e) ?? e;
 		}, (e) => console.error(e));
 	}
 	static async colorize(e, t, n, r) {
 		let i = e.languageIdCodec, a = 4;
 		r && typeof r.tabSize == "number" && (a = r.tabSize), Bi(t) && (t = t.substr(1));
 		let o = Pc(t);
-		if (!e.isRegisteredLanguageId(n)) return UT(o, a, i);
+		if (!e.isRegisteredLanguageId(n)) return KT(o, a, i);
 		let s = await Fs.getOrCreate(n);
-		return s ? HT(o, a, s, i) : UT(o, a, i);
+		return s ? GT(o, a, s, i) : KT(o, a, i);
 	}
 	static colorizeLine(e, t, n, r, i = 4) {
 		let a = _d.isBasicASCII(e, t);
@@ -483,11 +483,11 @@ var BT = Ji("standaloneColorizer", { createHTML: (e) => e }), VT = class {
 		return this.colorizeLine(r, e.mightContainNonBasicASCII(), e.mightContainRTL(), i, n);
 	}
 };
-function HT(e, t, n, r) {
+function GT(e, t, n, r) {
 	return new Promise((i, a) => {
 		let o = () => {
-			let s = WT(e, t, n, r);
-			if (n instanceof RT) {
+			let s = qT(e, t, n, r);
+			if (n instanceof VT) {
 				let e = n.getLoadStatus();
 				if (e.loaded === !1) {
 					e.promise.then(o, a);
@@ -499,7 +499,7 @@ function HT(e, t, n, r) {
 		o();
 	});
 }
-function UT(e, t, n) {
+function KT(e, t, n) {
 	let r = [], i = (ha.None << as.FONT_STYLE_OFFSET | o.DefaultForeground << as.FOREGROUND_OFFSET | o.DefaultBackground << as.BACKGROUND_OFFSET) >>> 0, a = /* @__PURE__ */ new Uint32Array(2);
 	a[0] = 0, a[1] = i;
 	for (let i = 0, o = e.length; i < o; i++) {
@@ -510,7 +510,7 @@ function UT(e, t, n) {
 	}
 	return r.join("");
 }
-function WT(e, t, n, r) {
+function qT(e, t, n, r) {
 	let i = [], a = n.getInitialState();
 	for (let o = 0, s = e.length; o < s; o++) {
 		let s = e[o], c = n.tokenizeEncoded(s, !0, a);
@@ -531,14 +531,14 @@ gc(), Wn(), Cn(), pe(), Ar(), Rt(), qt(), Uc(), qr(), Zt(), xe(), bi(), $o(), Yi
 	hcDark: "sideBarSectionHeader.border",
 	hcLight: "#cccccc"
 }, M(211, "The border color of the multi file diff editor")), Ui(), b(), ui(), P(), ri(), Ld(), Ad();
-var GT = class {
+var JT = class {
 	constructor(e, t) {
 		this.viewModel = e, this.deltaScrollVertical = t;
 	}
 	getId() {
 		return this.viewModel;
 	}
-}, KT = class extends z {
+}, YT = class extends z {
 	constructor(e, t, n, r, i) {
 		super(), this._container = e, this._overflowWidgetsDomNode = t, this._workbenchUIElementFactory = n, this._instantiationService = r, this._viewModel = He(this, void 0), this._collapsed = Si(this, (e) => this._viewModel.read(e)?.collapsed.read(e)), this._editorContentHeight = He(this, 500), this.contentHeight = Si(this, (e) => (this._collapsed.read(e) ? 0 : this._editorContentHeight.read(e)) + this._outerEditorHeight), this._modifiedContentWidth = He(this, 0), this._modifiedWidth = He(this, 0), this._originalContentWidth = He(this, 0), this._originalWidth = He(this, 0), this.maxScroll = Si(this, (e) => {
 			let t = this._modifiedContentWidth.read(e) - this._modifiedWidth.read(e), n = this._originalContentWidth.read(e) - this._originalWidth.read(e);
@@ -652,8 +652,8 @@ var GT = class {
 		this._elements.root.style.top = "-100000px", this._elements.root.style.visibility = "hidden";
 	}
 };
-KT = N([R(3, It), R(4, ks)], KT), qS(), wd(), Vt(), Lt(), Co(), Dd(), Ih();
-var qT = class {
+YT = N([R(3, It), R(4, ks)], YT), qS(), wd(), Vt(), Lt(), Co(), Dd(), Ih();
+var XT = class {
 	constructor(e) {
 		this._create = e, this._unused = /* @__PURE__ */ new Set(), this._used = /* @__PURE__ */ new Set(), this._itemData = /* @__PURE__ */ new Map();
 	}
@@ -676,9 +676,9 @@ var qT = class {
 		for (let e of this._unused) e.dispose();
 		this._used.clear(), this._unused.clear();
 	}
-}, JT = /* @__PURE__ */ n({});
-b(), Nr(), P(), _n(), fr(), Qo(), E(), qr(), yc(), $r(), so(), Ir(), Ki(JT);
-var YT = class extends z {
+}, ZT = /* @__PURE__ */ n({});
+b(), Nr(), P(), _n(), fr(), Qo(), E(), qr(), yc(), $r(), so(), Ir(), Ki(ZT);
+var QT = class extends z {
 	constructor(e, t, n, r, i, a) {
 		super(), this._element = e, this._dimension = t, this._viewModel = n, this._workbenchUIElementFactory = r, this._parentContextKeyService = i, this._parentInstantiationService = a, this._scrollableElements = Dl("div.scrollContent", [Dl("div@content", { style: { overflow: "hidden" } }), Dl("div.monaco-editor@overflowWidgetsDomNode", {})]), this._scrollable = this._register(new ti({
 			forceIntegerValues: !1,
@@ -688,8 +688,8 @@ var YT = class extends z {
 			vertical: Kr.Auto,
 			horizontal: Kr.Auto,
 			useShadows: !1
-		}, this._scrollable)), this._elements = Dl("div.monaco-component.multiDiffEditor", {}, [Dl("div", {}, [this._scrollableElement.getDomNode()]), Dl("div.placeholder@placeholder", {}, [Dl("div")])]), this._sizeObserver = this._register(new Td(this._element, void 0)), this._objectPool = this._register(new qT((e) => {
-			let t = this._instantiationService.createInstance(KT, this._scrollableElements.content, this._scrollableElements.overflowWidgetsDomNode, this._workbenchUIElementFactory);
+		}, this._scrollable)), this._elements = Dl("div.monaco-component.multiDiffEditor", {}, [Dl("div", {}, [this._scrollableElement.getDomNode()]), Dl("div.placeholder@placeholder", {}, [Dl("div")])]), this._sizeObserver = this._register(new Td(this._element, void 0)), this._objectPool = this._register(new XT((e) => {
+			let t = this._instantiationService.createInstance(YT, this._scrollableElements.content, this._scrollableElements.overflowWidgetsDomNode, this._workbenchUIElementFactory);
 			return t.setData(e), t;
 		})), this.scrollTop = Dr(this, this._scrollableElement.onScroll, () => this._scrollableElement.getScrollPosition().scrollTop), this.scrollLeft = Dr(this, this._scrollableElement.onScroll, () => this._scrollableElement.getScrollPosition().scrollLeft), this._viewItemsInfo = Si(this, (e) => {
 			let t = this._viewModel.read(e);
@@ -702,7 +702,7 @@ var YT = class extends z {
 			let n = t.items.read(e), r = /* @__PURE__ */ new Map();
 			return {
 				items: n.map((t) => {
-					let n = e.store.add(new ZT(t, this._objectPool, this.scrollLeft, (e) => {
+					let n = e.store.add(new eE(t, this._objectPool, this.scrollLeft, (e) => {
 						this._scrollableElement.setScrollPosition({ scrollTop: this._scrollableElement.getScrollPosition().scrollTop + e });
 					})), i = this._lastDocStates?.[n.getKey()];
 					return i && ci((e) => {
@@ -790,7 +790,7 @@ var YT = class extends z {
 		for (let e = 0; e < r; e++) a += n[e].contentHeight.get() + this._spaceBetweenPx;
 		this._scrollableElement.setScrollPosition({ scrollTop: a });
 		let o = i.template.get()?.editor, c = "original" in e ? o?.getOriginalEditor() : o?.getModifiedEditor();
-		c && t?.range && (c.revealRangeInCenter(t.range), XT(c, t.range));
+		c && t?.range && (c.revealRangeInCenter(t.range), $T(c, t.range));
 	}
 	getViewState() {
 		return {
@@ -883,8 +883,8 @@ var YT = class extends z {
 		this._scrollableElements.content.style.transform = `translateY(${-(t + n)}px)`;
 	}
 };
-YT = N([R(4, ks), R(5, It)], YT);
-function XT(e, t) {
+QT = N([R(4, ks), R(5, It)], QT);
+function $T(e, t) {
 	let n = e.getModel(), r = e.createDecorationsCollection([{
 		range: t,
 		options: {
@@ -896,7 +896,7 @@ function XT(e, t) {
 		e.getModel() === n && r.clear();
 	}, 350);
 }
-var ZT = class extends z {
+var eE = class extends z {
 	constructor(e, t, n, r) {
 		super(), this.viewModel = e, this._objectPool = t, this._scrollLeft = n, this._deltaScrollVertical = r, this._templateRef = this._register(yr(this, void 0)), this.contentHeight = Si(this, (e) => this._templateRef.read(e)?.object.contentHeight?.read(e) ?? this.viewModel.lastTemplateData.read(e).contentHeight), this.maxScroll = Si(this, (e) => this._templateRef.read(e)?.object.maxScroll.read(e) ?? {
 			maxScroll: 0,
@@ -956,7 +956,7 @@ var ZT = class extends z {
 		this._isHidden.set(!1, void 0);
 		let i = this._templateRef.get();
 		if (!i) {
-			i = this._objectPool.getUnusedObj(new GT(this.viewModel, this._deltaScrollVertical)), this._templateRef.set(i, void 0);
+			i = this._objectPool.getUnusedObj(new JT(this.viewModel, this._deltaScrollVertical)), this._templateRef.set(i, void 0);
 			let e = this.viewModel.lastTemplateData.get().selections;
 			e && i.object.editor.setSelections(e);
 		}
@@ -964,9 +964,9 @@ var ZT = class extends z {
 	}
 };
 b(), P(), _n(), E(), Ir(), yc();
-var QT = class extends z {
+var tE = class extends z {
 	constructor(e, t, n) {
-		super(), this._element = e, this._workbenchUIElementFactory = t, this._instantiationService = n, this._dimension = He(this, void 0), this._viewModel = He(this, void 0), this._widgetImpl = Si(this, (e) => e.store.add(this._instantiationService.createInstance(Fd(YT), this._element, this._dimension, this._viewModel, this._workbenchUIElementFactory))), this._activeControl = Si(this, (e) => this._widgetImpl.read(e).activeControl.read(e)), this.onDidChangeActiveControl = is.fromObservableLight(this._activeControl), this._register(Pt(this._widgetImpl));
+		super(), this._element = e, this._workbenchUIElementFactory = t, this._instantiationService = n, this._dimension = He(this, void 0), this._viewModel = He(this, void 0), this._widgetImpl = Si(this, (e) => e.store.add(this._instantiationService.createInstance(Fd(QT), this._element, this._dimension, this._viewModel, this._workbenchUIElementFactory))), this._activeControl = Si(this, (e) => this._widgetImpl.read(e).activeControl.read(e)), this.onDidChangeActiveControl = is.fromObservableLight(this._activeControl), this._register(Pt(this._widgetImpl));
 	}
 	reveal(e, t) {
 		this._widgetImpl.get().reveal(e, t);
@@ -1011,37 +1011,37 @@ var QT = class extends z {
 		this._widgetImpl.get().goToPreviousChange();
 	}
 };
-QT = N([R(2, It)], QT), gs(), P(), c(), Ur(), aa(), Di(), Ki(fT);
-function $T(e, t, n) {
+tE = N([R(2, It)], tE), gs(), P(), c(), Ur(), aa(), Di(), Ki(hT);
+function nE(e, t, n) {
 	return B.initialize(n || {}).createInstance($S, e, t);
 }
-function eE(e) {
+function rE(e) {
 	return B.get(Ie).onCodeEditorAdd((t) => {
 		e(t);
 	});
 }
-function tE(e) {
+function iE(e) {
 	return B.get(Ie).onDiffEditorAdd((t) => {
 		e(t);
 	});
 }
-function nE() {
+function aE() {
 	return B.get(Ie).listCodeEditors();
 }
-function rE() {
+function oE() {
 	return B.get(Ie).listDiffEditors();
 }
-function iE(e, t, n) {
+function sE(e, t, n) {
 	return B.initialize(n || {}).createInstance(nC, e, t);
 }
-function aE(e, t) {
-	return new QT(e, {}, B.initialize(t || {}));
+function cE(e, t) {
+	return new tE(e, {}, B.initialize(t || {}));
 }
-function oE(e) {
+function lE(e) {
 	if (typeof e.id != "string" || typeof e.run != "function") throw Error("Invalid command descriptor, `id` and `run` are required properties!");
 	return no.registerCommand(e.id, e.run);
 }
-function sE(e) {
+function uE(e) {
 	if (typeof e.id != "string" || typeof e.label != "string" || typeof e.run != "function") throw Error("Invalid action descriptor, `id`, `label` and `run` are required properties!");
 	let t = ye.deserialize(e.precondition), n = (n, ...r) => ne.runEditorCommand(n, r, t, (t, n, r) => Promise.resolve(e.run(n, ...r))), r = new I();
 	if (r.add(no.registerCommand(e.id, n)), e.contextMenuGroupId) {
@@ -1070,10 +1070,10 @@ function sE(e) {
 	}
 	return r;
 }
-function cE(e) {
-	return lE([e]);
+function dE(e) {
+	return fE([e]);
 }
-function lE(e) {
+function fE(e) {
 	let t = B.get(k);
 	return t instanceof uc ? t.addDynamicKeybindings(e.map((e) => ({
 		keybinding: e.keybinding,
@@ -1082,39 +1082,39 @@ function lE(e) {
 		when: ye.deserialize(e.when)
 	}))) : (console.warn("Cannot add keybinding because the editor is configured with an unrecognized KeybindingService"), z.None);
 }
-function uE(e, t, n) {
+function pE(e, t, n) {
 	let r = B.get(ps), i = r.getLanguageIdByMimeType(t) || t;
 	return ZS(B.get(an), r, e, i, n);
 }
-function dE(e, t) {
+function mE(e, t) {
 	let n = B.get(ps), r = n.getLanguageIdByMimeType(t) || t || "plaintext";
 	e.setLanguage(n.createById(r));
 }
-function fE(e, t, n) {
+function hE(e, t, n) {
 	e && B.get(Hi).changeOne(t, e.uri, n);
 }
-function pE(e) {
+function gE(e) {
 	B.get(Hi).changeAll(e, []);
 }
-function mE(e) {
+function _E(e) {
 	return B.get(Hi).read(e);
 }
-function hE(e) {
+function vE(e) {
 	return B.get(Hi).onMarkerChanged(e);
 }
-function gE(e) {
+function yE(e) {
 	return B.get(an).getModel(e);
 }
-function _E() {
+function bE() {
 	return B.get(an).getModels();
 }
-function vE(e) {
+function xE(e) {
 	return B.get(an).onModelAdded(e);
 }
-function yE(e) {
+function SE(e) {
 	return B.get(an).onModelRemoved(e);
 }
-function bE(e) {
+function CE(e) {
 	return B.get(an).onModelLanguageChanged((t) => {
 		e({
 			model: t.model,
@@ -1122,58 +1122,58 @@ function bE(e) {
 		});
 	});
 }
-function xE(e) {
-	return pT(B.get(an), B.get(he), e);
+function wE(e) {
+	return gT(B.get(an), B.get(he), e);
 }
-function SE(e, t) {
+function TE(e, t) {
 	let n = B.get(ps), r = B.get(ge);
-	return VT.colorizeElement(r, n, e, t).then(() => {
+	return WT.colorizeElement(r, n, e, t).then(() => {
 		r.registerEditorContainer(e);
 	});
 }
-function CE(e, t, n) {
+function EE(e, t, n) {
 	let r = B.get(ps);
-	return B.get(ge).registerEditorContainer(Aa.document.body), VT.colorize(r, e, t, n);
+	return B.get(ge).registerEditorContainer(Aa.document.body), WT.colorize(r, e, t, n);
 }
-function wE(e, t, n = 4) {
-	return B.get(ge).registerEditorContainer(Aa.document.body), VT.colorizeModelLine(e, t, n);
+function DE(e, t, n = 4) {
+	return B.get(ge).registerEditorContainer(Aa.document.body), WT.colorizeModelLine(e, t, n);
 }
-function TE(e) {
+function OE(e) {
 	return Fs.get(e) || {
 		getInitialState: () => Tc,
 		tokenize: (t, n, r) => Na(e, r)
 	};
 }
-function EE(e, t) {
+function kE(e, t) {
 	Fs.getOrCreate(t);
-	let n = TE(t), r = Pc(e), i = [], a = n.getInitialState();
+	let n = OE(t), r = Pc(e), i = [], a = n.getInitialState();
 	for (let e = 0, t = r.length; e < t; e++) {
 		let t = r[e], o = n.tokenize(t, !0, a);
 		i[e] = o.tokens, a = o.endState;
 	}
 	return i;
 }
-function DE(e, t) {
+function AE(e, t) {
 	B.get(ge).defineTheme(e, t);
 }
-function OE(e) {
+function jE(e) {
 	B.get(ge).setTheme(e);
 }
-function kE() {
+function ME() {
 	Rd.clearAllFontInfos();
 }
-function AE(e, t) {
+function NE(e, t) {
 	return no.registerCommand({
 		id: e,
 		handler: t
 	});
 }
-function jE(e) {
+function PE(e) {
 	return B.get(Ic).registerOpener({ async open(t) {
 		return typeof t == "string" && (t = H.parse(t)), e.open(t);
 	} });
 }
-function ME(e) {
+function FE(e) {
 	return B.get(Ie).registerCodeEditorOpenHandler(async (t, n, r) => {
 		if (!n) return null;
 		let i = t.options?.selection, a;
@@ -1183,40 +1183,40 @@ function ME(e) {
 		}), await e.openCodeEditor(n, t.resource, a) ? n : null;
 	});
 }
-function NE() {
+function IE() {
 	return {
-		create: $T,
-		getEditors: nE,
-		getDiffEditors: rE,
-		onDidCreateEditor: eE,
-		onDidCreateDiffEditor: tE,
-		createDiffEditor: iE,
-		addCommand: oE,
-		addEditorAction: sE,
-		addKeybindingRule: cE,
-		addKeybindingRules: lE,
-		createModel: uE,
-		setModelLanguage: dE,
-		setModelMarkers: fE,
-		getModelMarkers: mE,
-		removeAllMarkers: pE,
-		onDidChangeMarkers: hE,
-		getModels: _E,
-		getModel: gE,
-		onDidCreateModel: vE,
-		onWillDisposeModel: yE,
-		onDidChangeModelLanguage: bE,
-		createWebWorker: xE,
-		colorizeElement: SE,
-		colorize: CE,
-		colorizeModelLine: wE,
-		tokenize: EE,
-		defineTheme: DE,
-		setTheme: OE,
-		remeasureFonts: kE,
-		registerCommand: AE,
-		registerLinkOpener: jE,
-		registerEditorOpener: ME,
+		create: nE,
+		getEditors: aE,
+		getDiffEditors: oE,
+		onDidCreateEditor: rE,
+		onDidCreateDiffEditor: iE,
+		createDiffEditor: sE,
+		addCommand: lE,
+		addEditorAction: uE,
+		addKeybindingRule: dE,
+		addKeybindingRules: fE,
+		createModel: pE,
+		setModelLanguage: mE,
+		setModelMarkers: hE,
+		getModelMarkers: _E,
+		removeAllMarkers: gE,
+		onDidChangeMarkers: vE,
+		getModels: bE,
+		getModel: yE,
+		onDidCreateModel: xE,
+		onWillDisposeModel: SE,
+		onDidChangeModelLanguage: CE,
+		createWebWorker: wE,
+		colorizeElement: TE,
+		colorize: EE,
+		colorizeModelLine: DE,
+		tokenize: kE,
+		defineTheme: AE,
+		setTheme: jE,
+		remeasureFonts: ME,
+		registerCommand: NE,
+		registerLinkOpener: PE,
+		registerEditorOpener: FE,
 		AccessibilitySupport: Hu,
 		ContentWidgetPositionPreference: Yl,
 		CursorChangeReason: cu,
@@ -1250,41 +1250,41 @@ function NE() {
 		FindMatch: zs,
 		ApplyUpdateResult: si,
 		EditorZoom: Cr,
-		createMultiFileDiffEditor: aE,
+		createMultiFileDiffEditor: cE,
 		EditorType: ho,
 		EditorOptions: lo
 	};
 }
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-editor-api/vscode/src/vs/editor/standalone/common/monarch/monarchCompile.js
-function PE(e, t) {
+function LE(e, t) {
 	if (!t || !Array.isArray(t)) return !1;
 	for (let n of t) if (!e(n)) return !1;
 	return !0;
 }
-function FE(e, t) {
+function RE(e, t) {
 	return typeof e == "boolean" ? e : t;
 }
-function IE(e, t) {
+function zE(e, t) {
 	return typeof e == "string" ? e : t;
 }
-function LE(e) {
+function BE(e) {
 	let t = {};
 	for (let n of e) t[n] = !0;
 	return t;
 }
-function RE(e, t = !1) {
+function VE(e, t = !1) {
 	t && (e = e.map(function(e) {
 		return e.toLowerCase();
 	}));
-	let n = LE(e);
+	let n = BE(e);
 	return t ? function(e) {
 		return n[e.toLowerCase()] !== void 0 && n.hasOwnProperty(e.toLowerCase());
 	} : function(e) {
 		return n[e] !== void 0 && n.hasOwnProperty(e);
 	};
 }
-function zE(e, t, n) {
+function HE(e, t, n) {
 	t = t.replace(/@@/g, "");
 	let r = 0, i;
 	do
@@ -1293,20 +1293,20 @@ function zE(e, t, n) {
 			let a = "";
 			if (typeof e[r] == "string") a = e[r];
 			else if (e[r] && e[r] instanceof RegExp) a = e[r].source;
-			else if (e[r] === void 0) throw wT(e, "language definition does not contain attribute '" + r + "', used at: " + t);
-			else throw wT(e, "attribute reference '" + r + "' must be a string, used at: " + t);
-			return bT(a) ? "" : "(?:" + a + ")";
+			else if (e[r] === void 0) throw DT(e, "language definition does not contain attribute '" + r + "', used at: " + t);
+			else throw DT(e, "attribute reference '" + r + "' must be a string, used at: " + t);
+			return CT(a) ? "" : "(?:" + a + ")";
 		}), r++;
 	while (i && r < 5);
 	t = t.replace(/\x01/g, "@");
 	let a = (e.ignoreCase ? "i" : "") + (e.unicode ? "u" : "");
 	if (n && t.match(/\$[sS](\d\d?)/g)) {
 		let n = null, r = null;
-		return (i) => r && n === i ? r : (n = i, r = new RegExp(ET(e, t, i), a), r);
+		return (i) => r && n === i ? r : (n = i, r = new RegExp(kT(e, t, i), a), r);
 	}
 	return new RegExp(t, a);
 }
-function BE(e, t, n, r) {
+function UE(e, t, n, r) {
 	if (r < 0) return e;
 	if (r < t.length) return t[r];
 	if (r >= 100) {
@@ -1316,44 +1316,44 @@ function BE(e, t, n, r) {
 	}
 	return null;
 }
-function VE(e, t, n, r) {
+function WE(e, t, n, r) {
 	let i = -1, a = n, o = n.match(/^\$(([sS]?)(\d\d?)|#)(.*)$/);
 	o && (o[3] && (i = parseInt(o[3]), o[2] && (i += 100)), a = o[4]);
 	let s = "~", c = a;
 	!a || a.length === 0 ? (s = "!=", c = "") : /^\w*$/.test(c) ? s = "==" : (o = a.match(/^(@|!@|~|!~|==|!=)(.*)$/), o && (s = o[1], c = o[2]));
 	let l;
 	if ((s === "~" || s === "!~") && /^(\w|\|)*$/.test(c)) {
-		let t = RE(c.split("|"), e.ignoreCase);
+		let t = VE(c.split("|"), e.ignoreCase);
 		l = function(e) {
 			return s === "~" ? t(e) : !t(e);
 		};
 	} else if (s === "@" || s === "!@") {
 		let n = e[c];
-		if (!n) throw wT(e, "the @ match target '" + c + "' is not defined, in rule: " + t);
-		if (!PE(function(e) {
+		if (!n) throw DT(e, "the @ match target '" + c + "' is not defined, in rule: " + t);
+		if (!LE(function(e) {
 			return typeof e == "string";
-		}, n)) throw wT(e, "the @ match target '" + c + "' must be an array of strings, in rule: " + t);
-		let r = RE(n, e.ignoreCase);
+		}, n)) throw DT(e, "the @ match target '" + c + "' must be an array of strings, in rule: " + t);
+		let r = VE(n, e.ignoreCase);
 		l = function(e) {
 			return s === "@" ? r(e) : !r(e);
 		};
 	} else if (s === "~" || s === "!~") if (c.indexOf("$") < 0) {
-		let t = zE(e, "^" + c + "$", !1);
+		let t = HE(e, "^" + c + "$", !1);
 		l = function(e) {
 			return s === "~" ? t.test(e) : !t.test(e);
 		};
 	} else l = function(t, n, r, i) {
-		return zE(e, "^" + TT(e, c, n, r, i) + "$", !1).test(t);
+		return HE(e, "^" + OT(e, c, n, r, i) + "$", !1).test(t);
 	};
 	else if (c.indexOf("$") < 0) {
-		let t = xT(e, c);
+		let t = wT(e, c);
 		l = function(e) {
 			return s === "==" ? e === t : e !== t;
 		};
 	} else {
-		let t = xT(e, c);
+		let t = wT(e, c);
 		l = function(n, r, i, a, o) {
-			let c = TT(e, t, r, i, a);
+			let c = OT(e, t, r, i, a);
 			return s === "==" ? n === c : n !== c;
 		};
 	}
@@ -1367,26 +1367,26 @@ function VE(e, t, n, r) {
 		name: n,
 		value: r,
 		test: function(e, t, n, r) {
-			let a = BE(e, t, n, i);
+			let a = UE(e, t, n, i);
 			return l(a || "", e, t, n, r);
 		}
 	};
 }
-function HE(e, t, n) {
+function GE(e, t, n) {
 	if (!n) return { token: "" };
 	if (typeof n == "string") return n;
 	if (n.token || n.token === "") {
-		if (typeof n.token != "string") throw wT(e, "a 'token' attribute must be of type string, in rule: " + t);
+		if (typeof n.token != "string") throw DT(e, "a 'token' attribute must be of type string, in rule: " + t);
 		{
 			let r = { token: n.token };
-			if (n.token.indexOf("$") >= 0 && (r.tokenSubst = !0), typeof n.bracket == "string") if (n.bracket === "@open") r.bracket = hT.Open;
-			else if (n.bracket === "@close") r.bracket = hT.Close;
-			else throw wT(e, "a 'bracket' attribute must be either '@open' or '@close', in rule: " + t);
+			if (n.token.indexOf("$") >= 0 && (r.tokenSubst = !0), typeof n.bracket == "string") if (n.bracket === "@open") r.bracket = vT.Open;
+			else if (n.bracket === "@close") r.bracket = vT.Close;
+			else throw DT(e, "a 'bracket' attribute must be either '@open' or '@close', in rule: " + t);
 			if (n.next) {
-				if (typeof n.next != "string") throw wT(e, "the next state must be a string value in rule: " + t);
+				if (typeof n.next != "string") throw DT(e, "the next state must be a string value in rule: " + t);
 				{
 					let i = n.next;
-					if (!/^(@pop|@push|@popall)$/.test(i) && (i[0] === "@" && (i = i.substr(1)), i.indexOf("$") < 0 && !OT(e, TT(e, i, "", [], "")))) throw wT(e, "the next state '" + n.next + "' is not defined in rule: " + t);
+					if (!/^(@pop|@push|@popall)$/.test(i) && (i[0] === "@" && (i = i.substr(1)), i.indexOf("$") < 0 && !jT(e, OT(e, i, "", [], "")))) throw DT(e, "the next state '" + n.next + "' is not defined in rule: " + t);
 					r.next = i;
 				}
 			}
@@ -1394,12 +1394,12 @@ function HE(e, t, n) {
 		}
 	} else if (Array.isArray(n)) {
 		let r = [];
-		for (let i = 0, a = n.length; i < a; i++) r[i] = HE(e, t, n[i]);
+		for (let i = 0, a = n.length; i < a; i++) r[i] = GE(e, t, n[i]);
 		return { group: r };
 	} else if (n.cases) {
 		let r = [], i = !1;
 		for (let a in n.cases) if (n.cases.hasOwnProperty(a)) {
-			let o = HE(e, t, n.cases[a]);
+			let o = GE(e, t, n.cases[a]);
 			a === "@default" || a === "@" || a === "" ? r.push({
 				test: void 0,
 				value: o,
@@ -1410,7 +1410,7 @@ function HE(e, t, n) {
 				},
 				value: o,
 				name: a
-			}) : r.push(VE(e, t, a, o)), i ||= !ga(o) && (o.hasEmbeddedEndInCases || ["@pop", "@popall"].includes(o.nextEmbedded || ""));
+			}) : r.push(WE(e, t, a, o)), i ||= !ga(o) && (o.hasEmbeddedEndInCases || ["@pop", "@popall"].includes(o.nextEmbedded || ""));
 		}
 		let a = e.defaultToken;
 		return {
@@ -1420,9 +1420,9 @@ function HE(e, t, n) {
 				return a;
 			}
 		};
-	} else throw wT(e, "an action must be a string, an object with a 'token' or 'cases' attribute, or an array of actions; in rule: " + t);
+	} else throw DT(e, "an action must be a string, an object with a 'token' or 'cases' attribute, or an array of actions; in rule: " + t);
 }
-var UE = class {
+var KE = class {
 	constructor(e) {
 		this.regex = /* @__PURE__ */ RegExp(""), this.action = { token: "" }, this.matchOnlyAtLineStart = !1, this.name = "", this.name = e;
 	}
@@ -1430,28 +1430,28 @@ var UE = class {
 		let n;
 		if (typeof t == "string") n = t;
 		else if (t instanceof RegExp) n = t.source;
-		else throw wT(e, "rules must start with a match string or regular expression: " + this.name);
-		this.matchOnlyAtLineStart = n.length > 0 && n[0] === "^", this.name = this.name + ": " + n, this.regex = zE(e, "^(?:" + (this.matchOnlyAtLineStart ? n.substr(1) : n) + ")", !0);
+		else throw DT(e, "rules must start with a match string or regular expression: " + this.name);
+		this.matchOnlyAtLineStart = n.length > 0 && n[0] === "^", this.name = this.name + ": " + n, this.regex = HE(e, "^(?:" + (this.matchOnlyAtLineStart ? n.substr(1) : n) + ")", !0);
 	}
 	setAction(e, t) {
-		this.action = HE(e, this.name, t);
+		this.action = GE(e, this.name, t);
 	}
 	resolveRegex(e) {
 		return this.regex instanceof RegExp ? this.regex : this.regex(e);
 	}
 };
-function WE(e, t) {
+function qE(e, t) {
 	if (!t || typeof t != "object") throw Error("Monarch: expecting a language definition object");
 	let n = {
 		languageId: e,
-		includeLF: FE(t.includeLF, !1),
+		includeLF: RE(t.includeLF, !1),
 		noThrow: !1,
 		maxStack: 100,
 		start: typeof t.start == "string" ? t.start : null,
-		ignoreCase: FE(t.ignoreCase, !1),
-		unicode: FE(t.unicode, !1),
-		tokenPostfix: IE(t.tokenPostfix, "." + e),
-		defaultToken: IE(t.defaultToken, "source"),
+		ignoreCase: RE(t.ignoreCase, !1),
+		unicode: RE(t.unicode, !1),
+		tokenPostfix: zE(t.tokenPostfix, "." + e),
+		defaultToken: zE(t.defaultToken, "source"),
 		usesEmbedded: !1,
 		stateNames: {},
 		tokenizer: {},
@@ -1462,11 +1462,11 @@ function WE(e, t) {
 		for (let s of o) {
 			let o = s.include;
 			if (o) {
-				if (typeof o != "string") throw wT(n, "an 'include' attribute must be a string at: " + e);
-				if (o[0] === "@" && (o = o.substr(1)), !t.tokenizer[o]) throw wT(n, "include target '" + o + "' is not defined at: " + e);
+				if (typeof o != "string") throw DT(n, "an 'include' attribute must be a string at: " + e);
+				if (o[0] === "@" && (o = o.substr(1)), !t.tokenizer[o]) throw DT(n, "include target '" + o + "' is not defined at: " + e);
 				i(e + "." + o, a, t.tokenizer[o]);
 			} else {
-				let t = new UE(e);
+				let t = new KE(e);
 				if (Array.isArray(s) && s.length >= 1 && s.length <= 3) if (t.setRegex(r, s[0]), s.length >= 3) if (typeof s[1] == "string") t.setAction(r, {
 					token: s[1],
 					next: s[2]
@@ -1474,17 +1474,17 @@ function WE(e, t) {
 				else if (typeof s[1] == "object") {
 					let e = s[1];
 					e.next = s[2], t.setAction(r, e);
-				} else throw wT(n, "a next state as the last element of a rule can only be given if the action is either an object or a string, at: " + e);
+				} else throw DT(n, "a next state as the last element of a rule can only be given if the action is either an object or a string, at: " + e);
 				else t.setAction(r, s[1]);
 				else {
-					if (!s.regex) throw wT(n, "a rule must either be an array, or an object with a 'regex' or 'include' field at: " + e);
-					s.name && typeof s.name == "string" && (t.name = s.name), s.matchOnlyAtStart && (t.matchOnlyAtLineStart = FE(s.matchOnlyAtLineStart, !1)), t.setRegex(r, s.regex), t.setAction(r, s.action);
+					if (!s.regex) throw DT(n, "a rule must either be an array, or an object with a 'regex' or 'include' field at: " + e);
+					s.name && typeof s.name == "string" && (t.name = s.name), s.matchOnlyAtStart && (t.matchOnlyAtLineStart = RE(s.matchOnlyAtLineStart, !1)), t.setRegex(r, s.regex), t.setAction(r, s.action);
 				}
 				a.push(t);
 			}
 		}
 	}
-	if (!t.tokenizer || typeof t.tokenizer != "object") throw wT(n, "a language definition must define the 'tokenizer' attribute as an object");
+	if (!t.tokenizer || typeof t.tokenizer != "object") throw DT(n, "a language definition must define the 'tokenizer' attribute as an object");
 	n.tokenizer = [];
 	for (let e in t.tokenizer) if (t.tokenizer.hasOwnProperty(e)) {
 		n.start ||= e;
@@ -1492,7 +1492,7 @@ function WE(e, t) {
 		n.tokenizer[e] = [], i("tokenizer." + e, n.tokenizer[e], r);
 	}
 	if (n.usesEmbedded = r.usesEmbedded, t.brackets) {
-		if (!Array.isArray(t.brackets)) throw wT(n, "the 'brackets' attribute must be defined as an array");
+		if (!Array.isArray(t.brackets)) throw DT(n, "the 'brackets' attribute must be defined as an array");
 	} else t.brackets = [
 		{
 			open: "{",
@@ -1522,28 +1522,28 @@ function WE(e, t) {
 			token: t[2],
 			open: t[0],
 			close: t[1]
-		}), t.open === t.close) throw wT(n, "open and close brackets in a 'brackets' attribute must be different: " + t.open + "\n hint: use the 'bracket' attribute if matching on equal brackets is required.");
+		}), t.open === t.close) throw DT(n, "open and close brackets in a 'brackets' attribute must be different: " + t.open + "\n hint: use the 'bracket' attribute if matching on equal brackets is required.");
 		if (typeof t.open == "string" && typeof t.token == "string" && typeof t.close == "string") a.push({
 			token: t.token + n.tokenPostfix,
-			open: xT(n, t.open),
-			close: xT(n, t.close)
+			open: wT(n, t.open),
+			close: wT(n, t.close)
 		});
-		else throw wT(n, "every element in the 'brackets' array must be a '{open,close,token}' object or array");
+		else throw DT(n, "every element in the 'brackets' array must be a '{open,close,token}' object or array");
 	}
 	return n.brackets = a, n.noThrow = !0, n;
 }
 Ci(), Ur(), Zs(), vi(), fd(), Vs(), fn(), pc(), nl(), Oi();
-function GE(e) {
+function JE(e) {
 	Zo.registerLanguage(e);
 }
-function KE() {
+function YE() {
 	let e = [];
 	return e = e.concat(Zo.getLanguages()), e;
 }
-function qE(e) {
+function XE(e) {
 	return B.get(ps).languageIdCodec.encodeLanguageId(e);
 }
-function JE(e, t) {
+function ZE(e, t) {
 	return B.withServices(() => {
 		let n = B.get(ps).onDidRequestRichLanguageFeatures((r) => {
 			r === e && (n.dispose(), t());
@@ -1551,7 +1551,7 @@ function JE(e, t) {
 		return n;
 	});
 }
-function YE(e, t) {
+function QE(e, t) {
 	return B.withServices(() => {
 		let n = B.get(ps).onDidRequestBasicLanguageFeatures((r) => {
 			r === e && (n.dispose(), t());
@@ -1559,11 +1559,11 @@ function YE(e, t) {
 		return n;
 	});
 }
-function XE(e, t) {
+function $E(e, t) {
 	if (!B.get(ps).isRegisteredLanguageId(e)) throw Error(`Cannot set configuration for unknown language ${e}`);
 	return B.get(il).register(e, t, 100);
 }
-var ZE = class {
+var eD = class {
 	constructor(e, t) {
 		this._languageId = e, this._actual = t;
 	}
@@ -1572,14 +1572,14 @@ var ZE = class {
 		return this._actual.getInitialState();
 	}
 	tokenize(e, t, n) {
-		if (typeof this._actual.tokenize == "function") return QE.adaptTokenize(this._languageId, this._actual, e, n);
+		if (typeof this._actual.tokenize == "function") return tD.adaptTokenize(this._languageId, this._actual, e, n);
 		throw Error("Not supported!");
 	}
 	tokenizeEncoded(e, t, n) {
 		let r = this._actual.tokenizeEncoded(e, n);
 		return new A(r.tokens, [], r.endState);
 	}
-}, QE = class e {
+}, tD = class e {
 	constructor(e, t, n, r) {
 		this._languageId = e, this._actual = t, this._languageService = n, this._standaloneThemeService = r;
 	}
@@ -1619,16 +1619,16 @@ var ZE = class {
 		return a = r.endState.equals(n) ? n : r.endState, new A(i, [], a);
 	}
 };
-function $E(e) {
+function nD(e) {
 	return typeof e.getInitialState == "function";
 }
-function eD(e) {
+function rD(e) {
 	return "tokenizeEncoded" in e;
 }
-function tD(e) {
+function iD(e) {
 	return e && typeof e.then == "function";
 }
-function nD(e) {
+function aD(e) {
 	let t = B.get(ge);
 	if (e) {
 		let n = [null];
@@ -1636,36 +1636,36 @@ function nD(e) {
 		t.setColorMapOverride(n);
 	} else t.setColorMapOverride(null);
 }
-function rD(e, t) {
-	return eD(t) ? new ZE(e, t) : new QE(e, t, B.get(ps), B.get(ge));
+function oD(e, t) {
+	return rD(t) ? new eD(e, t) : new tD(e, t, B.get(ps), B.get(ge));
 }
-function iD(e, t) {
+function sD(e, t) {
 	let n = new Ne(async () => {
 		let n = await Promise.resolve(t.create());
-		return n ? $E(n) ? rD(e, n) : new RT(B.get(ps), B.get(ge), e, WE(e, n), B.get(ba)) : null;
+		return n ? nD(n) ? oD(e, n) : new VT(B.get(ps), B.get(ge), e, qE(e, n), B.get(ba)) : null;
 	});
 	return Fs.registerFactory(e, n);
 }
-function aD(e, t) {
-	if (!B.get(ps).isRegisteredLanguageId(e)) throw Error(`Cannot set tokens provider for unknown language ${e}`);
-	return tD(t) ? iD(e, { create: () => t }) : Fs.register(e, rD(e, t));
-}
-function oD(e, t) {
-	return tD(t) ? iD(e, { create: () => t }) : Fs.register(e, ((t) => new RT(B.get(ps), B.get(ge), e, WE(e, t), B.get(ba)))(t));
-}
-function sD(e, t) {
-	return B.get(GS).referenceProvider.register(e, t);
-}
 function cD(e, t) {
-	return B.get(GS).renameProvider.register(e, t);
+	if (!B.get(ps).isRegisteredLanguageId(e)) throw Error(`Cannot set tokens provider for unknown language ${e}`);
+	return iD(t) ? sD(e, { create: () => t }) : Fs.register(e, oD(e, t));
 }
 function lD(e, t) {
-	return B.get(GS).newSymbolNamesProvider.register(e, t);
+	return iD(t) ? sD(e, { create: () => t }) : Fs.register(e, ((t) => new VT(B.get(ps), B.get(ge), e, qE(e, t), B.get(ba)))(t));
 }
 function uD(e, t) {
-	return B.get(GS).signatureHelpProvider.register(e, t);
+	return B.get(GS).referenceProvider.register(e, t);
 }
 function dD(e, t) {
+	return B.get(GS).renameProvider.register(e, t);
+}
+function fD(e, t) {
+	return B.get(GS).newSymbolNamesProvider.register(e, t);
+}
+function pD(e, t) {
+	return B.get(GS).signatureHelpProvider.register(e, t);
+}
+function mD(e, t) {
 	return B.get(GS).hoverProvider.register(e, { provideHover: async (e, n, r, i) => {
 		let a = e.getWordAtPosition(n);
 		return Promise.resolve(t.provideHover(e, n, r, i)).then((e) => {
@@ -1673,28 +1673,28 @@ function dD(e, t) {
 		});
 	} });
 }
-function fD(e, t) {
+function hD(e, t) {
 	return B.get(GS).documentSymbolProvider.register(e, t);
 }
-function pD(e, t) {
+function gD(e, t) {
 	return B.get(GS).documentHighlightProvider.register(e, t);
 }
-function mD(e, t) {
+function _D(e, t) {
 	return B.get(GS).linkedEditingRangeProvider.register(e, t);
 }
-function hD(e, t) {
+function vD(e, t) {
 	return B.get(GS).definitionProvider.register(e, t);
 }
-function gD(e, t) {
+function yD(e, t) {
 	return B.get(GS).implementationProvider.register(e, t);
 }
-function _D(e, t) {
+function bD(e, t) {
 	return B.get(GS).typeDefinitionProvider.register(e, t);
 }
-function vD(e, t) {
+function xD(e, t) {
 	return B.get(GS).codeLensProvider.register(e, t);
 }
-function yD(e, t, n) {
+function SD(e, t, n) {
 	return B.get(GS).codeActionProvider.register(e, {
 		providedCodeActionKinds: n?.providedCodeActionKinds,
 		documentation: n?.documentation,
@@ -1709,83 +1709,83 @@ function yD(e, t, n) {
 		resolveCodeAction: t.resolveCodeAction
 	});
 }
-function bD(e, t) {
+function CD(e, t) {
 	return B.get(GS).documentFormattingEditProvider.register(e, t);
 }
-function xD(e, t) {
+function wD(e, t) {
 	return B.get(GS).documentRangeFormattingEditProvider.register(e, t);
 }
-function SD(e, t) {
+function TD(e, t) {
 	return B.get(GS).onTypeFormattingEditProvider.register(e, t);
 }
-function CD(e, t) {
+function ED(e, t) {
 	return B.get(GS).linkProvider.register(e, t);
 }
-function wD(e, t) {
+function DD(e, t) {
 	return B.get(GS).completionProvider.register(e, t);
 }
-function TD(e, t) {
+function OD(e, t) {
 	return B.get(GS).colorProvider.register(e, t);
 }
-function ED(e, t) {
+function kD(e, t) {
 	return B.get(GS).foldingRangeProvider.register(e, t);
 }
-function DD(e, t) {
+function AD(e, t) {
 	return B.get(GS).declarationProvider.register(e, t);
 }
-function OD(e, t) {
+function jD(e, t) {
 	return B.get(GS).selectionRangeProvider.register(e, t);
 }
-function kD(e, t) {
+function MD(e, t) {
 	return B.get(GS).documentSemanticTokensProvider.register(e, t);
 }
-function AD(e, t) {
+function ND(e, t) {
 	return B.get(GS).documentRangeSemanticTokensProvider.register(e, t);
 }
-function jD(e, t) {
+function PD(e, t) {
 	return B.get(GS).inlineCompletionsProvider.register(e, t);
 }
-function MD(e, t) {
+function FD(e, t) {
 	return B.get(GS).inlayHintsProvider.register(e, t);
 }
-function ND() {
+function ID() {
 	return {
-		register: GE,
-		getLanguages: KE,
-		onLanguage: JE,
-		onLanguageEncountered: YE,
-		getEncodedLanguageId: qE,
-		setLanguageConfiguration: XE,
-		setColorMap: nD,
-		registerTokensProviderFactory: iD,
-		setTokensProvider: aD,
-		setMonarchTokensProvider: oD,
-		registerReferenceProvider: sD,
-		registerRenameProvider: cD,
-		registerNewSymbolNameProvider: lD,
-		registerCompletionItemProvider: wD,
-		registerSignatureHelpProvider: uD,
-		registerHoverProvider: dD,
-		registerDocumentSymbolProvider: fD,
-		registerDocumentHighlightProvider: pD,
-		registerLinkedEditingRangeProvider: mD,
-		registerDefinitionProvider: hD,
-		registerImplementationProvider: gD,
-		registerTypeDefinitionProvider: _D,
-		registerCodeLensProvider: vD,
-		registerCodeActionProvider: yD,
-		registerDocumentFormattingEditProvider: bD,
-		registerDocumentRangeFormattingEditProvider: xD,
-		registerOnTypeFormattingEditProvider: SD,
-		registerLinkProvider: CD,
-		registerColorProvider: TD,
-		registerFoldingRangeProvider: ED,
-		registerDeclarationProvider: DD,
-		registerSelectionRangeProvider: OD,
-		registerDocumentSemanticTokensProvider: kD,
-		registerDocumentRangeSemanticTokensProvider: AD,
-		registerInlineCompletionsProvider: jD,
-		registerInlayHintsProvider: MD,
+		register: JE,
+		getLanguages: YE,
+		onLanguage: ZE,
+		onLanguageEncountered: QE,
+		getEncodedLanguageId: XE,
+		setLanguageConfiguration: $E,
+		setColorMap: aD,
+		registerTokensProviderFactory: sD,
+		setTokensProvider: cD,
+		setMonarchTokensProvider: lD,
+		registerReferenceProvider: uD,
+		registerRenameProvider: dD,
+		registerNewSymbolNameProvider: fD,
+		registerCompletionItemProvider: DD,
+		registerSignatureHelpProvider: pD,
+		registerHoverProvider: mD,
+		registerDocumentSymbolProvider: hD,
+		registerDocumentHighlightProvider: gD,
+		registerLinkedEditingRangeProvider: _D,
+		registerDefinitionProvider: vD,
+		registerImplementationProvider: yD,
+		registerTypeDefinitionProvider: bD,
+		registerCodeLensProvider: xD,
+		registerCodeActionProvider: SD,
+		registerDocumentFormattingEditProvider: CD,
+		registerDocumentRangeFormattingEditProvider: wD,
+		registerOnTypeFormattingEditProvider: TD,
+		registerLinkProvider: ED,
+		registerColorProvider: OD,
+		registerFoldingRangeProvider: kD,
+		registerDeclarationProvider: AD,
+		registerSelectionRangeProvider: jD,
+		registerDocumentSemanticTokensProvider: MD,
+		registerDocumentRangeSemanticTokensProvider: ND,
+		registerInlineCompletionsProvider: PD,
+		registerInlayHintsProvider: FD,
 		DocumentHighlightKind: Ml,
 		CompletionItemKind: au,
 		CompletionItemTag: Vl,
@@ -1810,16 +1810,16 @@ function ND() {
 	};
 }
 cl(), lo.wrappingIndent.defaultValue = wc.None, lo.glyphMargin.defaultValue = !1, lo.autoIndent.defaultValue = va.Advanced, lo.overviewRulerLanes.defaultValue = 2, Eu.setFormatterSelector((e, t, n) => Promise.resolve(e[0]));
-var PD = Wu();
-PD.editor = NE(), PD.languages = ND(), PD.CancellationTokenSource, PD.Emitter;
-var FD = PD.KeyCode, ID = PD.KeyMod;
-PD.Position;
-var LD = PD.Range;
-PD.Selection, PD.SelectionDirection, PD.MarkerSeverity, PD.MarkerTag;
-var RD = PD.Uri;
-PD.Token;
-var zD = PD.editor, BD = PD.languages, VD = Lr(), HD = globalThis;
-(VD?.globalAPI || typeof HD.define == "function" && HD.define.amd) && (HD.monaco = PD), HD.require !== void 0 && typeof HD.require.config == "function" && HD.require.config({ ignoreDuplicateModules: [
+var LD = Wu();
+LD.editor = IE(), LD.languages = ID(), LD.CancellationTokenSource, LD.Emitter;
+var RD = LD.KeyCode, zD = LD.KeyMod;
+LD.Position;
+var BD = LD.Range;
+LD.Selection, LD.SelectionDirection, LD.MarkerSeverity, LD.MarkerTag;
+var VD = LD.Uri;
+LD.Token;
+var HD = LD.editor, UD = LD.languages, WD = Lr(), GD = globalThis;
+(WD?.globalAPI || typeof GD.define == "function" && GD.define.amd) && (GD.monaco = LD), GD.require !== void 0 && typeof GD.require.config == "function" && GD.require.config({ ignoreDuplicateModules: [
 	"vscode-languageserver-types",
 	"vscode-languageserver-types/main",
 	"vscode-languageserver-textdocument",
@@ -1834,13 +1834,13 @@ var zD = PD.editor, BD = PD.languages, VD = Lr(), HD = globalThis;
 ] });
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-editor-api/esm/vs/editor/editor.api.js
-var UD = BD.onLanguage;
-BD.onLanguage = (e, t) => Ku(() => UD(e, t));
-var WD = BD.onLanguage;
-BD.onLanguageEncountered = (e, t) => Ku(() => WD(e, t)), zD.create = yw, zD.createDiffEditor = xw, zD.createModelReference = bw, zD.writeFile = vw;
+var KD = UD.onLanguage;
+UD.onLanguage = (e, t) => Ku(() => KD(e, t));
+var qD = UD.onLanguage;
+UD.onLanguageEncountered = (e, t) => Ku(() => qD(e, t)), HD.create = Sw, HD.createDiffEditor = ww, HD.createModelReference = Cw, HD.writeFile = xw;
 //#endregion
 //#region node_modules/monaco-languageclient/lib/common/utils.js
-var GD = (e) => {
+var JD = (e) => {
 	let t = "";
 	if (e.url) {
 		let n = e;
@@ -1855,7 +1855,7 @@ var GD = (e) => {
 		}
 	}
 	return t;
-}, KD = (e) => {
+}, YD = (e) => {
 	if (e instanceof URL) return e.href;
 	{
 		let t = new TextEncoder().encode(e), n = Array.from(t, (e) => String.fromCodePoint(e)).join(""), r = btoa(n);
@@ -1864,8 +1864,8 @@ var GD = (e) => {
 };
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-log-service-override/vscode/src/vs/platform/log/common/fileLog.js
-ma(), Go(), qa(), GC(), qC(), tw(), ZC(), YC(), gw(), zC(), LC(), UC(), gC(), _C(), b();
-var qD = 5 * Lc.MB, JD = class extends js {
+ma(), Go(), qa(), JC(), XC(), iw(), ew(), QC(), yw(), BC(), jC(), HC(), _C(), IC(), b();
+var XD = 5 * Lc.MB, ZD = class extends js {
 	constructor(e, t, n, r) {
 		super(), this.resource = e, this.donotUseFormatters = n, this.fileService = r, this.backupIndex = 1, this.buffer = "", this.setLevel(t), this.flushDelayer = new rl(100), this.initializePromise = this.initialize();
 	}
@@ -1873,7 +1873,7 @@ var qD = 5 * Lc.MB, JD = class extends js {
 		if (!this.buffer) return;
 		await this.initializePromise;
 		let e = await this.loadContent();
-		e.length > qD && (await this.fileService.writeFile(this.getBackupResource(), it.fromString(e)), e = ""), this.buffer && (e += this.buffer, this.buffer = "", await this.fileService.writeFile(this.resource, it.fromString(e)));
+		e.length > XD && (await this.fileService.writeFile(this.getBackupResource(), it.fromString(e)), e = ""), this.buffer && (e += this.buffer, this.buffer = "", await this.fileService.writeFile(this.resource, it.fromString(e)));
 	}
 	async initialize() {
 		try {
@@ -1910,18 +1910,18 @@ var qD = 5 * Lc.MB, JD = class extends js {
 		return "";
 	}
 };
-JD = N([R(3, ao)], JD);
-var YD = class extends La {
+ZD = N([R(3, ao)], ZD);
+var QD = class extends La {
 	constructor(e, t, n) {
 		super(e, t), this.fileService = n;
 	}
 	doCreateLogger(e, t, n) {
-		let r = new CC(t);
-		return fo(e, this.fileService).then(() => r.logger = new JD(e, r.getLevel(), !!n?.donotUseFormatters, this.fileService)), r;
+		let r = new WC(t);
+		return fo(e, this.fileService).then(() => r.logger = new ZD(e, r.getLevel(), !!n?.donotUseFormatters, this.fileService)), r;
 	}
 };
-b(), pe(), $C(), Ca(), qa(), kl(), kt(), P(), $s(), E();
-var XD = class extends z {
+b(), pe(), nw(), Ca(), qa(), kl(), kt(), P(), $s(), E();
+var $D = class extends z {
 	constructor(e, t, n, r, i) {
 		super(), this.environmentService = e, this.fileService = t, this.jsonEditingService = n, this.logService = r, this.loggerService = i, this._onDidChangeDefaultLogLevels = this._register(new V()), this.onDidChangeDefaultLogLevels = this._onDidChangeDefaultLogLevels.event, this._defaultLogLevels = {
 			default: this._getDefaultLogLevelFromEnv(),
@@ -2014,16 +2014,16 @@ var XD = class extends z {
 		return e;
 	}
 };
-XD = N([
-	R(0, JC),
+$D = N([
+	R(0, ZC),
 	R(1, ao),
 	R(2, su),
 	R(3, Ct),
 	R(4, ai)
-], XD), y_(), fr();
-var ZD = M(0, "Window");
-eT(), b(), fr(), pe(), Xr(), U(), E(), Gn(), Af(), Bv(), bc(), P();
-var QD = class extends ar {
+], $D), y_(), fr();
+var eO = M(0, "Window");
+rT(), b(), fr(), pe(), Xr(), U(), E(), Gn(), Af(), Bv(), bc(), P();
+var tO = class extends ar {
 	static {
 		this.ID = "workbench.action.setLogLevel";
 	}
@@ -2142,12 +2142,12 @@ var QD = class extends ar {
 		return t === e ? M(8597, "Default") : void 0;
 	}
 };
-QD = N([
+tO = N([
 	R(2, Ga),
 	R(3, ai),
 	R(4, _v),
 	R(5, Uv)
-], QD), class extends ar {
+], tO), class extends ar {
 	static {
 		this.ID = "workbench.action.openSessionLogFile";
 	}
@@ -2191,14 +2191,14 @@ QD = N([
 }, b(), fr(), Di(), Af(), Bv(), P(), pe(), Xr(), E(), $s(), No(), Qo(), xt(), y_(), ic(class extends Sa {
 	constructor() {
 		super({
-			id: QD.ID,
-			title: QD.TITLE,
-			category: iT.Developer,
+			id: tO.ID,
+			title: tO.TITLE,
+			category: sT.Developer,
 			f1: !0
 		});
 	}
 	run(e) {
-		let t = e.get(It).createInstance(QD, QD.ID, QD.TITLE.value);
+		let t = e.get(It).createInstance(tO, tO.ID, tO.TITLE.value);
 		return t.run().finally(() => t.dispose());
 	}
 }), ic(class extends Sa {
@@ -2206,14 +2206,14 @@ QD = N([
 		super({
 			id: "workbench.action.setDefaultLogLevel",
 			title: j(8586, "Set Default Log Level"),
-			category: iT.Developer
+			category: sT.Developer
 		});
 	}
 	run(e, t, n) {
 		return e.get(Uv).setDefaultLogLevel(t, n);
 	}
 });
-var $D = class extends z {
+var nO = class extends z {
 	constructor(e, t, n) {
 		super(), this.loggerService = e, this.contextKeyService = t, this.uriIdentityService = n, this.contextKeys = new $t(), this.outputChannelRegistry = oa.as(SS.OutputChannels);
 		let r = ts.bindTo(t);
@@ -2292,7 +2292,7 @@ var $D = class extends z {
 				super({
 					id: Hl,
 					title: j(8588, "Show Window Log"),
-					category: iT.Developer,
+					category: sT.Developer,
 					f1: !0
 				});
 			}
@@ -2302,38 +2302,38 @@ var $D = class extends z {
 		}));
 	}
 };
-$D = N([
+nO = N([
 	R(0, ai),
 	R(1, ks),
 	R(2, Rs)
-], $D), oa.as(iw.Workbench).registerWorkbenchContribution($D, lw.Restored), b(), qa(), pe(), Xr(), $C(), P(), y_();
-var eO = class extends YD {
+], nO), oa.as(sw.Workbench).registerWorkbenchContribution(nO, fw.Restored), b(), qa(), pe(), Xr(), nw(), P(), y_();
+var rO = class extends QD {
 	constructor(e, t, n) {
 		super(e ?? sr(n), vC, t);
 	}
 };
-eO = N([R(1, ao), R(2, Oe)], eO);
-var tO = [], nO = class extends ta {
+rO = N([R(1, ao), R(2, Oe)], rO);
+var iO = [], aO = class extends ta {
 	constructor(e, t) {
 		let n = e.createLogger(t.logFile, {
 			id: Xl,
-			name: ZD
+			name: eO
 		});
-		super(n, tO);
+		super(n, iO);
 	}
 };
-nO = N([R(0, ai), R(1, JC)], nO);
-function rO(e) {
+aO = N([R(0, ai), R(1, ZC)], aO);
+function oO(e) {
 	return {
 		...Zu(),
-		[ai.toString()]: new Ta(eO, [e], !0),
-		[Ct.toString()]: new Ta(nO, [], !0),
-		[Uv.toString()]: new Ta(XD, [], !0)
+		[ai.toString()]: new Ta(rO, [e], !0),
+		[Ct.toString()]: new Ta(aO, [], !0),
+		[Uv.toString()]: new Ta($D, [], !0)
 	};
 }
 //#endregion
 //#region node_modules/vscode-languageclient/node_modules/vscode-jsonrpc/lib/common/is.js
-var iO = /* @__PURE__ */ r(((e) => {
+var sO = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.stringArray = e.array = e.func = e.error = e.number = e.string = e.boolean = void 0;
 	function t(e) {
 		return e === !0 || e === !1;
@@ -2363,9 +2363,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 		return o(e) && e.every((e) => n(e));
 	}
 	e.stringArray = s;
-})), aO = /* @__PURE__ */ r(((e) => {
+})), cO = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.Message = e.NotificationType9 = e.NotificationType8 = e.NotificationType7 = e.NotificationType6 = e.NotificationType5 = e.NotificationType4 = e.NotificationType3 = e.NotificationType2 = e.NotificationType1 = e.NotificationType0 = e.NotificationType = e.RequestType9 = e.RequestType8 = e.RequestType7 = e.RequestType6 = e.RequestType5 = e.RequestType4 = e.RequestType3 = e.RequestType2 = e.RequestType1 = e.RequestType = e.RequestType0 = e.AbstractMessageSignature = e.ParameterStructures = e.ResponseError = e.ErrorCodes = void 0;
-	var t = iO(), n;
+	var t = sO(), n;
 	(function(e) {
 		e.ParseError = -32700, e.InvalidRequest = -32600, e.MethodNotFound = -32601, e.InvalidParams = -32602, e.InternalError = -32603, e.jsonrpcReservedErrorRangeStart = -32099, e.serverErrorStart = -32099, e.MessageWriteError = -32099, e.MessageReadError = -32098, e.PendingResponseRejected = -32097, e.ConnectionInactive = -32096, e.ServerNotInitialized = -32002, e.UnknownErrorCode = -32001, e.jsonrpcReservedErrorRangeEnd = -32e3, e.serverErrorEnd = -32e3;
 	})(n || (e.ErrorCodes = n = {})), e.ResponseError = class e extends Error {
@@ -2519,7 +2519,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 		}
 		e.isResponse = i;
 	})(a || (e.Message = a = {}));
-})), oO = /* @__PURE__ */ r(((e) => {
+})), lO = /* @__PURE__ */ r(((e) => {
 	var t;
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.LRUCache = e.LinkedMap = e.Touch = void 0;
 	var n;
@@ -2750,7 +2750,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			this.size > this._limit && this.trimOld(Math.round(this._limit * this._ratio));
 		}
 	};
-})), sO = /* @__PURE__ */ r(((e) => {
+})), uO = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.Disposable = void 0;
 	var t;
 	(function(e) {
@@ -2759,7 +2759,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 		}
 		e.create = t;
 	})(t || (e.Disposable = t = {}));
-})), cO = /* @__PURE__ */ r(((e) => {
+})), dO = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 });
 	var t;
 	function n() {
@@ -2773,9 +2773,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 		}
 		e.install = n;
 	})(n ||= {}), e.default = n;
-})), lO = /* @__PURE__ */ r(((e) => {
+})), fO = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.Emitter = e.Event = void 0;
-	var t = cO(), n;
+	var t = dO(), n;
 	(function(e) {
 		let t = { dispose() {} };
 		e.None = function() {
@@ -2832,9 +2832,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 		}
 	};
 	e.Emitter = i, i._noop = function() {};
-})), uO = /* @__PURE__ */ r(((e) => {
+})), pO = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.CancellationTokenSource = e.CancellationToken = void 0;
-	var t = cO(), n = iO(), r = lO(), i;
+	var t = dO(), n = sO(), r = fO(), i;
 	(function(e) {
 		e.None = Object.freeze({
 			isCancellationRequested: !1,
@@ -2882,9 +2882,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 			this._token ? this._token instanceof o && this._token.dispose() : this._token = i.None;
 		}
 	};
-})), dO = /* @__PURE__ */ r(((e) => {
+})), mO = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.SharedArrayReceiverStrategy = e.SharedArraySenderStrategy = void 0;
-	var t = uO(), n;
+	var t = pO(), n;
 	(function(e) {
 		e.Continue = 0, e.Cancelled = 1;
 	})(n ||= {}), e.SharedArraySenderStrategy = class {
@@ -2935,9 +2935,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return n === void 0 ? new t.CancellationTokenSource() : new i(n);
 		}
 	};
-})), fO = /* @__PURE__ */ r(((e) => {
+})), hO = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.Semaphore = void 0;
-	var t = cO();
+	var t = dO();
 	e.Semaphore = class {
 		constructor(e = 1) {
 			if (e <= 0) throw Error("Capacity must be greater than 0");
@@ -2974,9 +2974,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 			}
 		}
 	};
-})), pO = /* @__PURE__ */ r(((e) => {
+})), gO = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ReadableStreamMessageReader = e.AbstractMessageReader = e.MessageReader = void 0;
-	var t = cO(), n = iO(), r = lO(), i = fO(), a;
+	var t = dO(), n = sO(), r = fO(), i = hO(), a;
 	(function(e) {
 		function t(e) {
 			let t = e;
@@ -3095,9 +3095,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 			}, this._partialMessageTimeout, this.messageToken, this._partialMessageTimeout));
 		}
 	};
-})), mO = /* @__PURE__ */ r(((e) => {
+})), _O = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.WriteableStreamMessageWriter = e.AbstractMessageWriter = e.MessageWriter = void 0;
-	var t = cO(), n = iO(), r = fO(), i = lO(), a = "Content-Length: ", o = "\r\n", s;
+	var t = dO(), n = sO(), r = hO(), i = fO(), a = "Content-Length: ", o = "\r\n", s;
 	(function(e) {
 		function t(e) {
 			let t = e;
@@ -3172,7 +3172,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			this.writable.end();
 		}
 	};
-})), hO = /* @__PURE__ */ r(((e) => {
+})), vO = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.AbstractMessageBuffer = void 0;
 	var t = 13, n = 10, r = "\r\n";
 	e.AbstractMessageBuffer = class {
@@ -3261,9 +3261,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return t;
 		}
 	};
-})), gO = /* @__PURE__ */ r(((e) => {
+})), yO = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.createMessageConnection = e.ConnectionOptions = e.MessageStrategy = e.CancellationStrategy = e.CancellationSenderStrategy = e.CancellationReceiverStrategy = e.RequestCancellationReceiverStrategy = e.IdCancellationReceiverStrategy = e.ConnectionStrategy = e.ConnectionError = e.ConnectionErrors = e.LogTraceNotification = e.SetTraceNotification = e.TraceFormat = e.TraceValues = e.Trace = e.NullLogger = e.ProgressType = e.ProgressToken = void 0;
-	var t = cO(), n = iO(), r = aO(), i = oO(), a = lO(), o = uO(), s;
+	var t = dO(), n = sO(), r = cO(), i = lO(), a = fO(), o = pO(), s;
 	(function(e) {
 		e.type = new r.NotificationType("$/cancelRequest");
 	})(s ||= {});
@@ -3898,9 +3898,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 		}), Ze;
 	}
 	e.createMessageConnection = re;
-})), _O = /* @__PURE__ */ r(((e) => {
+})), bO = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ProgressType = e.ProgressToken = e.createMessageConnection = e.NullLogger = e.ConnectionOptions = e.ConnectionStrategy = e.AbstractMessageBuffer = e.WriteableStreamMessageWriter = e.AbstractMessageWriter = e.MessageWriter = e.ReadableStreamMessageReader = e.AbstractMessageReader = e.MessageReader = e.SharedArrayReceiverStrategy = e.SharedArraySenderStrategy = e.CancellationToken = e.CancellationTokenSource = e.Emitter = e.Event = e.Disposable = e.LRUCache = e.Touch = e.LinkedMap = e.ParameterStructures = e.NotificationType9 = e.NotificationType8 = e.NotificationType7 = e.NotificationType6 = e.NotificationType5 = e.NotificationType4 = e.NotificationType3 = e.NotificationType2 = e.NotificationType1 = e.NotificationType0 = e.NotificationType = e.ErrorCodes = e.ResponseError = e.RequestType9 = e.RequestType8 = e.RequestType7 = e.RequestType6 = e.RequestType5 = e.RequestType4 = e.RequestType3 = e.RequestType2 = e.RequestType1 = e.RequestType0 = e.RequestType = e.Message = e.RAL = void 0, e.MessageStrategy = e.CancellationStrategy = e.CancellationSenderStrategy = e.CancellationReceiverStrategy = e.ConnectionError = e.ConnectionErrors = e.LogTraceNotification = e.SetTraceNotification = e.TraceFormat = e.TraceValues = e.Trace = void 0;
-	var t = aO();
+	var t = cO();
 	Object.defineProperty(e, "Message", {
 		enumerable: !0,
 		get: function() {
@@ -4032,7 +4032,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return t.ParameterStructures;
 		}
 	});
-	var n = oO();
+	var n = lO();
 	Object.defineProperty(e, "LinkedMap", {
 		enumerable: !0,
 		get: function() {
@@ -4049,14 +4049,14 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return n.Touch;
 		}
 	});
-	var r = sO();
+	var r = uO();
 	Object.defineProperty(e, "Disposable", {
 		enumerable: !0,
 		get: function() {
 			return r.Disposable;
 		}
 	});
-	var i = lO();
+	var i = fO();
 	Object.defineProperty(e, "Event", {
 		enumerable: !0,
 		get: function() {
@@ -4068,7 +4068,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return i.Emitter;
 		}
 	});
-	var a = uO();
+	var a = pO();
 	Object.defineProperty(e, "CancellationTokenSource", {
 		enumerable: !0,
 		get: function() {
@@ -4080,7 +4080,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return a.CancellationToken;
 		}
 	});
-	var o = dO();
+	var o = mO();
 	Object.defineProperty(e, "SharedArraySenderStrategy", {
 		enumerable: !0,
 		get: function() {
@@ -4092,7 +4092,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return o.SharedArrayReceiverStrategy;
 		}
 	});
-	var s = pO();
+	var s = gO();
 	Object.defineProperty(e, "MessageReader", {
 		enumerable: !0,
 		get: function() {
@@ -4109,7 +4109,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return s.ReadableStreamMessageReader;
 		}
 	});
-	var c = mO();
+	var c = _O();
 	Object.defineProperty(e, "MessageWriter", {
 		enumerable: !0,
 		get: function() {
@@ -4126,14 +4126,14 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return c.WriteableStreamMessageWriter;
 		}
 	});
-	var l = hO();
+	var l = vO();
 	Object.defineProperty(e, "AbstractMessageBuffer", {
 		enumerable: !0,
 		get: function() {
 			return l.AbstractMessageBuffer;
 		}
 	});
-	var u = gO();
+	var u = yO();
 	Object.defineProperty(e, "ConnectionStrategy", {
 		enumerable: !0,
 		get: function() {
@@ -4219,10 +4219,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		get: function() {
 			return u.MessageStrategy;
 		}
-	}), e.RAL = cO().default;
-})), vO = /* @__PURE__ */ r(((e) => {
+	}), e.RAL = dO().default;
+})), xO = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 });
-	var t = _O(), n = class e extends t.AbstractMessageBuffer {
+	var t = bO(), n = class e extends t.AbstractMessageBuffer {
 		constructor(e = "utf-8") {
 			super(e), this.asciiDecoder = new TextDecoder("ascii");
 		}
@@ -4335,7 +4335,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 		}
 		e.install = n;
 	})(s ||= {}), e.default = s;
-})), yO = /* @__PURE__ */ r(((e) => {
+})), SO = /* @__PURE__ */ r(((e) => {
 	var t = e && e.__createBinding || (Object.create ? (function(e, t, n, r) {
 		r === void 0 && (r = n);
 		var i = Object.getOwnPropertyDescriptor(t, n);
@@ -4350,9 +4350,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 	})), n = e && e.__exportStar || function(e, n) {
 		for (var r in e) r !== "default" && !Object.prototype.hasOwnProperty.call(n, r) && t(n, e, r);
 	};
-	Object.defineProperty(e, "__esModule", { value: !0 }), e.createMessageConnection = e.BrowserMessageWriter = e.BrowserMessageReader = void 0, vO().default.install();
-	var r = _O();
-	n(_O(), e), e.BrowserMessageReader = class extends r.AbstractMessageReader {
+	Object.defineProperty(e, "__esModule", { value: !0 }), e.createMessageConnection = e.BrowserMessageWriter = e.BrowserMessageReader = void 0, xO().default.install();
+	var r = bO();
+	n(bO(), e), e.BrowserMessageReader = class extends r.AbstractMessageReader {
 		constructor(e) {
 			super(), this._onData = new r.Emitter(), this._messageListener = (e) => {
 				this._onData.fire(e.data);
@@ -4381,116 +4381,116 @@ var iO = /* @__PURE__ */ r(((e) => {
 		return n === void 0 && (n = r.NullLogger), r.ConnectionStrategy.is(i) && (i = { connectionStrategy: i }), (0, r.createMessageConnection)(e, t, n, i);
 	}
 	e.createMessageConnection = i;
-})), bO = /* @__PURE__ */ r(((e, t) => {
-	t.exports = yO();
-})), xO = /* @__PURE__ */ n({
-	AnnotatedTextEdit: () => WO,
-	ChangeAnnotation: () => HO,
-	ChangeAnnotationIdentifier: () => UO,
-	CodeAction: () => Dk,
-	CodeActionContext: () => Ek,
-	CodeActionKind: () => wk,
-	CodeActionTriggerKind: () => Tk,
-	CodeDescription: () => RO,
-	CodeLens: () => Ok,
-	Color: () => AO,
-	ColorInformation: () => jO,
-	ColorPresentation: () => MO,
-	Command: () => BO,
-	CompletionItem: () => dk,
-	CompletionItemKind: () => ak,
-	CompletionItemLabelDetails: () => uk,
-	CompletionItemTag: () => sk,
-	CompletionList: () => fk,
-	CreateFile: () => KO,
-	DeleteFile: () => JO,
-	Diagnostic: () => zO,
-	DiagnosticRelatedInformation: () => FO,
-	DiagnosticSeverity: () => IO,
-	DiagnosticTag: () => LO,
-	DocumentHighlight: () => vk,
-	DocumentHighlightKind: () => _k,
-	DocumentLink: () => Ak,
-	DocumentSymbol: () => Ck,
-	DocumentUri: () => SO,
-	EOL: () => Yk,
-	FoldingRange: () => PO,
-	FoldingRangeKind: () => NO,
-	FormattingOptions: () => kk,
-	Hover: () => mk,
-	InlayHint: () => Vk,
-	InlayHintKind: () => zk,
-	InlayHintLabelPart: () => Bk,
-	InlineCompletionContext: () => qk,
-	InlineCompletionItem: () => Uk,
-	InlineCompletionList: () => Wk,
-	InlineCompletionTriggerKind: () => Gk,
-	InlineValueContext: () => Rk,
-	InlineValueEvaluatableExpression: () => Lk,
-	InlineValueText: () => Fk,
-	InlineValueVariableLookup: () => Ik,
-	InsertReplaceEdit: () => ck,
-	InsertTextFormat: () => ok,
-	InsertTextMode: () => lk,
-	Location: () => OO,
-	LocationLink: () => kO,
-	MarkedString: () => pk,
-	MarkupContent: () => ik,
-	MarkupKind: () => rk,
-	OptionalVersionedTextDocumentIdentifier: () => tk,
-	ParameterInformation: () => hk,
-	Position: () => EO,
-	Range: () => DO,
-	RenameFile: () => qO,
-	SelectedCompletionInfo: () => Kk,
-	SelectionRange: () => jk,
-	SemanticTokenModifiers: () => Nk,
-	SemanticTokenTypes: () => Mk,
-	SemanticTokens: () => Pk,
-	SignatureInformation: () => gk,
-	StringValue: () => Hk,
-	SymbolInformation: () => xk,
-	SymbolKind: () => yk,
-	SymbolTag: () => bk,
-	TextDocument: () => Xk,
-	TextDocumentEdit: () => GO,
-	TextDocumentIdentifier: () => $O,
-	TextDocumentItem: () => nk,
-	TextEdit: () => VO,
-	URI: () => CO,
-	VersionedTextDocumentIdentifier: () => ek,
-	WorkspaceChange: () => QO,
-	WorkspaceEdit: () => YO,
-	WorkspaceFolder: () => Jk,
-	WorkspaceSymbol: () => Sk,
-	integer: () => wO,
-	uinteger: () => TO
-}), SO, CO, wO, TO, EO, DO, OO, kO, AO, jO, MO, NO, PO, FO, IO, LO, RO, zO, BO, VO, HO, UO, WO, GO, KO, qO, JO, YO, XO, ZO, QO, $O, ek, tk, nk, rk, ik, ak, ok, sk, ck, lk, uk, dk, fk, pk, mk, hk, gk, _k, vk, yk, bk, xk, Sk, Ck, wk, Tk, Ek, Dk, Ok, kk, Ak, jk, Mk, Nk, Pk, Fk, Ik, Lk, Rk, zk, Bk, Vk, Hk, Uk, Wk, Gk, Kk, qk, Jk, Yk, Xk, Zk, Y, Qk = t((() => {
+})), CO = /* @__PURE__ */ r(((e, t) => {
+	t.exports = SO();
+})), wO = /* @__PURE__ */ n({
+	AnnotatedTextEdit: () => qO,
+	ChangeAnnotation: () => GO,
+	ChangeAnnotationIdentifier: () => KO,
+	CodeAction: () => Ak,
+	CodeActionContext: () => kk,
+	CodeActionKind: () => Dk,
+	CodeActionTriggerKind: () => Ok,
+	CodeDescription: () => VO,
+	CodeLens: () => jk,
+	Color: () => NO,
+	ColorInformation: () => PO,
+	ColorPresentation: () => FO,
+	Command: () => UO,
+	CompletionItem: () => mk,
+	CompletionItemKind: () => ck,
+	CompletionItemLabelDetails: () => pk,
+	CompletionItemTag: () => uk,
+	CompletionList: () => hk,
+	CreateFile: () => YO,
+	DeleteFile: () => ZO,
+	Diagnostic: () => HO,
+	DiagnosticRelatedInformation: () => RO,
+	DiagnosticSeverity: () => zO,
+	DiagnosticTag: () => BO,
+	DocumentHighlight: () => xk,
+	DocumentHighlightKind: () => bk,
+	DocumentLink: () => Nk,
+	DocumentSymbol: () => Ek,
+	DocumentUri: () => TO,
+	EOL: () => Qk,
+	FoldingRange: () => LO,
+	FoldingRangeKind: () => IO,
+	FormattingOptions: () => Mk,
+	Hover: () => _k,
+	InlayHint: () => Wk,
+	InlayHintKind: () => Hk,
+	InlayHintLabelPart: () => Uk,
+	InlineCompletionContext: () => Xk,
+	InlineCompletionItem: () => Kk,
+	InlineCompletionList: () => qk,
+	InlineCompletionTriggerKind: () => Jk,
+	InlineValueContext: () => Vk,
+	InlineValueEvaluatableExpression: () => Bk,
+	InlineValueText: () => Rk,
+	InlineValueVariableLookup: () => zk,
+	InsertReplaceEdit: () => dk,
+	InsertTextFormat: () => lk,
+	InsertTextMode: () => fk,
+	Location: () => jO,
+	LocationLink: () => MO,
+	MarkedString: () => gk,
+	MarkupContent: () => sk,
+	MarkupKind: () => ok,
+	OptionalVersionedTextDocumentIdentifier: () => ik,
+	ParameterInformation: () => vk,
+	Position: () => kO,
+	Range: () => AO,
+	RenameFile: () => XO,
+	SelectedCompletionInfo: () => Yk,
+	SelectionRange: () => Pk,
+	SemanticTokenModifiers: () => Ik,
+	SemanticTokenTypes: () => Fk,
+	SemanticTokens: () => Lk,
+	SignatureInformation: () => yk,
+	StringValue: () => Gk,
+	SymbolInformation: () => wk,
+	SymbolKind: () => Sk,
+	SymbolTag: () => Ck,
+	TextDocument: () => $k,
+	TextDocumentEdit: () => JO,
+	TextDocumentIdentifier: () => nk,
+	TextDocumentItem: () => ak,
+	TextEdit: () => WO,
+	URI: () => EO,
+	VersionedTextDocumentIdentifier: () => rk,
+	WorkspaceChange: () => tk,
+	WorkspaceEdit: () => QO,
+	WorkspaceFolder: () => Zk,
+	WorkspaceSymbol: () => Tk,
+	integer: () => DO,
+	uinteger: () => OO
+}), TO, EO, DO, OO, kO, AO, jO, MO, NO, PO, FO, IO, LO, RO, zO, BO, VO, HO, UO, WO, GO, KO, qO, JO, YO, XO, ZO, QO, $O, ek, tk, nk, rk, ik, ak, ok, sk, ck, lk, uk, dk, fk, pk, mk, hk, gk, _k, vk, yk, bk, xk, Sk, Ck, wk, Tk, Ek, Dk, Ok, kk, Ak, jk, Mk, Nk, Pk, Fk, Ik, Lk, Rk, zk, Bk, Vk, Hk, Uk, Wk, Gk, Kk, qk, Jk, Yk, Xk, Zk, Qk, $k, eA, Y, tA = t((() => {
 	(function(e) {
 		function t(e) {
 			return typeof e == "string";
 		}
 		e.is = t;
-	})(SO ||= {}), (function(e) {
+	})(TO ||= {}), (function(e) {
 		function t(e) {
 			return typeof e == "string";
 		}
 		e.is = t;
-	})(CO ||= {}), (function(e) {
+	})(EO ||= {}), (function(e) {
 		e.MIN_VALUE = -2147483648, e.MAX_VALUE = 2147483647;
 		function t(t) {
 			return typeof t == "number" && e.MIN_VALUE <= t && t <= e.MAX_VALUE;
 		}
 		e.is = t;
-	})(wO ||= {}), (function(e) {
+	})(DO ||= {}), (function(e) {
 		e.MIN_VALUE = 0, e.MAX_VALUE = 2147483647;
 		function t(t) {
 			return typeof t == "number" && e.MIN_VALUE <= t && t <= e.MAX_VALUE;
 		}
 		e.is = t;
-	})(TO ||= {}), (function(e) {
+	})(OO ||= {}), (function(e) {
 		function t(e, t) {
-			return e === Number.MAX_VALUE && (e = TO.MAX_VALUE), t === Number.MAX_VALUE && (t = TO.MAX_VALUE), {
+			return e === Number.MAX_VALUE && (e = OO.MAX_VALUE), t === Number.MAX_VALUE && (t = OO.MAX_VALUE), {
 				line: e,
 				character: t
 			};
@@ -4501,13 +4501,13 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return Y.objectLiteral(t) && Y.uinteger(t.line) && Y.uinteger(t.character);
 		}
 		e.is = n;
-	})(EO ||= {}), (function(e) {
+	})(kO ||= {}), (function(e) {
 		function t(e, t, n, r) {
 			if (Y.uinteger(e) && Y.uinteger(t) && Y.uinteger(n) && Y.uinteger(r)) return {
-				start: EO.create(e, t),
-				end: EO.create(n, r)
+				start: kO.create(e, t),
+				end: kO.create(n, r)
 			};
-			if (EO.is(e) && EO.is(t)) return {
+			if (kO.is(e) && kO.is(t)) return {
 				start: e,
 				end: t
 			};
@@ -4516,10 +4516,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return Y.objectLiteral(t) && EO.is(t.start) && EO.is(t.end);
+			return Y.objectLiteral(t) && kO.is(t.start) && kO.is(t.end);
 		}
 		e.is = n;
-	})(DO ||= {}), (function(e) {
+	})(AO ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				uri: e,
@@ -4529,10 +4529,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return Y.objectLiteral(t) && DO.is(t.range) && (Y.string(t.uri) || Y.undefined(t.uri));
+			return Y.objectLiteral(t) && AO.is(t.range) && (Y.string(t.uri) || Y.undefined(t.uri));
 		}
 		e.is = n;
-	})(OO ||= {}), (function(e) {
+	})(jO ||= {}), (function(e) {
 		function t(e, t, n, r) {
 			return {
 				targetUri: e,
@@ -4544,10 +4544,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return Y.objectLiteral(t) && DO.is(t.targetRange) && Y.string(t.targetUri) && DO.is(t.targetSelectionRange) && (DO.is(t.originSelectionRange) || Y.undefined(t.originSelectionRange));
+			return Y.objectLiteral(t) && AO.is(t.targetRange) && Y.string(t.targetUri) && AO.is(t.targetSelectionRange) && (AO.is(t.originSelectionRange) || Y.undefined(t.originSelectionRange));
 		}
 		e.is = n;
-	})(kO ||= {}), (function(e) {
+	})(MO ||= {}), (function(e) {
 		function t(e, t, n, r) {
 			return {
 				red: e,
@@ -4562,7 +4562,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return Y.objectLiteral(t) && Y.numberRange(t.red, 0, 1) && Y.numberRange(t.green, 0, 1) && Y.numberRange(t.blue, 0, 1) && Y.numberRange(t.alpha, 0, 1);
 		}
 		e.is = n;
-	})(AO ||= {}), (function(e) {
+	})(NO ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				range: e,
@@ -4572,10 +4572,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return Y.objectLiteral(t) && DO.is(t.range) && AO.is(t.color);
+			return Y.objectLiteral(t) && AO.is(t.range) && NO.is(t.color);
 		}
 		e.is = n;
-	})(jO ||= {}), (function(e) {
+	})(PO ||= {}), (function(e) {
 		function t(e, t, n) {
 			return {
 				label: e,
@@ -4586,12 +4586,12 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return Y.objectLiteral(t) && Y.string(t.label) && (Y.undefined(t.textEdit) || VO.is(t)) && (Y.undefined(t.additionalTextEdits) || Y.typedArray(t.additionalTextEdits, VO.is));
+			return Y.objectLiteral(t) && Y.string(t.label) && (Y.undefined(t.textEdit) || WO.is(t)) && (Y.undefined(t.additionalTextEdits) || Y.typedArray(t.additionalTextEdits, WO.is));
 		}
 		e.is = n;
-	})(MO ||= {}), (function(e) {
+	})(FO ||= {}), (function(e) {
 		e.Comment = "comment", e.Imports = "imports", e.Region = "region";
-	})(NO ||= {}), (function(e) {
+	})(IO ||= {}), (function(e) {
 		function t(e, t, n, r, i, a) {
 			let o = {
 				startLine: e,
@@ -4605,7 +4605,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return Y.objectLiteral(t) && Y.uinteger(t.startLine) && Y.uinteger(t.startLine) && (Y.undefined(t.startCharacter) || Y.uinteger(t.startCharacter)) && (Y.undefined(t.endCharacter) || Y.uinteger(t.endCharacter)) && (Y.undefined(t.kind) || Y.string(t.kind));
 		}
 		e.is = n;
-	})(PO ||= {}), (function(e) {
+	})(LO ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				location: e,
@@ -4615,20 +4615,20 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return Y.defined(t) && OO.is(t.location) && Y.string(t.message);
+			return Y.defined(t) && jO.is(t.location) && Y.string(t.message);
 		}
 		e.is = n;
-	})(FO ||= {}), (function(e) {
+	})(RO ||= {}), (function(e) {
 		e.Error = 1, e.Warning = 2, e.Information = 3, e.Hint = 4;
-	})(IO ||= {}), (function(e) {
+	})(zO ||= {}), (function(e) {
 		e.Unnecessary = 1, e.Deprecated = 2;
-	})(LO ||= {}), (function(e) {
+	})(BO ||= {}), (function(e) {
 		function t(e) {
 			let t = e;
 			return Y.objectLiteral(t) && Y.string(t.href);
 		}
 		e.is = t;
-	})(RO ||= {}), (function(e) {
+	})(VO ||= {}), (function(e) {
 		function t(e, t, n, r, i, a) {
 			let o = {
 				range: e,
@@ -4639,10 +4639,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return Y.defined(t) && DO.is(t.range) && Y.string(t.message) && (Y.number(t.severity) || Y.undefined(t.severity)) && (Y.integer(t.code) || Y.string(t.code) || Y.undefined(t.code)) && (Y.undefined(t.codeDescription) || Y.string(t.codeDescription?.href)) && (Y.string(t.source) || Y.undefined(t.source)) && (Y.undefined(t.relatedInformation) || Y.typedArray(t.relatedInformation, FO.is));
+			return Y.defined(t) && AO.is(t.range) && Y.string(t.message) && (Y.number(t.severity) || Y.undefined(t.severity)) && (Y.integer(t.code) || Y.string(t.code) || Y.undefined(t.code)) && (Y.undefined(t.codeDescription) || Y.string(t.codeDescription?.href)) && (Y.string(t.source) || Y.undefined(t.source)) && (Y.undefined(t.relatedInformation) || Y.typedArray(t.relatedInformation, RO.is));
 		}
 		e.is = n;
-	})(zO ||= {}), (function(e) {
+	})(HO ||= {}), (function(e) {
 		function t(e, t, ...n) {
 			let r = {
 				title: e,
@@ -4656,7 +4656,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return Y.defined(t) && Y.string(t.title) && Y.string(t.command);
 		}
 		e.is = n;
-	})(BO ||= {}), (function(e) {
+	})(UO ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				range: e,
@@ -4683,10 +4683,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.del = r;
 		function i(e) {
 			let t = e;
-			return Y.objectLiteral(t) && Y.string(t.newText) && DO.is(t.range);
+			return Y.objectLiteral(t) && Y.string(t.newText) && AO.is(t.range);
 		}
 		e.is = i;
-	})(VO ||= {}), (function(e) {
+	})(WO ||= {}), (function(e) {
 		function t(e, t, n) {
 			let r = { label: e };
 			return t !== void 0 && (r.needsConfirmation = t), n !== void 0 && (r.description = n), r;
@@ -4697,13 +4697,13 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return Y.objectLiteral(t) && Y.string(t.label) && (Y.boolean(t.needsConfirmation) || t.needsConfirmation === void 0) && (Y.string(t.description) || t.description === void 0);
 		}
 		e.is = n;
-	})(HO ||= {}), (function(e) {
+	})(GO ||= {}), (function(e) {
 		function t(e) {
 			let t = e;
 			return Y.string(t);
 		}
 		e.is = t;
-	})(UO ||= {}), (function(e) {
+	})(KO ||= {}), (function(e) {
 		function t(e, t, n) {
 			return {
 				range: e,
@@ -4733,10 +4733,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.del = r;
 		function i(e) {
 			let t = e;
-			return VO.is(t) && (HO.is(t.annotationId) || UO.is(t.annotationId));
+			return WO.is(t) && (GO.is(t.annotationId) || KO.is(t.annotationId));
 		}
 		e.is = i;
-	})(WO ||= {}), (function(e) {
+	})(qO ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				textDocument: e,
@@ -4746,10 +4746,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return Y.defined(t) && tk.is(t.textDocument) && Array.isArray(t.edits);
+			return Y.defined(t) && ik.is(t.textDocument) && Array.isArray(t.edits);
 		}
 		e.is = n;
-	})(GO ||= {}), (function(e) {
+	})(JO ||= {}), (function(e) {
 		function t(e, t, n) {
 			let r = {
 				kind: "create",
@@ -4760,10 +4760,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t && t.kind === "create" && Y.string(t.uri) && (t.options === void 0 || (t.options.overwrite === void 0 || Y.boolean(t.options.overwrite)) && (t.options.ignoreIfExists === void 0 || Y.boolean(t.options.ignoreIfExists))) && (t.annotationId === void 0 || UO.is(t.annotationId));
+			return t && t.kind === "create" && Y.string(t.uri) && (t.options === void 0 || (t.options.overwrite === void 0 || Y.boolean(t.options.overwrite)) && (t.options.ignoreIfExists === void 0 || Y.boolean(t.options.ignoreIfExists))) && (t.annotationId === void 0 || KO.is(t.annotationId));
 		}
 		e.is = n;
-	})(KO ||= {}), (function(e) {
+	})(YO ||= {}), (function(e) {
 		function t(e, t, n, r) {
 			let i = {
 				kind: "rename",
@@ -4775,10 +4775,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t && t.kind === "rename" && Y.string(t.oldUri) && Y.string(t.newUri) && (t.options === void 0 || (t.options.overwrite === void 0 || Y.boolean(t.options.overwrite)) && (t.options.ignoreIfExists === void 0 || Y.boolean(t.options.ignoreIfExists))) && (t.annotationId === void 0 || UO.is(t.annotationId));
+			return t && t.kind === "rename" && Y.string(t.oldUri) && Y.string(t.newUri) && (t.options === void 0 || (t.options.overwrite === void 0 || Y.boolean(t.options.overwrite)) && (t.options.ignoreIfExists === void 0 || Y.boolean(t.options.ignoreIfExists))) && (t.annotationId === void 0 || KO.is(t.annotationId));
 		}
 		e.is = n;
-	})(qO ||= {}), (function(e) {
+	})(XO ||= {}), (function(e) {
 		function t(e, t, n) {
 			let r = {
 				kind: "delete",
@@ -4789,30 +4789,30 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t && t.kind === "delete" && Y.string(t.uri) && (t.options === void 0 || (t.options.recursive === void 0 || Y.boolean(t.options.recursive)) && (t.options.ignoreIfNotExists === void 0 || Y.boolean(t.options.ignoreIfNotExists))) && (t.annotationId === void 0 || UO.is(t.annotationId));
+			return t && t.kind === "delete" && Y.string(t.uri) && (t.options === void 0 || (t.options.recursive === void 0 || Y.boolean(t.options.recursive)) && (t.options.ignoreIfNotExists === void 0 || Y.boolean(t.options.ignoreIfNotExists))) && (t.annotationId === void 0 || KO.is(t.annotationId));
 		}
 		e.is = n;
-	})(JO ||= {}), (function(e) {
+	})(ZO ||= {}), (function(e) {
 		function t(e) {
 			let t = e;
-			return t && (t.changes !== void 0 || t.documentChanges !== void 0) && (t.documentChanges === void 0 || t.documentChanges.every((e) => Y.string(e.kind) ? KO.is(e) || qO.is(e) || JO.is(e) : GO.is(e)));
+			return t && (t.changes !== void 0 || t.documentChanges !== void 0) && (t.documentChanges === void 0 || t.documentChanges.every((e) => Y.string(e.kind) ? YO.is(e) || XO.is(e) || ZO.is(e) : JO.is(e)));
 		}
 		e.is = t;
-	})(YO ||= {}), XO = class {
+	})(QO ||= {}), $O = class {
 		constructor(e, t) {
 			this.edits = e, this.changeAnnotations = t;
 		}
 		insert(e, t, n) {
 			let r, i;
-			if (n === void 0 ? r = VO.insert(e, t) : UO.is(n) ? (i = n, r = WO.insert(e, t, n)) : (this.assertChangeAnnotations(this.changeAnnotations), i = this.changeAnnotations.manage(n), r = WO.insert(e, t, i)), this.edits.push(r), i !== void 0) return i;
+			if (n === void 0 ? r = WO.insert(e, t) : KO.is(n) ? (i = n, r = qO.insert(e, t, n)) : (this.assertChangeAnnotations(this.changeAnnotations), i = this.changeAnnotations.manage(n), r = qO.insert(e, t, i)), this.edits.push(r), i !== void 0) return i;
 		}
 		replace(e, t, n) {
 			let r, i;
-			if (n === void 0 ? r = VO.replace(e, t) : UO.is(n) ? (i = n, r = WO.replace(e, t, n)) : (this.assertChangeAnnotations(this.changeAnnotations), i = this.changeAnnotations.manage(n), r = WO.replace(e, t, i)), this.edits.push(r), i !== void 0) return i;
+			if (n === void 0 ? r = WO.replace(e, t) : KO.is(n) ? (i = n, r = qO.replace(e, t, n)) : (this.assertChangeAnnotations(this.changeAnnotations), i = this.changeAnnotations.manage(n), r = qO.replace(e, t, i)), this.edits.push(r), i !== void 0) return i;
 		}
 		delete(e, t) {
 			let n, r;
-			if (t === void 0 ? n = VO.del(e) : UO.is(t) ? (r = t, n = WO.del(e, t)) : (this.assertChangeAnnotations(this.changeAnnotations), r = this.changeAnnotations.manage(t), n = WO.del(e, r)), this.edits.push(n), r !== void 0) return r;
+			if (t === void 0 ? n = WO.del(e) : KO.is(t) ? (r = t, n = qO.del(e, t)) : (this.assertChangeAnnotations(this.changeAnnotations), r = this.changeAnnotations.manage(t), n = qO.del(e, r)), this.edits.push(n), r !== void 0) return r;
 		}
 		add(e) {
 			this.edits.push(e);
@@ -4826,7 +4826,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 		assertChangeAnnotations(e) {
 			if (e === void 0) throw Error("Text edit change is not configured to manage change annotations.");
 		}
-	}, ZO = class {
+	}, ek = class {
 		constructor(e) {
 			this._annotations = e === void 0 ? Object.create(null) : e, this._counter = 0, this._size = 0;
 		}
@@ -4838,22 +4838,22 @@ var iO = /* @__PURE__ */ r(((e) => {
 		}
 		manage(e, t) {
 			let n;
-			if (UO.is(e) ? n = e : (n = this.nextId(), t = e), this._annotations[n] !== void 0) throw Error(`Id ${n} is already in use.`);
+			if (KO.is(e) ? n = e : (n = this.nextId(), t = e), this._annotations[n] !== void 0) throw Error(`Id ${n} is already in use.`);
 			if (t === void 0) throw Error(`No annotation provided for id ${n}`);
 			return this._annotations[n] = t, this._size++, n;
 		}
 		nextId() {
 			return this._counter++, this._counter.toString();
 		}
-	}, QO = class {
+	}, tk = class {
 		constructor(e) {
-			this._textEditChanges = Object.create(null), e === void 0 ? this._workspaceEdit = {} : (this._workspaceEdit = e, e.documentChanges ? (this._changeAnnotations = new ZO(e.changeAnnotations), e.changeAnnotations = this._changeAnnotations.all(), e.documentChanges.forEach((e) => {
-				if (GO.is(e)) {
-					let t = new XO(e.edits, this._changeAnnotations);
+			this._textEditChanges = Object.create(null), e === void 0 ? this._workspaceEdit = {} : (this._workspaceEdit = e, e.documentChanges ? (this._changeAnnotations = new ek(e.changeAnnotations), e.changeAnnotations = this._changeAnnotations.all(), e.documentChanges.forEach((e) => {
+				if (JO.is(e)) {
+					let t = new $O(e.edits, this._changeAnnotations);
 					this._textEditChanges[e.textDocument.uri] = t;
 				}
 			})) : e.changes && Object.keys(e.changes).forEach((t) => {
-				let n = new XO(e.changes[t]);
+				let n = new $O(e.changes[t]);
 				this._textEditChanges[t] = n;
 			}));
 		}
@@ -4861,7 +4861,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return this.initDocumentChanges(), this._changeAnnotations !== void 0 && (this._changeAnnotations.size === 0 ? this._workspaceEdit.changeAnnotations = void 0 : this._workspaceEdit.changeAnnotations = this._changeAnnotations.all()), this._workspaceEdit;
 		}
 		getTextEditChange(e) {
-			if (tk.is(e)) {
+			if (ik.is(e)) {
 				if (this.initDocumentChanges(), this._workspaceEdit.documentChanges === void 0) throw Error("Workspace edit is not configured for document changes.");
 				let t = {
 					uri: e.uri,
@@ -4872,7 +4872,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 						textDocument: t,
 						edits: e
 					};
-					this._workspaceEdit.documentChanges.push(r), n = new XO(e, this._changeAnnotations), this._textEditChanges[t.uri] = n;
+					this._workspaceEdit.documentChanges.push(r), n = new $O(e, this._changeAnnotations), this._textEditChanges[t.uri] = n;
 				}
 				return n;
 			} else {
@@ -4880,13 +4880,13 @@ var iO = /* @__PURE__ */ r(((e) => {
 				let t = this._textEditChanges[e];
 				if (!t) {
 					let n = [];
-					this._workspaceEdit.changes[e] = n, t = new XO(n), this._textEditChanges[e] = t;
+					this._workspaceEdit.changes[e] = n, t = new $O(n), this._textEditChanges[e] = t;
 				}
 				return t;
 			}
 		}
 		initDocumentChanges() {
-			this._workspaceEdit.documentChanges === void 0 && this._workspaceEdit.changes === void 0 && (this._changeAnnotations = new ZO(), this._workspaceEdit.documentChanges = [], this._workspaceEdit.changeAnnotations = this._changeAnnotations.all());
+			this._workspaceEdit.documentChanges === void 0 && this._workspaceEdit.changes === void 0 && (this._changeAnnotations = new ek(), this._workspaceEdit.documentChanges = [], this._workspaceEdit.changeAnnotations = this._changeAnnotations.all());
 		}
 		initChanges() {
 			this._workspaceEdit.documentChanges === void 0 && this._workspaceEdit.changes === void 0 && (this._workspaceEdit.changes = Object.create(null));
@@ -4894,23 +4894,23 @@ var iO = /* @__PURE__ */ r(((e) => {
 		createFile(e, t, n) {
 			if (this.initDocumentChanges(), this._workspaceEdit.documentChanges === void 0) throw Error("Workspace edit is not configured for document changes.");
 			let r;
-			HO.is(t) || UO.is(t) ? r = t : n = t;
+			GO.is(t) || KO.is(t) ? r = t : n = t;
 			let i, a;
-			if (r === void 0 ? i = KO.create(e, n) : (a = UO.is(r) ? r : this._changeAnnotations.manage(r), i = KO.create(e, n, a)), this._workspaceEdit.documentChanges.push(i), a !== void 0) return a;
+			if (r === void 0 ? i = YO.create(e, n) : (a = KO.is(r) ? r : this._changeAnnotations.manage(r), i = YO.create(e, n, a)), this._workspaceEdit.documentChanges.push(i), a !== void 0) return a;
 		}
 		renameFile(e, t, n, r) {
 			if (this.initDocumentChanges(), this._workspaceEdit.documentChanges === void 0) throw Error("Workspace edit is not configured for document changes.");
 			let i;
-			HO.is(n) || UO.is(n) ? i = n : r = n;
+			GO.is(n) || KO.is(n) ? i = n : r = n;
 			let a, o;
-			if (i === void 0 ? a = qO.create(e, t, r) : (o = UO.is(i) ? i : this._changeAnnotations.manage(i), a = qO.create(e, t, r, o)), this._workspaceEdit.documentChanges.push(a), o !== void 0) return o;
+			if (i === void 0 ? a = XO.create(e, t, r) : (o = KO.is(i) ? i : this._changeAnnotations.manage(i), a = XO.create(e, t, r, o)), this._workspaceEdit.documentChanges.push(a), o !== void 0) return o;
 		}
 		deleteFile(e, t, n) {
 			if (this.initDocumentChanges(), this._workspaceEdit.documentChanges === void 0) throw Error("Workspace edit is not configured for document changes.");
 			let r;
-			HO.is(t) || UO.is(t) ? r = t : n = t;
+			GO.is(t) || KO.is(t) ? r = t : n = t;
 			let i, a;
-			if (r === void 0 ? i = JO.create(e, n) : (a = UO.is(r) ? r : this._changeAnnotations.manage(r), i = JO.create(e, n, a)), this._workspaceEdit.documentChanges.push(i), a !== void 0) return a;
+			if (r === void 0 ? i = ZO.create(e, n) : (a = KO.is(r) ? r : this._changeAnnotations.manage(r), i = ZO.create(e, n, a)), this._workspaceEdit.documentChanges.push(i), a !== void 0) return a;
 		}
 	}, (function(e) {
 		function t(e) {
@@ -4922,7 +4922,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return Y.defined(t) && Y.string(t.uri);
 		}
 		e.is = n;
-	})($O ||= {}), (function(e) {
+	})(nk ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				uri: e,
@@ -4935,7 +4935,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return Y.defined(t) && Y.string(t.uri) && Y.integer(t.version);
 		}
 		e.is = n;
-	})(ek ||= {}), (function(e) {
+	})(rk ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				uri: e,
@@ -4948,7 +4948,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return Y.defined(t) && Y.string(t.uri) && (t.version === null || Y.integer(t.version));
 		}
 		e.is = n;
-	})(tk ||= {}), (function(e) {
+	})(ik ||= {}), (function(e) {
 		function t(e, t, n, r) {
 			return {
 				uri: e,
@@ -4963,26 +4963,26 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return Y.defined(t) && Y.string(t.uri) && Y.string(t.languageId) && Y.integer(t.version) && Y.string(t.text);
 		}
 		e.is = n;
-	})(nk ||= {}), (function(e) {
+	})(ak ||= {}), (function(e) {
 		e.PlainText = "plaintext", e.Markdown = "markdown";
 		function t(t) {
 			let n = t;
 			return n === e.PlainText || n === e.Markdown;
 		}
 		e.is = t;
-	})(rk ||= {}), (function(e) {
+	})(ok ||= {}), (function(e) {
 		function t(e) {
 			let t = e;
-			return Y.objectLiteral(e) && rk.is(t.kind) && Y.string(t.value);
+			return Y.objectLiteral(e) && ok.is(t.kind) && Y.string(t.value);
 		}
 		e.is = t;
-	})(ik ||= {}), (function(e) {
-		e.Text = 1, e.Method = 2, e.Function = 3, e.Constructor = 4, e.Field = 5, e.Variable = 6, e.Class = 7, e.Interface = 8, e.Module = 9, e.Property = 10, e.Unit = 11, e.Value = 12, e.Enum = 13, e.Keyword = 14, e.Snippet = 15, e.Color = 16, e.File = 17, e.Reference = 18, e.Folder = 19, e.EnumMember = 20, e.Constant = 21, e.Struct = 22, e.Event = 23, e.Operator = 24, e.TypeParameter = 25;
-	})(ak ||= {}), (function(e) {
-		e.PlainText = 1, e.Snippet = 2;
-	})(ok ||= {}), (function(e) {
-		e.Deprecated = 1;
 	})(sk ||= {}), (function(e) {
+		e.Text = 1, e.Method = 2, e.Function = 3, e.Constructor = 4, e.Field = 5, e.Variable = 6, e.Class = 7, e.Interface = 8, e.Module = 9, e.Property = 10, e.Unit = 11, e.Value = 12, e.Enum = 13, e.Keyword = 14, e.Snippet = 15, e.Color = 16, e.File = 17, e.Reference = 18, e.Folder = 19, e.EnumMember = 20, e.Constant = 21, e.Struct = 22, e.Event = 23, e.Operator = 24, e.TypeParameter = 25;
+	})(ck ||= {}), (function(e) {
+		e.PlainText = 1, e.Snippet = 2;
+	})(lk ||= {}), (function(e) {
+		e.Deprecated = 1;
+	})(uk ||= {}), (function(e) {
 		function t(e, t, n) {
 			return {
 				newText: e,
@@ -4993,23 +4993,23 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t && Y.string(t.newText) && DO.is(t.insert) && DO.is(t.replace);
+			return t && Y.string(t.newText) && AO.is(t.insert) && AO.is(t.replace);
 		}
 		e.is = n;
-	})(ck ||= {}), (function(e) {
+	})(dk ||= {}), (function(e) {
 		e.asIs = 1, e.adjustIndentation = 2;
-	})(lk ||= {}), (function(e) {
+	})(fk ||= {}), (function(e) {
 		function t(e) {
 			let t = e;
 			return t && (Y.string(t.detail) || t.detail === void 0) && (Y.string(t.description) || t.description === void 0);
 		}
 		e.is = t;
-	})(uk ||= {}), (function(e) {
+	})(pk ||= {}), (function(e) {
 		function t(e) {
 			return { label: e };
 		}
 		e.create = t;
-	})(dk ||= {}), (function(e) {
+	})(mk ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				items: e || [],
@@ -5017,7 +5017,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			};
 		}
 		e.create = t;
-	})(fk ||= {}), (function(e) {
+	})(hk ||= {}), (function(e) {
 		function t(e) {
 			return e.replace(/[\\`*_{}[\]()#+\-.!]/g, "\\$&");
 		}
@@ -5027,13 +5027,13 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return Y.string(t) || Y.objectLiteral(t) && Y.string(t.language) && Y.string(t.value);
 		}
 		e.is = n;
-	})(pk ||= {}), (function(e) {
+	})(gk ||= {}), (function(e) {
 		function t(e) {
 			let t = e;
-			return !!t && Y.objectLiteral(t) && (ik.is(t.contents) || pk.is(t.contents) || Y.typedArray(t.contents, pk.is)) && (e.range === void 0 || DO.is(e.range));
+			return !!t && Y.objectLiteral(t) && (sk.is(t.contents) || gk.is(t.contents) || Y.typedArray(t.contents, gk.is)) && (e.range === void 0 || AO.is(e.range));
 		}
 		e.is = t;
-	})(mk ||= {}), (function(e) {
+	})(_k ||= {}), (function(e) {
 		function t(e, t) {
 			return t ? {
 				label: e,
@@ -5041,25 +5041,25 @@ var iO = /* @__PURE__ */ r(((e) => {
 			} : { label: e };
 		}
 		e.create = t;
-	})(hk ||= {}), (function(e) {
+	})(vk ||= {}), (function(e) {
 		function t(e, t, ...n) {
 			let r = { label: e };
 			return Y.defined(t) && (r.documentation = t), Y.defined(n) ? r.parameters = n : r.parameters = [], r;
 		}
 		e.create = t;
-	})(gk ||= {}), (function(e) {
+	})(yk ||= {}), (function(e) {
 		e.Text = 1, e.Read = 2, e.Write = 3;
-	})(_k ||= {}), (function(e) {
+	})(bk ||= {}), (function(e) {
 		function t(e, t) {
 			let n = { range: e };
 			return Y.number(t) && (n.kind = t), n;
 		}
 		e.create = t;
-	})(vk ||= {}), (function(e) {
+	})(xk ||= {}), (function(e) {
 		e.File = 1, e.Module = 2, e.Namespace = 3, e.Package = 4, e.Class = 5, e.Method = 6, e.Property = 7, e.Field = 8, e.Constructor = 9, e.Enum = 10, e.Interface = 11, e.Function = 12, e.Variable = 13, e.Constant = 14, e.String = 15, e.Number = 16, e.Boolean = 17, e.Array = 18, e.Object = 19, e.Key = 20, e.Null = 21, e.EnumMember = 22, e.Struct = 23, e.Event = 24, e.Operator = 25, e.TypeParameter = 26;
-	})(yk ||= {}), (function(e) {
+	})(Sk ||= {}), (function(e) {
 		e.Deprecated = 1;
-	})(bk ||= {}), (function(e) {
+	})(Ck ||= {}), (function(e) {
 		function t(e, t, n, r, i) {
 			let a = {
 				name: e,
@@ -5072,7 +5072,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return i && (a.containerName = i), a;
 		}
 		e.create = t;
-	})(xk ||= {}), (function(e) {
+	})(wk ||= {}), (function(e) {
 		function t(e, t, n, r) {
 			return r === void 0 ? {
 				name: e,
@@ -5088,7 +5088,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			};
 		}
 		e.create = t;
-	})(Sk ||= {}), (function(e) {
+	})(Tk ||= {}), (function(e) {
 		function t(e, t, n, r, i, a) {
 			let o = {
 				name: e,
@@ -5102,14 +5102,14 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t && Y.string(t.name) && Y.number(t.kind) && DO.is(t.range) && DO.is(t.selectionRange) && (t.detail === void 0 || Y.string(t.detail)) && (t.deprecated === void 0 || Y.boolean(t.deprecated)) && (t.children === void 0 || Array.isArray(t.children)) && (t.tags === void 0 || Array.isArray(t.tags));
+			return t && Y.string(t.name) && Y.number(t.kind) && AO.is(t.range) && AO.is(t.selectionRange) && (t.detail === void 0 || Y.string(t.detail)) && (t.deprecated === void 0 || Y.boolean(t.deprecated)) && (t.children === void 0 || Array.isArray(t.children)) && (t.tags === void 0 || Array.isArray(t.tags));
 		}
 		e.is = n;
-	})(Ck ||= {}), (function(e) {
+	})(Ek ||= {}), (function(e) {
 		e.Empty = "", e.QuickFix = "quickfix", e.Refactor = "refactor", e.RefactorExtract = "refactor.extract", e.RefactorInline = "refactor.inline", e.RefactorRewrite = "refactor.rewrite", e.Source = "source", e.SourceOrganizeImports = "source.organizeImports", e.SourceFixAll = "source.fixAll";
-	})(wk ||= {}), (function(e) {
+	})(Dk ||= {}), (function(e) {
 		e.Invoked = 1, e.Automatic = 2;
-	})(Tk ||= {}), (function(e) {
+	})(Ok ||= {}), (function(e) {
 		function t(e, t, n) {
 			let r = { diagnostics: e };
 			return t != null && (r.only = t), n != null && (r.triggerKind = n), r;
@@ -5117,21 +5117,21 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return Y.defined(t) && Y.typedArray(t.diagnostics, zO.is) && (t.only === void 0 || Y.typedArray(t.only, Y.string)) && (t.triggerKind === void 0 || t.triggerKind === Tk.Invoked || t.triggerKind === Tk.Automatic);
+			return Y.defined(t) && Y.typedArray(t.diagnostics, HO.is) && (t.only === void 0 || Y.typedArray(t.only, Y.string)) && (t.triggerKind === void 0 || t.triggerKind === Ok.Invoked || t.triggerKind === Ok.Automatic);
 		}
 		e.is = n;
-	})(Ek ||= {}), (function(e) {
+	})(kk ||= {}), (function(e) {
 		function t(e, t, n) {
 			let r = { title: e }, i = !0;
-			return typeof t == "string" ? (i = !1, r.kind = t) : BO.is(t) ? r.command = t : r.edit = t, i && n !== void 0 && (r.kind = n), r;
+			return typeof t == "string" ? (i = !1, r.kind = t) : UO.is(t) ? r.command = t : r.edit = t, i && n !== void 0 && (r.kind = n), r;
 		}
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t && Y.string(t.title) && (t.diagnostics === void 0 || Y.typedArray(t.diagnostics, zO.is)) && (t.kind === void 0 || Y.string(t.kind)) && (t.edit !== void 0 || t.command !== void 0) && (t.command === void 0 || BO.is(t.command)) && (t.isPreferred === void 0 || Y.boolean(t.isPreferred)) && (t.edit === void 0 || YO.is(t.edit));
+			return t && Y.string(t.title) && (t.diagnostics === void 0 || Y.typedArray(t.diagnostics, HO.is)) && (t.kind === void 0 || Y.string(t.kind)) && (t.edit !== void 0 || t.command !== void 0) && (t.command === void 0 || UO.is(t.command)) && (t.isPreferred === void 0 || Y.boolean(t.isPreferred)) && (t.edit === void 0 || QO.is(t.edit));
 		}
 		e.is = n;
-	})(Dk ||= {}), (function(e) {
+	})(Ak ||= {}), (function(e) {
 		function t(e, t) {
 			let n = { range: e };
 			return Y.defined(t) && (n.data = t), n;
@@ -5139,10 +5139,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return Y.defined(t) && DO.is(t.range) && (Y.undefined(t.command) || BO.is(t.command));
+			return Y.defined(t) && AO.is(t.range) && (Y.undefined(t.command) || UO.is(t.command));
 		}
 		e.is = n;
-	})(Ok ||= {}), (function(e) {
+	})(jk ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				tabSize: e,
@@ -5155,7 +5155,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return Y.defined(t) && Y.uinteger(t.tabSize) && Y.boolean(t.insertSpaces);
 		}
 		e.is = n;
-	})(kk ||= {}), (function(e) {
+	})(Mk ||= {}), (function(e) {
 		function t(e, t, n) {
 			return {
 				range: e,
@@ -5166,10 +5166,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return Y.defined(t) && DO.is(t.range) && (Y.undefined(t.target) || Y.string(t.target));
+			return Y.defined(t) && AO.is(t.range) && (Y.undefined(t.target) || Y.string(t.target));
 		}
 		e.is = n;
-	})(Ak ||= {}), (function(e) {
+	})(Nk ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				range: e,
@@ -5179,20 +5179,20 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(t) {
 			let n = t;
-			return Y.objectLiteral(n) && DO.is(n.range) && (n.parent === void 0 || e.is(n.parent));
+			return Y.objectLiteral(n) && AO.is(n.range) && (n.parent === void 0 || e.is(n.parent));
 		}
 		e.is = n;
-	})(jk ||= {}), (function(e) {
+	})(Pk ||= {}), (function(e) {
 		e.namespace = "namespace", e.type = "type", e.class = "class", e.enum = "enum", e.interface = "interface", e.struct = "struct", e.typeParameter = "typeParameter", e.parameter = "parameter", e.variable = "variable", e.property = "property", e.enumMember = "enumMember", e.event = "event", e.function = "function", e.method = "method", e.macro = "macro", e.keyword = "keyword", e.modifier = "modifier", e.comment = "comment", e.string = "string", e.number = "number", e.regexp = "regexp", e.operator = "operator", e.decorator = "decorator";
-	})(Mk ||= {}), (function(e) {
+	})(Fk ||= {}), (function(e) {
 		e.declaration = "declaration", e.definition = "definition", e.readonly = "readonly", e.static = "static", e.deprecated = "deprecated", e.abstract = "abstract", e.async = "async", e.modification = "modification", e.documentation = "documentation", e.defaultLibrary = "defaultLibrary";
-	})(Nk ||= {}), (function(e) {
+	})(Ik ||= {}), (function(e) {
 		function t(e) {
 			let t = e;
 			return Y.objectLiteral(t) && (t.resultId === void 0 || typeof t.resultId == "string") && Array.isArray(t.data) && (t.data.length === 0 || typeof t.data[0] == "number");
 		}
 		e.is = t;
-	})(Pk ||= {}), (function(e) {
+	})(Lk ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				range: e,
@@ -5202,10 +5202,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t != null && DO.is(t.range) && Y.string(t.text);
+			return t != null && AO.is(t.range) && Y.string(t.text);
 		}
 		e.is = n;
-	})(Fk ||= {}), (function(e) {
+	})(Rk ||= {}), (function(e) {
 		function t(e, t, n) {
 			return {
 				range: e,
@@ -5216,10 +5216,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t != null && DO.is(t.range) && Y.boolean(t.caseSensitiveLookup) && (Y.string(t.variableName) || t.variableName === void 0);
+			return t != null && AO.is(t.range) && Y.boolean(t.caseSensitiveLookup) && (Y.string(t.variableName) || t.variableName === void 0);
 		}
 		e.is = n;
-	})(Ik ||= {}), (function(e) {
+	})(zk ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				range: e,
@@ -5229,10 +5229,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t != null && DO.is(t.range) && (Y.string(t.expression) || t.expression === void 0);
+			return t != null && AO.is(t.range) && (Y.string(t.expression) || t.expression === void 0);
 		}
 		e.is = n;
-	})(Lk ||= {}), (function(e) {
+	})(Bk ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				frameId: e,
@@ -5242,26 +5242,26 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return Y.defined(t) && DO.is(e.stoppedLocation);
+			return Y.defined(t) && AO.is(e.stoppedLocation);
 		}
 		e.is = n;
-	})(Rk ||= {}), (function(e) {
+	})(Vk ||= {}), (function(e) {
 		e.Type = 1, e.Parameter = 2;
 		function t(e) {
 			return e === 1 || e === 2;
 		}
 		e.is = t;
-	})(zk ||= {}), (function(e) {
+	})(Hk ||= {}), (function(e) {
 		function t(e) {
 			return { value: e };
 		}
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return Y.objectLiteral(t) && (t.tooltip === void 0 || Y.string(t.tooltip) || ik.is(t.tooltip)) && (t.location === void 0 || OO.is(t.location)) && (t.command === void 0 || BO.is(t.command));
+			return Y.objectLiteral(t) && (t.tooltip === void 0 || Y.string(t.tooltip) || sk.is(t.tooltip)) && (t.location === void 0 || jO.is(t.location)) && (t.command === void 0 || UO.is(t.command));
 		}
 		e.is = n;
-	})(Bk ||= {}), (function(e) {
+	})(Uk ||= {}), (function(e) {
 		function t(e, t, n) {
 			let r = {
 				position: e,
@@ -5272,10 +5272,10 @@ var iO = /* @__PURE__ */ r(((e) => {
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return Y.objectLiteral(t) && EO.is(t.position) && (Y.string(t.label) || Y.typedArray(t.label, Bk.is)) && (t.kind === void 0 || zk.is(t.kind)) && t.textEdits === void 0 || Y.typedArray(t.textEdits, VO.is) && (t.tooltip === void 0 || Y.string(t.tooltip) || ik.is(t.tooltip)) && (t.paddingLeft === void 0 || Y.boolean(t.paddingLeft)) && (t.paddingRight === void 0 || Y.boolean(t.paddingRight));
+			return Y.objectLiteral(t) && kO.is(t.position) && (Y.string(t.label) || Y.typedArray(t.label, Uk.is)) && (t.kind === void 0 || Hk.is(t.kind)) && t.textEdits === void 0 || Y.typedArray(t.textEdits, WO.is) && (t.tooltip === void 0 || Y.string(t.tooltip) || sk.is(t.tooltip)) && (t.paddingLeft === void 0 || Y.boolean(t.paddingLeft)) && (t.paddingRight === void 0 || Y.boolean(t.paddingRight));
 		}
 		e.is = n;
-	})(Vk ||= {}), (function(e) {
+	})(Wk ||= {}), (function(e) {
 		function t(e) {
 			return {
 				kind: "snippet",
@@ -5283,7 +5283,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			};
 		}
 		e.createSnippet = t;
-	})(Hk ||= {}), (function(e) {
+	})(Gk ||= {}), (function(e) {
 		function t(e, t, n, r) {
 			return {
 				insertText: e,
@@ -5293,14 +5293,14 @@ var iO = /* @__PURE__ */ r(((e) => {
 			};
 		}
 		e.create = t;
-	})(Uk ||= {}), (function(e) {
+	})(Kk ||= {}), (function(e) {
 		function t(e) {
 			return { items: e };
 		}
 		e.create = t;
-	})(Wk ||= {}), (function(e) {
+	})(qk ||= {}), (function(e) {
 		e.Invoked = 0, e.Automatic = 1;
-	})(Gk ||= {}), (function(e) {
+	})(Jk ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				range: e,
@@ -5308,7 +5308,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			};
 		}
 		e.create = t;
-	})(Kk ||= {}), (function(e) {
+	})(Yk ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				triggerKind: e,
@@ -5316,19 +5316,19 @@ var iO = /* @__PURE__ */ r(((e) => {
 			};
 		}
 		e.create = t;
-	})(qk ||= {}), (function(e) {
+	})(Xk ||= {}), (function(e) {
 		function t(e) {
 			let t = e;
-			return Y.objectLiteral(t) && CO.is(t.uri) && Y.string(t.name);
+			return Y.objectLiteral(t) && EO.is(t.uri) && Y.string(t.name);
 		}
 		e.is = t;
-	})(Jk ||= {}), Yk = [
+	})(Zk ||= {}), Qk = [
 		"\n",
 		"\r\n",
 		"\r"
 	], (function(e) {
 		function t(e, t, n, r) {
-			return new Zk(e, t, n, r);
+			return new eA(e, t, n, r);
 		}
 		e.create = t;
 		function n(e) {
@@ -5360,7 +5360,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			for (; s < a.length;) e[c++] = a[s++];
 			return e;
 		}
-	})(Xk ||= {}), Zk = class {
+	})($k ||= {}), eA = class {
 		constructor(e, t, n, r) {
 			this._uri = e, this._languageId = t, this._version = n, this._content = r, this._lineOffsets = void 0;
 		}
@@ -5398,13 +5398,13 @@ var iO = /* @__PURE__ */ r(((e) => {
 		positionAt(e) {
 			e = Math.max(Math.min(e, this._content.length), 0);
 			let t = this.getLineOffsets(), n = 0, r = t.length;
-			if (r === 0) return EO.create(0, e);
+			if (r === 0) return kO.create(0, e);
 			for (; n < r;) {
 				let i = Math.floor((n + r) / 2);
 				t[i] > e ? r = i : n = i + 1;
 			}
 			let i = n - 1;
-			return EO.create(i, e - t[i]);
+			return kO.create(i, e - t[i]);
 		}
 		offsetAt(e) {
 			let t = this.getLineOffsets();
@@ -5463,9 +5463,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 		}
 		e.typedArray = f;
 	})(Y ||= {});
-})), $k = /* @__PURE__ */ r(((e) => {
+})), nA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ProtocolNotificationType = e.ProtocolNotificationType0 = e.ProtocolRequestType = e.ProtocolRequestType0 = e.RegistrationType = e.MessageDirection = void 0;
-	var t = yO(), n;
+	var t = SO(), n;
 	(function(e) {
 		e.clientToServer = "clientToServer", e.serverToClient = "serverToClient", e.both = "both";
 	})(n || (e.MessageDirection = n = {})), e.RegistrationType = class {
@@ -5489,7 +5489,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			super(e, t.ParameterStructures.byName);
 		}
 	};
-})), eA = /* @__PURE__ */ r(((e) => {
+})), rA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.objectLiteral = e.typedArray = e.stringArray = e.array = e.func = e.error = e.number = e.string = e.boolean = void 0;
 	function t(e) {
 		return e === !0 || e === !1;
@@ -5527,21 +5527,21 @@ var iO = /* @__PURE__ */ r(((e) => {
 		return typeof e == "object" && !!e;
 	}
 	e.objectLiteral = l;
-})), tA = /* @__PURE__ */ r(((e) => {
+})), iA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ImplementationRequest = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.method = "textDocument/implementation", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.ImplementationRequest = n = {}));
-})), nA = /* @__PURE__ */ r(((e) => {
+})), aA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.TypeDefinitionRequest = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.method = "textDocument/typeDefinition", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.TypeDefinitionRequest = n = {}));
-})), rA = /* @__PURE__ */ r(((e) => {
+})), oA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.DidChangeWorkspaceFoldersNotification = e.WorkspaceFoldersRequest = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.method = "workspace/workspaceFolders", e.messageDirection = t.MessageDirection.serverToClient, e.type = new t.ProtocolRequestType0(e.method);
 	})(n || (e.WorkspaceFoldersRequest = n = {}));
@@ -5549,15 +5549,15 @@ var iO = /* @__PURE__ */ r(((e) => {
 	(function(e) {
 		e.method = "workspace/didChangeWorkspaceFolders", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolNotificationType(e.method);
 	})(r || (e.DidChangeWorkspaceFoldersNotification = r = {}));
-})), iA = /* @__PURE__ */ r(((e) => {
+})), sA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ConfigurationRequest = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.method = "workspace/configuration", e.messageDirection = t.MessageDirection.serverToClient, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.ConfigurationRequest = n = {}));
-})), aA = /* @__PURE__ */ r(((e) => {
+})), cA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ColorPresentationRequest = e.DocumentColorRequest = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.method = "textDocument/documentColor", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.DocumentColorRequest = n = {}));
@@ -5565,9 +5565,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 	(function(e) {
 		e.method = "textDocument/colorPresentation", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(r || (e.ColorPresentationRequest = r = {}));
-})), oA = /* @__PURE__ */ r(((e) => {
+})), lA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.FoldingRangeRefreshRequest = e.FoldingRangeRequest = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.method = "textDocument/foldingRange", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.FoldingRangeRequest = n = {}));
@@ -5575,21 +5575,21 @@ var iO = /* @__PURE__ */ r(((e) => {
 	(function(e) {
 		e.method = "workspace/foldingRange/refresh", e.messageDirection = t.MessageDirection.serverToClient, e.type = new t.ProtocolRequestType0(e.method);
 	})(r || (e.FoldingRangeRefreshRequest = r = {}));
-})), sA = /* @__PURE__ */ r(((e) => {
+})), uA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.DeclarationRequest = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.method = "textDocument/declaration", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.DeclarationRequest = n = {}));
-})), cA = /* @__PURE__ */ r(((e) => {
+})), dA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.SelectionRangeRequest = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.method = "textDocument/selectionRange", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.SelectionRangeRequest = n = {}));
-})), lA = /* @__PURE__ */ r(((e) => {
+})), fA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.WorkDoneProgressCancelNotification = e.WorkDoneProgressCreateRequest = e.WorkDoneProgress = void 0;
-	var t = yO(), n = $k(), r;
+	var t = SO(), n = nA(), r;
 	(function(e) {
 		e.type = new t.ProgressType();
 		function n(t) {
@@ -5605,9 +5605,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 	(function(e) {
 		e.method = "window/workDoneProgress/cancel", e.messageDirection = n.MessageDirection.clientToServer, e.type = new n.ProtocolNotificationType(e.method);
 	})(a || (e.WorkDoneProgressCancelNotification = a = {}));
-})), uA = /* @__PURE__ */ r(((e) => {
+})), pA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.CallHierarchyOutgoingCallsRequest = e.CallHierarchyIncomingCallsRequest = e.CallHierarchyPrepareRequest = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.method = "textDocument/prepareCallHierarchy", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.CallHierarchyPrepareRequest = n = {}));
@@ -5619,9 +5619,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 	(function(e) {
 		e.method = "callHierarchy/outgoingCalls", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(i || (e.CallHierarchyOutgoingCallsRequest = i = {}));
-})), dA = /* @__PURE__ */ r(((e) => {
+})), mA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.SemanticTokensRefreshRequest = e.SemanticTokensRangeRequest = e.SemanticTokensDeltaRequest = e.SemanticTokensRequest = e.SemanticTokensRegistrationType = e.TokenFormat = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.Relative = "relative";
 	})(n || (e.TokenFormat = n = {}));
@@ -5645,21 +5645,21 @@ var iO = /* @__PURE__ */ r(((e) => {
 	(function(e) {
 		e.method = "workspace/semanticTokens/refresh", e.messageDirection = t.MessageDirection.serverToClient, e.type = new t.ProtocolRequestType0(e.method);
 	})(s || (e.SemanticTokensRefreshRequest = s = {}));
-})), fA = /* @__PURE__ */ r(((e) => {
+})), hA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ShowDocumentRequest = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.method = "window/showDocument", e.messageDirection = t.MessageDirection.serverToClient, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.ShowDocumentRequest = n = {}));
-})), pA = /* @__PURE__ */ r(((e) => {
+})), gA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.LinkedEditingRangeRequest = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.method = "textDocument/linkedEditingRange", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.LinkedEditingRangeRequest = n = {}));
-})), mA = /* @__PURE__ */ r(((e) => {
+})), _A = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.WillDeleteFilesRequest = e.DidDeleteFilesNotification = e.DidRenameFilesNotification = e.WillRenameFilesRequest = e.DidCreateFilesNotification = e.WillCreateFilesRequest = e.FileOperationPatternKind = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.file = "file", e.folder = "folder";
 	})(n || (e.FileOperationPatternKind = n = {}));
@@ -5687,9 +5687,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 	(function(e) {
 		e.method = "workspace/willDeleteFiles", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(c || (e.WillDeleteFilesRequest = c = {}));
-})), hA = /* @__PURE__ */ r(((e) => {
+})), vA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.MonikerRequest = e.MonikerKind = e.UniquenessLevel = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.document = "document", e.project = "project", e.group = "group", e.scheme = "scheme", e.global = "global";
 	})(n || (e.UniquenessLevel = n = {}));
@@ -5701,9 +5701,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 	(function(e) {
 		e.method = "textDocument/moniker", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(i || (e.MonikerRequest = i = {}));
-})), gA = /* @__PURE__ */ r(((e) => {
+})), yA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.TypeHierarchySubtypesRequest = e.TypeHierarchySupertypesRequest = e.TypeHierarchyPrepareRequest = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.method = "textDocument/prepareTypeHierarchy", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.TypeHierarchyPrepareRequest = n = {}));
@@ -5715,9 +5715,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 	(function(e) {
 		e.method = "typeHierarchy/subtypes", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(i || (e.TypeHierarchySubtypesRequest = i = {}));
-})), _A = /* @__PURE__ */ r(((e) => {
+})), bA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.InlineValueRefreshRequest = e.InlineValueRequest = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.method = "textDocument/inlineValue", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.InlineValueRequest = n = {}));
@@ -5725,9 +5725,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 	(function(e) {
 		e.method = "workspace/inlineValue/refresh", e.messageDirection = t.MessageDirection.serverToClient, e.type = new t.ProtocolRequestType0(e.method);
 	})(r || (e.InlineValueRefreshRequest = r = {}));
-})), vA = /* @__PURE__ */ r(((e) => {
+})), xA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.InlayHintRefreshRequest = e.InlayHintResolveRequest = e.InlayHintRequest = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.method = "textDocument/inlayHint", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.InlayHintRequest = n = {}));
@@ -5739,9 +5739,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 	(function(e) {
 		e.method = "workspace/inlayHint/refresh", e.messageDirection = t.MessageDirection.serverToClient, e.type = new t.ProtocolRequestType0(e.method);
 	})(i || (e.InlayHintRefreshRequest = i = {}));
-})), yA = /* @__PURE__ */ r(((e) => {
+})), SA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.DiagnosticRefreshRequest = e.WorkspaceDiagnosticRequest = e.DocumentDiagnosticRequest = e.DocumentDiagnosticReportKind = e.DiagnosticServerCancellationData = void 0;
-	var t = yO(), n = eA(), r = $k(), i;
+	var t = SO(), n = rA(), r = nA(), i;
 	(function(e) {
 		function t(e) {
 			let t = e;
@@ -5765,9 +5765,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 	(function(e) {
 		e.method = "workspace/diagnostic/refresh", e.messageDirection = r.MessageDirection.serverToClient, e.type = new r.ProtocolRequestType0(e.method);
 	})(c || (e.DiagnosticRefreshRequest = c = {}));
-})), bA = /* @__PURE__ */ r(((t) => {
+})), CA = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.DidCloseNotebookDocumentNotification = t.DidSaveNotebookDocumentNotification = t.DidChangeNotebookDocumentNotification = t.NotebookCellArrayChange = t.DidOpenNotebookDocumentNotification = t.NotebookDocumentSyncRegistrationType = t.NotebookDocument = t.NotebookCell = t.ExecutionSummary = t.NotebookCellKind = void 0;
-	var n = (Qk(), e(xO)), r = eA(), i = $k(), a;
+	var n = (tA(), e(wO)), r = rA(), i = nA(), a;
 	(function(e) {
 		e.Markup = 1, e.Code = 2;
 		function t(e) {
@@ -5884,29 +5884,29 @@ var iO = /* @__PURE__ */ r(((e) => {
 	(function(e) {
 		e.method = "notebookDocument/didClose", e.messageDirection = i.MessageDirection.clientToServer, e.type = new i.ProtocolNotificationType(e.method), e.registrationMethod = l.method;
 	})(m || (t.DidCloseNotebookDocumentNotification = m = {}));
-})), xA = /* @__PURE__ */ r(((e) => {
+})), wA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.InlineCompletionRequest = void 0;
-	var t = $k(), n;
+	var t = nA(), n;
 	(function(e) {
 		e.method = "textDocument/inlineCompletion", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.InlineCompletionRequest = n = {}));
-})), SA = /* @__PURE__ */ r(((t) => {
+})), TA = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.WorkspaceSymbolRequest = t.CodeActionResolveRequest = t.CodeActionRequest = t.DocumentSymbolRequest = t.DocumentHighlightRequest = t.ReferencesRequest = t.DefinitionRequest = t.SignatureHelpRequest = t.SignatureHelpTriggerKind = t.HoverRequest = t.CompletionResolveRequest = t.CompletionRequest = t.CompletionTriggerKind = t.PublishDiagnosticsNotification = t.WatchKind = t.RelativePattern = t.FileChangeType = t.DidChangeWatchedFilesNotification = t.WillSaveTextDocumentWaitUntilRequest = t.WillSaveTextDocumentNotification = t.TextDocumentSaveReason = t.DidSaveTextDocumentNotification = t.DidCloseTextDocumentNotification = t.DidChangeTextDocumentNotification = t.TextDocumentContentChangeEvent = t.DidOpenTextDocumentNotification = t.TextDocumentSyncKind = t.TelemetryEventNotification = t.LogMessageNotification = t.ShowMessageRequest = t.ShowMessageNotification = t.MessageType = t.DidChangeConfigurationNotification = t.ExitNotification = t.ShutdownRequest = t.InitializedNotification = t.InitializeErrorCodes = t.InitializeRequest = t.WorkDoneProgressOptions = t.TextDocumentRegistrationOptions = t.StaticRegistrationOptions = t.PositionEncodingKind = t.FailureHandlingKind = t.ResourceOperationKind = t.UnregistrationRequest = t.RegistrationRequest = t.DocumentSelector = t.NotebookCellTextDocumentFilter = t.NotebookDocumentFilter = t.TextDocumentFilter = void 0, t.MonikerRequest = t.MonikerKind = t.UniquenessLevel = t.WillDeleteFilesRequest = t.DidDeleteFilesNotification = t.WillRenameFilesRequest = t.DidRenameFilesNotification = t.WillCreateFilesRequest = t.DidCreateFilesNotification = t.FileOperationPatternKind = t.LinkedEditingRangeRequest = t.ShowDocumentRequest = t.SemanticTokensRegistrationType = t.SemanticTokensRefreshRequest = t.SemanticTokensRangeRequest = t.SemanticTokensDeltaRequest = t.SemanticTokensRequest = t.TokenFormat = t.CallHierarchyPrepareRequest = t.CallHierarchyOutgoingCallsRequest = t.CallHierarchyIncomingCallsRequest = t.WorkDoneProgressCancelNotification = t.WorkDoneProgressCreateRequest = t.WorkDoneProgress = t.SelectionRangeRequest = t.DeclarationRequest = t.FoldingRangeRefreshRequest = t.FoldingRangeRequest = t.ColorPresentationRequest = t.DocumentColorRequest = t.ConfigurationRequest = t.DidChangeWorkspaceFoldersNotification = t.WorkspaceFoldersRequest = t.TypeDefinitionRequest = t.ImplementationRequest = t.ApplyWorkspaceEditRequest = t.ExecuteCommandRequest = t.PrepareRenameRequest = t.RenameRequest = t.PrepareSupportDefaultBehavior = t.DocumentOnTypeFormattingRequest = t.DocumentRangesFormattingRequest = t.DocumentRangeFormattingRequest = t.DocumentFormattingRequest = t.DocumentLinkResolveRequest = t.DocumentLinkRequest = t.CodeLensRefreshRequest = t.CodeLensResolveRequest = t.CodeLensRequest = t.WorkspaceSymbolResolveRequest = void 0, t.InlineCompletionRequest = t.DidCloseNotebookDocumentNotification = t.DidSaveNotebookDocumentNotification = t.DidChangeNotebookDocumentNotification = t.NotebookCellArrayChange = t.DidOpenNotebookDocumentNotification = t.NotebookDocumentSyncRegistrationType = t.NotebookDocument = t.NotebookCell = t.ExecutionSummary = t.NotebookCellKind = t.DiagnosticRefreshRequest = t.WorkspaceDiagnosticRequest = t.DocumentDiagnosticRequest = t.DocumentDiagnosticReportKind = t.DiagnosticServerCancellationData = t.InlayHintRefreshRequest = t.InlayHintResolveRequest = t.InlayHintRequest = t.InlineValueRefreshRequest = t.InlineValueRequest = t.TypeHierarchySupertypesRequest = t.TypeHierarchySubtypesRequest = t.TypeHierarchyPrepareRequest = void 0;
-	var n = $k(), r = (Qk(), e(xO)), i = eA(), a = tA();
+	var n = nA(), r = (tA(), e(wO)), i = rA(), a = iA();
 	Object.defineProperty(t, "ImplementationRequest", {
 		enumerable: !0,
 		get: function() {
 			return a.ImplementationRequest;
 		}
 	});
-	var o = nA();
+	var o = aA();
 	Object.defineProperty(t, "TypeDefinitionRequest", {
 		enumerable: !0,
 		get: function() {
 			return o.TypeDefinitionRequest;
 		}
 	});
-	var s = rA();
+	var s = oA();
 	Object.defineProperty(t, "WorkspaceFoldersRequest", {
 		enumerable: !0,
 		get: function() {
@@ -5918,14 +5918,14 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return s.DidChangeWorkspaceFoldersNotification;
 		}
 	});
-	var c = iA();
+	var c = sA();
 	Object.defineProperty(t, "ConfigurationRequest", {
 		enumerable: !0,
 		get: function() {
 			return c.ConfigurationRequest;
 		}
 	});
-	var l = aA();
+	var l = cA();
 	Object.defineProperty(t, "DocumentColorRequest", {
 		enumerable: !0,
 		get: function() {
@@ -5937,7 +5937,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return l.ColorPresentationRequest;
 		}
 	});
-	var u = oA();
+	var u = lA();
 	Object.defineProperty(t, "FoldingRangeRequest", {
 		enumerable: !0,
 		get: function() {
@@ -5949,21 +5949,21 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return u.FoldingRangeRefreshRequest;
 		}
 	});
-	var d = sA();
+	var d = uA();
 	Object.defineProperty(t, "DeclarationRequest", {
 		enumerable: !0,
 		get: function() {
 			return d.DeclarationRequest;
 		}
 	});
-	var f = cA();
+	var f = dA();
 	Object.defineProperty(t, "SelectionRangeRequest", {
 		enumerable: !0,
 		get: function() {
 			return f.SelectionRangeRequest;
 		}
 	});
-	var p = lA();
+	var p = fA();
 	Object.defineProperty(t, "WorkDoneProgress", {
 		enumerable: !0,
 		get: function() {
@@ -5980,7 +5980,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return p.WorkDoneProgressCancelNotification;
 		}
 	});
-	var m = uA();
+	var m = pA();
 	Object.defineProperty(t, "CallHierarchyIncomingCallsRequest", {
 		enumerable: !0,
 		get: function() {
@@ -5997,7 +5997,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return m.CallHierarchyPrepareRequest;
 		}
 	});
-	var h = dA();
+	var h = mA();
 	Object.defineProperty(t, "TokenFormat", {
 		enumerable: !0,
 		get: function() {
@@ -6029,21 +6029,21 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return h.SemanticTokensRegistrationType;
 		}
 	});
-	var g = fA();
+	var g = hA();
 	Object.defineProperty(t, "ShowDocumentRequest", {
 		enumerable: !0,
 		get: function() {
 			return g.ShowDocumentRequest;
 		}
 	});
-	var _ = pA();
+	var _ = gA();
 	Object.defineProperty(t, "LinkedEditingRangeRequest", {
 		enumerable: !0,
 		get: function() {
 			return _.LinkedEditingRangeRequest;
 		}
 	});
-	var v = mA();
+	var v = _A();
 	Object.defineProperty(t, "FileOperationPatternKind", {
 		enumerable: !0,
 		get: function() {
@@ -6080,7 +6080,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return v.WillDeleteFilesRequest;
 		}
 	});
-	var y = hA();
+	var y = vA();
 	Object.defineProperty(t, "UniquenessLevel", {
 		enumerable: !0,
 		get: function() {
@@ -6097,7 +6097,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return y.MonikerRequest;
 		}
 	});
-	var b = gA();
+	var b = yA();
 	Object.defineProperty(t, "TypeHierarchyPrepareRequest", {
 		enumerable: !0,
 		get: function() {
@@ -6114,7 +6114,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return b.TypeHierarchySupertypesRequest;
 		}
 	});
-	var ee = _A();
+	var ee = bA();
 	Object.defineProperty(t, "InlineValueRequest", {
 		enumerable: !0,
 		get: function() {
@@ -6126,7 +6126,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return ee.InlineValueRefreshRequest;
 		}
 	});
-	var x = vA();
+	var x = xA();
 	Object.defineProperty(t, "InlayHintRequest", {
 		enumerable: !0,
 		get: function() {
@@ -6143,7 +6143,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return x.InlayHintRefreshRequest;
 		}
 	});
-	var te = yA();
+	var te = SA();
 	Object.defineProperty(t, "DiagnosticServerCancellationData", {
 		enumerable: !0,
 		get: function() {
@@ -6170,7 +6170,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return te.DiagnosticRefreshRequest;
 		}
 	});
-	var S = bA();
+	var S = CA();
 	Object.defineProperty(t, "NotebookCellKind", {
 		enumerable: !0,
 		get: function() {
@@ -6222,7 +6222,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			return S.DidCloseNotebookDocumentNotification;
 		}
 	});
-	var ne = xA();
+	var ne = wA();
 	Object.defineProperty(t, "InlineCompletionRequest", {
 		enumerable: !0,
 		get: function() {
@@ -6536,14 +6536,14 @@ var iO = /* @__PURE__ */ r(((e) => {
 	(function(e) {
 		e.method = "workspace/applyEdit", e.messageDirection = n.MessageDirection.serverToClient, e.type = new n.ProtocolRequestType("workspace/applyEdit");
 	})(rt || (t.ApplyWorkspaceEditRequest = rt = {}));
-})), CA = /* @__PURE__ */ r(((e) => {
+})), EA = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.createProtocolConnection = void 0;
-	var t = yO();
+	var t = SO();
 	function n(e, n, r, i) {
 		return t.ConnectionStrategy.is(i) && (i = { connectionStrategy: i }), (0, t.createMessageConnection)(e, n, r, i);
 	}
 	e.createProtocolConnection = n;
-})), wA = /* @__PURE__ */ r(((t) => {
+})), DA = /* @__PURE__ */ r(((t) => {
 	var n = t && t.__createBinding || (Object.create ? (function(e, t, n, r) {
 		r === void 0 && (r = n);
 		var i = Object.getOwnPropertyDescriptor(t, n);
@@ -6558,8 +6558,8 @@ var iO = /* @__PURE__ */ r(((e) => {
 	})), r = t && t.__exportStar || function(e, t) {
 		for (var r in e) r !== "default" && !Object.prototype.hasOwnProperty.call(t, r) && n(t, e, r);
 	};
-	Object.defineProperty(t, "__esModule", { value: !0 }), t.LSPErrorCodes = t.createProtocolConnection = void 0, r(yO(), t), r((Qk(), e(xO)), t), r($k(), t), r(SA(), t);
-	var i = CA();
+	Object.defineProperty(t, "__esModule", { value: !0 }), t.LSPErrorCodes = t.createProtocolConnection = void 0, r(SO(), t), r((tA(), e(wO)), t), r(nA(), t), r(TA(), t);
+	var i = EA();
 	Object.defineProperty(t, "createProtocolConnection", {
 		enumerable: !0,
 		get: function() {
@@ -6570,7 +6570,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 	(function(e) {
 		e.lspReservedErrorRangeStart = -32899, e.RequestFailed = -32803, e.ServerCancelled = -32802, e.ContentModified = -32801, e.RequestCancelled = -32800, e.lspReservedErrorRangeEnd = -32800;
 	})(a || (t.LSPErrorCodes = a = {}));
-})), TA = /* @__PURE__ */ r(((e) => {
+})), OA = /* @__PURE__ */ r(((e) => {
 	var t = e && e.__createBinding || (Object.create ? (function(e, t, n, r) {
 		r === void 0 && (r = n);
 		var i = Object.getOwnPropertyDescriptor(t, n);
@@ -6586,18 +6586,18 @@ var iO = /* @__PURE__ */ r(((e) => {
 		for (var r in e) r !== "default" && !Object.prototype.hasOwnProperty.call(n, r) && t(n, e, r);
 	};
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.createProtocolConnection = void 0;
-	var r = bO();
-	n(bO(), e), n(wA(), e);
+	var r = CO();
+	n(CO(), e), n(DA(), e);
 	function i(e, t, n, i) {
 		return (0, r.createMessageConnection)(e, t, n, i);
 	}
 	e.createProtocolConnection = i;
-})), EA, DA = t((() => {
+})), kA, AA = t((() => {
 	(function(e) {
 		e[e.Complete = 100] = "Complete", e[e.Partial = 50] = "Partial", e[e.None = 0] = "None";
-	})(EA ||= {});
-})), OA, kA, AA = t((() => {
-	Ds(), Gn(), Ca(), E(), OA = class {
+	})(kA ||= {});
+})), jA, MA, NA = t((() => {
+	Ds(), Gn(), Ca(), E(), jA = class {
 		constructor() {
 			this._systemSchemes = new Set(Object.keys(Ma)), this._providerInfo = /* @__PURE__ */ new Map(), this.extUri = new Tr((e) => {
 				let t = this._providerInfo.get(e.scheme);
@@ -6613,9 +6613,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 		getCapabilities(e) {
 			return this._providerInfo.get(e);
 		}
-	}, kA = xl("IExtHostFileSystemInfo");
-})), jA, MA, NA, PA = t((() => {
-	b(), W(), Ca(), gv(), Pr(), E(), qh(), AA(), P(), S(), Gn(), Ds(), MA = jA = class {
+	}, MA = xl("IExtHostFileSystemInfo");
+})), PA, FA, IA, LA = t((() => {
+	b(), W(), Ca(), gv(), Pr(), E(), qh(), NA(), P(), S(), Gn(), Ds(), FA = PA = class {
 		constructor(e, t) {
 			this._fileSystemProvider = /* @__PURE__ */ new Map(), this._writeQueue = new oo(), this._proxy = e.getProxy(G.MainThreadFileSystem);
 			let n = this;
@@ -6631,7 +6631,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 							permissions: t.permissions === Qt.Readonly ? 1 : void 0
 						};
 					} catch (e) {
-						jA._handleError(e);
+						PA._handleError(e);
 					}
 				},
 				async readDirectory(e) {
@@ -6639,7 +6639,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 						let t = n._fileSystemProvider.get(e.scheme);
 						return t ? (await n._proxy.$ensureActivation(e.scheme), (await t.impl.readDirectory(e)).slice()) : await n._proxy.$readdir(e);
 					} catch (e) {
-						return jA._handleError(e);
+						return PA._handleError(e);
 					}
 				},
 				async createDirectory(e) {
@@ -6647,7 +6647,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 						let t = n._fileSystemProvider.get(e.scheme);
 						return t && !t.isReadonly ? (await n._proxy.$ensureActivation(e.scheme), await n.mkdirp(t.impl, t.extUri, e)) : await n._proxy.$mkdir(e);
 					} catch (e) {
-						return jA._handleError(e);
+						return PA._handleError(e);
 					}
 				},
 				async readFile(e) {
@@ -6655,7 +6655,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 						let t = n._fileSystemProvider.get(e.scheme);
 						return t ? (await n._proxy.$ensureActivation(e.scheme), (await t.impl.readFile(e)).slice()) : (await n._proxy.$readFile(e)).buffer;
 					} catch (e) {
-						return jA._handleError(e);
+						return PA._handleError(e);
 					}
 				},
 				async writeFile(e, t) {
@@ -6666,7 +6666,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 							overwrite: !0
 						})))) : await n._proxy.$writeFile(e, it.wrap(t));
 					} catch (e) {
-						return jA._handleError(e);
+						return PA._handleError(e);
 					}
 				},
 				async delete(e, t) {
@@ -6682,7 +6682,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 							...t
 						});
 					} catch (e) {
-						return jA._handleError(e);
+						return PA._handleError(e);
 					}
 				},
 				async rename(e, t, r) {
@@ -6692,7 +6692,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 							...r
 						});
 					} catch (e) {
-						return jA._handleError(e);
+						return PA._handleError(e);
 					}
 				},
 				async copy(e, t, r) {
@@ -6702,7 +6702,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 							...r
 						});
 					} catch (e) {
-						return jA._handleError(e);
+						return PA._handleError(e);
 					}
 				},
 				isWritableFileSystem(e) {
@@ -6762,9 +6762,9 @@ var iO = /* @__PURE__ */ r(((e) => {
 		getFileSystemProviderExtUri(e) {
 			return this._fileSystemProvider.get(e)?.extUri ?? Bs;
 		}
-	}, MA = jA = N([R(0, $x), R(1, kA)], MA), NA = xl("IExtHostConsumerFileSystem");
-})), FA, IA, LA, RA, zA = t((() => {
-	b(), W(), E(), qh(), wC(), pe(), Xr(), Af(), PA(), Pf(), AA(), Pr(), kt(), Ca(), $s(), P(), _r(), FA = class extends js {
+	}, FA = PA = N([R(0, $x), R(1, MA)], FA), IA = xl("IExtHostConsumerFileSystem");
+})), RA, zA, BA, VA, HA = t((() => {
+	b(), W(), E(), qh(), GC(), pe(), Xr(), Af(), LA(), Pf(), NA(), Pr(), kt(), Ca(), $s(), P(), _r(), RA = class extends js {
 		constructor(e, t, n, r, i) {
 			super(), this.id = e, this.name = t, this.logger = n, this.proxy = r, this.extension = i, this.offset = 0, this.visible = !1, this.setLevel(n.getLevel()), this._register(n.onDidChangeLogLevel((e) => this.setLevel(e))), this._register(g(() => this.proxy.$dispose(this.id)));
 		}
@@ -6794,11 +6794,11 @@ var iO = /* @__PURE__ */ r(((e) => {
 		log(e, t) {
 			this.offset += it.fromString(t).byteLength, pr(this.logger, e, t), this.visible && (this.logger.flush(), this.proxy.$update(this.id, Gh.Append));
 		}
-	}, IA = class extends FA {
+	}, zA = class extends RA {
 		appendLine(e) {
 			this.append(e);
 		}
-	}, LA = class {
+	}, BA = class {
 		constructor(e, t, n, r, i, a) {
 			this.initData = t, this.extHostFileSystem = n, this.extHostFileSystemInfo = r, this.loggerService = i, this.logService = a, this.extensionLogDirectoryCreationPromise = new qn(), this.logOutputChannels = new qn(), this.namePool = 1, this.channels = /* @__PURE__ */ new Map(), this.visibleChannelId = null, this.proxy = e.getProxy(G.MainThreadOutputService), this.outputsLocation = this.extHostFileSystemInfo.extUri.joinPath(t.logsLocation, `output_logging_${Ps(/* @__PURE__ */ new Date()).replace(/-|:|\.\d+Z$/g, "")}`);
 		}
@@ -6810,7 +6810,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 			if (e = e.trim(), !e) throw Error("illegal argument `name`. must not be falsy");
 			let r = typeof t == "object" && t.log, i = ga(t) ? t : void 0;
 			if (ga(i) && !i.trim()) throw Error("illegal argument `languageId`. must not be empty");
-			let a = new I(), o, s = this.initData.environment.extensionLogLevel?.find(([e]) => AC.equals(n.identifier, e))?.[1], c;
+			let a = new I(), o, s = this.initData.environment.extensionLogLevel?.find(([e]) => SC.equals(n.identifier, e))?.[1], c;
 			if (r) {
 				let t = this.extHostFileSystemInfo.extUri.joinPath(this.initData.logsLocation, n.identifier.value);
 				c = this.extHostFileSystemInfo.extUri.joinPath(t, `${e.replace(/[\\/:\*\?"<>\|]/g, "")}.log`);
@@ -6836,7 +6836,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 				donotUseFormatters: !0,
 				hidden: !0
 			})), s = await this.proxy.$register(e, a, t, n.identifier.value);
-			return r.add(g(() => this.loggerService.deregisterLogger(a))), new FA(s, e, o, this.proxy, n);
+			return r.add(g(() => this.loggerService.deregisterLogger(a))), new RA(s, e, o, this.proxy, n);
 		}
 		async doCreateLogOutputChannel(e, t, n, r, i) {
 			await this.createExtensionLogDirectory(t);
@@ -6846,7 +6846,7 @@ var iO = /* @__PURE__ */ r(((e) => {
 				logLevel: n,
 				extensionId: r.identifier.value
 			}));
-			return i.add(g(() => this.loggerService.deregisterLogger(t))), new IA(a, e, o, this.proxy, r);
+			return i.add(g(() => this.loggerService.deregisterLogger(t))), new zA(a, e, o, this.proxy, r);
 		}
 		createExtensionLogDirectory(e) {
 			let t = this.extHostFileSystemInfo.extUri.dirname(e), n = this.extensionLogDirectoryCreationPromise.get(t);
@@ -6921,16 +6921,16 @@ var iO = /* @__PURE__ */ r(((e) => {
 				}
 			};
 		}
-	}, LA = N([
+	}, BA = N([
 		R(0, $x),
 		R(1, Kf),
-		R(2, NA),
-		R(3, kA),
+		R(2, IA),
+		R(3, MA),
 		R(4, ai),
 		R(5, Ct)
-	], LA), RA = xl("IExtHostOutputService");
-})), BA, VA, HA = t((() => {
-	E(), BA = xl("IURITransformerService"), VA = class {
+	], BA), VA = xl("IExtHostOutputService");
+})), UA, WA, GA = t((() => {
+	E(), UA = xl("IURITransformerService"), WA = class {
 		constructor(e) {
 			e ? (this.transformIncoming = e.transformIncoming.bind(e), this.transformOutgoing = e.transformOutgoing.bind(e), this.transformOutgoingURI = e.transformOutgoingURI.bind(e), this.transformOutgoingScheme = e.transformOutgoingScheme.bind(e)) : (this.transformIncoming = (e) => e, this.transformOutgoing = (e) => e, this.transformOutgoingURI = (e) => e, this.transformOutgoingScheme = (e) => e);
 		}
@@ -6938,37 +6938,37 @@ var iO = /* @__PURE__ */ r(((e) => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostWorkspace.js
-function UA(e, t, n) {
-	return new Tr((e) => qA(e, n)).isEqual(e, t);
+function KA(e, t, n) {
+	return new Tr((e) => XA(e, n)).isEqual(e, t);
 }
-function WA(e, t, n) {
-	return UA(e.uri, t.uri, n) ? 0 : ot(e.uri.toString(), t.uri.toString());
+function qA(e, t, n) {
+	return KA(e.uri, t.uri, n) ? 0 : ot(e.uri.toString(), t.uri.toString());
 }
-function GA(e, t, n) {
-	return e.index === t.index ? UA(e.uri, t.uri, n) ? ot(e.name, t.name) : ot(e.uri.toString(), t.uri.toString()) : e.index < t.index ? -1 : 1;
+function JA(e, t, n) {
+	return e.index === t.index ? KA(e.uri, t.uri, n) ? ot(e.name, t.name) : ot(e.uri.toString(), t.uri.toString()) : e.index < t.index ? -1 : 1;
 }
-function KA(e, t, n, r) {
+function YA(e, t, n, r) {
 	return we(e.slice(0).sort((e, t) => n(e, t, r)), t.slice(0).sort((e, t) => n(e, t, r)), (e, t) => n(e, t, r));
 }
-function qA(e, t) {
+function XA(e, t) {
 	let n = t.getCapabilities(e.scheme);
 	return !(n && n & un.PathCaseSensitive);
 }
-function JA(e) {
+function ZA(e) {
 	let t, n;
 	if (e) return typeof e == "string" ? t = e : (t = e.pattern, n = H.revive(e.baseUri)), {
 		pattern: t,
 		folder: n
 	};
 }
-function YA(e) {
+function QA(e) {
 	return (e?.map((e) => {
 		if (typeof e == "string") return e === "" ? void 0 : {
 			pattern: e,
 			uri: void 0
 		};
 		{
-			let t = JA(e);
+			let t = ZA(e);
 			return t ? {
 				pattern: t.pattern,
 				uri: t.folder
@@ -6976,8 +6976,8 @@ function YA(e) {
 		}
 	}) ?? []).filter((e) => !!e);
 }
-var XA, ZA, QA, $A = t((() => {
-	b(), An(), S(), $s(), P(), Ds(), Gn(), c(), U(), fr(), Ca(), E(), Xr(), AA(), Pf(), qh(), wm(), gv(), HA(), kp(), W(), Uo(), zg(), Pr(), PC(), fw(), gm(), XA = class e extends Ea {
+var $A, ej, tj, nj = t((() => {
+	b(), An(), S(), $s(), P(), Ds(), Gn(), c(), U(), fr(), Ca(), E(), Xr(), NA(), Pf(), qh(), wm(), gv(), GA(), kp(), W(), Uo(), zg(), Pr(), CC(), hw(), gm(), $A = class e extends Ea {
 		static toExtHostWorkspace(t, n, r, i) {
 			if (!t) return {
 				workspace: null,
@@ -6997,7 +6997,7 @@ var XA, ZA, QA, $A = t((() => {
 				name: t,
 				index: n
 			}))), d.sort((e, t) => e.index < t.index ? -1 : 1);
-			let p = new e(a, o, d, !!l, c ? H.revive(c) : null, !!u, (e) => qA(e, i)), { added: m, removed: h } = KA(f ? f.workspaceFolders : [], p.workspaceFolders, WA, i);
+			let p = new e(a, o, d, !!l, c ? H.revive(c) : null, !!u, (e) => XA(e, i)), { added: m, removed: h } = YA(f ? f.workspaceFolders : [], p.workspaceFolders, qA, i);
 			return {
 				workspace: p,
 				added: m,
@@ -7007,7 +7007,7 @@ var XA, ZA, QA, $A = t((() => {
 		static _findFolder(e, t, n) {
 			for (let r = 0; r < e.folders.length; r++) {
 				let i = e.workspaceFolders[r];
-				if (UA(i.uri, t, n)) return i;
+				if (KA(i.uri, t, n)) return i;
 			}
 		}
 		constructor(e, t, n, r, i, a, o) {
@@ -7030,11 +7030,11 @@ var XA, ZA, QA, $A = t((() => {
 		resolveWorkspaceFolder(e) {
 			return this._structure.get(e);
 		}
-	}, ZA = class {
+	}, ej = class {
 		constructor(e, t, n, r, i) {
 			this._onDidChangeWorkspace = new V(), this.onDidChangeWorkspace = this._onDidChangeWorkspace.event, this._onDidGrantWorkspaceTrust = new V(), this.onDidGrantWorkspaceTrust = this._onDidGrantWorkspaceTrust.event, this._activeSearchCallbacks = [], this._trusted = !1, this._editSessionIdentityProviders = /* @__PURE__ */ new Map(), this._providerHandlePool = 0, this._onWillCreateEditSessionIdentityEvent = new Hn(), this._canonicalUriProviders = /* @__PURE__ */ new Map(), this._logService = r, this._extHostFileSystemInfo = n, this._uriTransformerService = i, this._requestIdProvider = new pn(), this._barrier = new Cs(), this._proxy = e.getProxy(G.MainThreadWorkspace), this._messageService = e.getProxy(G.MainThreadMessageService);
 			let a = t.workspace;
-			this._confirmedWorkspace = a ? new XA(a.id, a.name, [], !!a.transient, a.configuration ? H.revive(a.configuration) : null, !!a.isUntitled, (e) => qA(e, n)) : void 0;
+			this._confirmedWorkspace = a ? new $A(a.id, a.name, [], !!a.transient, a.configuration ? H.revive(a.configuration) : null, !!a.isUntitled, (e) => XA(e, n)) : void 0;
 		}
 		$initializeWorkspace(e, t) {
 			this._trusted = t, this.$acceptWorkspaceData(e), this._barrier.open();
@@ -7066,7 +7066,7 @@ var XA, ZA, QA, $A = t((() => {
 		updateWorkspaceFolders(e, t, n, ...r) {
 			let i = [];
 			if (Array.isArray(r) && r.forEach((e) => {
-				H.isUri(e.uri) && !i.some((t) => UA(t.uri, e.uri, this._extHostFileSystemInfo)) && i.push({
+				H.isUri(e.uri) && !i.some((t) => KA(t.uri, e.uri, this._extHostFileSystemInfo)) && i.push({
 					uri: e.uri,
 					name: e.name || Je(e.uri)
 				});
@@ -7081,10 +7081,10 @@ var XA, ZA, QA, $A = t((() => {
 			})));
 			for (let e = 0; e < o.length; e++) {
 				let t = o[e];
-				if (o.some((n, r) => r !== e && UA(t.uri, n.uri, this._extHostFileSystemInfo))) return !1;
+				if (o.some((n, r) => r !== e && KA(t.uri, n.uri, this._extHostFileSystemInfo))) return !1;
 			}
 			o.forEach((e, t) => e.index = t);
-			let { added: s, removed: c } = KA(a, o, GA, this._extHostFileSystemInfo);
+			let { added: s, removed: c } = YA(a, o, JA, this._extHostFileSystemInfo);
 			if (s.length === 0 && c.length === 0) return !1;
 			if (this._proxy) {
 				let r = e.displayName || e.name;
@@ -7123,7 +7123,7 @@ var XA, ZA, QA, $A = t((() => {
 			return t && i.name && (a = `${i.name}/${a}`), a;
 		}
 		trySetWorkspaceFolders(e) {
-			this._actualWorkspace && (this._unconfirmedWorkspace = XA.toExtHostWorkspace({
+			this._actualWorkspace && (this._unconfirmedWorkspace = $A.toExtHostWorkspace({
 				id: this._actualWorkspace.id,
 				name: this._actualWorkspace.name,
 				configuration: this._actualWorkspace.configuration,
@@ -7132,7 +7132,7 @@ var XA, ZA, QA, $A = t((() => {
 			}, this._actualWorkspace, void 0, this._extHostFileSystemInfo).workspace || void 0);
 		}
 		$acceptWorkspaceData(e) {
-			let { workspace: t, added: n, removed: r } = XA.toExtHostWorkspace(e, this._confirmedWorkspace, this._unconfirmedWorkspace, this._extHostFileSystemInfo);
+			let { workspace: t, added: n, removed: r } = $A.toExtHostWorkspace(e, this._confirmedWorkspace, this._unconfirmedWorkspace, this._extHostFileSystemInfo);
 			this._confirmedWorkspace = t || void 0, this._unconfirmedWorkspace = void 0, this._onDidChangeWorkspace.fire(Object.freeze({
 				added: n,
 				removed: r
@@ -7162,7 +7162,7 @@ var XA, ZA, QA, $A = t((() => {
 			let r = e.type === "include" ? [e.value] : e.value ?? [];
 			if (!Array.isArray(r)) throw console.error("Invalid file pattern provided", r), Error(`Invalid file pattern provided ${JSON.stringify(r)}`);
 			let i = r.map((n) => {
-				let r = YA(t.exclude), i = {
+				let r = QA(t.exclude), i = {
 					ignoreSymlinks: typeof t.followSymlinks == "boolean" ? !t.followSymlinks : void 0,
 					disregardIgnoreFiles: typeof t.useIgnoreFiles?.local == "boolean" ? !t.useIgnoreFiles.local : void 0,
 					disregardGlobalIgnoreFiles: typeof t.useIgnoreFiles?.global == "boolean" ? !t.useIgnoreFiles.global : void 0,
@@ -7173,7 +7173,7 @@ var XA, ZA, QA, $A = t((() => {
 					excludePattern: r.length > 0 ? r : void 0,
 					_reason: "startFileSearch",
 					shouldGlobSearch: e.type !== "include" || void 0
-				}, a = JA(Mm.from(n)), o = a?.folder;
+				}, a = ZA(Mm.from(n)), o = a?.folder;
 				return e.type === "include" ? i.includePattern = a?.pattern : i.filePattern = a?.pattern, {
 					folder: o,
 					options: i
@@ -7182,7 +7182,7 @@ var XA, ZA, QA, $A = t((() => {
 			return this._findFilesBase(i, n);
 		}
 		async _findFilesBase(e, t) {
-			let n = (await Promise.all(e?.map((e) => this._proxy.$startFileSearch(e.folder ?? null, e.options, t).then((e) => Array.isArray(e) ? e.map((e) => H.revive(e)) : [])) ?? [])).flat(), r = new Tr((e) => qA(e, this._extHostFileSystemInfo)), i = /* @__PURE__ */ new Map();
+			let n = (await Promise.all(e?.map((e) => this._proxy.$startFileSearch(e.folder ?? null, e.options, t).then((e) => Array.isArray(e) ? e.map((e) => H.revive(e)) : [])) ?? [])).flat(), r = new Tr((e) => XA(e, this._extHostFileSystemInfo)), i = /* @__PURE__ */ new Map();
 			for (let e of n) {
 				let t = r.getComparisonKey(e);
 				i.has(t) || i.set(t, e);
@@ -7196,7 +7196,7 @@ var XA, ZA, QA, $A = t((() => {
 					folder: void 0,
 					options: {}
 				};
-				let n = e ? JA(Mm.from(e)) : void 0, r = t.exclude ? YA(t.exclude) : void 0;
+				let n = e ? ZA(Mm.from(e)) : void 0, r = t.exclude ? QA(t.exclude) : void 0;
 				return {
 					options: {
 						ignoreSymlinks: typeof t.followSymlinks == "boolean" ? !t.followSymlinks : void 0,
@@ -7260,7 +7260,7 @@ var XA, ZA, QA, $A = t((() => {
 			let a = t.previewOptions === void 0 ? {
 				matchLines: 100,
 				charsPerLine: 1e4
-			} : t.previewOptions, o = JA(Mm.from(t.include)), s = typeof t.exclude == "string" ? t.exclude : t.exclude ? t.exclude.pattern : void 0, c = {
+			} : t.previewOptions, o = ZA(Mm.from(t.include)), s = typeof t.exclude == "string" ? t.exclude : t.exclude ? t.exclude.pattern : void 0, c = {
 				ignoreSymlinks: typeof t.followSymlinks == "boolean" ? !t.followSymlinks : void 0,
 				disregardIgnoreFiles: typeof t.useIgnoreFiles == "boolean" ? !t.useIgnoreFiles : void 0,
 				disregardGlobalIgnoreFiles: typeof t.useGlobalIgnoreFiles == "boolean" ? !t.useGlobalIgnoreFiles : void 0,
@@ -7395,7 +7395,7 @@ var XA, ZA, QA, $A = t((() => {
 			return this.provideCanonicalUri(H.revive(e), { targetScheme: t }, n);
 		}
 		async decode(e, t) {
-			let [n, r] = this.toEncodeDecodeParameters(t), i = await this._proxy.$resolveDecoding(n, r), a = (await jC(Jn(it.wrap(e)), {
+			let [n, r] = this.toEncodeDecodeParameters(t), i = await this._proxy.$resolveDecoding(n, r), a = (await mC(Jn(it.wrap(e)), {
 				...i,
 				acceptTextOnly: !0,
 				overwriteEncoding: (e) => e === null || e === i.preferredEncoding ? Promise.resolve(i.preferredEncoding) : this._proxy.$validateDetectedEncoding(n, e, r)
@@ -7404,23 +7404,23 @@ var XA, ZA, QA, $A = t((() => {
 		}
 		async encode(e, t) {
 			let [n, r] = this.toEncodeDecodeParameters(t), { encoding: i, addBOM: a } = await this._proxy.$resolveEncoding(n, r);
-			return i === "utf8" && !a ? it.fromString(e).buffer : Tt(await EC(cw(e), i, { addBOM: a })).buffer;
+			return i === "utf8" && !a ? it.fromString(e).buffer : Tt(await VC(dw(e), i, { addBOM: a })).buffer;
 		}
 		toEncodeDecodeParameters(e) {
 			let t = Mi(e?.uri) ? e.uri : void 0, n = typeof e?.encoding == "string" ? e.encoding : void 0;
 			return [t, n ? { encoding: n } : void 0];
 		}
-	}, ZA = N([
+	}, ej = N([
 		R(0, $x),
 		R(1, Kf),
-		R(2, kA),
+		R(2, MA),
 		R(3, Ct),
-		R(4, BA)
-	], ZA), QA = xl("IExtHostWorkspace");
-})), ej, tj, nj, rj = t((() => {
-	b(), U(), W(), gv(), E(), qh(), Xr(), An(), c(), kw(), tj = class {
+		R(4, UA)
+	], ej), tj = xl("IExtHostWorkspace");
+})), rj, ij, aj, oj = t((() => {
+	b(), U(), W(), gv(), E(), qh(), Xr(), An(), c(), Mw(), ij = class {
 		static {
-			ej = this;
+			rj = this;
 		}
 		static {
 			this._handlePool = 0;
@@ -7432,7 +7432,7 @@ var XA, ZA, QA, $A = t((() => {
 			this._logService = t, this._provider = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(G.MainThreadDecorations);
 		}
 		registerFileDecorationProvider(e, t) {
-			let n = ej._handlePool++;
+			let n = rj._handlePool++;
 			this._provider.set(n, {
 				provider: e,
 				extensionDescription: t
@@ -7443,7 +7443,7 @@ var XA, ZA, QA, $A = t((() => {
 					return;
 				}
 				let r = Ha(e);
-				if (r.length <= ej._maxEventSize) {
+				if (r.length <= rj._maxEventSize) {
 					this._proxy.$onDidChange(n, r);
 					return;
 				}
@@ -7456,7 +7456,7 @@ var XA, ZA, QA, $A = t((() => {
 					let t;
 					for (let n of e) {
 						let e = nr(n.uri.path);
-						if (t !== e && (t = e, a.push(n.uri) >= ej._maxEventSize)) break outer;
+						if (t !== e && (t = e, a.push(n.uri) >= rj._maxEventSize)) break outer;
 					}
 				}
 				this._proxy.$onDidChange(n, a);
@@ -7487,41 +7487,41 @@ var XA, ZA, QA, $A = t((() => {
 				}
 			})), r;
 		}
-	}, tj = ej = N([R(0, $x), R(1, Ct)], tj), nj = xl("IExtHostDecorations");
+	}, ij = rj = N([R(0, $x), R(1, Ct)], ij), aj = xl("IExtHostDecorations");
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostConfiguration.js
-function ij(e, t) {
+function sj(e, t) {
 	if (t) {
 		let n = t.split("."), r = e;
 		for (let e = 0; r && e < n.length; e++) r = r[n[e]];
 		return r;
 	}
 }
-function aj(e) {
+function cj(e) {
 	return e instanceof H;
 }
-function oj(e) {
+function lj(e) {
 	return u(e) && e.uri instanceof H && !!e.languageId && typeof e.languageId == "string";
 }
-function sj(e) {
+function uj(e) {
 	return u(e) && !e.uri && !!e.languageId && typeof e.languageId == "string";
 }
-function cj(e) {
+function dj(e) {
 	return u(e) && e.uri instanceof H && (!e.name || typeof e.name == "string") && (!e.index || typeof e.index == "number");
 }
-function lj(e) {
-	if (aj(e)) return { resource: e };
-	if (oj(e)) return {
+function fj(e) {
+	if (cj(e)) return { resource: e };
+	if (lj(e)) return {
 		resource: e.uri,
 		overrideIdentifier: e.languageId
 	};
-	if (sj(e)) return { overrideIdentifier: e.languageId };
-	if (cj(e)) return { resource: e.uri };
+	if (uj(e)) return { overrideIdentifier: e.languageId };
+	if (dj(e)) return { resource: e.uri };
 	if (e === null) return { resource: null };
 }
-var uj, dj, fj, pj = t((() => {
-	b(), zt(), $s(), $A(), W(), gv(), kt(), S(), E(), qh(), Xr(), U(), uj = class {
+var pj, mj, hj, gj = t((() => {
+	b(), zt(), $s(), nj(), W(), gv(), kt(), S(), E(), qh(), Xr(), U(), pj = class {
 		constructor(e, t, n) {
 			this._proxy = e.getProxy(G.MainThreadConfiguration), this._extHostWorkspace = t, this._logService = n, this._barrier = new Cs(), this._actual = null;
 		}
@@ -7529,16 +7529,16 @@ var uj, dj, fj, pj = t((() => {
 			return this._barrier.wait().then((e) => this._actual);
 		}
 		$initializeConfiguration(e) {
-			this._actual = new dj(this._proxy, this._extHostWorkspace, e, this._logService), this._barrier.open();
+			this._actual = new mj(this._proxy, this._extHostWorkspace, e, this._logService), this._barrier.open();
 		}
 		$acceptConfigurationChanged(e, t) {
 			this.getConfigProvider().then((n) => n.$acceptConfigurationChanged(e, t));
 		}
-	}, uj = N([
+	}, pj = N([
 		R(0, $x),
-		R(1, QA),
+		R(1, tj),
 		R(2, Ct)
-	], uj), dj = class {
+	], pj), mj = class {
 		constructor(e, t, n, r) {
 			this._onDidChangeConfiguration = new V(), this._proxy = e, this._logService = r, this._extHostWorkspace = t, this._configuration = xs.parse(n, r), this._configurationScopes = this._toMap(n.configurationScopes);
 		}
@@ -7553,7 +7553,7 @@ var uj, dj, fj, pj = t((() => {
 			this._configuration = xs.parse(e, this._logService), this._configurationScopes = this._toMap(e.configurationScopes), this._onDidChangeConfiguration.fire(this._toConfigurationChangeEvent(t, n));
 		}
 		getConfiguration(e, t, n) {
-			let r = lj(t) || {}, i = this._toReadonlyValue(this._configuration.getValue(e, r, this._extHostWorkspace.workspace));
+			let r = fj(t) || {}, i = this._toReadonlyValue(this._configuration.getValue(e, r, this._extHostWorkspace.workspace));
 			e && this._validateConfigurationAccess(e, r, n?.identifier);
 			function a(e) {
 				if (e == null) return null;
@@ -7566,22 +7566,22 @@ var uj, dj, fj, pj = t((() => {
 			}
 			let o = {
 				has(e) {
-					return ij(i, e) !== void 0;
+					return sj(i, e) !== void 0;
 				},
 				get: (t, a) => {
 					this._validateConfigurationAccess(e ? `${e}.${t}` : t, r, n?.identifier);
-					let o = ij(i, t);
+					let o = sj(i, t);
 					if (o === void 0) o = a;
 					else {
 						let e, n = (t, r) => {
 							if (u(t)) {
 								let a, o = () => {
-									e ||= Yt(i), a ||= ij(e, r);
+									e ||= Yt(i), a ||= sj(e, r);
 								};
 								return new Proxy(t, {
 									get: (t, i) => {
 										if (typeof i == "string" && i.toLowerCase() === "tojson") return o(), () => a;
-										if (e) return a ||= ij(e, r), a[i];
+										if (e) return a ||= sj(e, r), a[i];
 										let s = t[i];
 										return typeof i == "string" ? n(s, `${r}.${i}`) : s;
 									},
@@ -7657,14 +7657,14 @@ var uj, dj, fj, pj = t((() => {
 		}
 		_toConfigurationChangeEvent(e, t) {
 			let n = new sc(e, t, this._configuration, this._extHostWorkspace.workspace, this._logService);
-			return Object.freeze({ affectsConfiguration: (e, t) => n.affectsConfiguration(e, lj(t)) });
+			return Object.freeze({ affectsConfiguration: (e, t) => n.affectsConfiguration(e, fj(t)) });
 		}
 		_toMap(e) {
 			return e.reduce((e, t) => (e.set(t[0], t[1]), e), /* @__PURE__ */ new Map());
 		}
-	}, fj = xl("IExtHostConfiguration");
-})), mj, hj, gj, _j, vj, yj, bj, xj, Sj, Cj, wj = t((() => {
-	U(), Qa(), Tb(), tm(), Ex(), dg(), wm(), mj = (e, t, n, r) => {
+	}, hj = xl("IExtHostConfiguration");
+})), _j, vj, yj, bj, xj, Sj, Cj, wj, Tj, Ej, Dj = t((() => {
+	U(), Qa(), Tb(), tm(), Ex(), dg(), wm(), _j = (e, t, n, r) => {
 		let i = t;
 		return {
 			enumerable: !0,
@@ -7679,21 +7679,21 @@ var uj, dj, fj, pj = t((() => {
 				}
 			}
 		};
-	}, hj = (e, t) => e === t, gj = {
+	}, vj = (e, t) => e === t, yj = {
 		range: (e, t) => e === t ? !0 : !e || !t ? !1 : e.isEqual(t),
-		label: hj,
-		description: hj,
-		sortText: hj,
-		busy: hj,
-		error: hj,
-		canResolveChildren: hj,
+		label: vj,
+		description: vj,
+		sortText: vj,
+		busy: vj,
+		error: vj,
+		canResolveChildren: vj,
 		tags: (e, t) => !(e.length !== t.length || e.some((e) => !t.find((t) => e.id === t.id)))
-	}, _j = (e) => (t) => ({
+	}, bj = (e) => (t) => ({
 		op: pm.SetProp,
 		update: e(t)
-	}), vj = (e, t) => ({
+	}), xj = (e, t) => ({
 		range: (() => {
-			let t, n = _j((e) => ({ range: Jo.lift(q.from(e)) }));
+			let t, n = bj((e) => ({ range: Jo.lift(q.from(e)) }));
 			return {
 				enumerable: !0,
 				configurable: !1,
@@ -7701,35 +7701,35 @@ var uj, dj, fj, pj = t((() => {
 					return t;
 				},
 				set(r) {
-					e.listener?.({ op: pm.DocumentSynced }), gj.range(t, r) || (t = r, e.listener?.(n(r)));
+					e.listener?.({ op: pm.DocumentSynced }), yj.range(t, r) || (t = r, e.listener?.(n(r)));
 				}
 			};
 		})(),
-		label: mj(e, t, gj.label, _j((e) => ({ label: e }))),
-		description: mj(e, void 0, gj.description, _j((e) => ({ description: e }))),
-		sortText: mj(e, void 0, gj.sortText, _j((e) => ({ sortText: e }))),
-		canResolveChildren: mj(e, !1, gj.canResolveChildren, (e) => ({
+		label: _j(e, t, yj.label, bj((e) => ({ label: e }))),
+		description: _j(e, void 0, yj.description, bj((e) => ({ description: e }))),
+		sortText: _j(e, void 0, yj.sortText, bj((e) => ({ sortText: e }))),
+		canResolveChildren: _j(e, !1, yj.canResolveChildren, (e) => ({
 			op: pm.UpdateCanResolveChildren,
 			state: e
 		})),
-		busy: mj(e, !1, gj.busy, _j((e) => ({ busy: e }))),
-		error: mj(e, void 0, gj.error, _j((e) => ({ error: dm.fromStrict(e) || null }))),
-		tags: mj(e, [], gj.tags, (e, t) => ({
+		busy: _j(e, !1, yj.busy, bj((e) => ({ busy: e }))),
+		error: _j(e, void 0, yj.error, bj((e) => ({ error: dm.fromStrict(e) || null }))),
+		tags: _j(e, [], yj.tags, (e, t) => ({
 			op: pm.SetTags,
 			new: e.map(tg.from),
 			old: t.map(tg.from)
 		}))
-	}), yj = (e) => {
-		let t = ax.fromString(e.extId), n = new xj(t.controllerId, t.localId, e.label, H.revive(e.uri) || void 0);
+	}), Sj = (e) => {
+		let t = ax.fromString(e.extId), n = new wj(t.controllerId, t.localId, e.label, H.revive(e.uri) || void 0);
 		return n.range = q.to(e.range || void 0), n.description = e.description || void 0, n.sortText = e.sortText || void 0, n.tags = e.tags.map((e) => tg.to({ id: Sv(e).tagId })), n;
-	}, bj = (e) => {
+	}, Cj = (e) => {
 		let t;
 		for (let n of e.tests) {
-			let e = yj(n.item);
+			let e = Sj(n.item);
 			Np(e).parent = t, t = e;
 		}
 		return t;
-	}, xj = class e {
+	}, wj = class e {
 		constructor(t, n, r, i) {
 			if (n.includes(hy.Delimiter)) throw Error(`Test IDs may not include the ${JSON.stringify(n)} symbol`);
 			let a = xg(this, t);
@@ -7747,7 +7747,7 @@ var uj, dj, fj, pj = t((() => {
 				parent: {
 					enumerable: !1,
 					get() {
-						return a.parent instanceof Sj ? void 0 : a.parent;
+						return a.parent instanceof Tj ? void 0 : a.parent;
 					}
 				},
 				children: {
@@ -7755,21 +7755,21 @@ var uj, dj, fj, pj = t((() => {
 					enumerable: !0,
 					writable: !1
 				},
-				...vj(a, r)
+				...xj(a, r)
 			});
 		}
-	}, Sj = class extends xj {
+	}, Tj = class extends wj {
 		constructor(e, t) {
 			super(e, e, t, void 0), this._isRoot = !0;
 		}
-	}, Cj = class extends Sp {
+	}, Ej = class extends Sp {
 		constructor(e, t, n) {
 			super({
 				controllerId: e,
 				getDocumentVersion: (e) => e && n.getDocument(e)?.version,
 				getApiFor: Np,
 				getChildren: (e) => e.children,
-				root: new Sj(e, t),
+				root: new Tj(e, t),
 				toITestItem: K_.from
 			});
 		}
@@ -7777,12 +7777,12 @@ var uj, dj, fj, pj = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostTelemetry.js
-function Tj(e) {
+function Oj(e) {
 	let t = Date.now() - new Date(e).getTime();
 	return !isNaN(t) && t < 1e3 * 60 * 60 * 24;
 }
-var Ej, Dj, Oj, kj = t((() => {
-	b(), E(), $s(), Xr(), Pf(), Xh(), Hw(), zt(), P(), fr(), Ej = class extends z {
+var kj, Aj, jj, Mj = t((() => {
+	b(), E(), $s(), Xr(), Pf(), Xh(), Gw(), zt(), P(), fr(), kj = class extends z {
 		constructor(e, t, n) {
 			super(), this.initData = t, this._onDidChangeTelemetryEnabled = this._register(new V()), this.onDidChangeTelemetryEnabled = this._onDidChangeTelemetryEnabled.event, this._onDidChangeTelemetryConfiguration = this._register(new V()), this.onDidChangeTelemetryConfiguration = this._onDidChangeTelemetryConfiguration.event, this._productConfig = {
 				usage: !0,
@@ -7792,7 +7792,7 @@ var Ej, Dj, Oj, kj = t((() => {
 			this._outputLogger = this._register(n.createLogger(r, {
 				name: M(2702, "Extension Telemetry{0}", this._inLoggingOnlyMode ? " (Not Sent)" : ""),
 				hidden: !0,
-				group: Nw
+				group: Iw
 			}));
 		}
 		getTelemetryConfiguration() {
@@ -7806,7 +7806,7 @@ var Ej, Dj, Oj, kj = t((() => {
 			};
 		}
 		instantiateLogger(e, t, n) {
-			let r = this.getTelemetryDetails(), i = new Dj(t, n, e, this._outputLogger, this._inLoggingOnlyMode, this.getBuiltInCommonProperties(e), {
+			let r = this.getTelemetryDetails(), i = new Aj(t, n, e, this._outputLogger, this._inLoggingOnlyMode, this.getBuiltInCommonProperties(e), {
 				isUsageEnabled: r.isUsageEnabled,
 				isErrorsEnabled: r.isErrorsEnabled
 			}), a = this._telemetryLoggers.get(e.identifier.value) ?? [];
@@ -7820,7 +7820,7 @@ var Ej, Dj, Oj, kj = t((() => {
 		}
 		getBuiltInCommonProperties(e) {
 			let t = Object.create(null);
-			switch (t["common.extname"] = `${e.publisher}.${e.name}`, t["common.extversion"] = e.version, t["common.vscodemachineid"] = this.initData.telemetryInfo.machineId, t["common.vscodesessionid"] = this.initData.telemetryInfo.sessionId, t["common.vscodecommithash"] = this.initData.commit, t["common.sqmid"] = this.initData.telemetryInfo.sqmId, t["common.devDeviceId"] = this.initData.telemetryInfo.devDeviceId ?? this.initData.telemetryInfo.machineId, t["common.vscodeversion"] = this.initData.version, t["common.vscodereleasedate"] = this.initData.date, t["common.isnewappinstall"] = Tj(this.initData.telemetryInfo.firstSessionDate), t["common.product"] = this.initData.environment.appHost, this.initData.uiKind) {
+			switch (t["common.extname"] = `${e.publisher}.${e.name}`, t["common.extversion"] = e.version, t["common.vscodemachineid"] = this.initData.telemetryInfo.machineId, t["common.vscodesessionid"] = this.initData.telemetryInfo.sessionId, t["common.vscodecommithash"] = this.initData.commit, t["common.sqmid"] = this.initData.telemetryInfo.sqmId, t["common.devDeviceId"] = this.initData.telemetryInfo.devDeviceId ?? this.initData.telemetryInfo.machineId, t["common.vscodeversion"] = this.initData.version, t["common.vscodereleasedate"] = this.initData.date, t["common.isnewappinstall"] = Oj(this.initData.telemetryInfo.firstSessionDate), t["common.product"] = this.initData.environment.appHost, this.initData.uiKind) {
 				case nS.Web:
 					t["common.uikind"] = "web";
 					break;
@@ -7829,7 +7829,7 @@ var Ej, Dj, Oj, kj = t((() => {
 					break;
 				default: t["common.uikind"] = "unknown";
 			}
-			return t["common.remotename"] = Lw(this.initData.remote.authority, this.initData), t;
+			return t["common.remotename"] = Bw(this.initData.remote.authority, this.initData), t;
 		}
 		$onDidChangeTelemetryLevel(e) {
 			this._oldTelemetryEnablement = this.getTelemetryConfiguration(), this._level = e;
@@ -7848,7 +7848,7 @@ var Ej, Dj, Oj, kj = t((() => {
 			for (let e of n) e.ignoreUnhandledExtHostErrors || (e.logError(t), r = !0);
 			return r;
 		}
-	}, Ej = N([R(1, Kf), R(2, ai)], Ej), Dj = class {
+	}, kj = N([R(1, Kf), R(2, ai)], kj), Aj = class {
 		static validateSender(e) {
 			if (typeof e != "object") throw TypeError("TelemetrySender argument is invalid");
 			if (typeof e.sendEventData != "function") throw TypeError("TelemetrySender.sendEventData must be a function");
@@ -7869,7 +7869,7 @@ var Ej, Dj, Oj, kj = t((() => {
 		}
 		mixInCommonPropsAndCleanData(e) {
 			let t = e.properties ? e.properties ?? {} : e;
-			return t = Tw(t, []), this._additionalCommonProperties && (t = Sl(t, this._additionalCommonProperties)), this._ignoreBuiltinCommonProperties || (t = Sl(t, this._commonProperties)), e.properties ? e.properties = t : e = t, e;
+			return t = Ow(t, []), this._additionalCommonProperties && (t = Sl(t, this._additionalCommonProperties)), this._ignoreBuiltinCommonProperties || (t = Sl(t, this._commonProperties)), e.properties ? e.properties = t : e = t, e;
 		}
 		logEvent(e, t) {
 			this._sender && (e = this._extension.publisher === "vscode" ? this._extension.name + "/" + e : this._extension.identifier.value + "/" + e, t = this.mixInCommonPropsAndCleanData(t || {}), this._inLoggingOnlyMode || this._sender?.sendEventData(e, t), this._logger.trace(e, t));
@@ -7880,7 +7880,7 @@ var Ej, Dj, Oj, kj = t((() => {
 		logError(e, t) {
 			if (!(!this._telemetryEnablements.isErrorsEnabled || !this._sender)) if (typeof e == "string") this.logEvent(e, t);
 			else {
-				let n = Tw({
+				let n = Ow({
 					name: e.name,
 					message: e.message,
 					stack: e.stack,
@@ -7916,14 +7916,14 @@ var Ej, Dj, Oj, kj = t((() => {
 				this._sender = void 0, Promise.resolve(e.flush()).then(e = void 0), this._apiObject = void 0;
 			} else this._sender = void 0;
 		}
-	}, Oj = xl("IExtHostTelemetry");
-})), Aj, jj, Mj, X, Z, Q, Nj = t((() => {
-	b(), kt(), gv(), wm(), zt(), W(), An(), Xr(), Uo(), Qa(), U(), P(), E(), qh(), wj(), Pr(), xv(), Hw(), kj(), ia(), im(), gm(), Gf(), Dm(), mp(), Aj = class {
+	}, jj = xl("IExtHostTelemetry");
+})), Nj, Pj, Fj, X, Z, Q, Ij = t((() => {
+	b(), kt(), gv(), wm(), zt(), W(), An(), Xr(), Uo(), Qa(), U(), P(), E(), qh(), Dj(), Pr(), xv(), Gw(), Mj(), ia(), im(), gm(), Gf(), Dm(), mp(), Nj = class {
 		#e;
 		#t;
 		#n;
 		constructor(e, t, n) {
-			this._commands = /* @__PURE__ */ new Map(), this._apiCommands = /* @__PURE__ */ new Map(), this.#e = e.getProxy(G.MainThreadCommands), this._logService = t, this.#n = n, this.#t = e.getProxy(G.MainThreadTelemetry), this.converter = new Mj(this, (e) => {
+			this._commands = /* @__PURE__ */ new Map(), this._apiCommands = /* @__PURE__ */ new Map(), this.#e = e.getProxy(G.MainThreadCommands), this._logService = t, this.#n = n, this.#t = e.getProxy(G.MainThreadTelemetry), this.converter = new Fj(this, (e) => {
 				let t = this._apiCommands.get(e);
 				return t?.result === Z.Void ? t : void 0;
 			}, t), this._argumentProcessors = [{ processArgument(e) {
@@ -8027,7 +8027,7 @@ var Ej, Dj, Oj, kj = t((() => {
 		_reportTelemetry(e, t, n) {
 			e.extension && (t.startsWith("code.copilot.logStructured") || this.#t.$publicLog2("Extension:ActionExecuted", {
 				extensionId: e.extension.identifier.value,
-				id: new Aw(t),
+				id: new Nw(t),
 				duration: n
 			}));
 		}
@@ -8047,11 +8047,11 @@ var Ej, Dj, Oj, kj = t((() => {
 			}
 			return Promise.resolve(e);
 		}
-	}, Aj = N([
+	}, Nj = N([
 		R(0, $x),
 		R(1, Ct),
-		R(2, Oj)
-	], Aj), jj = xl("IExtHostCommands"), Mj = class {
+		R(2, jj)
+	], Nj), Pj = xl("IExtHostCommands"), Fj = class {
 		constructor(e, t, n) {
 			this._commands = e, this._lookupApiCommand = t, this._logService = n, this.delegatingCommandId = `__vsc${Qi()}`, this._cache = /* @__PURE__ */ new Map(), this._cachIdPool = 0, this._commands.registerCommand(!0, this.delegatingCommandId, this._executeConvertedCommand, this);
 		}
@@ -8117,7 +8117,7 @@ var Ej, Dj, Oj, kj = t((() => {
 			this.TypeHierarchyItem = new e("item", "A type hierarchy item", (e) => e instanceof xy, ky.from);
 		}
 		static {
-			this.TestItem = new e("testItem", "A VS Code TestItem", (e) => e instanceof xj, K_.from);
+			this.TestItem = new e("testItem", "A VS Code TestItem", (e) => e instanceof wj, K_.from);
 		}
 		static {
 			this.TestProfile = new e("testProfile", "A VS Code test profile", (e) => e instanceof xm, Of.from);
@@ -8146,14 +8146,14 @@ var Ej, Dj, Oj, kj = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostDocumentData.js
-function Pj(e, t) {
-	t ? Ij.set(e, t) : Ij.delete(e);
+function Lj(e, t) {
+	t ? zj.set(e, t) : zj.delete(e);
 }
-function Fj(e) {
-	return Ij.get(e);
+function Rj(e) {
+	return zj.get(e);
 }
-var Ij, Lj, Rj, zj = t((() => {
-	Ds(), c(), ld(), An(), PS(), im(), gm(), Ij = /* @__PURE__ */ new Map(), Lj = class extends Nl {
+var zj, Bj, Vj, Hj = t((() => {
+	Ds(), c(), ld(), An(), PS(), im(), gm(), zj = /* @__PURE__ */ new Map(), Bj = class extends Nl {
 		constructor(e, t, n, r, i, a, o, s, c = !0) {
 			super(t, n, r, i), this._proxy = e, this._languageId = a, this._isDirty = o, this._encoding = s, this._strictInstanceofChecks = c, this._isDisposed = !1;
 		}
@@ -8252,7 +8252,7 @@ var Ij, Lj, Rj, zj = t((() => {
 		_lineAt(e) {
 			let t;
 			if (e instanceof ex ? t = e.line : typeof e == "number" ? t = e : !this._strictInstanceofChecks && ex.isPosition(e) && (t = e.line), typeof t != "number" || t < 0 || t >= this._lines.length || Math.floor(t) !== t) throw Error("Illegal value for `line`");
-			return new Rj(t, this._lines[t], t === this._lines.length - 1);
+			return new Vj(t, this._lines[t], t === this._lines.length - 1);
 		}
 		_offsetAt(e) {
 			return e = this._validatePosition(e), this._ensureLineStarts(), this._lineStarts.getPrefixSum(e.line - 1) + e.character;
@@ -8285,12 +8285,12 @@ var Ij, Lj, Rj, zj = t((() => {
 		}
 		_getWordRangeAtPosition(e, t) {
 			let n = this._validatePosition(e);
-			if (!t) t = Fj(this._languageId);
+			if (!t) t = Rj(this._languageId);
 			else if (es(t)) throw Error(`[getWordRangeAtPosition]: ignoring custom regexp '${t.source}' because it matches the empty string.`);
 			let r = Bt(n.character + 1, ut(t), this._lines[n.line], 0);
 			if (r) return new Tp(n.line, r.startColumn - 1, n.line, r.endColumn - 1);
 		}
-	}, Rj = class {
+	}, Vj = class {
 		constructor(e, t, n) {
 			this._line = e, this._text = t, this._isLastLine = n;
 		}
@@ -8313,8 +8313,8 @@ var Ij, Lj, Rj, zj = t((() => {
 			return this.firstNonWhitespaceCharacterIndex === this._text.length;
 		}
 	};
-})), Bj, Vj, Hj, Uj, Wj = t((() => {
-	zo(), ia(), xa(), wm(), gv(), im(), gm(), Gf(), PS(), Bj = class e {
+})), Uj, Wj, Gj, Kj, qj = t((() => {
+	zo(), ia(), xa(), wm(), gv(), im(), gm(), Gf(), PS(), Uj = class e {
 		static {
 			this._Keys = new Bn("TextEditorDecorationType");
 		}
@@ -8327,7 +8327,7 @@ var Ij, Lj, Rj, zj = t((() => {
 				}
 			});
 		}
-	}, Vj = class {
+	}, Wj = class {
 		constructor(e, t) {
 			this._collectedEdits = [], this._setEndOfLine = void 0, this._finalized = !1, this._document = e, this._documentVersionId = e.version, this._undoStopBefore = t.undoStopBefore, this._undoStopAfter = t.undoStopAfter;
 		}
@@ -8373,7 +8373,7 @@ var Ij, Lj, Rj, zj = t((() => {
 			if (this._throwIfFinalized(), e !== D_.LF && e !== D_.CRLF) throw Bo("endOfLine");
 			this._setEndOfLine = e;
 		}
-	}, Hj = class {
+	}, Gj = class {
 		constructor(e, t, n, r) {
 			this._proxy = e, this._id = t, this._accept(n), this._logService = r;
 			let i = this;
@@ -8495,9 +8495,9 @@ var Ij, Lj, Rj, zj = t((() => {
 				this._logService.warn(`ExtHostTextEditorOptions '${e}' failed:'`), this._logService.warn(t);
 			});
 		}
-	}, Uj = class {
+	}, Kj = class {
 		constructor(e, t, n, r, i, a, o, s) {
-			this.id = e, this._proxy = t, this._logService = n, this._disposed = !1, this._hasDecorationsForKey = /* @__PURE__ */ new Set(), this._selections = i, this._options = new Hj(this._proxy, this.id, a, n), this._visibleRanges = o, this._viewColumn = s;
+			this.id = e, this._proxy = t, this._logService = n, this._disposed = !1, this._hasDecorationsForKey = /* @__PURE__ */ new Set(), this._selections = i, this._options = new Gj(this._proxy, this.id, a, n), this._visibleRanges = o, this._viewColumn = s;
 			let c = this;
 			this.value = Object.freeze({
 				get document() {
@@ -8546,7 +8546,7 @@ var Ij, Lj, Rj, zj = t((() => {
 					undoStopAfter: !0
 				}) {
 					if (c._disposed) return Promise.reject(/* @__PURE__ */ Error("TextEditor#edit not possible on closed editors"));
-					let n = new Vj(r.value, t);
+					let n = new Wj(r.value, t);
 					return e(n), c._applyEdit(n);
 				},
 				insertSnippet(n, i, a = {
@@ -8654,8 +8654,8 @@ var Ij, Lj, Rj, zj = t((() => {
 			return this._disposed ? (this._logService.warn("TextEditor is closed/disposed"), Promise.resolve(void 0)) : e().then(() => this, (e) => (e instanceof Error && e.name === "DISPOSED" || this._logService.warn(e), null));
 		}
 	};
-})), Gj, Kj, qj, Jj = t((() => {
-	b(), zo(), $s(), P(), U(), E(), W(), zj(), qh(), Wj(), wm(), Xr(), _r(), Ds(), Gj = class {
+})), Jj, Yj, Xj, Zj = t((() => {
+	b(), zo(), $s(), P(), U(), E(), W(), Hj(), qh(), qj(), wm(), Xr(), _r(), Ds(), Jj = class {
 		constructor(e) {
 			this.value = e, this._count = 0;
 		}
@@ -8665,7 +8665,7 @@ var Ij, Lj, Rj, zj = t((() => {
 		unref() {
 			return --this._count === 0;
 		}
-	}, Kj = class {
+	}, Yj = class {
 		constructor(e, t) {
 			this._extHostRpc = e, this._logService = t, this._activeEditorId = null, this._editors = /* @__PURE__ */ new Map(), this._documents = new qn(), this._onDidAddDocuments = new V(), this._onDidRemoveDocuments = new V(), this._onDidChangeVisibleTextEditors = new V(), this._onDidChangeActiveTextEditor = new V(), this.onDidAddDocuments = this._onDidAddDocuments.event, this.onDidRemoveDocuments = this._onDidRemoveDocuments.event, this.onDidChangeVisibleTextEditors = this._onDidChangeVisibleTextEditors.event, this.onDidChangeActiveTextEditor = this._onDidChangeActiveTextEditor.event;
 		}
@@ -8681,7 +8681,7 @@ var Ij, Lj, Rj, zj = t((() => {
 			if (e.addedDocuments) for (let t of e.addedDocuments) {
 				let e = H.revive(t.uri), r = this._documents.get(e);
 				if (r && e.scheme !== Ma.vscodeNotebookCell && e.scheme !== Ma.vscodeInteractiveInput) throw Error(`document '${e} already exists!'`);
-				r || (r = new Gj(new Lj(this._extHostRpc.getProxy(G.MainThreadDocuments), e, t.lines, t.EOL, t.versionId, t.languageId, t.isDirty, t.encoding)), this._documents.set(e, r), n.push(r.value)), r.ref();
+				r || (r = new Jj(new Bj(this._extHostRpc.getProxy(G.MainThreadDocuments), e, t.lines, t.EOL, t.versionId, t.languageId, t.isDirty, t.encoding)), this._documents.set(e, r), n.push(r.value)), r.ref();
 			}
 			if (e.removedEditors) for (let t of e.removedEditors) {
 				let e = this._editors.get(t);
@@ -8690,7 +8690,7 @@ var Ij, Lj, Rj, zj = t((() => {
 			if (e.addedEditors) for (let t of e.addedEditors) {
 				let e = H.revive(t.documentUri);
 				Sc(this._documents.has(e), `document '${e}' does not exist`), Sc(!this._editors.has(t.id), `editor '${t.id}' already exists!`);
-				let n = this._documents.get(e).value, r = new Uj(t.id, this._extHostRpc.getProxy(G.MainThreadTextEditors), this._logService, new fe(() => n.document), t.selections.map(mv.to), t.options, t.visibleRanges.map((e) => q.to(e)), typeof t.editorPosition == "number" ? Wm.to(t.editorPosition) : void 0);
+				let n = this._documents.get(e).value, r = new Kj(t.id, this._extHostRpc.getProxy(G.MainThreadTextEditors), this._logService, new fe(() => n.document), t.selections.map(mv.to), t.options, t.visibleRanges.map((e) => q.to(e)), typeof t.editorPosition == "number" ? Wm.to(t.editorPosition) : void 0);
 				this._editors.set(t.id, r);
 			}
 			e.newActiveEditor !== void 0 && (Sc(e.newActiveEditor === null || this._editors.has(e.newActiveEditor), `active editor '${e.newActiveEditor}' does not exist`), this._activeEditorId = e.newActiveEditor), ce(t), ce(r), e.removedDocuments && this._onDidRemoveDocuments.fire(t), e.addedDocuments && this._onDidAddDocuments.fire(n), (e.removedEditors || e.addedEditors) && this._onDidChangeVisibleTextEditors.fire(this.allEditors().map((e) => e.value)), e.newActiveEditor !== void 0 && this._onDidChangeActiveTextEditor.fire(this.activeEditor());
@@ -8712,25 +8712,25 @@ var Ij, Lj, Rj, zj = t((() => {
 		allEditors() {
 			return [...this._editors.values()];
 		}
-	}, Kj = N([R(0, $x), R(1, Ct)], Kj), qj = xl("IExtHostDocumentsAndEditors");
+	}, Yj = N([R(0, $x), R(1, Ct)], Yj), Xj = xl("IExtHostDocumentsAndEditors");
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostTerminalService.js
-function Yj(e) {
+function Qj(e) {
 	if (!(!e || typeof e == "string")) return Ke(e, { id: !0 }) ? {
 		id: e.id,
 		color: e.color
 	} : e;
 }
-function Xj(e) {
+function $j(e) {
 	return ul.isThemeColor(e) ? e : void 0;
 }
-function Zj(e) {
+function eM(e) {
 	let t = { ...e };
 	return delete t.scope, t.options = t.options ?? void 0, t;
 }
-var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
-	b(), $s(), W(), E(), U(), qh(), P(), gv(), fr(), ia(), Zv(), Eo(), Go(), qp(), J_(), $c(), S(), wm(), Nj(), kt(), Qj = xl("IExtHostTerminalService"), $j = class extends z {
+var tM, nM, rM, iM, aM, oM, sM, cM, lM = t((() => {
+	b(), $s(), W(), E(), U(), qh(), P(), gv(), fr(), ia(), Zv(), Eo(), Go(), qp(), J_(), $c(), S(), wm(), Ij(), kt(), tM = xl("IExtHostTerminalService"), nM = class extends z {
 		constructor(e, t, n, r) {
 			super(), this._proxy = e, this._id = t, this._creationOptions = n, this._name = r, this._disposed = !1, this._state = {
 				isInteractedWith: !1,
@@ -8790,7 +8790,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 				shellArgs: e.shellArgs ?? void 0,
 				cwd: e.cwd ?? t?.cwd ?? void 0,
 				env: e.env ?? void 0,
-				icon: Yj(e.iconPath) ?? void 0,
+				icon: Qj(e.iconPath) ?? void 0,
 				color: ul.isThemeColor(e.color) ? e.color.id : void 0,
 				initialText: e.message ?? void 0,
 				strictEnv: e.strictEnv ?? void 0,
@@ -8858,7 +8858,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 				t !== e && (this._pidPromise = Promise.resolve(e));
 			});
 		}
-	}, eM = class {
+	}, rM = class {
 		get onProcessReady() {
 			return this._onProcessReady.event;
 		}
@@ -8917,7 +8917,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 				windowsPty: void 0
 			});
 		}
-	}, tM = 1, nM = class extends z {
+	}, iM = 1, aM = class extends z {
 		get activeTerminal() {
 			return this._activeTerminal?.value;
 		}
@@ -8950,8 +8950,8 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			return (e ? this._defaultAutomationProfile : this._defaultProfile)?.args || [];
 		}
 		createExtensionTerminal(e, t) {
-			let n = new $j(this._proxy, Qi(), e, e.name), r = new eM(e.pty);
-			return n.createExtensionTerminal(e.location, t, this._serializeParentTerminal(e, t).resolvedExtHostIdentifier, Yj(e.iconPath), Xj(e.color), e.shellIntegrationNonce).then((e) => {
+			let n = new nM(this._proxy, Qi(), e, e.name), r = new rM(e.pty);
+			return n.createExtensionTerminal(e.location, t, this._serializeParentTerminal(e, t).resolvedExtHostIdentifier, Qj(e.iconPath), $j(e.color), e.shellIntegrationNonce).then((e) => {
 				let t = this._setupExtHostProcessListeners(e, r);
 				this._terminalProcessDisposables[e] = t;
 			}), this._terminals.push(n), n.value;
@@ -8968,7 +8968,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 		}
 		attachPtyToTerminal(e, t) {
 			if (!this.getTerminalById(e)) throw Error(`Cannot resolve terminal with id ${e} for virtual process`);
-			let n = new eM(t), r = this._setupExtHostProcessListeners(e, n);
+			let n = new rM(t), r = this._setupExtHostProcessListeners(e, n);
 			this._terminalProcessDisposables[e] = r;
 		}
 		async $acceptActiveTerminalChanged(e) {
@@ -9030,7 +9030,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 				cwd: typeof r.cwd == "string" ? r.cwd : H.revive(r.cwd),
 				env: r.env,
 				hideFromUser: r.hideFromUser
-			}, a = new $j(this._proxy, e, i, n);
+			}, a = new nM(this._proxy, e, i, n);
 			this._terminals.push(a), this._onDidOpenTerminal.fire(a.value), a.isOpen = !0;
 		}
 		async $acceptTerminalProcessId(e, t) {
@@ -9051,7 +9051,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			let n = new I();
 			n.add(t.onProcessReady((t) => this._proxy.$sendProcessReady(e, t.pid, t.cwd, t.windowsPty))), n.add(t.onDidChangeProperty((t) => this._proxy.$sendProcessProperty(e, t))), this._bufferer.startBuffering(e, t.onProcessData), n.add(t.onProcessExit((t) => this._onProcessExit(e, t))), this._terminalProcesses.set(e, t);
 			let r = this._extensionTerminalAwaitingStart[e];
-			return r && t instanceof eM && (t.startSendingEvents(r.initialDimensions), delete this._extensionTerminalAwaitingStart[e]), n;
+			return r && t instanceof rM && (t.startSendingEvents(r.initialDimensions), delete this._extensionTerminalAwaitingStart[e]), n;
 		}
 		$acceptProcessAckDataEvent(e, t) {
 			this._terminalProcesses.get(e)?.acknowledgeDataEvent(t);
@@ -9181,7 +9181,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			let c = /* @__PURE__ */ new Map();
 			for (let e of s) e && e.links.length > 0 && i.push(...e.links.map((t) => {
 				let n = {
-					id: tM++,
+					id: iM++,
 					startIndex: t.startIndex,
 					length: t.length,
 					label: t.tooltip
@@ -9219,7 +9219,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 		}
 		getEnvironmentVariableCollection(e) {
 			let t = this._environmentVariableCollections.get(e.identifier.value);
-			return t || (t = this._register(new rM()), this._setEnvironmentVariableCollection(e.identifier.value, t)), t.getScopedEnvironmentVariableCollection(void 0);
+			return t || (t = this._register(new oM()), this._setEnvironmentVariableCollection(e.identifier.value, t)), t.getScopedEnvironmentVariableCollection(void 0);
 		}
 		_syncEnvironmentVariableCollection(e, t) {
 			let n = Zx(t.map), r = E_(t.descriptionMap);
@@ -9227,7 +9227,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 		}
 		$initEnvironmentVariableCollections(e) {
 			e.forEach((e) => {
-				let t = e[0], n = this._register(new rM(e[1]));
+				let t = e[0], n = this._register(new oM(e[1]));
 				this._setEnvironmentVariableCollection(t, n);
 			});
 		}
@@ -9240,7 +9240,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 				this._syncEnvironmentVariableCollection(e, t);
 			}));
 		}
-	}, nM = N([R(1, jj), R(2, $x)], nM), rM = class extends z {
+	}, aM = N([R(1, Pj), R(2, $x)], aM), oM = class extends z {
 		get persistent() {
 			return this._persistent;
 		}
@@ -9255,7 +9255,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 		}
 		getScopedEnvironmentVariableCollection(e) {
 			let t = this.getScopeKey(e), n = this.scopedCollections.get(t);
-			return n || (n = new iM(this, e), this.scopedCollections.set(t, n), this._register(n.onDidChangeCollection(() => this._onDidChangeCollection.fire()))), n;
+			return n || (n = new sM(this, e), this.scopedCollections.set(t, n), this._register(n.onDidChangeCollection(() => this._onDidChangeCollection.fire()))), n;
 		}
 		replace(e, t, n, r) {
 			this._setIfDiffers(e, {
@@ -9298,7 +9298,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 		}
 		get(e, t) {
 			let n = this.getKey(e, t), r = this.map.get(n);
-			return r ? Zj(r) : void 0;
+			return r ? eM(r) : void 0;
 		}
 		getKey(e, t) {
 			let n = this.getScopeKey(t);
@@ -9312,7 +9312,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 		}
 		getVariableMap(e) {
 			let t = /* @__PURE__ */ new Map();
-			for (let [n, r] of this.map) this.getScopeKey(r.scope) === this.getScopeKey(e) && t.set(r.variable, Zj(r));
+			for (let [n, r] of this.map) this.getScopeKey(r.scope) === this.getScopeKey(e) && t.set(r.variable, eM(r));
 			return t;
 		}
 		delete(e, t) {
@@ -9346,7 +9346,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			let t = this.getScopeKey(e);
 			this.descriptionMap.delete(t);
 		}
-	}, iM = class {
+	}, sM = class {
 		get persistent() {
 			return this.collection.persistent;
 		}
@@ -9392,7 +9392,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 		get description() {
 			return this.collection.getDescription(this.scope);
 		}
-	}, aM = class extends nM {
+	}, cM = class extends aM {
 		constructor(e, t) {
 			super(!1, e, t);
 		}
@@ -9402,9 +9402,9 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 		createTerminalFromOptions(e, t) {
 			throw new Ws();
 		}
-	}, aM = N([R(0, jj), R(1, $x)], aM);
-})), sM, cM, lM = t((() => {
-	b(), E(), Xr(), W(), qh(), sM = xl("IExtHostApiDeprecationService"), cM = class {
+	}, cM = N([R(0, Pj), R(1, $x)], cM);
+})), uM, dM, fM = t((() => {
+	b(), E(), Xr(), W(), qh(), uM = xl("IExtHostApiDeprecationService"), dM = class {
 		constructor(e, t) {
 			this._extHostLogService = t, this._reportedUsages = /* @__PURE__ */ new Set(), this._telemetryShape = e.getProxy(G.MainThreadTelemetry);
 		}
@@ -9418,9 +9418,9 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 		getUsageKey(e, t) {
 			return `${e}-${t.identifier.value}`;
 		}
-	}, cM = N([R(0, $x), R(1, Ct)], cM);
-})), uM, dM, fM, pM, mM, hM, gM, _M, vM, yM, bM, xM, SM, CM, wM, TM = t((() => {
-	b(), U(), S(), $s(), W(), gv(), $A(), Jj(), pj(), Eo(), oM(), qh(), Pf(), E(), Ds(), mo(), Xr(), lM(), Sy(), ia(), An(), (function(e) {
+	}, dM = N([R(0, $x), R(1, Ct)], dM);
+})), pM, mM, hM, gM, _M, vM, yM, bM, xM, SM, CM, wM, TM, EM, DM, OM = t((() => {
+	b(), U(), S(), $s(), W(), gv(), nj(), Zj(), gj(), Eo(), lM(), qh(), Pf(), E(), Ds(), mo(), Xr(), fM(), Sy(), ia(), An(), (function(e) {
 		function t(e) {
 			if (e != null) return e;
 		}
@@ -9429,7 +9429,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			if (e != null) return e;
 		}
 		e.to = n;
-	})(uM ||= {}), (function(e) {
+	})(pM ||= {}), (function(e) {
 		function t(e) {
 			if (e != null) return e;
 		}
@@ -9438,7 +9438,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			if (e != null) return e;
 		}
 		e.to = n;
-	})(dM ||= {}), (function(e) {
+	})(mM ||= {}), (function(e) {
 		function t(e) {
 			if (e != null) return e;
 		}
@@ -9447,7 +9447,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			if (e != null) return e;
 		}
 		e.to = n;
-	})(fM ||= {}), (function(e) {
+	})(hM ||= {}), (function(e) {
 		function t(e) {
 			if (e) {
 				let t = e;
@@ -9461,14 +9461,14 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 				process: e.process,
 				args: e.args
 			};
-			return e.options && (t.options = fM.from(e.options)), t;
+			return e.options && (t.options = hM.from(e.options)), t;
 		}
 		e.from = n;
 		function r(e) {
 			if (e != null) return new ff(e.process, e.args, e.options);
 		}
 		e.to = r;
-	})(pM ||= {}), (function(e) {
+	})(gM ||= {}), (function(e) {
 		function t(e) {
 			if (e != null) return e;
 		}
@@ -9477,7 +9477,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			if (e != null) return e;
 		}
 		e.to = n;
-	})(mM ||= {}), (function(e) {
+	})(_M ||= {}), (function(e) {
 		function t(e) {
 			if (e) {
 				let t = e;
@@ -9488,14 +9488,14 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 		function n(e) {
 			if (e == null) return;
 			let t = {};
-			return e.commandLine === void 0 ? (t.command = e.command, t.args = e.args) : t.commandLine = e.commandLine, e.options && (t.options = mM.from(e.options)), t;
+			return e.commandLine === void 0 ? (t.command = e.command, t.args = e.args) : t.commandLine = e.commandLine, e.options && (t.options = _M.from(e.options)), t;
 		}
 		e.from = n;
 		function r(e) {
 			if (!(e == null || e.command === void 0 && e.commandLine === void 0)) return e.commandLine ? new mb(e.commandLine, e.options) : new mb(e.command, e.args ? e.args : [], e.options);
 		}
 		e.to = r;
-	})(hM ||= {}), (function(e) {
+	})(vM ||= {}), (function(e) {
 		function t(e) {
 			if (e) {
 				let t = e;
@@ -9511,7 +9511,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			return t.get(e);
 		}
 		e.to = r;
-	})(gM ||= {}), (function(e) {
+	})(yM ||= {}), (function(e) {
 		function t(e, t) {
 			let n;
 			return e.scope !== void 0 && typeof e.scope != "number" ? n = e.scope.uri : e.scope !== void 0 && typeof e.scope == "number" && (n = e.scope === OS.Workspace && t && t.workspaceFile ? t.workspaceFile : ef), {
@@ -9520,7 +9520,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			};
 		}
 		e.from = t;
-	})(_M ||= {}), (function(e) {
+	})(bM ||= {}), (function(e) {
 		function t(e) {
 			if (e != null) return {
 				_id: e.id,
@@ -9528,7 +9528,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			};
 		}
 		e.from = t;
-	})(vM ||= {}), (function(e) {
+	})(xM ||= {}), (function(e) {
 		function t(e, t) {
 			if (e == null) return [];
 			let r = [];
@@ -9542,8 +9542,8 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 		function n(e, t) {
 			if (e == null) return;
 			let n;
-			e.execution instanceof ff ? n = pM.from(e.execution) : e.execution instanceof mb ? n = hM.from(e.execution) : e.execution && e.execution instanceof Ug && (n = gM.from(e.execution));
-			let r = uM.from(e.definition), i;
+			e.execution instanceof ff ? n = gM.from(e.execution) : e.execution instanceof mb ? n = vM.from(e.execution) : e.execution && e.execution instanceof Ug && (n = yM.from(e.execution));
+			let r = pM.from(e.definition), i;
 			if (i = e.scope ? typeof e.scope == "number" ? e.scope : e.scope.uri : OS.Workspace, !(!r || !i)) return {
 				_id: e._id,
 				definition: r,
@@ -9555,8 +9555,8 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 				},
 				execution: n,
 				isBackground: e.isBackground,
-				group: vM.from(e.group),
-				presentationOptions: dM.from(e.presentationOptions),
+				group: xM.from(e.group),
+				presentationOptions: mM.from(e.presentationOptions),
 				problemMatchers: Ha(e.problemMatchers),
 				hasDefinedMatchers: e.hasDefinedMatchers,
 				runOptions: e.runOptions ? e.runOptions : { reevaluateOnRerun: !0 },
@@ -9567,14 +9567,14 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 		async function r(e, t, n) {
 			if (e == null) return;
 			let r;
-			pM.is(e.execution) ? r = pM.to(e.execution) : hM.is(e.execution) ? r = hM.to(e.execution) : gM.is(e.execution) && (r = gM.to(e._id, n));
-			let i = uM.to(e.definition), a;
+			gM.is(e.execution) ? r = gM.to(e.execution) : vM.is(e.execution) ? r = vM.to(e.execution) : yM.is(e.execution) && (r = yM.to(e._id, n));
+			let i = pM.to(e.definition), a;
 			if (e.source && (a = e.source.scope === void 0 ? OS.Workspace : typeof e.source.scope == "number" ? e.source.scope : await t.resolveWorkspaceFolder(H.revive(e.source.scope))), !i || !a) return;
 			let o = new nb(i, a, e.name, e.source.label, r, e.problemMatchers);
-			return e.isBackground !== void 0 && (o.isBackground = e.isBackground), e.group !== void 0 && (o.group = Kv.from(e.group._id), o.group && e.group.isDefault && (o.group = new Kv(o.group.id, o.group.label), e.group.isDefault === !0 && (o.group.isDefault = e.group.isDefault))), e.presentationOptions && (o.presentationOptions = dM.to(e.presentationOptions)), e._id && (o._id = e._id), e.detail && (o.detail = e.detail), o;
+			return e.isBackground !== void 0 && (o.isBackground = e.isBackground), e.group !== void 0 && (o.group = Kv.from(e.group._id), o.group && e.group.isDefault && (o.group = new Kv(o.group.id, o.group.label), e.group.isDefault === !0 && (o.group.isDefault = e.group.isDefault))), e.presentationOptions && (o.presentationOptions = mM.to(e.presentationOptions)), e._id && (o._id = e._id), e.detail && (o.detail = e.detail), o;
 		}
 		e.to = r;
-	})(yM ||= {}), (function(e) {
+	})(SM ||= {}), (function(e) {
 		function t(e) {
 			return e;
 		}
@@ -9583,7 +9583,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			if (e) return Object.assign(Object.create(null), e);
 		}
 		e.to = n;
-	})(bM ||= {}), xM = class {
+	})(CM ||= {}), wM = class {
 		#e;
 		constructor(e, t, n) {
 			this._id = t, this._task = n, this.#e = e;
@@ -9602,7 +9602,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 		set terminal(e) {
 			this._terminal = e;
 		}
-	}, SM = class {
+	}, TM = class {
 		constructor(e, t, n, r, i, a, o, s) {
 			this._onDidExecuteTask = new V(), this._onDidTerminateTask = new V(), this._onDidTaskProcessStarted = new V(), this._onDidTaskProcessEnded = new V(), this._onDidStartTaskProblemMatchers = new V(), this._onDidEndTaskProblemMatchers = new V(), this._proxy = e.getProxy(G.MainThreadTask), this._workspaceProvider = n, this._editorService = r, this._configurationService = i, this._terminalService = a, this._handleCounter = 0, this._handlers = /* @__PURE__ */ new Map(), this._taskExecutions = /* @__PURE__ */ new Map(), this._taskExecutionPromises = /* @__PURE__ */ new Map(), this._providedCustomExecutions2 = /* @__PURE__ */ new Map(), this._notProvidedCustomExecutions = /* @__PURE__ */ new Set(), this._activeCustomExecutions2 = /* @__PURE__ */ new Map(), this._logService = o, this._deprecationService = s, this._proxy.$registerSupportedExecutions(!0);
 		}
@@ -9621,10 +9621,10 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			this._proxy.$registerTaskSystem(e, t);
 		}
 		fetchTasks(e) {
-			return this._proxy.$fetchTasks(bM.from(e)).then(async (e) => {
+			return this._proxy.$fetchTasks(CM.from(e)).then(async (e) => {
 				let t = [];
 				for (let n of e) {
-					let e = await yM.to(n, this._workspaceProvider, this._providedCustomExecutions2);
+					let e = await SM.to(n, this._workspaceProvider, this._providedCustomExecutions2);
 					e && t.push(e);
 				}
 				return t;
@@ -9635,7 +9635,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			return this._taskExecutions.forEach((t) => e.push(t)), e;
 		}
 		terminateTask(e) {
-			if (!(e instanceof xM)) throw Error("No valid task execution provided");
+			if (!(e instanceof wM)) throw Error("No valid task execution provided");
 			return this._proxy.$terminateTask(e._id);
 		}
 		get onDidStartTask() {
@@ -9718,15 +9718,15 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			let n = this._handlers.get(e);
 			if (!n) return Promise.reject(/* @__PURE__ */ Error("no handler found"));
 			if (t.definition.type !== n.type) throw Error(`Unexpected: Task of type [${t.definition.type}] cannot be resolved by provider of type [${n.type}].`);
-			let r = await yM.to(t, this._workspaceProvider, this._providedCustomExecutions2);
+			let r = await SM.to(t, this._workspaceProvider, this._providedCustomExecutions2);
 			if (!r) throw Error("Unexpected: Task cannot be resolved.");
 			let i = await n.provider.resolveTask(r, xn.None);
 			if (!i) return;
 			this.checkDeprecation(i, n);
-			let a = yM.from(i, n.extension);
+			let a = SM.from(i, n.extension);
 			if (!a) throw Error("Unexpected: Task cannot be resolved.");
 			if (i.definition !== r.definition) throw Error("Unexpected: The resolved task definition must be the same object as the original task definition. The task definition cannot be changed.");
-			return gM.is(a.execution) && await this.addCustomExecution(a, i, !0), await this.resolveTaskInternal(a);
+			return yM.is(a.execution) && await this.addCustomExecution(a, i, !0), await this.resolveTaskInternal(a);
 		}
 		nextHandle() {
 			return this._handleCounter++;
@@ -9744,9 +9744,9 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			let n = this._taskExecutionPromises.get(e.id);
 			if (n) return n;
 			let r;
-			return r = t ? Promise.resolve(new xM(this, e.id, t)) : yM.to(e.task, this._workspaceProvider, this._providedCustomExecutions2).then((t) => {
+			return r = t ? Promise.resolve(new wM(this, e.id, t)) : SM.to(e.task, this._workspaceProvider, this._providedCustomExecutions2).then((t) => {
 				if (!t) throw new fc("Unexpected: Task does not exist.");
-				return new xM(this, e.id, t);
+				return new wM(this, e.id, t);
 			}), this._taskExecutionPromises.set(e.id, r), r.then((t) => (this._taskExecutions.set(e.id, t), t));
 		}
 		checkDeprecation(e, t) {
@@ -9757,16 +9757,16 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			let t = this._notProvidedCustomExecutions.values(), n = t.next();
 			for (; !n.done;) !this._activeCustomExecutions2.has(n.value) && this._lastStartedTask !== n.value && (this._providedCustomExecutions2.delete(n.value), this._notProvidedCustomExecutions.delete(n.value)), n = t.next();
 		}
-	}, SM = N([
+	}, TM = N([
 		R(0, $x),
 		R(1, Kf),
-		R(2, QA),
-		R(3, qj),
-		R(4, fj),
-		R(5, Qj),
+		R(2, tj),
+		R(3, Xj),
+		R(4, hj),
+		R(5, tM),
 		R(6, Ct),
-		R(7, sM)
-	], SM), CM = class extends SM {
+		R(7, uM)
+	], TM), EM = class extends TM {
 		constructor(e, t, n, r, i, a, o, s) {
 			super(e, t, n, r, i, a, o, s), this.registerTaskSystem(Ma.vscodeRemote, {
 				scheme: Ma.vscodeRemote,
@@ -9776,9 +9776,9 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 		}
 		async executeTask(e, t) {
 			if (!t.execution) throw Error("Tasks to execute must include an execution");
-			let n = yM.from(t, e);
+			let n = SM.from(t, e);
 			if (n === void 0) throw Error("Task is not valid");
-			if (gM.is(n.execution)) await this.addCustomExecution(n, t, !1);
+			if (yM.is(n.execution)) await this.addCustomExecution(n, t, !1);
 			else throw new Ws();
 			let r = await this.getTaskExecution(await this._proxy.$getTaskExecution(n), t);
 			return this._proxy.$executeTask(n).catch((e) => {
@@ -9792,8 +9792,8 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 					let e = a.source ? a.source : "No task source";
 					this._logService.warn(`The task [${e}, ${a.name}] uses an undefined task type. The task will be ignored in the future.`);
 				}
-				let r = yM.from(a, n.extension);
-				r && gM.is(r.execution) ? (i.push(r), t.push(this.addCustomExecution(r, a, !0))) : this._logService.warn("Only custom execution tasks supported.");
+				let r = SM.from(a, n.extension);
+				r && yM.is(r.execution) ? (i.push(r), t.push(this.addCustomExecution(r, a, !0))) : this._logService.warn("Only custom execution tasks supported.");
 			}
 			return {
 				tasks: i,
@@ -9801,7 +9801,7 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			};
 		}
 		async resolveTaskInternal(e) {
-			if (gM.is(e.execution)) return e;
+			if (yM.is(e.execution)) return e;
 			this._logService.warn("Only custom execution tasks supported.");
 		}
 		async $resolveVariables(e, t) {
@@ -9814,24 +9814,24 @@ var Qj, $j, eM, tM, nM, rM, iM, aM, oM = t((() => {
 			return !1;
 		}
 		async $findExecutable(e, t, n) {}
-	}, CM = N([
+	}, EM = N([
 		R(0, $x),
 		R(1, Kf),
-		R(2, QA),
-		R(3, qj),
-		R(4, fj),
-		R(5, Qj),
+		R(2, tj),
+		R(3, Xj),
+		R(4, hj),
+		R(5, tM),
 		R(6, Ct),
-		R(7, sM)
-	], CM), wM = xl("IExtHostTask");
+		R(7, uM)
+	], EM), DM = xl("IExtHostTask");
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostEditorTabs.js
-function EM(e) {
+function kM(e) {
 	return e.tabs !== void 0;
 }
-var DM, OM, kM, AM, jM = t((() => {
-	b(), $s(), kt(), U(), E(), W(), qh(), wm(), gv(), DM = xl("IExtHostEditorTabs"), OM = class {
+var AM, jM, MM, NM, PM = t((() => {
+	b(), $s(), kt(), U(), E(), W(), qh(), wm(), gv(), AM = xl("IExtHostEditorTabs"), jM = class {
 		constructor(e, t, n) {
 			this._activeTabIdGetter = n, this._parentGroup = t, this.acceptDtoUpdate(e);
 		}
@@ -9886,10 +9886,10 @@ var DM, OM, kM, AM, jM = t((() => {
 				default: return;
 			}
 		}
-	}, kM = class {
+	}, MM = class {
 		constructor(e, t) {
 			this._tabs = [], this._activeTabId = "", this._dto = e, this._activeGroupIdGetter = t;
-			for (let t of e.tabs) t.isActive && (this._activeTabId = t.id), this._tabs.push(new OM(t, this, () => this.activeTabId()));
+			for (let t of e.tabs) t.isActive && (this._activeTabId = t.id), this._tabs.push(new jM(t, this, () => this.activeTabId()));
 		}
 		get apiObject() {
 			if (!this._apiObject) {
@@ -9922,7 +9922,7 @@ var DM, OM, kM, AM, jM = t((() => {
 		}
 		acceptTabOperation(e) {
 			if (e.kind === Gv.TAB_OPEN) {
-				let t = new OM(e.tabDto, this, () => this.activeTabId());
+				let t = new jM(e.tabDto, this, () => this.activeTabId());
 				return this._tabs.splice(e.index, 0, t), e.tabDto.isActive && (this._activeTabId = t.tabId), t;
 			} else if (e.kind === Gv.TAB_CLOSE) {
 				let t = this._tabs.splice(e.index, 1)[0];
@@ -9941,7 +9941,7 @@ var DM, OM, kM, AM, jM = t((() => {
 		activeTabId() {
 			return this._activeTabId;
 		}
-	}, AM = class {
+	}, NM = class {
 		constructor(e) {
 			this._onDidChangeTabs = new V(), this._onDidChangeTabGroups = new V(), this._extHostTabGroups = [], this._proxy = e.getProxy(G.MainThreadEditorTabs);
 		}
@@ -9959,7 +9959,7 @@ var DM, OM, kM, AM, jM = t((() => {
 					},
 					close: async (e, t) => {
 						let n = Array.isArray(e) ? e : [e];
-						return n.length ? EM(n[0]) ? this._closeGroups(n, t) : this._closeTabs(n, t) : !0;
+						return n.length ? kM(n[0]) ? this._closeGroups(n, t) : this._closeTabs(n, t) : !0;
 					}
 				};
 				this._apiObject = Object.freeze(t);
@@ -9969,7 +9969,7 @@ var DM, OM, kM, AM, jM = t((() => {
 		$acceptEditorTabModel(e) {
 			let t = mt(new Set(this._extHostTabGroups.map((e) => e.groupId)), new Set(e.map((e) => e.groupId))), n = this._extHostTabGroups.filter((e) => t.removed.includes(e.groupId)).map((e) => e.apiObject), r = [], i = [];
 			this._extHostTabGroups = e.map((e) => {
-				let n = new kM(e, () => this._activeGroupId);
+				let n = new MM(e, () => this._activeGroupId);
 				return t.added.includes(n.groupId) ? r.push(n.apiObject) : i.push(n.apiObject), n;
 			});
 			let a = Sr(e.find((e) => e.isActive === !0)?.groupId);
@@ -10041,16 +10041,16 @@ var DM, OM, kM, AM, jM = t((() => {
 			}
 			return this._proxy.$closeGroup(n, t);
 		}
-	}, AM = N([R(0, $x)], AM);
-})), MM, NM, PM, FM, IM, LM, RM, zM, BM = t((() => {
-	b(), ia(), P(), fb(), wC(), kw(), Xr(), S(), MM = class e {
+	}, NM = N([R(0, $x)], NM);
+})), FM, IM, LM, RM, zM, BM, VM, HM, UM = t((() => {
+	b(), ia(), P(), fb(), GC(), Mw(), Xr(), S(), FM = class e {
 		static {
 			this.NONE = new e(!1, -1, -1, -1);
 		}
 		constructor(e, t, n, r) {
 			this.startup = e, this.codeLoadingTime = t, this.activateCallTime = n, this.activateResolvedTime = r;
 		}
-	}, NM = class {
+	}, IM = class {
 		constructor(e) {
 			this._startup = e, this._codeLoadingStart = -1, this._codeLoadingStop = -1, this._activateCallStart = -1, this._activateCallStop = -1, this._activateResolveStart = -1, this._activateResolveStop = -1;
 		}
@@ -10058,7 +10058,7 @@ var DM, OM, kM, AM, jM = t((() => {
 			return e === -1 || t === -1 ? -1 : t - e;
 		}
 		build() {
-			return new MM(this._startup, this._delta(this._codeLoadingStart, this._codeLoadingStop), this._delta(this._activateCallStart, this._activateCallStop), this._delta(this._activateResolveStart, this._activateResolveStop));
+			return new FM(this._startup, this._delta(this._codeLoadingStart, this._codeLoadingStop), this._delta(this._activateCallStart, this._activateCallStop), this._delta(this._activateResolveStart, this._activateResolveStop));
 		}
 		codeLoadingStart() {
 			this._codeLoadingStart = Date.now();
@@ -10078,34 +10078,34 @@ var DM, OM, kM, AM, jM = t((() => {
 		activateResolveStop() {
 			this._activateResolveStop = Date.now();
 		}
-	}, PM = class {
+	}, LM = class {
 		constructor(e, t, n, r, i, a) {
 			this.activationFailed = e, this.activationFailedError = t, this.activationTimes = n, this.module = r, this.exports = i, this.disposable = a;
 		}
-	}, FM = class extends PM {
+	}, RM = class extends LM {
 		constructor(e) {
 			super(!1, null, e, {
 				activate: void 0,
 				deactivate: void 0
 			}, void 0, z.None);
 		}
-	}, IM = class extends PM {
+	}, zM = class extends LM {
 		constructor() {
-			super(!1, null, MM.NONE, {
+			super(!1, null, FM.NONE, {
 				activate: void 0,
 				deactivate: void 0
 			}, void 0, z.None);
 		}
-	}, LM = class extends PM {
+	}, BM = class extends LM {
 		constructor(e) {
-			super(!0, e, MM.NONE, {
+			super(!0, e, FM.NONE, {
 				activate: void 0,
 				deactivate: void 0
 			}, void 0, z.None);
 		}
-	}, RM = class {
+	}, VM = class {
 		constructor(e, t, n, r) {
-			this._logService = r, this._registry = e, this._globalRegistry = t, this._host = n, this._operations = new VC(), this._alreadyActivatedEvents = Object.create(null);
+			this._logService = r, this._registry = e, this._globalRegistry = t, this._host = n, this._operations = new NC(), this._alreadyActivatedEvents = Object.create(null);
 		}
 		dispose() {
 			for (let [e, t] of this._operations) t.dispose();
@@ -10153,8 +10153,8 @@ var DM, OM, kM, AM, jM = t((() => {
 			if (this._isHostExtension(e.id)) return this._createAndSaveOperation(e, null, [], null);
 			let t = this._registry.getExtensionDescription(e.id);
 			if (!t) {
-				let t = /* @__PURE__ */ Error(`Cannot activate unknown extension '${e.id.value}'`), n = this._createAndSaveOperation(e, null, [], new LM(t));
-				return this._host.onExtensionActivationError(e.id, t, new Bw(e.id.value)), n;
+				let t = /* @__PURE__ */ Error(`Cannot activate unknown extension '${e.id.value}'`), n = this._createAndSaveOperation(e, null, [], new BM(t));
+				return this._host.onExtensionActivationError(e.id, t, new Uw(e.id.value)), n;
 			}
 			let n = [], r = t.extensionDependencies === void 0 ? [] : t.extensionDependencies;
 			for (let i of r) {
@@ -10180,13 +10180,13 @@ var DM, OM, kM, AM, jM = t((() => {
 					}));
 					continue;
 				}
-				let o = t.displayName || t.identifier.value, s = /* @__PURE__ */ Error(`Cannot activate the '${o}' extension because it depends on unknown extension '${i}'`), c = this._createAndSaveOperation(e, t.displayName, [], new LM(s));
-				return this._host.onExtensionActivationError(t.identifier, s, new Bw(i)), c;
+				let o = t.displayName || t.identifier.value, s = /* @__PURE__ */ Error(`Cannot activate the '${o}' extension because it depends on unknown extension '${i}'`), c = this._createAndSaveOperation(e, t.displayName, [], new BM(s));
+				return this._host.onExtensionActivationError(t.identifier, s, new Uw(i)), c;
 			}
 			return this._createAndSaveOperation(e, t.displayName, n, null);
 		}
 		_createAndSaveOperation(e, t, n, r) {
-			let i = new zM(e.id, t, e.reason, n, r, this._host, this._logService);
+			let i = new HM(e.id, t, e.reason, n, r, this._host, this._logService);
 			return this._operations.set(e.id, i), i;
 		}
 		_isHostExtension(e) {
@@ -10196,7 +10196,7 @@ var DM, OM, kM, AM, jM = t((() => {
 			let t = this._globalRegistry.getExtensionDescription(e);
 			return t ? !t.main && !t.browser : !1;
 		}
-	}, RM = N([R(3, Ct)], RM), zM = class {
+	}, VM = N([R(3, Ct)], VM), HM = class {
 		get value() {
 			return this._value;
 		}
@@ -10226,7 +10226,7 @@ var DM, OM, kM, AM, jM = t((() => {
 						}
 						if (t.value && t.value.activationFailed) {
 							let e = /* @__PURE__ */ Error(`Cannot activate the '${this.friendlyName}' extension because its dependency '${t.friendlyName}' failed to activate`);
-							e.detail = t.value.activationFailedError, this._value = new LM(e), this._host.onExtensionActivationError(this._id, e, null);
+							e.detail = t.value.activationFailedError, this._value = new BM(e), this._host.onExtensionActivationError(this._id, e, null);
 							return;
 						}
 					}
@@ -10240,13 +10240,13 @@ var DM, OM, kM, AM, jM = t((() => {
 				this._value = await this._host.actualActivateExtension(this._id, this._reason);
 			} catch (e) {
 				let t = /* @__PURE__ */ Error();
-				if (e && e.name && (t.name = e.name), e && e.message ? t.message = `Activating extension '${this._id.value}' failed: ${e.message}.` : t.message = `Activating extension '${this._id.value}' failed: ${e}.`, e && e.stack && (t.stack = e.stack), this._value = new LM(t), this._isDisposed && ja(e)) return;
+				if (e && e.name && (t.name = e.name), e && e.message ? t.message = `Activating extension '${this._id.value}' failed: ${e.message}.` : t.message = `Activating extension '${this._id.value}' failed: ${e}.`, e && e.stack && (t.stack = e.stack), this._value = new BM(t), this._isDisposed && ja(e)) return;
 				this._host.onExtensionActivationError(this._id, t, null), this._logService.error(`Activating extension ${this._id.value} failed due to an error:`), this._logService.error(e);
 			}
 		}
-	}, zM = N([R(6, Ct)], zM);
-})), VM, HM, UM = t((() => {
-	W(), $s(), E(), VM = class {
+	}, HM = N([R(6, Ct)], HM);
+})), WM, GM, KM = t((() => {
+	W(), $s(), E(), WM = class {
 		constructor(e, t) {
 			this._logService = t, this._onDidChangeStorage = new V(), this.onDidChangeStorage = this._onDidChangeStorage.event, this._proxy = e.getProxy(G.MainThreadStorage);
 		}
@@ -10275,9 +10275,9 @@ var DM, OM, kM, AM, jM = t((() => {
 				this._logService.error(`[extHostStorage] unexpected error parsing storage contents (extensionId: ${t}, global: ${e}): ${n}`);
 			}
 		}
-	}, HM = xl("IExtHostStorage");
-})), WM, GM, KM = t((() => {
-	S(), WM = class {
+	}, GM = xl("IExtHostStorage");
+})), qM, JM, YM = t((() => {
+	S(), qM = class {
 		constructor(e, t, n) {
 			this._deferredPromises = /* @__PURE__ */ new Map(), this._id = e, this._shared = t, this._storage = n, this._init = this._storage.initializeExtensionStorage(this._shared, this._id, Object.create(null)).then((e) => (this._value = e, this)), this._storageListener = this._storage.onDidChangeStorage((e) => {
 				e.shared === this._shared && e.key === this._id && (this._value = e.value);
@@ -10313,7 +10313,7 @@ var DM, OM, kM, AM, jM = t((() => {
 		dispose() {
 			this._storageListener.dispose();
 		}
-	}, GM = class extends WM {
+	}, JM = class extends qM {
 		setKeysForSync(e) {
 			this._storage.registerExtensionStorageKeysToSync({
 				id: this._id,
@@ -10324,8 +10324,8 @@ var DM, OM, kM, AM, jM = t((() => {
 			super(e.identifier.value, !0, t), this._extension = e;
 		}
 	};
-})), qM, JM, YM = t((() => {
-	b(), E(), Pf(), Xr(), PA(), U(), qM = xl("IExtensionStoragePaths"), JM = class {
+})), XM, ZM, QM = t((() => {
+	b(), E(), Pf(), Xr(), LA(), U(), XM = xl("IExtensionStoragePaths"), ZM = class {
 		constructor(e, t, n) {
 			this._logService = t, this._extHostFileSystem = n, this._workspace = e.workspace ?? void 0, this._environment = e.environment, this.whenReady = this._getOrCreateWorkspaceStoragePath().then((e) => this._value = e);
 		}
@@ -10356,20 +10356,20 @@ var DM, OM, kM, AM, jM = t((() => {
 			return H.joinPath(this._environment.globalStorageHome, e.identifier.value.toLowerCase());
 		}
 		onWillDeactivateAll() {}
-	}, JM = N([
+	}, ZM = N([
 		R(0, Kf),
 		R(1, Ct),
-		R(2, NA)
-	], JM);
-})), XM, ZM = t((() => {
-	fr(), XM = {
+		R(2, IA)
+	], ZM);
+})), $M, eN = t((() => {
+	fr(), $M = {
 		label: M(6128, "Other Models"),
 		order: 2 ** 53 - 1
 	};
-})), QM, $M, eN, tN = t((() => {
-	b(), $s(), Ds(), c(), U(), E(), qh(), W(), Pf(), Pr(), $M = class {
+})), tN, nN, rN, iN = t((() => {
+	b(), $s(), Ds(), c(), U(), E(), qh(), W(), Pf(), Pr(), nN = class {
 		static {
-			QM = this;
+			tN = this;
 		}
 		static {
 			this.InitialState = {
@@ -10389,7 +10389,7 @@ var DM, OM, kM, AM, jM = t((() => {
 			};
 		}
 		constructor(e, t) {
-			this._onDidChangeWindowState = new V(), this.onDidChangeWindowState = this._onDidChangeWindowState.event, this._state = QM.InitialState, e.handle && (this._nativeHandle = C(e.handle).buffer), this._proxy = t.getProxy(G.MainThreadWindow), this._proxy.$getInitialState().then(({ isFocused: e, isActive: t }) => {
+			this._onDidChangeWindowState = new V(), this.onDidChangeWindowState = this._onDidChangeWindowState.event, this._state = tN.InitialState, e.handle && (this._nativeHandle = C(e.handle).buffer), this._proxy = t.getProxy(G.MainThreadWindow), this._proxy.$getInitialState().then(({ isFocused: e, isActive: t }) => {
 				this.onDidChangeWindowProperty("focused", e), this.onDidChangeWindowProperty("active", t);
 			});
 		}
@@ -10428,22 +10428,22 @@ var DM, OM, kM, AM, jM = t((() => {
 			let n = await this._proxy.$asExternalUri(e, t);
 			return H.from(n);
 		}
-	}, $M = QM = N([R(0, Kf), R(1, $x)], $M), eN = xl("IExtHostWindow");
-})), nN, rN, iN, aN = t((() => {
-	b(), W(), U(), P(), ia(), wC(), E(), qh(), rN = class {
+	}, nN = tN = N([R(0, Kf), R(1, $x)], nN), rN = xl("IExtHostWindow");
+})), aN, oN, sN, cN = t((() => {
+	b(), W(), U(), P(), ia(), GC(), E(), qh(), oN = class {
 		static {
-			nN = this;
+			aN = this;
 		}
 		static {
 			this.HandlePool = 0;
 		}
 		constructor(e) {
-			this.handles = new xC(), this.handlers = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(G.MainThreadUrls);
+			this.handles = new OC(), this.handlers = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(G.MainThreadUrls);
 		}
 		registerUriHandler(e, t) {
 			let n = e.identifier;
 			if (this.handles.has(n)) throw Error(`Protocol handler already registered for extension ${n}`);
-			let r = nN.HandlePool++;
+			let r = aN.HandlePool++;
 			return this.handles.add(n), this.handlers.set(r, t), this._proxy.$registerUriHandler(r, n, e.displayName || e.name), g(() => {
 				this.handles.delete(n), this.handlers.delete(r), this._proxy.$unregisterUriHandler(r);
 			});
@@ -10461,15 +10461,15 @@ var DM, OM, kM, AM, jM = t((() => {
 		async createAppUri(e) {
 			return H.revive(await this._proxy.$createAppUri(e));
 		}
-	}, rN = nN = N([R(0, $x)], rN), iN = xl("IExtHostUrlsService");
+	}, oN = aN = N([R(0, $x)], oN), sN = xl("IExtHostUrlsService");
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostProgress.js
-function oN(e, t) {
+function lN(e, t) {
 	return e.message = t.message, typeof t.increment == "number" && (typeof e.increment == "number" ? e.increment += t.increment : e.increment = t.increment), e;
 }
-var sN, cN, lN, uN = t((() => {
-	b(), W(), wm(), TC(), Eo(), xr(), ia(), E(), qh(), sN = xl("IExtHostProgress"), cN = class {
+var uN, dN, fN, pN = t((() => {
+	b(), W(), wm(), KC(), Eo(), xr(), ia(), E(), qh(), uN = xl("IExtHostProgress"), dN = class {
 		constructor(e) {
 			this._handles = 0, this._mapHandleToCancellationSource = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(G.MainThreadProgress);
 		}
@@ -10501,7 +10501,7 @@ var sN, cN, lN, uN = t((() => {
 				this._proxy.$progressEnd(e), this._mapHandleToCancellationSource.delete(e), r?.dispose();
 			}, a;
 			try {
-				a = t(new lN(this._proxy, e), n && r ? r.token : xn.None);
+				a = t(new fN(this._proxy, e), n && r ? r.token : xn.None);
 			} catch (t) {
 				throw i(e), t;
 			}
@@ -10511,25 +10511,25 @@ var sN, cN, lN, uN = t((() => {
 			let t = this._mapHandleToCancellationSource.get(e);
 			t && (t.cancel(), this._mapHandleToCancellationSource.delete(e));
 		}
-	}, cN = N([R(0, $x)], cN), lN = class extends FC {
+	}, dN = N([R(0, $x)], dN), fN = class extends wC {
 		constructor(e, t) {
 			super((e) => this.throttledReport(e)), this._proxy = e, this._handle = t;
 		}
 		throttledReport(e) {
 			this._proxy.$progressReport(this._handle, e);
 		}
-	}, lN.__decorator = N([Ge(100, (e, t) => oN(e, t), () => Object.create(null))], lN.prototype, "throttledReport", null);
-})), dN, fN, pN, mN, hN, gN = t((() => {
-	b(), fr(), $s(), W(), gv(), wC(), g_(), E(), qh(), U(), $v(), tN(), Pf(), Xr(), _n(), P(), aN(), Pr(), An(), uN(), ia(), S(), Ir(), yc(), so(), dN = xl("IExtHostAuthentication"), fN = class {
+	}, fN.__decorator = N([Ge(100, (e, t) => lN(e, t), () => Object.create(null))], fN.prototype, "throttledReport", null);
+})), mN, hN, gN, _N, vN, yN = t((() => {
+	b(), fr(), $s(), W(), gv(), GC(), g_(), E(), qh(), U(), $v(), iN(), Pf(), Xr(), _n(), P(), cN(), Pr(), An(), pN(), ia(), S(), Ir(), yc(), so(), mN = xl("IExtHostAuthentication"), hN = class {
 		constructor(e, t, n, r, i, a, o) {
-			this._initData = t, this._extHostWindow = n, this._extHostUrls = r, this._extHostProgress = i, this._extHostLoggerService = a, this._logService = o, this._dynamicAuthProviderCtor = mN, this._authenticationProviders = /* @__PURE__ */ new Map(), this._providerOperations = new gl(), this._onDidChangeSessions = new V(), this._getSessionTaskSingler = new pN(), this._onDidDynamicAuthProviderTokensChange = new V(), this._proxy = e.getProxy(G.MainThreadAuthentication);
+			this._initData = t, this._extHostWindow = n, this._extHostUrls = r, this._extHostProgress = i, this._extHostLoggerService = a, this._logService = o, this._dynamicAuthProviderCtor = _N, this._authenticationProviders = /* @__PURE__ */ new Map(), this._providerOperations = new gl(), this._onDidChangeSessions = new V(), this._getSessionTaskSingler = new gN(), this._onDidDynamicAuthProviderTokensChange = new V(), this._proxy = e.getProxy(G.MainThreadAuthentication);
 		}
 		getExtensionScopedSessionsEvent(e) {
 			let t = e.toLowerCase();
 			return is.chain(this._onDidChangeSessions.event, (e) => e.filter((e) => !e.extensionIdFilter || e.extensionIdFilter.includes(t)).map((e) => ({ provider: e.provider })));
 		}
 		async getSession(e, t, n, r = {}) {
-			let i = AC.toKey(e.identifier), a = Object.keys(r).map((e) => {
+			let i = SC.toKey(e.identifier), a = Object.keys(r).map((e) => {
 				switch (e) {
 					case "account": return `${e}:${r.account?.id}`;
 					case "createIfNone":
@@ -10680,15 +10680,15 @@ var sN, cN, lN, uN = t((() => {
 				tokens: n
 			});
 		}
-	}, fN = N([
+	}, hN = N([
 		R(0, $x),
 		R(1, Kf),
-		R(2, eN),
-		R(3, iN),
-		R(4, sN),
+		R(2, rN),
+		R(3, sN),
+		R(4, uN),
 		R(5, ai),
 		R(6, Ct)
-	], fN), pN = class {
+	], hN), gN = class {
 		constructor() {
 			this._inFlightPromises = /* @__PURE__ */ new Map();
 		}
@@ -10698,13 +10698,13 @@ var sN, cN, lN, uN = t((() => {
 			let r = t().finally(() => this._inFlightPromises.delete(e));
 			return this._inFlightPromises.set(e, r), r;
 		}
-	}, mN = class {
+	}, _N = class {
 		constructor(e, t, n, r, i, a, o, s, c, l, u, d, f) {
 			this._extHostWindow = e, this._extHostUrls = t, this._initData = n, this._extHostProgress = r, this._proxy = a, this.authorizationServer = o, this._serverMetadata = s, this._resourceMetadata = c, this._clientId = l, this._clientSecret = u, this._onDidChangeSessions = new V(), this.onDidChangeSessions = this._onDidChangeSessions.event, this._onDidChangeClientId = new V(), this.onDidChangeClientId = this._onDidChangeClientId.event;
 			let p = o.toString(!0);
 			this.id = c?.resource ? p + " " + c?.resource : p, this.label = c?.resource_name ?? this.authorizationServer.authority, this._logger = i.createLogger(this.id, { name: `Auth: ${this.label}` }), this._disposable = new I(), this._disposable.add(this._onDidChangeSessions);
 			let m = is.chain(d.event, (e) => e.filter((e) => e.authProviderId === this.id && e.clientId === l).map((e) => e.tokens));
-			this._tokenStore = this._disposable.add(new hN({
+			this._tokenStore = this._disposable.add(new vN({
 				onDidChange: m,
 				set: (e) => a.$setSessionsForDynamicAuthProvider(this.id, this.clientId, e)
 			}, f, this._logger)), this._disposable.add(this._tokenStore.onDidChangeSessions((e) => this._onDidChangeSessions.fire(e))), this._createFlows = [], s.authorization_endpoint && this._createFlows.push({
@@ -10898,13 +10898,13 @@ var sN, cN, lN, uN = t((() => {
 				}
 			}
 		}
-	}, mN = N([
-		R(0, eN),
-		R(1, iN),
+	}, _N = N([
+		R(0, rN),
+		R(1, sN),
 		R(2, Kf),
-		R(3, sN),
+		R(3, uN),
 		R(4, ai)
-	], mN), hN = class {
+	], _N), vN = class {
 		constructor(e, t, n) {
 			this._persistence = e, this._logger = n, this._onDidChangeSessions = new V(), this.onDidChangeSessions = this._onDidChangeSessions.event, this._disposable = new I(), this._tokensObservable = He("tokens", t), this._sessionsObservable = Wi({ equalsFn: (e, t) => mn(e, t, (e, t) => e.accessToken === t.accessToken) }, (e) => this._tokensObservable.read(e).map((e) => this._getSessionFromToken(e))), this._disposable.add(this._registerChangeEventAutorun()), this._disposable.add(this._persistence.onDidChange((e) => this._tokensObservable.set(e, void 0)));
 		}
@@ -10978,8 +10978,8 @@ var sN, cN, lN, uN = t((() => {
 			};
 		}
 	};
-})), _N, vN, yN, bN, xN = t((() => {
-	b(), S(), Pr(), Eo(), ia(), $s(), Ut(), P(), U(), fr(), wC(), E(), Xr(), TC(), ZM(), g_(), kw(), xv(), W(), gN(), qh(), wm(), gv(), vN = xl("IExtHostLanguageModels"), yN = class {
+})), bN, xN, SN, CN, wN = t((() => {
+	b(), S(), Pr(), Eo(), ia(), $s(), Ut(), P(), U(), fr(), GC(), E(), Xr(), KC(), eN(), g_(), Mw(), xv(), W(), yN(), qh(), wm(), gv(), xN = xl("IExtHostLanguageModels"), SN = class {
 		constructor() {
 			this._defaultStream = new Ai(), this._isDone = !1;
 			let e = this, [t, n] = go.tee(e._defaultStream.asyncIterable);
@@ -11009,15 +11009,15 @@ var sN, cN, lN, uN = t((() => {
 		resolve() {
 			this._isDone = !0, this._defaultStream.resolve();
 		}
-	}, bN = class {
+	}, CN = class {
 		static {
-			_N = this;
+			bN = this;
 		}
 		static {
 			this._idPool = 1;
 		}
 		constructor(e, t, n) {
-			this._logService = t, this._extHostAuthentication = n, this._onDidChangeModelAccess = new V(), this._onDidChangeProviders = new V(), this.onDidChangeProviders = this._onDidChangeProviders.event, this._onDidChangeModelProxyAvailability = new V(), this.onDidChangeModelProxyAvailability = this._onDidChangeModelProxyAvailability.event, this._languageModelProviders = /* @__PURE__ */ new Map(), this._localModels = /* @__PURE__ */ new Map(), this._modelAccessList = new VC(), this._pendingRequest = /* @__PURE__ */ new Map(), this._ignoredFileProviders = /* @__PURE__ */ new Map(), this._languageAccessInformationExtensions = /* @__PURE__ */ new Set(), this._proxy = e.getProxy(G.MainThreadLanguageModels);
+			this._logService = t, this._extHostAuthentication = n, this._onDidChangeModelAccess = new V(), this._onDidChangeProviders = new V(), this.onDidChangeProviders = this._onDidChangeProviders.event, this._onDidChangeModelProxyAvailability = new V(), this.onDidChangeModelProxyAvailability = this._onDidChangeModelProxyAvailability.event, this._languageModelProviders = /* @__PURE__ */ new Map(), this._localModels = /* @__PURE__ */ new Map(), this._modelAccessList = new NC(), this._pendingRequest = /* @__PURE__ */ new Map(), this._ignoredFileProviders = /* @__PURE__ */ new Map(), this._languageAccessInformationExtensions = /* @__PURE__ */ new Set(), this._proxy = e.getProxy(G.MainThreadLanguageModels);
 		}
 		dispose() {
 			this._onDidChangeModelAccess.dispose(), this._onDidChangeProviders.dispose(), this._onDidChangeModelProxyAvailability.dispose();
@@ -11044,7 +11044,7 @@ var sN, cN, lN, uN = t((() => {
 			if (!r) return [];
 			let i = await r.provider.provideLanguageModelChatInformation(t, n) ?? [], a = i.map((t) => {
 				let n;
-				return t.requiresAuthorization && Dw(r.extension, "chatProvider") && (n = {
+				return t.requiresAuthorization && Aw(r.extension, "chatProvider") && (n = {
 					providerLabel: r.extension.displayName || r.extension.name,
 					accountLabel: typeof t.requiresAuthorization == "object" ? t.requiresAuthorization.label : void 0
 				}), t.capabilities.editTools && J(r.extension, "chatProvider"), {
@@ -11063,7 +11063,7 @@ var sN, cN, lN, uN = t((() => {
 						isDefault: t.isDefault,
 						isUserSelectable: t.isUserSelectable,
 						statusIcon: t.statusIcon,
-						modelPickerCategory: t.category ?? XM,
+						modelPickerCategory: t.category ?? $M,
 						capabilities: t.capabilities ? {
 							vision: t.capabilities.imageInput,
 							editTools: t.capabilities.editTools,
@@ -11090,7 +11090,7 @@ var sN, cN, lN, uN = t((() => {
 				c.length > 0 && (this._proxy.$reportResponsePart(t, new Kd(c)), c.length = 0);
 			}, u = new Ya(l, 30), d = (e) => {
 				c.push(e) > 30 ? (l(), u.cancel()) : u.schedule();
-			}, f = new FC(async (e) => {
+			}, f = new wC(async (e) => {
 				if (a.isCancellationRequested) {
 					this._logService.warn(`[CHAT](${s.extension.identifier.value}) CANNOT send progress because the REQUEST IS CANCELLED`);
 					return;
@@ -11125,7 +11125,7 @@ var sN, cN, lN, uN = t((() => {
 				p = s.provider.provideLanguageModelChatResponse(o.info, r.value.map(yg.to), {
 					...i,
 					modelOptions: i.modelOptions ?? {},
-					requestInitiator: AC.toKey(n),
+					requestInitiator: SC.toKey(n),
 					toolMode: i.toolMode ?? db.Auto
 				}, f, a);
 			} catch (e) {
@@ -11199,7 +11199,7 @@ var sN, cN, lN, uN = t((() => {
 				identifier: s.extension,
 				displayName: s.auth.providerLabel
 			}, r.justification, !1) || !this._modelAccessList.get(o)?.has(s.extension))) throw fy.NoPermissions(`Language model '${t}' cannot be used by '${o.value}'.`);
-			let c = Math.random() * 1e6 | 0, l = new yN();
+			let c = Math.random() * 1e6 | 0, l = new SN();
 			this._pendingRequest.set(c, {
 				languageModelId: t,
 				res: l
@@ -11244,7 +11244,7 @@ var sN, cN, lN, uN = t((() => {
 			}
 		}
 		_isUsingAuth(e, t) {
-			return !!t.auth && !AC.equals(t.extension, e);
+			return !!t.auth && !SC.equals(t.extension, e);
 		}
 		async _fakeAuthPopulate(e) {
 			if (e.auth) for (let t of this._languageAccessInformationExtensions) try {
@@ -11264,7 +11264,7 @@ var sN, cN, lN, uN = t((() => {
 		$updateModelAccesslist(e) {
 			let t = [];
 			for (let { from: n, to: r, enabled: i } of e) {
-				let e = this._modelAccessList.get(n) ?? new xC();
+				let e = this._modelAccessList.get(n) ?? new OC();
 				if (e.has(r) !== i) {
 					i ? e.add(r) : e.delete(r), this._modelAccessList.set(n, e);
 					let a = {
@@ -11277,7 +11277,7 @@ var sN, cN, lN, uN = t((() => {
 		}
 		createLanguageModelAccessInformation(e) {
 			this._languageAccessInformationExtensions.add(e);
-			let t = is.signal(is.filter(this._onDidChangeModelAccess.event, (t) => AC.equals(t.from, e.identifier))), n = is.signal(this._onDidChangeProviders.event);
+			let t = is.signal(is.filter(this._onDidChangeModelAccess.event, (t) => SC.equals(t.from, e.identifier))), n = is.signal(this._onDidChangeProviders.event);
 			return {
 				get onDidChange() {
 					return is.any(t, n);
@@ -11295,7 +11295,7 @@ var sN, cN, lN, uN = t((() => {
 		}
 		async getModelProxy(e) {
 			if (J(e, "languageModelProxy"), !this._languageModelProxyProvider) throw this._logService.trace("[LanguageModelProxy] No LanguageModelProxyProvider registered"), Error("No language model proxy provider is registered.");
-			let t = AC.toKey(e.identifier);
+			let t = SC.toKey(e.identifier);
 			try {
 				let e = await Promise.resolve(this._languageModelProxyProvider.provideModelProxy(t, xn.None));
 				if (!e) throw this._logService.warn(`[LanguageModelProxy] Provider returned no proxy for ${t}`), Error("Language model proxy is not available.");
@@ -11311,7 +11311,7 @@ var sN, cN, lN, uN = t((() => {
 		}
 		registerIgnoredFileProvider(e, t) {
 			J(e, "chatParticipantPrivate");
-			let n = _N._idPool++;
+			let n = bN._idPool++;
 			return this._proxy.$registerFileIgnoreProvider(n), this._ignoredFileProviders.set(n, t), g(() => {
 				this._proxy.$unregisterFileIgnoreProvider(n), this._ignoredFileProviders.delete(n);
 			});
@@ -11321,13 +11321,13 @@ var sN, cN, lN, uN = t((() => {
 				this._languageModelProxyProvider === t && (this._languageModelProxyProvider = void 0, this._onDidChangeModelProxyAvailability.fire());
 			});
 		}
-	}, bN = _N = N([
+	}, CN = bN = N([
 		R(0, $x),
 		R(1, Ct),
-		R(2, dN)
-	], bN);
-})), SN, CN, wN = t((() => {
-	W(), $s(), E(), SN = class {
+		R(2, mN)
+	], CN);
+})), TN, EN, DN = t((() => {
+	W(), $s(), E(), TN = class {
 		constructor(e) {
 			this._onDidChangePassword = new V(), this.onDidChangePassword = this._onDidChangePassword.event, this._proxy = e.getProxy(G.MainThreadSecretState);
 		}
@@ -11346,12 +11346,12 @@ var sN, cN, lN, uN = t((() => {
 		keys(e) {
 			return this._proxy.$getKeys(e);
 		}
-	}, CN = xl("IExtHostSecretState");
-})), TN, EN = t((() => {
-	wC(), $s(), P(), TN = class {
+	}, EN = xl("IExtHostSecretState");
+})), ON, kN = t((() => {
+	GC(), $s(), P(), ON = class {
 		#e;
 		constructor(e, t) {
-			this.disposables = new I(), this._id = AC.toKey(e.identifier), this.#e = t, this.onDidChange = is.map(is.filter(this.#e.onDidChangePassword, (e) => e.extensionId === this._id), (e) => ({ key: e.key }), this.disposables);
+			this.disposables = new I(), this._id = SC.toKey(e.identifier), this.#e = t, this.onDidChange = is.map(is.filter(this.#e.onDidChangePassword, (e) => e.extensionId === this._id), (e) => ({ key: e.key }), this.disposables);
 		}
 		dispose() {
 			this.disposables.dispose();
@@ -11369,8 +11369,8 @@ var sN, cN, lN, uN = t((() => {
 			return this.#e.keys(this._id) || [];
 		}
 	};
-})), DN, ON, kN = t((() => {
-	b(), mo(), c(), U(), E(), Xr(), W(), Pf(), qh(), DN = class {
+})), AN, jN, MN = t((() => {
+	b(), mo(), c(), U(), E(), Xr(), W(), Pf(), qh(), AN = class {
 		constructor(e, t, n) {
 			this.logService = n, this.bundleCache = /* @__PURE__ */ new Map(), this._proxy = t.getProxy(G.MainThreadLocalization), this.currentLanguage = e.environment.appLanguage, this.isDefaultLanguage = this.currentLanguage === "en";
 		}
@@ -11414,24 +11414,24 @@ var sN, cN, lN, uN = t((() => {
 			}
 			return e.l10n ? H.joinPath(e.extensionLocation, e.l10n, `bundle.l10n.${this.currentLanguage}.json`) : void 0;
 		}
-	}, DN = N([
+	}, AN = N([
 		R(0, Kf),
 		R(1, $x),
 		R(2, Ct)
-	], DN), ON = xl("IExtHostLocalizationService");
-})), AN, jN, MN, NN, PN = t((() => {
-	b(), W(), E(), P(), qh(), Pr(), AN = xl("IExtHostManagedSockets"), jN = class {
+	], AN), jN = xl("IExtHostLocalizationService");
+})), NN, PN, FN, IN, LN = t((() => {
+	b(), W(), E(), P(), qh(), Pr(), NN = xl("IExtHostManagedSockets"), PN = class {
 		constructor(e) {
 			this._remoteSocketIdCounter = 0, this._factory = null, this._managedRemoteSockets = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(G.MainThreadManagedSockets);
 		}
 		setFactory(e, t) {
 			for (let e of this._managedRemoteSockets.values()) e.dispose();
-			this._factory && this._proxy.$unregisterSocketFactory(this._factory.socketFactoryId), this._factory = new MN(e, t), this._proxy.$registerSocketFactory(this._factory.socketFactoryId);
+			this._factory && this._proxy.$unregisterSocketFactory(this._factory.socketFactoryId), this._factory = new FN(e, t), this._proxy.$registerSocketFactory(this._factory.socketFactoryId);
 		}
 		async $openRemoteSocket(e) {
 			if (!this._factory || this._factory.socketFactoryId !== e) throw Error(`No socket factory with id ${e}`);
 			let t = ++this._remoteSocketIdCounter, n = await this._factory.makeConnection(), r = new I();
-			return this._managedRemoteSockets.set(t, new NN(t, n, r)), r.add(g(() => this._managedRemoteSockets.delete(t))), r.add(n.onDidEnd(() => {
+			return this._managedRemoteSockets.set(t, new IN(t, n, r)), r.add(g(() => this._managedRemoteSockets.delete(t))), r.add(n.onDidEnd(() => {
 				this._proxy.$onDidManagedSocketEnd(t), r.dispose();
 			})), r.add(n.onDidClose((e) => {
 				this._proxy.$onDidManagedSocketClose(t, e?.stack ?? e?.message), r.dispose();
@@ -11447,11 +11447,11 @@ var sN, cN, lN, uN = t((() => {
 		async $remoteSocketDrain(e) {
 			await this._managedRemoteSockets.get(e)?.actual.drain?.();
 		}
-	}, jN = N([R(0, $x)], jN), MN = class {
+	}, PN = N([R(0, $x)], PN), FN = class {
 		constructor(e, t) {
 			this.socketFactoryId = e, this.makeConnection = t;
 		}
-	}, NN = class extends z {
+	}, IN = class extends z {
 		constructor(e, t, n) {
 			super(), this.socketId = e, this.actual = t, this._register(n);
 		}
@@ -11459,19 +11459,19 @@ var sN, cN, lN, uN = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostExtensionService.js
-function FN(e, t, n, r) {
+function RN(e, t, n, r) {
 	e.addActivationEvents(r.addActivationEvents);
 	let i = new Tx(e, t.getAllExtensionDescriptions());
 	i.deltaExtensions(r.toAdd, r.toRemove);
-	let a = new xC(n.getAllExtensionDescriptions().map((e) => e.identifier));
+	let a = new OC(n.getAllExtensionDescriptions().map((e) => e.identifier));
 	for (let e of r.myToRemove) a.delete(e);
 	for (let e of r.myToAdd) a.add(e);
 	return {
 		globalRegistry: i,
-		myExtensions: RN(i, a)
+		myExtensions: VN(i, a)
 	};
 }
-function IN(e, t) {
+function zN(e, t) {
 	return {
 		id: e.identifier.value,
 		name: e.name,
@@ -11483,23 +11483,23 @@ function IN(e, t) {
 		reasonId: t.extensionId.value
 	};
 }
-function LN(e) {
+function BN(e) {
 	return e.getAllExtensionDescriptions().map((e) => e.identifier.value).join(",");
 }
-function RN(e, t) {
+function VN(e, t) {
 	return e.getAllExtensionDescriptions().filter((e) => t.has(e.identifier));
 }
-var zN, BN, VN, HN, UN, WN, GN, KN = t((() => {
-	b(), fr(), Bc(), Gn(), S(), P(), Yi(), U(), Xr(), W(), pj(), BM(), UM(), $A(), kw(), fb(), ia(), wC(), Pr(), KM(), gv(), hx(), E(), Pf(), YM(), qh(), qr(), Fh(), oM(), xN(), $s(), Ty(), wN(), EN(), Ds(), kN(), vc(), mo(), PN(), BN = xl("IHostUtils"), VN = zN = class extends z {
+var HN, UN, WN, GN, KN, qN, JN, YN = t((() => {
+	b(), fr(), Bc(), Gn(), S(), P(), Yi(), U(), Xr(), W(), gj(), UM(), KM(), nj(), Mw(), fb(), ia(), GC(), Pr(), YM(), gv(), hx(), E(), Pf(), QM(), qh(), qr(), Fh(), lM(), wN(), $s(), Ty(), DN(), kN(), Ds(), MN(), vc(), mo(), LN(), UN = xl("IHostUtils"), WN = HN = class extends z {
 		constructor(e, t, n, r, i, a, o, s, c, l, u, d, f) {
-			super(), this._extHostManagedSockets = d, this._extHostLanguageModels = f, this._onDidChangeRemoteConnectionData = this._register(new V()), this.onDidChangeRemoteConnectionData = this._onDidChangeRemoteConnectionData.event, this._realPathCache = /* @__PURE__ */ new Map(), this._isTerminating = !1, this._hostUtils = t, this._extHostContext = n, this._initData = o, this._extHostWorkspace = r, this._extHostConfiguration = i, this._logService = a, this._extHostTunnelService = c, this._extHostTerminalService = l, this._extHostLocalizationService = u, this._mainThreadWorkspaceProxy = this._extHostContext.getProxy(G.MainThreadWorkspace), this._mainThreadTelemetryProxy = this._extHostContext.getProxy(G.MainThreadTelemetry), this._mainThreadExtensionsProxy = this._extHostContext.getProxy(G.MainThreadExtensionService), this._almostReadyToRunExtensions = new Cs(), this._readyToStartExtensionHost = new Cs(), this._readyToRunExtensions = new Cs(), this._eagerExtensionsActivated = new Cs(), this._activationEventsReader = new GN(this._initData.extensions.activationEvents), this._globalRegistry = new Tx(this._activationEventsReader, this._initData.extensions.allExtensions);
-			let p = new xC(this._initData.extensions.myExtensions);
-			this._myRegistry = new Tx(this._activationEventsReader, RN(this._globalRegistry, p)), ys && (this._logService.info(`Creating extension host with the following global extensions: ${LN(this._globalRegistry)}`), this._logService.info(`Creating extension host with the following local extensions: ${LN(this._myRegistry)}`)), this._storage = new VM(this._extHostContext, this._logService), this._secretState = new SN(this._extHostContext), this._storagePath = s, this._instaService = this._store.add(e.createChild(new ni([HM, this._storage], [CN, this._secretState]))), this._activator = this._register(new RM(this._myRegistry, this._globalRegistry, {
+			super(), this._extHostManagedSockets = d, this._extHostLanguageModels = f, this._onDidChangeRemoteConnectionData = this._register(new V()), this.onDidChangeRemoteConnectionData = this._onDidChangeRemoteConnectionData.event, this._realPathCache = /* @__PURE__ */ new Map(), this._isTerminating = !1, this._hostUtils = t, this._extHostContext = n, this._initData = o, this._extHostWorkspace = r, this._extHostConfiguration = i, this._logService = a, this._extHostTunnelService = c, this._extHostTerminalService = l, this._extHostLocalizationService = u, this._mainThreadWorkspaceProxy = this._extHostContext.getProxy(G.MainThreadWorkspace), this._mainThreadTelemetryProxy = this._extHostContext.getProxy(G.MainThreadTelemetry), this._mainThreadExtensionsProxy = this._extHostContext.getProxy(G.MainThreadExtensionService), this._almostReadyToRunExtensions = new Cs(), this._readyToStartExtensionHost = new Cs(), this._readyToRunExtensions = new Cs(), this._eagerExtensionsActivated = new Cs(), this._activationEventsReader = new JN(this._initData.extensions.activationEvents), this._globalRegistry = new Tx(this._activationEventsReader, this._initData.extensions.allExtensions);
+			let p = new OC(this._initData.extensions.myExtensions);
+			this._myRegistry = new Tx(this._activationEventsReader, VN(this._globalRegistry, p)), ys && (this._logService.info(`Creating extension host with the following global extensions: ${BN(this._globalRegistry)}`), this._logService.info(`Creating extension host with the following local extensions: ${BN(this._myRegistry)}`)), this._storage = new WM(this._extHostContext, this._logService), this._secretState = new TN(this._extHostContext), this._storagePath = s, this._instaService = this._store.add(e.createChild(new ni([GM, this._storage], [EN, this._secretState]))), this._activator = this._register(new VM(this._myRegistry, this._globalRegistry, {
 				onExtensionActivationError: (e, t, n) => {
 					this._mainThreadExtensionsProxy.$onExtensionActivationError(e, Ua(t), n);
 				},
 				actualActivateExtension: async (e, t) => {
-					if (Tx.isHostExtension(e, this._myRegistry, this._globalRegistry)) return await this._mainThreadExtensionsProxy.$activateExtension(e, t), new IM();
+					if (Tx.isHostExtension(e, this._myRegistry, this._globalRegistry)) return await this._mainThreadExtensionsProxy.$activateExtension(e, t), new zM();
 					let n = this._myRegistry.getExtensionDescription(e);
 					return this._activateExtension(n, t);
 				}
@@ -11540,7 +11540,7 @@ var zN, BN, VN, HN, UN, WN, GN, KN = t((() => {
 			let t = await this._mainThreadExtensionsProxy.$getExtension(e);
 			return t && {
 				...t,
-				identifier: new AC(t.identifier.value),
+				identifier: new SC(t.identifier.value),
 				extensionLocation: H.revive(t.extensionLocation)
 			};
 		}
@@ -11577,7 +11577,7 @@ var zN, BN, VN, HN, UN, WN, GN, KN = t((() => {
 			return e;
 		}
 		async getExtensionPathIndex() {
-			return this._extensionPathIndex ||= this._createExtensionPathIndex(this._myRegistry.getAllExtensionDescriptions()).then((e) => new WN(e)), this._extensionPathIndex;
+			return this._extensionPathIndex ||= this._createExtensionPathIndex(this._myRegistry.getAllExtensionDescriptions()).then((e) => new qN(e)), this._extensionPathIndex;
 		}
 		async _createExtensionPathIndex(e) {
 			let t = vs.forUris((e) => St.ignorePathCasing(e));
@@ -11614,7 +11614,7 @@ var zN, BN, VN, HN, UN, WN, GN, KN = t((() => {
 			});
 		}
 		_logExtensionActivationTimes(e, t, n, r) {
-			let i = IN(e, t);
+			let i = zN(e, t);
 			this._mainThreadTelemetryProxy.$publicLog2("extensionActivationTimes", {
 				...i,
 				...r || {},
@@ -11622,22 +11622,22 @@ var zN, BN, VN, HN, UN, WN, GN, KN = t((() => {
 			});
 		}
 		_doActivateExtension(e, t) {
-			let n = IN(e, t);
+			let n = zN(e, t);
 			this._mainThreadTelemetryProxy.$publicLog2("activatePlugin", n);
 			let r = this._getEntryPoint(e);
-			if (!r) return Promise.resolve(new FM(MM.NONE));
+			if (!r) return Promise.resolve(new RM(FM.NONE));
 			this._logService.info(`ExtensionService#_doActivateExtension ${e.identifier.value}, startup: ${t.startup}, activationEvent: '${t.activationEvent}'${e.identifier.value === t.extensionId.value ? "" : `, root cause: ${t.extensionId.value}`}`), this._logService.flush();
-			let i = this._isESM(e), a = new I(), o = new NM(t.startup);
-			return Promise.all([i ? this._loadESMModule(e, Gs(e.extensionLocation, r), o) : this._loadCommonJSModule(e, Gs(e.extensionLocation, r), o), this._loadExtensionContext(e, a)]).then((t) => (ro(`code/extHost/willActivateExtension/${e.identifier.value}`), zN._callActivate(this._logService, e.identifier, t[0], t[1], a, o))).then((t) => (ro(`code/extHost/didActivateExtension/${e.identifier.value}`), t));
+			let i = this._isESM(e), a = new I(), o = new IM(t.startup);
+			return Promise.all([i ? this._loadESMModule(e, Gs(e.extensionLocation, r), o) : this._loadCommonJSModule(e, Gs(e.extensionLocation, r), o), this._loadExtensionContext(e, a)]).then((t) => (ro(`code/extHost/willActivateExtension/${e.identifier.value}`), HN._callActivate(this._logService, e.identifier, t[0], t[1], a, o))).then((t) => (ro(`code/extHost/didActivateExtension/${e.identifier.value}`), t));
 		}
 		_loadExtensionContext(e, t) {
-			let n = this._extHostLanguageModels.createLanguageModelAccessInformation(e), r = t.add(new GM(e, this._storage)), i = t.add(new WM(e.identifier.value, !1, this._storage)), a = t.add(new TN(e, this._secretState)), o = e.isUnderDevelopment ? this._initData.environment.extensionTestsLocationURI ? kf.Test : kf.Development : kf.Production, s = this._initData.remote.isRemote ? Wh.Workspace : Wh.UI;
+			let n = this._extHostLanguageModels.createLanguageModelAccessInformation(e), r = t.add(new JM(e, this._storage)), i = t.add(new qM(e.identifier.value, !1, this._storage)), a = t.add(new ON(e, this._secretState)), o = e.isUnderDevelopment ? this._initData.environment.extensionTestsLocationURI ? kf.Test : kf.Development : kf.Production, s = this._initData.remote.isRemote ? Wh.Workspace : Wh.UI;
 			return this._logService.trace(`ExtensionService#loadExtensionContext ${e.identifier.value}`), Promise.all([
 				r.whenReady,
 				i.whenReady,
 				this._storagePath.whenReady
 			]).then(() => {
-				let t = this, c, l, u = Dw(e, "ipc") ? this._initData.messagePorts?.get(AC.toKey(e.identifier)) : void 0;
+				let t = this, c, l, u = Aw(e, "ipc") ? this._initData.messagePorts?.get(SC.toKey(e.identifier)) : void 0;
 				return Object.freeze({
 					globalState: r,
 					workspaceState: i,
@@ -11677,7 +11677,7 @@ var zN, BN, VN, HN, UN, WN, GN, KN = t((() => {
 						return o;
 					},
 					get extension() {
-						return c === void 0 && (c = new UN(t, e.identifier, e, s, !1)), c;
+						return c === void 0 && (c = new KN(t, e.identifier, e, s, !1)), c;
 					},
 					get extensionRuntime() {
 						return J(e, "extensionRuntime"), t.extensionRuntime;
@@ -11703,7 +11703,7 @@ var zN, BN, VN, HN, UN, WN, GN, KN = t((() => {
 			return n ||= {
 				activate: void 0,
 				deactivate: void 0
-			}, this._callActivateOptional(e, t, n, r, a).then((e) => new PM(!1, null, a.build(), n, e, g(() => {
+			}, this._callActivateOptional(e, t, n, r, a).then((e) => new LM(!1, null, a.build(), n, e, g(() => {
 				i.dispose(), ce(r.subscriptions);
 			})));
 		}
@@ -11791,7 +11791,7 @@ var zN, BN, VN, HN, UN, WN, GN, KN = t((() => {
 		async _doHandleExtensionTests() {
 			let { extensionDevelopmentLocationURI: e, extensionTestsLocationURI: t } = this._initData.environment;
 			if (!e || !t) throw Error(M(2690, "Cannot load test runner."));
-			let n = (await this.getExtensionPathIndex()).findSubstr(t), r = await (this._isESM(n, t.path) ? this._loadESMModule(null, t, new NM(!1)) : this._loadCommonJSModule(null, t, new NM(!1)));
+			let n = (await this.getExtensionPathIndex()).findSubstr(t), r = await (this._isESM(n, t.path) ? this._loadESMModule(null, t, new IM(!1)) : this._loadCommonJSModule(null, t, new IM(!1)));
 			if (!r || typeof r.run != "function") throw Error(M(2691, "Path {0} does not point to a valid extension test runner.", t.toString()));
 			return new Promise((e, n) => {
 				let i = (t, r) => {
@@ -11925,19 +11925,19 @@ var zN, BN, VN, HN, UN, WN, GN, KN = t((() => {
 		}
 		async $startExtensionHost(e) {
 			e.toAdd.forEach((e) => e.extensionLocation = H.revive(e.extensionLocation));
-			let { globalRegistry: t, myExtensions: n } = FN(this._activationEventsReader, this._globalRegistry, this._myRegistry, e), r = await this._createExtensionPathIndex(n);
-			return (await this.getExtensionPathIndex()).setSearchTree(r), this._globalRegistry.set(t.getAllExtensionDescriptions()), this._myRegistry.set(n), ys && (this._logService.info(`$startExtensionHost: global extensions: ${LN(this._globalRegistry)}`), this._logService.info(`$startExtensionHost: local extensions: ${LN(this._myRegistry)}`)), this._startExtensionHost();
+			let { globalRegistry: t, myExtensions: n } = RN(this._activationEventsReader, this._globalRegistry, this._myRegistry, e), r = await this._createExtensionPathIndex(n);
+			return (await this.getExtensionPathIndex()).setSearchTree(r), this._globalRegistry.set(t.getAllExtensionDescriptions()), this._myRegistry.set(n), ys && (this._logService.info(`$startExtensionHost: global extensions: ${BN(this._globalRegistry)}`), this._logService.info(`$startExtensionHost: local extensions: ${BN(this._myRegistry)}`)), this._startExtensionHost();
 		}
 		$activateByEvent(e, t) {
-			return t === Ew.Immediate ? this._almostReadyToRunExtensions.wait().then((t) => this._activateByEvent(e, !1)) : this._readyToRunExtensions.wait().then((t) => this._activateByEvent(e, !1));
+			return t === kw.Immediate ? this._almostReadyToRunExtensions.wait().then((t) => this._activateByEvent(e, !1)) : this._readyToRunExtensions.wait().then((t) => this._activateByEvent(e, !1));
 		}
 		async $activate(e, t) {
 			return await this._readyToRunExtensions.wait(), this._myRegistry.getExtensionDescription(e) ? (await this._activateById(e, t), !0) : !1;
 		}
 		async $deltaExtensions(e) {
 			e.toAdd.forEach((e) => e.extensionLocation = H.revive(e.extensionLocation));
-			let { globalRegistry: t, myExtensions: n } = FN(this._activationEventsReader, this._globalRegistry, this._myRegistry, e), r = await this._createExtensionPathIndex(n);
-			return (await this.getExtensionPathIndex()).setSearchTree(r), this._globalRegistry.set(t.getAllExtensionDescriptions()), this._myRegistry.set(n), ys && (this._logService.info(`$deltaExtensions: global extensions: ${LN(this._globalRegistry)}`), this._logService.info(`$deltaExtensions: local extensions: ${LN(this._myRegistry)}`)), Promise.resolve(void 0);
+			let { globalRegistry: t, myExtensions: n } = RN(this._activationEventsReader, this._globalRegistry, this._myRegistry, e), r = await this._createExtensionPathIndex(n);
+			return (await this.getExtensionPathIndex()).setSearchTree(r), this._globalRegistry.set(t.getAllExtensionDescriptions()), this._myRegistry.set(n), ys && (this._logService.info(`$deltaExtensions: global extensions: ${BN(this._globalRegistry)}`), this._logService.info(`$deltaExtensions: local extensions: ${BN(this._myRegistry)}`)), Promise.resolve(void 0);
 		}
 		async $test_latency(e) {
 			return e;
@@ -11956,21 +11956,21 @@ var zN, BN, VN, HN, UN, WN, GN, KN = t((() => {
 		_isESM(e, t) {
 			return t ??= e ? this._getEntryPoint(e) : t, t?.endsWith(".mjs") || e?.type === "module" && !t?.endsWith(".cjs");
 		}
-	}, VN = zN = N([
+	}, WN = HN = N([
 		R(0, It),
-		R(1, BN),
+		R(1, UN),
 		R(2, $x),
-		R(3, QA),
-		R(4, fj),
+		R(3, tj),
+		R(4, hj),
 		R(5, Ct),
 		R(6, Kf),
-		R(7, qM),
+		R(7, XM),
 		R(8, pS),
-		R(9, Qj),
-		R(10, ON),
-		R(11, AN),
-		R(12, vN)
-	], VN), HN = xl("IExtHostExtensionService"), UN = class {
+		R(9, tM),
+		R(10, jN),
+		R(11, NN),
+		R(12, xN)
+	], WN), GN = xl("IExtHostExtensionService"), KN = class {
 		#e;
 		#t;
 		#n;
@@ -11991,7 +11991,7 @@ var zN, BN, VN, HN, UN, WN, GN, KN = t((() => {
 				activationEvent: "api"
 			}), this.exports;
 		}
-	}, WN = class {
+	}, qN = class {
 		constructor(e) {
 			this._searchTree = e;
 		}
@@ -12004,9 +12004,9 @@ var zN, BN, VN, HN, UN, WN, GN, KN = t((() => {
 		forEach(e) {
 			return this._searchTree.forEach(e);
 		}
-	}, GN = class {
+	}, JN = class {
 		constructor(e) {
-			this._map = new VC(), this.addActivationEvents(e);
+			this._map = new NC(), this.addActivationEvents(e);
 		}
 		readActivationEvents(e) {
 			return this._map.get(e.identifier) ?? [];
@@ -12015,20 +12015,20 @@ var zN, BN, VN, HN, UN, WN, GN, KN = t((() => {
 			for (let t of Object.keys(e)) this._map.set(t, e[t]);
 		}
 	};
-})), qN, JN, YN, XN, ZN = t((() => {
+})), XN, ZN, QN, $N, eP = t((() => {
 	fr(), Ex(), (function(e) {
 		e.ViewletId = "workbench.view.extension.test", e.ExplorerViewId = "workbench.view.testing", e.OutputPeekContributionId = "editor.contrib.testingOutputPeek", e.DecorationsContributionId = "editor.contrib.testingDecorations", e.CoverageDecorationsContributionId = "editor.contrib.coverageDecorations", e.CoverageViewId = "workbench.view.testCoverage", e.ResultsPanelId = "workbench.panel.testResults", e.ResultsViewId = "workbench.panel.testResults.view", e.MessageLanguageId = "vscodeInternalTestMessage";
-	})(qN ||= {}), (function(e) {
+	})(XN ||= {}), (function(e) {
 		e.List = "list", e.Tree = "true";
-	})(JN ||= {}), (function(e) {
+	})(ZN ||= {}), (function(e) {
 		e.ByLocation = "location", e.ByStatus = "status", e.ByDuration = "duration";
-	})(YN ||= {}), p_.Errored, M(12709, "Errored"), p_.Failed, M(12710, "Failed"), p_.Passed, M(12711, "Passed"), p_.Queued, M(12712, "Queued"), p_.Running, M(12713, "Running"), p_.Skipped, M(12714, "Skipped"), p_.Unset, M(12715, "Not yet run"), xh.Debug, M(12717, "Debug"), xh.Run, M(12718, "Run"), xh.Coverage, M(12719, "Coverage"), (function(e) {
+	})(QN ||= {}), p_.Errored, M(12709, "Errored"), p_.Failed, M(12710, "Failed"), p_.Passed, M(12711, "Passed"), p_.Queued, M(12712, "Queued"), p_.Running, M(12713, "Running"), p_.Skipped, M(12714, "Skipped"), p_.Unset, M(12715, "Not yet run"), xh.Debug, M(12717, "Debug"), xh.Run, M(12718, "Run"), xh.Coverage, M(12719, "Coverage"), (function(e) {
 		e.CancelTestRefreshAction = "testing.cancelTestRefresh", e.CancelTestRunAction = "testing.cancelRun", e.ClearTestResultsAction = "testing.clearTestResults", e.CollapseAllAction = "testing.collapseAll", e.ConfigureTestProfilesAction = "testing.configureProfile", e.ContinousRunUsingForTest = "testing.continuousRunUsingForTest", e.CoverageAtCursor = "testing.coverageAtCursor", e.CoverageByUri = "testing.coverage.uri", e.CoverageClear = "testing.coverage.close", e.CoverageCurrentFile = "testing.coverageCurrentFile", e.CoverageFilterToTest = "testing.coverageFilterToTest", e.CoverageFilterToTestInEditor = "testing.coverageFilterToTestInEditor", e.CoverageGoToNextMissedLine = "testing.coverage.goToNextMissedLine", e.CoverageGoToPreviousMissedLine = "testing.coverage.goToPreviousMissedLine", e.CoverageLastRun = "testing.coverageLastRun", e.CoverageSelectedAction = "testing.coverageSelected", e.CoverageToggleInExplorer = "testing.toggleCoverageInExplorer", e.CoverageToggleToolbar = "testing.coverageToggleToolbar", e.CoverageViewChangeSorting = "testing.coverageViewChangeSorting", e.CoverageViewCollapseAll = "testing.coverageViewCollapseAll", e.DebugAction = "testing.debug", e.DebugAllAction = "testing.debugAll", e.DebugAtCursor = "testing.debugAtCursor", e.DebugByUri = "testing.debug.uri", e.DebugCurrentFile = "testing.debugCurrentFile", e.DebugFailedTests = "testing.debugFailTests", e.DebugFailedFromLastRun = "testing.debugFailedFromLastRun", e.DebugLastRun = "testing.debugLastRun", e.DebugSelectedAction = "testing.debugSelected", e.FilterAction = "workbench.actions.treeView.testExplorer.filter", e.GetExplorerSelection = "_testing.getExplorerSelection", e.GetSelectedProfiles = "testing.getSelectedProfiles", e.GoToTest = "testing.editFocusedTest", e.GoToRelatedTest = "testing.goToRelatedTest", e.PeekRelatedTest = "testing.peekRelatedTest", e.GoToRelatedCode = "testing.goToRelatedCode", e.PeekRelatedCode = "testing.peekRelatedCode", e.HideTestAction = "testing.hideTest", e.OpenCoverage = "testing.openCoverage", e.OpenOutputPeek = "testing.openOutputPeek", e.RefreshTestsAction = "testing.refreshTests", e.ReRunFailedTests = "testing.reRunFailTests", e.ReRunFailedFromLastRun = "testing.reRunFailedFromLastRun", e.ReRunLastRun = "testing.reRunLastRun", e.RunAction = "testing.run", e.RunAllAction = "testing.runAll", e.RunAllWithCoverageAction = "testing.coverageAll", e.RunAtCursor = "testing.runAtCursor", e.RunByUri = "testing.run.uri", e.RunCurrentFile = "testing.runCurrentFile", e.RunSelectedAction = "testing.runSelected", e.RunUsingProfileAction = "testing.runUsing", e.RunWithCoverageAction = "testing.coverage", e.SearchForTestExtension = "testing.searchForTestExtension", e.SelectDefaultTestProfiles = "testing.selectDefaultTestProfiles", e.ShowMostRecentOutputAction = "testing.showMostRecentOutput", e.StartContinousRun = "testing.startContinuousRun", e.StartContinousRunFromExtension = "testing.startContinuousRunFromExtension", e.StopContinousRunFromExtension = "testing.stopContinuousRunFromExtension", e.StopContinousRun = "testing.stopContinuousRun", e.TestingSortByDurationAction = "testing.sortByDuration", e.TestingSortByLocationAction = "testing.sortByLocation", e.TestingSortByStatusAction = "testing.sortByStatus", e.TestingViewAsListAction = "testing.viewAsList", e.TestingViewAsTreeAction = "testing.viewAsTree", e.ToggleContinousRunForTest = "testing.toggleContinuousRunForTest", e.ToggleResultsViewLayoutAction = "testing.toggleResultsViewLayout", e.ToggleInlineTestOutput = "testing.toggleInlineTestOutput", e.UnhideAllTestsAction = "testing.unhideAllTests", e.UnhideTestAction = "testing.unhideTest";
-	})(XN ||= {});
+	})($N ||= {});
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostTesting.js
-function QN(e, t) {
+function tP(e, t) {
 	for (let n = 0; n < e.path.length; n++) {
 		let r = t.find((t) => t.id === e.path[n]);
 		if (!r) return;
@@ -12036,26 +12036,26 @@ function QN(e, t) {
 		t = r.children;
 	}
 }
-var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
-	b(), S(), Pr(), Eo(), $s(), Dn(), P(), vl(), kt(), U(), Go(), E(), Xr(), ZN(), Tb(), tm(), Ex(), kw(), W(), Nj(), Jj(), qh(), wj(), wm(), gv(), $N = 0, eP = /* @__PURE__ */ new WeakMap(), tP = xl("IExtHostTesting"), nP = class extends z {
+var nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP, hP, gP, _P = t((() => {
+	b(), S(), Pr(), Eo(), $s(), Dn(), P(), vl(), kt(), U(), Go(), E(), Xr(), eP(), Tb(), tm(), Ex(), Mw(), W(), Ij(), Zj(), qh(), Dj(), wm(), gv(), nP = 0, rP = /* @__PURE__ */ new WeakMap(), iP = xl("IExtHostTesting"), aP = class extends z {
 		constructor(e, t, n, r) {
-			super(), this.logService = t, this.commands = n, this.editors = r, this.resultsChangedEmitter = this._register(new V()), this.controllers = /* @__PURE__ */ new Map(), this.defaultProfilesChangedEmitter = this._register(new V()), this.followupProviders = /* @__PURE__ */ new Set(), this.testFollowups = /* @__PURE__ */ new Map(), this.onResultsChanged = this.resultsChangedEmitter.event, this.results = [], this.proxy = e.getProxy(G.MainThreadTesting), this.observer = new dP(this.proxy), this.runTracker = new oP(this.proxy, t), n.registerArgumentProcessor({ processArgument: (e) => {
+			super(), this.logService = t, this.commands = n, this.editors = r, this.resultsChangedEmitter = this._register(new V()), this.controllers = /* @__PURE__ */ new Map(), this.defaultProfilesChangedEmitter = this._register(new V()), this.followupProviders = /* @__PURE__ */ new Set(), this.testFollowups = /* @__PURE__ */ new Map(), this.onResultsChanged = this.resultsChangedEmitter.event, this.results = [], this.proxy = e.getProxy(G.MainThreadTesting), this.observer = new mP(this.proxy), this.runTracker = new lP(this.proxy, t), n.registerArgumentProcessor({ processArgument: (e) => {
 				switch (e?.$mid) {
 					case Yn.TestItemContext: {
 						let t = e, n = t.tests[t.tests.length - 1].item.extId;
-						return this.controllers.get(ax.root(n))?.collection.tree.get(n)?.actual ?? bj(e);
+						return this.controllers.get(ax.root(n))?.collection.tree.get(n)?.actual ?? Cj(e);
 					}
 					case Yn.TestMessageMenuArgs: {
 						let { test: t, message: n } = e, r = t.item.extId;
 						return {
-							test: this.controllers.get(ax.root(r))?.collection.tree.get(r)?.actual ?? bj({ tests: [t] }),
+							test: this.controllers.get(ax.root(r))?.collection.tree.get(r)?.actual ?? Cj({ tests: [t] }),
 							message: bS.to(n)
 						};
 					}
 					default: return e;
 				}
 			} }), n.registerCommand(!1, "testing.getExplorerSelection", async () => {
-				let e = await n.executeCommand(XN.GetExplorerSelection), t = (e) => {
+				let e = await n.executeCommand($N.GetExplorerSelection), t = (e) => {
 					let t = this.controllers.get(ax.root(e));
 					if (t) return ax.isRoot(e) ? t.controller : t.collection.tree.get(e)?.actual;
 				};
@@ -12067,7 +12067,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 		}
 		createTestController(e, t, n, r) {
 			if (this.controllers.has(t)) throw Error(`Attempt to insert a duplicate controller with ID "${t}"`);
-			let i = new I(), a = i.add(new Cj(t, n, this.editors));
+			let i = new I(), a = i.add(new Ej(t, n, this.editors));
 			a.root.label = n;
 			let o = /* @__PURE__ */ new Map(), s = /* @__PURE__ */ new Set(), c = this.proxy, l = () => {
 				let e = 0;
@@ -12100,10 +12100,10 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 				createRunProfile: (e, n, r, i, a, c) => {
 					let l = en(e);
 					for (; o.has(l);) l++;
-					return new pP(this.proxy, o, s, this.defaultProfilesChangedEmitter.event, t, l, e, n, r, i, a, c);
+					return new gP(this.proxy, o, s, this.defaultProfilesChangedEmitter.event, t, l, e, n, r, i, a, c);
 				},
 				createTestItem(e, n, r) {
-					return new xj(t, e, n, r);
+					return new wj(t, e, n, r);
 				},
 				createTestRun: (n, r, i = !0) => this.runTracker.createTestRun(e, t, a, n, r, i),
 				invalidateTestResults: (e) => {
@@ -12135,7 +12135,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 			return this.observer.checkout();
 		}
 		async runTests(e, t = xn.None) {
-			let n = sP(e);
+			let n = uP(e);
 			if (!n) throw Error("The request passed to `vscode.test.runTests` must include a profile");
 			let r = this.controllers.get(n.controllerId);
 			if (!r) throw Error("Controller not found");
@@ -12209,7 +12209,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 		$publishTestResults(e) {
 			this.results = Object.freeze(e.map((e) => {
 				let t = Uh.to(e), n = e.tasks.findIndex((e) => e.hasCoverage);
-				return n !== -1 && (t.getDetailedCoverage = (t, r = xn.None) => this.proxy.$getCoverageDetails(e.id, n, t, r).then((e) => e.map(jS.to))), eP.set(t, e.id), t;
+				return n !== -1 && (t.getDetailedCoverage = (t, r = xn.None) => this.proxy.$getCoverageDetails(e.id, n, t, r).then((e) => e.map(jS.to))), rP.set(t, e.id), t;
 			}).concat(this.results).sort((e, t) => t.completedAt - e.completedAt).slice(0, 32)), this.resultsChangedEmitter.fire();
 		}
 		async $expandTest(e, t) {
@@ -12227,7 +12227,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 			return !t.isCancellationRequested && !r.some((e) => e.error) && await new Promise((e) => t.onCancellationRequested(e)), n.dispose(!0), r;
 		}
 		async $provideTestFollowups(e, t) {
-			let n = this.results.find((t) => eP.get(t) === e.resultId), r = n && QN(ax.fromString(e.extId), n?.results);
+			let n = this.results.find((t) => rP.get(t) === e.resultId), r = n && tP(ax.fromString(e.extId), n?.results);
 			if (!r) return [];
 			let i = [];
 			return await Promise.all([...this.followupProviders].map(async (a) => {
@@ -12238,7 +12238,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 					this.logService.error("Error thrown while providing followup for test message", e);
 				}
 			})), t.isCancellationRequested ? [] : i.map((e) => {
-				let t = $N++;
+				let t = nP++;
 				return this.testFollowups.set(t, e), {
 					title: e.title,
 					id: t
@@ -12271,7 +12271,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 			if (!s) return {};
 			let c = e.testIds.map((e) => i.tree.get(e)).filter(ei), l = e.excludeExtIds.map((e) => r.collection.tree.get(e)).filter(ei).filter((e) => c.some((t) => t.fullId.compare(e.fullId) === N_.IsChild));
 			if (!c.length) return {};
-			let u = new LS(c.some((e) => e.actual instanceof Sj) ? void 0 : c.map((e) => e.actual), l.map((e) => e.actual), s, t), d = pb(e) && this.runTracker.prepareForMainThreadTestRun(o, u, cP.fromInternal(e, r.collection), s, n);
+			let u = new LS(c.some((e) => e.actual instanceof Tj) ? void 0 : c.map((e) => e.actual), l.map((e) => e.actual), s, t), d = pb(e) && this.runTracker.prepareForMainThreadTestRun(o, u, dP.fromInternal(e, r.collection), s, n);
 			try {
 				return await s.runHandler(u, n), {};
 			} catch (e) {
@@ -12280,14 +12280,14 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 				d && d.hasRunningTasks && !n.isCancellationRequested && await is.toPromise(d.onEnd);
 			}
 		}
-	}, nP = N([
+	}, aP = N([
 		R(0, $x),
 		R(1, Ct),
-		R(2, jj),
-		R(3, qj)
-	], nP), rP = 1e4, (function(e) {
+		R(2, Pj),
+		R(3, Xj)
+	], aP), oP = 1e4, (function(e) {
 		e[e.Running = 0] = "Running", e[e.Cancelling = 1] = "Cancelling", e[e.Ended = 2] = "Ended";
-	})(iP ||= {}), aP = class extends z {
+	})(sP ||= {}), cP = class extends z {
 		get hasRunningTasks() {
 			return this.running > 0;
 		}
@@ -12295,8 +12295,8 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 			return this.dto.id;
 		}
 		constructor(e, t, n, r, i, a) {
-			super(), this.dto = e, this.proxy = t, this.logService = n, this.profile = r, this.extension = i, this.state = iP.Running, this.running = 0, this.tasks = /* @__PURE__ */ new Map(), this.sharedTestIds = /* @__PURE__ */ new Set(), this.endEmitter = this._register(new V()), this.publishedCoverage = /* @__PURE__ */ new Map(), this.onEnd = this.endEmitter.event, this.cts = this._register(new Fo(a));
-			let o = this._register(new Ya(() => this.forciblyEndTasks(), rP));
+			super(), this.dto = e, this.proxy = t, this.logService = n, this.profile = r, this.extension = i, this.state = sP.Running, this.running = 0, this.tasks = /* @__PURE__ */ new Map(), this.sharedTestIds = /* @__PURE__ */ new Set(), this.endEmitter = this._register(new V()), this.publishedCoverage = /* @__PURE__ */ new Map(), this.onEnd = this.endEmitter.event, this.cts = this._register(new Fo(a));
+			let o = this._register(new Ya(() => this.forciblyEndTasks(), oP));
 			this._register(this.cts.token.onCancellationRequested(() => o.schedule()));
 			let s = new V();
 			this.onDidDispose = s.event, this._register(g(() => {
@@ -12307,7 +12307,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 			for (let [t, { run: n }] of this.tasks) if (n === e) return t;
 		}
 		cancel(e) {
-			e ? this.tasks.get(e)?.cts.cancel() : this.state === iP.Running ? (this.cts.cancel(), this.state = iP.Cancelling) : this.state === iP.Cancelling && this.forciblyEndTasks();
+			e ? this.tasks.get(e)?.cts.cancel() : this.state === sP.Running ? (this.cts.cancel(), this.state = sP.Cancelling) : this.state === sP.Cancelling && this.forciblyEndTasks();
 		}
 		async getCoverageDetails(e, t, n) {
 			let [, r] = ax.fromString(e).path, i = this.publishedCoverage.get(e);
@@ -12397,10 +12397,10 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 			for (let { run: e } of this.tasks.values()) e.end();
 		}
 		markEnded() {
-			this.state !== iP.Ended && (this.state = iP.Ended, this.endEmitter.fire());
+			this.state !== sP.Ended && (this.state = sP.Ended, this.endEmitter.fire());
 		}
 		ensureTestIsKnown(e) {
-			if (!(e instanceof xj)) throw new jg(e.id);
+			if (!(e instanceof wj)) throw new jg(e.id);
 			if (this.sharedTestIds.has(ax.fromExtHostTestItem(e, this.dto.controllerId).toString())) return;
 			let t = [], n = this.dto.colllection.root;
 			for (;;) {
@@ -12413,7 +12413,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 		dispose() {
 			this.markEnded(), super.dispose();
 		}
-	}, oP = class {
+	}, lP = class {
 		get trackers() {
 			return this.tracked.values();
 		}
@@ -12440,7 +12440,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 		createTestRun(e, t, n, r, i, a) {
 			let o = this.tracked.get(r);
 			if (o) return o.createRun(i);
-			let s = cP.fromPublic(t, n, r, a), c = sP(r);
+			let s = dP.fromPublic(t, n, r, a), c = uP(r);
 			this.proxy.$startedExtensionTestRun({
 				controllerId: t,
 				continuous: !!r.continuous,
@@ -12460,15 +12460,15 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 			}), l.createRun(i);
 		}
 		getTracker(e, t, n, r, i) {
-			let a = new aP(t, this.proxy, this.logService, n, r, i);
+			let a = new cP(t, this.proxy, this.logService, n, r, i);
 			return this.tracked.set(e, a), this.trackedById.set(a.id, a), a;
 		}
-	}, sP = (e) => {
+	}, uP = (e) => {
 		if (e.profile) {
-			if (!(e.profile instanceof pP)) throw Error("TestRunRequest.profile is not an instance created from TestController.createRunProfile");
+			if (!(e.profile instanceof gP)) throw Error("TestRunRequest.profile is not an instance created from TestController.createRunProfile");
 			return e.profile;
 		}
-	}, cP = class e {
+	}, dP = class e {
 		static fromPublic(t, n, r, i) {
 			return new e(t, Qi(), i, n);
 		}
@@ -12478,7 +12478,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 		constructor(e, t, n, r) {
 			this.controllerId = e, this.id = t, this.isPersisted = n, this.colllection = r;
 		}
-	}, lP = class {
+	}, fP = class {
 		get isEmpty() {
 			return this.added.size === 0 && this.removed.size === 0 && this.updated.size === 0;
 		}
@@ -12518,7 +12518,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 		complete() {
 			this.isEmpty || this.emitter.fire(this.getChangeEvent());
 		}
-	}, uP = class extends t_ {
+	}, pP = class extends t_ {
 		constructor() {
 			super(...arguments), this.changeEmitter = new V(), this.onDidChangeTests = this.changeEmitter.event;
 		}
@@ -12540,9 +12540,9 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 			};
 		}
 		createChangeCollector() {
-			return new lP(this.changeEmitter);
+			return new fP(this.changeEmitter);
 		}
-	}, dP = class {
+	}, mP = class {
 		constructor(e) {
 			this.proxy = e;
 		}
@@ -12566,15 +12566,15 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 			this.current?.tests.apply(e);
 		}
 		createObserverData() {
-			let e = new uP({ asCanonicalUri: (e) => e });
+			let e = new pP({ asCanonicalUri: (e) => e });
 			return this.proxy.$subscribeToDiffs(), {
 				observers: 0,
 				tests: e
 			};
 		}
-	}, fP = (e, t, n, r) => {
+	}, hP = (e, t, n, r) => {
 		n ? Object.assign(n, r) : t.$updateTestRunConfig(e.controllerId, e.profileId, r);
-	}, pP = class extends xm {
+	}, gP = class extends xm {
 		#e;
 		#t;
 		#n;
@@ -12584,31 +12584,31 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 			return this._label;
 		}
 		set label(e) {
-			e !== this._label && (this._label = e, fP(this, this.#e, this.#r, { label: e }));
+			e !== this._label && (this._label = e, hP(this, this.#e, this.#r, { label: e }));
 		}
 		get supportsContinuousRun() {
 			return this._supportsContinuousRun;
 		}
 		set supportsContinuousRun(e) {
-			e !== this._supportsContinuousRun && (this._supportsContinuousRun = e, fP(this, this.#e, this.#r, { supportsContinuousRun: e }));
+			e !== this._supportsContinuousRun && (this._supportsContinuousRun = e, hP(this, this.#e, this.#r, { supportsContinuousRun: e }));
 		}
 		get isDefault() {
 			return this.#t.has(this.profileId);
 		}
 		set isDefault(e) {
-			e !== this.isDefault && (e ? this.#t.add(this.profileId) : this.#t.delete(this.profileId), fP(this, this.#e, this.#r, { isDefault: e }));
+			e !== this.isDefault && (e ? this.#t.add(this.profileId) : this.#t.delete(this.profileId), hP(this, this.#e, this.#r, { isDefault: e }));
 		}
 		get tag() {
 			return this._tag;
 		}
 		set tag(e) {
-			e?.id !== this._tag?.id && (this._tag = e, fP(this, this.#e, this.#r, { tag: e ? tg.namespace(this.controllerId, e.id) : null }));
+			e?.id !== this._tag?.id && (this._tag = e, hP(this, this.#e, this.#r, { tag: e ? tg.namespace(this.controllerId, e.id) : null }));
 		}
 		get configureHandler() {
 			return this._configureHandler;
 		}
 		set configureHandler(e) {
-			e !== this._configureHandler && (this._configureHandler = e, fP(this, this.#e, this.#r, { hasConfigurationHandler: !!e }));
+			e !== this._configureHandler && (this._configureHandler = e, hP(this, this.#e, this.#r, { hasConfigurationHandler: !!e }));
 		}
 		get onDidChangeDefault() {
 			return is.chain(this.#n, (e) => e.map((e) => e.get(this.controllerId)?.get(this.profileId)).filter(ei));
@@ -12633,18 +12633,18 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 			this.#i?.delete(this.profileId) && (this.#i = void 0, this.#e.$removeTestProfile(this.controllerId, this.profileId)), this.#r = void 0;
 		}
 	};
-})), hP, gP, _P, vP = t((() => {
+})), vP, yP, bP, xP = t((() => {
 	ia(), (function(e) {
 		e.Unknown = "unknown", e.Env = "env", e.Config = "config", e.Command = "command", e.Input = "input", e.ExtensionInstallFolder = "extensionInstallFolder", e.WorkspaceFolder = "workspaceFolder", e.Cwd = "cwd", e.WorkspaceFolderBasename = "workspaceFolderBasename", e.UserHome = "userHome", e.LineNumber = "lineNumber", e.ColumnNumber = "columnNumber", e.SelectedText = "selectedText", e.File = "file", e.FileWorkspaceFolder = "fileWorkspaceFolder", e.FileWorkspaceFolderBasename = "fileWorkspaceFolderBasename", e.RelativeFile = "relativeFile", e.RelativeFileDirname = "relativeFileDirname", e.FileDirname = "fileDirname", e.FileExtname = "fileExtname", e.FileBasename = "fileBasename", e.FileBasenameNoExtension = "fileBasenameNoExtension", e.FileDirnameBasename = "fileDirnameBasename", e.ExecPath = "execPath", e.ExecInstallFolder = "execInstallFolder", e.PathSeparator = "pathSeparator", e.PathSeparatorAlias = "/";
-	})(hP ||= {}), gP = Object.values(hP).filter((e) => typeof e == "string"), _P = class extends fc {
+	})(vP ||= {}), yP = Object.values(vP).filter((e) => typeof e == "string"), bP = class extends fc {
 		constructor(e, t) {
 			super(t), this.variable = e;
 		}
 	};
-})), yP, bP = t((() => {
-	aw(), Bc(), mo(), kt(), fr(), vP(), My(), yP = class {
+})), SP, CP = t((() => {
+	cw(), Bc(), mo(), kt(), fr(), xP(), My(), SP = class {
 		constructor(e, t, n, r) {
-			this._contributedVariables = /* @__PURE__ */ new Map(), this.resolvableVariables = new Set(gP), this._context = e, this._labelService = t, this._userHomePromise = n, r && (this._envVariablesPromise = r.then((e) => this.prepareEnv(e)));
+			this._contributedVariables = /* @__PURE__ */ new Map(), this.resolvableVariables = new Set(yP), this._context = e, this._labelService = t, this._userHomePromise = n, r && (this._envVariablesPromise = r.then((e) => this.prepareEnv(e)));
 		}
 		prepareEnv(e) {
 			if (fl) {
@@ -12690,23 +12690,23 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 				userHome: n === void 0 ? await this._userHomePromise : void 0
 			}, { name: a, arg: o } = e, s = (t) => {
 				let n = this._context.getFilePath();
-				if (n) return sw(n);
-				throw new _P(t, M(13823, "Variable {0} can not be resolved. Please open an editor.", e.id));
+				if (n) return uw(n);
+				throw new bP(t, M(13823, "Variable {0} can not be resolved. Please open an editor.", e.id));
 			}, c = (t) => {
 				let n = s(t);
 				if (this._context.getWorkspaceFolderPathForFile) {
 					let e = this._context.getWorkspaceFolderPathForFile();
-					if (e) return sw(e);
+					if (e) return uw(e);
 				}
-				throw new _P(t, M(13824, "Variable {0}: can not find workspace folder of '{1}'.", e.id, Zc(n)));
+				throw new bP(t, M(13824, "Variable {0}: can not find workspace folder of '{1}'.", e.id, Zc(n)));
 			}, l = (e) => {
 				if (o) {
 					let t = this._context.getFolderUri(o);
 					if (t) return t;
-					throw new _P(e, M(13825, "Variable {0} can not be resolved. No such folder '{1}'.", e, o));
+					throw new bP(e, M(13825, "Variable {0} can not be resolved. No such folder '{1}'.", e, o));
 				}
 				if (t) return t;
-				throw this._context.getWorkspaceFolderCount() > 1 ? new _P(e, M(13826, "Variable {0} can not be resolved in a multi folder workspace. Scope this variable using ':' and a workspace folder name.", e)) : new _P(e, M(13827, "Variable {0} can not be resolved. Please open a folder.", e));
+				throw this._context.getWorkspaceFolderCount() > 1 ? new bP(e, M(13826, "Variable {0} can not be resolved in a multi folder workspace. Scope this variable using ':' and a workspace folder name.", e)) : new bP(e, M(13827, "Variable {0} can not be resolved. Please open a folder.", e));
 			};
 			switch (a) {
 				case "env":
@@ -12717,47 +12717,47 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 						}
 						return "";
 					}
-					throw new _P(hP.Env, M(13828, "Variable {0} can not be resolved because no environment variable name is given.", e.id));
+					throw new bP(vP.Env, M(13828, "Variable {0} can not be resolved because no environment variable name is given.", e.id));
 				case "config":
 					if (o) {
 						let n = this._context.getConfigurationValue(t, o);
-						if (Us(n)) throw new _P(hP.Config, M(13829, "Variable {0} can not be resolved because setting '{1}' not found.", e.id, o));
-						if (u(n)) throw new _P(hP.Config, M(13830, "Variable {0} can not be resolved because '{1}' is a structured value.", e.id, o));
+						if (Us(n)) throw new bP(vP.Config, M(13829, "Variable {0} can not be resolved because setting '{1}' not found.", e.id, o));
+						if (u(n)) throw new bP(vP.Config, M(13830, "Variable {0} can not be resolved because '{1}' is a structured value.", e.id, o));
 						return n;
 					}
-					throw new _P(hP.Config, M(13831, "Variable {0} can not be resolved because no settings name is given.", e.id));
-				case "command": return this.resolveFromMap(hP.Command, e.id, o, r, "command");
-				case "input": return this.resolveFromMap(hP.Input, e.id, o, r, "input");
+					throw new bP(vP.Config, M(13831, "Variable {0} can not be resolved because no settings name is given.", e.id));
+				case "command": return this.resolveFromMap(vP.Command, e.id, o, r, "command");
+				case "input": return this.resolveFromMap(vP.Input, e.id, o, r, "input");
 				case "extensionInstallFolder":
 					if (o) {
 						let t = await this._context.getExtension(o);
-						if (!t) throw new _P(hP.ExtensionInstallFolder, M(13832, "Variable {0} can not be resolved because the extension {1} is not installed.", e.id, o));
+						if (!t) throw new bP(vP.ExtensionInstallFolder, M(13832, "Variable {0} can not be resolved because the extension {1} is not installed.", e.id, o));
 						return this.fsPath(t.extensionLocation);
 					}
-					throw new _P(hP.ExtensionInstallFolder, M(13833, "Variable {0} can not be resolved because no extension name is given.", e.id));
+					throw new bP(vP.ExtensionInstallFolder, M(13833, "Variable {0} can not be resolved because no extension name is given.", e.id));
 				default: switch (a) {
 					case "workspaceRoot":
 					case "workspaceFolder": {
-						let e = l(hP.WorkspaceFolder);
-						return e ? sw(this.fsPath(e)) : void 0;
+						let e = l(vP.WorkspaceFolder);
+						return e ? uw(this.fsPath(e)) : void 0;
 					}
 					case "cwd": {
 						if (!t && !o) return On();
-						let e = l(hP.Cwd);
-						return e ? sw(this.fsPath(e)) : void 0;
+						let e = l(vP.Cwd);
+						return e ? uw(this.fsPath(e)) : void 0;
 					}
 					case "workspaceRootFolderName":
 					case "workspaceFolderBasename": {
-						let e = l(hP.WorkspaceFolderBasename);
-						return e ? sw(Zc(this.fsPath(e))) : void 0;
+						let e = l(vP.WorkspaceFolderBasename);
+						return e ? uw(Zc(this.fsPath(e))) : void 0;
 					}
 					case "userHome":
 						if (i.userHome) return i.userHome;
-						throw new _P(hP.UserHome, M(13834, "Variable {0} can not be resolved. UserHome path is not defined", e.id));
+						throw new bP(vP.UserHome, M(13834, "Variable {0} can not be resolved. UserHome path is not defined", e.id));
 					case "lineNumber": {
 						let t = this._context.getLineNumber();
 						if (t) return t;
-						throw new _P(hP.LineNumber, M(13835, "Variable {0} can not be resolved. Make sure to have a line selected in the active editor.", e.id));
+						throw new bP(vP.LineNumber, M(13835, "Variable {0} can not be resolved. Make sure to have a line selected in the active editor.", e.id));
 					}
 					case "columnNumber": {
 						let t = this._context.getColumnNumber();
@@ -12767,34 +12767,34 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 					case "selectedText": {
 						let t = this._context.getSelectedText();
 						if (t) return t;
-						throw new _P(hP.SelectedText, M(13837, "Variable {0} can not be resolved. Make sure to have some text selected in the active editor.", e.id));
+						throw new bP(vP.SelectedText, M(13837, "Variable {0} can not be resolved. Make sure to have some text selected in the active editor.", e.id));
 					}
-					case "file": return s(hP.File);
-					case "fileWorkspaceFolder": return c(hP.FileWorkspaceFolder);
-					case "fileWorkspaceFolderBasename": return Zc(c(hP.FileWorkspaceFolderBasename));
-					case "relativeFile": return t || o ? v(this.fsPath(l(hP.RelativeFile)), s(hP.RelativeFile)) : s(hP.RelativeFile);
+					case "file": return s(vP.File);
+					case "fileWorkspaceFolder": return c(vP.FileWorkspaceFolder);
+					case "fileWorkspaceFolderBasename": return Zc(c(vP.FileWorkspaceFolderBasename));
+					case "relativeFile": return t || o ? v(this.fsPath(l(vP.RelativeFile)), s(vP.RelativeFile)) : s(vP.RelativeFile);
 					case "relativeFileDirname": {
-						let e = nr(s(hP.RelativeFileDirname));
+						let e = nr(s(vP.RelativeFileDirname));
 						if (t || o) {
-							let t = v(this.fsPath(l(hP.RelativeFileDirname)), e);
+							let t = v(this.fsPath(l(vP.RelativeFileDirname)), e);
 							return t.length === 0 ? "." : t;
 						}
 						return e;
 					}
-					case "fileDirname": return nr(s(hP.FileDirname));
-					case "fileExtname": return le(s(hP.FileExtname));
-					case "fileBasename": return Zc(s(hP.FileBasename));
+					case "fileDirname": return nr(s(vP.FileDirname));
+					case "fileExtname": return le(s(vP.FileExtname));
+					case "fileBasename": return Zc(s(vP.FileBasename));
 					case "fileBasenameNoExtension": {
-						let e = Zc(s(hP.FileBasenameNoExtension));
+						let e = Zc(s(vP.FileBasenameNoExtension));
 						return e.slice(0, e.length - le(e).length);
 					}
-					case "fileDirnameBasename": return Zc(nr(s(hP.FileDirnameBasename)));
+					case "fileDirnameBasename": return Zc(nr(s(vP.FileDirnameBasename)));
 					case "execPath": return this._context.getExecPath() || e.id;
 					case "execInstallFolder": return this._context.getAppRoot() || e.id;
 					case "pathSeparator":
 					case "/": return yo;
 					default: try {
-						return this.resolveFromMap(hP.Unknown, e.id, o, r, void 0);
+						return this.resolveFromMap(vP.Unknown, e.id, o, r, void 0);
 					} catch {
 						return e.id;
 					}
@@ -12805,13 +12805,13 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 			if (n && r) {
 				let a = i === void 0 ? r[n] : r[i + ":" + n];
 				if (typeof a == "string") return a;
-				throw new _P(e, M(13838, "Variable {0} can not be resolved because the command has no value.", t));
+				throw new bP(e, M(13838, "Variable {0} can not be resolved because the command has no value.", t));
 			}
 			return t;
 		}
 	};
-})), xP, SP, CP, wP = t((() => {
-	b(), Gc(), P(), Bc(), at(), E(), Jj(), jM(), KN(), gv(), $A(), bP(), pj(), xP = xl("IExtHostVariableResolverProvider"), SP = class extends yP {
+})), wP, TP, EP, DP = t((() => {
+	b(), Gc(), P(), Bc(), at(), E(), Zj(), PM(), YN(), gv(), nj(), CP(), gj(), wP = xl("IExtHostVariableResolverProvider"), TP = class extends SP {
 		constructor(e, t, n, r, i, a, o) {
 			function s() {
 				if (n) {
@@ -12867,28 +12867,28 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 				getExtension: (t) => e.getExtension(t)
 			}, void 0, o ? Promise.resolve(o) : void 0, Promise.resolve(Me));
 		}
-	}, CP = class extends z {
+	}, EP = class extends z {
 		constructor(e, t, n, r, i) {
 			super(), this.extensionService = e, this.workspaceService = t, this.editorService = n, this.configurationService = r, this.editorTabs = i, this._resolver = new fe(async () => {
 				let e = await this.configurationService.getConfigProvider(), t = { folders: await this.workspaceService.getWorkspaceFolders2() || [] };
 				return this._register(this.workspaceService.onDidChangeWorkspace(async (e) => {
 					t.folders = await this.workspaceService.getWorkspaceFolders2() || [];
-				})), new SP(this.extensionService, this.workspaceService, this.editorService, this.editorTabs, e, t, this.homeDir());
+				})), new TP(this.extensionService, this.workspaceService, this.editorService, this.editorTabs, e, t, this.homeDir());
 			});
 		}
 		getResolver() {
 			return this._resolver.value;
 		}
 		homeDir() {}
-	}, CP = N([
-		R(0, HN),
-		R(1, QA),
-		R(2, qj),
-		R(3, fj),
-		R(4, DM)
-	], CP);
-})), TP, EP, DP, OP, kP, AP, jP, MP = t((() => {
-	b(), An(), S(), $s(), P(), $c(), U(), wC(), E(), ES(), Mv(), Hv(), W(), Nj(), pj(), jM(), KN(), qh(), mP(), wm(), gv(), wP(), $A(), Dm(), im(), TP = xl("IExtHostDebugService"), EP = class extends z {
+	}, EP = N([
+		R(0, GN),
+		R(1, tj),
+		R(2, Xj),
+		R(3, hj),
+		R(4, AM)
+	], EP);
+})), OP, kP, AP, jP, MP, NP, PP, FP = t((() => {
+	b(), An(), S(), $s(), P(), $c(), U(), GC(), E(), ES(), Mv(), Hv(), W(), Ij(), gj(), PM(), YN(), qh(), _P(), wm(), gv(), DP(), nj(), Dm(), im(), OP = xl("IExtHostDebugService"), kP = class extends z {
 		get onDidStartDebugSession() {
 			return this._onDidStartDebugSession.event;
 		}
@@ -12908,7 +12908,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 			return this._activeDebugConsole.value;
 		}
 		constructor(e, t, n, r, i, a, o, s) {
-			super(), this._workspaceService = t, this._extensionService = n, this._configurationService = r, this._editorTabs = i, this._variableResolver = a, this._commands = o, this._testing = s, this._debugSessions = /* @__PURE__ */ new Map(), this._debugVisualizationTreeItemIdsCounter = 0, this._debugVisualizationProviders = /* @__PURE__ */ new Map(), this._debugVisualizationTrees = /* @__PURE__ */ new Map(), this._debugVisualizationTreeItemIds = /* @__PURE__ */ new WeakMap(), this._debugVisualizationElements = /* @__PURE__ */ new Map(), this._visualizers = /* @__PURE__ */ new Map(), this._visualizerIdCounter = 0, this._configProviderHandleCounter = 0, this._configProviders = [], this._adapterFactoryHandleCounter = 0, this._adapterFactories = [], this._trackerFactoryHandleCounter = 0, this._trackerFactories = [], this._debugAdapters = /* @__PURE__ */ new Map(), this._debugAdaptersTrackers = /* @__PURE__ */ new Map(), this._onDidStartDebugSession = this._register(new V()), this._onDidTerminateDebugSession = this._register(new V()), this._onDidChangeActiveDebugSession = this._register(new V()), this._onDidReceiveDebugSessionCustomEvent = this._register(new V()), this._debugServiceProxy = e.getProxy(G.MainThreadDebugService), this._onDidChangeBreakpoints = this._register(new V()), this._onDidChangeActiveStackItem = this._register(new V()), this._activeDebugConsole = new OP(this._debugServiceProxy), this._breakpoints = /* @__PURE__ */ new Map(), this._extensionService.getExtensionRegistry().then((e) => {
+			super(), this._workspaceService = t, this._extensionService = n, this._configurationService = r, this._editorTabs = i, this._variableResolver = a, this._commands = o, this._testing = s, this._debugSessions = /* @__PURE__ */ new Map(), this._debugVisualizationTreeItemIdsCounter = 0, this._debugVisualizationProviders = /* @__PURE__ */ new Map(), this._debugVisualizationTrees = /* @__PURE__ */ new Map(), this._debugVisualizationTreeItemIds = /* @__PURE__ */ new WeakMap(), this._debugVisualizationElements = /* @__PURE__ */ new Map(), this._visualizers = /* @__PURE__ */ new Map(), this._visualizerIdCounter = 0, this._configProviderHandleCounter = 0, this._configProviders = [], this._adapterFactoryHandleCounter = 0, this._adapterFactories = [], this._trackerFactoryHandleCounter = 0, this._trackerFactories = [], this._debugAdapters = /* @__PURE__ */ new Map(), this._debugAdaptersTrackers = /* @__PURE__ */ new Map(), this._onDidStartDebugSession = this._register(new V()), this._onDidTerminateDebugSession = this._register(new V()), this._onDidChangeActiveDebugSession = this._register(new V()), this._onDidReceiveDebugSessionCustomEvent = this._register(new V()), this._debugServiceProxy = e.getProxy(G.MainThreadDebugService), this._onDidChangeBreakpoints = this._register(new V()), this._onDidChangeActiveStackItem = this._register(new V()), this._activeDebugConsole = new jP(this._debugServiceProxy), this._breakpoints = /* @__PURE__ */ new Map(), this._extensionService.getExtensionRegistry().then((e) => {
 				this._register(e.onDidChange((t) => {
 					this.registerAllDebugTypes(e);
 				})), this.registerAllDebugTypes(e);
@@ -12921,7 +12921,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 			return r ? this.convertVisualizerTreeItem(e, r) : void 0;
 		}
 		registerDebugVisualizationTree(e, t, n) {
-			let r = AC.toKey(e.identifier), i = this.extensionVisKey(r, t);
+			let r = SC.toKey(e.identifier), i = this.extensionVisKey(r, t);
 			if (this._debugVisualizationProviders.has(i)) throw Error(`A debug visualization provider with id '${t}' is already registered`);
 			return this._debugVisualizationTrees.set(i, n), this._debugServiceProxy.$registerDebugVisualizerTree(i, !!n.editItem), g(() => {
 				this._debugServiceProxy.$unregisterDebugVisualizerTree(i), this._debugVisualizationTrees.delete(t);
@@ -13028,7 +13028,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 		}
 		registerDebugVisualizationProvider(e, t, n) {
 			if (!e.contributes?.debugVisualizers?.some((e) => e.id === t)) throw Error(`Extensions may only call registerDebugVisualizationProvider() for renderers they contribute (got ${t})`);
-			let r = AC.toKey(e.identifier), i = this.extensionVisKey(r, t);
+			let r = SC.toKey(e.identifier), i = this.extensionVisKey(r, t);
 			if (this._debugVisualizationProviders.has(i)) throw Error(`A debug visualization provider with id '${t}' is already registered`);
 			return this._debugVisualizationProviders.set(i, n), this._debugServiceProxy.$registerDebugVisualizer(r, t), g(() => {
 				this._debugServiceProxy.$unregisterDebugVisualizer(r, t), this._debugVisualizationProviders.delete(t);
@@ -13143,7 +13143,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 			}), (await this._variableResolver.getResolver()).resolveAsync(n, t);
 		}
 		createDebugAdapter(e, t) {
-			if (e instanceof jx) return new AP(e.implementation);
+			if (e instanceof jx) return new NP(e.implementation);
 		}
 		createSignService() {}
 		async $startDASession(e, t) {
@@ -13355,7 +13355,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 			let t = e.configuration.type, n = this._trackerFactories.filter((e) => e.type === t || e.type === "*").map((t) => gr(() => t.factory.createDebugAdapterTracker(e.api)).then((e) => e, (e) => null));
 			return Promise.race([Promise.all(n).then((e) => {
 				let t = Pi(e);
-				if (t.length > 0) return new kP(t);
+				if (t.length > 0) return new MP(t);
 			}), new Promise((e) => setTimeout(() => e(void 0), 1e3))]).catch((e) => {});
 		}
 		async getAdapterDescriptor(e, t) {
@@ -13386,7 +13386,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 				let t = this._debugSessions.get(e.id);
 				if (!t) {
 					let n = await this.getFolder(e.folderUri), r = e.parent ? this._debugSessions.get(e.parent) : void 0;
-					t = new DP(this._debugServiceProxy, e.id, e.type, e.name, n, e.configuration, r?.api), this._debugSessions.set(t.id, t), this._debugServiceProxy.$sessionCached(t.id);
+					t = new AP(this._debugServiceProxy, e.id, e.type, e.name, n, e.configuration, r?.api), this._debugSessions.set(t.id, t), this._debugServiceProxy.$sessionCached(t.id);
 				}
 				return t;
 			}
@@ -13427,16 +13427,16 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 				light: typeof n == "string" ? H.file(n) : n
 			};
 		}
-	}, EP = N([
+	}, kP = N([
 		R(0, $x),
-		R(1, QA),
-		R(2, HN),
-		R(3, fj),
-		R(4, DM),
-		R(5, xP),
-		R(6, jj),
-		R(7, tP)
-	], EP), DP = class {
+		R(1, tj),
+		R(2, GN),
+		R(3, hj),
+		R(4, AM),
+		R(5, wP),
+		R(6, Pj),
+		R(7, iP)
+	], kP), AP = class {
 		constructor(e, t, n, r, i, a, o) {
 			this._debugServiceProxy = e, this._id = t, this._type = n, this._name = r, this._workspaceFolder = i, this._configuration = a, this._parentSession = o;
 		}
@@ -13474,7 +13474,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 		get configuration() {
 			return this._configuration;
 		}
-	}, OP = class {
+	}, jP = class {
 		constructor(e) {
 			this.value = Object.freeze({
 				append(t) {
@@ -13485,7 +13485,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 				}
 			});
 		}
-	}, kP = class {
+	}, MP = class {
 		constructor(e) {
 			this.trackers = e;
 		}
@@ -13507,7 +13507,7 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 		onExit(e, t) {
 			this.trackers.forEach((n) => n.onExit ? n.onExit(e, t) : void 0);
 		}
-	}, AP = class extends Wx {
+	}, NP = class extends Wx {
 		constructor(e) {
 			super(), this.implementation = e, e.onDidSendMessage((e) => {
 				this.acceptMessage(e);
@@ -13522,27 +13522,27 @@ var $N, eP, tP, nP, rP, iP, aP, oP, sP, cP, lP, uP, dP, fP, pP, mP = t((() => {
 		stopSession() {
 			return this.implementation.dispose(), Promise.resolve(void 0);
 		}
-	}, jP = class extends EP {
+	}, PP = class extends kP {
 		constructor(e, t, n, r, i, a, o, s) {
 			super(e, t, n, r, i, a, o, s);
 		}
-	}, jP = N([
+	}, PP = N([
 		R(0, $x),
-		R(1, QA),
-		R(2, HN),
-		R(3, fj),
-		R(4, DM),
-		R(5, xP),
-		R(6, jj),
-		R(7, tP)
-	], jP);
+		R(1, tj),
+		R(2, GN),
+		R(3, hj),
+		R(4, AM),
+		R(5, wP),
+		R(6, Pj),
+		R(7, iP)
+	], PP);
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/services/search/common/searchExtConversionTypes.js
-function NP(e) {
+function IP(e) {
 	return "uri" in e && "ranges" in e && "preview" in e;
 }
-function PP(e) {
+function LP(e) {
 	return e.folderOptions.map((t) => ({
 		folder: t.folder,
 		excludes: t.excludes.map((e) => typeof e == "string" ? e : e.pattern),
@@ -13555,7 +13555,7 @@ function PP(e) {
 		session: e.session
 	}));
 }
-function FP(e) {
+function RP(e) {
 	return e.folderOptions.map((t) => ({
 		folder: t.folder,
 		excludes: t.excludes.map((e) => typeof e == "string" ? e : e.pattern),
@@ -13565,21 +13565,21 @@ function FP(e) {
 		useParentIgnoreFiles: t.useIgnoreFiles.parent,
 		followSymlinks: t.followSymlinks,
 		maxResults: e.maxResults,
-		previewOptions: IP(e.previewOptions),
+		previewOptions: zP(e.previewOptions),
 		maxFileSize: e.maxFileSize,
 		encoding: t.encoding,
 		afterContext: e.surroundingContext,
 		beforeContext: e.surroundingContext
 	}));
 }
-function IP(e) {
+function zP(e) {
 	return {
 		matchLines: e?.matchLines ?? Bm.matchLines,
 		charsPerLine: e?.charsPerLine ?? Bm.charsPerLine
 	};
 }
-function LP(e) {
-	if (NP(e)) {
+function BP(e) {
+	if (IP(e)) {
 		let t = Ha(e.ranges).map((t, n) => ({
 			sourceRange: t,
 			previewRange: Ha(e.preview.matches)[n]
@@ -13587,8 +13587,8 @@ function LP(e) {
 		return new Xg(e.uri, t, e.preview.text);
 	} else return new Xp(e.uri, e.text, e.lineNumber);
 }
-function RP(e) {
-	if (zP(e)) {
+function VP(e) {
+	if (HP(e)) {
 		if (Array.isArray(e.ranges)) {
 			if (!Array.isArray(e.preview.matches)) return console.warn("INVALID - A text search provider match's`ranges` and`matches` properties must have the same type."), !1;
 			if (e.preview.matches.length !== e.ranges.length) return console.warn("INVALID - A text search provider match's`ranges` and`matches` properties must have the same length."), !1;
@@ -13596,36 +13596,36 @@ function RP(e) {
 	}
 	return !0;
 }
-function zP(e) {
+function HP(e) {
 	return !!e.preview;
 }
-var BP, VP, HP = t((() => {
-	An(), kp(), zg(), BP = class {
+var UP, WP, GP = t((() => {
+	An(), kp(), zg(), UP = class {
 		constructor(e) {
 			this.provider = e;
 		}
 		provideFileSearchResults(e, t, n) {
 			return (async () => {
-				let r = PP(t);
+				let r = LP(t);
 				return Promise.all(r.map((t) => this.provider.provideFileSearchResults({ pattern: e }, t, n)));
 			})().then((e) => Pi(e).flat());
 		}
-	}, VP = class {
+	}, WP = class {
 		constructor(e) {
 			this.provider = e;
 		}
 		provideTextSearchResults(e, t, n, r) {
 			let i = (e) => {
-				RP(e) && n.report(LP(e));
+				VP(e) && n.report(BP(e));
 			};
-			return (async () => Pi(await Promise.all(FP(t).map((t) => this.provider.provideTextSearchResults(e, t, { report: (e) => i(e) }, r)))).reduce((e, t) => ({ limitHit: e.limitHit || t.limitHit }), { limitHit: !1 }))().then((e) => ({
+			return (async () => Pi(await Promise.all(RP(t).map((t) => this.provider.provideTextSearchResults(e, t, { report: (e) => i(e) }, r)))).reduce((e, t) => ({ limitHit: e.limitHit || t.limitHit }), { limitHit: !1 }))().then((e) => ({
 				limitHit: e.limitHit,
 				message: Pi(Ha(e.message))
 			}));
 		}
 	};
-})), UP, WP = t((() => {
-	Yi(), _r(), UP = class extends vs {
+})), KP, qP = t((() => {
+	Yi(), _r(), KP = class extends vs {
 		constructor(e, t, n = () => !1) {
 			let r = new ac(n, () => !1);
 			super(r);
@@ -13668,8 +13668,8 @@ var BP, VP, HP = t((() => {
 			return e.query && (t += e.query), e.fragment && (t += "#" + e.fragment), t;
 		}
 	};
-})), GP, KP, qP, JP = t((() => {
-	Bc(), Eo(), Cn(), Li(), Gn(), vc(), kp(), HP(), WP(), GP = class {
+})), JP, YP, XP, ZP = t((() => {
+	Bc(), Eo(), Cn(), Li(), Gn(), vc(), kp(), GP(), qP(), JP = class {
 		constructor(e, t, n) {
 			this.config = e, this.provider = t, this.sessionLifecycle = n, this.isLimitHit = !1, this.resultCount = 0, this.isCanceled = !1, this.filePattern = e.filePattern, this.includePattern = e.includePattern && de(e.includePattern), this.maxResults = e.maxResults || void 0, this.exists = e.exists, this.activeCancellationTokens = /* @__PURE__ */ new Set(), this.globalExcludePattern = e.excludePattern && de(e.excludePattern);
 		}
@@ -13700,11 +13700,11 @@ var BP, VP, HP = t((() => {
 			});
 		}
 		async doSearch(e, t) {
-			let n = new Fo(), r = e.map((e) => this.getSearchOptionsForFolder(e)), i = this.provider instanceof BP ? this.sessionLifecycle?.tokenSource.token : this.sessionLifecycle?.obj, a = {
+			let n = new Fo(), r = e.map((e) => this.getSearchOptionsForFolder(e)), i = this.provider instanceof UP ? this.sessionLifecycle?.tokenSource.token : this.sessionLifecycle?.obj, a = {
 				folderOptions: r,
 				maxResults: this.config.maxResults ?? 2e4,
 				session: i
-			}, o = new UP(e, (e) => {
+			}, o = new KP(e, (e) => {
 				let t = new oh(this.config, e);
 				return {
 					queryTester: t,
@@ -13807,7 +13807,7 @@ var BP, VP, HP = t((() => {
 		matchFile(e, t) {
 			(!this.includePattern || t.relativePath && this.includePattern(t.relativePath, t.basename)) && ((this.exists || this.maxResults && this.resultCount >= this.maxResults) && (this.isLimitHit = !0, this.cancel()), this.isLimitHit || e(t));
 		}
-	}, KP = class {
+	}, YP = class {
 		constructor() {
 			this._obj = {}, this.tokenSource = new Fo();
 		}
@@ -13818,7 +13818,7 @@ var BP, VP, HP = t((() => {
 		cancel() {
 			this.tokenSource.cancel(), this._obj = void 0;
 		}
-	}, qP = class e {
+	}, XP = class e {
 		constructor() {
 			this.sessions = /* @__PURE__ */ new Map();
 		}
@@ -13826,7 +13826,7 @@ var BP, VP, HP = t((() => {
 			this.BATCH_SIZE = 512;
 		}
 		fileSearch(t, n, r, i) {
-			let a = this.getSessionTokenSource(t.cacheKey), o = new GP(t, n, a), s = 0;
+			let a = this.getSessionTokenSource(t.cacheKey), o = new JP(t, n, a), s = 0;
 			return this.doSearch(o, e.BATCH_SIZE, (e) => {
 				s += e.length, r(e.map((e) => this.rawMatchToSearchItem(e)));
 			}, i).then((e) => ({
@@ -13844,7 +13844,7 @@ var BP, VP, HP = t((() => {
 			this.sessions.get(e)?.cancel(), this.sessions.delete(e);
 		}
 		getSessionTokenSource(e) {
-			if (e) return this.sessions.has(e) || this.sessions.set(e, new KP()), this.sessions.get(e);
+			if (e) return this.sessions.has(e) || this.sessions.set(e, new YP()), this.sessions.get(e);
 		}
 		rawMatchToSearchItem(e) {
 			return e.relativePath ? { resource: Gs(e.base, e.relativePath) } : { resource: e.base };
@@ -13861,7 +13861,7 @@ var BP, VP, HP = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/services/search/common/textSearchManager.js
-function YP(e) {
+function QP(e) {
 	return {
 		isCaseSensitive: e.isCaseSensitive || !1,
 		isRegExp: e.isRegExp || !1,
@@ -13870,7 +13870,7 @@ function YP(e) {
 		pattern: e.pattern
 	};
 }
-function XP(e) {
+function $P(e) {
 	return e instanceof Xg ? {
 		previewText: e.previewText,
 		rangeLocations: e.ranges.map((e) => ({
@@ -13892,8 +13892,8 @@ function XP(e) {
 		lineNumber: e.lineNumber
 	};
 }
-var ZP, QP, $P, eF = t((() => {
-	S(), Eo(), Cn(), Ds(), Bc(), Gn(), U(), WP(), kp(), zg(), ZP = class {
+var eF, tF, nF, rF = t((() => {
+	S(), Eo(), Cn(), Ds(), Bc(), Gn(), U(), qP(), kp(), zg(), eF = class {
 		constructor(e, t, n) {
 			this.queryProviderPair = e, this.fileUtils = t, this.processType = n, this.collector = null, this.isLimitHit = !1, this.resultCount = 0;
 		}
@@ -13903,7 +13903,7 @@ var ZP, QP, $P, eF = t((() => {
 		search(e, t, n) {
 			let r = this.query.folderQueries || [], i = new Fo(t);
 			return new Promise((t, a) => {
-				this.collector = new QP(e);
+				this.collector = new tF(e);
 				let o = !1;
 				this.doSearch(r, (e, t) => {
 					if (!(e instanceof vp) && !o && !this.isLimitHit) {
@@ -13937,7 +13937,7 @@ var ZP, QP, $P, eF = t((() => {
 			return new Xg(e.uri, e.ranges.slice(0, t), e.previewText);
 		}
 		async doSearch(e, t, n, r) {
-			let i = new UP(e, (e, t) => ({
+			let i = new KP(e, (e, t) => ({
 				queryTester: new oh(this.query, e),
 				folder: e.folder,
 				folderIdx: t
@@ -13962,7 +13962,7 @@ var ZP, QP, $P, eF = t((() => {
 			};
 			"usePCRE2" in this.query && (s.usePCRE2 = this.query.usePCRE2);
 			let c;
-			return c = this.queryProviderPair.query.type === sp.aiText ? await this.queryProviderPair.provider.provideAITextSearchResults(this.queryProviderPair.query.contentPattern, s, o, n) : await this.queryProviderPair.provider.provideTextSearchResults(YP(this.queryProviderPair.query.contentPattern), s, o, n), a.length && await Promise.all(a), c;
+			return c = this.queryProviderPair.query.type === sp.aiText ? await this.queryProviderPair.provider.provideAITextSearchResults(this.queryProviderPair.query.contentPattern, s, o, n) : await this.queryProviderPair.provider.provideTextSearchResults(QP(this.queryProviderPair.query.contentPattern), s, o, n), a.length && await Promise.all(a), c;
 		}
 		getSearchOptionsForFolder(e) {
 			let t = sg(this.query.includePattern, e.includePattern), n = e.excludePattern?.map((e) => ({
@@ -13987,15 +13987,15 @@ var ZP, QP, $P, eF = t((() => {
 				encoding: (e.fileEncoding && this.fileUtils.toCanonicalName(e.fileEncoding)) ?? ""
 			};
 		}
-	}, QP = class {
+	}, tF = class {
 		constructor(e) {
-			this._onResult = e, this._currentFolderIdx = -1, this._currentFileMatch = null, this._batchedCollector = new $P(512, (e) => this.sendItems(e));
+			this._onResult = e, this._currentFolderIdx = -1, this._currentFileMatch = null, this._batchedCollector = new nF(512, (e) => this.sendItems(e));
 		}
 		add(e, t) {
 			this._currentFileMatch && (this._currentFolderIdx !== t || !ya(this._currentUri, e.uri)) && (this.pushToCollector(), this._currentFileMatch = null), this._currentFileMatch ||= (this._currentFolderIdx = t, {
 				resource: e.uri,
 				results: []
-			}), this._currentFileMatch.results.push(XP(e));
+			}), this._currentFileMatch.results.push($P(e));
 		}
 		pushToCollector() {
 			let e = this._currentFileMatch && this._currentFileMatch.results ? this._currentFileMatch.results.length : 0;
@@ -14007,7 +14007,7 @@ var ZP, QP, $P, eF = t((() => {
 		sendItems(e) {
 			this._onResult(e);
 		}
-	}, $P = class e {
+	}, nF = class e {
 		static {
 			this.TIMEOUT = 4e3;
 		}
@@ -14041,20 +14041,20 @@ var ZP, QP, $P, eF = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostSearch.js
-function tF(e) {
+function iF(e) {
 	return {
 		...e,
-		folderQueries: e.folderQueries && e.folderQueries.map(nF),
+		folderQueries: e.folderQueries && e.folderQueries.map(aF),
 		extraFileResources: e.extraFileResources && e.extraFileResources.map((e) => H.revive(e))
 	};
 }
-function nF(e) {
+function aF(e) {
 	return sa(e);
 }
-var rF, iF, aF = t((() => {
-	b(), P(), W(), E(), JP(), qh(), HA(), Xr(), U(), eF(), Uo(), HP(), rF = xl("IExtHostSearch"), iF = class {
+var oF, sF, cF = t((() => {
+	b(), P(), W(), E(), ZP(), qh(), GA(), Xr(), U(), rF(), Uo(), GP(), oF = xl("IExtHostSearch"), sF = class {
 		constructor(e, t, n) {
-			this.extHostRpc = e, this._uriTransformer = t, this._logService = n, this._proxy = this.extHostRpc.getProxy(G.MainThreadSearch), this._handlePool = 0, this._textSearchProvider = /* @__PURE__ */ new Map(), this._textSearchUsedSchemes = /* @__PURE__ */ new Set(), this._aiTextSearchProvider = /* @__PURE__ */ new Map(), this._aiTextSearchUsedSchemes = /* @__PURE__ */ new Set(), this._fileSearchProvider = /* @__PURE__ */ new Map(), this._fileSearchUsedSchemes = /* @__PURE__ */ new Set(), this._fileSearchManager = new qP();
+			this.extHostRpc = e, this._uriTransformer = t, this._logService = n, this._proxy = this.extHostRpc.getProxy(G.MainThreadSearch), this._handlePool = 0, this._textSearchProvider = /* @__PURE__ */ new Map(), this._textSearchUsedSchemes = /* @__PURE__ */ new Set(), this._aiTextSearchProvider = /* @__PURE__ */ new Map(), this._aiTextSearchUsedSchemes = /* @__PURE__ */ new Set(), this._fileSearchProvider = /* @__PURE__ */ new Map(), this._fileSearchUsedSchemes = /* @__PURE__ */ new Set(), this._fileSearchManager = new XP();
 		}
 		_transformScheme(e) {
 			return this._uriTransformer.transformOutgoingScheme(e);
@@ -14063,7 +14063,7 @@ var rF, iF, aF = t((() => {
 			if (this._textSearchUsedSchemes.has(e)) throw Error(`a text search provider for the scheme '${e}' is already registered`);
 			this._textSearchUsedSchemes.add(e);
 			let n = this._handlePool++;
-			return this._textSearchProvider.set(n, new VP(t)), this._proxy.$registerTextSearchProvider(n, this._transformScheme(e)), g(() => {
+			return this._textSearchProvider.set(n, new WP(t)), this._proxy.$registerTextSearchProvider(n, this._transformScheme(e)), g(() => {
 				this._textSearchUsedSchemes.delete(e), this._textSearchProvider.delete(n), this._proxy.$unregisterProvider(n);
 			});
 		}
@@ -14087,7 +14087,7 @@ var rF, iF, aF = t((() => {
 			if (this._fileSearchUsedSchemes.has(e)) throw Error(`a file search provider for the scheme '${e}' is already registered`);
 			this._fileSearchUsedSchemes.add(e);
 			let n = this._handlePool++;
-			return this._fileSearchProvider.set(n, new BP(t)), this._proxy.$registerFileSearchProvider(n, this._transformScheme(e)), g(() => {
+			return this._fileSearchProvider.set(n, new UP(t)), this._proxy.$registerFileSearchProvider(n, this._transformScheme(e)), g(() => {
 				this._fileSearchUsedSchemes.delete(e), this._fileSearchProvider.delete(n), this._proxy.$unregisterProvider(n);
 			});
 		}
@@ -14100,7 +14100,7 @@ var rF, iF, aF = t((() => {
 			});
 		}
 		$provideFileSearchResults(e, t, n, r) {
-			let i = tF(n), a = this._fileSearchProvider.get(e);
+			let i = iF(n), a = this._fileSearchProvider.get(e);
 			if (a) return this._fileSearchManager.fileSearch(i, a, (n) => {
 				this._proxy.$handleFileMatch(e, t, n.map((e) => e.resource));
 			}, r);
@@ -14115,13 +14115,13 @@ var rF, iF, aF = t((() => {
 		$provideTextSearchResults(e, t, n, r) {
 			let i = this._textSearchProvider.get(e);
 			if (!i || !i.provideTextSearchResults) throw Error(`Unknown Text Search Provider ${e}`);
-			let a = tF(n);
+			let a = iF(n);
 			return this.createTextSearchManager(a, i).search((n) => this._proxy.$handleTextMatch(e, t, n), r);
 		}
 		$provideAITextSearchResults(e, t, n, r) {
 			let i = this._aiTextSearchProvider.get(e);
 			if (!i || !i.provideAITextSearchResults) throw Error(`Unknown AI Text Search Provider ${e}`);
-			let a = tF(n);
+			let a = iF(n);
 			return this.createAITextSearchManager(a, i).search((n) => this._proxy.$handleTextMatch(e, t, n), r, (n) => this._proxy.$handleKeywordResult(e, t, n));
 		}
 		$enableExtensionHostSearch() {}
@@ -14130,7 +14130,7 @@ var rF, iF, aF = t((() => {
 			if (!(!t || !t.provideAITextSearchResults)) return t.name ?? "AI";
 		}
 		createTextSearchManager(e, t) {
-			return new ZP({
+			return new eF({
 				query: e,
 				provider: t
 			}, {
@@ -14139,7 +14139,7 @@ var rF, iF, aF = t((() => {
 			}, "textSearchProvider");
 		}
 		createAITextSearchManager(e, t) {
-			return new ZP({
+			return new eF({
 				query: e,
 				provider: t
 			}, {
@@ -14147,13 +14147,13 @@ var rF, iF, aF = t((() => {
 				toCanonicalName: (e) => e
 			}, "aiTextSearchProvider");
 		}
-	}, iF = N([
+	}, sF = N([
 		R(0, $x),
-		R(1, BA),
+		R(1, UA),
 		R(2, Ct)
-	], iF);
-})), oF, sF, cF = t((() => {
-	b(), pe(), W(), Pf(), qh(), U(), Uo(), oF = class extends La {
+	], sF);
+})), lF, uF, dF = t((() => {
+	b(), pe(), W(), Pf(), qh(), U(), Uo(), lF = class extends La {
 		constructor(e, t) {
 			super(t.logLevel, t.logsLocation, t.loggers.map((e) => sa(e))), this._proxy = e.getProxy(G.MainThreadLogger);
 		}
@@ -14164,9 +14164,9 @@ var rF, iF, aF = t((() => {
 			super.setVisibility(e, t), this._proxy.$setVisibility(e, t);
 		}
 		doCreateLogger(e, t, n) {
-			return new sF(this._proxy, e, t, n);
+			return new uF(this._proxy, e, t, n);
 		}
-	}, oF = N([R(0, $x), R(1, Kf)], oF), sF = class extends js {
+	}, lF = N([R(0, $x), R(1, Kf)], lF), uF = class extends js {
 		constructor(e, t, n, r) {
 			super(r?.logLevel === "always"), this.proxy = e, this.file = t, this.isLoggerCreated = !1, this.buffer = [], this.setLevel(n), this.proxy.$createLogger(t, r).then(() => {
 				this.doLog(this.buffer), this.isLoggerCreated = !0;
@@ -14186,20 +14186,20 @@ var rF, iF, aF = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostTerminalShellIntegration.js
-function lF(e) {
+function fF(e) {
 	return e.split("\n").map((e) => e.trim()).filter((e) => e.length > 0);
 }
-function uF(e, t) {
+function pF(e, t) {
 	if (e.length === 0) return !1;
-	let n = [...e], r = lF(t.value);
+	let n = [...e], r = fF(t.value);
 	if (n && n.length > 0) {
 		for (; n.length > 0 && n[0] === r[0];) n.shift(), r.shift();
 		if (r.length === 0) return { unresolvedCommandLines: n };
 	}
 	return !1;
 }
-var dF, fF, pF, mF, hF, gF = t((() => {
-	b(), gv(), P(), E(), W(), qh(), oM(), $s(), U(), S(), dF = xl("IExtHostTerminalShellIntegration"), fF = class extends z {
+var mF, hF, gF, _F, vF, yF = t((() => {
+	b(), gv(), P(), E(), W(), qh(), lM(), $s(), U(), S(), mF = xl("IExtHostTerminalShellIntegration"), hF = class extends z {
 		constructor(e, t) {
 			super(), this._extHostTerminalService = t, this._activeShellIntegrations = /* @__PURE__ */ new Map(), this._onDidChangeTerminalShellIntegration = new V(), this.onDidChangeTerminalShellIntegration = this._onDidChangeTerminalShellIntegration.event, this._onDidStartTerminalShellExecution = new V(), this.onDidStartTerminalShellExecution = this._onDidStartTerminalShellExecution.event, this._onDidEndTerminalShellExecution = new V(), this.onDidEndTerminalShellExecution = this._onDidEndTerminalShellExecution.event, this._proxy = e.getProxy(G.MainThreadTerminalShellIntegration), this._register(g(() => {
 				for (let [e, t] of this._activeShellIntegrations) t.dispose();
@@ -14210,7 +14210,7 @@ var dF, fF, pF, mF, hF, gF = t((() => {
 			let n = this._extHostTerminalService.getTerminalById(e);
 			if (!n) return;
 			let r = n.value, i = this._activeShellIntegrations.get(e);
-			i || (i = new pF(n.value, t, this._onDidStartTerminalShellExecution), this._activeShellIntegrations.set(e, i), i.store.add(n.onWillDispose(() => this._activeShellIntegrations.get(e)?.dispose())), i.store.add(i.onDidRequestShellExecution((t) => this._proxy.$executeCommand(e, t))), i.store.add(i.onDidRequestEndExecution((e) => this._onDidEndTerminalShellExecution.fire(e))), i.store.add(i.onDidRequestChangeShellIntegration((e) => this._onDidChangeTerminalShellIntegration.fire(e))), n.shellIntegration = i.value), this._onDidChangeTerminalShellIntegration.fire({
+			i || (i = new gF(n.value, t, this._onDidStartTerminalShellExecution), this._activeShellIntegrations.set(e, i), i.store.add(n.onWillDispose(() => this._activeShellIntegrations.get(e)?.dispose())), i.store.add(i.onDidRequestShellExecution((t) => this._proxy.$executeCommand(e, t))), i.store.add(i.onDidRequestEndExecution((e) => this._onDidEndTerminalShellExecution.fire(e))), i.store.add(i.onDidRequestChangeShellIntegration((e) => this._onDidChangeTerminalShellIntegration.fire(e))), n.shellIntegration = i.value), this._onDidChangeTerminalShellIntegration.fire({
 				terminal: r,
 				shellIntegration: i.value
 			});
@@ -14247,7 +14247,7 @@ var dF, fF, pF, mF, hF, gF = t((() => {
 		_convertCwdToUri(e) {
 			return e ? H.file(e) : void 0;
 		}
-	}, fF = N([R(0, $x), R(1, Qj)], fF), pF = class extends z {
+	}, hF = N([R(0, $x), R(1, tM)], hF), gF = class extends z {
 		get currentExecution() {
 			return this._currentExecution;
 		}
@@ -14279,10 +14279,10 @@ var dF, fF, pF, mF, hF, gF = t((() => {
 			};
 		}
 		requestNewShellExecution(e, t) {
-			let n = new mF(e, t ?? this._cwd);
-			return lF(e.value).length > 1 && (this._currentExecutionProperties = {
+			let n = new _F(e, t ?? this._cwd);
+			return fF(e.value).length > 1 && (this._currentExecutionProperties = {
 				isMultiLine: !0,
-				unresolvedCommandLines: lF(e.value)
+				unresolvedCommandLines: fF(e.value)
 			}), this._pendingExecutions.push(n), this._onDidRequestNewExecution.fire(e.value), n;
 		}
 		startShellExecution(e, t) {
@@ -14293,7 +14293,7 @@ var dF, fF, pF, mF, hF, gF = t((() => {
 				exitCode: void 0
 			}), void 0), this._currentExecution) {
 				if (this._currentExecutionProperties?.isMultiLine && this._currentExecutionProperties.unresolvedCommandLines) {
-					let t = uF(this._currentExecutionProperties.unresolvedCommandLines, e);
+					let t = pF(this._currentExecutionProperties.unresolvedCommandLines, e);
 					if (t) {
 						this._currentExecutionProperties.unresolvedCommandLines = t.unresolvedCommandLines;
 						return;
@@ -14314,7 +14314,7 @@ var dF, fF, pF, mF, hF, gF = t((() => {
 				}, n = r, this._pendingExecutions.splice(t, 1);
 				break;
 			} else {
-				let i = uF(lF(r.value.commandLine.value), e);
+				let i = pF(fF(r.value.commandLine.value), e);
 				if (i) {
 					this._currentExecutionProperties = {
 						isMultiLine: !0,
@@ -14324,7 +14324,7 @@ var dF, fF, pF, mF, hF, gF = t((() => {
 				}
 			}
 			else n = this._pendingExecutions.shift();
-			n ||= new mF(e, t ?? this._cwd), this._currentExecution = n, this._onDidStartTerminalShellExecution.fire({
+			n ||= new _F(e, t ?? this._cwd), this._currentExecution = n, this._onDidStartTerminalShellExecution.fire({
 				terminal: this._terminal,
 				shellIntegration: this.value,
 				execution: this._currentExecution.value
@@ -14366,7 +14366,7 @@ var dF, fF, pF, mF, hF, gF = t((() => {
 				shellIntegration: this.value
 			});
 		}
-	}, mF = class {
+	}, _F = class {
 		constructor(e, t) {
 			this._commandLine = e, this.cwd = t, this._isEnded = !1;
 			let n = this;
@@ -14385,7 +14385,7 @@ var dF, fF, pF, mF, hF, gF = t((() => {
 		_createDataStream() {
 			if (!this._dataStream) {
 				if (this._isEnded) return Qs.EMPTY;
-				this._dataStream = new hF();
+				this._dataStream = new vF();
 			}
 			return this._dataStream.createIterable();
 		}
@@ -14398,7 +14398,7 @@ var dF, fF, pF, mF, hF, gF = t((() => {
 		async flush() {
 			this._dataStream &&= (await this._dataStream.flush(), this._dataStream.dispose(), void 0);
 		}
-	}, hF = class extends z {
+	}, vF = class extends z {
 		constructor() {
 			super(...arguments), this._iterables = [], this._emitters = [];
 		}
@@ -14419,10 +14419,10 @@ var dF, fF, pF, mF, hF, gF = t((() => {
 			await Promise.all(this._iterables.map((e) => e.toPromise()));
 		}
 	};
-})), _F, vF, yF = t((() => {
+})), bF, xF, SF = t((() => {
 	(function(e) {
 		e[e.CR = 13] = "CR", e[e.LF = 10] = "LF", e[e.COLON = 58] = "COLON", e[e.SPACE = 32] = "SPACE";
-	})(_F ||= {}), vF = class {
+	})(bF ||= {}), xF = class {
 		constructor(e) {
 			this.dataBuffer = "", this.eventTypeBuffer = "", this.buffer = [], this.endedOnCR = !1, this.onEventHandler = e, this.decoder = new TextDecoder("utf-8");
 		}
@@ -14435,14 +14435,14 @@ var dF, fF, pF, mF, hF, gF = t((() => {
 		feed(e) {
 			if (e.length === 0) return;
 			let t = 0;
-			for (this.endedOnCR && e[0] === _F.LF && t++, this.endedOnCR = !1; t < e.length;) {
-				let n = e.indexOf(_F.CR, t), r = e.indexOf(_F.LF, t), i = n === -1 ? r : r === -1 ? n : Math.min(n, r);
+			for (this.endedOnCR && e[0] === bF.LF && t++, this.endedOnCR = !1; t < e.length;) {
+				let n = e.indexOf(bF.CR, t), r = e.indexOf(bF.LF, t), i = n === -1 ? r : r === -1 ? n : Math.min(n, r);
 				if (i === -1) break;
 				let a = "";
 				for (let e of this.buffer) a += this.decoder.decode(e, { stream: !0 });
-				a += this.decoder.decode(e.subarray(t, i)), this.processLine(a), this.buffer.length = 0, t = i + (e[i] === _F.CR && e[i + 1] === _F.LF ? 2 : 1);
+				a += this.decoder.decode(e.subarray(t, i)), this.processLine(a), this.buffer.length = 0, t = i + (e[i] === bF.CR && e[i + 1] === bF.LF ? 2 : 1);
 			}
-			t < e.length ? this.buffer.push(e.subarray(t)) : this.endedOnCR = e[e.length - 1] === _F.CR;
+			t < e.length ? this.buffer.push(e.subarray(t)) : this.endedOnCR = e[e.length - 1] === bF.CR;
 		}
 		processLine(e) {
 			if (!e.length) {
@@ -14488,18 +14488,18 @@ var dF, fF, pF, mF, hF, gF = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostMcp.js
-function bF(e) {
+function CF(e) {
 	try {
 		return JSON.parse(e), !0;
 	} catch {
 		return !1;
 	}
 }
-function xF(e) {
+function wF(e) {
 	return e === 401 || e === 403;
 }
-async function SF(e, t, n) {
-	let { launchHeaders: r, fetch: i, log: a } = n, o = Pb.None, s, { resourceMetadataChallenge: c, scopesChallenge: l } = CF(t, a), u, d, f = l;
+async function TF(e, t, n) {
+	let { launchHeaders: r, fetch: i, log: a } = n, o = Pb.None, s, { resourceMetadataChallenge: c, scopesChallenge: l } = EF(t, a), u, d, f = l;
 	try {
 		let { metadata: t, discoveryUrl: n, errors: l } = await Av(e, c, {
 			sameOriginHeaders: {
@@ -14525,7 +14525,7 @@ async function SF(e, t, n) {
 			fetch: (e, t) => i(e, t)
 		});
 		for (let e of n) a(L.Warning, `Error fetching authorization server metadata: ${e}`);
-		return a(L.Info, `Discovered authorization server metadata at ${t}`), s ??= eb.WellKnown, new jF(H.parse(u), e, d, f, {
+		return a(L.Info, `Discovered authorization server metadata at ${t}`), s ??= eb.WellKnown, new PF(H.parse(u), e, d, f, {
 			resourceMetadataSource: o,
 			serverMetadataSource: s
 		}, a);
@@ -14533,12 +14533,12 @@ async function SF(e, t, n) {
 		a(L.Warning, `Error populating auth server metadata for ${u}: ${String(e)}`);
 	}
 	let h = Zy(new URL(p));
-	return a(L.Info, "Using default auth metadata"), new jF(H.parse(p), h, d, f, {
+	return a(L.Info, "Using default auth metadata"), new PF(H.parse(p), h, d, f, {
 		resourceMetadataSource: o,
 		serverMetadataSource: eb.Default
 	}, a);
 }
-function CF(e, t) {
+function EF(e, t) {
 	let n, r;
 	if (e.headers.has("WWW-Authenticate")) {
 		let i = Hx(e.headers.get("WWW-Authenticate"));
@@ -14555,8 +14555,8 @@ function CF(e, t) {
 		scopesChallenge: r
 	};
 }
-var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
-	b(), S(), Eo(), ia(), P(), $v(), yF(), U(), Pl(), Dt(), wC(), E(), pe(), Xr(), _h(), vv(), kw(), W(), Pf(), qh(), wm(), gv(), wP(), $A(), wF = xl("IExtHostMpcService"), TF = Bl({
+var DF, OF, kF, AF, jF, MF, NF, PF, FF = t((() => {
+	b(), S(), Eo(), ia(), P(), $v(), SF(), U(), Pl(), Dt(), GC(), E(), pe(), Xr(), _h(), vv(), Mw(), W(), Pf(), qh(), wm(), gv(), DP(), nj(), DF = xl("IExtHostMpcService"), OF = Bl({
 		label: Gu(),
 		version: ru(Gu()),
 		metadata: ru(Bl({
@@ -14571,7 +14571,7 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 			providerId: Gu(),
 			scopes: ud(Gu())
 		}))
-	}), EF = class extends z {
+	}), kF = class extends z {
 		constructor(e, t, n, r, i) {
 			super(), this._logService = t, this._extHostInitData = n, this._workspaceService = r, this._variableResolver = i, this._initialProviderPromises = /* @__PURE__ */ new Set(), this._sseEventSources = this._register(new Za()), this._unresolvedMcpServers = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(G.MainThreadMcp);
 		}
@@ -14580,7 +14580,7 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 		}
 		_startMcp(e, t, n, r) {
 			if (t.type === Zg.HTTP) {
-				this._sseEventSources.set(e, new AF(e, t, this._proxy, this._logService, r));
+				this._sseEventSources.set(e, new NF(e, t, this._proxy, this._logService, r));
 				return;
 			}
 			throw Error("not implemented");
@@ -14633,15 +14633,15 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 				});
 				let r = [];
 				for (let n of t ?? []) {
-					let t = AC.toKey(e.identifier) + "/" + n.label;
+					let t = SC.toKey(e.identifier) + "/" + n.label;
 					if (r.some((e) => e.id === t)) {
 						let e = 2;
 						for (; r.some((n) => n.id === t + e);) e++;
 						t += e;
 					}
-					TF.validateOrThrow(n), n.authentication && J(e, "mcpToolDefinitions");
+					OF.validateOrThrow(n), n.authentication && J(e, "mcpToolDefinitions");
 					let i, a = n;
-					Dw(e, "mcpToolDefinitions") && a.metadata && (i = {
+					Aw(e, "mcpToolDefinitions") && a.metadata && (i = {
 						capabilities: a.metadata.capabilities,
 						instructions: a.metadata.instructions,
 						serverInfo: a.metadata.serverInfo,
@@ -14669,29 +14669,29 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 			});
 			return this._initialProviderPromises.add(s), r;
 		}
-	}, EF = N([
+	}, kF = N([
 		R(0, $x),
 		R(1, Ct),
 		R(2, Kf),
-		R(3, QA),
-		R(4, xP)
-	], EF), (function(e) {
+		R(3, tj),
+		R(4, wP)
+	], kF), (function(e) {
 		e[e.Unknown = 0] = "Unknown", e[e.Http = 1] = "Http", e[e.SSE = 2] = "SSE";
-	})(DF ||= {}), OF = 5, kF = [
+	})(AF ||= {}), jF = 5, MF = [
 		301,
 		302,
 		303,
 		307,
 		308
-	], AF = class extends z {
+	], NF = class extends z {
 		constructor(e, t, n, r, i) {
-			super(), this._id = e, this._launch = t, this._proxy = n, this._logService = r, this._errorOnUserInteraction = i, this._requestSequencer = new Rc(), this._postEndpoint = new lc(), this._mode = { value: DF.Unknown }, this._cts = new Fo(), this._abortCtrl = new AbortController(), this._didSendClose = !1, this._register(g(() => {
+			super(), this._id = e, this._launch = t, this._proxy = n, this._logService = r, this._errorOnUserInteraction = i, this._requestSequencer = new Rc(), this._postEndpoint = new lc(), this._mode = { value: AF.Unknown }, this._cts = new Fo(), this._abortCtrl = new AbortController(), this._didSendClose = !1, this._register(g(() => {
 				this._abortCtrl.abort(), this._cts.dispose(!0);
 			})), this._proxy.$onDidChangeState(this._id, { state: lm.Kind.Running });
 		}
 		async send(e) {
 			try {
-				this._mode.value === DF.Unknown ? await this._requestSequencer.queue(() => this._send(e)) : await this._send(e);
+				this._mode.value === AF.Unknown ? await this._requestSequencer.queue(() => this._send(e)) : await this._send(e);
 			} catch (e) {
 				let t = `Error sending message to ${this._launch.uri}: ${String(e)}`;
 				this._proxy.$onDidChangeState(this._id, {
@@ -14701,7 +14701,7 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 			}
 		}
 		async close() {
-			if (this._mode.value === DF.Http && this._mode.sessionId && !this._didSendClose) {
+			if (this._mode.value === AF.Http && this._mode.sessionId && !this._didSendClose) {
 				this._didSendClose = !0;
 				try {
 					await this._closeSession(this._mode.sessionId);
@@ -14726,7 +14726,7 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 			});
 		}
 		_send(e) {
-			return this._mode.value === DF.SSE ? this._sendLegacySSE(this._mode.endpoint, e) : this._sendStreamableHttp(e, this._mode.value === DF.Http ? this._mode.sessionId : void 0);
+			return this._mode.value === AF.SSE ? this._sendLegacySSE(this._mode.endpoint, e) : this._sendStreamableHttp(e, this._mode.value === AF.Http ? this._mode.sessionId : void 0);
 		}
 		async _sendStreamableHttp(e, t) {
 			let n = new TextEncoder().encode(e), r = {
@@ -14740,16 +14740,16 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 				method: "POST",
 				headers: r,
 				body: n
-			}, r), a = this._mode.value === DF.Unknown, o = i.headers.get("Mcp-Session-Id");
+			}, r), a = this._mode.value === AF.Unknown, o = i.headers.get("Mcp-Session-Id");
 			if (o && (this._mode = {
-				value: DF.Http,
+				value: AF.Http,
 				sessionId: o
-			}), this._mode.value === DF.Unknown && i.status >= 400 && i.status < 500 && !xF(i.status)) {
+			}), this._mode.value === AF.Unknown && i.status >= 400 && i.status < 500 && !wF(i.status)) {
 				this._log(L.Info, `${i.status} status sending message to ${this._launch.uri}, will attempt to fall back to legacy SSE`), this._sseFallbackWithMessage(e);
 				return;
 			}
 			if (i.status >= 300) {
-				let e = this._mode.value === DF.Http && !!this._mode.sessionId && (i.status === 400 || i.status === 404);
+				let e = this._mode.value === AF.Http && !!this._mode.sessionId && (i.status === 400 || i.status === 404);
 				this._proxy.$onDidChangeState(this._id, {
 					state: lm.Kind.Error,
 					message: `${i.status} status sending message to ${this._launch.uri}: ${await this._getErrText(i)}` + (e ? "; will retry with new session ID" : ""),
@@ -14757,15 +14757,15 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 				});
 				return;
 			}
-			this._mode.value === DF.Unknown && (this._mode = {
-				value: DF.Http,
+			this._mode.value === AF.Unknown && (this._mode = {
+				value: AF.Http,
 				sessionId: void 0
 			}), a && this._attachStreamableBackchannel(), await this._handleSuccessfulStreamableHttp(i, e);
 		}
 		async _sseFallbackWithMessage(e) {
 			let t = await this._attachSSE();
 			t && (this._mode = {
-				value: DF.SSE,
+				value: AF.SSE,
 				endpoint: t
 			}, await this._sendLegacySSE(t, e));
 		}
@@ -14773,7 +14773,7 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 			if (e.status === 202) return;
 			let n = e.headers.get("Content-Type")?.toLowerCase() || "";
 			if (n.startsWith("text/event-stream")) {
-				let n = new vF((e) => {
+				let n = new xF((e) => {
 					if (e.type === "message") this._proxy.$onDidReceiveMessage(this._id, e.data);
 					else if (e.type === "endpoint") throw this._log(L.Warning, `Received SSE endpoint from a POST to ${this._launch.uri}, will fall back to legacy SSE`), this._sseFallbackWithMessage(t), new _a();
 				});
@@ -14785,7 +14785,7 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 			} else if (n.startsWith("application/json")) this._proxy.$onDidReceiveMessage(this._id, await e.text());
 			else {
 				let t = await e.text();
-				bF(t) ? this._proxy.$onDidReceiveMessage(this._id, t) : this._log(L.Warning, `Unexpected ${e.status} response for request: ${t}`);
+				CF(t) ? this._proxy.$onDidReceiveMessage(this._id, t) : this._log(L.Warning, `Unexpected ${e.status} response for request: ${t}`);
 			}
 		}
 		async _attachStreamableBackchannel() {
@@ -14798,7 +14798,7 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 						...Object.fromEntries(this._launch.headers),
 						Accept: "text/event-stream"
 					};
-					await this._addAuthHeader(t), this._mode.value === DF.Http && this._mode.sessionId !== void 0 && (t["Mcp-Session-Id"] = this._mode.sessionId), e && (t["Last-Event-ID"] = e), r = await this._fetchWithAuthRetry(this._launch.uri.toString(!0), {
+					await this._addAuthHeader(t), this._mode.value === AF.Http && this._mode.sessionId !== void 0 && (t["Mcp-Session-Id"] = this._mode.sessionId), e && (t["Last-Event-ID"] = e), r = await this._fetchWithAuthRetry(this._launch.uri.toString(!0), {
 						method: "GET",
 						headers: t
 					}, t);
@@ -14811,7 +14811,7 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 					return;
 				}
 				r.headers.get("content-type")?.toLowerCase().includes("text/event-stream") && (n = 0);
-				let i = new vF((n) => {
+				let i = new xF((n) => {
 					n.retry && (t = Date.now() + n.retry), n.type === "message" && n.data && this._proxy.$onDidReceiveMessage(this._id, n.data), n.id && (e = n.id);
 				});
 				try {
@@ -14846,7 +14846,7 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 				});
 				return;
 			}
-			let r = new vF((t) => {
+			let r = new xF((t) => {
 				t.type === "message" ? this._proxy.$onDidReceiveMessage(this._id, t.data) : t.type === "endpoint" && e.complete(new URL(t.data, this._launch.uri.toString(!0)).toString());
 			});
 			return this._register(g(() => e.cancel())), this._doSSE(r, n).catch((e) => {
@@ -14931,11 +14931,11 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 		}
 		async _fetchWithAuthRetry(e, t, n) {
 			let r = () => this._fetch(e, t), i = await r();
-			if (xF(i.status) && (this._authMetadata ? this._authMetadata.update(i) && (await this._addAuthHeader(n), n.Authorization && (t.headers = n, i = await r())) : (this._authMetadata = await SF(e, i, {
+			if (wF(i.status) && (this._authMetadata ? this._authMetadata.update(i) && (await this._addAuthHeader(n), n.Authorization && (t.headers = n, i = await r())) : (this._authMetadata = await TF(e, i, {
 				launchHeaders: this._launch.headers,
 				fetch: (e, t) => this._fetch(e, t),
 				log: (e, t) => this._log(e, t)
-			}), this._proxy.$logMcpAuthSetup(this._authMetadata.telemetry), await this._addAuthHeader(n), n.Authorization && (t.headers = n, i = await r()))), n.Authorization && xF(i.status)) {
+			}), this._proxy.$logMcpAuthSetup(this._authMetadata.telemetry), await this._addAuthHeader(n), n.Authorization && (t.headers = n, i = await r()))), n.Authorization && wF(i.status)) {
 				let e = await this._getErrText(i);
 				this._log(L.Info, `Received ${i.status} status with Authorization header, retrying with new auth registration. Error details: ${e || "no additional details"}`), await this._addAuthHeader(n, { forceNewRegistration: !0 }), i = await r();
 			}
@@ -14950,11 +14950,11 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 				n.body &&= new TextDecoder().decode(n.body), n.headers?.Authorization && (n.headers.Authorization = "***"), this._log(L.Trace, `Fetching ${e} with options: ${JSON.stringify(n)}`);
 			}
 			let n = e, r;
-			for (let e = 0; e < OF && (r = await this._fetchInternal(n, {
+			for (let e = 0; e < jF && (r = await this._fetchInternal(n, {
 				...t,
 				signal: this._abortCtrl.signal,
 				redirect: "manual"
-			}), kF.includes(r.status)); e++) {
+			}), MF.includes(r.status)); e++) {
 				let e = r.headers.get("location");
 				if (!e) break;
 				let i = new URL(e, n).toString();
@@ -14974,7 +14974,7 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 		_fetchInternal(e, t) {
 			return fetch(e, t);
 		}
-	}, jF = class {
+	}, PF = class {
 		constructor(e, t, n, r, i, a) {
 			this.authorizationServer = e, this.serverMetadata = t, this.resourceMetadata = n, this.telemetry = i, this._log = a, this._scopes = r;
 		}
@@ -14994,21 +14994,21 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 			}
 		}
 	};
-})), NF, PF, FF, IF = t((() => {
-	$s(), P(), kw(), E(), NF = xl("IExtHostDataChannels"), PF = class {
+})), IF, LF, RF, zF = t((() => {
+	$s(), P(), Mw(), E(), IF = xl("IExtHostDataChannels"), LF = class {
 		constructor() {
 			this._channels = /* @__PURE__ */ new Map();
 		}
 		createDataChannel(e, t) {
 			J(e, "dataChannels");
 			let n = this._channels.get(t);
-			return n || (n = new FF(t), this._channels.set(t, n)), n;
+			return n || (n = new RF(t), this._channels.set(t, n)), n;
 		}
 		$onDidReceiveData(e, t) {
 			let n = this._channels.get(e);
 			n && n._fireDidReceiveData(t);
 		}
-	}, FF = class extends z {
+	}, RF = class extends z {
 		constructor(e) {
 			super(), this.channelId = e, this._onDidReceiveData = new V(), this.onDidReceiveData = this._onDidReceiveData.event, this._register(this._onDidReceiveData);
 		}
@@ -15019,17 +15019,17 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 			return `DataChannel(${this.channelId})`;
 		}
 	};
-})), LF = t((() => {
-	Wn(), zA(), $A(), rj(), pj(), Nj(), Jj(), oM(), TM(), MP(), aF(), UM(), Fh(), lM(), tN(), PA(), AA(), wN(), jM(), cF(), Xr(), wP(), kN(), PN(), xN(), gF(), mP(), MF(), aN(), uN(), IF(), p(ON, DN, Yr.Delayed), p(ai, oF, Yr.Delayed), p(sM, cM, Yr.Delayed), p(jj, Aj, Yr.Eager), p(sN, cN, Yr.Eager), p(vN, bN, Yr.Eager), p(fj, uj, Yr.Eager), p(NA, MA, Yr.Eager), p(tP, nP, Yr.Eager), p(TP, jP, Yr.Eager), p(nj, tj, Yr.Eager), p(qj, Kj, Yr.Eager), p(AN, jN, Yr.Eager), p(kA, OA, Yr.Eager), p(RA, LA, Yr.Delayed), p(rF, iF, Yr.Eager), p(HM, VM, Yr.Eager), p(wM, CM, Yr.Eager), p(Qj, aM, Yr.Eager), p(dF, fF, Yr.Eager), p(pS, B_, Yr.Eager), p(eN, $M, Yr.Eager), p(iN, rN, Yr.Eager), p(QA, ZA, Yr.Eager), p(CN, SN, Yr.Eager), p(DM, AM, Yr.Eager), p(xP, CP, Yr.Eager), p(wF, EF, Yr.Eager), p(NF, PF, Yr.Eager);
-})), RF, zF = t((() => {
-	b(), fr(), Xr(), Oa(), Pf(), RF = class extends ta {
+})), BF = t((() => {
+	Wn(), HA(), nj(), oj(), gj(), Ij(), Zj(), lM(), OM(), FP(), cF(), KM(), Fh(), fM(), iN(), LA(), NA(), DN(), PM(), dF(), Xr(), DP(), MN(), LN(), wN(), yF(), _P(), FF(), cN(), pN(), zF(), p(jN, AN, Yr.Delayed), p(ai, lF, Yr.Delayed), p(uM, dM, Yr.Delayed), p(Pj, Nj, Yr.Eager), p(uN, dN, Yr.Eager), p(xN, CN, Yr.Eager), p(hj, pj, Yr.Eager), p(IA, FA, Yr.Eager), p(iP, aP, Yr.Eager), p(OP, PP, Yr.Eager), p(aj, ij, Yr.Eager), p(Xj, Yj, Yr.Eager), p(NN, PN, Yr.Eager), p(MA, jA, Yr.Eager), p(VA, BA, Yr.Delayed), p(oF, sF, Yr.Eager), p(GM, WM, Yr.Eager), p(DM, EM, Yr.Eager), p(tM, cM, Yr.Eager), p(mF, hF, Yr.Eager), p(pS, B_, Yr.Eager), p(rN, nN, Yr.Eager), p(sN, oN, Yr.Eager), p(tj, ej, Yr.Eager), p(EN, TN, Yr.Eager), p(AM, NM, Yr.Eager), p(wP, EP, Yr.Eager), p(DF, kF, Yr.Eager), p(IF, LF, Yr.Eager);
+})), VF, HF = t((() => {
+	b(), fr(), Xr(), Oa(), Pf(), VF = class extends ta {
 		constructor(e, t, n) {
 			let r = n.remote.isRemote ? "remoteexthost" : e ? "workerexthost" : "exthost", i = n.remote.isRemote ? M(2695, "Extension Host (Remote)") : e ? M(2696, "Extension Host (Worker)") : M(2697, "Extension Host");
 			super(t.createLogger(r, { name: i }));
 		}
-	}, RF = N([R(1, ai), R(2, Kf)], RF);
-})), BF, VF, HF = t((() => {
-	ia(), $o(), U(), W(), gh(), wC(), Xr(), Wn(), qr(), Pf(), qh(), HA(), KN(), kj(), lM(), mo(), gc(), cF(), zF(), BF = class {
+	}, VF = N([R(1, ai), R(2, Kf)], VF);
+})), UF, WF, GF = t((() => {
+	ia(), $o(), U(), W(), gh(), GC(), Xr(), Wn(), qr(), Pf(), qh(), GA(), YN(), Mj(), fM(), mo(), gc(), dF(), HF(), UF = class {
 		static async installEarlyHandler(e) {
 			Error.stackTraceLimit = 100;
 			let t = e.get(Ct), n = e.get($x).getProxy(G.MainThreadErrors);
@@ -15040,7 +15040,7 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 			});
 		}
 		static async installFullHandler(e) {
-			let t = e.get(Ct), n = e.get($x), r = e.get(HN), i = e.get(Oj), a = e.get(sM), o = n.getProxy(G.MainThreadExtensionService), s = n.getProxy(G.MainThreadErrors), c = await r.getExtensionRegistry(), l = await r.getExtensionPathIndex(), u = /* @__PURE__ */ new WeakMap();
+			let t = e.get(Ct), n = e.get($x), r = e.get(GN), i = e.get(jj), a = e.get(uM), o = n.getProxy(G.MainThreadExtensionService), s = n.getProxy(G.MainThreadErrors), c = await r.getExtensionRegistry(), l = await r.getExtensionPathIndex(), u = /* @__PURE__ */ new WeakMap();
 			function d(e, t) {
 				if (u.has(e)) return u.get(e).stack;
 				let n = "", r, i;
@@ -15081,7 +15081,7 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 				s.$onUnexpectedError(e);
 			});
 		}
-	}, VF = class e {
+	}, WF = class e {
 		constructor(t, n, r, i, a) {
 			this._hostUtils = r, this._rpcProtocol = new c_(t, null, i), n = e._transform(n, this._rpcProtocol);
 			let o = new ni(...fi());
@@ -15089,9 +15089,9 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 				_serviceBrand: void 0,
 				...n,
 				messagePorts: a
-			}), o.set($x, new xf(this._rpcProtocol)), o.set(BA, new VA(i)), o.set(BN, r), o.set(Ct, new Ta(RF, [!0], !0)), o.set(ai, new Ta(oF, [], !0));
+			}), o.set($x, new xf(this._rpcProtocol)), o.set(UA, new WA(i)), o.set(UN, r), o.set(Ct, new Ta(VF, [!0], !0)), o.set(ai, new Ta(lF, [], !0));
 			let s = new Yc(o, !0);
-			Nc && s.invokeFunction(BF.installEarlyHandler), this._logService = s.invokeFunction((e) => e.get(Ct)), ro("code/extHost/didCreateServices"), this._hostUtils.pid ? this._logService.info(`Extension host with pid ${this._hostUtils.pid} started`) : this._logService.info("Extension host started"), this._logService.trace("initData", n), this._extensionService = s.invokeFunction((e) => e.get(HN)), this._extensionService.initialize(), Nc && s.invokeFunction(BF.installFullHandler);
+			Nc && s.invokeFunction(UF.installEarlyHandler), this._logService = s.invokeFunction((e) => e.get(Ct)), ro("code/extHost/didCreateServices"), this._hostUtils.pid ? this._logService.info(`Extension host with pid ${this._hostUtils.pid} started`) : this._logService.info("Extension host started"), this._logService.trace("initData", n), this._extensionService = s.invokeFunction((e) => e.get(GN)), this._extensionService.initialize(), Nc && s.invokeFunction(UF.installFullHandler);
 		}
 		async asBrowserUri(e) {
 			let t = this._rpcProtocol.getProxy(G.MainThreadExtensionService);
@@ -15114,8 +15114,8 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 			return n && (e.environment.extensionDevelopmentLocationURI = n.map((e) => H.revive(t.transformIncomingURIs(e)))), e.environment.extensionTestsLocationURI = H.revive(t.transformIncomingURIs(e.environment.extensionTestsLocationURI)), e.environment.globalStorageHome = H.revive(t.transformIncomingURIs(e.environment.globalStorageHome)), e.environment.workspaceStorageHome = H.revive(t.transformIncomingURIs(e.environment.workspaceStorageHome)), e.nlsBaseUrl = H.revive(t.transformIncomingURIs(e.nlsBaseUrl)), e.logsLocation = H.revive(t.transformIncomingURIs(e.logsLocation)), e.workspace = t.transformIncomingURIs(e.workspace), e;
 		}
 	};
-})), UF, WF = t((() => {
-	W(), gv(), UF = class {
+})), KF, qF = t((() => {
+	W(), gv(), KF = class {
 		constructor(e) {
 			this._relatedInformationProviders = /* @__PURE__ */ new Map(), this._nextHandle = 0, this._proxy = e.getProxy(G.MainThreadAiRelatedInformation);
 		}
@@ -15135,8 +15135,8 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 			});
 		}
 	};
-})), GF, KF = t((() => {
-	W(), gv(), TC(), wm(), GF = class {
+})), JF, YF = t((() => {
+	W(), gv(), KC(), wm(), JF = class {
 		constructor(e) {
 			this._settingsSearchProviders = /* @__PURE__ */ new Map(), this._nextHandle = 0, this._proxy = e.getProxy(G.MainThreadAiSettingsSearch);
 		}
@@ -15144,7 +15144,7 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 			if (this._settingsSearchProviders.size === 0) throw Error("No related information providers registered");
 			let i = this._settingsSearchProviders.get(e);
 			if (!i) throw Error("Settings search provider not found");
-			let a = new FC((t) => {
+			let a = new wC((t) => {
 				this._proxy.$handleSearchResult(e, fh.fromSettingsSearchResult(t));
 			});
 			return i.provideSettingsSearchResults(t, n, a, r);
@@ -15159,20 +15159,20 @@ var wF, TF, EF, DF, OF, kF, AF, jF, MF = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostApiCommands.js
-function qF(e) {
+function XF(e) {
 	return (t) => {
 		if (Array.isArray(t)) return t.map(e);
 	};
 }
-function JF(e) {
+function ZF(e) {
 	if (!Array.isArray(e)) return;
 	let t = [];
 	for (let n of e) Ln(n) ? t.push(Ef.to(n)) : t.push(BS.to(n));
 	return t;
 }
-var YF, XF, ZF = t((() => {
-	An(), Ds(), U(), Ur(), zf(), No(), Nj(), wm(), gv(), im(), gm(), Gf(), jf(), Dm(), Pg(), YF = [
-		new Q("vscode.executeDocumentHighlights", "_executeDocumentHighlights", "Execute document highlight provider.", [X.Uri, X.Position], new Z("A promise that resolves to an array of DocumentHighlight-instances.", qF($h.to))),
+var QF, $F, eI = t((() => {
+	An(), Ds(), U(), Ur(), zf(), No(), Ij(), wm(), gv(), im(), gm(), Gf(), jf(), Dm(), Pg(), QF = [
+		new Q("vscode.executeDocumentHighlights", "_executeDocumentHighlights", "Execute document highlight provider.", [X.Uri, X.Position], new Z("A promise that resolves to an array of DocumentHighlight-instances.", XF($h.to))),
 		new Q("vscode.executeDocumentSymbolProvider", "_executeDocumentSymbolProvider", "Execute document symbol provider.", [X.Uri], new Z("A promise that resolves to an array of SymbolInformation and DocumentSymbol instances.", (e, t) => {
 			if (Nt(e)) return;
 			class n extends Y_ {
@@ -15186,30 +15186,30 @@ var YF, XF, ZF = t((() => {
 			}
 			return e.map(n.to);
 		})),
-		new Q("vscode.executeFormatDocumentProvider", "_executeFormatDocumentProvider", "Execute document format provider.", [X.Uri, new X("options", "Formatting options", (e) => !0, (e) => e)], new Z("A promise that resolves to an array of TextEdits.", qF(Uf.to))),
+		new Q("vscode.executeFormatDocumentProvider", "_executeFormatDocumentProvider", "Execute document format provider.", [X.Uri, new X("options", "Formatting options", (e) => !0, (e) => e)], new Z("A promise that resolves to an array of TextEdits.", XF(Uf.to))),
 		new Q("vscode.executeFormatRangeProvider", "_executeFormatRangeProvider", "Execute range format provider.", [
 			X.Uri,
 			X.Range,
 			new X("options", "Formatting options", (e) => !0, (e) => e)
-		], new Z("A promise that resolves to an array of TextEdits.", qF(Uf.to))),
+		], new Z("A promise that resolves to an array of TextEdits.", XF(Uf.to))),
 		new Q("vscode.executeFormatOnTypeProvider", "_executeFormatOnTypeProvider", "Execute format on type provider.", [
 			X.Uri,
 			X.Position,
 			new X("ch", "Trigger character", (e) => typeof e == "string", (e) => e),
 			new X("options", "Formatting options", (e) => !0, (e) => e)
-		], new Z("A promise that resolves to an array of TextEdits.", qF(Uf.to))),
-		new Q("vscode.executeDefinitionProvider", "_executeDefinitionProvider", "Execute all definition providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location or LocationLink instances.", JF)),
-		new Q("vscode.experimental.executeDefinitionProvider_recursive", "_executeDefinitionProvider_recursive", "Execute all definition providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location or LocationLink instances.", JF)),
-		new Q("vscode.executeTypeDefinitionProvider", "_executeTypeDefinitionProvider", "Execute all type definition providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location or LocationLink instances.", JF)),
-		new Q("vscode.experimental.executeTypeDefinitionProvider_recursive", "_executeTypeDefinitionProvider_recursive", "Execute all type definition providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location or LocationLink instances.", JF)),
-		new Q("vscode.executeDeclarationProvider", "_executeDeclarationProvider", "Execute all declaration providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location or LocationLink instances.", JF)),
-		new Q("vscode.experimental.executeDeclarationProvider_recursive", "_executeDeclarationProvider_recursive", "Execute all declaration providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location or LocationLink instances.", JF)),
-		new Q("vscode.executeImplementationProvider", "_executeImplementationProvider", "Execute all implementation providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location or LocationLink instances.", JF)),
-		new Q("vscode.experimental.executeImplementationProvider_recursive", "_executeImplementationProvider_recursive", "Execute all implementation providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location or LocationLink instances.", JF)),
-		new Q("vscode.executeReferenceProvider", "_executeReferenceProvider", "Execute all reference providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location-instances.", qF(BS.to))),
-		new Q("vscode.experimental.executeReferenceProvider", "_executeReferenceProvider_recursive", "Execute all reference providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location-instances.", qF(BS.to))),
-		new Q("vscode.executeHoverProvider", "_executeHoverProvider", "Execute all hover providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Hover-instances.", qF(Hm.to))),
-		new Q("vscode.experimental.executeHoverProvider_recursive", "_executeHoverProvider_recursive", "Execute all hover providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Hover-instances.", qF(Hm.to))),
+		], new Z("A promise that resolves to an array of TextEdits.", XF(Uf.to))),
+		new Q("vscode.executeDefinitionProvider", "_executeDefinitionProvider", "Execute all definition providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location or LocationLink instances.", ZF)),
+		new Q("vscode.experimental.executeDefinitionProvider_recursive", "_executeDefinitionProvider_recursive", "Execute all definition providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location or LocationLink instances.", ZF)),
+		new Q("vscode.executeTypeDefinitionProvider", "_executeTypeDefinitionProvider", "Execute all type definition providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location or LocationLink instances.", ZF)),
+		new Q("vscode.experimental.executeTypeDefinitionProvider_recursive", "_executeTypeDefinitionProvider_recursive", "Execute all type definition providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location or LocationLink instances.", ZF)),
+		new Q("vscode.executeDeclarationProvider", "_executeDeclarationProvider", "Execute all declaration providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location or LocationLink instances.", ZF)),
+		new Q("vscode.experimental.executeDeclarationProvider_recursive", "_executeDeclarationProvider_recursive", "Execute all declaration providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location or LocationLink instances.", ZF)),
+		new Q("vscode.executeImplementationProvider", "_executeImplementationProvider", "Execute all implementation providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location or LocationLink instances.", ZF)),
+		new Q("vscode.experimental.executeImplementationProvider_recursive", "_executeImplementationProvider_recursive", "Execute all implementation providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location or LocationLink instances.", ZF)),
+		new Q("vscode.executeReferenceProvider", "_executeReferenceProvider", "Execute all reference providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location-instances.", XF(BS.to))),
+		new Q("vscode.experimental.executeReferenceProvider", "_executeReferenceProvider_recursive", "Execute all reference providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Location-instances.", XF(BS.to))),
+		new Q("vscode.executeHoverProvider", "_executeHoverProvider", "Execute all hover providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Hover-instances.", XF(Hm.to))),
+		new Q("vscode.experimental.executeHoverProvider_recursive", "_executeHoverProvider_recursive", "Execute all hover providers.", [X.Uri, X.Position], new Z("A promise that resolves to an array of Hover-instances.", XF(Hm.to))),
 		new Q("vscode.executeSelectionRangeProvider", "_executeSelectionRangeProvider", "Execute selection range provider.", [X.Uri, new X("position", "A position in a text document", (e) => Array.isArray(e) && e.every((e) => ex.isPosition(e)), (e) => e.map(iv.from))], new Z("A promise that resolves to an array of ranges.", (e) => e.map((e) => {
 			let t;
 			for (let n of e.reverse()) t = new Yg(q.to(n), t);
@@ -15265,13 +15265,13 @@ var YF, XF, ZF = t((() => {
 		], new Z("A promise that resolves to SignatureHelp.", (e) => {
 			if (e) return Bb.to(e);
 		})),
-		new Q("vscode.executeCodeLensProvider", "_executeCodeLensProvider", "Execute code lens provider.", [X.Uri, X.Number.with("itemResolveCount", "Number of lenses that should be resolved and returned. Will only return resolved lenses, will impact performance)").optional()], new Z("A promise that resolves to an array of CodeLens-instances.", (e, t, n) => qF((e) => new Oy(q.to(e.range), e.command && n.fromInternal(e.command)))(e))),
+		new Q("vscode.executeCodeLensProvider", "_executeCodeLensProvider", "Execute code lens provider.", [X.Uri, X.Number.with("itemResolveCount", "Number of lenses that should be resolved and returned. Will only return resolved lenses, will impact performance)").optional()], new Z("A promise that resolves to an array of CodeLens-instances.", (e, t, n) => XF((e) => new Oy(q.to(e.range), e.command && n.fromInternal(e.command)))(e))),
 		new Q("vscode.executeCodeActionProvider", "_executeCodeActionProvider", "Execute code action provider.", [
 			X.Uri,
 			new X("rangeOrSelection", "Range in a text document. Some refactoring provider requires Selection object.", (e) => Tp.isRange(e), (e) => rp.isSelection(e) ? mv.from(e) : q.from(e)),
 			X.String.with("kind", "Code action kind to return code actions for").optional(),
 			X.Number.with("itemResolveCount", "Number of code actions to resolve (too large numbers slow down code actions)").optional()
-		], new Z("A promise that resolves to an array of Command-instances.", (e, t, n) => qF((e) => {
+		], new Z("A promise that resolves to an array of Command-instances.", (e, t, n) => XF((e) => {
 			if (e._isSynthetic) {
 				if (!e.command) throw Error("Synthetic code actions must have a command");
 				return n.fromInternal(e.command);
@@ -15289,7 +15289,7 @@ var YF, XF, ZF = t((() => {
 		new Q("vscode.executeFoldingRangeProvider", "_executeFoldingRangeProvider", "Execute folding range provider", [X.Uri], new Z("A promise that resolves to an array of FoldingRange objects", (e, t) => {
 			if (e) return e.map(Dy.to);
 		})),
-		new Q("vscode.resolveNotebookContentProviders", "_resolveNotebookContentProvider", "Resolve Notebook Content Providers", [], new Z("A promise that resolves to an array of NotebookContentProvider static info objects.", qF((e) => ({
+		new Q("vscode.resolveNotebookContentProviders", "_resolveNotebookContentProvider", "Resolve Notebook Content Providers", [], new Z("A promise that resolves to an array of NotebookContentProvider static info objects.", XF((e) => ({
 			viewType: e.viewType,
 			displayName: e.displayName,
 			options: {
@@ -15347,16 +15347,16 @@ var YF, XF, ZF = t((() => {
 				blockOnResponse: e.blockOnResponse
 			};
 		})], Z.Void)
-	], XF = class {
+	], $F = class {
 		static register(e) {
-			YF.forEach(e.registerApiCommand, e), this._registerValidateWhenClausesCommand(e);
+			QF.forEach(e.registerApiCommand, e), this._registerValidateWhenClausesCommand(e);
 		}
 		static _registerValidateWhenClausesCommand(e) {
 			e.registerCommand(!1, "_validateWhenClauses", bo);
 		}
 	};
-})), QF, $F = t((() => {
-	b(), W(), qh(), wm(), xv(), QF = class {
+})), tI, nI = t((() => {
+	b(), W(), qh(), wm(), xv(), tI = class {
 		constructor(e, t) {
 			this._proxy = e.getProxy(G.MainThreadBulkEdits), this._versionInformationProvider = {
 				getTextDocumentVersion: (e) => t.getDocument(e)?.version,
@@ -15367,19 +15367,19 @@ var YF, XF, ZF = t((() => {
 			let r = new Kd(uh.from(e, this._versionInformationProvider));
 			return this._proxy.$tryApplyWorkspaceEdit(r, void 0, n?.isRefactoring ?? !1);
 		}
-	}, QF = N([R(0, $x)], QF);
+	}, tI = N([R(0, $x)], tI);
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/contrib/chat/common/actions/chatActions.js
-function eI(e) {
+function rI(e) {
 	return !!e && H.isUri(e.sessionResource) && e.$mid === Yn.ChatViewContext;
 }
-var tI = t((() => {
+var iI = t((() => {
 	vl(), U();
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostChatAgents2.js
-function nI(e, t, n) {
+function aI(e, t, n) {
 	return new Promise((r, i) => {
 		let a = n.onCancellationRequested(async () => {
 			a.dispose(), await El(e), r(void 0);
@@ -15387,11 +15387,11 @@ function nI(e, t, n) {
 		t.then(r, i).finally(() => a.dispose());
 	});
 }
-function rI(e) {
+function oI(e) {
 	return e.startsWith("github.copilot");
 }
-var iI, aI, oI, sI, cI, lI = t((() => {
-	An(), S(), Eo(), Cn(), $s(), Ut(), P(), Uo(), vc(), kt(), U(), Go(), wC(), tI(), bb(), ub(), Fb(), kw(), W(), wm(), gv(), qg(), iI = class {
+var sI, cI, lI, uI, dI, fI = t((() => {
+	An(), S(), Eo(), Cn(), $s(), Ut(), P(), Uo(), vc(), kt(), U(), Go(), GC(), iI(), bb(), ub(), Fb(), Mw(), W(), wm(), gv(), qg(), sI = class {
 		constructor(e, t, n, r, i) {
 			this._extension = e, this._request = t, this._proxy = n, this._commandsConverter = r, this._sessionDisposables = i, this._stopWatch = Ro.create(!1), this._isClosed = !1;
 		}
@@ -15597,7 +15597,7 @@ var iI, aI, oI, sI, cI, lI = t((() => {
 			}
 			return this._apiObject;
 		}
-	}, aI = class e extends z {
+	}, cI = class e extends z {
 		static {
 			this._idPool = 0;
 		}
@@ -15611,28 +15611,28 @@ var iI, aI, oI, sI, cI, lI = t((() => {
 			this._customAgentsProviderIdPool = 0;
 		}
 		constructor(e, t, n, r, i, a, o, s) {
-			super(), this._logService = t, this._commands = n, this._documents = r, this._editorsAndDocuments = i, this._languageModels = a, this._diagnostics = o, this._tools = s, this._agents = /* @__PURE__ */ new Map(), this._participantDetectionProviders = /* @__PURE__ */ new Map(), this._relatedFilesProviders = /* @__PURE__ */ new Map(), this._customAgentsProviders = /* @__PURE__ */ new Map(), this._sessionDisposables = this._register(new Ba()), this._completionDisposables = this._register(new Za()), this._inFlightRequests = /* @__PURE__ */ new Set(), this._onDidChangeChatRequestTools = this._register(new V()), this.onDidChangeChatRequestTools = this._onDidChangeChatRequestTools.event, this._onDidDisposeChatSession = this._register(new V()), this.onDidDisposeChatSession = this._onDidDisposeChatSession.event, this._proxy = e.getProxy(G.MainThreadChatAgents2), n.registerArgumentProcessor({ processArgument: (e) => eI(e) ? null : e });
+			super(), this._logService = t, this._commands = n, this._documents = r, this._editorsAndDocuments = i, this._languageModels = a, this._diagnostics = o, this._tools = s, this._agents = /* @__PURE__ */ new Map(), this._participantDetectionProviders = /* @__PURE__ */ new Map(), this._relatedFilesProviders = /* @__PURE__ */ new Map(), this._customAgentsProviders = /* @__PURE__ */ new Map(), this._sessionDisposables = this._register(new Ba()), this._completionDisposables = this._register(new Za()), this._inFlightRequests = /* @__PURE__ */ new Set(), this._onDidChangeChatRequestTools = this._register(new V()), this.onDidChangeChatRequestTools = this._onDidChangeChatRequestTools.event, this._onDidDisposeChatSession = this._register(new V()), this.onDidDisposeChatSession = this._onDidDisposeChatSession.event, this._proxy = e.getProxy(G.MainThreadChatAgents2), n.registerArgumentProcessor({ processArgument: (e) => rI(e) ? null : e });
 		}
 		async transferActiveChat(e) {
 			await this._proxy.$transferActiveChatSession(e);
 		}
 		createChatAgent(t, n, r) {
-			let i = e._idPool++, a = new cI(t, n, this._proxy, i, r);
+			let i = e._idPool++, a = new dI(t, n, this._proxy, i, r);
 			return this._agents.set(i, a), this._proxy.$registerAgent(i, t.identifier, n, {}, void 0), a.apiAgent;
 		}
 		createDynamicChatAgent(t, n, r, i) {
-			let a = e._idPool++, o = new cI(t, n, this._proxy, a, i);
+			let a = e._idPool++, o = new dI(t, n, this._proxy, a, i);
 			return this._agents.set(a, o), this._proxy.$registerAgent(a, t.identifier, n, { isSticky: !0 }, r), o.apiAgent;
 		}
 		registerChatParticipantDetectionProvider(t, n) {
 			let r = e._participantDetectionProviderIdPool++;
-			return this._participantDetectionProviders.set(r, new oI(t, n)), this._proxy.$registerChatParticipantDetectionProvider(r), g(() => {
+			return this._participantDetectionProviders.set(r, new lI(t, n)), this._proxy.$registerChatParticipantDetectionProvider(r), g(() => {
 				this._participantDetectionProviders.delete(r), this._proxy.$unregisterChatParticipantDetectionProvider(r);
 			});
 		}
 		registerRelatedFilesProvider(t, n, r) {
 			let i = e._relatedFilesProviderIdPool++;
-			return this._relatedFilesProviders.set(i, new sI(t, n)), this._proxy.$registerRelatedFilesProvider(i, r), g(() => {
+			return this._relatedFilesProviders.set(i, new uI(t, n)), this._proxy.$registerRelatedFilesProvider(i, r), g(() => {
 				this._relatedFilesProviders.delete(i), this._proxy.$unregisterRelatedFilesProvider(i);
 			});
 		}
@@ -15699,7 +15699,7 @@ var iI, aI, oI, sI, cI, lI = t((() => {
 			let a, o;
 			try {
 				let { request: e, location: s, history: c } = await this._createRequest(t, n, i.extension), l = this._sessionDisposables.get(e.sessionResource);
-				l || (l = new I(), this._sessionDisposables.set(e.sessionResource, l)), a = new iI(i.extension, e, this._proxy, this._commands.converter, l);
+				l || (l = new I(), this._sessionDisposables.set(e.sessionResource, l)), a = new sI(i.extension, e, this._proxy, this._commands.converter, l);
 				let u = await this.getModelForRequest(e, i.extension), d = HS.to(e, s, u, this.getDiagnosticsWhenEnabled(i.extension), this.getToolsForRequest(i.extension, e.userSelectedTools), i.extension, this._logService);
 				o = {
 					requestId: t.requestId,
@@ -15718,7 +15718,7 @@ var iI, aI, oI, sI, cI, lI = t((() => {
 					history: c,
 					chatSessionContext: f
 				}, m = i.invoke(d, p, a.apiObject, r);
-				return await nI(1e3, Promise.resolve(m).then((e) => {
+				return await aI(1e3, Promise.resolve(m).then((e) => {
 					if (e?.metadata) try {
 						JSON.stringify(e.metadata);
 					} catch (t) {
@@ -15755,7 +15755,7 @@ var iI, aI, oI, sI, cI, lI = t((() => {
 			}
 		}
 		getDiagnosticsWhenEnabled(e) {
-			return Dw(e, "chatReferenceDiagnostic") ? this._diagnostics.getDiagnostics() : [];
+			return Aw(e, "chatReferenceDiagnostic") ? this._diagnostics.getDiagnostics() : [];
 		}
 		getToolsForRequest(e, t) {
 			if (!t) return /* @__PURE__ */ new Map();
@@ -15766,7 +15766,7 @@ var iI, aI, oI, sI, cI, lI = t((() => {
 		async prepareHistoryTurns(e, t, n) {
 			let r = [];
 			for (let i of n.history) {
-				let n = yf.to(i.result), a = t === i.request.agentId || rI(i.request.agentId) && rI(t) ? n : {
+				let n = yf.to(i.result), a = t === i.request.agentId || oI(i.request.agentId) && oI(t) ? n : {
 					...n,
 					metadata: void 0
 				}, o = [], s = [];
@@ -15776,7 +15776,7 @@ var iI, aI, oI, sI, cI, lI = t((() => {
 					let n = hm.to(t, this.getDiagnosticsWhenEnabled(e), this._logService);
 					n && o.push(n);
 				}
-				let c = Dw(e, "chatParticipantPrivate") ? i.request.editedFileEvents : void 0, l = new Ud(i.request.message, i.request.command, o, i.request.agentId, s, c, i.request.requestId);
+				let c = Aw(e, "chatParticipantPrivate") ? i.request.editedFileEvents : void 0, l = new Ud(i.request.message, i.request.command, o, i.request.agentId, s, c, i.request.requestId);
 				r.push(l);
 				let u = Pi(i.response.map((e) => sx.toContent(e, this._commands.converter)));
 				r.push(new yS(u, a, i.request.agentId, i.request.command));
@@ -15794,7 +15794,7 @@ var iI, aI, oI, sI, cI, lI = t((() => {
 			if (!a) return Promise.resolve([]);
 			let o = sa(e), s = await this.prepareHistoryTurns(a.extension, a.id, r), c = yf.to(n);
 			return (await a.provideFollowups(c, { history: s }, i)).filter((e) => {
-				let t = !e.participant || vo.some(this._agents.values(), (t) => t.id === e.participant && AC.equals(t.extension.identifier, a.extension.identifier));
+				let t = !e.participant || vo.some(this._agents.values(), (t) => t.id === e.participant && SC.equals(t.extension.identifier, a.extension.identifier));
 				return t || this._logService.warn(`[@${a.id}] ChatFollowup refers to an unknown participant: ${e.participant}`), t;
 			}).map((e) => Fp.from(e, o));
 		}
@@ -15813,7 +15813,7 @@ var iI, aI, oI, sI, cI, lI = t((() => {
 			let o = {
 				result: i,
 				kind: a,
-				unhelpfulReason: Dw(r.extension, "chatParticipantAdditions") ? n.reason : void 0
+				unhelpfulReason: Aw(r.extension, "chatParticipantAdditions") ? n.reason : void 0
 			};
 			r.acceptFeedback(Object.freeze(o));
 		}
@@ -15841,15 +15841,15 @@ var iI, aI, oI, sI, cI, lI = t((() => {
 			let i = await this.prepareHistoryTurns(r.extension, r.id, { history: t });
 			return await r.provideSummary({ history: i }, n);
 		}
-	}, oI = class {
+	}, lI = class {
 		constructor(e, t) {
 			this.extension = e, this.provider = t;
 		}
-	}, sI = class {
+	}, uI = class {
 		constructor(e, t) {
 			this.extension = e, this.provider = t;
 		}
-	}, cI = class {
+	}, dI = class {
 		constructor(e, t, n, r, i) {
 			this.extension = e, this.id = t, this._proxy = n, this._handle = r, this._requestHandler = i, this._onDidReceiveFeedback = new V(), this._onDidPerformAction = new V(), this._pauseStateEmitter = new V();
 		}
@@ -15964,7 +15964,7 @@ var iI, aI, oI, sI, cI, lI = t((() => {
 				get onDidChangePauseState() {
 					return J(r.extension, "chatParticipantAdditions"), r._pauseStateEmitter.event;
 				},
-				onDidPerformAction: Dw(this.extension, "chatParticipantAdditions") ? this._onDidPerformAction.event : void 0,
+				onDidPerformAction: Aw(this.extension, "chatParticipantAdditions") ? this._onDidPerformAction.event : void 0,
 				dispose() {
 					e = !0, r._followupProvider = void 0, r._onDidReceiveFeedback.dispose(), r._proxy.$unregisterAgent(r._handle);
 				}
@@ -15974,8 +15974,8 @@ var iI, aI, oI, sI, cI, lI = t((() => {
 			return this._requestHandler(e, t, n, r);
 		}
 	};
-})), uI, dI = t((() => {
-	W(), gv(), uI = class {
+})), pI, mI = t((() => {
+	W(), gv(), pI = class {
 		constructor(e, t) {
 			this.webviews = t, this._renderers = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(G.MainThreadChatOutputRenderer);
 		}
@@ -15998,20 +15998,20 @@ var iI, aI, oI, sI, cI, lI = t((() => {
 			}), o, {}, i);
 		}
 	};
-})), fI, pI, mI, hI = t((() => {
-	b(), An(), Eo(), ia(), P(), _r(), vl(), U(), Xr(), dy(), Fb(), W(), lI(), qh(), wm(), gv(), Ny(), Gn(), Ur(), Dm(), pI = class {
+})), hI, gI, _I, vI = t((() => {
+	b(), An(), Eo(), ia(), P(), _r(), vl(), U(), Xr(), dy(), Fb(), W(), fI(), qh(), wm(), gv(), Ny(), Gn(), Ur(), Dm(), gI = class {
 		constructor(e, t, n, r, i, a) {
-			this.session = e, this.extension = t, this.proxy = r, this.commandsConverter = i, this.sessionDisposables = a, this._stream = new iI(t, n, r, i, a);
+			this.session = e, this.extension = t, this.proxy = r, this.commandsConverter = i, this.sessionDisposables = a, this._stream = new sI(t, n, r, i, a);
 		}
 		get activeResponseStream() {
 			return this._stream;
 		}
 		getActiveRequestStream(e) {
-			return new iI(this.extension, e, this.proxy, this.commandsConverter, this.sessionDisposables);
+			return new sI(this.extension, e, this.proxy, this.commandsConverter, this.sessionDisposables);
 		}
-	}, mI = class extends z {
+	}, _I = class extends z {
 		static {
-			fI = this;
+			hI = this;
 		}
 		static {
 			this._sessionHandlePool = 0;
@@ -16097,7 +16097,7 @@ var iI, aI, oI, sI, cI, lI = t((() => {
 			if (!r) throw Error(`No provider for handle ${e}`);
 			let i = H.revive(t), a = await r.provider.provideChatSessionContent(i, n);
 			if (n.isCancellationRequested) throw new _a();
-			let o = new I(), s = fI._sessionHandlePool++, c = i.toString(), l = new pI(a, r.extension, {
+			let o = new I(), s = hI._sessionHandlePool++, c = i.toString(), l = new gI(a, r.extension, {
 				sessionResource: i,
 				requestId: "ongoing",
 				agentId: c,
@@ -16257,20 +16257,20 @@ var iI, aI, oI, sI, cI, lI = t((() => {
 				participant: e.participant
 			};
 		}
-	}, mI = fI = N([R(2, $x), R(3, Ct)], mI);
+	}, _I = hI = N([R(2, $x), R(3, Ct)], _I);
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostChatStatus.js
-function gI(e, t) {
-	return `${AC.toKey(e)}.${t}`;
+function yI(e, t) {
+	return `${SC.toKey(e)}.${t}`;
 }
-var _I, vI = t((() => {
-	W(), wC(), _I = class {
+var bI, xI = t((() => {
+	W(), GC(), bI = class {
 		constructor(e) {
 			this._items = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(G.MainThreadChatStatus);
 		}
 		createChatStatusItem(e, t) {
-			let n = gI(e.identifier, t);
+			let n = yI(e.identifier, t);
 			if (this._items.has(n)) throw Error(`Chat status item '${t}' already exists`);
 			let r = {
 				id: n,
@@ -16313,8 +16313,8 @@ var _I, vI = t((() => {
 			return this._items.set(n, s), s;
 		}
 	};
-})), yI, bI = t((() => {
-	W(), yI = class {
+})), SI, CI = t((() => {
+	W(), SI = class {
 		constructor(e) {
 			let t = e.getProxy(G.MainThreadClipboard);
 			this.value = Object.freeze({
@@ -16327,8 +16327,8 @@ var _I, vI = t((() => {
 			});
 		}
 	};
-})), xI, SI = t((() => {
-	$s(), P(), Ru(), xI = class {
+})), wI, TI = t((() => {
+	$s(), P(), Ru(), wI = class {
 		constructor(e, t, n) {
 			this._proxy = e, this._editors = t, this._remoteInfo = n, this._handlePool = 0, this._disposables = new I(), this._insets = /* @__PURE__ */ new Map(), this._disposables.add(t.onDidChangeVisibleTextEditors(() => {
 				let e = t.getVisibleTextEditors();
@@ -16395,8 +16395,8 @@ var _I, vI = t((() => {
 			this._insets.get(e)?.onDidReceiveMessage.fire(t);
 		}
 	};
-})), CI, wI = t((() => {
-	W(), wm(), U(), An(), ub(), CI = class e {
+})), EI, DI = t((() => {
+	W(), wm(), U(), An(), ub(), EI = class e {
 		static {
 			this._providerHandlePool = 0;
 		}
@@ -16440,14 +16440,14 @@ var _I, vI = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostComments.js
-function TI(e, t, n) {
+function OI(e, t, n) {
 	let r = e.getProxy(G.MainThreadComments);
 	class i {
 		static {
 			this.handlePool = 0;
 		}
 		constructor() {
-			this._commentControllers = /* @__PURE__ */ new Map(), this._commentControllersByExtension = new VC(), t.registerArgumentProcessor({ processArgument: (e) => {
+			this._commentControllers = /* @__PURE__ */ new Map(), this._commentControllersByExtension = new NC(), t.registerArgumentProcessor({ processArgument: (e) => {
 				if (e && e.$mid === Yn.CommentController) {
 					let t = this._commentControllers.get(e.handle);
 					return t ? t.value : e;
@@ -16862,43 +16862,43 @@ function TI(e, t, n) {
 	}
 	return new i();
 }
-var EI = t((() => {
-	S(), ia(), P(), Eo(), $s(), vl(), U(), Ur(), wC(), wm(), gv(), W(), kw(), qg();
+var kI = t((() => {
+	S(), ia(), P(), Eo(), $s(), vl(), U(), Ur(), GC(), wm(), gv(), W(), Mw(), qg();
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostWebview.js
-function DI(e) {
+function AI(e) {
 	try {
-		let t = Rw(Ww(e.engines.vscode));
+		let t = Vw(qw(e.engines.vscode));
 		return !!t && t.majorBase >= 1 && t.minorBase >= 57;
 	} catch {
 		return !1;
 	}
 }
-function OI(e) {
+function jI(e) {
 	try {
-		let t = Rw(Ww(e.engines.vscode));
+		let t = Vw(qw(e.engines.vscode));
 		return t ? t.majorBase < 1 || t.majorBase === 1 && t.minorBase < 60 : !1;
 	} catch {
 		return !1;
 	}
 }
-function kI(e) {
+function MI(e) {
 	return {
 		id: e.identifier,
 		location: e.extensionLocation
 	};
 }
-function AI(e, t, n) {
+function NI(e, t, n) {
 	return {
 		enableCommandUris: n.enableCommandUris,
 		enableScripts: n.enableScripts,
 		enableForms: n.enableForms,
 		portMapping: n.portMapping,
-		localResourceRoots: n.localResourceRoots || MI(e, t)
+		localResourceRoots: n.localResourceRoots || FI(e, t)
 	};
 }
-function jI(e) {
+function PI(e) {
 	return {
 		enableCommandUris: e.enableCommandUris,
 		enableScripts: e.enableScripts,
@@ -16907,11 +16907,11 @@ function jI(e) {
 		localResourceRoots: e.localResourceRoots?.map((e) => H.from(e))
 	};
 }
-function MI(e, t) {
+function FI(e, t) {
 	return [...(t?.getWorkspaceFolders() || []).map((e) => e.uri), e.extensionLocation];
 }
-var NI, PI, FI = t((() => {
-	$s(), P(), Ds(), zt(), U(), Iw(), hS(), Ru(), W(), NI = class {
+var II, LI, RI = t((() => {
+	$s(), P(), Ds(), zt(), U(), zw(), hS(), Ru(), W(), II = class {
 		#e;
 		#t;
 		#n;
@@ -16925,7 +16925,7 @@ var NI, PI, FI = t((() => {
 		#u;
 		#d;
 		constructor(e, t, n, r, i, a, o) {
-			this.#o = "", this.#c = !1, this.#l = !1, this._onMessageEmitter = new V(), this.onDidReceiveMessage = this._onMessageEmitter.event, this.#f = new V(), this._onDidDispose = this.#f.event, this.#e = e, this.#t = t, this.#s = n, this.#r = r, this.#i = i, this.#a = a, this.#u = DI(a), this.#d = OI(a), this.#n = o;
+			this.#o = "", this.#c = !1, this.#l = !1, this._onMessageEmitter = new V(), this.onDidReceiveMessage = this._onMessageEmitter.event, this.#f = new V(), this._onDidDispose = this.#f.event, this.#e = e, this.#t = t, this.#s = n, this.#r = r, this.#i = i, this.#a = a, this.#u = AI(a), this.#d = jI(a), this.#n = o;
 		}
 		#f;
 		dispose() {
@@ -16952,7 +16952,7 @@ var NI, PI, FI = t((() => {
 			return this.assertNotDisposed(), this.#s;
 		}
 		set options(e) {
-			this.assertNotDisposed(), Re(this.#s, e) || this.#t.$setOptions(this.#e, AI(this.#a, this.#i, e)), this.#s = e;
+			this.assertNotDisposed(), Re(this.#s, e) || this.#t.$setOptions(this.#e, NI(this.#a, this.#i, e)), this.#s = e;
 		}
 		async postMessage(e) {
 			if (this.#c) return !1;
@@ -16979,7 +16979,7 @@ var NI, PI, FI = t((() => {
 				authority: n
 			}).toString()}${s}`);
 		}
-	}, PI = class extends z {
+	}, LI = class extends z {
 		constructor(e, t, n, r, i) {
 			super(), this.remoteInfo = t, this.workspace = n, this._logService = r, this._deprecationService = i, this._webviews = /* @__PURE__ */ new Map(), this._webviewProxy = e.getProxy(G.MainThreadWebviews);
 		}
@@ -16999,7 +16999,7 @@ var NI, PI, FI = t((() => {
 			this._logService.warn(`${t} created a webview without a content security policy: https://aka.ms/vscode-webview-missing-csp`);
 		}
 		createNewWebview(e, t, n) {
-			let r = new NI(e, this._webviewProxy, jI(t), this.remoteInfo, this.workspace, n, this._deprecationService);
+			let r = new II(e, this._webviewProxy, PI(t), this.remoteInfo, this.workspace, n, this._deprecationService);
 			this._webviews.set(e, r);
 			let i = r._onDidDispose(() => {
 				i.dispose(), this.deleteWebview(e);
@@ -17013,8 +17013,8 @@ var NI, PI, FI = t((() => {
 			return this._webviews.get(e);
 		}
 	};
-})), II, LI = t((() => {
-	II = class e {
+})), zI, BI = t((() => {
+	zI = class e {
 		static {
 			this.enableDebugLogging = !1;
 		}
@@ -17038,22 +17038,22 @@ var NI, PI, FI = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostCustomEditors.js
-function RI(e) {
+function VI(e) {
 	return !!e.onDidChangeCustomDocument;
 }
-function zI(e) {
+function HI(e) {
 	return typeof e.resolveCustomTextEditor == "function";
 }
-function BI(e) {
+function UI(e) {
 	return typeof e.undo == "function" && typeof e.redo == "function";
 }
-function VI(e) {
+function WI(e) {
 	return en(e.scheme === Ma.file || e.scheme === Ma.untitled ? e.fsPath : e.toString()) + "";
 }
-var HI, UI, WI, GI, KI, qI = t((() => {
-	Eo(), Dn(), P(), Ds(), Gn(), U(), wm(), FI(), LI(), W(), gv(), HI = class {
+var GI, KI, qI, JI, YI, XI = t((() => {
+	Eo(), Dn(), P(), Ds(), Gn(), U(), wm(), RI(), BI(), W(), gv(), GI = class {
 		constructor(e, t) {
-			this.document = e, this._storagePath = t, this._backupCounter = 1, this._edits = new II("custom documents");
+			this.document = e, this._storagePath = t, this._backupCounter = 1, this._edits = new zI("custom documents");
 		}
 		addEdit(e) {
 			return this._edits.add([e]);
@@ -17069,7 +17069,7 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 		}
 		getNewBackupUri() {
 			if (!this._storagePath) throw Error("Backup requires a valid storage path");
-			let e = VI(this.document.uri) + this._backupCounter++;
+			let e = WI(this.document.uri) + this._backupCounter++;
 			return Gs(this._storagePath, e);
 		}
 		updateBackup(e) {
@@ -17083,7 +17083,7 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 			if (!t) throw Error("No edit found");
 			return t;
 		}
-	}, UI = class {
+	}, KI = class {
 		constructor() {
 			this._documents = /* @__PURE__ */ new Map();
 		}
@@ -17093,7 +17093,7 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 		add(e, t, n) {
 			let r = this.key(e, t.uri);
 			if (this._documents.has(r)) throw Error(`Document already exists for viewType:${e} resource:${t.uri}`);
-			let i = new HI(t, n);
+			let i = new GI(t, n);
 			return this._documents.set(r, i), i;
 		}
 		delete(e, t) {
@@ -17105,20 +17105,20 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 		}
 	}, (function(e) {
 		e[e.Text = 0] = "Text", e[e.Custom = 1] = "Custom";
-	})(WI ||= {}), GI = class {
+	})(qI ||= {}), JI = class {
 		constructor() {
 			this._providers = /* @__PURE__ */ new Map();
 		}
 		addTextProvider(e, t, n) {
 			return this.add(e, {
-				type: WI.Text,
+				type: qI.Text,
 				extension: t,
 				provider: n
 			});
 		}
 		addCustomProvider(e, t, n) {
 			return this.add(e, {
-				type: WI.Custom,
+				type: qI.Custom,
 				extension: t,
 				provider: n
 			});
@@ -17130,36 +17130,36 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 			if (this._providers.has(e)) throw Error(`Provider for viewType:${e} already registered`);
 			return this._providers.set(e, t), new Bx(() => this._providers.delete(e));
 		}
-	}, KI = class {
+	}, YI = class {
 		constructor(e, t, n, r, i) {
-			this._extHostDocuments = t, this._extensionStoragePaths = n, this._extHostWebview = r, this._extHostWebviewPanels = i, this._editorProviders = new GI(), this._documents = new UI(), this._proxy = e.getProxy(G.MainThreadCustomEditors);
+			this._extHostDocuments = t, this._extensionStoragePaths = n, this._extHostWebview = r, this._extHostWebviewPanels = i, this._editorProviders = new JI(), this._documents = new KI(), this._proxy = e.getProxy(G.MainThreadCustomEditors);
 		}
 		registerCustomEditorProvider(e, t, n, r) {
 			let i = new I();
-			return zI(n) ? (i.add(this._editorProviders.addTextProvider(t, e, n)), this._proxy.$registerTextEditorProvider(kI(e), t, r.webviewOptions || {}, { supportsMove: !!n.moveCustomTextEditor }, DI(e))) : (i.add(this._editorProviders.addCustomProvider(t, e, n)), RI(n) && i.add(n.onDidChangeCustomDocument((e) => {
+			return HI(n) ? (i.add(this._editorProviders.addTextProvider(t, e, n)), this._proxy.$registerTextEditorProvider(MI(e), t, r.webviewOptions || {}, { supportsMove: !!n.moveCustomTextEditor }, AI(e))) : (i.add(this._editorProviders.addCustomProvider(t, e, n)), VI(n) && i.add(n.onDidChangeCustomDocument((e) => {
 				let n = this.getCustomDocumentEntry(t, e.document.uri);
-				if (BI(e)) {
+				if (UI(e)) {
 					let r = n.addEdit(e);
 					this._proxy.$onDidEdit(e.document.uri, t, r, e.label);
 				} else this._proxy.$onContentChange(e.document.uri, t);
-			})), this._proxy.$registerCustomEditorProvider(kI(e), t, r.webviewOptions || {}, !!r.supportsMultipleEditorsPerDocument, DI(e))), Bx.from(i, new Bx(() => {
+			})), this._proxy.$registerCustomEditorProvider(MI(e), t, r.webviewOptions || {}, !!r.supportsMultipleEditorsPerDocument, AI(e))), Bx.from(i, new Bx(() => {
 				this._proxy.$unregisterEditorProvider(t);
 			}));
 		}
 		async $createCustomDocument(e, t, n, r, i) {
 			let a = this._editorProviders.get(t);
 			if (!a) throw Error(`No provider found for '${t}'`);
-			if (a.type !== WI.Custom) throw Error(`Invalid provide type for '${t}'`);
+			if (a.type !== qI.Custom) throw Error(`Invalid provide type for '${t}'`);
 			let o = H.revive(e), s = await a.provider.openCustomDocument(o, {
 				backupId: n,
 				untitledDocumentData: r?.buffer
 			}, i), c;
-			return RI(a.provider) && this._extensionStoragePaths && (c = this._extensionStoragePaths.workspaceValue(a.extension) ?? this._extensionStoragePaths.globalValue(a.extension)), this._documents.add(t, s, c), { editable: RI(a.provider) };
+			return VI(a.provider) && this._extensionStoragePaths && (c = this._extensionStoragePaths.workspaceValue(a.extension) ?? this._extensionStoragePaths.globalValue(a.extension)), this._documents.add(t, s, c), { editable: VI(a.provider) };
 		}
 		async $disposeCustomDocument(e, t) {
 			let n = this._editorProviders.get(t);
 			if (!n) throw Error(`No provider found for '${t}'`);
-			if (n.type !== WI.Custom) throw Error(`Invalid provider type for '${t}'`);
+			if (n.type !== qI.Custom) throw Error(`Invalid provider type for '${t}'`);
 			let r = H.revive(e), { document: i } = this.getCustomDocumentEntry(t, r);
 			this._documents.delete(t, i), i.dispose();
 		}
@@ -17168,11 +17168,11 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 			if (!o) throw Error(`No provider found for '${n}'`);
 			let s = Wm.to(i), c = this._extHostWebview.createNewWebview(t, r.contentOptions, o.extension), l = this._extHostWebviewPanels.createNewWebviewPanel(t, n, r.title, s, r.options, c, r.active), u = H.revive(e);
 			switch (o.type) {
-				case WI.Custom: {
+				case qI.Custom: {
 					let { document: e } = this.getCustomDocumentEntry(n, u);
 					return o.provider.resolveCustomEditor(e, l, a);
 				}
-				case WI.Text: {
+				case qI.Text: {
 					let e = this._extHostDocuments.getDocument(u);
 					return o.provider.resolveCustomTextEditor(e, l, a);
 				}
@@ -17220,12 +17220,12 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 		}
 		getCustomEditorProvider(e) {
 			let t = this._editorProviders.get(e)?.provider;
-			if (!t || !RI(t)) throw Error("Custom document is not editable");
+			if (!t || !VI(t)) throw Error("Custom document is not editable");
 			return t;
 		}
 	};
-})), JI, YI, XI, ZI = t((() => {
-	b(), fr(), mr(), U(), W(), gv(), wm(), $s(), An(), Xr(), _r(), AA(), Ip(), YI = class e {
+})), ZI, QI, $I, eL = t((() => {
+	b(), fr(), mr(), U(), W(), gv(), wm(), $s(), An(), Xr(), _r(), NA(), Ip(), QI = class e {
 		#e;
 		#t;
 		#n;
@@ -17324,9 +17324,9 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 		static _compareIndexedTuplesByUri(e, t) {
 			return e[0].toString() < t[0].toString() ? -1 : +(e[0].toString() > t[0].toString());
 		}
-	}, XI = class {
+	}, $I = class {
 		static {
-			JI = this;
+			ZI = this;
 		}
 		static {
 			this._idPool = 0;
@@ -17346,7 +17346,7 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 			this._logService = t, this._fileSystemInfoService = n, this._extHostDocumentsAndEditors = r, this._collections = /* @__PURE__ */ new Map(), this._onDidChangeDiagnostics = new d({
 				merge: (e) => e.flat(),
 				delay: 50
-			}), this.onDidChangeDiagnostics = is.map(this._onDidChangeDiagnostics.event, JI._mapper), this._proxy = e.getProxy(G.MainThreadDiagnostics);
+			}), this.onDidChangeDiagnostics = is.map(this._onDidChangeDiagnostics.event, ZI._mapper), this._proxy = e.getProxy(G.MainThreadDiagnostics);
 		}
 		createDiagnosticCollection(e, t) {
 			let { _collections: n, _proxy: r, _onDidChangeDiagnostics: i, _logService: a, _fileSystemInfoService: o, _extHostDocumentsAndEditors: s } = this, c = new class {
@@ -17360,17 +17360,17 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 					r.dispose();
 				}
 			}(), l;
-			if (!t) t = "_generated_diagnostic_collection_name_#" + JI._idPool++, l = t;
+			if (!t) t = "_generated_diagnostic_collection_name_#" + ZI._idPool++, l = t;
 			else if (!n.has(t)) l = t;
 			else {
 				this._logService.warn(`DiagnosticCollection with name '${t}' does already exist.`);
 				do
-					l = t + JI._idPool++;
+					l = t + ZI._idPool++;
 				while (n.has(l));
 			}
-			return new class extends YI {
+			return new class extends QI {
 				constructor() {
-					super(t, l, JI._maxDiagnosticsTotal, JI._maxDiagnosticsPerFile, (e) => s.getDocument(e)?.version, o.extUri, c, i), n.set(l, this);
+					super(t, l, ZI._maxDiagnosticsTotal, ZI._maxDiagnosticsPerFile, (e) => s.getDocument(e)?.version, o.extUri, c, i), n.set(l, this);
 				}
 				dispose() {
 					super.dispose(), n.delete(l);
@@ -17395,14 +17395,14 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 		}
 		$acceptMarkersChange(e) {
 			if (!this._mirrorCollection) {
-				let e = "_generated_mirror", t = new YI(e, e, 2 ** 53 - 1, 2 ** 53 - 1, (e) => void 0, this._fileSystemInfoService.extUri, void 0, this._onDidChangeDiagnostics);
+				let e = "_generated_mirror", t = new QI(e, e, 2 ** 53 - 1, 2 ** 53 - 1, (e) => void 0, this._fileSystemInfoService.extUri, void 0, this._onDidChangeDiagnostics);
 				this._collections.set(e, t), this._mirrorCollection = t;
 			}
 			for (let [t, n] of e) this._mirrorCollection.set(H.revive(t), n.map(aS.to));
 		}
-	}, XI = JI = N([R(1, Ct), R(2, kA)], XI);
-})), QI, $I = t((() => {
-	U(), W(), QI = class {
+	}, $I = ZI = N([R(1, Ct), R(2, MA)], $I);
+})), tL, nL = t((() => {
+	U(), W(), tL = class {
 		constructor(e) {
 			this._proxy = e.getProxy(G.MainThreadDialogs);
 		}
@@ -17413,8 +17413,8 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 			return this._proxy.$showSaveDialog(e).then((e) => e ? H.revive(e) : void 0);
 		}
 	};
-})), eL, tL = t((() => {
-	ia(), U(), gv(), W(), Ds(), Eo(), c(), eL = class e {
+})), rL, iL = t((() => {
+	ia(), U(), gv(), W(), Ds(), Eo(), c(), rL = class e {
 		static {
 			this._handlePool = 0;
 		}
@@ -17456,8 +17456,8 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 			return n ? Promise.resolve(n.provideTextDocumentContent(H.revive(t), xn.None)) : Promise.reject(/* @__PURE__ */ Error(`unsupported uri-scheme: ${t.scheme}`));
 		}
 	};
-})), nL, rL = t((() => {
-	U(), ia(), gv(), wm(), xv(), PS(), nL = class {
+})), aL, oL = t((() => {
+	U(), ia(), gv(), wm(), xv(), PS(), aL = class {
 		constructor(e, t, n, r = {
 			timeout: 1500,
 			errors: 3
@@ -17539,8 +17539,8 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 			});
 		}
 	};
-})), iL, aL = t((() => {
-	$s(), P(), U(), W(), zj(), wm(), kt(), zt(), gv(), iL = class {
+})), sL, cL = t((() => {
+	$s(), P(), U(), W(), Hj(), wm(), kt(), zt(), gv(), sL = class {
 		constructor(e, t) {
 			this._onDidAddDocument = new V(), this._onDidRemoveDocument = new V(), this._onDidChangeDocument = new V(), this._onDidChangeDocumentWithReason = new V(), this._onDidSaveDocument = new V(), this.onDidAddDocument = this._onDidAddDocument.event, this.onDidRemoveDocument = this._onDidRemoveDocument.event, this.onDidChangeDocument = this._onDidChangeDocument.event, this.onDidChangeDocumentWithReason = this._onDidChangeDocumentWithReason.event, this.onDidSaveDocument = this._onDidSaveDocument.event, this._toDispose = new I(), this._documentLoader = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(G.MainThreadDocuments), this._documentsAndEditors = t, this._documentsAndEditors.onDidRemoveDocuments((e) => {
 				for (let t of e) this._onDidRemoveDocument.fire(t.document);
@@ -17645,11 +17645,11 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 			}));
 		}
 		setWordDefinitionFor(e, t) {
-			Pj(e, t);
+			Lj(e, t);
 		}
 	};
-})), oL, sL = t((() => {
-	Eo(), $s(), P(), W(), oL = class {
+})), lL, uL = t((() => {
+	Eo(), $s(), P(), W(), lL = class {
 		constructor(e) {
 			this._provider = /* @__PURE__ */ new Map(), this._onDidChange = new V(), this.onDidChange = this._onDidChange.event, this._allKnownModels = /* @__PURE__ */ new Set(), this._handlePool = 0, this._proxy = e.getProxy(G.MainThreadEmbeddings);
 		}
@@ -17686,8 +17686,8 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 			this._allKnownModels = new Set(e), this._onDidChange.fire();
 		}
 	};
-})), cL, lL = t((() => {
-	W(), gv(), cL = class {
+})), dL, fL = t((() => {
+	W(), gv(), dL = class {
 		constructor(e) {
 			this._AiEmbeddingVectorProviders = /* @__PURE__ */ new Map(), this._nextHandle = 0, this._proxy = e.getProxy(G.MainThreadAiEmbeddingVector);
 		}
@@ -17706,8 +17706,8 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 			});
 		}
 	};
-})), uL, dL, fL = t((() => {
-	U(), W(), Ca(), P(), gv(), wm(), nu(), c(), Pr(), kw(), uL = class {
+})), pL, mL, hL = t((() => {
+	U(), W(), Ca(), P(), gv(), wm(), nu(), c(), Pr(), Mw(), pL = class {
 		constructor() {
 			this._schemes = [];
 		}
@@ -17761,9 +17761,9 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 			}
 			return t;
 		}
-	}, dL = class e {
+	}, mL = class e {
 		constructor(e, t) {
-			this._extHostLanguageFeatures = t, this._linkProvider = new uL(), this._fsProvider = /* @__PURE__ */ new Map(), this._registeredSchemes = /* @__PURE__ */ new Set(), this._watches = /* @__PURE__ */ new Map(), this._handlePool = 0, this._proxy = e.getProxy(G.MainThreadFileSystem);
+			this._extHostLanguageFeatures = t, this._linkProvider = new pL(), this._fsProvider = /* @__PURE__ */ new Map(), this._registeredSchemes = /* @__PURE__ */ new Set(), this._watches = /* @__PURE__ */ new Map(), this._handlePool = 0, this._proxy = e.getProxy(G.MainThreadFileSystem);
 		}
 		dispose() {
 			this._linkProviderRegistration?.dispose();
@@ -17903,13 +17903,13 @@ var HI, UI, WI, GI, KI, qI = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/platform/files/common/watcher.js
-function pL(e, t) {
+function gL(e, t) {
 	return typeof t == "string" && !t.startsWith("**") && !ur(t) ? {
 		base: e,
 		pattern: t
 	} : t;
 }
-var mL = t((() => {
+var _L = t((() => {
 	Li(), P(), Bc(), mo(), U(), Ca(), class e extends z {
 		static {
 			this.MAX_RESTARTS = 5;
@@ -17952,8 +17952,8 @@ var mL = t((() => {
 			return this.watcher = void 0, super.dispose();
 		}
 	};
-})), hL, gL, _L, vL = t((() => {
-	$s(), Li(), U(), W(), wm(), gv(), Ca(), Gc(), c(), mL(), Ds(), cb(), hL = class {
+})), vL, yL, bL, xL = t((() => {
+	$s(), Li(), U(), W(), wm(), gv(), Ca(), Gc(), c(), _L(), Ds(), cb(), vL = class {
 		get ignoreCreateEvents() {
 			return !!(this._config & 1);
 		}
@@ -18000,7 +18000,7 @@ var mL = t((() => {
 					if (t) {
 						for (let n in t) if (n && t[n] === !0) {
 							let t = `${Ka(n, "/")}/**`;
-							d ||= [], d.push(pL(e.uri.fsPath, t));
+							d ||= [], d.push(gL(e.uri.fsPath, t));
 						}
 					}
 					if (!d || d.length === 0) return s;
@@ -18025,7 +18025,7 @@ var mL = t((() => {
 		get onDidDelete() {
 			return this._onDidDelete.event;
 		}
-	}, gL = class {
+	}, yL = class {
 		get created() {
 			return this._created.value;
 		}
@@ -18038,15 +18038,15 @@ var mL = t((() => {
 		constructor(e) {
 			this._events = e, this._created = new fe(() => this._events.created.map(H.revive)), this._changed = new fe(() => this._events.changed.map(H.revive)), this._deleted = new fe(() => this._events.deleted.map(H.revive)), this.session = this._events.session;
 		}
-	}, _L = class {
+	}, bL = class {
 		constructor(e, t, n) {
 			this._mainContext = e, this._logService = t, this._extHostDocumentsAndEditors = n, this._onFileSystemEvent = new V(), this._onDidRenameFile = new V(), this._onDidCreateFile = new V(), this._onDidDeleteFile = new V(), this._onWillRenameFile = new Hn(), this._onWillCreateFile = new Hn(), this._onWillDeleteFile = new Hn(), this.onDidRenameFile = this._onDidRenameFile.event, this.onDidCreateFile = this._onDidCreateFile.event, this.onDidDeleteFile = this._onDidDeleteFile.event;
 		}
 		createFileSystemWatcher(e, t, n, r, i, a) {
-			return new hL(this._mainContext, t, n, e, r, this._onFileSystemEvent.event, Mm.from(i), a);
+			return new vL(this._mainContext, t, n, e, r, this._onFileSystemEvent.event, Mm.from(i), a);
 		}
 		$onFileEvent(e) {
-			this._onFileSystemEvent.fire(new gL(e));
+			this._onFileSystemEvent.fire(new yL(e));
 		}
 		$onDidRunFileOperation(e, t) {
 			switch (e) {
@@ -18113,8 +18113,8 @@ var mL = t((() => {
 			};
 		}
 	};
-})), yL, bL = t((() => {
-	U(), Nj(), yL = class {
+})), SL, CL = t((() => {
+	U(), Ij(), SL = class {
 		constructor(e, t, n, r, i) {
 			this._extHostNotebooks = t, this._textDocumentsAndEditors = n, this._commands = r;
 			let a = new Q("interactive.open", "_interactive.open", "Open interactive window and return notebook editor and input URI", [
@@ -18153,8 +18153,8 @@ var mL = t((() => {
 			this._textDocumentsAndEditors.acceptDocumentsAndEditorsDelta({ removedDocuments: [e] });
 		}
 	};
-})), xL, SL = t((() => {
-	P(), W(), xL = class {
+})), wL, TL = t((() => {
+	P(), W(), wL = class {
 		constructor(e) {
 			this._handlePool = 0, this._proxy = e.getProxy(G.MainThreadLabelService);
 		}
@@ -18168,11 +18168,11 @@ var mL = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostLanguageFeatures.js
-function CL(e) {
+function EL(e) {
 	return Array.isArray(e) ? e.map(Ef.from) : e ? [Ef.from(e)] : [];
 }
-var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, UL, WL, GL, KL, qL, JL, YL, XL, ZL, QL, $L, eR, tR, nR, rR, iR, aR, oR, sR, cR = t((() => {
-	An(), S(), Eo(), ia(), xa(), P(), zt(), vc(), c(), kt(), U(), Go(), Qa(), Ts(), Ur(), zf(), fr(), wC(), kw(), LI(), W(), wm(), gv(), $s(), gm(), Pg(), ig(), Dm(), wL = class e {
+var DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, UL, WL, GL, KL, qL, JL, YL, XL, ZL, QL, $L, eR, tR, nR, rR, iR, aR, oR, sR, cR, lR, uR, dR = t((() => {
+	An(), S(), Eo(), ia(), xa(), P(), zt(), vc(), c(), kt(), U(), Go(), Qa(), Ts(), Ur(), zf(), fr(), GC(), Mw(), BI(), W(), wm(), gv(), $s(), gm(), Pg(), ig(), Dm(), DL = class e {
 		constructor(e, t) {
 			this._documents = e, this._provider = t;
 		}
@@ -18212,9 +18212,9 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			}
 			return t;
 		}
-	}, TL = class {
+	}, OL = class {
 		constructor(e, t, n, r, i, a) {
-			this._documents = e, this._commands = t, this._provider = n, this._extension = r, this._extTelemetry = i, this._logService = a, this._cache = new II("CodeLens"), this._disposables = /* @__PURE__ */ new Map();
+			this._documents = e, this._commands = t, this._provider = n, this._extension = r, this._extTelemetry = i, this._logService = a, this._cache = new zI("CodeLens"), this._disposables = /* @__PURE__ */ new Map();
 		}
 		async provideCodeLenses(e, t) {
 			let n = this._documents.getDocument(e), r = await this._provider.provideCodeLenses(n, t);
@@ -18256,39 +18256,39 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 		releaseCodeLenses(e) {
 			this._disposables.get(e)?.dispose(), this._disposables.delete(e), this._cache.delete(e);
 		}
-	}, EL = class {
+	}, kL = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t;
 		}
 		async provideDefinition(e, t, n) {
 			let r = this._documents.getDocument(e), i = iv.to(t);
-			return CL(await this._provider.provideDefinition(r, i, n));
+			return EL(await this._provider.provideDefinition(r, i, n));
 		}
-	}, DL = class {
+	}, AL = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t;
 		}
 		async provideDeclaration(e, t, n) {
 			let r = this._documents.getDocument(e), i = iv.to(t);
-			return CL(await this._provider.provideDeclaration(r, i, n));
+			return EL(await this._provider.provideDeclaration(r, i, n));
 		}
-	}, OL = class {
+	}, jL = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t;
 		}
 		async provideImplementation(e, t, n) {
 			let r = this._documents.getDocument(e), i = iv.to(t);
-			return CL(await this._provider.provideImplementation(r, i, n));
+			return EL(await this._provider.provideImplementation(r, i, n));
 		}
-	}, kL = class {
+	}, ML = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t;
 		}
 		async provideTypeDefinition(e, t, n) {
 			let r = this._documents.getDocument(e), i = iv.to(t);
-			return CL(await this._provider.provideTypeDefinition(r, i, n));
+			return EL(await this._provider.provideTypeDefinition(r, i, n));
 		}
-	}, AL = class e {
+	}, NL = class e {
 		static {
 			this.HOVER_MAP_MAX_SIZE = 10;
 		}
@@ -18321,7 +18321,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 		releaseHover(e) {
 			this._hoverMap.delete(e);
 		}
-	}, jL = class {
+	}, PL = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t;
 		}
@@ -18329,7 +18329,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			let r = this._documents.getDocument(e), i = iv.to(t), a = await this._provider.provideEvaluatableExpression(r, i, n);
 			if (a) return of.from(a);
 		}
-	}, ML = class {
+	}, FL = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t;
 		}
@@ -18337,7 +18337,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			let i = this._documents.getDocument(e), a = await this._provider.provideInlineValues(i, q.to(t), hf.to(n), r);
 			if (Array.isArray(a)) return a.map((e) => RS.from(e));
 		}
-	}, NL = class {
+	}, IL = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t;
 		}
@@ -18345,7 +18345,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			let r = this._documents.getDocument(e), i = iv.to(t), a = await this._provider.provideDocumentHighlights(r, i, n);
 			if (Array.isArray(a)) return a.map($h.from);
 		}
-	}, PL = class {
+	}, LL = class {
 		constructor(e, t, n) {
 			this._documents = e, this._provider = t, this._logService = n;
 		}
@@ -18360,7 +18360,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			}).filter((e) => e !== void 0), o = iv.to(t), s = await this._provider.provideMultiDocumentHighlights(i, o, a, r);
 			if (Array.isArray(s)) return s.map($p.from);
 		}
-	}, FL = class {
+	}, RL = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t;
 		}
@@ -18371,7 +18371,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 				wordPattern: a.wordPattern
 			};
 		}
-	}, IL = class {
+	}, zL = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t;
 		}
@@ -18379,12 +18379,12 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			let i = this._documents.getDocument(e), a = iv.to(t), o = await this._provider.provideReferences(i, a, n, r);
 			if (Array.isArray(o)) return o.map(BS.from);
 		}
-	}, LL = class e {
+	}, BL = class e {
 		static {
 			this._maxCodeActionsPerFile = 1e3;
 		}
 		constructor(e, t, n, r, i, a, o) {
-			this._documents = e, this._commands = t, this._diagnostics = n, this._provider = r, this._logService = i, this._extension = a, this._apiDeprecation = o, this._cache = new II("CodeAction"), this._disposables = /* @__PURE__ */ new Map();
+			this._documents = e, this._commands = t, this._diagnostics = n, this._provider = r, this._logService = i, this._extension = a, this._apiDeprecation = o, this._cache = new zI("CodeAction"), this._disposables = /* @__PURE__ */ new Map();
 		}
 		async provideCodeActions(t, n, r, i) {
 			let a = this._documents.getDocument(t), o = ra.isISelection(n) ? mv.to(n) : q.to(n), s = [];
@@ -18417,8 +18417,8 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 						edit: e.edit && uh.from(e.edit, void 0),
 						kind: e.kind && e.kind.value,
 						isPreferred: e.isPreferred,
-						isAI: Dw(this._extension, "codeActionAI") ? e.isAI : !1,
-						ranges: Dw(this._extension, "codeActionRanges") ? Pi(r.map(q.from)) : void 0,
+						isAI: Aw(this._extension, "codeActionAI") ? e.isAI : !1,
+						ranges: Aw(this._extension, "codeActionRanges") ? Pi(r.map(q.from)) : void 0,
 						disabled: e.disabled?.reason
 					});
 				}
@@ -18449,9 +18449,9 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 		static _isCommand(e) {
 			return typeof e.command == "string" && typeof e.title == "string";
 		}
-	}, RL = class {
+	}, VL = class {
 		constructor(e, t, n, r, i) {
-			this._proxy = e, this._documents = t, this._provider = n, this._handle = r, this._extension = i, this._editsCache = new II("DocumentPasteEdit.edits");
+			this._proxy = e, this._documents = t, this._provider = n, this._handle = r, this._extension = i, this._editsCache = new zI("DocumentPasteEdit.edits");
 		}
 		async prepareDocumentPaste(e, t, n, r) {
 			if (!this._provider.prepareDocumentPaste) return;
@@ -18498,7 +18498,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 		releasePasteEdits(e) {
 			this._editsCache.delete(e);
 		}
-	}, zL = class {
+	}, HL = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t;
 		}
@@ -18506,7 +18506,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			let r = this._documents.getDocument(e), i = await this._provider.provideDocumentFormattingEdits(r, t, n);
 			if (Array.isArray(i)) return i.map(Uf.from);
 		}
-	}, BL = class {
+	}, UL = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t;
 		}
@@ -18519,7 +18519,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			let i = this._documents.getDocument(e), a = t.map(q.to), o = await this._provider.provideDocumentRangesFormattingEdits(i, a, n, r);
 			if (Array.isArray(o)) return o.map(Uf.from);
 		}
-	}, VL = class {
+	}, WL = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t, this.autoFormatTriggerCharacters = [];
 		}
@@ -18527,9 +18527,9 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			let a = this._documents.getDocument(e), o = iv.to(t), s = await this._provider.provideOnTypeFormattingEdits(a, o, n, r, i);
 			if (Array.isArray(s)) return s.map(Uf.from);
 		}
-	}, HL = class {
+	}, GL = class {
 		constructor(e, t) {
-			this._provider = e, this._logService = t, this._cache = new II("WorkspaceSymbols");
+			this._provider = e, this._logService = t, this._cache = new zI("WorkspaceSymbols");
 		}
 		async provideWorkspaceSymbols(e, t) {
 			let n = await this._provider.provideWorkspaceSymbols(e, t);
@@ -18562,7 +18562,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 		releaseWorkspaceSymbols(e) {
 			this._cache.delete(e);
 		}
-	}, UL = class e {
+	}, KL = class e {
 		static supportsResolving(e) {
 			return typeof e.prepareRename == "function";
 		}
@@ -18609,7 +18609,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			if (typeof e == "string") return e;
 			if (e instanceof Error && typeof e.message == "string") return e.message;
 		}
-	}, WL = class e {
+	}, qL = class e {
 		static {
 			this.languageTriggerKindToVSCodeTriggerKind = {
 				[Mt.Invoke]: tS.Invoke,
@@ -18639,11 +18639,11 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			if (typeof e == "string") return e;
 			if (e instanceof Error && typeof e.message == "string") return e.message;
 		}
-	}, GL = class {
+	}, JL = class {
 		constructor(e, t) {
 			this.resultId = e, this.tokens = t;
 		}
-	}, KL = class e {
+	}, YL = class e {
 		constructor(e, t) {
 			this._documents = e, this._provider = t, this._nextResultId = 1, this._previousResults = /* @__PURE__ */ new Map();
 		}
@@ -18686,7 +18686,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 		_send(t, n) {
 			if (e._isSemanticTokens(t)) {
 				let e = this._nextResultId++;
-				return this._previousResults.set(e, new GL(t.resultId, t.data)), Zf({
+				return this._previousResults.set(e, new JL(t.resultId, t.data)), Zf({
 					id: e,
 					type: "full",
 					data: t.data
@@ -18694,7 +18694,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			}
 			if (e._isSemanticTokensEdits(t)) {
 				let r = this._nextResultId++;
-				return e._isSemanticTokens(n) ? this._previousResults.set(r, new GL(n.resultId, n.data)) : this._previousResults.set(r, new GL(t.resultId)), Zf({
+				return e._isSemanticTokens(n) ? this._previousResults.set(r, new JL(n.resultId, n.data)) : this._previousResults.set(r, new JL(t.resultId)), Zf({
 					id: r,
 					type: "delta",
 					deltas: (t.edits || []).map((e) => ({
@@ -18706,7 +18706,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			}
 			return null;
 		}
-	}, qL = class {
+	}, XL = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t;
 		}
@@ -18721,12 +18721,12 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 				data: e.data
 			});
 		}
-	}, JL = class e {
+	}, ZL = class e {
 		static supportsResolving(e) {
 			return typeof e.resolveCompletionItem == "function";
 		}
 		constructor(e, t, n, r, i) {
-			this._documents = e, this._commands = t, this._provider = n, this._apiDeprecation = r, this._extension = i, this._cache = new II("CompletionItem"), this._disposables = /* @__PURE__ */ new Map();
+			this._documents = e, this._commands = t, this._provider = n, this._apiDeprecation = r, this._extension = i, this._cache = new zI("CompletionItem"), this._disposables = /* @__PURE__ */ new Map();
 		}
 		async provideCompletionItems(t, n, r, i) {
 			let a = this._documents.getDocument(t), o = iv.to(n), s = a.getWordRangeAtPosition(o) || new Tp(o, o), c = s.with({ end: o }), l = new Ro(), u = await this._provider.provideCompletionItems(a, o, i, iy.to(r));
@@ -18798,18 +18798,18 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 				replace: q.from(s.replacing)
 			}), o;
 		}
-	}, YL = class {
+	}, QL = class {
 		constructor(e, t, n, r) {
-			this._extension = e, this._documents = t, this._provider = n, this._commands = r, this._references = new XL(), this.languageTriggerKindToVSCodeTriggerKind = {
+			this._extension = e, this._documents = t, this._provider = n, this._commands = r, this._references = new $L(), this.languageTriggerKindToVSCodeTriggerKind = {
 				[kn.Automatic]: vf.Automatic,
 				[kn.Explicit]: vf.Invoke
-			}, this._isAdditionsProposedApiEnabled = Dw(this._extension, "inlineCompletionsAdditions");
+			}, this._isAdditionsProposedApiEnabled = Aw(this._extension, "inlineCompletionsAdditions");
 		}
 		get supportsHandleEvents() {
-			return Dw(this._extension, "inlineCompletionsAdditions") && (typeof this._provider.handleDidShowCompletionItem == "function" || typeof this._provider.handleDidPartiallyAcceptCompletionItem == "function" || typeof this._provider.handleDidRejectCompletionItem == "function" || typeof this._provider.handleEndOfLifetime == "function");
+			return Aw(this._extension, "inlineCompletionsAdditions") && (typeof this._provider.handleDidShowCompletionItem == "function" || typeof this._provider.handleDidPartiallyAcceptCompletionItem == "function" || typeof this._provider.handleDidRejectCompletionItem == "function" || typeof this._provider.handleEndOfLifetime == "function");
 		}
 		get supportsSetModelId() {
-			return Dw(this._extension, "inlineCompletionsAdditions") && typeof this._provider.setCurrentModelId == "function";
+			return Aw(this._extension, "inlineCompletionsAdditions") && typeof this._provider.setCurrentModelId == "function";
 		}
 		get modelInfo() {
 			if (this._isAdditionsProposedApiEnabled) return this._provider.modelInfo ? {
@@ -18921,7 +18921,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			let n = this._references.get(e)?.items[t];
 			n && this._provider.handleDidRejectCompletionItem && this._isAdditionsProposedApiEnabled && this._provider.handleDidRejectCompletionItem(n);
 		}
-	}, XL = class {
+	}, $L = class {
 		constructor() {
 			this._references = /* @__PURE__ */ new Map(), this._idPool = 1;
 		}
@@ -18936,9 +18936,9 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 		get(e) {
 			return this._references.get(e);
 		}
-	}, ZL = class {
+	}, eR = class {
 		constructor(e, t) {
-			this._documents = e, this._provider = t, this._cache = new II("SignatureHelp");
+			this._documents = e, this._provider = t, this._cache = new zI("SignatureHelp");
 		}
 		async provideSignatureHelp(e, t, n, r) {
 			let i = this._documents.getDocument(e), a = iv.to(t), o = this.reviveContext(n), s = await this._provider.provideSignatureHelp(i, a, r, o);
@@ -18964,9 +18964,9 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 		releaseSignatureHelp(e) {
 			this._cache.delete(e);
 		}
-	}, QL = class {
+	}, tR = class {
 		constructor(e, t, n, r, i) {
-			this._documents = e, this._commands = t, this._provider = n, this._logService = r, this._extension = i, this._cache = new II("InlayHints"), this._disposables = /* @__PURE__ */ new Map();
+			this._documents = e, this._commands = t, this._provider = n, this._logService = r, this._extension = i, this._cache = new zI("InlayHints"), this._disposables = /* @__PURE__ */ new Map();
 		}
 		async provideInlayHints(e, t, n) {
 			let r = this._documents.getDocument(e), i = q.to(t), a = await this._provider.provideInlayHints(r, i, n);
@@ -19028,9 +19028,9 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			}
 			return r;
 		}
-	}, $L = class e {
+	}, nR = class e {
 		constructor(e, t) {
-			this._documents = e, this._provider = t, this._cache = new II("DocumentLink");
+			this._documents = e, this._provider = t, this._cache = new zI("DocumentLink");
 		}
 		async provideLinks(t, n) {
 			let r = this._documents.getDocument(t), i = await this._provider.provideDocumentLinks(r, n);
@@ -19063,7 +19063,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 		releaseLinks(e) {
 			this._cache.delete(e);
 		}
-	}, eR = class {
+	}, rR = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t;
 		}
@@ -19081,7 +19081,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			}, n);
 			if (Array.isArray(o)) return o.map(Rb.from);
 		}
-	}, tR = class {
+	}, iR = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t;
 		}
@@ -19089,7 +19089,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			let r = this._documents.getDocument(e), i = await this._provider.provideFoldingRanges(r, t, n);
 			if (Array.isArray(i)) return i.map(Dy.from);
 		}
-	}, nR = class {
+	}, aR = class {
 		constructor(e, t, n) {
 			this._documents = e, this._provider = t, this._logService = n;
 		}
@@ -19110,7 +19110,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			}
 			return o;
 		}
-	}, rR = class {
+	}, oR = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t, this._idPool = new Bn(""), this._cache = /* @__PURE__ */ new Map();
 		}
@@ -19148,7 +19148,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 		_itemFromCache(e, t) {
 			return this._cache.get(e)?.get(t);
 		}
-	}, iR = class {
+	}, sR = class {
 		constructor(e, t) {
 			this._documents = e, this._provider = t, this._idPool = new Bn(""), this._cache = /* @__PURE__ */ new Map();
 		}
@@ -19180,9 +19180,9 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 		_itemFromCache(e, t) {
 			return this._cache.get(e)?.get(t);
 		}
-	}, aR = class {
+	}, cR = class {
 		constructor(e, t, n, r, i) {
-			this._proxy = e, this._documents = t, this._provider = n, this._handle = r, this._extension = i, this._cache = new II("DocumentDropEdit");
+			this._proxy = e, this._documents = t, this._provider = n, this._handle = r, this._extension = i, this._cache = new zI("DocumentDropEdit");
 		}
 		async provideDocumentOnDropEdits(e, t, n, r, i) {
 			let a = this._documents.getDocument(t), o = iv.to(n), s = kS.toDataTransfer(r, async (t) => (await this._proxy.$resolveDocumentOnDropFileData(this._handle, e, t)).buffer), c = await this._provider.provideDocumentDropEdits(a, o, s, i);
@@ -19206,11 +19206,11 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 		releaseDropEdits(e) {
 			this._cache.delete(e);
 		}
-	}, oR = class {
+	}, lR = class {
 		constructor(e, t) {
 			this.adapter = e, this.extension = t;
 		}
-	}, sR = class e extends z {
+	}, uR = class e extends z {
 		static {
 			this._handlePool = 0;
 		}
@@ -19250,7 +19250,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 		}
 		_addNewAdapter(e, t) {
 			let n = this._nextHandle();
-			return this._adapter.set(n, new oR(e, t)), n;
+			return this._adapter.set(n, new lR(e, t)), n;
 		}
 		static _extLabel(e) {
 			return e.displayName || e.name;
@@ -19259,15 +19259,15 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			return e.identifier.value;
 		}
 		registerDocumentSymbolProvider(t, n, r, i) {
-			let a = this._addNewAdapter(new wL(this._documents, r), t), o = i && i.label || e._extLabel(t);
+			let a = this._addNewAdapter(new DL(this._documents, r), t), o = i && i.label || e._extLabel(t);
 			return this._proxy.$registerDocumentSymbolProvider(a, this._transformDocumentSelector(n, t), o), this._createDisposable(a);
 		}
 		$provideDocumentSymbols(e, t, n) {
-			return this._withAdapter(e, wL, (e) => e.provideDocumentSymbols(H.revive(t), n), void 0, n);
+			return this._withAdapter(e, DL, (e) => e.provideDocumentSymbols(H.revive(t), n), void 0, n);
 		}
 		registerCodeLensProvider(e, t, n) {
 			let r = this._nextHandle(), i = typeof n.onDidChangeCodeLenses == "function" ? this._nextHandle() : void 0;
-			this._adapter.set(r, new oR(new TL(this._documents, this._commands.converter, n, e, this._extensionTelemetry, this._logService), e)), this._proxy.$registerCodeLensSupport(r, this._transformDocumentSelector(t, e), i);
+			this._adapter.set(r, new lR(new OL(this._documents, this._commands.converter, n, e, this._extensionTelemetry, this._logService), e)), this._proxy.$registerCodeLensSupport(r, this._transformDocumentSelector(t, e), i);
 			let a = this._createDisposable(r);
 			if (i !== void 0) {
 				let e = n.onDidChangeCodeLenses((e) => this._proxy.$emitCodeLensEvent(i));
@@ -19276,61 +19276,61 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			return a;
 		}
 		$provideCodeLenses(e, t, n) {
-			return this._withAdapter(e, TL, (e) => e.provideCodeLenses(H.revive(t), n), void 0, n, t.scheme === "output");
+			return this._withAdapter(e, OL, (e) => e.provideCodeLenses(H.revive(t), n), void 0, n, t.scheme === "output");
 		}
 		$resolveCodeLens(e, t, n) {
-			return this._withAdapter(e, TL, (e) => e.resolveCodeLens(t, n), void 0, void 0, !0);
+			return this._withAdapter(e, OL, (e) => e.resolveCodeLens(t, n), void 0, void 0, !0);
 		}
 		$releaseCodeLenses(e, t) {
-			this._withAdapter(e, TL, (e) => Promise.resolve(e.releaseCodeLenses(t)), void 0, void 0, !0);
+			this._withAdapter(e, OL, (e) => Promise.resolve(e.releaseCodeLenses(t)), void 0, void 0, !0);
 		}
 		registerDefinitionProvider(e, t, n) {
-			let r = this._addNewAdapter(new EL(this._documents, n), e);
+			let r = this._addNewAdapter(new kL(this._documents, n), e);
 			return this._proxy.$registerDefinitionSupport(r, this._transformDocumentSelector(t, e)), this._createDisposable(r);
 		}
 		$provideDefinition(e, t, n, r) {
-			return this._withAdapter(e, EL, (e) => e.provideDefinition(H.revive(t), n, r), [], r);
+			return this._withAdapter(e, kL, (e) => e.provideDefinition(H.revive(t), n, r), [], r);
 		}
 		registerDeclarationProvider(e, t, n) {
-			let r = this._addNewAdapter(new DL(this._documents, n), e);
+			let r = this._addNewAdapter(new AL(this._documents, n), e);
 			return this._proxy.$registerDeclarationSupport(r, this._transformDocumentSelector(t, e)), this._createDisposable(r);
 		}
 		$provideDeclaration(e, t, n, r) {
-			return this._withAdapter(e, DL, (e) => e.provideDeclaration(H.revive(t), n, r), [], r);
+			return this._withAdapter(e, AL, (e) => e.provideDeclaration(H.revive(t), n, r), [], r);
 		}
 		registerImplementationProvider(e, t, n) {
-			let r = this._addNewAdapter(new OL(this._documents, n), e);
+			let r = this._addNewAdapter(new jL(this._documents, n), e);
 			return this._proxy.$registerImplementationSupport(r, this._transformDocumentSelector(t, e)), this._createDisposable(r);
 		}
 		$provideImplementation(e, t, n, r) {
-			return this._withAdapter(e, OL, (e) => e.provideImplementation(H.revive(t), n, r), [], r);
+			return this._withAdapter(e, jL, (e) => e.provideImplementation(H.revive(t), n, r), [], r);
 		}
 		registerTypeDefinitionProvider(e, t, n) {
-			let r = this._addNewAdapter(new kL(this._documents, n), e);
+			let r = this._addNewAdapter(new ML(this._documents, n), e);
 			return this._proxy.$registerTypeDefinitionSupport(r, this._transformDocumentSelector(t, e)), this._createDisposable(r);
 		}
 		$provideTypeDefinition(e, t, n, r) {
-			return this._withAdapter(e, kL, (e) => e.provideTypeDefinition(H.revive(t), n, r), [], r);
+			return this._withAdapter(e, ML, (e) => e.provideTypeDefinition(H.revive(t), n, r), [], r);
 		}
 		registerHoverProvider(e, t, n, r) {
-			let i = this._addNewAdapter(new AL(this._documents, n), e);
+			let i = this._addNewAdapter(new NL(this._documents, n), e);
 			return this._proxy.$registerHoverProvider(i, this._transformDocumentSelector(t, e)), this._createDisposable(i);
 		}
 		$provideHover(e, t, n, r, i) {
-			return this._withAdapter(e, AL, (e) => e.provideHover(H.revive(t), n, r, i), void 0, i);
+			return this._withAdapter(e, NL, (e) => e.provideHover(H.revive(t), n, r, i), void 0, i);
 		}
 		$releaseHover(e, t) {
-			this._withAdapter(e, AL, (e) => Promise.resolve(e.releaseHover(t)), void 0, void 0);
+			this._withAdapter(e, NL, (e) => Promise.resolve(e.releaseHover(t)), void 0, void 0);
 		}
 		registerEvaluatableExpressionProvider(e, t, n, r) {
-			let i = this._addNewAdapter(new jL(this._documents, n), e);
+			let i = this._addNewAdapter(new PL(this._documents, n), e);
 			return this._proxy.$registerEvaluatableExpressionProvider(i, this._transformDocumentSelector(t, e)), this._createDisposable(i);
 		}
 		$provideEvaluatableExpression(e, t, n, r) {
-			return this._withAdapter(e, jL, (e) => e.provideEvaluatableExpression(H.revive(t), n, r), void 0, r);
+			return this._withAdapter(e, PL, (e) => e.provideEvaluatableExpression(H.revive(t), n, r), void 0, r);
 		}
 		registerInlineValuesProvider(e, t, n, r) {
-			let i = typeof n.onDidChangeInlineValues == "function" ? this._nextHandle() : void 0, a = this._addNewAdapter(new ML(this._documents, n), e);
+			let i = typeof n.onDidChangeInlineValues == "function" ? this._nextHandle() : void 0, a = this._addNewAdapter(new FL(this._documents, n), e);
 			this._proxy.$registerInlineValuesProvider(a, this._transformDocumentSelector(t, e), i);
 			let o = this._createDisposable(a);
 			if (i !== void 0) {
@@ -19340,28 +19340,28 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			return o;
 		}
 		$provideInlineValues(e, t, n, r, i) {
-			return this._withAdapter(e, ML, (e) => e.provideInlineValues(H.revive(t), n, r, i), void 0, i);
+			return this._withAdapter(e, FL, (e) => e.provideInlineValues(H.revive(t), n, r, i), void 0, i);
 		}
 		registerDocumentHighlightProvider(e, t, n) {
-			let r = this._addNewAdapter(new NL(this._documents, n), e);
+			let r = this._addNewAdapter(new IL(this._documents, n), e);
 			return this._proxy.$registerDocumentHighlightProvider(r, this._transformDocumentSelector(t, e)), this._createDisposable(r);
 		}
 		registerMultiDocumentHighlightProvider(e, t, n) {
-			let r = this._addNewAdapter(new PL(this._documents, n, this._logService), e);
+			let r = this._addNewAdapter(new LL(this._documents, n, this._logService), e);
 			return this._proxy.$registerMultiDocumentHighlightProvider(r, this._transformDocumentSelector(t, e)), this._createDisposable(r);
 		}
 		$provideDocumentHighlights(e, t, n, r) {
-			return this._withAdapter(e, NL, (e) => e.provideDocumentHighlights(H.revive(t), n, r), void 0, r);
+			return this._withAdapter(e, IL, (e) => e.provideDocumentHighlights(H.revive(t), n, r), void 0, r);
 		}
 		$provideMultiDocumentHighlights(e, t, n, r, i) {
-			return this._withAdapter(e, PL, (e) => e.provideMultiDocumentHighlights(H.revive(t), n, r.map((e) => H.revive(e)), i), void 0, i);
+			return this._withAdapter(e, LL, (e) => e.provideMultiDocumentHighlights(H.revive(t), n, r.map((e) => H.revive(e)), i), void 0, i);
 		}
 		registerLinkedEditingRangeProvider(e, t, n) {
-			let r = this._addNewAdapter(new FL(this._documents, n), e);
+			let r = this._addNewAdapter(new RL(this._documents, n), e);
 			return this._proxy.$registerLinkedEditingRangeProvider(r, this._transformDocumentSelector(t, e)), this._createDisposable(r);
 		}
 		$provideLinkedEditingRanges(t, n, r, i) {
-			return this._withAdapter(t, FL, async (t) => {
+			return this._withAdapter(t, RL, async (t) => {
 				let a = await t.provideLinkedEditingRanges(H.revive(n), r, i);
 				if (a) return {
 					ranges: a.ranges,
@@ -19370,14 +19370,14 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			}, void 0, i);
 		}
 		registerReferenceProvider(e, t, n) {
-			let r = this._addNewAdapter(new IL(this._documents, n), e);
+			let r = this._addNewAdapter(new zL(this._documents, n), e);
 			return this._proxy.$registerReferenceSupport(r, this._transformDocumentSelector(t, e)), this._createDisposable(r);
 		}
 		$provideReferences(e, t, n, r, i) {
-			return this._withAdapter(e, IL, (e) => e.provideReferences(H.revive(t), n, r, i), void 0, i);
+			return this._withAdapter(e, zL, (e) => e.provideReferences(H.revive(t), n, r, i), void 0, i);
 		}
 		registerCodeActionProvider(t, n, r, i) {
-			let a = new I(), o = this._addNewAdapter(new LL(this._documents, this._commands.converter, this._diagnostics, r, this._logService, t, this._apiDeprecation), t);
+			let a = new I(), o = this._addNewAdapter(new BL(this._documents, this._commands.converter, this._diagnostics, r, this._logService, t, this._apiDeprecation), t);
 			return this._proxy.$registerCodeActionSupport(o, this._transformDocumentSelector(n, t), {
 				providedKinds: i?.providedCodeActionKinds?.map((e) => e.value),
 				documentation: i?.documentation?.map((e) => ({
@@ -19387,73 +19387,73 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			}, e._extLabel(t), e._extId(t), !!r.resolveCodeAction), a.add(this._createDisposable(o)), a;
 		}
 		$provideCodeActions(e, t, n, r, i) {
-			return this._withAdapter(e, LL, (e) => e.provideCodeActions(H.revive(t), n, r, i), void 0, i);
+			return this._withAdapter(e, BL, (e) => e.provideCodeActions(H.revive(t), n, r, i), void 0, i);
 		}
 		$resolveCodeAction(e, t, n) {
-			return this._withAdapter(e, LL, (e) => e.resolveCodeAction(t, n), {}, void 0);
+			return this._withAdapter(e, BL, (e) => e.resolveCodeAction(t, n), {}, void 0);
 		}
 		$releaseCodeActions(e, t) {
-			this._withAdapter(e, LL, (e) => Promise.resolve(e.releaseCodeActions(t)), void 0, void 0);
+			this._withAdapter(e, BL, (e) => Promise.resolve(e.releaseCodeActions(t)), void 0, void 0);
 		}
 		registerDocumentFormattingEditProvider(e, t, n) {
-			let r = this._addNewAdapter(new zL(this._documents, n), e);
+			let r = this._addNewAdapter(new HL(this._documents, n), e);
 			return this._proxy.$registerDocumentFormattingSupport(r, this._transformDocumentSelector(t, e), e.identifier, e.displayName || e.name), this._createDisposable(r);
 		}
 		$provideDocumentFormattingEdits(e, t, n, r) {
-			return this._withAdapter(e, zL, (e) => e.provideDocumentFormattingEdits(H.revive(t), n, r), void 0, r);
+			return this._withAdapter(e, HL, (e) => e.provideDocumentFormattingEdits(H.revive(t), n, r), void 0, r);
 		}
 		registerDocumentRangeFormattingEditProvider(e, t, n) {
-			let r = typeof n.provideDocumentRangesFormattingEdits == "function", i = this._addNewAdapter(new BL(this._documents, n), e);
+			let r = typeof n.provideDocumentRangesFormattingEdits == "function", i = this._addNewAdapter(new UL(this._documents, n), e);
 			return this._proxy.$registerRangeFormattingSupport(i, this._transformDocumentSelector(t, e), e.identifier, e.displayName || e.name, r), this._createDisposable(i);
 		}
 		$provideDocumentRangeFormattingEdits(e, t, n, r, i) {
-			return this._withAdapter(e, BL, (e) => e.provideDocumentRangeFormattingEdits(H.revive(t), n, r, i), void 0, i);
+			return this._withAdapter(e, UL, (e) => e.provideDocumentRangeFormattingEdits(H.revive(t), n, r, i), void 0, i);
 		}
 		$provideDocumentRangesFormattingEdits(e, t, n, r, i) {
-			return this._withAdapter(e, BL, (e) => e.provideDocumentRangesFormattingEdits(H.revive(t), n, r, i), void 0, i);
+			return this._withAdapter(e, UL, (e) => e.provideDocumentRangesFormattingEdits(H.revive(t), n, r, i), void 0, i);
 		}
 		registerOnTypeFormattingEditProvider(e, t, n, r) {
-			let i = this._addNewAdapter(new VL(this._documents, n), e);
+			let i = this._addNewAdapter(new WL(this._documents, n), e);
 			return this._proxy.$registerOnTypeFormattingSupport(i, this._transformDocumentSelector(t, e), r, e.identifier), this._createDisposable(i);
 		}
 		$provideOnTypeFormattingEdits(e, t, n, r, i, a) {
-			return this._withAdapter(e, VL, (e) => e.provideOnTypeFormattingEdits(H.revive(t), n, r, i, a), void 0, a);
+			return this._withAdapter(e, WL, (e) => e.provideOnTypeFormattingEdits(H.revive(t), n, r, i, a), void 0, a);
 		}
 		registerWorkspaceSymbolProvider(e, t) {
-			let n = this._addNewAdapter(new HL(t, this._logService), e);
+			let n = this._addNewAdapter(new GL(t, this._logService), e);
 			return this._proxy.$registerNavigateTypeSupport(n, typeof t.resolveWorkspaceSymbol == "function"), this._createDisposable(n);
 		}
 		$provideWorkspaceSymbols(e, t, n) {
-			return this._withAdapter(e, HL, (e) => e.provideWorkspaceSymbols(t, n), { symbols: [] }, n);
+			return this._withAdapter(e, GL, (e) => e.provideWorkspaceSymbols(t, n), { symbols: [] }, n);
 		}
 		$resolveWorkspaceSymbol(e, t, n) {
-			return this._withAdapter(e, HL, (e) => e.resolveWorkspaceSymbol(t, n), void 0, void 0);
+			return this._withAdapter(e, GL, (e) => e.resolveWorkspaceSymbol(t, n), void 0, void 0);
 		}
 		$releaseWorkspaceSymbols(e, t) {
-			this._withAdapter(e, HL, (e) => e.releaseWorkspaceSymbols(t), void 0, void 0);
+			this._withAdapter(e, GL, (e) => e.releaseWorkspaceSymbols(t), void 0, void 0);
 		}
 		registerRenameProvider(e, t, n) {
-			let r = this._addNewAdapter(new UL(this._documents, n, this._logService), e);
-			return this._proxy.$registerRenameSupport(r, this._transformDocumentSelector(t, e), UL.supportsResolving(n)), this._createDisposable(r);
+			let r = this._addNewAdapter(new KL(this._documents, n, this._logService), e);
+			return this._proxy.$registerRenameSupport(r, this._transformDocumentSelector(t, e), KL.supportsResolving(n)), this._createDisposable(r);
 		}
 		$provideRenameEdits(e, t, n, r, i) {
-			return this._withAdapter(e, UL, (e) => e.provideRenameEdits(H.revive(t), n, r, i), void 0, i);
+			return this._withAdapter(e, KL, (e) => e.provideRenameEdits(H.revive(t), n, r, i), void 0, i);
 		}
 		$resolveRenameLocation(e, t, n, r) {
-			return this._withAdapter(e, UL, (e) => e.resolveRenameLocation(H.revive(t), n, r), void 0, r);
+			return this._withAdapter(e, KL, (e) => e.resolveRenameLocation(H.revive(t), n, r), void 0, r);
 		}
 		registerNewSymbolNamesProvider(e, t, n) {
-			let r = this._addNewAdapter(new WL(this._documents, n, this._logService), e);
+			let r = this._addNewAdapter(new qL(this._documents, n, this._logService), e);
 			return this._proxy.$registerNewSymbolNamesProvider(r, this._transformDocumentSelector(t, e)), this._createDisposable(r);
 		}
 		$supportsAutomaticNewSymbolNamesTriggerKind(e) {
-			return this._withAdapter(e, WL, (e) => e.supportsAutomaticNewSymbolNamesTriggerKind(), !1, void 0);
+			return this._withAdapter(e, qL, (e) => e.supportsAutomaticNewSymbolNamesTriggerKind(), !1, void 0);
 		}
 		$provideNewSymbolNames(e, t, n, r, i) {
-			return this._withAdapter(e, WL, (e) => e.provideNewSymbolNames(H.revive(t), n, r, i), void 0, i);
+			return this._withAdapter(e, qL, (e) => e.provideNewSymbolNames(H.revive(t), n, r, i), void 0, i);
 		}
 		registerDocumentSemanticTokensProvider(e, t, n, r) {
-			let i = this._addNewAdapter(new KL(this._documents, n), e), a = typeof n.onDidChangeSemanticTokens == "function" ? this._nextHandle() : void 0;
+			let i = this._addNewAdapter(new YL(this._documents, n), e), a = typeof n.onDidChangeSemanticTokens == "function" ? this._nextHandle() : void 0;
 			this._proxy.$registerDocumentSemanticTokensProvider(i, this._transformDocumentSelector(t, e), r, a);
 			let o = this._createDisposable(i);
 			if (a) {
@@ -19463,13 +19463,13 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			return o;
 		}
 		$provideDocumentSemanticTokens(e, t, n, r) {
-			return this._withAdapter(e, KL, (e) => e.provideDocumentSemanticTokens(H.revive(t), n, r), null, r);
+			return this._withAdapter(e, YL, (e) => e.provideDocumentSemanticTokens(H.revive(t), n, r), null, r);
 		}
 		$releaseDocumentSemanticTokens(e, t) {
-			this._withAdapter(e, KL, (e) => e.releaseDocumentSemanticColoring(t), void 0, void 0);
+			this._withAdapter(e, YL, (e) => e.releaseDocumentSemanticColoring(t), void 0, void 0);
 		}
 		registerDocumentRangeSemanticTokensProvider(e, t, n, r) {
-			let i = this._addNewAdapter(new qL(this._documents, n), e), a = typeof n.onDidChangeSemanticTokens == "function" ? this._nextHandle() : void 0;
+			let i = this._addNewAdapter(new XL(this._documents, n), e), a = typeof n.onDidChangeSemanticTokens == "function" ? this._nextHandle() : void 0;
 			this._proxy.$registerDocumentRangeSemanticTokensProvider(i, this._transformDocumentSelector(t, e), r, a);
 			let o = this._createDisposable(i);
 			if (a) {
@@ -19479,59 +19479,59 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			return o;
 		}
 		$provideDocumentRangeSemanticTokens(e, t, n, r) {
-			return this._withAdapter(e, qL, (e) => e.provideDocumentRangeSemanticTokens(H.revive(t), n, r), null, r);
+			return this._withAdapter(e, XL, (e) => e.provideDocumentRangeSemanticTokens(H.revive(t), n, r), null, r);
 		}
 		registerCompletionItemProvider(e, t, n, r) {
-			let i = this._addNewAdapter(new JL(this._documents, this._commands.converter, n, this._apiDeprecation, e), e);
-			return this._proxy.$registerCompletionsProvider(i, this._transformDocumentSelector(t, e), r, JL.supportsResolving(n), e.identifier), this._createDisposable(i);
+			let i = this._addNewAdapter(new ZL(this._documents, this._commands.converter, n, this._apiDeprecation, e), e);
+			return this._proxy.$registerCompletionsProvider(i, this._transformDocumentSelector(t, e), r, ZL.supportsResolving(n), e.identifier), this._createDisposable(i);
 		}
 		$provideCompletionItems(e, t, n, r, i) {
-			return this._withAdapter(e, JL, (e) => e.provideCompletionItems(H.revive(t), n, r, i), void 0, i);
+			return this._withAdapter(e, ZL, (e) => e.provideCompletionItems(H.revive(t), n, r, i), void 0, i);
 		}
 		$resolveCompletionItem(e, t, n) {
-			return this._withAdapter(e, JL, (e) => e.resolveCompletionItem(t, n), void 0, n);
+			return this._withAdapter(e, ZL, (e) => e.resolveCompletionItem(t, n), void 0, n);
 		}
 		$releaseCompletionItems(e, t) {
-			this._withAdapter(e, JL, (e) => e.releaseCompletionItems(t), void 0, void 0);
+			this._withAdapter(e, ZL, (e) => e.releaseCompletionItems(t), void 0, void 0);
 		}
 		registerInlineCompletionsProvider(e, t, n, r) {
-			let i = new YL(e, this._documents, n, this._commands.converter), a = this._addNewAdapter(i, e), o = this._createDisposable(a), s = Dw(e, "inlineCompletionsAdditions") && typeof n.onDidChange == "function";
+			let i = new QL(e, this._documents, n, this._commands.converter), a = this._addNewAdapter(i, e), o = this._createDisposable(a), s = Aw(e, "inlineCompletionsAdditions") && typeof n.onDidChange == "function";
 			if (s) {
 				let e = n.onDidChange((e) => this._proxy.$emitInlineCompletionsChange(a));
 				o = Bx.from(o, e);
 			}
-			let c = Dw(e, "inlineCompletionsAdditions") && typeof n.onDidChangeModelInfo == "function";
+			let c = Aw(e, "inlineCompletionsAdditions") && typeof n.onDidChangeModelInfo == "function";
 			if (c) {
 				let e = n.onDidChangeModelInfo((e) => this._proxy.$emitInlineCompletionModelInfoChange(a, i.modelInfo));
 				o = Bx.from(o, e);
 			}
-			return this._proxy.$registerInlineCompletionsSupport(a, this._transformDocumentSelector(t, e), i.supportsHandleEvents, AC.toKey(e.identifier.value), e.version, r?.groupId ? AC.toKey(r.groupId) : void 0, r?.yieldTo?.map((e) => AC.toKey(e)) || [], r?.displayName, r?.debounceDelayMs, r?.excludes?.map((e) => AC.toKey(e)) || [], s, i.supportsSetModelId, i.modelInfo, c), o;
+			return this._proxy.$registerInlineCompletionsSupport(a, this._transformDocumentSelector(t, e), i.supportsHandleEvents, SC.toKey(e.identifier.value), e.version, r?.groupId ? SC.toKey(r.groupId) : void 0, r?.yieldTo?.map((e) => SC.toKey(e)) || [], r?.displayName, r?.debounceDelayMs, r?.excludes?.map((e) => SC.toKey(e)) || [], s, i.supportsSetModelId, i.modelInfo, c), o;
 		}
 		$provideInlineCompletions(e, t, n, r, i) {
-			return this._withAdapter(e, YL, (e) => e.provideInlineCompletions(H.revive(t), n, r, i), void 0, void 0);
+			return this._withAdapter(e, QL, (e) => e.provideInlineCompletions(H.revive(t), n, r, i), void 0, void 0);
 		}
 		$handleInlineCompletionDidShow(e, t, n, r) {
-			this._withAdapter(e, YL, async (e) => {
+			this._withAdapter(e, QL, async (e) => {
 				e.handleDidShowCompletionItem(t, n, r);
 			}, void 0, void 0);
 		}
 		$handleInlineCompletionPartialAccept(e, t, n, r, i) {
-			this._withAdapter(e, YL, async (e) => {
+			this._withAdapter(e, QL, async (e) => {
 				e.handlePartialAccept(t, n, r, i);
 			}, void 0, void 0);
 		}
 		$handleInlineCompletionEndOfLifetime(e, t, n, r) {
-			this._withAdapter(e, YL, async (e) => {
+			this._withAdapter(e, QL, async (e) => {
 				e.handleEndOfLifetime(t, n, r);
 			}, void 0, void 0);
 		}
 		$handleInlineCompletionRejection(e, t, n) {
-			this._withAdapter(e, YL, async (e) => {
+			this._withAdapter(e, QL, async (e) => {
 				e.handleRejection(t, n);
 			}, void 0, void 0);
 		}
 		$freeInlineCompletionsList(e, t, n) {
-			this._withAdapter(e, YL, async (e) => {
+			this._withAdapter(e, QL, async (e) => {
 				e.disposeCompletions(t, n);
 			}, void 0, void 0);
 		}
@@ -19539,7 +19539,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			this._inlineCompletionsUnificationState = e, this._onDidChangeInlineCompletionsUnificationState.fire();
 		}
 		$handleInlineCompletionSetCurrentModelId(e, t) {
-			this._withAdapter(e, YL, async (e) => {
+			this._withAdapter(e, QL, async (e) => {
 				e.setCurrentModelId(t);
 			}, void 0, void 0);
 		}
@@ -19547,17 +19547,17 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			let i = Array.isArray(r) ? {
 				triggerCharacters: r,
 				retriggerCharacters: []
-			} : r, a = this._addNewAdapter(new ZL(this._documents, n), e);
+			} : r, a = this._addNewAdapter(new eR(this._documents, n), e);
 			return this._proxy.$registerSignatureHelpProvider(a, this._transformDocumentSelector(t, e), i), this._createDisposable(a);
 		}
 		$provideSignatureHelp(e, t, n, r, i) {
-			return this._withAdapter(e, ZL, (e) => e.provideSignatureHelp(H.revive(t), n, r, i), void 0, i);
+			return this._withAdapter(e, eR, (e) => e.provideSignatureHelp(H.revive(t), n, r, i), void 0, i);
 		}
 		$releaseSignatureHelp(e, t) {
-			this._withAdapter(e, ZL, (e) => e.releaseSignatureHelp(t), void 0, void 0);
+			this._withAdapter(e, eR, (e) => e.releaseSignatureHelp(t), void 0, void 0);
 		}
 		registerInlayHintsProvider(t, n, r) {
-			let i = typeof r.onDidChangeInlayHints == "function" ? this._nextHandle() : void 0, a = this._addNewAdapter(new QL(this._documents, this._commands.converter, r, this._logService, t), t);
+			let i = typeof r.onDidChangeInlayHints == "function" ? this._nextHandle() : void 0, a = this._addNewAdapter(new tR(this._documents, this._commands.converter, r, this._logService, t), t);
 			this._proxy.$registerInlayHintsProvider(a, this._transformDocumentSelector(n, t), typeof r.resolveInlayHint == "function", i, e._extLabel(t));
 			let o = this._createDisposable(a);
 			if (i !== void 0) {
@@ -19567,40 +19567,40 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			return o;
 		}
 		$provideInlayHints(e, t, n, r) {
-			return this._withAdapter(e, QL, (e) => e.provideInlayHints(H.revive(t), n, r), void 0, r);
+			return this._withAdapter(e, tR, (e) => e.provideInlayHints(H.revive(t), n, r), void 0, r);
 		}
 		$resolveInlayHint(e, t, n) {
-			return this._withAdapter(e, QL, (e) => e.resolveInlayHint(t, n), void 0, n);
+			return this._withAdapter(e, tR, (e) => e.resolveInlayHint(t, n), void 0, n);
 		}
 		$releaseInlayHints(e, t) {
-			this._withAdapter(e, QL, (e) => e.releaseHints(t), void 0, void 0);
+			this._withAdapter(e, tR, (e) => e.releaseHints(t), void 0, void 0);
 		}
 		registerDocumentLinkProvider(e, t, n) {
-			let r = this._addNewAdapter(new $L(this._documents, n), e);
+			let r = this._addNewAdapter(new nR(this._documents, n), e);
 			return this._proxy.$registerDocumentLinkProvider(r, this._transformDocumentSelector(t, e), typeof n.resolveDocumentLink == "function"), this._createDisposable(r);
 		}
 		$provideDocumentLinks(e, t, n) {
-			return this._withAdapter(e, $L, (e) => e.provideLinks(H.revive(t), n), void 0, n, t.scheme === "output");
+			return this._withAdapter(e, nR, (e) => e.provideLinks(H.revive(t), n), void 0, n, t.scheme === "output");
 		}
 		$resolveDocumentLink(e, t, n) {
-			return this._withAdapter(e, $L, (e) => e.resolveLink(t, n), void 0, void 0, !0);
+			return this._withAdapter(e, nR, (e) => e.resolveLink(t, n), void 0, void 0, !0);
 		}
 		$releaseDocumentLinks(e, t) {
-			this._withAdapter(e, $L, (e) => e.releaseLinks(t), void 0, void 0, !0);
+			this._withAdapter(e, nR, (e) => e.releaseLinks(t), void 0, void 0, !0);
 		}
 		registerColorProvider(e, t, n) {
-			let r = this._addNewAdapter(new eR(this._documents, n), e);
+			let r = this._addNewAdapter(new rR(this._documents, n), e);
 			return this._proxy.$registerDocumentColorProvider(r, this._transformDocumentSelector(t, e)), this._createDisposable(r);
 		}
 		$provideDocumentColors(e, t, n) {
-			return this._withAdapter(e, eR, (e) => e.provideColors(H.revive(t), n), [], n);
+			return this._withAdapter(e, rR, (e) => e.provideColors(H.revive(t), n), [], n);
 		}
 		$provideColorPresentations(e, t, n, r) {
-			return this._withAdapter(e, eR, (e) => e.provideColorPresentations(H.revive(t), n, r), void 0, r);
+			return this._withAdapter(e, rR, (e) => e.provideColorPresentations(H.revive(t), n, r), void 0, r);
 		}
 		registerFoldingRangeProvider(e, t, n) {
 			let r = this._nextHandle(), i = typeof n.onDidChangeFoldingRanges == "function" ? this._nextHandle() : void 0;
-			this._adapter.set(r, new oR(new tR(this._documents, n), e)), this._proxy.$registerFoldingRangeProvider(r, this._transformDocumentSelector(t, e), e.identifier, i);
+			this._adapter.set(r, new lR(new iR(this._documents, n), e)), this._proxy.$registerFoldingRangeProvider(r, this._transformDocumentSelector(t, e), e.identifier, i);
 			let a = this._createDisposable(r);
 			if (i !== void 0) {
 				let e = n.onDidChangeFoldingRanges(() => this._proxy.$emitFoldingRangeEvent(i));
@@ -19609,67 +19609,67 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			return a;
 		}
 		$provideFoldingRanges(e, t, n, r) {
-			return this._withAdapter(e, tR, (e) => e.provideFoldingRanges(H.revive(t), n, r), void 0, r);
+			return this._withAdapter(e, iR, (e) => e.provideFoldingRanges(H.revive(t), n, r), void 0, r);
 		}
 		registerSelectionRangeProvider(e, t, n) {
-			let r = this._addNewAdapter(new nR(this._documents, n, this._logService), e);
+			let r = this._addNewAdapter(new aR(this._documents, n, this._logService), e);
 			return this._proxy.$registerSelectionRangeProvider(r, this._transformDocumentSelector(t, e)), this._createDisposable(r);
 		}
 		$provideSelectionRanges(e, t, n, r) {
-			return this._withAdapter(e, nR, (e) => e.provideSelectionRanges(H.revive(t), n, r), [], r);
+			return this._withAdapter(e, aR, (e) => e.provideSelectionRanges(H.revive(t), n, r), [], r);
 		}
 		registerCallHierarchyProvider(e, t, n) {
-			let r = this._addNewAdapter(new rR(this._documents, n), e);
+			let r = this._addNewAdapter(new oR(this._documents, n), e);
 			return this._proxy.$registerCallHierarchyProvider(r, this._transformDocumentSelector(t, e)), this._createDisposable(r);
 		}
 		$prepareCallHierarchy(e, t, n, r) {
-			return this._withAdapter(e, rR, (e) => Promise.resolve(e.prepareSession(H.revive(t), n, r)), void 0, r);
+			return this._withAdapter(e, oR, (e) => Promise.resolve(e.prepareSession(H.revive(t), n, r)), void 0, r);
 		}
 		$provideCallHierarchyIncomingCalls(e, t, n, r) {
-			return this._withAdapter(e, rR, (e) => e.provideCallsTo(t, n, r), void 0, r);
+			return this._withAdapter(e, oR, (e) => e.provideCallsTo(t, n, r), void 0, r);
 		}
 		$provideCallHierarchyOutgoingCalls(e, t, n, r) {
-			return this._withAdapter(e, rR, (e) => e.provideCallsFrom(t, n, r), void 0, r);
+			return this._withAdapter(e, oR, (e) => e.provideCallsFrom(t, n, r), void 0, r);
 		}
 		$releaseCallHierarchy(e, t) {
-			this._withAdapter(e, rR, (e) => Promise.resolve(e.releaseSession(t)), void 0, void 0);
+			this._withAdapter(e, oR, (e) => Promise.resolve(e.releaseSession(t)), void 0, void 0);
 		}
 		registerTypeHierarchyProvider(e, t, n) {
-			let r = this._addNewAdapter(new iR(this._documents, n), e);
+			let r = this._addNewAdapter(new sR(this._documents, n), e);
 			return this._proxy.$registerTypeHierarchyProvider(r, this._transformDocumentSelector(t, e)), this._createDisposable(r);
 		}
 		$prepareTypeHierarchy(e, t, n, r) {
-			return this._withAdapter(e, iR, (e) => Promise.resolve(e.prepareSession(H.revive(t), n, r)), void 0, r);
+			return this._withAdapter(e, sR, (e) => Promise.resolve(e.prepareSession(H.revive(t), n, r)), void 0, r);
 		}
 		$provideTypeHierarchySupertypes(e, t, n, r) {
-			return this._withAdapter(e, iR, (e) => e.provideSupertypes(t, n, r), void 0, r);
+			return this._withAdapter(e, sR, (e) => e.provideSupertypes(t, n, r), void 0, r);
 		}
 		$provideTypeHierarchySubtypes(e, t, n, r) {
-			return this._withAdapter(e, iR, (e) => e.provideSubtypes(t, n, r), void 0, r);
+			return this._withAdapter(e, sR, (e) => e.provideSubtypes(t, n, r), void 0, r);
 		}
 		$releaseTypeHierarchy(e, t) {
-			this._withAdapter(e, iR, (e) => Promise.resolve(e.releaseSession(t)), void 0, void 0);
+			this._withAdapter(e, sR, (e) => Promise.resolve(e.releaseSession(t)), void 0, void 0);
 		}
 		registerDocumentOnDropEditProvider(e, t, n, r) {
 			let i = this._nextHandle();
-			return this._adapter.set(i, new oR(new aR(this._proxy, this._documents, n, i, e), e)), this._proxy.$registerDocumentOnDropEditProvider(i, this._transformDocumentSelector(t, e), r ? {
+			return this._adapter.set(i, new lR(new cR(this._proxy, this._documents, n, i, e), e)), this._proxy.$registerDocumentOnDropEditProvider(i, this._transformDocumentSelector(t, e), r ? {
 				supportsResolve: !!n.resolveDocumentDropEdit,
 				dropMimeTypes: r.dropMimeTypes,
 				providedDropKinds: r.providedDropEditKinds?.map((e) => e.value)
 			} : void 0), this._createDisposable(i);
 		}
 		$provideDocumentOnDropEdits(e, t, n, r, i, a) {
-			return this._withAdapter(e, aR, (e) => Promise.resolve(e.provideDocumentOnDropEdits(t, H.revive(n), r, i, a)), void 0, void 0);
+			return this._withAdapter(e, cR, (e) => Promise.resolve(e.provideDocumentOnDropEdits(t, H.revive(n), r, i, a)), void 0, void 0);
 		}
 		$resolveDropEdit(e, t, n) {
-			return this._withAdapter(e, aR, (e) => e.resolveDropEdit(t, n), {}, void 0);
+			return this._withAdapter(e, cR, (e) => e.resolveDropEdit(t, n), {}, void 0);
 		}
 		$releaseDocumentOnDropEdits(e, t) {
-			this._withAdapter(e, aR, (e) => Promise.resolve(e.releaseDropEdits(t)), void 0, void 0);
+			this._withAdapter(e, cR, (e) => Promise.resolve(e.releaseDropEdits(t)), void 0, void 0);
 		}
 		registerDocumentPasteEditProvider(e, t, n, r) {
 			let i = this._nextHandle();
-			return this._adapter.set(i, new oR(new RL(this._proxy, this._documents, n, i, e), e)), this._proxy.$registerPasteEditProvider(i, this._transformDocumentSelector(t, e), {
+			return this._adapter.set(i, new lR(new VL(this._proxy, this._documents, n, i, e), e)), this._proxy.$registerPasteEditProvider(i, this._transformDocumentSelector(t, e), {
 				supportsCopy: !!n.prepareDocumentPaste,
 				supportsPaste: !!n.provideDocumentPasteEdits,
 				supportsResolve: !!n.resolveDocumentPasteEdit,
@@ -19679,16 +19679,16 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			}), this._createDisposable(i);
 		}
 		$prepareDocumentPaste(e, t, n, r, i) {
-			return this._withAdapter(e, RL, (e) => e.prepareDocumentPaste(H.revive(t), n, r, i), void 0, i);
+			return this._withAdapter(e, VL, (e) => e.prepareDocumentPaste(H.revive(t), n, r, i), void 0, i);
 		}
 		$providePasteEdits(e, t, n, r, i, a, o) {
-			return this._withAdapter(e, RL, (e) => e.providePasteEdits(t, H.revive(n), r, i, a, o), void 0, o);
+			return this._withAdapter(e, VL, (e) => e.providePasteEdits(t, H.revive(n), r, i, a, o), void 0, o);
 		}
 		$resolvePasteEdit(e, t, n) {
-			return this._withAdapter(e, RL, (e) => e.resolvePasteEdit(t, n), {}, void 0);
+			return this._withAdapter(e, VL, (e) => e.resolvePasteEdit(t, n), {}, void 0);
 		}
 		$releasePasteEdits(e, t) {
-			this._withAdapter(e, RL, (e) => Promise.resolve(e.releasePasteEdits(t)), void 0, void 0);
+			this._withAdapter(e, VL, (e) => Promise.resolve(e.releasePasteEdits(t)), void 0, void 0);
 		}
 		static _serializeRegExp(e) {
 			return {
@@ -19745,13 +19745,13 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			for (let t of e) this._documents.setWordDefinitionFor(t.languageId, new RegExp(t.regexSource, t.regexFlags));
 		}
 	};
-})), lR, uR, dR, fR, pR = t((() => {
-	b(), Co(), _n(), U(), mx(), Ep(), o_(), Wb(), X_(), ub(), so(), lR = "vscode_editFile", uR = "vscode_editFile_internal", dR = {
-		id: uR,
+})), fR, pR, mR, hR, gR = t((() => {
+	b(), Co(), _n(), U(), mx(), Ep(), o_(), Wb(), X_(), ub(), so(), fR = "vscode_editFile", pR = "vscode_editFile_internal", mR = {
+		id: pR,
 		displayName: "",
 		modelDescription: "",
 		source: uy.Internal
-	}, fR = class {
+	}, hR = class {
 		constructor(e, t, n) {
 			this.chatService = e, this.codeMapperService = t, this.notebookService = n;
 		}
@@ -19833,14 +19833,14 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 		async prepareToolInvocation(e, t) {
 			return { presentation: k_.Hidden };
 		}
-	}, fR = N([
+	}, hR = N([
 		R(0, om),
 		R(1, Lg),
 		R(2, Fg)
-	], fR);
-})), mR, hR, gR, _R = t((() => {
-	Co(), X_(), mR = "vscode_get_confirmation", hR = {
-		id: mR,
+	], hR);
+})), _R, vR, yR, bR = t((() => {
+	Co(), X_(), _R = "vscode_get_confirmation", vR = {
+		id: _R,
 		displayName: "Confirmation Tool",
 		modelDescription: "A tool that demonstrates different types of confirmations. Takes a title, message, and confirmation type (basic or terminal).",
 		source: uy.Internal,
@@ -19872,7 +19872,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 			],
 			additionalProperties: !1
 		}
-	}, gR = class {
+	}, yR = class {
 		async prepareToolInvocation(e, t) {
 			let n = e.parameters;
 			if (!n.title || !n.message) throw Error("Missing required parameters for ConfirmationTool");
@@ -19901,7 +19901,7 @@ var wL, TL, EL, DL, OL, kL, AL, jL, ML, NL, PL, FL, IL, LL, RL, zL, BL, VL, HL, 
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/contrib/chat/common/tools/builtinTools/manageTodoListTool.js
-function vR(e, t = !0) {
+function xR(e, t = !0) {
 	let n = { todoList: {
 		type: "array",
 		description: e ? "Complete array of all todo items. Must include ALL items - both existing and new." : "Complete array of all todo items (required for write operation, ignored for read). Must include ALL items - both existing and new.",
@@ -19947,7 +19947,7 @@ function vR(e, t = !0) {
 		enum: ["write", "read"],
 		description: "write: Replace entire todo list with new content. read: Retrieve current todo list. ALWAYS provide complete list when writing - partial updates not supported."
 	}, r.unshift("operation")), {
-		id: xR,
+		id: wR,
 		toolReferenceName: "todo",
 		legacyToolReferenceFullNames: ["todos"],
 		canBeReferencedInPrompt: !0,
@@ -19963,8 +19963,8 @@ function vR(e, t = !0) {
 		}
 	};
 }
-var yR, bR, xR, SR, CR = t((() => {
-	b(), P(), bc(), $c(), X_(), Xr(), $u(), fr(), Co(), ub(), yR = "chat.todoListTool.writeOnly", bR = "chat.todoListTool.descriptionField", xR = "manage_todo_list", vR(!1), SR = class extends z {
+var SR, CR, wR, TR, ER = t((() => {
+	b(), P(), bc(), $c(), X_(), Xr(), $u(), fr(), Co(), ub(), SR = "chat.todoListTool.writeOnly", CR = "chat.todoListTool.descriptionField", wR = "manage_todo_list", xR(!1), TR = class extends z {
 		constructor(e, t, n, r, i) {
 			super(), this.writeOnly = e, this.includeDescription = t, this.chatTodoListService = n, this.logService = r, this.telemetryService = i;
 		}
@@ -20109,68 +20109,68 @@ var yR, bR, xR, SR, CR = t((() => {
 			}
 			return Math.max(0, t.length - e.length) + Math.max(0, e.length - t.length) + n;
 		}
-	}, SR = N([
+	}, TR = N([
 		R(2, Nu),
 		R(3, Ct),
 		R(4, Kn)
-	], SR);
-})), wR, TR = t((() => {
+	], TR);
+})), DR, OR = t((() => {
 	(function(e) {
 		e.instructions = "instructions", e.prompt = "prompt", e.agent = "agent";
-	})(wR ||= {});
+	})(DR ||= {});
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/contrib/chat/common/promptSyntax/config/promptFileLocations.js
-function ER(e) {
+function kR(e) {
 	let t = nr(e.path);
 	return t.endsWith("/.github/agents") || t === ".github/agents";
 }
-function DR(e) {
+function AR(e) {
 	let t = Zc(e.path);
-	if (t.endsWith(".prompt.md")) return wR.prompt;
-	if (t.endsWith(".instructions.md") || t === "copilot-instructions.md") return wR.instructions;
-	if (t.endsWith(".chatmode.md") || t.endsWith(".agent.md") || t.endsWith(".md") && ER(e)) return wR.agent;
+	if (t.endsWith(".prompt.md")) return DR.prompt;
+	if (t.endsWith(".instructions.md") || t === "copilot-instructions.md") return DR.instructions;
+	if (t.endsWith(".chatmode.md") || t.endsWith(".agent.md") || t.endsWith(".md") && kR(e)) return DR.agent;
 }
-function OR(e) {
-	return DR(e) !== void 0;
+function jR(e) {
+	return AR(e) !== void 0;
 }
-function kR(e) {
+function MR(e) {
 	switch (e) {
-		case wR.instructions: return jR;
-		case wR.prompt: return AR;
-		case wR.agent: return MR;
+		case DR.instructions: return PR;
+		case DR.prompt: return NR;
+		case DR.agent: return FR;
 		default: throw Error("Unknown prompt type");
 	}
 }
-var AR, jR, MR, NR = t((() => {
-	Bc(), TR(), AR = ".github/prompts", jR = ".github/instructions", MR = ".github/agents";
+var NR, PR, FR, IR = t((() => {
+	Bc(), OR(), NR = ".github/prompts", PR = ".github/instructions", FR = ".github/agents";
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/contrib/chat/common/promptSyntax/config/config.js
-function PR(e) {
+function LR(e) {
 	switch (e) {
-		case wR.instructions: return IR.INSTRUCTIONS_LOCATION_KEY;
-		case wR.prompt: return IR.PROMPT_LOCATIONS_KEY;
-		case wR.agent: return IR.MODE_LOCATION_KEY;
+		case DR.instructions: return zR.INSTRUCTIONS_LOCATION_KEY;
+		case DR.prompt: return zR.PROMPT_LOCATIONS_KEY;
+		case DR.agent: return zR.MODE_LOCATION_KEY;
 		default: throw Error("Unknown prompt type");
 	}
 }
-function FR(e) {
+function RR(e) {
 	if (typeof e == "boolean") return e;
 	if (typeof e == "string") {
 		let t = e.trim().toLowerCase();
 		return t === "true" || t !== "false" && void 0;
 	}
 }
-var IR, LR = t((() => {
-	TR(), NR(), (function(e) {
+var zR, BR = t((() => {
+	OR(), IR(), (function(e) {
 		e.PROMPT_LOCATIONS_KEY = "chat.promptFilesLocations", e.INSTRUCTIONS_LOCATION_KEY = "chat.instructionsFilesLocations", e.MODE_LOCATION_KEY = "chat.modeFilesLocations", e.PROMPT_FILES_SUGGEST_KEY = "chat.promptFilesRecommendations", e.USE_COPILOT_INSTRUCTION_FILES = "github.copilot.chat.codeGeneration.useInstructionFiles", e.USE_AGENT_MD = "chat.useAgentsMdFile", e.USE_NESTED_AGENT_MD = "chat.useNestedAgentsMdFiles", e.USE_AGENT_SKILLS = "chat.useAgentSkills";
 		function t(e, t) {
-			let n = PR(t), r = e.getValue(n);
+			let n = LR(t), r = e.getValue(n);
 			if (!(r == null || Array.isArray(r)) && typeof r == "object") {
 				let e = {};
 				for (let [t, n] of Object.entries(r)) {
-					let r = t.trim(), i = FR(n);
+					let r = t.trim(), i = RR(n);
 					i !== void 0 && r && (e[r] = i);
 				}
 				return e;
@@ -20178,7 +20178,7 @@ var IR, LR = t((() => {
 		}
 		e.getLocationsValue = t;
 		function n(e, n) {
-			let r = t(e, n), i = kR(n);
+			let r = t(e, n), i = MR(n);
 			if (r && typeof r == "object") {
 				let e = [];
 				r[i] !== !1 && e.push(i);
@@ -20204,17 +20204,17 @@ var IR, LR = t((() => {
 					e && (i[n] = e);
 					continue;
 				}
-				let r = FR(t);
+				let r = RR(t);
 				r !== void 0 && (i[n] = r);
 			}
 			return Object.keys(i).length > 0 ? i : void 0;
 		}
 		e.getPromptFilesRecommendationsValue = r;
-	})(IR ||= {});
+	})(zR ||= {});
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/contrib/chat/common/promptSyntax/computeAutomaticInstructions.js
-function RR() {
+function VR() {
 	return {
 		applyingInstructionsCount: 0,
 		referencedInstructionsCount: 0,
@@ -20223,11 +20223,11 @@ function RR() {
 		totalInstructionsCount: 0
 	};
 }
-function zR(e) {
+function HR(e) {
 	return e.scheme === Ma.file || e.scheme === Ma.vscodeRemote ? e.fsPath : e.toString();
 }
-var BR, VR = t((() => {
-	b(), Li(), _r(), Ds(), Gn(), fr(), pc(), qa(), Xr(), h(), Ny(), X_(), vm(), LR(), NR(), TR(), Rm(), Tl(), Fb(), BR = class {
+var UR, WR = t((() => {
+	b(), Li(), _r(), Ds(), Gn(), fr(), pc(), qa(), Xr(), h(), Ny(), X_(), vm(), BR(), IR(), OR(), Rm(), Tl(), Fb(), UR = class {
 		constructor(e, t, n, r, i, a, o, s, c) {
 			this._enabledTools = e, this._promptsService = t, this._logService = n, this._labelService = r, this._configurationService = i, this._workspaceService = a, this._fileService = o, this._telemetryService = s, this._languageModelToolsService = c, this._parseResults = new qn();
 		}
@@ -20242,9 +20242,9 @@ var BR, VR = t((() => {
 			}
 		}
 		async collect(e, t) {
-			let n = await this._promptsService.listPromptFiles(wR.instructions, t);
+			let n = await this._promptsService.listPromptFiles(DR.instructions, t);
 			this._logService.trace(`[InstructionsContextComputer] ${n.length} instruction files available.`);
-			let r = RR(), i = this._getContext(e);
+			let r = VR(), i = this._getContext(e);
 			await this.addApplyingInstructions(n, i, e, r, t), await this._addReferencedInstructions(e, r, t), await this._addAgentInstructions(e, r, t);
 			let a = await this._getInstructionsWithPatternsList(n, e, t);
 			a && (e.add(a), r.listedInstructionsCount++), this.sendTelemetry(r);
@@ -20289,7 +20289,7 @@ var BR, VR = t((() => {
 			};
 		}
 		async _addAgentInstructions(e, t, n) {
-			let r = this._configurationService.getValue(IR.USE_COPILOT_INSTRUCTION_FILES), i = this._configurationService.getValue(IR.USE_AGENT_MD);
+			let r = this._configurationService.getValue(zR.USE_COPILOT_INSTRUCTION_FILES), i = this._configurationService.getValue(zR.USE_AGENT_MD);
 			if (!r && !i) {
 				this._logService.trace("[InstructionsContextComputer] No agent instructions files added (settings disabled).");
 				return;
@@ -20297,12 +20297,12 @@ var BR, VR = t((() => {
 			let a = new Jh();
 			if (r) {
 				let e = await this._promptsService.listCopilotInstructionsMDs(n);
-				for (let n of e) a.add(Cy(n, Ym.Instruction, M(5979, "Automatically attached as setting {0} is enabled", IR.USE_COPILOT_INSTRUCTION_FILES), !0)), t.agentInstructionsCount++, this._logService.trace(`[InstructionsContextComputer] copilot-instruction.md files added: ${n.toString()}`);
+				for (let n of e) a.add(Cy(n, Ym.Instruction, M(5979, "Automatically attached as setting {0} is enabled", zR.USE_COPILOT_INSTRUCTION_FILES), !0)), t.agentInstructionsCount++, this._logService.trace(`[InstructionsContextComputer] copilot-instruction.md files added: ${n.toString()}`);
 				await this._addReferencedInstructions(a, t, n);
 			}
 			if (i) {
 				let e = await this._promptsService.listAgentMDs(n, !1);
-				for (let n of e) a.add(Cy(n, Ym.Instruction, M(5980, "Automatically attached as setting {0} is enabled", IR.USE_AGENT_MD), !0)), t.agentInstructionsCount++, this._logService.trace(`[InstructionsContextComputer] AGENTS.md files added: ${n.toString()}`);
+				for (let n of e) a.add(Cy(n, Ym.Instruction, M(5980, "Automatically attached as setting {0} is enabled", zR.USE_AGENT_MD), !0)), t.agentInstructionsCount++, this._logService.trace(`[InstructionsContextComputer] AGENTS.md files added: ${n.toString()}`);
 			}
 			for (let t of a.asArray()) e.add(t);
 		}
@@ -20333,7 +20333,7 @@ var BR, VR = t((() => {
 		async _getInstructionsWithPatternsList(e, t, n) {
 			let r = this._getTool("readFile"), i = this._getTool(fx.runSubagent), a = [];
 			if (r) {
-				let t = this._configurationService.getValue(IR.USE_NESTED_AGENT_MD) ? this._promptsService.findAgentMDsInWorkspace(n) : Promise.resolve([]);
+				let t = this._configurationService.getValue(zR.USE_NESTED_AGENT_MD) ? this._promptsService.findAgentMDsInWorkspace(n) : Promise.resolve([]);
 				a.push("<instructions>"), a.push("Here is a list of instruction files that contain rules for modifying or creating new code."), a.push("These files are important for ensuring that the code is modified or created correctly."), a.push("Please make sure to follow the rules specified in these files when working with the codebase."), a.push(`If the file is not already available as attachment, use the ${r.variable} tool to acquire it.`), a.push("Make sure to acquire the instructions before making any changes to the code.");
 				let i = !1;
 				for (let { uri: t } of e) {
@@ -20341,21 +20341,21 @@ var BR, VR = t((() => {
 					if (e) {
 						if (a.push("<instruction>"), e.header) {
 							let { description: n, applyTo: r } = e.header;
-							n && a.push(`<description>${n}</description>`), a.push(`<file>${zR(t)}</file>`), r && a.push(`<applyTo>${r}</applyTo>`);
-						} else a.push(`<file>${zR(t)}</file>`);
+							n && a.push(`<description>${n}</description>`), a.push(`<file>${HR(t)}</file>`), r && a.push(`<applyTo>${r}</applyTo>`);
+						} else a.push(`<file>${HR(t)}</file>`);
 						a.push("</instruction>"), i = !0;
 					}
 				}
 				let o = await t;
 				for (let e of o) if (e) {
 					let t = this._labelService.getUriLabel(jt(e), { relative: !0 }), n = t.trim().length === 0 ? M(5981, "Instructions for the workspace") : M(5982, "Instructions for folder '{0}'", t);
-					a.push("<instruction>"), a.push(`<description>${n}</description>`), a.push(`<file>${zR(e)}</file>`), a.push("</instruction>"), i = !0;
+					a.push("<instruction>"), a.push(`<description>${n}</description>`), a.push(`<file>${HR(e)}</file>`), a.push("</instruction>"), i = !0;
 				}
 				i ? a.push("</instructions>", "", "") : a.length = 0;
 				let s = await this._promptsService.findAgentSkills(n);
 				if (s && s.length > 0) {
 					a.push("<skills>"), a.push("Here is a list of skills that contain domain specific knowledge on a variety of topics."), a.push("Each skill comes with a description of the topic and a file path that contains the detailed instructions."), a.push(`When a user asks you to perform a task that falls within the domain of a skill, use the ${r.variable} tool to acquire the full instructions from the file URI.`);
-					for (let e of s) a.push("<skill>"), a.push(`<name>${e.name}</name>`), e.description && a.push(`<description>${e.description}</description>`), a.push(`<file>${zR(e.uri)}</file>`), a.push("</skill>");
+					for (let e of s) a.push("<skill>"), a.push(`<name>${e.name}</name>`), e.description && a.push(`<description>${e.description}</description>`), a.push(`<file>${HR(e.uri)}</file>`), a.push("</skill>");
 					a.push("</skills>", "", "");
 				}
 			}
@@ -20386,14 +20386,14 @@ var BR, VR = t((() => {
 					let n = [];
 					for (let e of o.body.fileReferences) {
 						let t = o.body.resolveFilePath(e.content);
-						t && !r.has(t) && (OR(t) || this._workspaceService.getWorkspaceFolder(t) !== void 0) && (n.push({ resource: t }), r.add(t));
+						t && !r.has(t) && (jR(t) || this._workspaceService.getWorkspaceFolder(t) !== void 0) && (n.push({ resource: t }), r.add(t));
 					}
 					if (n.length > 0) {
 						let r = await this._fileService.resolveAll(n);
 						for (let o = 0; o < r.length; o++) {
 							let s = r[o], c = n[o].resource;
 							if (s.success && s.stat?.isFile) {
-								OR(c) && i.push(c);
+								jR(c) && i.push(c);
 								let n = M(5983, "Referenced by {0}", Hr(a));
 								e.add(Cy(c, Ym.InstructionReference, n, !0)), t.referencedInstructionsCount++, this._logService.trace(`[InstructionsContextComputer] ${c.toString()} added, referenced by ${a.toString()}`);
 							}
@@ -20403,7 +20403,7 @@ var BR, VR = t((() => {
 				a = i.pop();
 			}
 		}
-	}, BR = N([
+	}, UR = N([
 		R(1, km),
 		R(2, Ct),
 		R(3, We),
@@ -20412,23 +20412,23 @@ var BR, VR = t((() => {
 		R(6, ao),
 		R(7, Kn),
 		R(8, Rp)
-	], BR);
+	], UR);
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/contrib/chat/common/tools/builtinTools/toolHelpers.js
-function HR(e) {
+function GR(e) {
 	return { content: [{
 		kind: "text",
 		value: e
 	}] };
 }
-var UR = t((() => {})), WR, GR, KR, qR = t((() => {
-	b(), bc(), $s(), Co(), P(), $c(), fr(), pc(), E(), Xr(), kv(), mu(), Wb(), Ny(), Fb(), ev(), ap(), X_(), vm(), VR(), CR(), UR(), WR = "runSubagent", GR = "Launch a new agent to handle complex, multi-step tasks autonomously. This tool is good at researching complex questions, searching for code, and executing multi-step tasks. When you are searching for a keyword or file and are not confident that you will find the right match in the first few tries, use this agent to perform the search for you.\n\n- Agents do not run async or in the background, you will wait for the agent's result.\n- When the agent is done, it will return a single message back to you. The result returned by the agent is not visible to the user. To show the user the result, you should send a text message back to the user with a concise summary of the result.\n- Each agent invocation is stateless. You will not be able to send additional messages to the agent, nor will the agent be able to communicate with you outside of its final report. Therefore, your prompt should contain a highly detailed task description for the agent to perform autonomously and you should specify exactly what information the agent should return back to you in its final and only message to you.\n- The agent's outputs should generally be trusted\n- Clearly tell the agent whether you expect it to write code or just to do research (search, file reads, web fetches, etc.), since it is not aware of the user's intent", KR = class extends z {
+var KR = t((() => {})), qR, JR, YR, XR = t((() => {
+	b(), bc(), $s(), Co(), P(), $c(), fr(), pc(), E(), Xr(), kv(), mu(), Wb(), Ny(), Fb(), ev(), ap(), X_(), vm(), WR(), ER(), KR(), qR = "runSubagent", JR = "Launch a new agent to handle complex, multi-step tasks autonomously. This tool is good at researching complex questions, searching for code, and executing multi-step tasks. When you are searching for a keyword or file and are not confident that you will find the right match in the first few tries, use this agent to perform the search for you.\n\n- Agents do not run async or in the background, you will wait for the agent's result.\n- When the agent is done, it will return a single message back to you. The result returned by the agent is not visible to the user. To show the user the result, you should send a text message back to the user with a concise summary of the result.\n- Each agent invocation is stateless. You will not be able to send additional messages to the agent, nor will the agent be able to communicate with you outside of its final report. Therefore, your prompt should contain a highly detailed task description for the agent to perform autonomously and you should specify exactly what information the agent should return back to you in its final and only message to you.\n- The agent's outputs should generally be trusted\n- Clearly tell the agent whether you expect it to write code or just to do research (search, file reads, web fetches, etc.), since it is not aware of the user's intent", YR = class extends z {
 		constructor(e, t, n, r, i, a, o, s, c) {
 			super(), this.chatAgentService = e, this.chatService = t, this.chatModeService = n, this.languageModelToolsService = r, this.languageModelsService = i, this.logService = a, this.toolsService = o, this.configurationService = s, this.instantiationService = c, this.onDidUpdateToolData = is.filter(this.configurationService.onDidChangeConfiguration, (e) => e.affectsConfiguration(uv.SubagentToolCustomAgents));
 		}
 		getToolData() {
-			let e = GR, t = {
+			let e = JR, t = {
 				type: "object",
 				properties: {
 					prompt: {
@@ -20446,7 +20446,7 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 				type: "string",
 				description: "Optional name of a specific agent to invoke. If not provided, uses the current agent."
 			}, e += "\n- If the user asks for a certain agent, you MUST provide that EXACT agent name (case-sensitive) to invoke that specific agent."), {
-				id: WR,
+				id: qR,
 				toolReferenceName: fx.runSubagent,
 				icon: Ri.fromId(Gi.organization.id),
 				displayName: M(6081, "Run Subagent"),
@@ -20464,7 +20464,7 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 			let o = a.getRequests().at(-1);
 			try {
 				let t = this.chatAgentService.getDefaultAgent(Ix.Chat, Nv.Agent);
-				if (!t) return HR("Error: No default agent available");
+				if (!t) return GR("Error: No default agent available");
 				let n = e.modelId, s = e.userSelectedTools, c;
 				if (i.agentName) {
 					let e = this.chatModeService.findModeByName(i.agentName);
@@ -20506,7 +20506,7 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 						fromSubagent: !0
 					}), !1), l.push(t.content.value));
 				};
-				s && (s[WR] = !1, s[xR] = !1);
+				s && (s[qR] = !1, s[wR] = !1);
 				let f = await this.collectVariables(s, r), p = {
 					sessionResource: e.context.sessionResource,
 					requestId: e.callId ?? `subagent-${Date.now()}`,
@@ -20519,10 +20519,10 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 					userSelectedTools: s,
 					modeInstructions: c
 				}, m = await this.chatAgentService.invokeAgent(t.id, p, d, [], r);
-				return m.errorDetails ? HR(`Agent error: ${m.errorDetails.message}`) : HR(l.join("") || "Agent completed with no output");
+				return m.errorDetails ? GR(`Agent error: ${m.errorDetails.message}`) : GR(l.join("") || "Agent completed with no output");
 			} catch (e) {
 				let t = `Error invoking subagent: ${e instanceof Error ? e.message : "Unknown error"}`;
-				return this.logService.error(t, e), HR(t);
+				return this.logService.error(t, e), GR(t);
 			}
 		}
 		async prepareToolInvocation(e, t) {
@@ -20535,9 +20535,9 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 				t.length > 0 && (n = this.languageModelToolsService.toToolAndToolSetEnablementMap(t, void 0));
 			}
 			let r = new Jh();
-			return await this.instantiationService.createInstance(BR, n).collect(r, t), r;
+			return await this.instantiationService.createInstance(UR, n).collect(r, t), r;
 		}
-	}, KR = N([
+	}, YR = N([
 		R(0, Wd),
 		R(1, om),
 		R(2, Gl),
@@ -20547,21 +20547,21 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 		R(6, Rp),
 		R(7, ba),
 		R(8, It)
-	], KR);
-})), JR, YR, XR = t((() => {
-	b(), bc(), P(), $c(), fr(), pc(), E(), X_(), vm(), _R(), pR(), CR(), qR(), JR = class extends z {
+	], YR);
+})), ZR, QR, $R = t((() => {
+	b(), bc(), P(), $c(), fr(), pc(), E(), X_(), vm(), bR(), gR(), ER(), XR(), ZR = class extends z {
 		static {
 			this.ID = "chat.builtinTools";
 		}
 		constructor(e, t, n) {
 			super(), this.configurationService = n;
-			let r = t.createInstance(fR);
-			this._register(e.registerTool(dR, r));
-			let i = this.configurationService.getValue(yR) === !0, a = this.configurationService.getValue(bR) !== !1, o = vR(i, a), s = this._register(t.createInstance(SR, i, a));
+			let r = t.createInstance(hR);
+			this._register(e.registerTool(mR, r));
+			let i = this.configurationService.getValue(SR) === !0, a = this.configurationService.getValue(CR) !== !1, o = xR(i, a), s = this._register(t.createInstance(TR, i, a));
 			this._register(e.registerTool(o, s));
-			let c = t.createInstance(gR);
-			this._register(e.registerTool(hR, c));
-			let l = this._register(t.createInstance(KR)), u = this._register(e.createToolSet(uy.Internal, "custom-agent", tx.agent, {
+			let c = t.createInstance(yR);
+			this._register(e.registerTool(vR, c));
+			let l = this._register(t.createInstance(YR)), u = this._register(e.createToolSet(uy.Internal, "custom-agent", tx.agent, {
 				icon: Ri.fromId(Gi.agent.id),
 				description: M(6083, "Delegate tasks to other agents")
 			})), d, f, p = () => {
@@ -20573,19 +20573,19 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 				d?.dispose(), f?.dispose();
 			} });
 		}
-	}, JR = N([
+	}, ZR = N([
 		R(0, Rp),
 		R(1, It),
 		R(2, ba)
-	], JR), YR = "vscode_fetchWebPage_internal";
-})), ZR, QR, $R, ez, tz = t((() => {
-	b(), P(), Mw(), No(), Di(), fr(), wf(), nT(), j(7865, "Extensions"), (function(e) {
+	], ZR), QR = "vscode_fetchWebPage_internal";
+})), ez, tz, nz, rz, iz = t((() => {
+	b(), P(), Fw(), No(), Di(), fr(), wf(), aT(), j(7865, "Extensions"), (function(e) {
 		e[e.Installing = 0] = "Installing", e[e.Installed = 1] = "Installed", e[e.Uninstalling = 2] = "Uninstalling", e[e.Uninstalled = 3] = "Uninstalled";
-	})(ZR ||= {}), (function(e) {
+	})(ez ||= {}), (function(e) {
 		e.ReloadWindow = "reloadWindow", e.RestartExtensions = "restartExtensions", e.DownloadUpdate = "downloadUpdate", e.ApplyUpdate = "applyUpdate", e.QuitAndInstall = "quitAndInstall";
-	})(QR ||= {}), (function(e) {
+	})(tz ||= {}), (function(e) {
 		e.Readme = "readme", e.Features = "features", e.Changelog = "changelog", e.Dependencies = "dependencies", e.ExtensionPack = "extensionPack";
-	})($R ||= {}), ez = class extends z {
+	})(nz ||= {}), rz = class extends z {
 		constructor(e, t) {
 			super(), this.containers = e, this._register(t.onChange(this.update, this));
 		}
@@ -20593,11 +20593,11 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 			this.containers.forEach((t) => t.extension = e);
 		}
 		update(e) {
-			for (let t of this.containers) e && t.extension ? Jw(t.extension.identifier, e.identifier) && (t.extension.server && e.server && t.extension.server !== e.server ? t.updateWhenCounterExtensionChanges && t.update() : t.extension = e) : t.update();
+			for (let t of this.containers) e && t.extension ? Zw(t.extension.identifier, e.identifier) && (t.extension.server && e.server && t.extension.server !== e.server ? t.updateWhenCounterExtensionChanges && t.update() : t.extension = e) : t.update();
 		}
-	}, ez = N([R(1, tT)], ez), new gn("defaultExtensionViews", !0), new gn("hasOutdatedExtensions", !1), new gn("hasGallery", !1), new gn("extensionsGalleryStatus", zh.Unavailable), new gn("extensionResultListFocused ", !0), new gn("searchMcpServers", !1), new mc("extensionsSearchActionsMenu"), new mc("extensionsFilterSubMenu");
-})), nz, rz, iz = t((() => {
-	b(), bc(), $c(), fr(), uC(), wC(), X_(), tz(), nT(), nz = "vscode_searchExtensions_internal", Ri.fromId(Gi.extensions.id), M(7878, "Search Extensions"), M(7879, "Search for VS Code extensions"), uy.Internal, rz = class {
+	}, rz = N([R(1, iT)], rz), new gn("defaultExtensionViews", !0), new gn("hasOutdatedExtensions", !1), new gn("hasGallery", !1), new gn("extensionsGalleryStatus", zh.Unavailable), new gn("extensionResultListFocused ", !0), new gn("searchMcpServers", !1), new mc("extensionsSearchActionsMenu"), new mc("extensionsFilterSubMenu");
+})), az, oz, sz = t((() => {
+	b(), bc(), $c(), fr(), uC(), GC(), X_(), iz(), aT(), az = "vscode_searchExtensions_internal", Ri.fromId(Gi.extensions.id), M(7878, "Search Extensions"), M(7879, "Search for VS Code extensions"), uy.Internal, oz = class {
 		constructor(e) {
 			this.extensionWorkbenchService = e;
 		}
@@ -20612,7 +20612,7 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 					id: t.identifier.id,
 					name: t.displayName,
 					description: t.description,
-					installed: t.state === ZR.Installed,
+					installed: t.state === ez.Installed,
 					installCount: t.installCount ?? 0,
 					rating: t.rating ?? 0,
 					categories: t.categories ?? [],
@@ -20622,7 +20622,7 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 				let t = await this.extensionWorkbenchService.queryGallery({
 					text: e,
 					pageSize: 10,
-					sortBy: aC.InstallCount
+					sortBy: qC.InstallCount
 				}, r);
 				t.firstPage.length && o(t.firstPage);
 			};
@@ -20648,9 +20648,9 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 				}
 			};
 		}
-	}, rz = N([R(0, tT)], rz);
-})), az, oz, sz = t((() => {
-	S(), Eo(), ia(), Gc(), P(), Uo(), Go(), X_(), pR(), XR(), iz(), kw(), xv(), W(), wm(), az = class {
+	}, oz = N([R(0, iT)], oz);
+})), cz, lz, uz = t((() => {
+	S(), Eo(), ia(), Gc(), P(), Uo(), Go(), X_(), gR(), $R(), sz(), Mw(), xv(), W(), wm(), cz = class {
 		constructor(e) {
 			this._apiObject = new fe(() => {
 				let e = this;
@@ -20702,10 +20702,10 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 		get apiObjectWithChatParticipantAdditions() {
 			return this._apiObjectWithChatParticipantAdditions.value;
 		}
-	}, oz = class {
+	}, lz = class {
 		constructor(e, t) {
 			this._languageModels = t, this._registeredTools = /* @__PURE__ */ new Map(), this._tokenCountFuncs = /* @__PURE__ */ new Map(), this._allTools = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(G.MainThreadLanguageModelTools), this._proxy.$getTools().then((e) => {
-				for (let t of e) this._allTools.set(t.id, new az(sa(t)));
+				for (let t of e) this._allTools.set(t.id, new cz(sa(t)));
 			});
 		}
 		async $countTokensForInvocation(e, t, n) {
@@ -20718,16 +20718,16 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 			n.tokenizationOptions && this._tokenCountFuncs.set(i, n.tokenizationOptions.countTokens);
 			try {
 				if (n.toolInvocationToken && !Hy(n.toolInvocationToken)) throw Error("Invalid tool invocation token");
-				if ((t === "vscode_editFile_internal" || t === "vscode_editFile") && !Dw(e, "chatParticipantPrivate")) throw Error(`Invalid tool: ${t}`);
+				if ((t === "vscode_editFile_internal" || t === "vscode_editFile") && !Aw(e, "chatParticipantPrivate")) throw Error(`Invalid tool: ${t}`);
 				let a = await this._proxy.$invokeTool({
 					toolId: t,
 					callId: i,
 					parameters: n.input,
 					tokenBudget: n.tokenizationOptions?.tokenBudget,
 					context: n.toolInvocationToken,
-					chatRequestId: Dw(e, "chatParticipantPrivate") ? n.chatRequestId : void 0,
-					chatInteractionId: Dw(e, "chatParticipantPrivate") ? n.chatInteractionId : void 0,
-					fromSubAgent: Dw(e, "chatParticipantPrivate") ? n.fromSubAgent : void 0
+					chatRequestId: Aw(e, "chatParticipantPrivate") ? n.chatRequestId : void 0,
+					chatInteractionId: Aw(e, "chatParticipantPrivate") ? n.chatInteractionId : void 0,
+					fromSubAgent: Aw(e, "chatParticipantPrivate") ? n.fromSubAgent : void 0
 				}, r), o = a instanceof Kd ? a.value : a;
 				return jp.to(sa(o));
 			} finally {
@@ -20739,18 +20739,18 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 			for (let n of e) {
 				t.delete(n.id);
 				let e = this._allTools.get(n.id);
-				e ? e.update(n) : this._allTools.set(n.id, new az(sa(n)));
+				e ? e.update(n) : this._allTools.set(n.id, new cz(sa(n)));
 			}
 			for (let e of t) this._allTools.delete(e);
 		}
 		getTools(e) {
-			let t = Dw(e, "chatParticipantPrivate");
+			let t = Aw(e, "chatParticipantPrivate");
 			return Array.from(this._allTools.values()).map((e) => t ? e.apiObjectWithChatParticipantAdditions : e.apiObject).filter((t) => {
 				switch (t.name) {
-					case uR:
-					case lR:
-					case YR:
-					case nz: return Dw(e, "chatParticipantPrivate");
+					case pR:
+					case fR:
+					case QR:
+					case az: return Aw(e, "chatParticipantPrivate");
 					default: return !0;
 				}
 			});
@@ -20762,12 +20762,12 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 				input: e.parameters,
 				toolInvocationToken: sa(e.context)
 			};
-			Dw(n.extension, "chatParticipantPrivate") && (r.chatRequestId = e.chatRequestId, r.chatInteractionId = e.chatInteractionId, r.chatSessionId = e.context?.sessionId, r.fromSubAgent = e.fromSubAgent), Dw(n.extension, "chatParticipantAdditions") && e.modelId && (r.model = await this.getModel(e.modelId, n.extension)), e.tokenBudget !== void 0 && (r.tokenizationOptions = {
+			Aw(n.extension, "chatParticipantPrivate") && (r.chatRequestId = e.chatRequestId, r.chatInteractionId = e.chatInteractionId, r.chatSessionId = e.context?.sessionId, r.fromSubAgent = e.fromSubAgent), Aw(n.extension, "chatParticipantAdditions") && e.modelId && (r.model = await this.getModel(e.modelId, n.extension)), e.tokenBudget !== void 0 && (r.tokenizationOptions = {
 				tokenBudget: e.tokenBudget,
 				countTokens: this._tokenCountFuncs.get(e.callId) || ((t, n = xn.None) => this._proxy.$countTokensForInvocation(e.callId, t, n))
 			});
 			let i;
-			if (Dw(n.extension, "toolProgress")) {
+			if (Aw(n.extension, "toolProgress")) {
 				let t;
 				i = { report: (n) => {
 					n.increment !== void 0 && (t = (t ?? 0) + n.increment), this._proxy.$acceptToolProgress(e.callId, {
@@ -20816,8 +20816,8 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 			});
 		}
 	};
-})), cz, lz = t((() => {
-	W(), wm(), gv(), Ar(), S(), P(), kw(), gm(), cz = class {
+})), dz, fz = t((() => {
+	W(), wm(), gv(), Ar(), S(), P(), Mw(), gm(), dz = class {
 		constructor(e, t, n, r) {
 			this._documents = t, this._commands = n, this._uriTransformer = r, this._languageIds = [], this._handlePool = 0, this._ids = /* @__PURE__ */ new Set(), this._proxy = e.getProxy(G.MainThreadLanguages);
 		}
@@ -20945,11 +20945,11 @@ var UR = t((() => {})), WR, GR, KR, qR = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostMessageService.js
-function uz(e) {
+function pz(e) {
 	return e && e.title;
 }
-var dz, fz = t((() => {
-	b(), W(), Xr(), kw(), dz = class {
+var mz, hz = t((() => {
+	b(), W(), Xr(), Mw(), mz = class {
 		constructor(e, t) {
 			this._logService = t, this._proxy = e.getProxy(G.MainThreadMessageService);
 		}
@@ -20958,7 +20958,7 @@ var dz, fz = t((() => {
 				identifier: e.identifier,
 				label: e.displayName || e.name
 			} }, o;
-			typeof r == "string" || uz(r) ? o = [r, ...i] : (a.modal = r?.modal, a.useCustom = r?.useCustom, a.detail = r?.detail, o = i), a.useCustom && J(e, "resolvers");
+			typeof r == "string" || pz(r) ? o = [r, ...i] : (a.modal = r?.modal, a.useCustom = r?.useCustom, a.detail = r?.detail, o = i), a.useCustom && J(e, "resolvers");
 			let s = [], c = !1;
 			for (let t = 0; t < o.length; t++) {
 				let n = o[t];
@@ -20980,9 +20980,9 @@ var dz, fz = t((() => {
 				if (typeof e == "number") return o[e];
 			});
 		}
-	}, dz = N([R(1, Ct)], dz);
-})), pz, mz, hz, gz = t((() => {
-	Ds(), U(), wm(), gv(), mx(), mp(), pz = class {
+	}, mz = N([R(1, Ct)], mz);
+})), gz, _z, vz, yz = t((() => {
+	Ds(), U(), wm(), gv(), mx(), mp(), gz = class {
 		constructor(e, t, n, r) {
 			this.start = e, this.deletedCount = t, this.deletedItems = n, this.items = r;
 		}
@@ -20993,7 +20993,7 @@ var dz, fz = t((() => {
 				removedCells: this.deletedItems
 			};
 		}
-	}, mz = class {
+	}, _z = class {
 		static asModelAddData(e) {
 			return {
 				EOL: e.eol,
@@ -21068,7 +21068,7 @@ var dz, fz = t((() => {
 			this._internalMetadata = e, this._previousResult = Object.freeze($g.to(e));
 		}
 		setMime(e) {}
-	}, hz = class e {
+	}, vz = class e {
 		static {
 			this._handlePool = 0;
 		}
@@ -21208,9 +21208,9 @@ var dz, fz = t((() => {
 			let r = [], i = [], a = [];
 			if (e.reverse().forEach((e) => {
 				let n = e[2].map((e) => {
-					let n = new mz(this, this._textDocumentsAndEditors, e);
-					return t || i.push(mz.asModelAddData(e)), n;
-				}), o = new pz(e[0], e[1], [], n), s = this._cells.splice(e[0], e[1], ...n);
+					let n = new _z(this, this._textDocumentsAndEditors, e);
+					return t || i.push(_z.asModelAddData(e)), n;
+				}), o = new gz(e[0], e[1], [], n), s = this._cells.splice(e[0], e[1], ...n);
 				for (let e of s) a.push(e.uri), o.deletedItems.push(e.apiCell);
 				r.push(o);
 			}), this._textDocumentsAndEditors.acceptDocumentsAndEditorsDelta({
@@ -21221,7 +21221,7 @@ var dz, fz = t((() => {
 		_moveCells(e, t, n, r) {
 			let i = this._cells.splice(e, t);
 			this._cells.splice(n, 0, ...i);
-			let a = [new pz(e, t, i.map((e) => e.apiCell), []), new pz(n, 0, [], i)];
+			let a = [new gz(e, t, i.map((e) => e.apiCell), []), new gz(n, 0, [], i)];
 			for (let e of a) r.push(e.asApiEvent());
 		}
 		_setCellOutputs(e, t) {
@@ -21257,8 +21257,8 @@ var dz, fz = t((() => {
 			return this._cells.indexOf(e);
 		}
 	};
-})), _z, vz = t((() => {
-	ia(), wm(), gv(), mp(), _z = class e {
+})), bz, xz = t((() => {
+	ia(), wm(), gv(), mp(), bz = class e {
 		static {
 			this.apiEditorsToExtHost = /* @__PURE__ */ new WeakMap();
 		}
@@ -21323,8 +21323,8 @@ var dz, fz = t((() => {
 			this._viewColumn = e;
 		}
 	};
-})), yz, bz = t((() => {
-	P(), Qa(), _o(), te(), rt(), yz = class extends z {
+})), Sz, Cz = t((() => {
+	P(), Qa(), _o(), te(), rt(), Sz = class extends z {
 		constructor(e, t, n) {
 			super(), this._source = e, this._inputTextBuffer = t, this._outputs = n, this._outputTextBuffers = void 0;
 		}
@@ -21373,7 +21373,7 @@ var dz, fz = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/contrib/search/common/searchNotebookHelpers.js
-function xz(e, t) {
+function wz(e, t) {
 	let n = -1, r = [], i = [];
 	return e.forEach((e) => {
 		e.range.startLineNumber !== n && i.length > 0 && (r.push([...i]), i = []), i.push(e), n = e.range.endLineNumber;
@@ -21383,10 +21383,10 @@ function xz(e, t) {
 		return new bm(n.join("\n") + "\n", e.map((e) => new Jo(e.range.startLineNumber - 1, e.range.startColumn - 1, e.range.endLineNumber - 1, e.range.endColumn - 1)));
 	});
 }
-var Sz = t((() => {
+var Tz = t((() => {
 	kp(), Qa();
-})), Cz, wz, Tz = t((() => {
-	fr(), Pr(), $s(), P(), _r(), vl(), c(), kt(), U(), ia(), Ca(), LI(), W(), Nj(), wm(), gv(), xv(), gz(), vz(), zt(), Ds(), kp(), bz(), Sz(), Od(), mp(), Cz = class e {
+})), Ez, Dz, Oz = t((() => {
+	fr(), Pr(), $s(), P(), _r(), vl(), c(), kt(), U(), ia(), Ca(), BI(), W(), Ij(), wm(), gv(), xv(), yz(), xz(), zt(), Ds(), kp(), Cz(), Tz(), Od(), mp(), Ez = class e {
 		static {
 			this._notebookStatusBarItemProviderHandlePool = 0;
 		}
@@ -21397,7 +21397,7 @@ var Sz = t((() => {
 			return this._visibleNotebookEditors.map((e) => e.apiEditor);
 		}
 		constructor(t, n, r, i, a, o, s) {
-			this._textDocumentsAndEditors = r, this._textDocuments = i, this._extHostFileSystem = a, this._extHostSearch = o, this._logService = s, this._notebookStatusBarItemProviders = /* @__PURE__ */ new Map(), this._documents = new qn(), this._editors = /* @__PURE__ */ new Map(), this._onDidChangeActiveNotebookEditor = new V(), this.onDidChangeActiveNotebookEditor = this._onDidChangeActiveNotebookEditor.event, this._visibleNotebookEditors = [], this._onDidOpenNotebookDocument = new V(), this.onDidOpenNotebookDocument = this._onDidOpenNotebookDocument.event, this._onDidCloseNotebookDocument = new V(), this.onDidCloseNotebookDocument = this._onDidCloseNotebookDocument.event, this._onDidChangeVisibleNotebookEditors = new V(), this.onDidChangeVisibleNotebookEditors = this._onDidChangeVisibleNotebookEditors.event, this._statusBarCache = new II("NotebookCellStatusBarCache"), this._handlePool = 0, this._notebookSerializer = /* @__PURE__ */ new Map(), this._notebookProxy = t.getProxy(G.MainThreadNotebook), this._notebookDocumentsProxy = t.getProxy(G.MainThreadNotebookDocuments), this._notebookEditorsProxy = t.getProxy(G.MainThreadNotebookEditors), this._commandsConverter = n.converter, n.registerArgumentProcessor({ processArgument: (e) => {
+			this._textDocumentsAndEditors = r, this._textDocuments = i, this._extHostFileSystem = a, this._extHostSearch = o, this._logService = s, this._notebookStatusBarItemProviders = /* @__PURE__ */ new Map(), this._documents = new qn(), this._editors = /* @__PURE__ */ new Map(), this._onDidChangeActiveNotebookEditor = new V(), this.onDidChangeActiveNotebookEditor = this._onDidChangeActiveNotebookEditor.event, this._visibleNotebookEditors = [], this._onDidOpenNotebookDocument = new V(), this.onDidOpenNotebookDocument = this._onDidOpenNotebookDocument.event, this._onDidCloseNotebookDocument = new V(), this.onDidCloseNotebookDocument = this._onDidCloseNotebookDocument.event, this._onDidChangeVisibleNotebookEditors = new V(), this.onDidChangeVisibleNotebookEditors = this._onDidChangeVisibleNotebookEditors.event, this._statusBarCache = new zI("NotebookCellStatusBarCache"), this._handlePool = 0, this._notebookSerializer = /* @__PURE__ */ new Map(), this._notebookProxy = t.getProxy(G.MainThreadNotebook), this._notebookDocumentsProxy = t.getProxy(G.MainThreadNotebookDocuments), this._notebookEditorsProxy = t.getProxy(G.MainThreadNotebookEditors), this._commandsConverter = n.converter, n.registerArgumentProcessor({ processArgument: (e) => {
 				if (e && e.$mid === Yn.NotebookCellActionContext) {
 					let t = e.notebookEditor?.notebookUri, n = e.cell.handle, r = this._documents.get(t)?.getCell(n);
 					if (r) return r.apiCell;
@@ -21523,10 +21523,10 @@ var Sz = t((() => {
 			let a = H.revive(t), o = this._notebookSerializer.get(e);
 			this.trace(`enter saveNotebook(versionId: ${n}, ${a.toString()})`);
 			try {
-				if (!o) throw new wz("NO serializer found");
+				if (!o) throw new Dz("NO serializer found");
 				let e = this._documents.get(a);
-				if (!e) throw new wz("Document NOT found");
-				if (e.versionId !== n) throw new wz("Document version mismatch, expected: " + n + ", actual: " + e.versionId);
+				if (!e) throw new Dz("Document NOT found");
+				if (e.versionId !== n) throw new Dz("Document version mismatch, expected: " + n + ", actual: " + e.versionId);
 				if (!this._extHostFileSystem.value.isWritableFileSystem(a.scheme)) throw new Io(M(2698, "Unable to modify read-only file '{0}'", this._resourceForError(a)), Oo.FILE_PERMISSION_DENIED);
 				let t = {
 					metadata: lt(e.apiNotebook.metadata, (e) => !(o.options?.transientDocumentMetadata ?? {})[e]),
@@ -21619,11 +21619,11 @@ var Sz = t((() => {
 					}
 					if (i.isCancellationRequested) return;
 					r.forEach((e, r) => {
-						let i = t.contentPattern.pattern, a = new yz(e.input, void 0, e.outputs), o = a.findInInputs(i), s = a.findInOutputs(i), c = s.flatMap((e) => xz(e.matches, e.textBuffer)).map((e, t) => (e.webviewIndex = t, e));
+						let i = t.contentPattern.pattern, a = new Sz(e.input, void 0, e.outputs), o = a.findInInputs(i), s = a.findInOutputs(i), c = s.flatMap((e) => wz(e.matches, e.textBuffer)).map((e, t) => (e.webviewIndex = t, e));
 						if (o.length > 0 || s.length > 0) {
 							let e = {
 								index: r,
-								contentResults: xz(o, a.inputTextBuffer),
+								contentResults: wz(o, a.inputTextBuffer),
 								webviewResults: c
 							};
 							n.push(e);
@@ -21656,7 +21656,7 @@ var Sz = t((() => {
 		}
 		_createExtHostEditor(e, t, n) {
 			if (this._editors.has(t)) throw Error(`editor with id ALREADY EXSIST: ${t}`);
-			let r = new _z(t, this._notebookEditorsProxy, e, n.visibleRanges.map(yy.to), n.selections.map(yy.to), typeof n.viewColumn == "number" ? Wm.to(n.viewColumn) : void 0, n.viewType);
+			let r = new bz(t, this._notebookEditorsProxy, e, n.visibleRanges.map(yy.to), n.selections.map(yy.to), typeof n.viewColumn == "number" ? Wm.to(n.viewColumn) : void 0, n.viewType);
 			this._editors.set(t, r);
 		}
 		$acceptDocumentAndEditorsDelta(e) {
@@ -21670,8 +21670,8 @@ var Sz = t((() => {
 				for (let n of e.value.addedDocuments) {
 					let e = H.revive(n.uri);
 					if (this._documents.has(e)) throw Error(`adding EXISTING notebook ${e} `);
-					let r = new hz(this._notebookDocumentsProxy, this._textDocumentsAndEditors, this._textDocuments, e, n);
-					t.push(...n.cells.map((e) => mz.asModelAddData(e))), this._documents.get(e)?.dispose(), this._documents.set(e, r), this._textDocumentsAndEditors.$acceptDocumentsAndEditorsDelta({ addedDocuments: t }), this._onDidOpenNotebookDocument.fire(r.apiNotebook);
+					let r = new vz(this._notebookDocumentsProxy, this._textDocumentsAndEditors, this._textDocuments, e, n);
+					t.push(...n.cells.map((e) => _z.asModelAddData(e))), this._documents.get(e)?.dispose(), this._documents.set(e, r), this._textDocumentsAndEditors.$acceptDocumentsAndEditorsDelta({ addedDocuments: t }), this._onDidOpenNotebookDocument.fire(r.apiNotebook);
 				}
 			}
 			if (e.value.addedEditors) for (let t of e.value.addedEditors) {
@@ -21702,13 +21702,13 @@ var Sz = t((() => {
 		trace(e) {
 			this._logService.trace(`[Extension Host Notebook] ${e}`);
 		}
-	}, wz = class extends Error {
+	}, Dz = class extends Error {
 		constructor(e) {
 			super(e), this.name = "NotebookSaveError";
 		}
 	};
-})), Ez, Dz = t((() => {
-	$s(), U(), wm(), gv(), xv(), cb(), Ez = class {
+})), kz, Az = t((() => {
+	$s(), U(), wm(), gv(), xv(), cb(), kz = class {
 		constructor(e, t, n, r = {
 			timeout: 1500,
 			errors: 3
@@ -21744,8 +21744,8 @@ var Sz = t((() => {
 			return this._mainThreadBulkEdits.$tryApplyWorkspaceEdit(new Kd(o));
 		}
 	};
-})), Oz, kz = t((() => {
-	$s(), U(), Oz = class {
+})), jz, Mz = t((() => {
+	$s(), U(), jz = class {
 		constructor(e) {
 			this._notebooksAndEditors = e, this._onDidSaveNotebookDocument = new V(), this.onDidSaveNotebookDocument = this._onDidSaveNotebookDocument.event, this._onDidChangeNotebookDocument = new V(), this.onDidChangeNotebookDocument = this._onDidChangeNotebookDocument.event;
 		}
@@ -21761,8 +21761,8 @@ var Sz = t((() => {
 			this._onDidSaveNotebookDocument.fire(t.apiNotebook);
 		}
 	};
-})), Az, jz = t((() => {
-	b(), $s(), Xr(), wm(), Az = class {
+})), Nz, Pz = t((() => {
+	b(), $s(), Xr(), wm(), Nz = class {
 		constructor(e, t) {
 			this._logService = e, this._notebooksAndEditors = t, this._onDidChangeNotebookEditorSelection = new V(), this._onDidChangeNotebookEditorVisibleRanges = new V(), this.onDidChangeNotebookEditorSelection = this._onDidChangeNotebookEditorSelection.event, this.onDidChangeNotebookEditorVisibleRanges = this._onDidChangeNotebookEditorVisibleRanges.event;
 		}
@@ -21780,15 +21780,15 @@ var Sz = t((() => {
 		$acceptEditorViewColumns(e) {
 			for (let t in e) this._notebooksAndEditors.getEditorById(t)._acceptViewColumn(Wm.to(e[t]));
 		}
-	}, Az = N([R(0, Ct)], Az);
-})), Mz, Nz = t((() => {
+	}, Nz = N([R(0, Ct)], Nz);
+})), Fz, Iz = t((() => {
 	(function(e) {
 		e[e.Disconnected = 1] = "Disconnected", e[e.Connected = 2] = "Connected", e[e.Initializing = 3] = "Initializing";
-	})(Mz ||= {});
+	})(Fz ||= {});
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostNotebookKernels.js
-function Pz(e) {
+function Lz(e) {
 	let t = (e) => e ? {
 		startLineNumber: e.start.line,
 		startColumn: e.start.character,
@@ -21807,11 +21807,11 @@ function Pz(e) {
 		uri: e.uri
 	} : void 0;
 }
-function Fz(e, t) {
+function Rz(e, t) {
 	return `${e.value}/${t}`;
 }
-var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
-	b(), An(), S(), Eo(), $s(), P(), _r(), U(), wC(), Xr(), W(), Nj(), wm(), gv(), Ru(), eS(), kw(), xv(), Nz(), mp(), Iz = class {
+var zz, Bz, Vz, Hz, Uz, Wz, Gz = t((() => {
+	b(), An(), S(), Eo(), $s(), P(), _r(), U(), GC(), Xr(), W(), Ij(), wm(), gv(), Ru(), eS(), Mw(), xv(), Iz(), mp(), zz = class {
 		constructor(e, t, n, r, i) {
 			this._initData = t, this._extHostNotebook = n, this._commands = r, this._logService = i, this._activeExecutions = new qn(), this._activeNotebookExecutions = new qn(), this._kernelDetectionTask = /* @__PURE__ */ new Map(), this._kernelDetectionTaskHandlePool = 0, this._kernelSourceActionProviders = /* @__PURE__ */ new Map(), this._kernelSourceActionProviderHandlePool = 0, this._kernelData = /* @__PURE__ */ new Map(), this._handlePool = 0, this.id = 0, this.variableStore = {}, this._proxy = e.getProxy(G.MainThreadNotebookKernels);
 			let a = new Q("notebook.selectKernel", "_notebook.selectKernel", "Trigger kernel picker for specified notebook editor widget", [new X("options", "Select kernel options", (e) => !0, (e) => {
@@ -21845,11 +21845,11 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 			this._commands.registerApiCommand(a), this._commands.registerApiCommand(o);
 		}
 		createNotebookController(e, t, n, r, i, a) {
-			for (let n of this._kernelData.values()) if (n.controller.id === t && AC.equals(e.identifier, n.extensionId)) throw Error(`notebook controller with id '${t}' ALREADY exist`);
+			for (let n of this._kernelData.values()) if (n.controller.id === t && SC.equals(e.identifier, n.extensionId)) throw Error(`notebook controller with id '${t}' ALREADY exist`);
 			let o = this._handlePool++, s = this;
 			this._logService.trace(`NotebookController[${o}], CREATED by ${e.identifier.value}, ${t}`);
 			let c = () => console.warn(`NO execute handler from notebook controller '${f.id}' of extension: '${e.identifier}'`), l = !1, u = new V(), d = new V(), f = {
-				id: Fz(e.identifier, t),
+				id: Rz(e.identifier, t),
 				notebookType: n,
 				extensionId: e.identifier,
 				extensionLocation: e.extensionLocation,
@@ -21927,12 +21927,12 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 				createNotebookCellExecution(t) {
 					if (l) throw Error("notebook controller is DISPOSED");
 					if (!v.has(t.notebook.uri)) throw s._logService.trace(`NotebookController[${o}] NOT associated to notebook, associated to THESE notebooks:`, Array.from(v.keys()).map((e) => e.toString())), Error(`notebook controller is NOT associated to notebook: ${t.notebook.uri.toString()}`);
-					return s._createNotebookCellExecution(t, Fz(e.identifier, this.id));
+					return s._createNotebookCellExecution(t, Rz(e.identifier, this.id));
 				},
 				createNotebookExecution(t) {
 					if (J(e, "notebookExecution"), l) throw Error("notebook controller is DISPOSED");
 					if (!v.has(t.uri)) throw s._logService.trace(`NotebookController[${o}] NOT associated to notebook, associated to THESE notebooks:`, Array.from(v.keys()).map((e) => e.toString())), Error(`notebook controller is NOT associated to notebook: ${t.uri.toString()}`);
-					return s._createNotebookExecution(t, Fz(e.identifier, this.id));
+					return s._createNotebookExecution(t, Rz(e.identifier, this.id));
 				},
 				dispose: () => {
 					l || (this._logService.trace(`NotebookController[${o}], DISPOSED`), l = !0, this._kernelData.delete(o), u.dispose(), d.dispose(), this._proxy.$removeKernel(o));
@@ -21957,7 +21957,7 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 			}), y;
 		}
 		getIdByController(e) {
-			for (let [t, n] of this._kernelData) if (n.controller === e) return Fz(n.extensionId, e.id);
+			for (let [t, n] of this._kernelData) if (n.controller === e) return Rz(n.extensionId, e.id);
 			return null;
 		}
 		createNotebookControllerDetectionTask(e, t) {
@@ -22063,10 +22063,10 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 			let n = this._extHostNotebook.getNotebookDocument(e.notebook.uri).getCellFromApiCell(e);
 			if (!n) throw Error("invalid cell");
 			if (this._activeExecutions.has(n.uri)) throw Error(`duplicate execution for ${n.uri}`);
-			let r = new Rz(t, n, this._proxy);
+			let r = new Vz(t, n, this._proxy);
 			this._activeExecutions.set(n.uri, r);
 			let i = r.onDidChangeState(() => {
-				r.state === Lz.Resolved && (r.dispose(), i.dispose(), this._activeExecutions.delete(n.uri));
+				r.state === Bz.Resolved && (r.dispose(), i.dispose(), this._activeExecutions.delete(n.uri));
 			});
 			return r.asApiObject();
 		}
@@ -22077,14 +22077,14 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 			});
 			if (r) throw Error(`duplicate cell execution for ${r.document.uri}`);
 			if (this._activeNotebookExecutions.has(n.uri)) throw Error(`duplicate notebook execution for ${n.uri}`);
-			let i = new Bz(t, n, this._proxy), a = i.onDidChangeState(() => {
-				i.state === zz.Resolved && (i.dispose(), a.dispose(), this._activeNotebookExecutions.delete(n.uri));
+			let i = new Uz(t, n, this._proxy), a = i.onDidChangeState(() => {
+				i.state === Hz.Resolved && (i.dispose(), a.dispose(), this._activeNotebookExecutions.delete(n.uri));
 			});
 			return this._activeNotebookExecutions.set(n.uri, [i, a]), i.asApiObject();
 		}
-	}, Iz = N([R(4, Ct)], Iz), (function(e) {
+	}, zz = N([R(4, Ct)], zz), (function(e) {
 		e[e.Init = 0] = "Init", e[e.Started = 1] = "Started", e[e.Resolved = 2] = "Resolved";
-	})(Lz ||= {}), Rz = class e extends z {
+	})(Bz ||= {}), Vz = class e extends z {
 		static {
 			this.HANDLE = 0;
 		}
@@ -22092,7 +22092,7 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 			return this._state;
 		}
 		constructor(t, n, r) {
-			super(), this._cell = n, this._proxy = r, this._handle = e.HANDLE++, this._onDidChangeState = new V(), this.onDidChangeState = this._onDidChangeState.event, this._state = Lz.Init, this._tokenSource = this._register(new Fo()), this._collector = new Vz(10, (e) => this.update(e)), this._executionOrder = n.internalMetadata.executionOrder, this._proxy.$createExecution(this._handle, t, this._cell.notebook.uri, this._cell.handle);
+			super(), this._cell = n, this._proxy = r, this._handle = e.HANDLE++, this._onDidChangeState = new V(), this.onDidChangeState = this._onDidChangeState.event, this._state = Bz.Init, this._tokenSource = this._register(new Fo()), this._collector = new Wz(10, (e) => this.update(e)), this._executionOrder = n.internalMetadata.executionOrder, this._proxy.$createExecution(this._handle, t, this._cell.notebook.uri, this._cell.handle);
 		}
 		cancel() {
 			this._tokenSource.cancel();
@@ -22105,8 +22105,8 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 			return this._proxy.$updateExecution(this._handle, new Kd(t));
 		}
 		verifyStateForOutput() {
-			if (this._state === Lz.Init) throw Error("Must call start before modifying cell output");
-			if (this._state === Lz.Resolved) throw Error("Cannot modify cell output after calling resolve");
+			if (this._state === Bz.Init) throw Error("Must call start before modifying cell output");
+			if (this._state === Bz.Resolved) throw Error("Cannot modify cell output after calling resolve");
 		}
 		cellIndexToHandle(e) {
 			let t = this._cell;
@@ -22159,16 +22159,16 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 					}]);
 				},
 				start(t) {
-					if (e._state === Lz.Resolved || e._state === Lz.Started) throw Error("Cannot call start again");
-					e._state = Lz.Started, e._onDidChangeState.fire(), e.update({
+					if (e._state === Bz.Resolved || e._state === Bz.Started) throw Error("Cannot call start again");
+					e._state = Bz.Started, e._onDidChangeState.fire(), e.update({
 						editType: Sf.ExecutionState,
 						runStartTime: t
 					});
 				},
 				end(t, n, r) {
-					if (e._state === Lz.Resolved) throw Error("Cannot call resolve twice");
-					e._state = Lz.Resolved, e._onDidChangeState.fire(), e._collector.flush();
-					let i = Pz(r);
+					if (e._state === Bz.Resolved) throw Error("Cannot call resolve twice");
+					e._state = Bz.Resolved, e._onDidChangeState.fire(), e._collector.flush();
+					let i = Lz(r);
 					e._proxy.$completeExecution(e._handle, new Kd({
 						runEndTime: n,
 						lastRunSuccess: t,
@@ -22194,7 +22194,7 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 		}
 	}, (function(e) {
 		e[e.Init = 0] = "Init", e[e.Started = 1] = "Started", e[e.Resolved = 2] = "Resolved";
-	})(zz ||= {}), Bz = class e extends z {
+	})(Hz ||= {}), Uz = class e extends z {
 		static {
 			this.HANDLE = 0;
 		}
@@ -22202,7 +22202,7 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 			return this._state;
 		}
 		constructor(t, n, r) {
-			super(), this._notebook = n, this._proxy = r, this._handle = e.HANDLE++, this._onDidChangeState = new V(), this.onDidChangeState = this._onDidChangeState.event, this._state = zz.Init, this._tokenSource = this._register(new Fo()), this._proxy.$createNotebookExecution(this._handle, t, this._notebook.uri);
+			super(), this._notebook = n, this._proxy = r, this._handle = e.HANDLE++, this._onDidChangeState = new V(), this.onDidChangeState = this._onDidChangeState.event, this._state = Hz.Init, this._tokenSource = this._register(new Fo()), this._proxy.$createNotebookExecution(this._handle, t, this._notebook.uri);
 		}
 		cancel() {
 			this._tokenSource.cancel();
@@ -22210,16 +22210,16 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 		asApiObject() {
 			return Object.freeze({
 				start: () => {
-					if (this._state === zz.Resolved || this._state === zz.Started) throw Error("Cannot call start again");
-					this._state = zz.Started, this._onDidChangeState.fire(), this._proxy.$beginNotebookExecution(this._handle);
+					if (this._state === Hz.Resolved || this._state === Hz.Started) throw Error("Cannot call start again");
+					this._state = Hz.Started, this._onDidChangeState.fire(), this._proxy.$beginNotebookExecution(this._handle);
 				},
 				end: () => {
-					if (this._state === zz.Resolved) throw Error("Cannot call resolve twice");
-					this._state = zz.Resolved, this._onDidChangeState.fire(), this._proxy.$completeNotebookExecution(this._handle);
+					if (this._state === Hz.Resolved) throw Error("Cannot call resolve twice");
+					this._state = Hz.Resolved, this._onDidChangeState.fire(), this._proxy.$completeNotebookExecution(this._handle);
 				}
 			});
 		}
-	}, Vz = class {
+	}, Wz = class {
 		constructor(e, t) {
 			this.delay = e, this.callback = t, this.batch = [], this.startedTimer = Date.now();
 		}
@@ -22234,8 +22234,8 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 			return this.batch = [], this.callback(t).finally(() => e.complete());
 		}
 	};
-})), Uz, Wz = t((() => {
-	$s(), W(), vz(), Uz = class {
+})), Kz, qz = t((() => {
+	$s(), W(), xz(), Kz = class {
 		constructor(e, t) {
 			this._extHostNotebook = t, this._rendererMessageEmitters = /* @__PURE__ */ new Map(), this.proxy = e.getProxy(G.MainThreadNotebookRenderers);
 		}
@@ -22251,8 +22251,8 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 			return {
 				onDidReceiveMessage: (e, n, r) => this.getOrCreateEmitterFor(t).event(e, n, r),
 				postMessage: (e, n) => {
-					_z.apiEditorsToExtHost.has(e) && ([e, n] = [n, e]);
-					let r = n && _z.apiEditorsToExtHost.get(n);
+					bz.apiEditorsToExtHost.has(e) && ([e, n] = [n, e]);
+					let r = n && bz.apiEditorsToExtHost.get(n);
 					return this.proxy.$postMessage(r?.id, t, e);
 				}
 			};
@@ -22264,8 +22264,8 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 			} }), this._rendererMessageEmitters.set(e, t), t);
 		}
 	};
-})), Gz, Kz = t((() => {
-	P(), kt(), U(), kw(), W(), Gz = class {
+})), Jz, Yz = t((() => {
+	P(), kt(), U(), Mw(), W(), Jz = class {
 		constructor(e) {
 			this.handlers = /* @__PURE__ */ new Map(), this.proxy = e.getProxy(G.MainThreadProfileContentHandlers);
 		}
@@ -22286,8 +22286,8 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 			return r.readProfile(ga(t) ? t : H.revive(t), n);
 		}
 	};
-})), qz, Jz = t((() => {
-	U(), W(), S(), wm(), wC(), qz = class e {
+})), Xz, Zz = t((() => {
+	U(), W(), S(), wm(), GC(), Xz = class e {
 		static {
 			this.handlePool = 0;
 		}
@@ -22301,7 +22301,7 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 		registerQuickDiffProvider(t, n, r, i, a, o) {
 			let s = e.handlePool++;
 			this.providers.set(s, r);
-			let c = AC.toKey(t.identifier);
+			let c = SC.toKey(t.identifier);
 			return this.proxy.$registerQuickDiffProvider(s, Vf.from(n, this.uriTransformer), `${c}.${i}`, a, o), { dispose: () => {
 				this.proxy.$unregisterQuickDiffProvider(s), this.providers.delete(s);
 			} };
@@ -22310,7 +22310,7 @@ var Iz, Lz, Rz, zz, Bz, Vz, Hz = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostQuickOpen.js
-function Yz(e, t, n) {
+function Qz(e, t, n) {
 	let r = e.getProxy(G.MainThreadQuickOpen);
 	class i {
 		constructor(e, t) {
@@ -22686,24 +22686,24 @@ function Yz(e, t, n) {
 	}
 	return new i(t, n);
 }
-var Xz = t((() => {
-	Eo(), $s(), P(), W(), gv(), ia(), An(), Ar(), kw(), wm();
+var $z = t((() => {
+	Eo(), $s(), P(), W(), gv(), ia(), An(), Ar(), Mw(), wm();
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostSCM.js
-function Zz(e) {
+function eB(e) {
 	return e instanceof H;
 }
-function Qz(e, t) {
+function tB(e, t) {
 	return e.scheme === Ma.file && t.scheme === Ma.file && la ? e.toString() === t.toString() : e.toString().toLowerCase() === t.toString().toLowerCase();
 }
-function $z(e) {
+function nB(e) {
 	if (e) {
 		if (typeof e.iconPath == "string") return H.file(e.iconPath);
 		if (H.isUri(e.iconPath) || Ri.isThemeIcon(e.iconPath)) return e.iconPath;
 	}
 }
-function eB(e) {
+function rB(e) {
 	if (e) {
 		if (H.isUri(e) || Ri.isThemeIcon(e)) return e;
 		{
@@ -22715,10 +22715,10 @@ function eB(e) {
 		}
 	}
 }
-function tB(e) {
-	let t = eB(e.authorIcon), n = Array.isArray(e.tooltip) ? dm.fromMany(e.tooltip) : e.tooltip ? dm.from(e.tooltip) : void 0, r = e.references?.map((e) => ({
+function iB(e) {
+	let t = rB(e.authorIcon), n = Array.isArray(e.tooltip) ? dm.fromMany(e.tooltip) : e.tooltip ? dm.from(e.tooltip) : void 0, r = e.references?.map((e) => ({
 		...e,
-		icon: eB(e.icon)
+		icon: rB(e.icon)
 	}));
 	return {
 		...e,
@@ -22727,31 +22727,31 @@ function tB(e) {
 		tooltip: n
 	};
 }
-function nB(e) {
+function aB(e) {
 	return e ? {
 		...e,
-		icon: eB(e.icon)
+		icon: rB(e.icon)
 	} : void 0;
 }
-function rB(e, t) {
+function oB(e, t) {
 	return !e.iconPath && !t.iconPath ? 0 : e.iconPath ? t.iconPath ? bs(typeof e.iconPath == "string" ? e.iconPath : H.isUri(e.iconPath) ? e.iconPath.fsPath : e.iconPath.id, typeof t.iconPath == "string" ? t.iconPath : H.isUri(t.iconPath) ? t.iconPath.fsPath : t.iconPath.id) : 1 : -1;
 }
-function iB(e, t) {
+function sB(e, t) {
 	let n = 0;
 	if (e.strikeThrough !== t.strikeThrough) return e.strikeThrough ? 1 : -1;
 	if (e.faded !== t.faded) return e.faded ? 1 : -1;
 	if (e.tooltip !== t.tooltip) return (e.tooltip || "").localeCompare(t.tooltip || "");
-	if (n = rB(e, t), n !== 0) return n;
-	if (e.light && t.light) n = rB(e.light, t.light);
+	if (n = oB(e, t), n !== 0) return n;
+	if (e.light && t.light) n = oB(e.light, t.light);
 	else if (e.light) return 1;
 	else if (t.light) return -1;
 	if (n !== 0) return n;
-	if (e.dark && t.dark) n = rB(e.dark, t.dark);
+	if (e.dark && t.dark) n = oB(e.dark, t.dark);
 	else if (e.dark) return 1;
 	else if (t.dark) return -1;
 	return n;
 }
-function aB(e, t) {
+function cB(e, t) {
 	if (e.command !== t.command) return e.command < t.command ? -1 : 1;
 	if (e.title !== t.title) return e.title < t.title ? -1 : 1;
 	if (e.tooltip !== t.tooltip) {
@@ -22765,18 +22765,18 @@ function aB(e, t) {
 	if (e.arguments.length !== t.arguments.length) return e.arguments.length - t.arguments.length;
 	for (let n = 0; n < e.arguments.length; n++) {
 		let r = e.arguments[n], i = t.arguments[n];
-		if (r !== i && !(Zz(r) && Zz(i) && Qz(r, i))) return r < i ? -1 : 1;
+		if (r !== i && !(eB(r) && eB(i) && tB(r, i))) return r < i ? -1 : 1;
 	}
 	return 0;
 }
-function oB(e, t) {
+function lB(e, t) {
 	let n = bs(e.resourceUri.fsPath, t.resourceUri.fsPath, !0);
 	if (n !== 0) return n;
-	if (e.command && t.command) n = aB(e.command, t.command);
+	if (e.command && t.command) n = cB(e.command, t.command);
 	else if (e.command) return 1;
 	else if (t.command) return -1;
 	if (n !== 0) return n;
-	if (e.decorations && t.decorations) n = iB(e.decorations, t.decorations);
+	if (e.decorations && t.decorations) n = sB(e.decorations, t.decorations);
 	else if (e.decorations) return 1;
 	else if (t.decorations) return -1;
 	if (n !== 0) return n;
@@ -22789,18 +22789,18 @@ function oB(e, t) {
 	else if (t.multiDiffEditorOriginalUri) return -1;
 	return n;
 }
-function sB(e, t) {
+function uB(e, t) {
 	for (let n = 0; n < e.length; n++) if (e[n] !== t[n]) return !1;
 	return !0;
 }
-function cB(e, t) {
-	return e.command === t.command && e.title === t.title && e.tooltip === t.tooltip && (e.arguments && t.arguments ? sB(e.arguments, t.arguments) : e.arguments === t.arguments);
+function dB(e, t) {
+	return e.command === t.command && e.title === t.title && e.tooltip === t.tooltip && (e.arguments && t.arguments ? uB(e.arguments, t.arguments) : e.arguments === t.arguments);
 }
-function lB(e, t) {
-	return mn(e, t, cB);
+function fB(e, t) {
+	return mn(e, t, dB);
 }
-var uB, dB, fB, pB, mB = t((() => {
-	b(), U(), $s(), xr(), P(), S(), W(), An(), oc(), Xr(), wC(), vl(), $c(), wm(), kw(), Ds(), mo(), Ut(), uB = class {
+var pB, mB, hB, gB, _B = t((() => {
+	b(), U(), $s(), xr(), P(), S(), W(), An(), oc(), Xr(), GC(), vl(), $c(), wm(), Mw(), Ds(), mo(), Ut(), pB = class {
 		#e;
 		#t;
 		get value() {
@@ -22852,7 +22852,7 @@ var uB, dB, fB, pB, mB = t((() => {
 		updateValue(e) {
 			this._value = e, this._onDidChange.fire(e);
 		}
-	}, dB = class e {
+	}, mB = class e {
 		static {
 			this._handlePool = 0;
 		}
@@ -22903,7 +22903,7 @@ var uB, dB, fB, pB, mB = t((() => {
 			return n ? gr(() => this._commands.executeCommand(n.command, ...n.arguments || [], t)) : Promise.resolve(void 0);
 		}
 		_takeResourceStateSnapshot() {
-			let e = [...this._resourceStates].sort(oB), t = Qr(this._resourceSnapshot, e, oB).map((e) => {
+			let e = [...this._resourceStates].sort(lB), t = Qr(this._resourceSnapshot, e, lB).map((e) => {
 				let t = e.toInsert.map((e) => {
 					let t = this._resourceHandlePool++;
 					this._resourceStatesMap.set(t, e);
@@ -22912,12 +22912,12 @@ var uB, dB, fB, pB, mB = t((() => {
 						let n = new I();
 						r = this._commands.converter.toInternal(e.command, n), this._resourceStatesDisposablesMap.set(t, n);
 					} else this._resourceStatesCommandsMap.set(t, e.command);
-					let i = Dw(this._extension, "scmMultiDiffEditor"), a = i ? e.multiDiffEditorOriginalUri : void 0, o = i ? e.multiFileDiffEditorModifiedUri : void 0, s = $z(e.decorations);
+					let i = Aw(this._extension, "scmMultiDiffEditor"), a = i ? e.multiDiffEditorOriginalUri : void 0, o = i ? e.multiFileDiffEditorModifiedUri : void 0, s = nB(e.decorations);
 					return {
 						rawResource: [
 							t,
 							n,
-							[e.decorations && $z(e.decorations.light) || s, e.decorations && $z(e.decorations.dark) || s],
+							[e.decorations && nB(e.decorations.light) || s, e.decorations && nB(e.decorations.dark) || s],
 							e.decorations && e.decorations.tooltip || "",
 							e.decorations && !!e.decorations.strikeThrough,
 							e.decorations && !!e.decorations.faded,
@@ -22948,7 +22948,7 @@ var uB, dB, fB, pB, mB = t((() => {
 		dispose() {
 			this._disposed = !0, this._onDidDispose.fire();
 		}
-	}, fB = class e {
+	}, hB = class e {
 		static {
 			this._handlePool = 0;
 		}
@@ -22983,7 +22983,7 @@ var uB, dB, fB, pB, mB = t((() => {
 		set quickDiffProvider(e) {
 			this._quickDiffProvider = e;
 			let t;
-			Dw(this._extension, "quickDiffProvider") && (t = e?.label), this.#e.$updateSourceControl(this.handle, {
+			Aw(this._extension, "quickDiffProvider") && (t = e?.label), this.#e.$updateSourceControl(this.handle, {
 				hasQuickDiffProvider: !!e,
 				quickDiffLabel: t
 			});
@@ -23004,19 +23004,19 @@ var uB, dB, fB, pB, mB = t((() => {
 		}
 		set historyProvider(e) {
 			J(this._extension, "scmHistoryProvider"), this._historyProvider = e, this._historyProviderDisposable.value = new I(), this.#e.$updateSourceControl(this.handle, { hasHistoryProvider: !!e }), e && (this._historyProviderDisposable.value.add(e.onDidChangeCurrentHistoryItemRefs(() => {
-				let t = nB(e?.currentHistoryItemRef), n = nB(e?.currentHistoryItemRemoteRef), r = nB(e?.currentHistoryItemBaseRef);
+				let t = aB(e?.currentHistoryItemRef), n = aB(e?.currentHistoryItemRemoteRef), r = aB(e?.currentHistoryItemBaseRef);
 				this.#e.$onDidChangeHistoryProviderCurrentHistoryItemRefs(this.handle, t, n, r);
 			})), this._historyProviderDisposable.value.add(e.onDidChangeHistoryItemRefs((e) => {
 				if (e.added.length === 0 && e.modified.length === 0 && e.removed.length === 0) return;
 				let t = e.added.map((e) => ({
 					...e,
-					icon: eB(e.icon)
+					icon: rB(e.icon)
 				})), n = e.modified.map((e) => ({
 					...e,
-					icon: eB(e.icon)
+					icon: rB(e.icon)
 				})), r = e.removed.map((e) => ({
 					...e,
-					icon: eB(e.icon)
+					icon: rB(e.icon)
 				}));
 				this.#e.$onDidChangeHistoryProviderHistoryItemRefs(this.handle, {
 					added: t,
@@ -23069,7 +23069,7 @@ var uB, dB, fB, pB, mB = t((() => {
 			return this._statusBarCommands;
 		}
 		set statusBarCommands(e) {
-			if (this._statusBarCommands && e && lB(this._statusBarCommands, e)) return;
+			if (this._statusBarCommands && e && fB(this._statusBarCommands, e)) return;
 			let t = this._statusBarDisposables;
 			this._statusBarDisposables = new I(), this._statusBarCommands = e;
 			let n = (e || []).map((e) => this._commands.converter.toInternal(e, this._statusBarDisposables));
@@ -23085,10 +23085,10 @@ var uB, dB, fB, pB, mB = t((() => {
 				path: `${a}/scm${this.handle}/input`,
 				query: s ? `rootUri=${encodeURIComponent(s.toString())}` : void 0
 			});
-			this._inputBox = new uB(t, n, this.#e, this.handle, d), this.#e.$registerSourceControl(this.handle, u?.handle, a, o, s, eB(c), l, d), this.onDidDisposeParent = u ? u.onDidDispose : is.None;
+			this._inputBox = new pB(t, n, this.#e, this.handle, d), this.#e.$registerSourceControl(this.handle, u?.handle, a, o, s, rB(c), l, d), this.onDidDisposeParent = u ? u.onDidDispose : is.None;
 		}
 		createResourceGroup(e, t, n) {
-			let r = Dw(this._extension, "scmMultiDiffEditor") && n?.multiDiffEditorEnableViewChanges === !0, i = new dB(this.#e, this._commands, this.handle, e, t, r, this._extension), a = is.once(i.onDidDispose)(() => this.createdResourceGroups.delete(i));
+			let r = Aw(this._extension, "scmMultiDiffEditor") && n?.multiDiffEditorEnableViewChanges === !0, i = new mB(this.#e, this._commands, this.handle, e, t, r, this._extension), a = is.once(i.onDidDispose)(() => this.createdResourceGroups.delete(i));
 			return this.createdResourceGroups.set(i, a), this.eventuallyAddResourceGroups(), i;
 		}
 		eventuallyAddResourceGroups() {
@@ -23128,7 +23128,7 @@ var uB, dB, fB, pB, mB = t((() => {
 		async provideArtifacts(e, t) {
 			let n = new I(), r = (await this.artifactProvider?.provideArtifacts(e, t))?.map((e) => ({
 				...e,
-				icon: eB(e.icon),
+				icon: rB(e.icon),
 				command: e.command ? this._commands.converter.toInternal(e.command, n) : void 0
 			}));
 			return this._artifactCommandsDisposables.get(e)?.dispose(), this._artifactCommandsDisposables.set(e, n), r;
@@ -23136,12 +23136,12 @@ var uB, dB, fB, pB, mB = t((() => {
 		dispose() {
 			this._acceptInputDisposables.dispose(), this._actionButtonDisposables.dispose(), this._statusBarDisposables.dispose(), this._historyProviderDisposable.dispose(), this._artifactProviderDisposable.dispose(), this._artifactCommandsDisposables.dispose(), this._groups.forEach((e) => e.dispose()), this.#e.$unregisterSourceControl(this.handle), this._onDidDispose.fire(), this._onDidDispose.dispose();
 		}
-	}, fB.__decorator = N([$e(100)], fB.prototype, "eventuallyAddResourceGroups", null), fB.__decorator = N([$e(100)], fB.prototype, "eventuallyUpdateResourceStates", null), pB = class {
+	}, hB.__decorator = N([$e(100)], hB.prototype, "eventuallyAddResourceGroups", null), hB.__decorator = N([$e(100)], hB.prototype, "eventuallyUpdateResourceStates", null), gB = class {
 		get onDidChangeActiveProvider() {
 			return this._onDidChangeActiveProvider.event;
 		}
 		constructor(e, t, n, r) {
-			this._commands = t, this._extHostDocuments = n, this.logService = r, this._sourceControls = /* @__PURE__ */ new Map(), this._sourceControlsByExtension = new VC(), this._onDidChangeActiveProvider = new V(), this._proxy = e.getProxy(G.MainThreadSCM), this._telemetry = e.getProxy(G.MainThreadTelemetry), t.registerArgumentProcessor({ processArgument: (e) => {
+			this._commands = t, this._extHostDocuments = n, this.logService = r, this._sourceControls = /* @__PURE__ */ new Map(), this._sourceControlsByExtension = new NC(), this._onDidChangeActiveProvider = new V(), this._proxy = e.getProxy(G.MainThreadSCM), this._telemetry = e.getProxy(G.MainThreadTelemetry), t.registerArgumentProcessor({ processArgument: (e) => {
 				if (e && e.$mid === Yn.ScmResource) {
 					let t = this._sourceControls.get(e.sourceControlHandle);
 					if (!t) return e;
@@ -23156,7 +23156,7 @@ var uB, dB, fB, pB, mB = t((() => {
 		}
 		createSourceControl(e, t, n, r, i, a, o) {
 			this.logService.trace("ExtHostSCM#createSourceControl", e.identifier.value, t, n, r), this._telemetry.$publicLog2("api/scm/createSourceControl", { extensionId: e.identifier.value });
-			let s = o ? vo.find(this._sourceControls.values(), (e) => e === o) : void 0, c = new fB(e, this._extHostDocuments, this._proxy, this._commands, t, n, r, i, a, s);
+			let s = o ? vo.find(this._sourceControls.values(), (e) => e === o) : void 0, c = new hB(e, this._extHostDocuments, this._proxy, this._commands, t, n, r, i, a, s);
 			this._sourceControls.set(c.handle, c);
 			let l = this._sourceControlsByExtension.get(e.identifier) || [];
 			return l.push(c), this._sourceControlsByExtension.set(e.identifier, l), c;
@@ -23205,7 +23205,7 @@ var uB, dB, fB, pB, mB = t((() => {
 		async $resolveHistoryItem(e, t, n) {
 			try {
 				let r = await (this._sourceControls.get(e)?.historyProvider)?.resolveHistoryItem(t, n);
-				return r ? tB(r) : void 0;
+				return r ? iB(r) : void 0;
 			} catch (e) {
 				this.logService.error("ExtHostSCM#$resolveHistoryItem", e);
 				return;
@@ -23239,7 +23239,7 @@ var uB, dB, fB, pB, mB = t((() => {
 			try {
 				return (await (this._sourceControls.get(e)?.historyProvider)?.provideHistoryItemRefs(t, n))?.map((e) => ({
 					...e,
-					icon: eB(e.icon)
+					icon: rB(e.icon)
 				})) ?? void 0;
 			} catch (e) {
 				this.logService.error("ExtHostSCM#$provideHistoryItemRefs", e);
@@ -23248,7 +23248,7 @@ var uB, dB, fB, pB, mB = t((() => {
 		}
 		async $provideHistoryItems(e, t, n) {
 			try {
-				return (await (this._sourceControls.get(e)?.historyProvider)?.provideHistoryItems(t, n))?.map((e) => tB(e)) ?? void 0;
+				return (await (this._sourceControls.get(e)?.historyProvider)?.provideHistoryItems(t, n))?.map((e) => iB(e)) ?? void 0;
 			} catch (e) {
 				this.logService.error("ExtHostSCM#$provideHistoryItems", e);
 				return;
@@ -23266,7 +23266,7 @@ var uB, dB, fB, pB, mB = t((() => {
 			try {
 				return (await (this._sourceControls.get(e)?.artifactProvider)?.provideArtifactGroups(t))?.map((e) => ({
 					...e,
-					icon: eB(e.icon)
+					icon: rB(e.icon)
 				}));
 			} catch (e) {
 				this.logService.error("ExtHostSCM#$provideArtifactGroups", e);
@@ -23281,9 +23281,9 @@ var uB, dB, fB, pB, mB = t((() => {
 				return;
 			}
 		}
-	}, pB = N([R(3, Ct)], pB);
-})), hB, gB = t((() => {
-	W(), wm(), U(), hB = class e {
+	}, gB = N([R(3, Ct)], gB);
+})), vB, yB = t((() => {
+	W(), wm(), U(), vB = class e {
 		static {
 			this.handlePool = 0;
 		}
@@ -23303,8 +23303,8 @@ var uB, dB, fB, pB, mB = t((() => {
 			} };
 		}
 	};
-})), _B, vB = t((() => {
-	Eo(), P(), W(), _B = class e {
+})), bB, xB = t((() => {
+	Eo(), P(), W(), bB = class e {
 		static {
 			this.ID_POOL = 1;
 		}
@@ -23363,8 +23363,8 @@ var uB, dB, fB, pB, mB = t((() => {
 			});
 		}
 	};
-})), yB, bB, xB, SB = t((() => {
-	gv(), W(), fr(), P(), wm(), kt(), kw(), yB = class e {
+})), SB, CB, wB, TB = t((() => {
+	gv(), W(), fr(), P(), wm(), kt(), Mw(), SB = class e {
 		static {
 			this.ID_GEN = 0;
 		}
@@ -23475,7 +23475,7 @@ var uB, dB, fB, pB, mB = t((() => {
 		dispose() {
 			this.hide(), this._onDispose?.(), this._disposed = !0;
 		}
-	}, bB = class {
+	}, CB = class {
 		constructor(e) {
 			this._messages = [], this._item = e.createStatusBarEntry(void 0, "status.extensionMessage", Pv.Left, Number.MIN_VALUE), this._item.name = M(2701, "Extension Status");
 		}
@@ -23492,9 +23492,9 @@ var uB, dB, fB, pB, mB = t((() => {
 		_update() {
 			this._messages.length > 0 ? (this._item.text = this._messages[0].message, this._item.show()) : this._item.hide();
 		}
-	}, xB = class {
+	}, wB = class {
 		constructor(e, t) {
-			this._entries = /* @__PURE__ */ new Map(), this._existingItems = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(G.MainThreadStatusBar), this._commands = t, this._statusMessage = new bB(this);
+			this._entries = /* @__PURE__ */ new Map(), this._existingItems = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(G.MainThreadStatusBar), this._commands = t, this._statusMessage = new CB(this);
 		}
 		$acceptStaticEntries(e) {
 			for (let t of e) this._existingItems.set(t.entryId, t);
@@ -23506,7 +23506,7 @@ var uB, dB, fB, pB, mB = t((() => {
 			return t.isCancellationRequested ? void 0 : dm.fromStrict(r);
 		}
 		createStatusBarEntry(e, t, n, r) {
-			let i = new yB(this._proxy, this._commands, this._existingItems, e, t, n, r, () => this._entries.delete(i.entryId));
+			let i = new SB(this._proxy, this._commands, this._existingItems, e, t, n, r, () => this._entries.delete(i.entryId));
 			return this._entries.set(i.entryId, i), i;
 		}
 		setStatusBarMessage(e, t) {
@@ -23516,8 +23516,8 @@ var uB, dB, fB, pB, mB = t((() => {
 			});
 		}
 	};
-})), CB, wB = t((() => {
-	An(), $s(), P(), U(), W(), Wj(), wm(), gv(), CB = class extends z {
+})), EB, DB = t((() => {
+	An(), $s(), P(), U(), W(), qj(), wm(), gv(), EB = class extends z {
 		constructor(e, t) {
 			super(), this._extHostDocumentsAndEditors = t, this._onDidChangeTextEditorSelection = new V(), this._onDidChangeTextEditorOptions = new V(), this._onDidChangeTextEditorVisibleRanges = new V(), this._onDidChangeTextEditorViewColumn = new V(), this._onDidChangeTextEditorDiffInformation = new V(), this._onDidChangeActiveTextEditor = new V(), this._onDidChangeVisibleTextEditors = new V(), this.onDidChangeTextEditorSelection = this._onDidChangeTextEditorSelection.event, this.onDidChangeTextEditorOptions = this._onDidChangeTextEditorOptions.event, this.onDidChangeTextEditorVisibleRanges = this._onDidChangeTextEditorVisibleRanges.event, this.onDidChangeTextEditorViewColumn = this._onDidChangeTextEditorViewColumn.event, this.onDidChangeTextEditorDiffInformation = this._onDidChangeTextEditorDiffInformation.event, this.onDidChangeActiveTextEditor = this._onDidChangeActiveTextEditor.event, this.onDidChangeVisibleTextEditors = this._onDidChangeVisibleTextEditors.event, this._proxy = e.getProxy(G.MainThreadTextEditors), this._register(this._extHostDocumentsAndEditors.onDidChangeVisibleTextEditors((e) => this._onDidChangeVisibleTextEditors.fire(e))), this._register(this._extHostDocumentsAndEditors.onDidChangeActiveTextEditor((e) => this._onDidChangeActiveTextEditor.fire(e)));
 		}
@@ -23544,7 +23544,7 @@ var uB, dB, fB, pB, mB = t((() => {
 			throw Error(i ? `Could NOT open editor for "${e.uri.toString()}" because another editor opened in the meantime.` : `Could NOT open editor for "${e.uri.toString()}".`);
 		}
 		createTextEditorDecorationType(e, t) {
-			return new Bj(this._proxy, e, t).value;
+			return new Uj(this._proxy, e, t).value;
 		}
 		$acceptEditorPropertiesChanged(e, t) {
 			let n = this._extHostDocumentsAndEditors.getEditor(e);
@@ -23634,8 +23634,8 @@ var uB, dB, fB, pB, mB = t((() => {
 			return Promise.resolve(this._proxy.$getDiffInformation(e));
 		}
 	};
-})), TB, EB = t((() => {
-	b(), gv(), qh(), $s(), TB = class {
+})), OB, kB = t((() => {
+	b(), gv(), qh(), $s(), OB = class {
 		constructor(e) {
 			this._actual = new up(Hp.Dark), this._onDidChangeActiveColorTheme = new V();
 		}
@@ -23661,20 +23661,20 @@ var uB, dB, fB, pB, mB = t((() => {
 		get onDidChangeActiveColorTheme() {
 			return this._onDidChangeActiveColorTheme.event;
 		}
-	}, TB = N([R(0, $x)], TB);
+	}, OB = N([R(0, $x)], OB);
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostTimeline.js
-function DB(e) {
+function AB(e) {
 	return e?.toString();
 }
-var OB, kB = t((() => {
-	U(), E(), W(), P(), gv(), wm(), vl(), kt(), kw(), qg(), OB = class {
+var jB, MB = t((() => {
+	U(), E(), W(), P(), gv(), wm(), vl(), kt(), Mw(), qg(), jB = class {
 		constructor(e, t) {
 			this._providers = /* @__PURE__ */ new Map(), this._itemsBySourceAndUriMap = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(G.MainThreadTimeline), t.registerArgumentProcessor({ processArgument: (e, t) => {
-				if (e && e.$mid === Yn.TimelineActionContext) if (this._providers.get(e.source) && t && Dw(t, "timeline")) {
+				if (e && e.$mid === Yn.TimelineActionContext) if (this._providers.get(e.source) && t && Aw(t, "timeline")) {
 					let t = e.uri === void 0 ? void 0 : H.revive(e.uri);
-					return this._itemsBySourceAndUriMap.get(e.source)?.get(DB(t))?.get(e.handle);
+					return this._itemsBySourceAndUriMap.get(e.source)?.get(AB(t))?.get(e.handle);
 				} else return;
 				return e;
 			} });
@@ -23718,7 +23718,7 @@ var OB, kB = t((() => {
 				if (i?.cacheResults) {
 					let t = this._itemsBySourceAndUriMap.get(e);
 					t === void 0 && (t = /* @__PURE__ */ new Map(), this._itemsBySourceAndUriMap.set(e, t));
-					let n = DB(r);
+					let n = AB(r);
 					a = t.get(n), a === void 0 && (a = /* @__PURE__ */ new Map(), t.set(n, a));
 				}
 				return (r) => {
@@ -23763,7 +23763,7 @@ var OB, kB = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostTreeViews.js
-function AB(e, t) {
+function NB(e, t) {
 	if (ga(e)) return { label: e };
 	if (e && typeof e == "object" && e.label) {
 		let n;
@@ -23777,8 +23777,8 @@ function AB(e, t) {
 		};
 	}
 }
-var jB, MB, NB = t((() => {
-	fr(), Gn(), U(), $s(), P(), rS(), S(), gv(), kt(), An(), pe(), wm(), Co(), Eo(), rb(), kw(), qg(), jB = class extends z {
+var PB, FB, IB = t((() => {
+	fr(), Gn(), U(), $s(), P(), rS(), S(), gv(), kt(), An(), pe(), wm(), Co(), Eo(), rb(), Mw(), qg(), PB = class extends z {
 		constructor(e, t, n) {
 			super(), this._proxy = e, this._commands = t, this._logService = n, this._treeViews = /* @__PURE__ */ new Map(), this._treeDragAndDropService = new Lb();
 			function r(e) {
@@ -23933,14 +23933,14 @@ var jB, MB, NB = t((() => {
 			n.setCheckboxState(t);
 		}
 		_createExtHostTreeView(e, t, n) {
-			let r = this._register(new MB(e, t, this._proxy, this._commands.converter, this._logService, n));
+			let r = this._register(new FB(e, t, this._proxy, this._commands.converter, this._logService, n));
 			return this._treeViews.set(e, r), r;
 		}
 		_convertArgument(e) {
 			let t = this._treeViews.get(e.$treeViewId), n = e;
 			return t && n.$treeItemHandle ? t.getExtensionElement(n.$treeItemHandle) : t && e.$focusedTreeItem ? t.focusedElement : null;
 		}
-	}, MB = class e extends z {
+	}, FB = class e extends z {
 		static {
 			this.LABEL_HANDLE_PREFIX = "0";
 		}
@@ -24267,7 +24267,7 @@ var jB, MB, NB = t((() => {
 				item: {
 					handle: i,
 					parentHandle: n ? n.item.handle : void 0,
-					label: AB(t.label, this._extension),
+					label: NB(t.label, this._extension),
 					description: t.description,
 					resourceUri: t.resourceUri,
 					tooltip: this._getTooltip(t.tooltip),
@@ -24294,7 +24294,7 @@ var jB, MB, NB = t((() => {
 		}
 		_createHandle(t, { id: n, label: r, resourceUri: i }, a, o) {
 			if (n) return `${e.ID_HANDLE_PREFIX}/${n}`;
-			let s = AB(r, this._extension), c = a ? a.item.handle : e.LABEL_HANDLE_PREFIX, l = "";
+			let s = NB(r, this._extension), c = a ? a.item.handle : e.LABEL_HANDLE_PREFIX, l = "";
 			s && (l = on(s.label) ? s.label.value : s.label);
 			let u = l || (i ? Hr(i) : "");
 			u = u.indexOf("/") === -1 ? u : u.replace("/", "//");
@@ -24353,8 +24353,8 @@ var jB, MB, NB = t((() => {
 			super.dispose(), this._refreshCancellationSource.dispose(), this._clearAll(), this._proxy.$disposeTree(this._viewId);
 		}
 	};
-})), PB, FB = t((() => {
-	P(), Ds(), U(), W(), PB = class e {
+})), LB, RB = t((() => {
+	P(), Ds(), U(), W(), LB = class e {
 		static {
 			this.supportedSchemes = /* @__PURE__ */ new Set([Ma.http, Ma.https]);
 		}
@@ -24384,14 +24384,14 @@ var jB, MB, NB = t((() => {
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostWebviewPanels.js
-function IB(e) {
+function zB(e) {
 	return {
 		enableFindWidget: e.enableFindWidget,
 		retainContextWhenHidden: e.retainContextWhenHidden
 	};
 }
-var LB, RB, zB = t((() => {
-	$s(), P(), U(), Go(), wm(), FI(), W(), gv(), LB = class extends z {
+var BB, VB, HB = t((() => {
+	$s(), P(), U(), Go(), wm(), RI(), W(), gv(), BB = class extends z {
 		#e;
 		#t;
 		#n;
@@ -24456,7 +24456,7 @@ var LB, RB, zB = t((() => {
 		assertNotDisposed() {
 			if (this.#u) throw Error("Webview is disposed");
 		}
-	}, RB = class e extends z {
+	}, VB = class e extends z {
 		static newHandle() {
 			return Qi();
 		}
@@ -24470,11 +24470,11 @@ var LB, RB, zB = t((() => {
 			let o = typeof i == "object" ? i.viewColumn : i, s = {
 				viewColumn: Wm.from(o),
 				preserveFocus: typeof i == "object" && !!i.preserveFocus
-			}, c = DI(t), l = e.newHandle();
-			this._proxy.$createWebviewPanel(kI(t), l, n, {
+			}, c = AI(t), l = e.newHandle();
+			this._proxy.$createWebviewPanel(MI(t), l, n, {
 				title: r,
-				panelOptions: IB(a),
-				webviewOptions: AI(t, this.workspace, a),
+				panelOptions: zB(a),
+				webviewOptions: NI(t, this.workspace, a),
 				serializeBuffersForPostMessage: c
 			}, s);
 			let u = this.webviews.createNewWebview(l, a, t);
@@ -24505,7 +24505,7 @@ var LB, RB, zB = t((() => {
 			return this._serializers.set(t, {
 				serializer: n,
 				extension: e
-			}), this._proxy.$registerSerializer(t, { serializeBuffersForPostMessage: DI(e) }), new Bx(() => {
+			}), this._proxy.$registerSerializer(t, { serializeBuffersForPostMessage: AI(e) }), new Bx(() => {
 				this._serializers.delete(t), this._proxy.$unregisterSerializer(t);
 			});
 		}
@@ -24516,7 +24516,7 @@ var LB, RB, zB = t((() => {
 			await a.deserializeWebviewPanel(c, n.state);
 		}
 		createNewWebviewPanel(e, t, n, r, i, a, o) {
-			let s = new LB(e, this._proxy, a, {
+			let s = new BB(e, this._proxy, a, {
 				viewType: t,
 				title: n,
 				viewColumn: r,
@@ -24529,8 +24529,8 @@ var LB, RB, zB = t((() => {
 			return this._webviewPanels.get(e);
 		}
 	};
-})), BB, VB, HB = t((() => {
-	$s(), P(), FI(), wm(), W(), gv(), BB = class extends z {
+})), UB, WB, GB = t((() => {
+	$s(), P(), RI(), wm(), W(), gv(), UB = class extends z {
 		#e;
 		#t;
 		#n;
@@ -24584,7 +24584,7 @@ var LB, RB, zB = t((() => {
 		assertNotDisposed() {
 			if (this.#i) throw Error("Webview is disposed");
 		}
-	}, VB = class {
+	}, WB = class {
 		constructor(e, t) {
 			this._extHostWebview = t, this._viewProviders = /* @__PURE__ */ new Map(), this._webviewViews = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(G.MainThreadWebviewViews);
 		}
@@ -24593,9 +24593,9 @@ var LB, RB, zB = t((() => {
 			return this._viewProviders.set(t, {
 				provider: n,
 				extension: e
-			}), this._proxy.$registerWebviewViewProvider(kI(e), t, {
+			}), this._proxy.$registerWebviewViewProvider(MI(e), t, {
 				retainContextWhenHidden: r?.retainContextWhenHidden,
-				serializeBuffersForPostMessage: DI(e)
+				serializeBuffersForPostMessage: AI(e)
 			}), new Bx(() => {
 				this._viewProviders.delete(t), this._proxy.$unregisterWebviewViewProvider(t);
 			});
@@ -24603,7 +24603,7 @@ var LB, RB, zB = t((() => {
 		async $resolveWebviewView(e, t, n, r, i) {
 			let a = this._viewProviders.get(t);
 			if (!a) throw Error(`No view provider found for '${t}'`);
-			let { provider: o, extension: s } = a, c = this._extHostWebview.createNewWebview(e, {}, s), l = new BB(e, this._proxy, t, n, c, !0);
+			let { provider: o, extension: s } = a, c = this._extHostWebview.createNewWebview(e, {}, s), l = new UB(e, this._proxy, t, n, c, !0);
 			this._webviewViews.set(e, l), await o.resolveWebviewView(l, { state: r }, i);
 		}
 		async $onDidChangeWebviewViewVisibility(e, t) {
@@ -24619,8 +24619,8 @@ var LB, RB, zB = t((() => {
 			return t;
 		}
 	};
-})), UB, WB = t((() => {
-	b(), Eo(), U(), W(), wm(), qh(), P(), UB = class extends z {
+})), KB, qB = t((() => {
+	b(), Eo(), U(), W(), wm(), qh(), P(), KB = class extends z {
 		constructor(e) {
 			super(), this._handlePool = 0, this._providers = /* @__PURE__ */ new Map(), this._itemPool = 0, this._items = /* @__PURE__ */ new Map(), this._proxy = e.getProxy(G.MainThreadChatContext);
 		}
@@ -24712,21 +24712,21 @@ var LB, RB, zB = t((() => {
 			super.dispose();
 			for (let { disposables: e } of this._providers.values()) e.dispose();
 		}
-	}, UB = N([R(0, $x)], UB);
+	}, KB = N([R(0, $x)], KB);
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHost.api.impl.js
-function GB(e) {
-	let t = e.get(Kf), n = e.get(kA), r = e.get(NA), i = e.get(HN), a = e.get(QA), o = e.get(Oj), s = e.get(fj), c = e.get(BA), l = e.get($x), u = e.get(HM), d = e.get(qM), f = e.get(ai), p = e.get(Ct), h = e.get(pS), g = e.get(sM), _ = e.get(eN), v = e.get(iN), y = e.get(CN), b = e.get(DM), ee = e.get(AN), x = e.get(sN), te = e.get(dN), S = e.get(vN), ne = e.get(wF), C = e.get(NF);
+function JB(e) {
+	let t = e.get(Kf), n = e.get(MA), r = e.get(IA), i = e.get(GN), a = e.get(tj), o = e.get(jj), s = e.get(hj), c = e.get(UA), l = e.get($x), u = e.get(GM), d = e.get(XM), f = e.get(ai), p = e.get(Ct), h = e.get(pS), g = e.get(uM), _ = e.get(rN), v = e.get(sN), y = e.get(EN), b = e.get(AM), ee = e.get(NN), x = e.get(uN), te = e.get(mN), S = e.get(xN), ne = e.get(DF), C = e.get(IF);
 	l.set(K.ExtHostFileSystemInfo, n), l.set(K.ExtHostLogLevelServiceShape, f), l.set(K.ExtHostWorkspace, a), l.set(K.ExtHostConfiguration, s), l.set(K.ExtHostExtensionService, i), l.set(K.ExtHostStorage, u), l.set(K.ExtHostTunnelService, h), l.set(K.ExtHostWindow, _), l.set(K.ExtHostUrls, v), l.set(K.ExtHostSecretState, y), l.set(K.ExtHostTelemetry, o), l.set(K.ExtHostEditorTabs, b), l.set(K.ExtHostManagedSockets, ee), l.set(K.ExtHostProgress, x), l.set(K.ExtHostAuthentication, te), l.set(K.ExtHostChatProvider, S), l.set(K.ExtHostDataChannels, C);
-	let re = l.set(K.ExtHostDecorations, e.get(nj)), w = l.set(K.ExtHostDocumentsAndEditors, e.get(qj)), T = l.set(K.ExtHostCommands, e.get(jj)), ie = l.set(K.ExtHostTerminalService, e.get(Qj)), E = l.set(K.ExtHostTerminalShellIntegration, e.get(dF)), ae = l.set(K.ExtHostDebugService, e.get(TP)), oe = l.set(K.ExtHostSearch, e.get(rF)), se = l.set(K.ExtHostTask, e.get(wM)), ce = l.set(K.ExtHostOutputService, e.get(RA)), le = l.set(K.ExtHostLocalization, e.get(ON)), ue = l.set(K.ExtHostDocuments, new iL(l, w)), O = l.set(K.ExtHostDocumentContentProviders, new eL(l, w, p)), de = l.set(K.ExtHostDocumentSaveParticipant, new nL(p, ue, l.getProxy(G.MainThreadBulkEdits))), k = l.set(K.ExtHostNotebook, new Cz(l, T, w, ue, r, oe, p)), fe = l.set(K.ExtHostNotebookDocuments, new Oz(k)), pe = l.set(K.ExtHostNotebookEditors, new Az(p, k)), me = l.set(K.ExtHostNotebookKernels, new Iz(l, t, k, T, p)), he = l.set(K.ExtHostNotebookRenderers, new Uz(l, k)), ge = l.set(K.ExtHostNotebookDocumentSaveParticipant, new Ez(p, k, l.getProxy(G.MainThreadBulkEdits))), _e = l.set(K.ExtHostEditors, new CB(l, w)), A = l.set(K.ExtHostTreeViews, new jB(l.getProxy(G.MainThreadTreeViews), T, p)), ve = l.set(K.ExtHostEditorInsets, new xI(l.getProxy(G.MainThreadEditorInsets), _e, t.remote)), ye = l.set(K.ExtHostDiagnostics, new XI(l, p, n, w)), be = l.set(K.ExtHostLanguages, new cz(l, ue, T.converter, c)), j = l.set(K.ExtHostLanguageFeatures, new sR(l, c, ue, T, ye, p, g, o)), xe = l.set(K.ExtHostCodeMapper, new CI(l)), Se = l.set(K.ExtHostFileSystem, new dL(l, j)), Ce = l.set(K.ExtHostFileSystemEventService, new _L(l, p, w)), we = l.set(K.ExtHostQuickOpen, Yz(l, a, T)), Te = l.set(K.ExtHostSCM, new pB(l, T, ue, p)), Ee = l.set(K.ExtHostQuickDiff, new qz(l, c)), De = l.set(K.ExtHostShare, new hB(l, c)), M = l.set(K.ExtHostComments, TI(l, T, ue)), Oe = l.set(K.ExtHostLabelService, new xL(l)), ke = l.set(K.ExtHostTheming, new TB(l)), Ae = l.set(K.ExtHostTimeline, new OB(l, T)), je = l.set(K.ExtHostWebviews, new PI(l, t.remote, a, p, g)), Me = l.set(K.ExtHostWebviewPanels, new RB(l, je, a)), Ne = l.set(K.ExtHostCustomEditors, new KI(l, ue, d, je, Me)), Pe = l.set(K.ExtHostWebviewViews, new VB(l, je)), Fe = l.set(K.ExtHostTesting, e.get(tP)), Ie = l.set(K.ExtHostUriOpeners, new PB(l)), Le = l.set(K.ExtHostProfileContentHandlers, new Gz(l)), Re = l.set(K.ExtHostChatOutputRenderer, new uI(l, je));
-	l.set(K.ExtHostInteractive, new yL(l, k, w, T, p));
-	let ze = l.set(K.ExtHostLanguageModelTools, new oz(l, S)), Be = l.set(K.ExtHostChatSessions, new mI(T, S, l, p)), Ve = l.set(K.ExtHostChatAgents2, new aI(l, p, T, ue, w, S, ye, ze)), He = l.set(K.ExtHostChatContext, new UB(l)), Ue = l.set(K.ExtHostAiRelatedInformation, new UF(l)), We = l.set(K.ExtHostAiEmbeddingVector, new cL(l)), Ge = l.set(K.ExtHostAiSettingsSearch, new GF(l)), Ke = l.set(K.ExtHostStatusBar, new xB(l, T.converter)), qe = l.set(K.ExtHostSpeech, new _B(l)), Je = l.set(K.ExtHostEmbeddings, new oL(l));
-	l.set(K.ExtHostMcp, e.get(wF));
+	let re = l.set(K.ExtHostDecorations, e.get(aj)), w = l.set(K.ExtHostDocumentsAndEditors, e.get(Xj)), T = l.set(K.ExtHostCommands, e.get(Pj)), ie = l.set(K.ExtHostTerminalService, e.get(tM)), E = l.set(K.ExtHostTerminalShellIntegration, e.get(mF)), ae = l.set(K.ExtHostDebugService, e.get(OP)), oe = l.set(K.ExtHostSearch, e.get(oF)), se = l.set(K.ExtHostTask, e.get(DM)), ce = l.set(K.ExtHostOutputService, e.get(VA)), le = l.set(K.ExtHostLocalization, e.get(jN)), ue = l.set(K.ExtHostDocuments, new sL(l, w)), O = l.set(K.ExtHostDocumentContentProviders, new rL(l, w, p)), de = l.set(K.ExtHostDocumentSaveParticipant, new aL(p, ue, l.getProxy(G.MainThreadBulkEdits))), k = l.set(K.ExtHostNotebook, new Ez(l, T, w, ue, r, oe, p)), fe = l.set(K.ExtHostNotebookDocuments, new jz(k)), pe = l.set(K.ExtHostNotebookEditors, new Nz(p, k)), me = l.set(K.ExtHostNotebookKernels, new zz(l, t, k, T, p)), he = l.set(K.ExtHostNotebookRenderers, new Kz(l, k)), ge = l.set(K.ExtHostNotebookDocumentSaveParticipant, new kz(p, k, l.getProxy(G.MainThreadBulkEdits))), _e = l.set(K.ExtHostEditors, new EB(l, w)), A = l.set(K.ExtHostTreeViews, new PB(l.getProxy(G.MainThreadTreeViews), T, p)), ve = l.set(K.ExtHostEditorInsets, new wI(l.getProxy(G.MainThreadEditorInsets), _e, t.remote)), ye = l.set(K.ExtHostDiagnostics, new $I(l, p, n, w)), be = l.set(K.ExtHostLanguages, new dz(l, ue, T.converter, c)), j = l.set(K.ExtHostLanguageFeatures, new uR(l, c, ue, T, ye, p, g, o)), xe = l.set(K.ExtHostCodeMapper, new EI(l)), Se = l.set(K.ExtHostFileSystem, new mL(l, j)), Ce = l.set(K.ExtHostFileSystemEventService, new bL(l, p, w)), we = l.set(K.ExtHostQuickOpen, Qz(l, a, T)), Te = l.set(K.ExtHostSCM, new gB(l, T, ue, p)), Ee = l.set(K.ExtHostQuickDiff, new Xz(l, c)), De = l.set(K.ExtHostShare, new vB(l, c)), M = l.set(K.ExtHostComments, OI(l, T, ue)), Oe = l.set(K.ExtHostLabelService, new wL(l)), ke = l.set(K.ExtHostTheming, new OB(l)), Ae = l.set(K.ExtHostTimeline, new jB(l, T)), je = l.set(K.ExtHostWebviews, new LI(l, t.remote, a, p, g)), Me = l.set(K.ExtHostWebviewPanels, new VB(l, je, a)), Ne = l.set(K.ExtHostCustomEditors, new YI(l, ue, d, je, Me)), Pe = l.set(K.ExtHostWebviewViews, new WB(l, je)), Fe = l.set(K.ExtHostTesting, e.get(iP)), Ie = l.set(K.ExtHostUriOpeners, new LB(l)), Le = l.set(K.ExtHostProfileContentHandlers, new Jz(l)), Re = l.set(K.ExtHostChatOutputRenderer, new pI(l, je));
+	l.set(K.ExtHostInteractive, new SL(l, k, w, T, p));
+	let ze = l.set(K.ExtHostLanguageModelTools, new lz(l, S)), Be = l.set(K.ExtHostChatSessions, new _I(T, S, l, p)), Ve = l.set(K.ExtHostChatAgents2, new cI(l, p, T, ue, w, S, ye, ze)), He = l.set(K.ExtHostChatContext, new KB(l)), Ue = l.set(K.ExtHostAiRelatedInformation, new KF(l)), We = l.set(K.ExtHostAiEmbeddingVector, new dL(l)), Ge = l.set(K.ExtHostAiSettingsSearch, new JF(l)), Ke = l.set(K.ExtHostStatusBar, new wB(l, T.converter)), qe = l.set(K.ExtHostSpeech, new bB(l)), Je = l.set(K.ExtHostEmbeddings, new lL(l));
+	l.set(K.ExtHostMcp, e.get(DF));
 	let Ye = Object.values(K);
 	l.assertRegistered(Ye);
-	let Xe = new QF(l, w), Ze = new yI(l), Qe = new dz(l, p), $e = new QI(l), et = new _I(l);
-	return XF.register(T), function(e, s, c) {
+	let Xe = new tI(l, w), Ze = new SI(l), Qe = new mz(l, p), $e = new tL(l), et = new bI(l);
+	return $F.register(T), function(e, s, c) {
 		function l(t) {
 			return (n, r, i) => {
 				let a = t((t) => {
@@ -24855,10 +24855,10 @@ function GB(e) {
 				return J(e, "telemetry"), l(o.onDidChangeTelemetryConfiguration);
 			},
 			get isNewAppInstall() {
-				return Tj(t.telemetryInfo.firstSessionDate);
+				return Oj(t.telemetryInfo.firstSessionDate);
 			},
 			createTelemetryLogger(t, n) {
-				return Dj.validateSender(t), o.instantiateLogger(e, t, n);
+				return Aj.validateSender(t), o.instantiateLogger(e, t, n);
 			},
 			async openExternal(e, n) {
 				return _.openUri(e, {
@@ -24876,7 +24876,7 @@ function GB(e) {
 				}
 			},
 			get remoteName() {
-				return WC(t.remote.authority);
+				return UC(t.remote.authority);
 			},
 			get remoteAuthority() {
 				return J(e, "resolvers"), t.remote.authority;
@@ -24920,30 +24920,30 @@ function GB(e) {
 			}
 		}, je = t.remote.isRemote ? Wh.Workspace : Wh.UI, Ye = {
 			getExtension(t, n) {
-				Dw(e, "extensionsAny") || (n = !1);
+				Aw(e, "extensionsAny") || (n = !1);
 				let r = s.mine.getExtensionDescription(t);
-				if (r) return new UN(i, e.identifier, r, je, !1);
+				if (r) return new KN(i, e.identifier, r, je, !1);
 				if (n) {
 					let n = s.all.getExtensionDescription(t);
-					if (n) return new UN(i, e.identifier, n, je, !0);
+					if (n) return new KN(i, e.identifier, n, je, !0);
 				}
 			},
 			get all() {
 				let t = [];
-				for (let n of s.mine.getAllExtensionDescriptions()) t.push(new UN(i, e.identifier, n, je, !1));
+				for (let n of s.mine.getAllExtensionDescriptions()) t.push(new KN(i, e.identifier, n, je, !1));
 				return t;
 			},
 			get allAcrossExtensionHosts() {
 				J(e, "extensionsAny");
-				let t = new xC(s.mine.getAllExtensionDescriptions().map((e) => e.identifier)), n = [];
+				let t = new OC(s.mine.getAllExtensionDescriptions().map((e) => e.identifier)), n = [];
 				for (let r of s.all.getAllExtensionDescriptions()) {
 					let a = !t.has(r.identifier);
-					n.push(new UN(i, e.identifier, r, je, a));
+					n.push(new KN(i, e.identifier, r, je, a));
 				}
 				return n;
 			},
 			get onDidChange() {
-				return Dw(e, "extensionsAny") ? l(is.any(s.mine.onDidChange, s.all.onDidChange)) : l(s.mine.onDidChange);
+				return Aw(e, "extensionsAny") ? l(is.any(s.mine.onDidChange, s.all.onDidChange)) : l(s.mine.onDidChange);
 			}
 		}, tt = {
 			createDiagnosticCollection(t) {
@@ -24961,7 +24961,7 @@ function GB(e) {
 			},
 			match(e, t) {
 				let n = kg.from(e), r;
-				return ww(n) && (r = k.notebookDocuments.find((e) => e.apiNotebook.getCells().find((e) => e.document === t))?.apiNotebook), Cw(n, t.uri, t.languageId, !0, r?.uri, r?.notebookType);
+				return Dw(n) && (r = k.notebookDocuments.find((e) => e.apiNotebook.getCells().find((e) => e.document === t))?.apiNotebook), Ew(n, t.uri, t.languageId, !0, r?.uri, r?.notebookType);
 			},
 			registerCodeActionsProvider(t, n, r) {
 				return j.registerCodeActionProvider(e, u(t), n, r);
@@ -25354,7 +25354,7 @@ function GB(e) {
 			},
 			onDidOpenTextDocument: (e, t, n) => l(ue.onDidAddDocument)(e, t, n),
 			onDidCloseTextDocument: (e, t, n) => l(ue.onDidRemoveDocument)(e, t, n),
-			onDidChangeTextDocument: (t, n, r) => Dw(e, "textDocumentChangeReason") ? l(ue.onDidChangeDocumentWithReason)(t, n, r) : l(ue.onDidChangeDocument)(t, n, r),
+			onDidChangeTextDocument: (t, n, r) => Aw(e, "textDocumentChangeReason") ? l(ue.onDidChangeDocumentWithReason)(t, n, r) : l(ue.onDidChangeDocument)(t, n, r),
 			onDidSaveTextDocument: (e, t, n) => l(ue.onDidSaveDocument)(e, t, n),
 			onWillSaveTextDocument: (t, n, r) => l(de.getOnWillSaveTextDocumentEvent(e))(t, n, r),
 			get notebookDocuments() {
@@ -25386,7 +25386,7 @@ function GB(e) {
 				return l(k.onDidCloseNotebookDocument);
 			},
 			registerNotebookSerializer(t, n, r, i) {
-				return k.registerNotebookSerializer(e, t, n, r, Dw(e, "notebookLiveShare") ? i : void 0);
+				return k.registerNotebookSerializer(e, t, n, r, Aw(e, "notebookLiveShare") ? i : void 0);
 			},
 			onDidChangeConfiguration: (e, t, n) => l(c.onDidChangeConfiguration)(e, t, n),
 			getConfiguration(t, n) {
@@ -25626,7 +25626,7 @@ function GB(e) {
 			},
 			notebooks: {
 				createNotebookController(t, n, r, i, a) {
-					return me.createNotebookController(e, t, n, r, i, Dw(e, "notebookMessaging") ? a : void 0);
+					return me.createNotebookController(e, t, n, r, i, Aw(e, "notebookMessaging") ? a : void 0);
 				},
 				registerNotebookCellStatusBarItemProvider: (t, n) => k.registerNotebookCellStatusBarItemProvider(e, t, n),
 				createRendererMessaging(t) {
@@ -25658,7 +25658,7 @@ function GB(e) {
 					return se.taskExecutions;
 				},
 				onDidStartTask: (t, n, r) => l(se.onDidStartTask)((r) => {
-					Dw(e, "taskExecutionTerminal") || r?.execution?.terminal !== void 0 && (r.execution.terminal = void 0);
+					Aw(e, "taskExecutionTerminal") || r?.execution?.terminal !== void 0 && (r.execution.terminal = void 0);
 					let i = {
 						...r,
 						execution: r.execution
@@ -25881,9 +25881,9 @@ function GB(e) {
 			TabInputInteractiveWindow: Gg,
 			TabInputChat: ag,
 			TabInputTextMultiDiff: Qg,
-			TelemetryTrustedValue: Aw,
+			TelemetryTrustedValue: Nw,
 			LogLevel: L,
-			EditSessionIdentityMatch: EA,
+			EditSessionIdentityMatch: kA,
 			InteractiveSessionVoteDirection: n_,
 			ChatCopyKind: hg,
 			ChatSessionChangedFile: eg,
@@ -25973,10 +25973,10 @@ function GB(e) {
 		};
 	};
 }
-var KB = t((() => {
-	Eo(), ia(), $s(), P(), Ds(), Ar(), U(), cl(), Sw(), YS(), _o(), wC(), Ca(), pe(), Xr(), dC(), Hw(), DA(), Mv(), Xh(), kw(), zg(), W(), WF(), KF(), ZF(), lM(), gN(), $F(), lI(), dI(), hI(), vI(), bI(), SI(), wI(), Nj(), EI(), pj(), qI(), IF(), MP(), rj(), ZI(), $I(), tL(), rL(), aL(), Jj(), jM(), sL(), lL(), KN(), fL(), PA(), vL(), AA(), Pf(), bL(), SL(), cR(), sz(), xN(), lz(), kN(), PN(), MF(), fz(), Tz(), Dz(), kz(), jz(), Hz(), Wz(), zA(), Kz(), uN(), Jz(), Xz(), qh(), mB(), aF(), wN(), gB(), vB(), SB(), UM(), YM(), TM(), kj(), oM(), gF(), mP(), wB(), EB(), kB(), NB(), Fh(), wm(), gv(), FB(), HA(), aN(), FI(), zB(), HB(), tN(), $A(), WB(), mp(), cb(), Qv(), PS(), jf(), ig(), Gf(), gm(), im(), qg(), Dm(), Ip(), Pg();
-})), qB, JB, YB, XB, ZB, QB = t((() => {
-	b(), $o(), U(), W(), pj(), kw(), wC(), qh(), Pf(), E(), KN(), Xr(), c(), JB = class {
+var YB = t((() => {
+	Eo(), ia(), $s(), P(), Ds(), Ar(), U(), cl(), Tw(), YS(), _o(), GC(), Ca(), pe(), Xr(), lC(), Gw(), AA(), Mv(), Xh(), Mw(), zg(), W(), qF(), YF(), eI(), fM(), yN(), nI(), fI(), mI(), vI(), xI(), CI(), TI(), DI(), Ij(), kI(), gj(), XI(), zF(), FP(), oj(), eL(), nL(), iL(), oL(), cL(), Zj(), PM(), uL(), fL(), YN(), hL(), LA(), xL(), NA(), Pf(), CL(), TL(), dR(), uz(), wN(), fz(), MN(), LN(), FF(), hz(), Oz(), Az(), Mz(), Pz(), Gz(), qz(), HA(), Yz(), pN(), Zz(), $z(), qh(), _B(), cF(), DN(), yB(), xB(), TB(), KM(), QM(), OM(), Mj(), lM(), yF(), _P(), DB(), kB(), MB(), IB(), Fh(), wm(), gv(), RB(), GA(), cN(), RI(), HB(), GB(), iN(), nj(), qB(), mp(), cb(), Qv(), PS(), jf(), ig(), Gf(), gm(), im(), qg(), Dm(), Ip(), Pg();
+})), XB, ZB, QB, $B, eV, tV = t((() => {
+	b(), $o(), U(), W(), gj(), Mw(), GC(), qh(), Pf(), E(), YN(), Xr(), c(), ZB = class {
 		constructor(e, t, n, r, i, a, o) {
 			this._apiFactory = e, this._extensionRegistry = t, this._instaService = n, this._extHostConfiguration = r, this._extHostExtensionService = i, this._initData = a, this._logService = o, this._factories = /* @__PURE__ */ new Map(), this._alternatives = [];
 		}
@@ -25985,28 +25985,28 @@ var KB = t((() => {
 			let e = await this._extHostConfiguration.getConfigProvider();
 			ro("code/extHost/didWaitForConfig");
 			let t = await this._extHostExtensionService.getExtensionPathIndex();
-			this.register(new XB(this._apiFactory, t, this._extensionRegistry, e, this._logService)), this.register(this._instaService.createInstance(YB)), this._initData.remote.isRemote && this.register(this._instaService.createInstance(ZB, t, this._initData.environment.appUriScheme));
+			this.register(new $B(this._apiFactory, t, this._extensionRegistry, e, this._logService)), this.register(this._instaService.createInstance(QB)), this._initData.remote.isRemote && this.register(this._instaService.createInstance(eV, t, this._initData.environment.appUriScheme));
 		}
 		register(e) {
 			if ("nodeModuleName" in e) if (Array.isArray(e.nodeModuleName)) for (let t of e.nodeModuleName) this._factories.set(t, e);
 			else this._factories.set(e.nodeModuleName, e);
 			typeof e.alternativeModuleName == "function" && this._alternatives.push((t) => e.alternativeModuleName(t));
 		}
-	}, JB = N([
+	}, ZB = N([
 		R(2, It),
-		R(3, fj),
-		R(4, HN),
+		R(3, hj),
+		R(4, GN),
 		R(5, Kf),
 		R(6, Ct)
-	], JB), YB = class {
+	], ZB), QB = class {
 		static {
-			qB = this;
+			XB = this;
 		}
 		static {
 			this.aliased = /* @__PURE__ */ new Map([["vscode-ripgrep", "@vscode/ripgrep"], ["vscode-windows-registry", "@vscode/windows-registry"]]);
 		}
 		constructor(e) {
-			if (e.environment.appRoot && qB.aliased.size) {
+			if (e.environment.appRoot && XB.aliased.size) {
 				let t = Fr(this.forceForwardSlashes(e.environment.appRoot.fsPath)), n = "[a-z0-9_.-]", r = `@${n}+\\/${n}+|${n}+`;
 				this.re = RegExp(`^(${t}/node_modules|node_modules\\.asar(?:\\.unpacked)?\\/)(${r})(.*)$`, "i");
 			}
@@ -26015,15 +26015,15 @@ var KB = t((() => {
 			if (!this.re) return;
 			let t = this.re.exec(this.forceForwardSlashes(e));
 			if (!t) return;
-			let [, n, r, i] = t, a = qB.aliased.get(r);
+			let [, n, r, i] = t, a = XB.aliased.get(r);
 			if (a !== void 0) return console.warn(`${r} as been renamed to ${a}, please update your imports`), n + a + i;
 		}
 		forceForwardSlashes(e) {
 			return e.replace(/\\/g, "/");
 		}
-	}, YB = qB = N([R(0, Kf)], YB), XB = class {
+	}, QB = XB = N([R(0, Kf)], QB), $B = class {
 		constructor(e, t, n, r, i) {
-			this._apiFactory = e, this._extensionPaths = t, this._extensionRegistry = n, this._configProvider = r, this._logService = i, this.nodeModuleName = "vscode", this._extApiImpl = new VC();
+			this._apiFactory = e, this._extensionPaths = t, this._extensionRegistry = n, this._configProvider = r, this._logService = i, this.nodeModuleName = "vscode", this._extApiImpl = new NC();
 		}
 		load(e, t) {
 			let n = this._extensionPaths.findSubstr(t);
@@ -26033,11 +26033,11 @@ var KB = t((() => {
 			}
 			if (!this._defaultApiImpl) {
 				let e = "";
-				this._extensionPaths.forEach((t, n) => e += `\t${n} -> ${t.identifier.value}\n`), this._logService.warn(`Could not identify extension for 'vscode' require call from ${t}. These are the extension path mappings: \n${e}`), this._defaultApiImpl = this._apiFactory(Ow, this._extensionRegistry, this._configProvider);
+				this._extensionPaths.forEach((t, n) => e += `\t${n} -> ${t.identifier.value}\n`), this._logService.warn(`Could not identify extension for 'vscode' require call from ${t}. These are the extension path mappings: \n${e}`), this._defaultApiImpl = this._apiFactory(jw, this._extensionRegistry, this._configProvider);
 			}
 			return this._defaultApiImpl;
 		}
-	}, ZB = class {
+	}, eV = class {
 		constructor(e, t, n) {
 			this._extensionPaths = e, this._appUriScheme = t, this.nodeModuleName = ["open", "opn"], this._mainThreadTelemetry = n.getProxy(G.MainThreadTelemetry);
 			let r = n.getProxy(G.MainThreadWindow);
@@ -26059,11 +26059,11 @@ var KB = t((() => {
 		sendNoForwardTelemetry() {
 			this._extensionId && this._mainThreadTelemetry.$publicLog2("shimming.open.call.noForward", { extension: this._extensionId });
 		}
-	}, ZB = N([R(2, $x)], ZB);
+	}, eV = N([R(2, $x)], eV);
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/common/extHostConsoleForwarder.js
-function $B(e, t) {
+function nV(e, t) {
 	let n = [];
 	if (e.length) for (let t = 0; t < e.length; t++) {
 		let r = e[t];
@@ -26080,13 +26080,13 @@ function $B(e, t) {
 	}
 	try {
 		let e = ae(n);
-		return e.length > tV ? "Output omitted for a large object that exceeds the limits" : e;
+		return e.length > iV ? "Output omitted for a large object that exceeds the limits" : e;
 	} catch (e) {
 		return `Output omitted for an object that cannot be inspected ('${e.toString()}')`;
 	}
 }
-var eV, tV, nV = t((() => {
-	b(), zt(), W(), Pf(), qh(), eV = class {
+var rV, iV, aV = t((() => {
+	b(), zt(), W(), Pf(), qh(), rV = class {
 		constructor(e, t) {
 			this._mainThreadConsole = e.getProxy(G.MainThreadConsole), this._includeStack = t.consoleForward.includeStack, this._logNative = t.consoleForward.logNative, this._wrapConsoleMethod("info", "log"), this._wrapConsoleMethod("log", "log"), this._wrapConsoleMethod("warn", "warn"), this._wrapConsoleMethod("debug", "debug"), this._wrapConsoleMethod("error", "error");
 		}
@@ -26103,27 +26103,27 @@ var eV, tV, nV = t((() => {
 			this._mainThreadConsole.$logExtensionHostMessage({
 				type: "__$console",
 				severity: t,
-				arguments: $B(r, this._includeStack)
+				arguments: nV(r, this._includeStack)
 			}), this._logNative && this._nativeConsoleLogMessage(e, n, r);
 		}
-	}, eV = N([R(0, $x), R(1, Kf)], eV), tV = 1e5;
-})), rV, iV = t((() => {
-	b(), nV(), Pf(), qh(), rV = class extends eV {
+	}, rV = N([R(0, $x), R(1, Kf)], rV), iV = 1e5;
+})), oV, sV = t((() => {
+	b(), aV(), Pf(), qh(), oV = class extends rV {
 		constructor(e, t) {
 			super(e, t);
 		}
 		_nativeConsoleLogMessage(e, t, n) {
 			t.apply(console, n);
 		}
-	}, rV = N([R(0, $x), R(1, Kf)], rV);
+	}, oV = N([R(0, $x), R(1, Kf)], oV);
 }));
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-api/vscode/src/vs/workbench/api/worker/extHostExtensionService.js
-function aV(e, t) {
+function cV(e, t) {
 	return le(e) ? e : e + t;
 }
-var oV, sV, cV = t((() => {
-	KB(), KN(), U(), QB(), gv(), S(), iV(), Bc(), mo(), oV = class extends JB {
+var lV, uV, dV = t((() => {
+	YB(), YN(), U(), tV(), gv(), S(), sV(), Bc(), mo(), lV = class extends ZB {
 		_installInterceptor() {}
 		getModule(e, t) {
 			for (let t of this._alternatives) {
@@ -26137,12 +26137,12 @@ var oV, sV, cV = t((() => {
 				throw Error("CANNOT LOAD MODULE from here.");
 			});
 		}
-	}, sV = class extends VN {
+	}, uV = class extends WN {
 		constructor() {
 			super(...arguments), this.extensionRuntime = cS.Webworker;
 		}
 		async _beforeAlmostReadyToRunExtensions() {
-			Nc && this._instaService.createInstance(rV), this._apiFactory = this._instaService.invokeFunction(GB), this._fakeModules = this._instaService.createInstance(oV, this._apiFactory, {
+			Nc && this._instaService.createInstance(oV), this._apiFactory = this._instaService.invokeFunction(JB), this._fakeModules = this._instaService.createInstance(lV, this._apiFactory, {
 				mine: this._myRegistry,
 				all: this._globalRegistry
 			}), await this._fakeModules.install(), performance.mark("code/extHost/didInitAPI"), await this._waitForDebuggerAttachment();
@@ -26151,7 +26151,7 @@ var oV, sV, cV = t((() => {
 			return e.browser;
 		}
 		async _loadCommonJSModule(e, t, n) {
-			t = t.with({ path: aV(t.path, ".js") });
+			t = t.with({ path: cV(t.path, ".js") });
 			let r = e?.identifier.value;
 			r && performance.mark(`code/extHost/willFetchExtensionCode/${r}`);
 			let i = H.revive(await this._mainThreadExtensionsProxy.$asBrowserUri(t)), a = await fetch(i.toString(!0));
@@ -26187,7 +26187,7 @@ var oV, sV, cV = t((() => {
 }));
 //#endregion
 //#region node_modules/vscode/localExtensionHost.js
-function lV() {
+function fV() {
 	let e = new Xf(), t = new Xf();
 	class n {
 		constructor(e, t) {
@@ -26199,28 +26199,28 @@ function lV() {
 	}
 	return [new n(e, t), new n(t, e)];
 }
-async function uV(e) {
-	return await (await dV.p)(e);
+async function pV(e) {
+	return await (await mV.p)(e);
 }
-var dV, fV, pV, mV, hV, gV = t((() => {
-	b(), gu(), LF(), HF(), Rf(), Gc(), ia(), P(), Hw(), Gn(), Xh(), mo(), jw(), KN(), kw(), cC(), h(), Xs(), Fe(), Ot(), Xr(), rT(), pC(), Qw(), U(), $s(), Wn(), YM(), cV(), wC(), S(), lb(), $w(), Gw(), UC(), kj(), gc(), gN(), y_(), dV = new lc(), fV = class extends sV {
+var mV, hV, gV, _V, vV, yV = t((() => {
+	b(), gu(), BF(), GF(), Rf(), Gc(), ia(), P(), Gw(), Gn(), Xh(), mo(), Pw(), YN(), Mw(), TC(), h(), Xs(), Fe(), Ot(), Xr(), oT(), sC(), tT(), U(), $s(), Wn(), QM(), dV(), GC(), S(), lb(), nT(), Jw(), HC(), Mj(), gc(), yN(), y_(), mV = new lc(), hV = class extends uV {
 		constructor() {
-			super(...arguments), this._extApiImpl = new VC();
+			super(...arguments), this._extApiImpl = new NC();
 		}
 		async getApi(e) {
 			let [t, n] = await Promise.all([this.getExtensionRegistry(), this._extHostConfiguration.getConfigProvider()]), r = {
 				mine: t,
 				all: this._globalRegistry
 			};
-			if (e == null) return this._defaultApiImpl ??= this._apiFactory(Ow, r, n), this._defaultApiImpl;
+			if (e == null) return this._defaultApiImpl ??= this._apiFactory(jw, r, n), this._defaultApiImpl;
 			let i = t.getExtensionDescription(e);
 			if (i == null) throw Error(`Extension ${e} does not exist or is disabled`);
 			let a = this._extApiImpl.get(i.identifier);
 			return a ?? (a = this._apiFactory(i, r, n), this._extApiImpl.set(i.identifier, a)), a;
 		}
-	}, p(dN, fN, Yr.Eager), p(HN, fV, Yr.Eager), p(qM, JM, Yr.Eager), p(Oj, new Ta(Ej, [!0], !0)), pV = new class {
+	}, p(mN, hN, Yr.Eager), p(GN, hV, Yr.Eager), p(XM, ZM, Yr.Eager), p(jj, new Ta(kj, [!0], !0)), gV = new class {
 		constructor() {
-			this.pid = void 0, this.exit = Xw;
+			this.pid = void 0, this.exit = $w;
 		}
 		async exists() {
 			return !0;
@@ -26228,7 +26228,7 @@ var dV, fV, pV, mV, hV, gV = t((() => {
 		async realpath(e) {
 			return e;
 		}
-	}(), mV = class {
+	}(), _V = class {
 		constructor(e, t, n, r, i, a, o, s, c, l, u, d) {
 			this.runningLocation = e, this.startup = t, this._initDataProvider = n, this._telemetryService = r, this._contextService = i, this._labelService = a, this._logService = o, this._loggerService = s, this._environmentService = c, this._productService = l, this._userDataProfilesService = u, this._defaultLogLevelsService = d, this.remoteAuthority = null, this.extensions = null, this.pid = null, this.onExit = is.None, this._protocolPromise = null, this._extensionHostLogsLocation = Gs(this._environmentService.extHostLogsPath, "local");
 		}
@@ -26236,8 +26236,8 @@ var dV, fV, pV, mV, hV, gV = t((() => {
 			return this._protocolPromise ??= this._start(), await this._protocolPromise;
 		}
 		async _start() {
-			let [e, t] = lV(), n = new VF(t, await this._createExtHostInitData(), pV, null).getExtHostExtensionService();
-			return await dV.complete((e) => n.getApi(e)), e;
+			let [e, t] = fV(), n = new WF(t, await this._createExtHostInitData(), gV, null).getExtHostExtensionService();
+			return await mV.complete((e) => n.getApi(e)), e;
 		}
 		async _createExtHostInitData() {
 			let e = await this._initDataProvider.getInitData();
@@ -26254,7 +26254,7 @@ var dV, fV, pV, mV, hV, gV = t((() => {
 					appHost: this._productService.embedderIdentifier ?? (xi ? "web" : "desktop"),
 					appUriScheme: this._productService.urlProtocol,
 					appLanguage: zi,
-					isExtensionTelemetryLoggingOnly: Kw(this._productService, this._environmentService),
+					isExtensionTelemetryLoggingOnly: Yw(this._productService, this._environmentService),
 					extensionDevelopmentLocationURI: this._environmentService.extensionDevelopmentLocationURI,
 					extensionTestsLocationURI: this._environmentService.extensionTestsLocationURI,
 					globalStorageHome: this._userDataProfilesService.defaultProfile.globalStorageHome,
@@ -26284,7 +26284,7 @@ var dV, fV, pV, mV, hV, gV = t((() => {
 				logLevel: this._logService.getLevel(),
 				loggers: [...this._loggerService.getRegisteredLoggers()],
 				logsLocation: this._extensionHostLogsLocation,
-				autoStart: this.startup === Vw.EagerAutoStart,
+				autoStart: this.startup === Ww.EagerAutoStart,
 				remote: {
 					authority: this._environmentService.remoteAuthority,
 					connectionData: null,
@@ -26298,358 +26298,358 @@ var dV, fV, pV, mV, hV, gV = t((() => {
 			return Promise.resolve(!1);
 		}
 		dispose() {}
-	}, mV = N([
+	}, _V = N([
 		R(3, Kn),
 		R(4, Nn),
 		R(5, We),
 		R(6, Ct),
 		R(7, ai),
-		R(8, aT),
-		R(9, iC),
-		R(10, Yw),
+		R(8, cT),
+		R(9, oC),
+		R(10, Qw),
 		R(11, Uv)
-	], mV), ly(mV), Uw(uV), zw((e) => {
-		hV = e;
-	}), HC(async (e) => {
-		e.get(rC), hV = await uV();
+	], _V), ly(_V), Kw(pV), Hw((e) => {
+		vV = e;
+	}), aC(async (e) => {
+		e.get(iC), vV = await pV();
 	});
-})), _V = /* @__PURE__ */ n({
-	AISearchKeyword: () => NK,
-	BranchCoverage: () => rG,
-	Breakpoint: () => zV,
-	CallHierarchyIncomingCall: () => WV,
-	CallHierarchyItem: () => GV,
-	CallHierarchyOutgoingCall: () => KV,
-	CancellationError: () => qV,
-	CancellationTokenSource: () => JV,
-	CandidatePortSource: () => YV,
-	CellErrorStackFrame: () => fK,
-	ChatCompletionItem: () => UV,
-	ChatCopyKind: () => SG,
-	ChatEditingSessionActionOutcome: () => iK,
-	ChatErrorLevel: () => yK,
-	ChatLocation: () => KG,
-	ChatPrepareToolInvocationPart: () => PK,
-	ChatReferenceBinaryData: () => dK,
-	ChatReferenceDiagnostic: () => xK,
-	ChatRequestEditedFileEventKind: () => DK,
-	ChatRequestEditorData: () => qG,
-	ChatRequestNotebookData: () => JG,
-	ChatRequestTurn: () => WG,
-	ChatRequestTurn2: () => OK,
-	ChatResponseAnchorPart: () => MG,
-	ChatResponseClearToPreviousToolInvocationReason: () => zK,
-	ChatResponseCodeCitationPart: () => LG,
-	ChatResponseCodeblockUriPart: () => rK,
-	ChatResponseCommandButtonPart: () => VG,
-	ChatResponseConfirmationPart: () => HG,
-	ChatResponseExtensionsPart: () => EK,
-	ChatResponseExternalEditPart: () => XK,
-	ChatResponseFileTreePart: () => jG,
-	ChatResponseMarkdownPart: () => AG,
-	ChatResponseMarkdownWithVulnerabilitiesPart: () => BG,
-	ChatResponseMovePart: () => YG,
-	ChatResponseMultiDiffPart: () => LK,
-	ChatResponseNotebookEditPart: () => vK,
-	ChatResponseProgressPart: () => NG,
-	ChatResponseProgressPart2: () => PG,
-	ChatResponsePullRequestPart: () => RK,
-	ChatResponseReferencePart: () => FG,
-	ChatResponseReferencePart2: () => IG,
-	ChatResponseReferencePartStatusKind: () => UG,
-	ChatResponseTextEditPart: () => zG,
-	ChatResponseThinkingProgressPart: () => GK,
-	ChatResponseTurn: () => GG,
-	ChatResponseTurn2: () => HK,
-	ChatResponseWarningPart: () => RG,
-	ChatResultFeedbackKind: () => VV,
-	ChatSessionChangedFile: () => tq,
-	ChatSessionStatus: () => KK,
-	ChatToolInvocationPart: () => IK,
-	ChatVariableLevel: () => HV,
-	CodeAction: () => XV,
-	CodeActionKind: () => ZV,
-	CodeActionTriggerKind: () => QV,
-	CodeLens: () => $V,
-	Color: () => eH,
-	ColorInformation: () => tH,
-	ColorPresentation: () => nH,
-	ColorThemeKind: () => rH,
-	CommentMode: () => iH,
-	CommentState: () => aH,
-	CommentThreadApplicability: () => cH,
-	CommentThreadCollapsibleState: () => oH,
-	CommentThreadFocus: () => lH,
-	CommentThreadState: () => sH,
-	CompletionItem: () => uH,
-	CompletionItemKind: () => dH,
-	CompletionItemTag: () => fH,
-	CompletionList: () => pH,
-	CompletionTriggerKind: () => mH,
-	ConfigurationTarget: () => hH,
-	CustomExecution: () => gH,
-	DataTransfer: () => QW,
-	DataTransferItem: () => $W,
-	DebugAdapterExecutable: () => _H,
-	DebugAdapterInlineImplementation: () => vH,
-	DebugAdapterNamedPipeServer: () => yH,
-	DebugAdapterServer: () => bH,
-	DebugConfigurationProviderTriggerKind: () => xH,
-	DebugConsoleMode: () => SH,
-	DebugStackFrame: () => CG,
-	DebugThread: () => wG,
-	DebugVisualization: () => CH,
-	DeclarationCoverage: () => iG,
-	DecorationRangeBehavior: () => wH,
-	Diagnostic: () => TH,
-	DiagnosticRelatedInformation: () => EH,
-	DiagnosticSeverity: () => DH,
-	DiagnosticTag: () => OH,
-	Disposable: () => kH,
-	DocumentDropEdit: () => gW,
-	DocumentDropOrPasteEditKind: () => _W,
-	DocumentHighlight: () => AH,
-	DocumentHighlightKind: () => jH,
-	DocumentLink: () => NH,
-	DocumentPasteEdit: () => vW,
-	DocumentPasteTriggerKind: () => hW,
-	DocumentSymbol: () => PH,
-	EditSessionIdentityMatch: () => xG,
-	EndOfLine: () => FH,
-	EnvironmentVariableMutatorType: () => IH,
-	EvaluatableExpression: () => LH,
-	EventEmitter: () => HH,
-	ExcludeSettingOptions: () => nK,
-	ExtendedLanguageModelToolResult: () => bK,
-	ExtensionKind: () => UH,
-	ExtensionMode: () => WH,
-	ExtensionRuntime: () => EW,
-	ExternalUriOpenerPriority: () => GH,
-	FileChangeType: () => KH,
-	FileCoverage: () => tG,
-	FileDecoration: () => qH,
-	FileDecoration2: () => JH,
-	FilePermission: () => ZH,
-	FileSystemError: () => YH,
-	FileType: () => XH,
-	FoldingRange: () => QH,
-	FoldingRangeKind: () => $H,
-	FunctionBreakpoint: () => eU,
-	Hover: () => rU,
-	HoverVerbosityAction: () => aU,
-	IndentAction: () => oU,
-	InlayHint: () => yW,
-	InlayHintKind: () => xW,
-	InlayHintLabelPart: () => bW,
-	InlineCompletionDisplayLocationKind: () => qK,
-	InlineCompletionEndOfLifeReasonKind: () => kK,
-	InlineCompletionItem: () => tU,
-	InlineCompletionList: () => nU,
-	InlineCompletionTriggerKind: () => VH,
-	InlineCompletionsDisposeReasonKind: () => FK,
-	InlineValueEvaluatableExpression: () => BH,
-	InlineValueText: () => RH,
-	InlineValueVariableLookup: () => zH,
-	InputBoxValidationSeverity: () => sG,
-	KeywordRecognitionStatus: () => kG,
-	LanguageModelChatMessage: () => ZG,
-	LanguageModelChatMessage2: () => SK,
-	LanguageModelChatMessageRole: () => XG,
-	LanguageModelChatToolMode: () => aK,
-	LanguageModelDataPart: () => CK,
-	LanguageModelDataPart2: () => WK,
-	LanguageModelError: () => QG,
-	LanguageModelPartAudience: () => YK,
-	LanguageModelPromptTsxPart: () => lK,
-	LanguageModelTextPart: () => cK,
-	LanguageModelTextPart2: () => UK,
-	LanguageModelThinkingPart: () => JK,
-	LanguageModelToolCallPart: () => oK,
-	LanguageModelToolExtensionSource: () => BK,
-	LanguageModelToolMCPSource: () => VK,
-	LanguageModelToolResult: () => uK,
-	LanguageModelToolResult2: () => jK,
-	LanguageModelToolResultPart: () => sK,
-	LanguageModelToolResultPart2: () => AK,
-	LanguageStatusSeverity: () => aG,
-	LinkedEditingRanges: () => WW,
-	Location: () => sU,
-	LogLevel: () => bG,
-	ManagedResolvedAuthority: () => wW,
-	MarkdownString: () => cU,
-	McpHttpServerDefinition: () => MK,
-	McpHttpServerDefinition2: () => $K,
-	McpStdioServerDefinition: () => wK,
-	McpStdioServerDefinition2: () => QK,
-	McpToolAvailability: () => ZK,
-	MultiDocumentHighlight: () => MH,
-	NewSymbolName: () => $G,
-	NewSymbolNameTag: () => eK,
-	NewSymbolNameTriggerKind: () => tK,
-	NotebookCellData: () => AW,
-	NotebookCellKind: () => kW,
-	NotebookCellOutput: () => FW,
-	NotebookCellOutputItem: () => IW,
-	NotebookCellStatusBarAlignment: () => NW,
-	NotebookCellStatusBarItem: () => LW,
-	NotebookControllerAffinity: () => RW,
-	NotebookControllerAffinity2: () => zW,
-	NotebookData: () => jW,
-	NotebookEdit: () => BW,
-	NotebookEditorRevealType: () => PW,
-	NotebookKernelSourceAction: () => VW,
-	NotebookRange: () => OW,
-	NotebookRendererScript: () => MW,
-	NotebookVariablesRequestKind: () => HW,
-	OverviewRulerLane: () => lU,
-	ParameterInformation: () => uU,
-	PartialAcceptTriggerKind: () => OG,
-	PortAttributes: () => UW,
-	PortAutoForwardAction: () => dU,
-	Position: () => fU,
-	ProcessExecution: () => pU,
-	ProgressLocation: () => mU,
-	QuickInputButtonLocation: () => hU,
-	QuickInputButtons: () => gU,
-	QuickPickItemKind: () => oG,
-	Range: () => _U,
-	RelatedInformationType: () => TG,
-	RelativePattern: () => vU,
-	RemoteAuthorityResolverError: () => SW,
-	ResolvedAuthority: () => CW,
-	Selection: () => yU,
-	SelectionRange: () => bU,
-	SemanticTokens: () => xU,
-	SemanticTokensBuilder: () => SU,
-	SemanticTokensEdit: () => CU,
-	SemanticTokensEdits: () => wU,
-	SemanticTokensLegend: () => TU,
-	SettingsSearchResultKind: () => TK,
-	ShellExecution: () => EU,
-	ShellQuoting: () => DU,
-	SignatureHelp: () => OU,
-	SignatureHelpTriggerKind: () => kU,
-	SignatureInformation: () => AU,
-	SnippetString: () => jU,
-	SnippetTextEdit: () => QU,
-	SourceBreakpoint: () => MU,
-	SourceControlInputBoxValidationType: () => TW,
-	SpeechToTextStatus: () => EG,
-	StandardTokenType: () => NU,
-	StatementCoverage: () => nG,
-	StatusBarAlignment: () => PU,
-	SymbolInformation: () => FU,
-	SymbolKind: () => IU,
-	SymbolTag: () => LU,
-	SyntaxTokenType: () => rW,
-	TabInputChat: () => _G,
-	TabInputCustom: () => dG,
-	TabInputInteractiveWindow: () => gG,
-	TabInputNotebook: () => fG,
-	TabInputNotebookDiff: () => pG,
-	TabInputTerminal: () => hG,
-	TabInputText: () => cG,
-	TabInputTextDiff: () => lG,
-	TabInputTextMerge: () => uG,
-	TabInputTextMultiDiff: () => vG,
-	TabInputWebview: () => mG,
-	Task: () => RU,
-	TaskGroup: () => zU,
-	TaskPanelKind: () => BU,
-	TaskRevealKind: () => VU,
-	TaskScope: () => HU,
-	TelemetryTrustedValue: () => yG,
-	TerminalCompletionItem: () => eq,
-	TerminalCompletionItemKind: () => pK,
-	TerminalCompletionList: () => mK,
-	TerminalExitReason: () => JU,
-	TerminalLink: () => UU,
-	TerminalLocation: () => KU,
-	TerminalOutputAnchor: () => BV,
-	TerminalProfile: () => qU,
-	TerminalQuickFixOpener: () => GU,
-	TerminalQuickFixTerminalCommand: () => WU,
-	TerminalShellExecutionCommandLineConfidence: () => YU,
-	TestCoverageCount: () => eG,
-	TestMessage: () => qW,
-	TestMessageStackFrame: () => JW,
-	TestResultState: () => GW,
-	TestRunProfileKind: () => XW,
-	TestRunRequest: () => KW,
-	TestTag: () => YW,
-	TextDocumentChangeReason: () => iW,
-	TextDocumentSaveReason: () => XU,
-	TextEdit: () => ZU,
-	TextEditorChangeKind: () => hK,
-	TextEditorCursorStyle: () => $U,
-	TextEditorLineNumbersStyle: () => eW,
-	TextEditorRevealType: () => tW,
-	TextEditorSelectionChangeKind: () => nW,
-	TextSearchCompleteMessageType: () => ZW,
-	TextSearchContext2: () => _K,
-	TextSearchMatch2: () => gK,
-	TextToSpeechStatus: () => DG,
-	ThemeColor: () => aW,
-	ThemeIcon: () => oW,
-	TimelineItem: () => DW,
-	TreeItem: () => sW,
-	TreeItemCheckboxState: () => cW,
-	TreeItemCollapsibleState: () => lW,
-	TypeHierarchyItem: () => uW,
-	UIKind: () => dW,
-	Uri: () => fW,
-	VerboseHover: () => iU,
-	ViewColumn: () => pW,
-	WorkspaceEdit: () => mW,
-	ai: () => FV,
-	authentication: () => wV,
-	chat: () => IV,
-	commands: () => kV,
-	comments: () => CV,
-	debug: () => DV,
-	env: () => OV,
-	extensions: () => EV,
-	interactive: () => PV,
-	l10n: () => NV,
-	languages: () => MV,
-	lm: () => RV,
-	notebooks: () => xV,
-	scm: () => SV,
-	speech: () => LV,
-	tasks: () => bV,
-	tests: () => TV,
-	version: () => yV,
-	window: () => AV,
-	workspace: () => jV
+})), bV = /* @__PURE__ */ n({
+	AISearchKeyword: () => IK,
+	BranchCoverage: () => oG,
+	Breakpoint: () => HV,
+	CallHierarchyIncomingCall: () => qV,
+	CallHierarchyItem: () => JV,
+	CallHierarchyOutgoingCall: () => YV,
+	CancellationError: () => XV,
+	CancellationTokenSource: () => ZV,
+	CandidatePortSource: () => QV,
+	CellErrorStackFrame: () => hK,
+	ChatCompletionItem: () => KV,
+	ChatCopyKind: () => TG,
+	ChatEditingSessionActionOutcome: () => sK,
+	ChatErrorLevel: () => SK,
+	ChatLocation: () => YG,
+	ChatPrepareToolInvocationPart: () => LK,
+	ChatReferenceBinaryData: () => mK,
+	ChatReferenceDiagnostic: () => wK,
+	ChatRequestEditedFileEventKind: () => AK,
+	ChatRequestEditorData: () => XG,
+	ChatRequestNotebookData: () => ZG,
+	ChatRequestTurn: () => qG,
+	ChatRequestTurn2: () => jK,
+	ChatResponseAnchorPart: () => FG,
+	ChatResponseClearToPreviousToolInvocationReason: () => HK,
+	ChatResponseCodeCitationPart: () => BG,
+	ChatResponseCodeblockUriPart: () => oK,
+	ChatResponseCommandButtonPart: () => WG,
+	ChatResponseConfirmationPart: () => GG,
+	ChatResponseExtensionsPart: () => kK,
+	ChatResponseExternalEditPart: () => $K,
+	ChatResponseFileTreePart: () => PG,
+	ChatResponseMarkdownPart: () => NG,
+	ChatResponseMarkdownWithVulnerabilitiesPart: () => UG,
+	ChatResponseMovePart: () => QG,
+	ChatResponseMultiDiffPart: () => BK,
+	ChatResponseNotebookEditPart: () => xK,
+	ChatResponseProgressPart: () => IG,
+	ChatResponseProgressPart2: () => LG,
+	ChatResponsePullRequestPart: () => VK,
+	ChatResponseReferencePart: () => RG,
+	ChatResponseReferencePart2: () => zG,
+	ChatResponseReferencePartStatusKind: () => KG,
+	ChatResponseTextEditPart: () => HG,
+	ChatResponseThinkingProgressPart: () => JK,
+	ChatResponseTurn: () => JG,
+	ChatResponseTurn2: () => GK,
+	ChatResponseWarningPart: () => VG,
+	ChatResultFeedbackKind: () => WV,
+	ChatSessionChangedFile: () => iq,
+	ChatSessionStatus: () => YK,
+	ChatToolInvocationPart: () => zK,
+	ChatVariableLevel: () => GV,
+	CodeAction: () => $V,
+	CodeActionKind: () => eH,
+	CodeActionTriggerKind: () => tH,
+	CodeLens: () => nH,
+	Color: () => rH,
+	ColorInformation: () => iH,
+	ColorPresentation: () => aH,
+	ColorThemeKind: () => oH,
+	CommentMode: () => sH,
+	CommentState: () => cH,
+	CommentThreadApplicability: () => dH,
+	CommentThreadCollapsibleState: () => lH,
+	CommentThreadFocus: () => fH,
+	CommentThreadState: () => uH,
+	CompletionItem: () => pH,
+	CompletionItemKind: () => mH,
+	CompletionItemTag: () => hH,
+	CompletionList: () => gH,
+	CompletionTriggerKind: () => _H,
+	ConfigurationTarget: () => vH,
+	CustomExecution: () => yH,
+	DataTransfer: () => tG,
+	DataTransferItem: () => nG,
+	DebugAdapterExecutable: () => bH,
+	DebugAdapterInlineImplementation: () => xH,
+	DebugAdapterNamedPipeServer: () => SH,
+	DebugAdapterServer: () => CH,
+	DebugConfigurationProviderTriggerKind: () => wH,
+	DebugConsoleMode: () => TH,
+	DebugStackFrame: () => EG,
+	DebugThread: () => DG,
+	DebugVisualization: () => EH,
+	DeclarationCoverage: () => sG,
+	DecorationRangeBehavior: () => DH,
+	Diagnostic: () => OH,
+	DiagnosticRelatedInformation: () => kH,
+	DiagnosticSeverity: () => AH,
+	DiagnosticTag: () => jH,
+	Disposable: () => MH,
+	DocumentDropEdit: () => yW,
+	DocumentDropOrPasteEditKind: () => bW,
+	DocumentHighlight: () => NH,
+	DocumentHighlightKind: () => PH,
+	DocumentLink: () => IH,
+	DocumentPasteEdit: () => xW,
+	DocumentPasteTriggerKind: () => vW,
+	DocumentSymbol: () => LH,
+	EditSessionIdentityMatch: () => wG,
+	EndOfLine: () => RH,
+	EnvironmentVariableMutatorType: () => zH,
+	EvaluatableExpression: () => BH,
+	EventEmitter: () => GH,
+	ExcludeSettingOptions: () => aK,
+	ExtendedLanguageModelToolResult: () => CK,
+	ExtensionKind: () => KH,
+	ExtensionMode: () => qH,
+	ExtensionRuntime: () => kW,
+	ExternalUriOpenerPriority: () => JH,
+	FileChangeType: () => YH,
+	FileCoverage: () => iG,
+	FileDecoration: () => XH,
+	FileDecoration2: () => ZH,
+	FilePermission: () => eU,
+	FileSystemError: () => QH,
+	FileType: () => $H,
+	FoldingRange: () => tU,
+	FoldingRangeKind: () => nU,
+	FunctionBreakpoint: () => rU,
+	Hover: () => oU,
+	HoverVerbosityAction: () => cU,
+	IndentAction: () => lU,
+	InlayHint: () => SW,
+	InlayHintKind: () => wW,
+	InlayHintLabelPart: () => CW,
+	InlineCompletionDisplayLocationKind: () => XK,
+	InlineCompletionEndOfLifeReasonKind: () => MK,
+	InlineCompletionItem: () => iU,
+	InlineCompletionList: () => aU,
+	InlineCompletionTriggerKind: () => WH,
+	InlineCompletionsDisposeReasonKind: () => RK,
+	InlineValueEvaluatableExpression: () => UH,
+	InlineValueText: () => VH,
+	InlineValueVariableLookup: () => HH,
+	InputBoxValidationSeverity: () => uG,
+	KeywordRecognitionStatus: () => MG,
+	LanguageModelChatMessage: () => eK,
+	LanguageModelChatMessage2: () => TK,
+	LanguageModelChatMessageRole: () => $G,
+	LanguageModelChatToolMode: () => cK,
+	LanguageModelDataPart: () => EK,
+	LanguageModelDataPart2: () => qK,
+	LanguageModelError: () => tK,
+	LanguageModelPartAudience: () => QK,
+	LanguageModelPromptTsxPart: () => fK,
+	LanguageModelTextPart: () => dK,
+	LanguageModelTextPart2: () => KK,
+	LanguageModelThinkingPart: () => ZK,
+	LanguageModelToolCallPart: () => lK,
+	LanguageModelToolExtensionSource: () => UK,
+	LanguageModelToolMCPSource: () => WK,
+	LanguageModelToolResult: () => pK,
+	LanguageModelToolResult2: () => PK,
+	LanguageModelToolResultPart: () => uK,
+	LanguageModelToolResultPart2: () => NK,
+	LanguageStatusSeverity: () => cG,
+	LinkedEditingRanges: () => qW,
+	Location: () => uU,
+	LogLevel: () => CG,
+	ManagedResolvedAuthority: () => DW,
+	MarkdownString: () => dU,
+	McpHttpServerDefinition: () => FK,
+	McpHttpServerDefinition2: () => nq,
+	McpStdioServerDefinition: () => DK,
+	McpStdioServerDefinition2: () => tq,
+	McpToolAvailability: () => eq,
+	MultiDocumentHighlight: () => FH,
+	NewSymbolName: () => nK,
+	NewSymbolNameTag: () => rK,
+	NewSymbolNameTriggerKind: () => iK,
+	NotebookCellData: () => NW,
+	NotebookCellKind: () => MW,
+	NotebookCellOutput: () => RW,
+	NotebookCellOutputItem: () => zW,
+	NotebookCellStatusBarAlignment: () => IW,
+	NotebookCellStatusBarItem: () => BW,
+	NotebookControllerAffinity: () => VW,
+	NotebookControllerAffinity2: () => HW,
+	NotebookData: () => PW,
+	NotebookEdit: () => UW,
+	NotebookEditorRevealType: () => LW,
+	NotebookKernelSourceAction: () => WW,
+	NotebookRange: () => jW,
+	NotebookRendererScript: () => FW,
+	NotebookVariablesRequestKind: () => GW,
+	OverviewRulerLane: () => fU,
+	ParameterInformation: () => pU,
+	PartialAcceptTriggerKind: () => jG,
+	PortAttributes: () => KW,
+	PortAutoForwardAction: () => mU,
+	Position: () => hU,
+	ProcessExecution: () => gU,
+	ProgressLocation: () => _U,
+	QuickInputButtonLocation: () => vU,
+	QuickInputButtons: () => yU,
+	QuickPickItemKind: () => lG,
+	Range: () => bU,
+	RelatedInformationType: () => OG,
+	RelativePattern: () => xU,
+	RemoteAuthorityResolverError: () => TW,
+	ResolvedAuthority: () => EW,
+	Selection: () => SU,
+	SelectionRange: () => CU,
+	SemanticTokens: () => wU,
+	SemanticTokensBuilder: () => TU,
+	SemanticTokensEdit: () => EU,
+	SemanticTokensEdits: () => DU,
+	SemanticTokensLegend: () => OU,
+	SettingsSearchResultKind: () => OK,
+	ShellExecution: () => kU,
+	ShellQuoting: () => AU,
+	SignatureHelp: () => jU,
+	SignatureHelpTriggerKind: () => MU,
+	SignatureInformation: () => NU,
+	SnippetString: () => PU,
+	SnippetTextEdit: () => tW,
+	SourceBreakpoint: () => FU,
+	SourceControlInputBoxValidationType: () => OW,
+	SpeechToTextStatus: () => kG,
+	StandardTokenType: () => IU,
+	StatementCoverage: () => aG,
+	StatusBarAlignment: () => LU,
+	SymbolInformation: () => RU,
+	SymbolKind: () => zU,
+	SymbolTag: () => BU,
+	SyntaxTokenType: () => oW,
+	TabInputChat: () => bG,
+	TabInputCustom: () => mG,
+	TabInputInteractiveWindow: () => yG,
+	TabInputNotebook: () => hG,
+	TabInputNotebookDiff: () => gG,
+	TabInputTerminal: () => vG,
+	TabInputText: () => dG,
+	TabInputTextDiff: () => fG,
+	TabInputTextMerge: () => pG,
+	TabInputTextMultiDiff: () => xG,
+	TabInputWebview: () => _G,
+	Task: () => VU,
+	TaskGroup: () => HU,
+	TaskPanelKind: () => UU,
+	TaskRevealKind: () => WU,
+	TaskScope: () => GU,
+	TelemetryTrustedValue: () => SG,
+	TerminalCompletionItem: () => rq,
+	TerminalCompletionItemKind: () => gK,
+	TerminalCompletionList: () => _K,
+	TerminalExitReason: () => ZU,
+	TerminalLink: () => KU,
+	TerminalLocation: () => YU,
+	TerminalOutputAnchor: () => UV,
+	TerminalProfile: () => XU,
+	TerminalQuickFixOpener: () => JU,
+	TerminalQuickFixTerminalCommand: () => qU,
+	TerminalShellExecutionCommandLineConfidence: () => QU,
+	TestCoverageCount: () => rG,
+	TestMessage: () => XW,
+	TestMessageStackFrame: () => ZW,
+	TestResultState: () => JW,
+	TestRunProfileKind: () => $W,
+	TestRunRequest: () => YW,
+	TestTag: () => QW,
+	TextDocumentChangeReason: () => sW,
+	TextDocumentSaveReason: () => $U,
+	TextEdit: () => eW,
+	TextEditorChangeKind: () => vK,
+	TextEditorCursorStyle: () => nW,
+	TextEditorLineNumbersStyle: () => rW,
+	TextEditorRevealType: () => iW,
+	TextEditorSelectionChangeKind: () => aW,
+	TextSearchCompleteMessageType: () => eG,
+	TextSearchContext2: () => bK,
+	TextSearchMatch2: () => yK,
+	TextToSpeechStatus: () => AG,
+	ThemeColor: () => cW,
+	ThemeIcon: () => lW,
+	TimelineItem: () => AW,
+	TreeItem: () => uW,
+	TreeItemCheckboxState: () => dW,
+	TreeItemCollapsibleState: () => fW,
+	TypeHierarchyItem: () => pW,
+	UIKind: () => mW,
+	Uri: () => hW,
+	VerboseHover: () => sU,
+	ViewColumn: () => gW,
+	WorkspaceEdit: () => _W,
+	ai: () => RV,
+	authentication: () => DV,
+	chat: () => zV,
+	commands: () => MV,
+	comments: () => EV,
+	debug: () => AV,
+	env: () => jV,
+	extensions: () => kV,
+	interactive: () => LV,
+	l10n: () => IV,
+	languages: () => FV,
+	lm: () => VV,
+	notebooks: () => wV,
+	scm: () => TV,
+	speech: () => BV,
+	tasks: () => CV,
+	tests: () => OV,
+	version: () => SV,
+	window: () => NV,
+	workspace: () => PV
 });
-function vV(e) {
+function xV(e) {
 	return new Proxy({}, { get(t, n) {
-		if (hV == null) throw Error("Default api is not ready yet, do not forget to import 'vscode/localExtensionHost' and wait for services initialization");
-		return hV[e][n];
+		if (vV == null) throw Error("Default api is not ready yet, do not forget to import 'vscode/localExtensionHost' and wait for services initialization");
+		return vV[e][n];
 	} });
 }
-var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, RV, zV, BV, VV, HV, UV, WV, GV, KV, qV, JV, YV, XV, ZV, QV, $V, eH, tH, nH, rH, iH, aH, oH, sH, cH, lH, uH, dH, fH, pH, mH, hH, gH, _H, vH, yH, bH, xH, SH, CH, wH, TH, EH, DH, OH, kH, AH, jH, MH, NH, PH, FH, IH, LH, RH, zH, BH, VH, HH, UH, WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU, aU, oU, sU, cU, lU, uU, dU, fU, pU, mU, hU, gU, _U, vU, yU, bU, xU, SU, CU, wU, TU, EU, DU, OU, kU, AU, jU, MU, NU, PU, FU, IU, LU, RU, zU, BU, VU, HU, UU, WU, GU, KU, qU, JU, YU, XU, ZU, QU, $U, eW, tW, nW, rW, iW, aW, oW, sW, cW, lW, uW, dW, fW, pW, mW, hW, gW, _W, vW, yW, bW, xW, SW, CW, wW, TW, EW, DW, OW, kW, AW, jW, MW, NW, PW, FW, IW, LW, RW, zW, BW, VW, HW, UW, WW, GW, KW, qW, JW, YW, XW, ZW, QW, $W, eG, tG, nG, rG, iG, aG, oG, sG, cG, lG, uG, dG, fG, pG, mG, hG, gG, _G, vG, yG, bG, xG, SG, CG, wG, TG, EG, DG, OG, kG, AG, jG, MG, NG, PG, FG, IG, LG, RG, zG, BG, VG, HG, UG, WG, GG, KG, qG, JG, YG, XG, ZG, QG, $G, eK, tK, nK, rK, iK, aK, oK, sK, cK, lK, uK, dK, fK, pK, mK, hK, gK, _K, vK, yK, bK, xK, SK, CK, wK, TK, EK, DK, OK, kK, AK, jK, MK, NK, PK, FK, IK, LK, RK, zK, BK, VK, HK, UK, WK, GK, KK, qK, JK, YK, XK, ZK, QK, $K, eq, tq, nq = t((() => {
-	gv(), ia(), Ca(), YS(), Eo(), W(), Mv(), $s(), _o(), Xh(), zg(), pe(), DA(), cl(), U(), Hw(), gV(), T(), Pg(), Ip(), PS(), Dm(), qg(), mp(), im(), gm(), Gf(), ig(), Qv(), jf(), cb(), {version: yV, tasks: bV, notebooks: xV, scm: SV, comments: CV, authentication: wV, tests: TV, extensions: EV, debug: DV, env: OV, commands: kV, window: AV, workspace: jV, languages: MV, l10n: NV, interactive: PV, ai: FV, chat: IV, speech: LV, lm: RV, Breakpoint: zV, TerminalOutputAnchor: BV, ChatResultFeedbackKind: VV, ChatVariableLevel: HV, ChatCompletionItem: UV, CallHierarchyIncomingCall: WV, CallHierarchyItem: GV, CallHierarchyOutgoingCall: KV, CancellationError: qV, CancellationTokenSource: JV, CandidatePortSource: YV, CodeAction: XV, CodeActionKind: ZV, CodeActionTriggerKind: QV, CodeLens: $V, Color: eH, ColorInformation: tH, ColorPresentation: nH, ColorThemeKind: rH, CommentMode: iH, CommentState: aH, CommentThreadCollapsibleState: oH, CommentThreadState: sH, CommentThreadApplicability: cH, CommentThreadFocus: lH, CompletionItem: uH, CompletionItemKind: dH, CompletionItemTag: fH, CompletionList: pH, CompletionTriggerKind: mH, ConfigurationTarget: hH, CustomExecution: gH, DebugAdapterExecutable: _H, DebugAdapterInlineImplementation: vH, DebugAdapterNamedPipeServer: yH, DebugAdapterServer: bH, DebugConfigurationProviderTriggerKind: xH, DebugConsoleMode: SH, DebugVisualization: CH, DecorationRangeBehavior: wH, Diagnostic: TH, DiagnosticRelatedInformation: EH, DiagnosticSeverity: DH, DiagnosticTag: OH, Disposable: kH, DocumentHighlight: AH, DocumentHighlightKind: jH, MultiDocumentHighlight: MH, DocumentLink: NH, DocumentSymbol: PH, EndOfLine: FH, EnvironmentVariableMutatorType: IH, EvaluatableExpression: LH, InlineValueText: RH, InlineValueVariableLookup: zH, InlineValueEvaluatableExpression: BH, InlineCompletionTriggerKind: VH, EventEmitter: HH, ExtensionKind: UH, ExtensionMode: WH, ExternalUriOpenerPriority: GH, FileChangeType: KH, FileDecoration: qH, FileDecoration2: JH, FileSystemError: YH, FileType: XH, FilePermission: ZH, FoldingRange: QH, FoldingRangeKind: $H, FunctionBreakpoint: eU, InlineCompletionItem: tU, InlineCompletionList: nU, Hover: rU, VerboseHover: iU, HoverVerbosityAction: aU, IndentAction: oU, Location: sU, MarkdownString: cU, OverviewRulerLane: lU, ParameterInformation: uU, PortAutoForwardAction: dU, Position: fU, ProcessExecution: pU, ProgressLocation: mU, QuickInputButtonLocation: hU, QuickInputButtons: gU, Range: _U, RelativePattern: vU, Selection: yU, SelectionRange: bU, SemanticTokens: xU, SemanticTokensBuilder: SU, SemanticTokensEdit: CU, SemanticTokensEdits: wU, SemanticTokensLegend: TU, ShellExecution: EU, ShellQuoting: DU, SignatureHelp: OU, SignatureHelpTriggerKind: kU, SignatureInformation: AU, SnippetString: jU, SourceBreakpoint: MU, StandardTokenType: NU, StatusBarAlignment: PU, SymbolInformation: FU, SymbolKind: IU, SymbolTag: LU, Task: RU, TaskGroup: zU, TaskPanelKind: BU, TaskRevealKind: VU, TaskScope: HU, TerminalLink: UU, TerminalQuickFixTerminalCommand: WU, TerminalQuickFixOpener: GU, TerminalLocation: KU, TerminalProfile: qU, TerminalExitReason: JU, TerminalShellExecutionCommandLineConfidence: YU, TextDocumentSaveReason: XU, TextEdit: ZU, SnippetTextEdit: QU, TextEditorCursorStyle: $U, TextEditorLineNumbersStyle: eW, TextEditorRevealType: tW, TextEditorSelectionChangeKind: nW, SyntaxTokenType: rW, TextDocumentChangeReason: iW, ThemeColor: aW, ThemeIcon: oW, TreeItem: sW, TreeItemCheckboxState: cW, TreeItemCollapsibleState: lW, TypeHierarchyItem: uW, UIKind: dW, Uri: fW, ViewColumn: pW, WorkspaceEdit: mW, DocumentPasteTriggerKind: hW, DocumentDropEdit: gW, DocumentDropOrPasteEditKind: _W, DocumentPasteEdit: vW, InlayHint: yW, InlayHintLabelPart: bW, InlayHintKind: xW, RemoteAuthorityResolverError: SW, ResolvedAuthority: CW, ManagedResolvedAuthority: wW, SourceControlInputBoxValidationType: TW, ExtensionRuntime: EW, TimelineItem: DW, NotebookRange: OW, NotebookCellKind: kW, NotebookCellData: AW, NotebookData: jW, NotebookRendererScript: MW, NotebookCellStatusBarAlignment: NW, NotebookEditorRevealType: PW, NotebookCellOutput: FW, NotebookCellOutputItem: IW, NotebookCellStatusBarItem: LW, NotebookControllerAffinity: RW, NotebookControllerAffinity2: zW, NotebookEdit: BW, NotebookKernelSourceAction: VW, NotebookVariablesRequestKind: HW, PortAttributes: UW, LinkedEditingRanges: WW, TestResultState: GW, TestRunRequest: KW, TestMessage: qW, TestMessageStackFrame: JW, TestTag: YW, TestRunProfileKind: XW, TextSearchCompleteMessageType: ZW, DataTransfer: QW, DataTransferItem: $W, TestCoverageCount: eG, FileCoverage: tG, StatementCoverage: nG, BranchCoverage: rG, DeclarationCoverage: iG, LanguageStatusSeverity: aG, QuickPickItemKind: oG, InputBoxValidationSeverity: sG, TabInputText: cG, TabInputTextDiff: lG, TabInputTextMerge: uG, TabInputCustom: dG, TabInputNotebook: fG, TabInputNotebookDiff: pG, TabInputWebview: mG, TabInputTerminal: hG, TabInputInteractiveWindow: gG, TabInputChat: _G, TabInputTextMultiDiff: vG, TelemetryTrustedValue: yG, LogLevel: bG, EditSessionIdentityMatch: xG, ChatCopyKind: SG, DebugStackFrame: CG, DebugThread: wG, RelatedInformationType: TG, SpeechToTextStatus: EG, TextToSpeechStatus: DG, PartialAcceptTriggerKind: OG, KeywordRecognitionStatus: kG, ChatResponseMarkdownPart: AG, ChatResponseFileTreePart: jG, ChatResponseAnchorPart: MG, ChatResponseProgressPart: NG, ChatResponseProgressPart2: PG, ChatResponseReferencePart: FG, ChatResponseReferencePart2: IG, ChatResponseCodeCitationPart: LG, ChatResponseWarningPart: RG, ChatResponseTextEditPart: zG, ChatResponseMarkdownWithVulnerabilitiesPart: BG, ChatResponseCommandButtonPart: VG, ChatResponseConfirmationPart: HG, ChatResponseReferencePartStatusKind: UG, ChatRequestTurn: WG, ChatResponseTurn: GG, ChatLocation: KG, ChatRequestEditorData: qG, ChatRequestNotebookData: JG, ChatResponseMovePart: YG, LanguageModelChatMessageRole: XG, LanguageModelChatMessage: ZG, LanguageModelError: QG, NewSymbolName: $G, NewSymbolNameTag: eK, NewSymbolNameTriggerKind: tK, ExcludeSettingOptions: nK, ChatResponseCodeblockUriPart: rK, ChatEditingSessionActionOutcome: iK, LanguageModelChatToolMode: aK, LanguageModelToolCallPart: oK, LanguageModelToolResultPart: sK, LanguageModelTextPart: cK, LanguageModelPromptTsxPart: lK, LanguageModelToolResult: uK, ChatReferenceBinaryData: dK, CellErrorStackFrame: fK, TerminalCompletionItemKind: pK, TerminalCompletionList: mK, TextEditorChangeKind: hK, TextSearchMatch2: gK, TextSearchContext2: _K, ChatResponseNotebookEditPart: vK, ChatErrorLevel: yK, ExtendedLanguageModelToolResult: bK, ChatReferenceDiagnostic: xK, LanguageModelChatMessage2: SK, LanguageModelDataPart: CK, McpStdioServerDefinition: wK, SettingsSearchResultKind: TK, ChatResponseExtensionsPart: EK, ChatRequestEditedFileEventKind: DK, ChatRequestTurn2: OK, InlineCompletionEndOfLifeReasonKind: kK, LanguageModelToolResultPart2: AK, LanguageModelToolResult2: jK, McpHttpServerDefinition: MK, AISearchKeyword: NK, ChatPrepareToolInvocationPart: PK, InlineCompletionsDisposeReasonKind: FK, ChatToolInvocationPart: IK, ChatResponseMultiDiffPart: LK, ChatResponsePullRequestPart: RK, ChatResponseClearToPreviousToolInvocationReason: zK, LanguageModelToolExtensionSource: BK, LanguageModelToolMCPSource: VK, ChatResponseTurn2: HK, LanguageModelTextPart2: UK, LanguageModelDataPart2: WK, ChatResponseThinkingProgressPart: GK, ChatSessionStatus: KK, InlineCompletionDisplayLocationKind: qK, LanguageModelThinkingPart: JK, LanguageModelPartAudience: YK, ChatResponseExternalEditPart: XK, McpToolAvailability: ZK, McpStdioServerDefinition2: QK, McpHttpServerDefinition2: $K, TerminalCompletionItem: eq, ChatSessionChangedFile: tq} = {
+var SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, RV, zV, BV, VV, HV, UV, WV, GV, KV, qV, JV, YV, XV, ZV, QV, $V, eH, tH, nH, rH, iH, aH, oH, sH, cH, lH, uH, dH, fH, pH, mH, hH, gH, _H, vH, yH, bH, xH, SH, CH, wH, TH, EH, DH, OH, kH, AH, jH, MH, NH, PH, FH, IH, LH, RH, zH, BH, VH, HH, UH, WH, GH, KH, qH, JH, YH, XH, ZH, QH, $H, eU, tU, nU, rU, iU, aU, oU, sU, cU, lU, uU, dU, fU, pU, mU, hU, gU, _U, vU, yU, bU, xU, SU, CU, wU, TU, EU, DU, OU, kU, AU, jU, MU, NU, PU, FU, IU, LU, RU, zU, BU, VU, HU, UU, WU, GU, KU, qU, JU, YU, XU, ZU, QU, $U, eW, tW, nW, rW, iW, aW, oW, sW, cW, lW, uW, dW, fW, pW, mW, hW, gW, _W, vW, yW, bW, xW, SW, CW, wW, TW, EW, DW, OW, kW, AW, jW, MW, NW, PW, FW, IW, LW, RW, zW, BW, VW, HW, UW, WW, GW, KW, qW, JW, YW, XW, ZW, QW, $W, eG, tG, nG, rG, iG, aG, oG, sG, cG, lG, uG, dG, fG, pG, mG, hG, gG, _G, vG, yG, bG, xG, SG, CG, wG, TG, EG, DG, OG, kG, AG, jG, MG, NG, PG, FG, IG, LG, RG, zG, BG, VG, HG, UG, WG, GG, KG, qG, JG, YG, XG, ZG, QG, $G, eK, tK, nK, rK, iK, aK, oK, sK, cK, lK, uK, dK, fK, pK, mK, hK, gK, _K, vK, yK, bK, xK, SK, CK, wK, TK, EK, DK, OK, kK, AK, jK, MK, NK, PK, FK, IK, LK, RK, zK, BK, VK, HK, UK, WK, GK, KK, qK, JK, YK, XK, ZK, QK, $K, eq, tq, nq, rq, iq, aq = t((() => {
+	gv(), ia(), Ca(), YS(), Eo(), W(), Mv(), $s(), _o(), Xh(), zg(), pe(), AA(), cl(), U(), Gw(), yV(), T(), Pg(), Ip(), PS(), Dm(), qg(), mp(), im(), gm(), Gf(), ig(), Qv(), jf(), cb(), {version: SV, tasks: CV, notebooks: wV, scm: TV, comments: EV, authentication: DV, tests: OV, extensions: kV, debug: AV, env: jV, commands: MV, window: NV, workspace: PV, languages: FV, l10n: IV, interactive: LV, ai: RV, chat: zV, speech: BV, lm: VV, Breakpoint: HV, TerminalOutputAnchor: UV, ChatResultFeedbackKind: WV, ChatVariableLevel: GV, ChatCompletionItem: KV, CallHierarchyIncomingCall: qV, CallHierarchyItem: JV, CallHierarchyOutgoingCall: YV, CancellationError: XV, CancellationTokenSource: ZV, CandidatePortSource: QV, CodeAction: $V, CodeActionKind: eH, CodeActionTriggerKind: tH, CodeLens: nH, Color: rH, ColorInformation: iH, ColorPresentation: aH, ColorThemeKind: oH, CommentMode: sH, CommentState: cH, CommentThreadCollapsibleState: lH, CommentThreadState: uH, CommentThreadApplicability: dH, CommentThreadFocus: fH, CompletionItem: pH, CompletionItemKind: mH, CompletionItemTag: hH, CompletionList: gH, CompletionTriggerKind: _H, ConfigurationTarget: vH, CustomExecution: yH, DebugAdapterExecutable: bH, DebugAdapterInlineImplementation: xH, DebugAdapterNamedPipeServer: SH, DebugAdapterServer: CH, DebugConfigurationProviderTriggerKind: wH, DebugConsoleMode: TH, DebugVisualization: EH, DecorationRangeBehavior: DH, Diagnostic: OH, DiagnosticRelatedInformation: kH, DiagnosticSeverity: AH, DiagnosticTag: jH, Disposable: MH, DocumentHighlight: NH, DocumentHighlightKind: PH, MultiDocumentHighlight: FH, DocumentLink: IH, DocumentSymbol: LH, EndOfLine: RH, EnvironmentVariableMutatorType: zH, EvaluatableExpression: BH, InlineValueText: VH, InlineValueVariableLookup: HH, InlineValueEvaluatableExpression: UH, InlineCompletionTriggerKind: WH, EventEmitter: GH, ExtensionKind: KH, ExtensionMode: qH, ExternalUriOpenerPriority: JH, FileChangeType: YH, FileDecoration: XH, FileDecoration2: ZH, FileSystemError: QH, FileType: $H, FilePermission: eU, FoldingRange: tU, FoldingRangeKind: nU, FunctionBreakpoint: rU, InlineCompletionItem: iU, InlineCompletionList: aU, Hover: oU, VerboseHover: sU, HoverVerbosityAction: cU, IndentAction: lU, Location: uU, MarkdownString: dU, OverviewRulerLane: fU, ParameterInformation: pU, PortAutoForwardAction: mU, Position: hU, ProcessExecution: gU, ProgressLocation: _U, QuickInputButtonLocation: vU, QuickInputButtons: yU, Range: bU, RelativePattern: xU, Selection: SU, SelectionRange: CU, SemanticTokens: wU, SemanticTokensBuilder: TU, SemanticTokensEdit: EU, SemanticTokensEdits: DU, SemanticTokensLegend: OU, ShellExecution: kU, ShellQuoting: AU, SignatureHelp: jU, SignatureHelpTriggerKind: MU, SignatureInformation: NU, SnippetString: PU, SourceBreakpoint: FU, StandardTokenType: IU, StatusBarAlignment: LU, SymbolInformation: RU, SymbolKind: zU, SymbolTag: BU, Task: VU, TaskGroup: HU, TaskPanelKind: UU, TaskRevealKind: WU, TaskScope: GU, TerminalLink: KU, TerminalQuickFixTerminalCommand: qU, TerminalQuickFixOpener: JU, TerminalLocation: YU, TerminalProfile: XU, TerminalExitReason: ZU, TerminalShellExecutionCommandLineConfidence: QU, TextDocumentSaveReason: $U, TextEdit: eW, SnippetTextEdit: tW, TextEditorCursorStyle: nW, TextEditorLineNumbersStyle: rW, TextEditorRevealType: iW, TextEditorSelectionChangeKind: aW, SyntaxTokenType: oW, TextDocumentChangeReason: sW, ThemeColor: cW, ThemeIcon: lW, TreeItem: uW, TreeItemCheckboxState: dW, TreeItemCollapsibleState: fW, TypeHierarchyItem: pW, UIKind: mW, Uri: hW, ViewColumn: gW, WorkspaceEdit: _W, DocumentPasteTriggerKind: vW, DocumentDropEdit: yW, DocumentDropOrPasteEditKind: bW, DocumentPasteEdit: xW, InlayHint: SW, InlayHintLabelPart: CW, InlayHintKind: wW, RemoteAuthorityResolverError: TW, ResolvedAuthority: EW, ManagedResolvedAuthority: DW, SourceControlInputBoxValidationType: OW, ExtensionRuntime: kW, TimelineItem: AW, NotebookRange: jW, NotebookCellKind: MW, NotebookCellData: NW, NotebookData: PW, NotebookRendererScript: FW, NotebookCellStatusBarAlignment: IW, NotebookEditorRevealType: LW, NotebookCellOutput: RW, NotebookCellOutputItem: zW, NotebookCellStatusBarItem: BW, NotebookControllerAffinity: VW, NotebookControllerAffinity2: HW, NotebookEdit: UW, NotebookKernelSourceAction: WW, NotebookVariablesRequestKind: GW, PortAttributes: KW, LinkedEditingRanges: qW, TestResultState: JW, TestRunRequest: YW, TestMessage: XW, TestMessageStackFrame: ZW, TestTag: QW, TestRunProfileKind: $W, TextSearchCompleteMessageType: eG, DataTransfer: tG, DataTransferItem: nG, TestCoverageCount: rG, FileCoverage: iG, StatementCoverage: aG, BranchCoverage: oG, DeclarationCoverage: sG, LanguageStatusSeverity: cG, QuickPickItemKind: lG, InputBoxValidationSeverity: uG, TabInputText: dG, TabInputTextDiff: fG, TabInputTextMerge: pG, TabInputCustom: mG, TabInputNotebook: hG, TabInputNotebookDiff: gG, TabInputWebview: _G, TabInputTerminal: vG, TabInputInteractiveWindow: yG, TabInputChat: bG, TabInputTextMultiDiff: xG, TelemetryTrustedValue: SG, LogLevel: CG, EditSessionIdentityMatch: wG, ChatCopyKind: TG, DebugStackFrame: EG, DebugThread: DG, RelatedInformationType: OG, SpeechToTextStatus: kG, TextToSpeechStatus: AG, PartialAcceptTriggerKind: jG, KeywordRecognitionStatus: MG, ChatResponseMarkdownPart: NG, ChatResponseFileTreePart: PG, ChatResponseAnchorPart: FG, ChatResponseProgressPart: IG, ChatResponseProgressPart2: LG, ChatResponseReferencePart: RG, ChatResponseReferencePart2: zG, ChatResponseCodeCitationPart: BG, ChatResponseWarningPart: VG, ChatResponseTextEditPart: HG, ChatResponseMarkdownWithVulnerabilitiesPart: UG, ChatResponseCommandButtonPart: WG, ChatResponseConfirmationPart: GG, ChatResponseReferencePartStatusKind: KG, ChatRequestTurn: qG, ChatResponseTurn: JG, ChatLocation: YG, ChatRequestEditorData: XG, ChatRequestNotebookData: ZG, ChatResponseMovePart: QG, LanguageModelChatMessageRole: $G, LanguageModelChatMessage: eK, LanguageModelError: tK, NewSymbolName: nK, NewSymbolNameTag: rK, NewSymbolNameTriggerKind: iK, ExcludeSettingOptions: aK, ChatResponseCodeblockUriPart: oK, ChatEditingSessionActionOutcome: sK, LanguageModelChatToolMode: cK, LanguageModelToolCallPart: lK, LanguageModelToolResultPart: uK, LanguageModelTextPart: dK, LanguageModelPromptTsxPart: fK, LanguageModelToolResult: pK, ChatReferenceBinaryData: mK, CellErrorStackFrame: hK, TerminalCompletionItemKind: gK, TerminalCompletionList: _K, TextEditorChangeKind: vK, TextSearchMatch2: yK, TextSearchContext2: bK, ChatResponseNotebookEditPart: xK, ChatErrorLevel: SK, ExtendedLanguageModelToolResult: CK, ChatReferenceDiagnostic: wK, LanguageModelChatMessage2: TK, LanguageModelDataPart: EK, McpStdioServerDefinition: DK, SettingsSearchResultKind: OK, ChatResponseExtensionsPart: kK, ChatRequestEditedFileEventKind: AK, ChatRequestTurn2: jK, InlineCompletionEndOfLifeReasonKind: MK, LanguageModelToolResultPart2: NK, LanguageModelToolResult2: PK, McpHttpServerDefinition: FK, AISearchKeyword: IK, ChatPrepareToolInvocationPart: LK, InlineCompletionsDisposeReasonKind: RK, ChatToolInvocationPart: zK, ChatResponseMultiDiffPart: BK, ChatResponsePullRequestPart: VK, ChatResponseClearToPreviousToolInvocationReason: HK, LanguageModelToolExtensionSource: UK, LanguageModelToolMCPSource: WK, ChatResponseTurn2: GK, LanguageModelTextPart2: KK, LanguageModelDataPart2: qK, ChatResponseThinkingProgressPart: JK, ChatSessionStatus: YK, InlineCompletionDisplayLocationKind: XK, LanguageModelThinkingPart: ZK, LanguageModelPartAudience: QK, ChatResponseExternalEditPart: $K, McpToolAvailability: eq, McpStdioServerDefinition2: tq, McpHttpServerDefinition2: nq, TerminalCompletionItem: rq, ChatSessionChangedFile: iq} = {
 		version: Or.version,
-		tasks: vV("tasks"),
-		notebooks: vV("notebooks"),
-		scm: vV("scm"),
-		comments: vV("comments"),
-		authentication: vV("authentication"),
-		tests: vV("tests"),
-		extensions: vV("extensions"),
-		debug: vV("debug"),
-		env: vV("env"),
-		commands: vV("commands"),
-		window: vV("window"),
-		workspace: vV("workspace"),
-		languages: vV("languages"),
-		l10n: vV("l10n"),
-		interactive: vV("interactive"),
-		ai: vV("ai"),
-		chat: vV("chat"),
-		speech: vV("speech"),
-		lm: vV("lm"),
+		tasks: xV("tasks"),
+		notebooks: xV("notebooks"),
+		scm: xV("scm"),
+		comments: xV("comments"),
+		authentication: xV("authentication"),
+		tests: xV("tests"),
+		extensions: xV("extensions"),
+		debug: xV("debug"),
+		env: xV("env"),
+		commands: xV("commands"),
+		window: xV("window"),
+		workspace: xV("workspace"),
+		languages: xV("languages"),
+		l10n: xV("l10n"),
+		interactive: xV("interactive"),
+		ai: xV("ai"),
+		chat: xV("chat"),
+		speech: xV("speech"),
+		lm: xV("lm"),
 		Breakpoint: ip,
 		TerminalOutputAnchor: Bf,
 		ChatResultFeedbackKind: oS,
@@ -26846,9 +26846,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		TabInputInteractiveWindow: Gg,
 		TabInputChat: ag,
 		TabInputTextMultiDiff: Qg,
-		TelemetryTrustedValue: Aw,
+		TelemetryTrustedValue: Nw,
 		LogLevel: L,
-		EditSessionIdentityMatch: EA,
+		EditSessionIdentityMatch: kA,
 		ChatCopyKind: hg,
 		DebugStackFrame: R_,
 		DebugThread: Ab,
@@ -26938,7 +26938,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		TerminalCompletionItem: U_,
 		ChatSessionChangedFile: eg
 	};
-})), rq = /* @__PURE__ */ r(((e) => {
+})), oq = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.asPromise = e.thenable = e.typedArray = e.stringArray = e.array = e.func = e.error = e.number = e.string = e.boolean = void 0;
 	function t(e) {
 		return e === !0 || e === !1;
@@ -26982,7 +26982,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}) : Promise.resolve(e);
 	}
 	e.asPromise = u;
-})), iq = /* @__PURE__ */ r(((e) => {
+})), sq = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.generateUuid = e.parse = e.isUUID = e.v4 = e.empty = void 0;
 	var t = class {
 		constructor(e) {
@@ -27084,9 +27084,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		return r().asHex();
 	}
 	e.generateUuid = s;
-})), aq = /* @__PURE__ */ r(((t) => {
+})), cq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.WorkspaceFeature = t.TextDocumentLanguageFeature = t.TextDocumentEventFeature = t.DynamicDocumentFeature = t.DynamicFeature = t.StaticFeature = t.ensure = t.LSPCancellationError = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = rq(), a = iq();
+	var n = (aq(), e(bV)), r = OA(), i = oq(), a = sq();
 	t.LSPCancellationError = class extends n.CancellationError {
 		constructor(e) {
 			super(), this.data = e;
@@ -27283,9 +27283,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return e;
 		}
 	};
-})), oq = /* @__PURE__ */ r(((e, t) => {
+})), lq = /* @__PURE__ */ r(((e, t) => {
 	t.exports = typeof process == "object" && process && process.platform === "win32" ? { sep: "\\" } : { sep: "/" };
-})), sq = /* @__PURE__ */ r(((e, t) => {
+})), uq = /* @__PURE__ */ r(((e, t) => {
 	t.exports = n;
 	function n(e, t, n) {
 		e instanceof RegExp && (e = r(e, n)), t instanceof RegExp && (t = r(t, n));
@@ -27312,8 +27312,8 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}
 		return s;
 	}
-})), cq = /* @__PURE__ */ r(((e, t) => {
-	var n = sq();
+})), dq = /* @__PURE__ */ r(((e, t) => {
+	var n = uq();
 	t.exports = f;
 	var r = "\0SLASH" + Math.random() + "\0", i = "\0OPEN" + Math.random() + "\0", a = "\0CLOSE" + Math.random() + "\0", o = "\0COMMA" + Math.random() + "\0", s = "\0PERIOD" + Math.random() + "\0";
 	function c(e) {
@@ -27408,14 +27408,14 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return i;
 		}
 	}
-})), lq = /* @__PURE__ */ r(((e, t) => {
+})), fq = /* @__PURE__ */ r(((e, t) => {
 	var n = t.exports = (e, t, n = {}) => (v(t), !n.nocomment && t.charAt(0) === "#" ? !1 : new S(t, n).match(e));
 	t.exports = n;
-	var r = oq();
+	var r = lq();
 	n.sep = r.sep;
 	var i = Symbol("globstar **");
 	n.GLOBSTAR = i;
-	var a = cq(), o = {
+	var a = dq(), o = {
 		"!": {
 			open: "(?:(?!(?:",
 			close: "))[^/]*?)"
@@ -27745,9 +27745,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}
 	};
 	n.Minimatch = S;
-})), uq = /* @__PURE__ */ r(((t) => {
+})), pq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.DiagnosticFeature = t.DiagnosticPullMode = t.vsdiag = void 0;
-	var n = lq(), r = (nq(), e(_V)), i = TA(), a = iq(), o = aq();
+	var n = fq(), r = (aq(), e(bV)), i = OA(), a = sq(), o = cq();
 	function s(e, t) {
 		return e[t] === void 0 && (e[t] = {}), e[t];
 	}
@@ -28222,9 +28222,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return [t.disposable, t];
 		}
 	};
-})), dq = /* @__PURE__ */ r(((e) => {
+})), mq = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.forEach = e.mapAsync = e.map = e.clearTestMode = e.setTestMode = e.Semaphore = e.Delayer = void 0;
-	var t = TA();
+	var t = OA();
 	e.Delayer = class {
 		constructor(e) {
 			this.defaultDelay = e, this.timeout = void 0, this.completionPromise = void 0, this.onSuccess = void 0, this.task = void 0;
@@ -28371,41 +28371,41 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		});
 	}
 	e.forEach = l;
-})), fq = /* @__PURE__ */ r(((t) => {
+})), hq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 });
-	var n = (nq(), e(_V));
+	var n = (aq(), e(bV));
 	t.default = class extends n.CompletionItem {
 		constructor(e) {
 			super(e);
 		}
 	};
-})), pq = /* @__PURE__ */ r(((t) => {
+})), gq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 });
-	var n = (nq(), e(_V));
+	var n = (aq(), e(bV));
 	t.default = class extends n.CodeLens {
 		constructor(e) {
 			super(e);
 		}
 	};
-})), mq = /* @__PURE__ */ r(((t) => {
+})), _q = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 });
-	var n = (nq(), e(_V));
+	var n = (aq(), e(bV));
 	t.default = class extends n.DocumentLink {
 		constructor(e, t) {
 			super(e, t);
 		}
 	};
-})), hq = /* @__PURE__ */ r(((t) => {
+})), vq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 });
-	var n = (nq(), e(_V));
+	var n = (aq(), e(bV));
 	t.default = class extends n.CodeAction {
 		constructor(e, t) {
 			super(e), this.data = t;
 		}
 	};
-})), gq = /* @__PURE__ */ r(((t) => {
+})), yq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.ProtocolDiagnostic = t.DiagnosticCode = void 0;
-	var n = (nq(), e(_V)), r = rq(), i;
+	var n = (aq(), e(bV)), r = oq(), i;
 	(function(e) {
 		function t(e) {
 			let t = e;
@@ -28417,42 +28417,42 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			super(e, t, n), this.data = r, this.hasDiagnosticCode = !1;
 		}
 	};
-})), _q = /* @__PURE__ */ r(((t) => {
+})), bq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 });
-	var n = (nq(), e(_V));
+	var n = (aq(), e(bV));
 	t.default = class extends n.CallHierarchyItem {
 		constructor(e, t, n, r, i, a, o) {
 			super(e, t, n, r, i, a), o !== void 0 && (this.data = o);
 		}
 	};
-})), vq = /* @__PURE__ */ r(((t) => {
+})), xq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 });
-	var n = (nq(), e(_V));
+	var n = (aq(), e(bV));
 	t.default = class extends n.TypeHierarchyItem {
 		constructor(e, t, n, r, i, a, o) {
 			super(e, t, n, r, i, a), o !== void 0 && (this.data = o);
 		}
 	};
-})), yq = /* @__PURE__ */ r(((t) => {
+})), Sq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 });
-	var n = (nq(), e(_V));
+	var n = (aq(), e(bV));
 	t.default = class extends n.SymbolInformation {
 		constructor(e, t, r, i, a) {
 			let o = !(i instanceof n.Uri);
 			super(e, t, r, o ? i : new n.Location(i, new n.Range(0, 0, 0, 0))), this.hasRange = o, a !== void 0 && (this.data = a);
 		}
 	};
-})), bq = /* @__PURE__ */ r(((t) => {
+})), Cq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 });
-	var n = (nq(), e(_V));
+	var n = (aq(), e(bV));
 	t.default = class extends n.InlayHint {
 		constructor(e, t, n) {
 			super(e, t, n);
 		}
 	};
-})), xq = /* @__PURE__ */ r(((t) => {
+})), wq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.createConverter = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = rq(), a = dq(), o = fq(), s = pq(), c = mq(), l = hq(), u = gq(), d = _q(), f = vq(), p = yq(), m = bq(), h;
+	var n = (aq(), e(bV)), r = OA(), i = oq(), a = mq(), o = hq(), s = gq(), c = _q(), l = vq(), u = yq(), d = bq(), f = xq(), p = Sq(), m = Cq(), h;
 	(function(e) {
 		function t(e) {
 			let t = e;
@@ -28981,9 +28981,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		};
 	}
 	t.createConverter = g;
-})), Sq = /* @__PURE__ */ r(((t) => {
+})), Tq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.createConverter = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = rq(), a = dq(), o = fq(), s = pq(), c = mq(), l = hq(), u = gq(), d = _q(), f = vq(), p = yq(), m = bq(), h = TA(), g;
+	var n = (aq(), e(bV)), r = OA(), i = oq(), a = mq(), o = hq(), s = gq(), c = _q(), l = vq(), u = yq(), d = bq(), f = xq(), p = Sq(), m = Cq(), h = OA(), g;
 	(function(e) {
 		function t(e) {
 			let t = e;
@@ -29628,9 +29628,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		};
 	}
 	t.createConverter = _;
-})), Cq = /* @__PURE__ */ r(((t) => {
+})), Eq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.ProgressPart = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = rq();
+	var n = (aq(), e(bV)), r = OA(), i = oq();
 	t.ProgressPart = class {
 		constructor(e, t, n) {
 			this._client = e, this._token = t, this._reported = 0, this._infinite = !1, this._lspProgressDisposable = this._client.onProgress(r.WorkDoneProgress.type, this._token, (e) => {
@@ -29680,9 +29680,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			this._lspProgressDisposable !== void 0 && (this._lspProgressDisposable.dispose(), this._lspProgressDisposable = void 0), this._tokenDisposable !== void 0 && (this._tokenDisposable.dispose(), this._tokenDisposable = void 0), this._progress = void 0, this._cancellationToken = void 0;
 		}
 	};
-})), wq = /* @__PURE__ */ r(((t) => {
+})), Dq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.NotebookDocumentSyncFeature = void 0;
-	var n = (nq(), e(_V)), r = lq(), i = TA(), a = iq(), o = rq();
+	var n = (aq(), e(bV)), r = fq(), i = OA(), a = sq(), o = oq();
 	function s(e, t) {
 		return e[t] === void 0 && (e[t] = {}), e[t];
 	}
@@ -30194,9 +30194,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}
 	};
 	t.NotebookDocumentSyncFeature = m, m.CellScheme = "vscode-notebook-cell";
-})), Tq = /* @__PURE__ */ r(((t) => {
+})), Oq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.SyncConfigurationFeature = t.toJSONObject = t.ConfigurationFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = rq(), a = iq(), o = aq();
+	var n = (aq(), e(bV)), r = OA(), i = oq(), a = sq(), o = cq();
 	t.ConfigurationFeature = class {
 		constructor(e) {
 			this._client = e;
@@ -30318,9 +30318,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return i;
 		}
 	};
-})), Eq = /* @__PURE__ */ r(((t) => {
+})), kq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.DidSaveTextDocumentFeature = t.WillSaveWaitUntilFeature = t.WillSaveFeature = t.DidChangeTextDocumentFeature = t.DidCloseTextDocumentFeature = t.DidOpenTextDocumentFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq(), a = iq();
+	var n = (aq(), e(bV)), r = OA(), i = cq(), a = sq();
 	t.DidOpenTextDocumentFeature = class extends i.TextDocumentEventFeature {
 		constructor(e, t) {
 			super(e, n.workspace.onDidOpenTextDocument, r.DidOpenTextDocumentNotification.type, () => e.middleware.didOpen, (t) => e.code2ProtocolConverter.asOpenTextDocumentParams(t), (e) => e, i.TextDocumentEventFeature.textDocumentFilter), this._syncedDocuments = t;
@@ -30584,9 +30584,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return e;
 		}
 	};
-})), Dq = /* @__PURE__ */ r(((t) => {
+})), Aq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.CompletionItemFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq(), a = iq(), o = [
+	var n = (aq(), e(bV)), r = OA(), i = cq(), a = sq(), o = [
 		r.CompletionItemKind.Text,
 		r.CompletionItemKind.Method,
 		r.CompletionItemKind.Function,
@@ -30664,9 +30664,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return [n.languages.registerCompletionItemProvider(this._client.protocol2CodeConverter.asDocumentSelector(o), s, ...i), s];
 		}
 	};
-})), Oq = /* @__PURE__ */ r(((t) => {
+})), jq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.HoverFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq(), a = iq();
+	var n = (aq(), e(bV)), r = OA(), i = cq(), a = sq();
 	t.HoverFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.HoverRequest.type);
@@ -30693,9 +30693,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return n.languages.registerHoverProvider(this._client.protocol2CodeConverter.asDocumentSelector(e), t);
 		}
 	};
-})), kq = /* @__PURE__ */ r(((t) => {
+})), Mq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.DefinitionFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq(), a = iq();
+	var n = (aq(), e(bV)), r = OA(), i = cq(), a = sq();
 	t.DefinitionFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.DefinitionRequest.type);
@@ -30722,9 +30722,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return n.languages.registerDefinitionProvider(this._client.protocol2CodeConverter.asDocumentSelector(e), t);
 		}
 	};
-})), Aq = /* @__PURE__ */ r(((t) => {
+})), Nq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.SignatureHelpFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq(), a = iq();
+	var n = (aq(), e(bV)), r = OA(), i = cq(), a = sq();
 	t.SignatureHelpFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.SignatureHelpRequest.type);
@@ -30761,9 +30761,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			}
 		}
 	};
-})), jq = /* @__PURE__ */ r(((t) => {
+})), Pq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.DocumentHighlightFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq(), a = iq();
+	var n = (aq(), e(bV)), r = OA(), i = cq(), a = sq();
 	t.DocumentHighlightFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.DocumentHighlightRequest.type);
@@ -30786,9 +30786,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return [n.languages.registerDocumentHighlightProvider(this._client.protocol2CodeConverter.asDocumentSelector(t), i), i];
 		}
 	};
-})), Mq = /* @__PURE__ */ r(((t) => {
+})), Fq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.DocumentSymbolFeature = t.SupportedSymbolTags = t.SupportedSymbolKinds = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq(), a = iq();
+	var n = (aq(), e(bV)), r = OA(), i = cq(), a = sq();
 	t.SupportedSymbolKinds = [
 		r.SymbolKind.File,
 		r.SymbolKind.Module,
@@ -30851,9 +30851,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return [n.languages.registerDocumentSymbolProvider(this._client.protocol2CodeConverter.asDocumentSelector(t), i, a), i];
 		}
 	};
-})), Nq = /* @__PURE__ */ r(((t) => {
+})), Iq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.WorkspaceSymbolFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq(), a = Mq(), o = iq();
+	var n = (aq(), e(bV)), r = OA(), i = cq(), a = Fq(), o = sq();
 	t.WorkspaceSymbolFeature = class extends i.WorkspaceFeature {
 		constructor(e) {
 			super(e, r.WorkspaceSymbolRequest.type);
@@ -30882,9 +30882,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return [n.languages.registerWorkspaceSymbolProvider(t), t];
 		}
 	};
-})), Pq = /* @__PURE__ */ r(((t) => {
+})), Lq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.ReferencesFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq(), a = iq();
+	var n = (aq(), e(bV)), r = OA(), i = cq(), a = sq();
 	t.ReferencesFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.ReferencesRequest.type);
@@ -30910,9 +30910,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return n.languages.registerReferenceProvider(this._client.protocol2CodeConverter.asDocumentSelector(e), t);
 		}
 	};
-})), Fq = /* @__PURE__ */ r(((t) => {
+})), Rq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.CodeActionFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = iq(), a = aq();
+	var n = (aq(), e(bV)), r = OA(), i = sq(), a = cq();
 	t.CodeActionFeature = class extends a.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.CodeActionRequest.type);
@@ -30958,9 +30958,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return [n.languages.registerCodeActionsProvider(this._client.protocol2CodeConverter.asDocumentSelector(t), i, e.codeActionKinds ? { providedCodeActionKinds: this._client.protocol2CodeConverter.asCodeActionKinds(e.codeActionKinds) } : void 0), i];
 		}
 	};
-})), Iq = /* @__PURE__ */ r(((t) => {
+})), zq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.CodeLensFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = iq(), a = aq();
+	var n = (aq(), e(bV)), r = OA(), i = sq(), a = cq();
 	t.CodeLensFeature = class extends a.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.CodeLensRequest.type);
@@ -30996,9 +30996,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			}];
 		}
 	};
-})), Lq = /* @__PURE__ */ r(((t) => {
+})), Bq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.DocumentOnTypeFormattingFeature = t.DocumentRangeFormattingFeature = t.DocumentFormattingFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = iq(), a = aq(), o;
+	var n = (aq(), e(bV)), r = OA(), i = sq(), a = cq(), o;
 	(function(e) {
 		function t(e) {
 			let t = n.workspace.getConfiguration("files", e);
@@ -31105,9 +31105,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return [n.languages.registerOnTypeFormattingEditProvider(this._client.protocol2CodeConverter.asDocumentSelector(t), i, e.firstTriggerCharacter, ...a), i];
 		}
 	};
-})), Rq = /* @__PURE__ */ r(((t) => {
+})), Vq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.RenameFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = iq(), a = rq(), o = aq();
+	var n = (aq(), e(bV)), r = OA(), i = sq(), a = oq(), o = cq();
 	t.RenameFeature = class extends o.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.RenameRequest.type);
@@ -31162,9 +31162,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return t && a.boolean(t.defaultBehavior);
 		}
 	};
-})), zq = /* @__PURE__ */ r(((t) => {
+})), Hq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.DocumentLinkFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq(), a = iq();
+	var n = (aq(), e(bV)), r = OA(), i = cq(), a = sq();
 	t.DocumentLinkFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.DocumentLinkRequest.type);
@@ -31194,9 +31194,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return [n.languages.registerDocumentLinkProvider(this._client.protocol2CodeConverter.asDocumentSelector(t), i), i];
 		}
 	};
-})), Bq = /* @__PURE__ */ r(((t) => {
+})), Uq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.ExecuteCommandFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = iq(), a = aq();
+	var n = (aq(), e(bV)), r = OA(), i = sq(), a = cq();
 	t.ExecuteCommandFeature = class {
 		constructor(e) {
 			this._client = e, this._commands = /* @__PURE__ */ new Map();
@@ -31244,9 +31244,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			}), this._commands.clear();
 		}
 	};
-})), Vq = /* @__PURE__ */ r(((t) => {
+})), Wq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.FileSystemWatcherFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq();
+	var n = (aq(), e(bV)), r = OA(), i = cq();
 	t.FileSystemWatcherFeature = class {
 		constructor(e, t) {
 			this._client = e, this._notifyFileEvent = t, this._watchers = /* @__PURE__ */ new Map();
@@ -31305,9 +31305,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			}), this._watchers.clear();
 		}
 	};
-})), Hq = /* @__PURE__ */ r(((t) => {
+})), Gq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.ColorProviderFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq();
+	var n = (aq(), e(bV)), r = OA(), i = cq();
 	t.ColorProviderFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.DocumentColorRequest.type);
@@ -31346,9 +31346,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return [n.languages.registerColorProvider(this._client.protocol2CodeConverter.asDocumentSelector(t), i), i];
 		}
 	};
-})), Uq = /* @__PURE__ */ r(((t) => {
+})), Kq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.ImplementationFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq();
+	var n = (aq(), e(bV)), r = OA(), i = cq();
 	t.ImplementationFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.ImplementationRequest.type);
@@ -31375,9 +31375,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return n.languages.registerImplementationProvider(this._client.protocol2CodeConverter.asDocumentSelector(e), t);
 		}
 	};
-})), Wq = /* @__PURE__ */ r(((t) => {
+})), qq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.TypeDefinitionFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq();
+	var n = (aq(), e(bV)), r = OA(), i = cq();
 	t.TypeDefinitionFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.TypeDefinitionRequest.type);
@@ -31405,9 +31405,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return n.languages.registerTypeDefinitionProvider(this._client.protocol2CodeConverter.asDocumentSelector(e), t);
 		}
 	};
-})), Gq = /* @__PURE__ */ r(((t) => {
+})), Jq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.WorkspaceFoldersFeature = t.arrayDiff = void 0;
-	var n = iq(), r = (nq(), e(_V)), i = TA();
+	var n = sq(), r = (aq(), e(bV)), i = OA();
 	function a(e, t) {
 		if (e != null) return e[t];
 	}
@@ -31494,9 +31494,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			};
 		}
 	};
-})), Kq = /* @__PURE__ */ r(((t) => {
+})), Yq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.FoldingRangeFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq();
+	var n = (aq(), e(bV)), r = OA(), i = cq();
 	t.FoldingRangeFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.FoldingRangeRequest.type);
@@ -31536,9 +31536,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			}];
 		}
 	};
-})), qq = /* @__PURE__ */ r(((t) => {
+})), Xq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.DeclarationFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq();
+	var n = (aq(), e(bV)), r = OA(), i = cq();
 	t.DeclarationFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.DeclarationRequest.type);
@@ -31565,9 +31565,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return n.languages.registerDeclarationProvider(this._client.protocol2CodeConverter.asDocumentSelector(e), t);
 		}
 	};
-})), Jq = /* @__PURE__ */ r(((t) => {
+})), Zq = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.SelectionRangeFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq();
+	var n = (aq(), e(bV)), r = OA(), i = cq();
 	t.SelectionRangeFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.SelectionRangeRequest.type);
@@ -31600,9 +31600,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return n.languages.registerSelectionRangeProvider(this._client.protocol2CodeConverter.asDocumentSelector(e), t);
 		}
 	};
-})), Yq = /* @__PURE__ */ r(((e) => {
+})), Qq = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ProgressFeature = void 0;
-	var t = TA(), n = Cq();
+	var t = OA(), n = Eq();
 	function r(e, t) {
 		return e[t] === void 0 && (e[t] = Object.create(null)), e[t];
 	}
@@ -31633,9 +31633,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			this.activeParts.clear();
 		}
 	};
-})), Xq = /* @__PURE__ */ r(((t) => {
+})), $q = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.CallHierarchyFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq(), a = class {
+	var n = (aq(), e(bV)), r = OA(), i = cq(), a = class {
 		constructor(e) {
 			this.client = e, this.middleware = e.middleware;
 		}
@@ -31681,9 +31681,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return [n.languages.registerCallHierarchyProvider(this._client.protocol2CodeConverter.asDocumentSelector(e.documentSelector), r), r];
 		}
 	};
-})), Zq = /* @__PURE__ */ r(((t) => {
+})), eJ = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.SemanticTokensFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq(), a = rq();
+	var n = (aq(), e(bV)), r = OA(), i = cq(), a = oq();
 	t.SemanticTokensFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.SemanticTokensRegistrationType.type);
@@ -31777,9 +31777,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			}];
 		}
 	};
-})), Qq = /* @__PURE__ */ r(((t) => {
+})), tJ = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.WillDeleteFilesFeature = t.WillRenameFilesFeature = t.WillCreateFilesFeature = t.DidDeleteFilesFeature = t.DidRenameFilesFeature = t.DidCreateFilesFeature = void 0;
-	var n = (nq(), e(_V)), r = lq(), i = TA(), a = iq();
+	var n = (aq(), e(bV)), r = fq(), i = OA(), a = sq();
 	function o(e, t) {
 		return e[t] === void 0 && (e[t] = {}), e[t];
 	}
@@ -31980,9 +31980,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return n?.willDeleteFiles ? n.willDeleteFiles(e, t) : t(e);
 		}
 	};
-})), $q = /* @__PURE__ */ r(((t) => {
+})), nJ = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.LinkedEditingFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq();
+	var n = (aq(), e(bV)), r = OA(), i = cq();
 	t.LinkedEditingFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.LinkedEditingRangeRequest.type);
@@ -32009,9 +32009,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return n.languages.registerLinkedEditingRangeProvider(this._client.protocol2CodeConverter.asDocumentSelector(e), t);
 		}
 	};
-})), eJ = /* @__PURE__ */ r(((t) => {
+})), rJ = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.TypeHierarchyFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq(), a = class {
+	var n = (aq(), e(bV)), r = OA(), i = cq(), a = class {
 		constructor(e) {
 			this.client = e, this.middleware = e.middleware;
 		}
@@ -32057,9 +32057,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return [n.languages.registerTypeHierarchyProvider(t.protocol2CodeConverter.asDocumentSelector(e.documentSelector), r), r];
 		}
 	};
-})), tJ = /* @__PURE__ */ r(((t) => {
+})), iJ = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.InlineValueFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq();
+	var n = (aq(), e(bV)), r = OA(), i = cq();
 	t.InlineValueFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.InlineValueRequest.type);
@@ -32101,9 +32101,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return n.languages.registerInlineValuesProvider(this._client.protocol2CodeConverter.asDocumentSelector(e), t);
 		}
 	};
-})), nJ = /* @__PURE__ */ r(((t) => {
+})), aJ = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.InlayHintsFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq();
+	var n = (aq(), e(bV)), r = OA(), i = cq();
 	t.InlayHintsFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.InlayHintRequest.type);
@@ -32168,9 +32168,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return n.languages.registerInlayHintsProvider(this._client.protocol2CodeConverter.asDocumentSelector(e), t);
 		}
 	};
-})), rJ = /* @__PURE__ */ r(((t) => {
+})), oJ = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.InlineCompletionItemFeature = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = aq(), a = iq();
+	var n = (aq(), e(bV)), r = OA(), i = cq(), a = sq();
 	t.InlineCompletionItemFeature = class extends i.TextDocumentLanguageFeature {
 		constructor(e) {
 			super(e, r.InlineCompletionRequest.type);
@@ -32194,9 +32194,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return [n.languages.registerInlineCompletionItemProvider(this._client.protocol2CodeConverter.asDocumentSelector(t), i), i];
 		}
 	};
-})), iJ = /* @__PURE__ */ r(((t) => {
+})), sJ = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.ProposedFeatures = t.BaseLanguageClient = t.MessageTransports = t.SuspendMode = t.State = t.CloseAction = t.ErrorAction = t.RevealOutputChannelOn = void 0;
-	var n = (nq(), e(_V)), r = TA(), i = xq(), a = Sq(), o = rq(), s = dq(), c = iq(), l = Cq(), u = aq(), d = uq(), f = wq(), p = Tq(), m = Eq(), h = Dq(), g = Oq(), _ = kq(), v = Aq(), y = jq(), b = Mq(), ee = Nq(), x = Pq(), te = Fq(), S = Iq(), ne = Lq(), C = Rq(), re = zq(), w = Bq(), T = Vq(), ie = Hq(), E = Uq(), D = Wq(), ae = Gq(), oe = Kq(), se = qq(), ce = Jq(), le = Yq(), ue = Xq(), O = Zq(), de = Qq(), k = $q(), fe = eJ(), pe = tJ(), me = nJ(), he = rJ(), ge;
+	var n = (aq(), e(bV)), r = OA(), i = wq(), a = Tq(), o = oq(), s = mq(), c = sq(), l = Eq(), u = cq(), d = pq(), f = Dq(), p = Oq(), m = kq(), h = Aq(), g = jq(), _ = Mq(), v = Nq(), y = Pq(), b = Fq(), ee = Iq(), x = Lq(), te = Rq(), S = zq(), ne = Bq(), C = Vq(), re = Hq(), w = Uq(), T = Wq(), ie = Gq(), E = Kq(), D = qq(), ae = Jq(), oe = Yq(), se = Xq(), ce = Zq(), le = Qq(), ue = $q(), O = eJ(), de = tJ(), k = nJ(), fe = rJ(), pe = iJ(), me = aJ(), he = oJ(), ge;
 	(function(e) {
 		e[e.Debug = 0] = "Debug", e[e.Info = 1] = "Info", e[e.Warn = 2] = "Warn", e[e.Error = 3] = "Error", e[e.Never = 4] = "Never";
 	})(ge || (t.RevealOutputChannelOn = ge = {}));
@@ -32986,7 +32986,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}
 		e.createAll = t;
 	})(Ee || (t.ProposedFeatures = Ee = {}));
-})), aJ = /* @__PURE__ */ r(((e) => {
+})), cJ = /* @__PURE__ */ r(((e) => {
 	var t = e && e.__createBinding || (Object.create ? (function(e, t, n, r) {
 		r === void 0 && (r = n);
 		var i = Object.getOwnPropertyDescriptor(t, n);
@@ -33001,8 +33001,8 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	})), n = e && e.__exportStar || function(e, n) {
 		for (var r in e) r !== "default" && !Object.prototype.hasOwnProperty.call(n, r) && t(n, e, r);
 	};
-	Object.defineProperty(e, "__esModule", { value: !0 }), e.DiagnosticPullMode = e.vsdiag = void 0, n(TA(), e), n(aq(), e);
-	var r = uq();
+	Object.defineProperty(e, "__esModule", { value: !0 }), e.DiagnosticPullMode = e.vsdiag = void 0, n(OA(), e), n(cq(), e);
+	var r = pq();
 	Object.defineProperty(e, "vsdiag", {
 		enumerable: !0,
 		get: function() {
@@ -33013,10 +33013,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		get: function() {
 			return r.DiagnosticPullMode;
 		}
-	}), n(iJ(), e);
-})), oJ = /* @__PURE__ */ r(((e, t) => {
-	t.exports = TA();
-})), sJ = /* @__PURE__ */ r(((e) => {
+	}), n(sJ(), e);
+})), lJ = /* @__PURE__ */ r(((e, t) => {
+	t.exports = OA();
+})), uJ = /* @__PURE__ */ r(((e) => {
 	var t = e && e.__createBinding || (Object.create ? (function(e, t, n, r) {
 		r === void 0 && (r = n);
 		var i = Object.getOwnPropertyDescriptor(t, n);
@@ -33032,8 +33032,8 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		for (var r in e) r !== "default" && !Object.prototype.hasOwnProperty.call(n, r) && t(n, e, r);
 	};
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.LanguageClient = void 0;
-	var r = aJ(), i = oJ();
-	n(oJ(), e), n(aJ(), e), e.LanguageClient = class extends r.BaseLanguageClient {
+	var r = cJ(), i = lJ();
+	n(lJ(), e), n(cJ(), e), e.LanguageClient = class extends r.BaseLanguageClient {
 		constructor(e, t, n, r) {
 			super(e, t, n), this.worker = r;
 		}
@@ -33045,9 +33045,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			});
 		}
 	};
-})), cJ = (/* @__PURE__ */ r(((e, t) => {
-	t.exports = sJ();
-})))(), lJ = class extends cJ.BaseLanguageClient {
+})), dJ = (/* @__PURE__ */ r(((e, t) => {
+	t.exports = uJ();
+})))(), fJ = class extends dJ.BaseLanguageClient {
 	messageTransports;
 	constructor({ id: e, name: t, clientOptions: n, messageTransports: r }) {
 		super(e ?? t.toLowerCase(), t, n), this.messageTransports = r;
@@ -33055,16 +33055,16 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	createMessageTransports(e) {
 		return Promise.resolve(this.messageTransports);
 	}
-}, uJ = class extends lJ {
+}, pJ = class extends fJ {
 	constructor({ id: e, name: t, clientOptions: n, messageTransports: r }) {
 		super({
 			id: e,
 			name: t,
 			clientOptions: n,
 			messageTransports: r
-		}), cJ.ProposedFeatures.createAll(this);
+		}), dJ.ProposedFeatures.createAll(this);
 	}
-}, dJ = /* @__PURE__ */ r(((e) => {
+}, mJ = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.stringArray = e.array = e.func = e.error = e.number = e.string = e.boolean = void 0;
 	function t(e) {
 		return e === !0 || e === !1;
@@ -33094,9 +33094,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		return o(e) && e.every((e) => n(e));
 	}
 	e.stringArray = s;
-})), fJ = /* @__PURE__ */ r(((e) => {
+})), hJ = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.Message = e.NotificationType9 = e.NotificationType8 = e.NotificationType7 = e.NotificationType6 = e.NotificationType5 = e.NotificationType4 = e.NotificationType3 = e.NotificationType2 = e.NotificationType1 = e.NotificationType0 = e.NotificationType = e.RequestType9 = e.RequestType8 = e.RequestType7 = e.RequestType6 = e.RequestType5 = e.RequestType4 = e.RequestType3 = e.RequestType2 = e.RequestType1 = e.RequestType = e.RequestType0 = e.AbstractMessageSignature = e.ParameterStructures = e.ResponseError = e.ErrorCodes = void 0;
-	var t = dJ(), n;
+	var t = mJ(), n;
 	(function(e) {
 		e.ParseError = -32700, e.InvalidRequest = -32600, e.MethodNotFound = -32601, e.InvalidParams = -32602, e.InternalError = -32603, e.jsonrpcReservedErrorRangeStart = -32099, e.serverErrorStart = -32099, e.MessageWriteError = -32099, e.MessageReadError = -32098, e.PendingResponseRejected = -32097, e.ConnectionInactive = -32096, e.ServerNotInitialized = -32002, e.UnknownErrorCode = -32001, e.jsonrpcReservedErrorRangeEnd = -32e3, e.serverErrorEnd = -32e3;
 	})(n || (e.ErrorCodes = n = {})), e.ResponseError = class e extends Error {
@@ -33250,7 +33250,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}
 		e.isResponse = i;
 	})(a || (e.Message = a = {}));
-})), pJ = /* @__PURE__ */ r(((e) => {
+})), gJ = /* @__PURE__ */ r(((e) => {
 	var t;
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.LRUCache = e.LinkedMap = e.Touch = void 0;
 	var n;
@@ -33481,7 +33481,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			this.size > this._limit && this.trimOld(Math.round(this._limit * this._ratio));
 		}
 	};
-})), mJ = /* @__PURE__ */ r(((e) => {
+})), _J = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.Disposable = void 0;
 	var t;
 	(function(e) {
@@ -33490,7 +33490,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}
 		e.create = t;
 	})(t || (e.Disposable = t = {}));
-})), hJ = /* @__PURE__ */ r(((e) => {
+})), vJ = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 });
 	var t;
 	function n() {
@@ -33504,9 +33504,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}
 		e.install = n;
 	})(n ||= {}), e.default = n;
-})), gJ = /* @__PURE__ */ r(((e) => {
+})), yJ = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.Emitter = e.Event = void 0;
-	var t = hJ(), n;
+	var t = vJ(), n;
 	(function(e) {
 		let t = { dispose() {} };
 		e.None = function() {
@@ -33563,9 +33563,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}
 	};
 	e.Emitter = i, i._noop = function() {};
-})), _J = /* @__PURE__ */ r(((e) => {
+})), bJ = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.CancellationTokenSource = e.CancellationToken = void 0;
-	var t = hJ(), n = dJ(), r = gJ(), i;
+	var t = vJ(), n = mJ(), r = yJ(), i;
 	(function(e) {
 		e.None = Object.freeze({
 			isCancellationRequested: !1,
@@ -33613,9 +33613,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			this._token ? this._token instanceof o && this._token.dispose() : this._token = i.None;
 		}
 	};
-})), vJ = /* @__PURE__ */ r(((e) => {
+})), xJ = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.SharedArrayReceiverStrategy = e.SharedArraySenderStrategy = void 0;
-	var t = _J(), n;
+	var t = bJ(), n;
 	(function(e) {
 		e.Continue = 0, e.Cancelled = 1;
 	})(n ||= {}), e.SharedArraySenderStrategy = class {
@@ -33666,9 +33666,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return n === void 0 ? new t.CancellationTokenSource() : new i(n);
 		}
 	};
-})), yJ = /* @__PURE__ */ r(((e) => {
+})), SJ = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.Semaphore = void 0;
-	var t = hJ();
+	var t = vJ();
 	e.Semaphore = class {
 		constructor(e = 1) {
 			if (e <= 0) throw Error("Capacity must be greater than 0");
@@ -33705,9 +33705,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			}
 		}
 	};
-})), bJ = /* @__PURE__ */ r(((e) => {
+})), CJ = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ReadableStreamMessageReader = e.AbstractMessageReader = e.MessageReader = void 0;
-	var t = hJ(), n = dJ(), r = gJ(), i = yJ(), a;
+	var t = vJ(), n = mJ(), r = yJ(), i = SJ(), a;
 	(function(e) {
 		function t(e) {
 			let t = e;
@@ -33826,9 +33826,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			}, this._partialMessageTimeout, this.messageToken, this._partialMessageTimeout));
 		}
 	};
-})), xJ = /* @__PURE__ */ r(((e) => {
+})), wJ = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.WriteableStreamMessageWriter = e.AbstractMessageWriter = e.MessageWriter = void 0;
-	var t = hJ(), n = dJ(), r = yJ(), i = gJ(), a = "Content-Length: ", o = "\r\n", s;
+	var t = vJ(), n = mJ(), r = SJ(), i = yJ(), a = "Content-Length: ", o = "\r\n", s;
 	(function(e) {
 		function t(e) {
 			let t = e;
@@ -33903,7 +33903,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			this.writable.end();
 		}
 	};
-})), SJ = /* @__PURE__ */ r(((e) => {
+})), TJ = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.AbstractMessageBuffer = void 0;
 	var t = 13, n = 10, r = "\r\n";
 	e.AbstractMessageBuffer = class {
@@ -33992,9 +33992,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return t;
 		}
 	};
-})), CJ = /* @__PURE__ */ r(((e) => {
+})), EJ = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.createMessageConnection = e.ConnectionOptions = e.MessageStrategy = e.CancellationStrategy = e.CancellationSenderStrategy = e.CancellationReceiverStrategy = e.RequestCancellationReceiverStrategy = e.IdCancellationReceiverStrategy = e.ConnectionStrategy = e.ConnectionError = e.ConnectionErrors = e.LogTraceNotification = e.SetTraceNotification = e.TraceFormat = e.TraceValues = e.Trace = e.NullLogger = e.ProgressType = e.ProgressToken = void 0;
-	var t = hJ(), n = dJ(), r = fJ(), i = pJ(), a = gJ(), o = _J(), s;
+	var t = vJ(), n = mJ(), r = hJ(), i = gJ(), a = yJ(), o = bJ(), s;
 	(function(e) {
 		e.type = new r.NotificationType("$/cancelRequest");
 	})(s ||= {});
@@ -34629,9 +34629,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}), Ze;
 	}
 	e.createMessageConnection = re;
-})), wJ = /* @__PURE__ */ r(((e) => {
+})), DJ = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ProgressType = e.ProgressToken = e.createMessageConnection = e.NullLogger = e.ConnectionOptions = e.ConnectionStrategy = e.AbstractMessageBuffer = e.WriteableStreamMessageWriter = e.AbstractMessageWriter = e.MessageWriter = e.ReadableStreamMessageReader = e.AbstractMessageReader = e.MessageReader = e.SharedArrayReceiverStrategy = e.SharedArraySenderStrategy = e.CancellationToken = e.CancellationTokenSource = e.Emitter = e.Event = e.Disposable = e.LRUCache = e.Touch = e.LinkedMap = e.ParameterStructures = e.NotificationType9 = e.NotificationType8 = e.NotificationType7 = e.NotificationType6 = e.NotificationType5 = e.NotificationType4 = e.NotificationType3 = e.NotificationType2 = e.NotificationType1 = e.NotificationType0 = e.NotificationType = e.ErrorCodes = e.ResponseError = e.RequestType9 = e.RequestType8 = e.RequestType7 = e.RequestType6 = e.RequestType5 = e.RequestType4 = e.RequestType3 = e.RequestType2 = e.RequestType1 = e.RequestType0 = e.RequestType = e.Message = e.RAL = void 0, e.MessageStrategy = e.CancellationStrategy = e.CancellationSenderStrategy = e.CancellationReceiverStrategy = e.ConnectionError = e.ConnectionErrors = e.LogTraceNotification = e.SetTraceNotification = e.TraceFormat = e.TraceValues = e.Trace = void 0;
-	var t = fJ();
+	var t = hJ();
 	Object.defineProperty(e, "Message", {
 		enumerable: !0,
 		get: function() {
@@ -34763,7 +34763,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return t.ParameterStructures;
 		}
 	});
-	var n = pJ();
+	var n = gJ();
 	Object.defineProperty(e, "LinkedMap", {
 		enumerable: !0,
 		get: function() {
@@ -34780,14 +34780,14 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return n.Touch;
 		}
 	});
-	var r = mJ();
+	var r = _J();
 	Object.defineProperty(e, "Disposable", {
 		enumerable: !0,
 		get: function() {
 			return r.Disposable;
 		}
 	});
-	var i = gJ();
+	var i = yJ();
 	Object.defineProperty(e, "Event", {
 		enumerable: !0,
 		get: function() {
@@ -34799,7 +34799,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return i.Emitter;
 		}
 	});
-	var a = _J();
+	var a = bJ();
 	Object.defineProperty(e, "CancellationTokenSource", {
 		enumerable: !0,
 		get: function() {
@@ -34811,7 +34811,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return a.CancellationToken;
 		}
 	});
-	var o = vJ();
+	var o = xJ();
 	Object.defineProperty(e, "SharedArraySenderStrategy", {
 		enumerable: !0,
 		get: function() {
@@ -34823,7 +34823,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return o.SharedArrayReceiverStrategy;
 		}
 	});
-	var s = bJ();
+	var s = CJ();
 	Object.defineProperty(e, "MessageReader", {
 		enumerable: !0,
 		get: function() {
@@ -34840,7 +34840,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return s.ReadableStreamMessageReader;
 		}
 	});
-	var c = xJ();
+	var c = wJ();
 	Object.defineProperty(e, "MessageWriter", {
 		enumerable: !0,
 		get: function() {
@@ -34857,14 +34857,14 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return c.WriteableStreamMessageWriter;
 		}
 	});
-	var l = SJ();
+	var l = TJ();
 	Object.defineProperty(e, "AbstractMessageBuffer", {
 		enumerable: !0,
 		get: function() {
 			return l.AbstractMessageBuffer;
 		}
 	});
-	var u = CJ();
+	var u = EJ();
 	Object.defineProperty(e, "ConnectionStrategy", {
 		enumerable: !0,
 		get: function() {
@@ -34950,10 +34950,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		get: function() {
 			return u.MessageStrategy;
 		}
-	}), e.RAL = hJ().default;
-})), TJ = /* @__PURE__ */ r(((e) => {
+	}), e.RAL = vJ().default;
+})), OJ = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 });
-	var t = wJ(), n = class e extends t.AbstractMessageBuffer {
+	var t = DJ(), n = class e extends t.AbstractMessageBuffer {
 		constructor(e = "utf-8") {
 			super(e), this.asciiDecoder = new TextDecoder("ascii");
 		}
@@ -35066,7 +35066,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}
 		e.install = n;
 	})(s ||= {}), e.default = s;
-})), EJ = /* @__PURE__ */ r(((e) => {
+})), kJ = /* @__PURE__ */ r(((e) => {
 	var t = e && e.__createBinding || (Object.create ? (function(e, t, n, r) {
 		r === void 0 && (r = n);
 		var i = Object.getOwnPropertyDescriptor(t, n);
@@ -35081,9 +35081,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	})), n = e && e.__exportStar || function(e, n) {
 		for (var r in e) r !== "default" && !Object.prototype.hasOwnProperty.call(n, r) && t(n, e, r);
 	};
-	Object.defineProperty(e, "__esModule", { value: !0 }), e.createMessageConnection = e.BrowserMessageWriter = e.BrowserMessageReader = void 0, TJ().default.install();
-	var r = wJ();
-	n(wJ(), e), e.BrowserMessageReader = class extends r.AbstractMessageReader {
+	Object.defineProperty(e, "__esModule", { value: !0 }), e.createMessageConnection = e.BrowserMessageWriter = e.BrowserMessageReader = void 0, OJ().default.install();
+	var r = DJ();
+	n(DJ(), e), e.BrowserMessageReader = class extends r.AbstractMessageReader {
 		constructor(e) {
 			super(), this._onData = new r.Emitter(), this._messageListener = (e) => {
 				this._onData.fire(e.data);
@@ -35112,116 +35112,116 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		return n === void 0 && (n = r.NullLogger), r.ConnectionStrategy.is(i) && (i = { connectionStrategy: i }), (0, r.createMessageConnection)(e, t, n, i);
 	}
 	e.createMessageConnection = i;
-})), DJ = /* @__PURE__ */ r(((e, t) => {
-	t.exports = EJ();
-})), OJ = /* @__PURE__ */ n({
-	AnnotatedTextEdit: () => ZJ,
-	ChangeAnnotation: () => YJ,
-	ChangeAnnotationIdentifier: () => XJ,
-	CodeAction: () => PY,
-	CodeActionContext: () => NY,
-	CodeActionKind: () => jY,
-	CodeActionTriggerKind: () => MY,
-	CodeDescription: () => GJ,
-	CodeLens: () => FY,
-	Color: () => LJ,
-	ColorInformation: () => RJ,
-	ColorPresentation: () => zJ,
-	Command: () => qJ,
-	CompletionItem: () => vY,
-	CompletionItemKind: () => fY,
-	CompletionItemLabelDetails: () => _Y,
-	CompletionItemTag: () => mY,
-	CompletionList: () => yY,
-	CreateFile: () => $J,
-	DeleteFile: () => tY,
-	Diagnostic: () => KJ,
-	DiagnosticRelatedInformation: () => HJ,
-	DiagnosticSeverity: () => UJ,
-	DiagnosticTag: () => WJ,
-	DocumentHighlight: () => TY,
-	DocumentHighlightKind: () => wY,
-	DocumentLink: () => LY,
-	DocumentSymbol: () => AY,
-	DocumentUri: () => kJ,
-	EOL: () => nX,
-	FoldingRange: () => VJ,
-	FoldingRangeKind: () => BJ,
-	FormattingOptions: () => IY,
-	Hover: () => xY,
-	InlayHint: () => JY,
-	InlayHintKind: () => KY,
-	InlayHintLabelPart: () => qY,
-	InlineCompletionContext: () => eX,
-	InlineCompletionItem: () => XY,
-	InlineCompletionList: () => ZY,
-	InlineCompletionTriggerKind: () => QY,
-	InlineValueContext: () => GY,
-	InlineValueEvaluatableExpression: () => WY,
-	InlineValueText: () => HY,
-	InlineValueVariableLookup: () => UY,
-	InsertReplaceEdit: () => hY,
-	InsertTextFormat: () => pY,
-	InsertTextMode: () => gY,
-	Location: () => FJ,
-	LocationLink: () => IJ,
-	MarkedString: () => bY,
-	MarkupContent: () => dY,
-	MarkupKind: () => uY,
-	OptionalVersionedTextDocumentIdentifier: () => cY,
-	ParameterInformation: () => SY,
-	Position: () => NJ,
-	Range: () => PJ,
-	RenameFile: () => eY,
-	SelectedCompletionInfo: () => $Y,
-	SelectionRange: () => RY,
-	SemanticTokenModifiers: () => BY,
-	SemanticTokenTypes: () => zY,
-	SemanticTokens: () => VY,
-	SignatureInformation: () => CY,
-	StringValue: () => YY,
-	SymbolInformation: () => OY,
-	SymbolKind: () => EY,
-	SymbolTag: () => DY,
-	TextDocument: () => rX,
-	TextDocumentEdit: () => QJ,
-	TextDocumentIdentifier: () => oY,
-	TextDocumentItem: () => lY,
-	TextEdit: () => JJ,
-	URI: () => AJ,
-	VersionedTextDocumentIdentifier: () => sY,
-	WorkspaceChange: () => aY,
-	WorkspaceEdit: () => nY,
-	WorkspaceFolder: () => tX,
-	WorkspaceSymbol: () => kY,
-	integer: () => jJ,
-	uinteger: () => MJ
-}), kJ, AJ, jJ, MJ, NJ, PJ, FJ, IJ, LJ, RJ, zJ, BJ, VJ, HJ, UJ, WJ, GJ, KJ, qJ, JJ, YJ, XJ, ZJ, QJ, $J, eY, tY, nY, rY, iY, aY, oY, sY, cY, lY, uY, dY, fY, pY, mY, hY, gY, _Y, vY, yY, bY, xY, SY, CY, wY, TY, EY, DY, OY, kY, AY, jY, MY, NY, PY, FY, IY, LY, RY, zY, BY, VY, HY, UY, WY, GY, KY, qY, JY, YY, XY, ZY, QY, $Y, eX, tX, nX, rX, iX, $, aX = t((() => {
+})), AJ = /* @__PURE__ */ r(((e, t) => {
+	t.exports = kJ();
+})), jJ = /* @__PURE__ */ n({
+	AnnotatedTextEdit: () => eY,
+	ChangeAnnotation: () => QJ,
+	ChangeAnnotationIdentifier: () => $J,
+	CodeAction: () => LY,
+	CodeActionContext: () => IY,
+	CodeActionKind: () => PY,
+	CodeActionTriggerKind: () => FY,
+	CodeDescription: () => JJ,
+	CodeLens: () => RY,
+	Color: () => BJ,
+	ColorInformation: () => VJ,
+	ColorPresentation: () => HJ,
+	Command: () => XJ,
+	CompletionItem: () => xY,
+	CompletionItemKind: () => hY,
+	CompletionItemLabelDetails: () => bY,
+	CompletionItemTag: () => _Y,
+	CompletionList: () => SY,
+	CreateFile: () => nY,
+	DeleteFile: () => iY,
+	Diagnostic: () => YJ,
+	DiagnosticRelatedInformation: () => GJ,
+	DiagnosticSeverity: () => KJ,
+	DiagnosticTag: () => qJ,
+	DocumentHighlight: () => OY,
+	DocumentHighlightKind: () => DY,
+	DocumentLink: () => BY,
+	DocumentSymbol: () => NY,
+	DocumentUri: () => MJ,
+	EOL: () => aX,
+	FoldingRange: () => WJ,
+	FoldingRangeKind: () => UJ,
+	FormattingOptions: () => zY,
+	Hover: () => wY,
+	InlayHint: () => ZY,
+	InlayHintKind: () => YY,
+	InlayHintLabelPart: () => XY,
+	InlineCompletionContext: () => rX,
+	InlineCompletionItem: () => $Y,
+	InlineCompletionList: () => eX,
+	InlineCompletionTriggerKind: () => tX,
+	InlineValueContext: () => JY,
+	InlineValueEvaluatableExpression: () => qY,
+	InlineValueText: () => GY,
+	InlineValueVariableLookup: () => KY,
+	InsertReplaceEdit: () => vY,
+	InsertTextFormat: () => gY,
+	InsertTextMode: () => yY,
+	Location: () => RJ,
+	LocationLink: () => zJ,
+	MarkedString: () => CY,
+	MarkupContent: () => mY,
+	MarkupKind: () => pY,
+	OptionalVersionedTextDocumentIdentifier: () => dY,
+	ParameterInformation: () => TY,
+	Position: () => IJ,
+	Range: () => LJ,
+	RenameFile: () => rY,
+	SelectedCompletionInfo: () => nX,
+	SelectionRange: () => VY,
+	SemanticTokenModifiers: () => UY,
+	SemanticTokenTypes: () => HY,
+	SemanticTokens: () => WY,
+	SignatureInformation: () => EY,
+	StringValue: () => QY,
+	SymbolInformation: () => jY,
+	SymbolKind: () => kY,
+	SymbolTag: () => AY,
+	TextDocument: () => oX,
+	TextDocumentEdit: () => tY,
+	TextDocumentIdentifier: () => lY,
+	TextDocumentItem: () => fY,
+	TextEdit: () => ZJ,
+	URI: () => NJ,
+	VersionedTextDocumentIdentifier: () => uY,
+	WorkspaceChange: () => cY,
+	WorkspaceEdit: () => aY,
+	WorkspaceFolder: () => iX,
+	WorkspaceSymbol: () => MY,
+	integer: () => PJ,
+	uinteger: () => FJ
+}), MJ, NJ, PJ, FJ, IJ, LJ, RJ, zJ, BJ, VJ, HJ, UJ, WJ, GJ, KJ, qJ, JJ, YJ, XJ, ZJ, QJ, $J, eY, tY, nY, rY, iY, aY, oY, sY, cY, lY, uY, dY, fY, pY, mY, hY, gY, _Y, vY, yY, bY, xY, SY, CY, wY, TY, EY, DY, OY, kY, AY, jY, MY, NY, PY, FY, IY, LY, RY, zY, BY, VY, HY, UY, WY, GY, KY, qY, JY, YY, XY, ZY, QY, $Y, eX, tX, nX, rX, iX, aX, oX, sX, $, cX = t((() => {
 	(function(e) {
 		function t(e) {
 			return typeof e == "string";
 		}
 		e.is = t;
-	})(kJ ||= {}), (function(e) {
+	})(MJ ||= {}), (function(e) {
 		function t(e) {
 			return typeof e == "string";
 		}
 		e.is = t;
-	})(AJ ||= {}), (function(e) {
+	})(NJ ||= {}), (function(e) {
 		e.MIN_VALUE = -2147483648, e.MAX_VALUE = 2147483647;
 		function t(t) {
 			return typeof t == "number" && e.MIN_VALUE <= t && t <= e.MAX_VALUE;
 		}
 		e.is = t;
-	})(jJ ||= {}), (function(e) {
+	})(PJ ||= {}), (function(e) {
 		e.MIN_VALUE = 0, e.MAX_VALUE = 2147483647;
 		function t(t) {
 			return typeof t == "number" && e.MIN_VALUE <= t && t <= e.MAX_VALUE;
 		}
 		e.is = t;
-	})(MJ ||= {}), (function(e) {
+	})(FJ ||= {}), (function(e) {
 		function t(e, t) {
-			return e === Number.MAX_VALUE && (e = MJ.MAX_VALUE), t === Number.MAX_VALUE && (t = MJ.MAX_VALUE), {
+			return e === Number.MAX_VALUE && (e = FJ.MAX_VALUE), t === Number.MAX_VALUE && (t = FJ.MAX_VALUE), {
 				line: e,
 				character: t
 			};
@@ -35232,13 +35232,13 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return $.objectLiteral(t) && $.uinteger(t.line) && $.uinteger(t.character);
 		}
 		e.is = n;
-	})(NJ ||= {}), (function(e) {
+	})(IJ ||= {}), (function(e) {
 		function t(e, t, n, r) {
 			if ($.uinteger(e) && $.uinteger(t) && $.uinteger(n) && $.uinteger(r)) return {
-				start: NJ.create(e, t),
-				end: NJ.create(n, r)
+				start: IJ.create(e, t),
+				end: IJ.create(n, r)
 			};
-			if (NJ.is(e) && NJ.is(t)) return {
+			if (IJ.is(e) && IJ.is(t)) return {
 				start: e,
 				end: t
 			};
@@ -35247,10 +35247,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return $.objectLiteral(t) && NJ.is(t.start) && NJ.is(t.end);
+			return $.objectLiteral(t) && IJ.is(t.start) && IJ.is(t.end);
 		}
 		e.is = n;
-	})(PJ ||= {}), (function(e) {
+	})(LJ ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				uri: e,
@@ -35260,10 +35260,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return $.objectLiteral(t) && PJ.is(t.range) && ($.string(t.uri) || $.undefined(t.uri));
+			return $.objectLiteral(t) && LJ.is(t.range) && ($.string(t.uri) || $.undefined(t.uri));
 		}
 		e.is = n;
-	})(FJ ||= {}), (function(e) {
+	})(RJ ||= {}), (function(e) {
 		function t(e, t, n, r) {
 			return {
 				targetUri: e,
@@ -35275,10 +35275,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return $.objectLiteral(t) && PJ.is(t.targetRange) && $.string(t.targetUri) && PJ.is(t.targetSelectionRange) && (PJ.is(t.originSelectionRange) || $.undefined(t.originSelectionRange));
+			return $.objectLiteral(t) && LJ.is(t.targetRange) && $.string(t.targetUri) && LJ.is(t.targetSelectionRange) && (LJ.is(t.originSelectionRange) || $.undefined(t.originSelectionRange));
 		}
 		e.is = n;
-	})(IJ ||= {}), (function(e) {
+	})(zJ ||= {}), (function(e) {
 		function t(e, t, n, r) {
 			return {
 				red: e,
@@ -35293,7 +35293,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return $.objectLiteral(t) && $.numberRange(t.red, 0, 1) && $.numberRange(t.green, 0, 1) && $.numberRange(t.blue, 0, 1) && $.numberRange(t.alpha, 0, 1);
 		}
 		e.is = n;
-	})(LJ ||= {}), (function(e) {
+	})(BJ ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				range: e,
@@ -35303,10 +35303,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return $.objectLiteral(t) && PJ.is(t.range) && LJ.is(t.color);
+			return $.objectLiteral(t) && LJ.is(t.range) && BJ.is(t.color);
 		}
 		e.is = n;
-	})(RJ ||= {}), (function(e) {
+	})(VJ ||= {}), (function(e) {
 		function t(e, t, n) {
 			return {
 				label: e,
@@ -35317,12 +35317,12 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return $.objectLiteral(t) && $.string(t.label) && ($.undefined(t.textEdit) || JJ.is(t)) && ($.undefined(t.additionalTextEdits) || $.typedArray(t.additionalTextEdits, JJ.is));
+			return $.objectLiteral(t) && $.string(t.label) && ($.undefined(t.textEdit) || ZJ.is(t)) && ($.undefined(t.additionalTextEdits) || $.typedArray(t.additionalTextEdits, ZJ.is));
 		}
 		e.is = n;
-	})(zJ ||= {}), (function(e) {
+	})(HJ ||= {}), (function(e) {
 		e.Comment = "comment", e.Imports = "imports", e.Region = "region";
-	})(BJ ||= {}), (function(e) {
+	})(UJ ||= {}), (function(e) {
 		function t(e, t, n, r, i, a) {
 			let o = {
 				startLine: e,
@@ -35336,7 +35336,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return $.objectLiteral(t) && $.uinteger(t.startLine) && $.uinteger(t.startLine) && ($.undefined(t.startCharacter) || $.uinteger(t.startCharacter)) && ($.undefined(t.endCharacter) || $.uinteger(t.endCharacter)) && ($.undefined(t.kind) || $.string(t.kind));
 		}
 		e.is = n;
-	})(VJ ||= {}), (function(e) {
+	})(WJ ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				location: e,
@@ -35346,20 +35346,20 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return $.defined(t) && FJ.is(t.location) && $.string(t.message);
+			return $.defined(t) && RJ.is(t.location) && $.string(t.message);
 		}
 		e.is = n;
-	})(HJ ||= {}), (function(e) {
+	})(GJ ||= {}), (function(e) {
 		e.Error = 1, e.Warning = 2, e.Information = 3, e.Hint = 4;
-	})(UJ ||= {}), (function(e) {
+	})(KJ ||= {}), (function(e) {
 		e.Unnecessary = 1, e.Deprecated = 2;
-	})(WJ ||= {}), (function(e) {
+	})(qJ ||= {}), (function(e) {
 		function t(e) {
 			let t = e;
 			return $.objectLiteral(t) && $.string(t.href);
 		}
 		e.is = t;
-	})(GJ ||= {}), (function(e) {
+	})(JJ ||= {}), (function(e) {
 		function t(e, t, n, r, i, a) {
 			let o = {
 				range: e,
@@ -35370,10 +35370,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return $.defined(t) && PJ.is(t.range) && $.string(t.message) && ($.number(t.severity) || $.undefined(t.severity)) && ($.integer(t.code) || $.string(t.code) || $.undefined(t.code)) && ($.undefined(t.codeDescription) || $.string(t.codeDescription?.href)) && ($.string(t.source) || $.undefined(t.source)) && ($.undefined(t.relatedInformation) || $.typedArray(t.relatedInformation, HJ.is));
+			return $.defined(t) && LJ.is(t.range) && $.string(t.message) && ($.number(t.severity) || $.undefined(t.severity)) && ($.integer(t.code) || $.string(t.code) || $.undefined(t.code)) && ($.undefined(t.codeDescription) || $.string(t.codeDescription?.href)) && ($.string(t.source) || $.undefined(t.source)) && ($.undefined(t.relatedInformation) || $.typedArray(t.relatedInformation, GJ.is));
 		}
 		e.is = n;
-	})(KJ ||= {}), (function(e) {
+	})(YJ ||= {}), (function(e) {
 		function t(e, t, ...n) {
 			let r = {
 				title: e,
@@ -35387,7 +35387,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return $.defined(t) && $.string(t.title) && $.string(t.command);
 		}
 		e.is = n;
-	})(qJ ||= {}), (function(e) {
+	})(XJ ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				range: e,
@@ -35414,10 +35414,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.del = r;
 		function i(e) {
 			let t = e;
-			return $.objectLiteral(t) && $.string(t.newText) && PJ.is(t.range);
+			return $.objectLiteral(t) && $.string(t.newText) && LJ.is(t.range);
 		}
 		e.is = i;
-	})(JJ ||= {}), (function(e) {
+	})(ZJ ||= {}), (function(e) {
 		function t(e, t, n) {
 			let r = { label: e };
 			return t !== void 0 && (r.needsConfirmation = t), n !== void 0 && (r.description = n), r;
@@ -35428,13 +35428,13 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return $.objectLiteral(t) && $.string(t.label) && ($.boolean(t.needsConfirmation) || t.needsConfirmation === void 0) && ($.string(t.description) || t.description === void 0);
 		}
 		e.is = n;
-	})(YJ ||= {}), (function(e) {
+	})(QJ ||= {}), (function(e) {
 		function t(e) {
 			let t = e;
 			return $.string(t);
 		}
 		e.is = t;
-	})(XJ ||= {}), (function(e) {
+	})($J ||= {}), (function(e) {
 		function t(e, t, n) {
 			return {
 				range: e,
@@ -35464,10 +35464,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.del = r;
 		function i(e) {
 			let t = e;
-			return JJ.is(t) && (YJ.is(t.annotationId) || XJ.is(t.annotationId));
+			return ZJ.is(t) && (QJ.is(t.annotationId) || $J.is(t.annotationId));
 		}
 		e.is = i;
-	})(ZJ ||= {}), (function(e) {
+	})(eY ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				textDocument: e,
@@ -35477,10 +35477,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return $.defined(t) && cY.is(t.textDocument) && Array.isArray(t.edits);
+			return $.defined(t) && dY.is(t.textDocument) && Array.isArray(t.edits);
 		}
 		e.is = n;
-	})(QJ ||= {}), (function(e) {
+	})(tY ||= {}), (function(e) {
 		function t(e, t, n) {
 			let r = {
 				kind: "create",
@@ -35491,10 +35491,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t && t.kind === "create" && $.string(t.uri) && (t.options === void 0 || (t.options.overwrite === void 0 || $.boolean(t.options.overwrite)) && (t.options.ignoreIfExists === void 0 || $.boolean(t.options.ignoreIfExists))) && (t.annotationId === void 0 || XJ.is(t.annotationId));
+			return t && t.kind === "create" && $.string(t.uri) && (t.options === void 0 || (t.options.overwrite === void 0 || $.boolean(t.options.overwrite)) && (t.options.ignoreIfExists === void 0 || $.boolean(t.options.ignoreIfExists))) && (t.annotationId === void 0 || $J.is(t.annotationId));
 		}
 		e.is = n;
-	})($J ||= {}), (function(e) {
+	})(nY ||= {}), (function(e) {
 		function t(e, t, n, r) {
 			let i = {
 				kind: "rename",
@@ -35506,10 +35506,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t && t.kind === "rename" && $.string(t.oldUri) && $.string(t.newUri) && (t.options === void 0 || (t.options.overwrite === void 0 || $.boolean(t.options.overwrite)) && (t.options.ignoreIfExists === void 0 || $.boolean(t.options.ignoreIfExists))) && (t.annotationId === void 0 || XJ.is(t.annotationId));
+			return t && t.kind === "rename" && $.string(t.oldUri) && $.string(t.newUri) && (t.options === void 0 || (t.options.overwrite === void 0 || $.boolean(t.options.overwrite)) && (t.options.ignoreIfExists === void 0 || $.boolean(t.options.ignoreIfExists))) && (t.annotationId === void 0 || $J.is(t.annotationId));
 		}
 		e.is = n;
-	})(eY ||= {}), (function(e) {
+	})(rY ||= {}), (function(e) {
 		function t(e, t, n) {
 			let r = {
 				kind: "delete",
@@ -35520,30 +35520,30 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t && t.kind === "delete" && $.string(t.uri) && (t.options === void 0 || (t.options.recursive === void 0 || $.boolean(t.options.recursive)) && (t.options.ignoreIfNotExists === void 0 || $.boolean(t.options.ignoreIfNotExists))) && (t.annotationId === void 0 || XJ.is(t.annotationId));
+			return t && t.kind === "delete" && $.string(t.uri) && (t.options === void 0 || (t.options.recursive === void 0 || $.boolean(t.options.recursive)) && (t.options.ignoreIfNotExists === void 0 || $.boolean(t.options.ignoreIfNotExists))) && (t.annotationId === void 0 || $J.is(t.annotationId));
 		}
 		e.is = n;
-	})(tY ||= {}), (function(e) {
+	})(iY ||= {}), (function(e) {
 		function t(e) {
 			let t = e;
-			return t && (t.changes !== void 0 || t.documentChanges !== void 0) && (t.documentChanges === void 0 || t.documentChanges.every((e) => $.string(e.kind) ? $J.is(e) || eY.is(e) || tY.is(e) : QJ.is(e)));
+			return t && (t.changes !== void 0 || t.documentChanges !== void 0) && (t.documentChanges === void 0 || t.documentChanges.every((e) => $.string(e.kind) ? nY.is(e) || rY.is(e) || iY.is(e) : tY.is(e)));
 		}
 		e.is = t;
-	})(nY ||= {}), rY = class {
+	})(aY ||= {}), oY = class {
 		constructor(e, t) {
 			this.edits = e, this.changeAnnotations = t;
 		}
 		insert(e, t, n) {
 			let r, i;
-			if (n === void 0 ? r = JJ.insert(e, t) : XJ.is(n) ? (i = n, r = ZJ.insert(e, t, n)) : (this.assertChangeAnnotations(this.changeAnnotations), i = this.changeAnnotations.manage(n), r = ZJ.insert(e, t, i)), this.edits.push(r), i !== void 0) return i;
+			if (n === void 0 ? r = ZJ.insert(e, t) : $J.is(n) ? (i = n, r = eY.insert(e, t, n)) : (this.assertChangeAnnotations(this.changeAnnotations), i = this.changeAnnotations.manage(n), r = eY.insert(e, t, i)), this.edits.push(r), i !== void 0) return i;
 		}
 		replace(e, t, n) {
 			let r, i;
-			if (n === void 0 ? r = JJ.replace(e, t) : XJ.is(n) ? (i = n, r = ZJ.replace(e, t, n)) : (this.assertChangeAnnotations(this.changeAnnotations), i = this.changeAnnotations.manage(n), r = ZJ.replace(e, t, i)), this.edits.push(r), i !== void 0) return i;
+			if (n === void 0 ? r = ZJ.replace(e, t) : $J.is(n) ? (i = n, r = eY.replace(e, t, n)) : (this.assertChangeAnnotations(this.changeAnnotations), i = this.changeAnnotations.manage(n), r = eY.replace(e, t, i)), this.edits.push(r), i !== void 0) return i;
 		}
 		delete(e, t) {
 			let n, r;
-			if (t === void 0 ? n = JJ.del(e) : XJ.is(t) ? (r = t, n = ZJ.del(e, t)) : (this.assertChangeAnnotations(this.changeAnnotations), r = this.changeAnnotations.manage(t), n = ZJ.del(e, r)), this.edits.push(n), r !== void 0) return r;
+			if (t === void 0 ? n = ZJ.del(e) : $J.is(t) ? (r = t, n = eY.del(e, t)) : (this.assertChangeAnnotations(this.changeAnnotations), r = this.changeAnnotations.manage(t), n = eY.del(e, r)), this.edits.push(n), r !== void 0) return r;
 		}
 		add(e) {
 			this.edits.push(e);
@@ -35557,7 +35557,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		assertChangeAnnotations(e) {
 			if (e === void 0) throw Error("Text edit change is not configured to manage change annotations.");
 		}
-	}, iY = class {
+	}, sY = class {
 		constructor(e) {
 			this._annotations = e === void 0 ? Object.create(null) : e, this._counter = 0, this._size = 0;
 		}
@@ -35569,22 +35569,22 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}
 		manage(e, t) {
 			let n;
-			if (XJ.is(e) ? n = e : (n = this.nextId(), t = e), this._annotations[n] !== void 0) throw Error(`Id ${n} is already in use.`);
+			if ($J.is(e) ? n = e : (n = this.nextId(), t = e), this._annotations[n] !== void 0) throw Error(`Id ${n} is already in use.`);
 			if (t === void 0) throw Error(`No annotation provided for id ${n}`);
 			return this._annotations[n] = t, this._size++, n;
 		}
 		nextId() {
 			return this._counter++, this._counter.toString();
 		}
-	}, aY = class {
+	}, cY = class {
 		constructor(e) {
-			this._textEditChanges = Object.create(null), e === void 0 ? this._workspaceEdit = {} : (this._workspaceEdit = e, e.documentChanges ? (this._changeAnnotations = new iY(e.changeAnnotations), e.changeAnnotations = this._changeAnnotations.all(), e.documentChanges.forEach((e) => {
-				if (QJ.is(e)) {
-					let t = new rY(e.edits, this._changeAnnotations);
+			this._textEditChanges = Object.create(null), e === void 0 ? this._workspaceEdit = {} : (this._workspaceEdit = e, e.documentChanges ? (this._changeAnnotations = new sY(e.changeAnnotations), e.changeAnnotations = this._changeAnnotations.all(), e.documentChanges.forEach((e) => {
+				if (tY.is(e)) {
+					let t = new oY(e.edits, this._changeAnnotations);
 					this._textEditChanges[e.textDocument.uri] = t;
 				}
 			})) : e.changes && Object.keys(e.changes).forEach((t) => {
-				let n = new rY(e.changes[t]);
+				let n = new oY(e.changes[t]);
 				this._textEditChanges[t] = n;
 			}));
 		}
@@ -35592,7 +35592,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return this.initDocumentChanges(), this._changeAnnotations !== void 0 && (this._changeAnnotations.size === 0 ? this._workspaceEdit.changeAnnotations = void 0 : this._workspaceEdit.changeAnnotations = this._changeAnnotations.all()), this._workspaceEdit;
 		}
 		getTextEditChange(e) {
-			if (cY.is(e)) {
+			if (dY.is(e)) {
 				if (this.initDocumentChanges(), this._workspaceEdit.documentChanges === void 0) throw Error("Workspace edit is not configured for document changes.");
 				let t = {
 					uri: e.uri,
@@ -35603,7 +35603,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 						textDocument: t,
 						edits: e
 					};
-					this._workspaceEdit.documentChanges.push(r), n = new rY(e, this._changeAnnotations), this._textEditChanges[t.uri] = n;
+					this._workspaceEdit.documentChanges.push(r), n = new oY(e, this._changeAnnotations), this._textEditChanges[t.uri] = n;
 				}
 				return n;
 			} else {
@@ -35611,13 +35611,13 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 				let t = this._textEditChanges[e];
 				if (!t) {
 					let n = [];
-					this._workspaceEdit.changes[e] = n, t = new rY(n), this._textEditChanges[e] = t;
+					this._workspaceEdit.changes[e] = n, t = new oY(n), this._textEditChanges[e] = t;
 				}
 				return t;
 			}
 		}
 		initDocumentChanges() {
-			this._workspaceEdit.documentChanges === void 0 && this._workspaceEdit.changes === void 0 && (this._changeAnnotations = new iY(), this._workspaceEdit.documentChanges = [], this._workspaceEdit.changeAnnotations = this._changeAnnotations.all());
+			this._workspaceEdit.documentChanges === void 0 && this._workspaceEdit.changes === void 0 && (this._changeAnnotations = new sY(), this._workspaceEdit.documentChanges = [], this._workspaceEdit.changeAnnotations = this._changeAnnotations.all());
 		}
 		initChanges() {
 			this._workspaceEdit.documentChanges === void 0 && this._workspaceEdit.changes === void 0 && (this._workspaceEdit.changes = Object.create(null));
@@ -35625,23 +35625,23 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		createFile(e, t, n) {
 			if (this.initDocumentChanges(), this._workspaceEdit.documentChanges === void 0) throw Error("Workspace edit is not configured for document changes.");
 			let r;
-			YJ.is(t) || XJ.is(t) ? r = t : n = t;
+			QJ.is(t) || $J.is(t) ? r = t : n = t;
 			let i, a;
-			if (r === void 0 ? i = $J.create(e, n) : (a = XJ.is(r) ? r : this._changeAnnotations.manage(r), i = $J.create(e, n, a)), this._workspaceEdit.documentChanges.push(i), a !== void 0) return a;
+			if (r === void 0 ? i = nY.create(e, n) : (a = $J.is(r) ? r : this._changeAnnotations.manage(r), i = nY.create(e, n, a)), this._workspaceEdit.documentChanges.push(i), a !== void 0) return a;
 		}
 		renameFile(e, t, n, r) {
 			if (this.initDocumentChanges(), this._workspaceEdit.documentChanges === void 0) throw Error("Workspace edit is not configured for document changes.");
 			let i;
-			YJ.is(n) || XJ.is(n) ? i = n : r = n;
+			QJ.is(n) || $J.is(n) ? i = n : r = n;
 			let a, o;
-			if (i === void 0 ? a = eY.create(e, t, r) : (o = XJ.is(i) ? i : this._changeAnnotations.manage(i), a = eY.create(e, t, r, o)), this._workspaceEdit.documentChanges.push(a), o !== void 0) return o;
+			if (i === void 0 ? a = rY.create(e, t, r) : (o = $J.is(i) ? i : this._changeAnnotations.manage(i), a = rY.create(e, t, r, o)), this._workspaceEdit.documentChanges.push(a), o !== void 0) return o;
 		}
 		deleteFile(e, t, n) {
 			if (this.initDocumentChanges(), this._workspaceEdit.documentChanges === void 0) throw Error("Workspace edit is not configured for document changes.");
 			let r;
-			YJ.is(t) || XJ.is(t) ? r = t : n = t;
+			QJ.is(t) || $J.is(t) ? r = t : n = t;
 			let i, a;
-			if (r === void 0 ? i = tY.create(e, n) : (a = XJ.is(r) ? r : this._changeAnnotations.manage(r), i = tY.create(e, n, a)), this._workspaceEdit.documentChanges.push(i), a !== void 0) return a;
+			if (r === void 0 ? i = iY.create(e, n) : (a = $J.is(r) ? r : this._changeAnnotations.manage(r), i = iY.create(e, n, a)), this._workspaceEdit.documentChanges.push(i), a !== void 0) return a;
 		}
 	}, (function(e) {
 		function t(e) {
@@ -35653,7 +35653,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return $.defined(t) && $.string(t.uri);
 		}
 		e.is = n;
-	})(oY ||= {}), (function(e) {
+	})(lY ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				uri: e,
@@ -35666,7 +35666,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return $.defined(t) && $.string(t.uri) && $.integer(t.version);
 		}
 		e.is = n;
-	})(sY ||= {}), (function(e) {
+	})(uY ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				uri: e,
@@ -35679,7 +35679,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return $.defined(t) && $.string(t.uri) && (t.version === null || $.integer(t.version));
 		}
 		e.is = n;
-	})(cY ||= {}), (function(e) {
+	})(dY ||= {}), (function(e) {
 		function t(e, t, n, r) {
 			return {
 				uri: e,
@@ -35694,26 +35694,26 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return $.defined(t) && $.string(t.uri) && $.string(t.languageId) && $.integer(t.version) && $.string(t.text);
 		}
 		e.is = n;
-	})(lY ||= {}), (function(e) {
+	})(fY ||= {}), (function(e) {
 		e.PlainText = "plaintext", e.Markdown = "markdown";
 		function t(t) {
 			let n = t;
 			return n === e.PlainText || n === e.Markdown;
 		}
 		e.is = t;
-	})(uY ||= {}), (function(e) {
+	})(pY ||= {}), (function(e) {
 		function t(e) {
 			let t = e;
-			return $.objectLiteral(e) && uY.is(t.kind) && $.string(t.value);
+			return $.objectLiteral(e) && pY.is(t.kind) && $.string(t.value);
 		}
 		e.is = t;
-	})(dY ||= {}), (function(e) {
-		e.Text = 1, e.Method = 2, e.Function = 3, e.Constructor = 4, e.Field = 5, e.Variable = 6, e.Class = 7, e.Interface = 8, e.Module = 9, e.Property = 10, e.Unit = 11, e.Value = 12, e.Enum = 13, e.Keyword = 14, e.Snippet = 15, e.Color = 16, e.File = 17, e.Reference = 18, e.Folder = 19, e.EnumMember = 20, e.Constant = 21, e.Struct = 22, e.Event = 23, e.Operator = 24, e.TypeParameter = 25;
-	})(fY ||= {}), (function(e) {
-		e.PlainText = 1, e.Snippet = 2;
-	})(pY ||= {}), (function(e) {
-		e.Deprecated = 1;
 	})(mY ||= {}), (function(e) {
+		e.Text = 1, e.Method = 2, e.Function = 3, e.Constructor = 4, e.Field = 5, e.Variable = 6, e.Class = 7, e.Interface = 8, e.Module = 9, e.Property = 10, e.Unit = 11, e.Value = 12, e.Enum = 13, e.Keyword = 14, e.Snippet = 15, e.Color = 16, e.File = 17, e.Reference = 18, e.Folder = 19, e.EnumMember = 20, e.Constant = 21, e.Struct = 22, e.Event = 23, e.Operator = 24, e.TypeParameter = 25;
+	})(hY ||= {}), (function(e) {
+		e.PlainText = 1, e.Snippet = 2;
+	})(gY ||= {}), (function(e) {
+		e.Deprecated = 1;
+	})(_Y ||= {}), (function(e) {
 		function t(e, t, n) {
 			return {
 				newText: e,
@@ -35724,23 +35724,23 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t && $.string(t.newText) && PJ.is(t.insert) && PJ.is(t.replace);
+			return t && $.string(t.newText) && LJ.is(t.insert) && LJ.is(t.replace);
 		}
 		e.is = n;
-	})(hY ||= {}), (function(e) {
+	})(vY ||= {}), (function(e) {
 		e.asIs = 1, e.adjustIndentation = 2;
-	})(gY ||= {}), (function(e) {
+	})(yY ||= {}), (function(e) {
 		function t(e) {
 			let t = e;
 			return t && ($.string(t.detail) || t.detail === void 0) && ($.string(t.description) || t.description === void 0);
 		}
 		e.is = t;
-	})(_Y ||= {}), (function(e) {
+	})(bY ||= {}), (function(e) {
 		function t(e) {
 			return { label: e };
 		}
 		e.create = t;
-	})(vY ||= {}), (function(e) {
+	})(xY ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				items: e || [],
@@ -35748,7 +35748,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			};
 		}
 		e.create = t;
-	})(yY ||= {}), (function(e) {
+	})(SY ||= {}), (function(e) {
 		function t(e) {
 			return e.replace(/[\\`*_{}[\]()#+\-.!]/g, "\\$&");
 		}
@@ -35758,13 +35758,13 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return $.string(t) || $.objectLiteral(t) && $.string(t.language) && $.string(t.value);
 		}
 		e.is = n;
-	})(bY ||= {}), (function(e) {
+	})(CY ||= {}), (function(e) {
 		function t(e) {
 			let t = e;
-			return !!t && $.objectLiteral(t) && (dY.is(t.contents) || bY.is(t.contents) || $.typedArray(t.contents, bY.is)) && (e.range === void 0 || PJ.is(e.range));
+			return !!t && $.objectLiteral(t) && (mY.is(t.contents) || CY.is(t.contents) || $.typedArray(t.contents, CY.is)) && (e.range === void 0 || LJ.is(e.range));
 		}
 		e.is = t;
-	})(xY ||= {}), (function(e) {
+	})(wY ||= {}), (function(e) {
 		function t(e, t) {
 			return t ? {
 				label: e,
@@ -35772,25 +35772,25 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			} : { label: e };
 		}
 		e.create = t;
-	})(SY ||= {}), (function(e) {
+	})(TY ||= {}), (function(e) {
 		function t(e, t, ...n) {
 			let r = { label: e };
 			return $.defined(t) && (r.documentation = t), $.defined(n) ? r.parameters = n : r.parameters = [], r;
 		}
 		e.create = t;
-	})(CY ||= {}), (function(e) {
+	})(EY ||= {}), (function(e) {
 		e.Text = 1, e.Read = 2, e.Write = 3;
-	})(wY ||= {}), (function(e) {
+	})(DY ||= {}), (function(e) {
 		function t(e, t) {
 			let n = { range: e };
 			return $.number(t) && (n.kind = t), n;
 		}
 		e.create = t;
-	})(TY ||= {}), (function(e) {
+	})(OY ||= {}), (function(e) {
 		e.File = 1, e.Module = 2, e.Namespace = 3, e.Package = 4, e.Class = 5, e.Method = 6, e.Property = 7, e.Field = 8, e.Constructor = 9, e.Enum = 10, e.Interface = 11, e.Function = 12, e.Variable = 13, e.Constant = 14, e.String = 15, e.Number = 16, e.Boolean = 17, e.Array = 18, e.Object = 19, e.Key = 20, e.Null = 21, e.EnumMember = 22, e.Struct = 23, e.Event = 24, e.Operator = 25, e.TypeParameter = 26;
-	})(EY ||= {}), (function(e) {
+	})(kY ||= {}), (function(e) {
 		e.Deprecated = 1;
-	})(DY ||= {}), (function(e) {
+	})(AY ||= {}), (function(e) {
 		function t(e, t, n, r, i) {
 			let a = {
 				name: e,
@@ -35803,7 +35803,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return i && (a.containerName = i), a;
 		}
 		e.create = t;
-	})(OY ||= {}), (function(e) {
+	})(jY ||= {}), (function(e) {
 		function t(e, t, n, r) {
 			return r === void 0 ? {
 				name: e,
@@ -35819,7 +35819,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			};
 		}
 		e.create = t;
-	})(kY ||= {}), (function(e) {
+	})(MY ||= {}), (function(e) {
 		function t(e, t, n, r, i, a) {
 			let o = {
 				name: e,
@@ -35833,14 +35833,14 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t && $.string(t.name) && $.number(t.kind) && PJ.is(t.range) && PJ.is(t.selectionRange) && (t.detail === void 0 || $.string(t.detail)) && (t.deprecated === void 0 || $.boolean(t.deprecated)) && (t.children === void 0 || Array.isArray(t.children)) && (t.tags === void 0 || Array.isArray(t.tags));
+			return t && $.string(t.name) && $.number(t.kind) && LJ.is(t.range) && LJ.is(t.selectionRange) && (t.detail === void 0 || $.string(t.detail)) && (t.deprecated === void 0 || $.boolean(t.deprecated)) && (t.children === void 0 || Array.isArray(t.children)) && (t.tags === void 0 || Array.isArray(t.tags));
 		}
 		e.is = n;
-	})(AY ||= {}), (function(e) {
+	})(NY ||= {}), (function(e) {
 		e.Empty = "", e.QuickFix = "quickfix", e.Refactor = "refactor", e.RefactorExtract = "refactor.extract", e.RefactorInline = "refactor.inline", e.RefactorRewrite = "refactor.rewrite", e.Source = "source", e.SourceOrganizeImports = "source.organizeImports", e.SourceFixAll = "source.fixAll";
-	})(jY ||= {}), (function(e) {
+	})(PY ||= {}), (function(e) {
 		e.Invoked = 1, e.Automatic = 2;
-	})(MY ||= {}), (function(e) {
+	})(FY ||= {}), (function(e) {
 		function t(e, t, n) {
 			let r = { diagnostics: e };
 			return t != null && (r.only = t), n != null && (r.triggerKind = n), r;
@@ -35848,21 +35848,21 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return $.defined(t) && $.typedArray(t.diagnostics, KJ.is) && (t.only === void 0 || $.typedArray(t.only, $.string)) && (t.triggerKind === void 0 || t.triggerKind === MY.Invoked || t.triggerKind === MY.Automatic);
+			return $.defined(t) && $.typedArray(t.diagnostics, YJ.is) && (t.only === void 0 || $.typedArray(t.only, $.string)) && (t.triggerKind === void 0 || t.triggerKind === FY.Invoked || t.triggerKind === FY.Automatic);
 		}
 		e.is = n;
-	})(NY ||= {}), (function(e) {
+	})(IY ||= {}), (function(e) {
 		function t(e, t, n) {
 			let r = { title: e }, i = !0;
-			return typeof t == "string" ? (i = !1, r.kind = t) : qJ.is(t) ? r.command = t : r.edit = t, i && n !== void 0 && (r.kind = n), r;
+			return typeof t == "string" ? (i = !1, r.kind = t) : XJ.is(t) ? r.command = t : r.edit = t, i && n !== void 0 && (r.kind = n), r;
 		}
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t && $.string(t.title) && (t.diagnostics === void 0 || $.typedArray(t.diagnostics, KJ.is)) && (t.kind === void 0 || $.string(t.kind)) && (t.edit !== void 0 || t.command !== void 0) && (t.command === void 0 || qJ.is(t.command)) && (t.isPreferred === void 0 || $.boolean(t.isPreferred)) && (t.edit === void 0 || nY.is(t.edit));
+			return t && $.string(t.title) && (t.diagnostics === void 0 || $.typedArray(t.diagnostics, YJ.is)) && (t.kind === void 0 || $.string(t.kind)) && (t.edit !== void 0 || t.command !== void 0) && (t.command === void 0 || XJ.is(t.command)) && (t.isPreferred === void 0 || $.boolean(t.isPreferred)) && (t.edit === void 0 || aY.is(t.edit));
 		}
 		e.is = n;
-	})(PY ||= {}), (function(e) {
+	})(LY ||= {}), (function(e) {
 		function t(e, t) {
 			let n = { range: e };
 			return $.defined(t) && (n.data = t), n;
@@ -35870,10 +35870,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return $.defined(t) && PJ.is(t.range) && ($.undefined(t.command) || qJ.is(t.command));
+			return $.defined(t) && LJ.is(t.range) && ($.undefined(t.command) || XJ.is(t.command));
 		}
 		e.is = n;
-	})(FY ||= {}), (function(e) {
+	})(RY ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				tabSize: e,
@@ -35886,7 +35886,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return $.defined(t) && $.uinteger(t.tabSize) && $.boolean(t.insertSpaces);
 		}
 		e.is = n;
-	})(IY ||= {}), (function(e) {
+	})(zY ||= {}), (function(e) {
 		function t(e, t, n) {
 			return {
 				range: e,
@@ -35897,10 +35897,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return $.defined(t) && PJ.is(t.range) && ($.undefined(t.target) || $.string(t.target));
+			return $.defined(t) && LJ.is(t.range) && ($.undefined(t.target) || $.string(t.target));
 		}
 		e.is = n;
-	})(LY ||= {}), (function(e) {
+	})(BY ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				range: e,
@@ -35910,20 +35910,20 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(t) {
 			let n = t;
-			return $.objectLiteral(n) && PJ.is(n.range) && (n.parent === void 0 || e.is(n.parent));
+			return $.objectLiteral(n) && LJ.is(n.range) && (n.parent === void 0 || e.is(n.parent));
 		}
 		e.is = n;
-	})(RY ||= {}), (function(e) {
+	})(VY ||= {}), (function(e) {
 		e.namespace = "namespace", e.type = "type", e.class = "class", e.enum = "enum", e.interface = "interface", e.struct = "struct", e.typeParameter = "typeParameter", e.parameter = "parameter", e.variable = "variable", e.property = "property", e.enumMember = "enumMember", e.event = "event", e.function = "function", e.method = "method", e.macro = "macro", e.keyword = "keyword", e.modifier = "modifier", e.comment = "comment", e.string = "string", e.number = "number", e.regexp = "regexp", e.operator = "operator", e.decorator = "decorator";
-	})(zY ||= {}), (function(e) {
+	})(HY ||= {}), (function(e) {
 		e.declaration = "declaration", e.definition = "definition", e.readonly = "readonly", e.static = "static", e.deprecated = "deprecated", e.abstract = "abstract", e.async = "async", e.modification = "modification", e.documentation = "documentation", e.defaultLibrary = "defaultLibrary";
-	})(BY ||= {}), (function(e) {
+	})(UY ||= {}), (function(e) {
 		function t(e) {
 			let t = e;
 			return $.objectLiteral(t) && (t.resultId === void 0 || typeof t.resultId == "string") && Array.isArray(t.data) && (t.data.length === 0 || typeof t.data[0] == "number");
 		}
 		e.is = t;
-	})(VY ||= {}), (function(e) {
+	})(WY ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				range: e,
@@ -35933,10 +35933,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t != null && PJ.is(t.range) && $.string(t.text);
+			return t != null && LJ.is(t.range) && $.string(t.text);
 		}
 		e.is = n;
-	})(HY ||= {}), (function(e) {
+	})(GY ||= {}), (function(e) {
 		function t(e, t, n) {
 			return {
 				range: e,
@@ -35947,10 +35947,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t != null && PJ.is(t.range) && $.boolean(t.caseSensitiveLookup) && ($.string(t.variableName) || t.variableName === void 0);
+			return t != null && LJ.is(t.range) && $.boolean(t.caseSensitiveLookup) && ($.string(t.variableName) || t.variableName === void 0);
 		}
 		e.is = n;
-	})(UY ||= {}), (function(e) {
+	})(KY ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				range: e,
@@ -35960,10 +35960,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return t != null && PJ.is(t.range) && ($.string(t.expression) || t.expression === void 0);
+			return t != null && LJ.is(t.range) && ($.string(t.expression) || t.expression === void 0);
 		}
 		e.is = n;
-	})(WY ||= {}), (function(e) {
+	})(qY ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				frameId: e,
@@ -35973,26 +35973,26 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return $.defined(t) && PJ.is(e.stoppedLocation);
+			return $.defined(t) && LJ.is(e.stoppedLocation);
 		}
 		e.is = n;
-	})(GY ||= {}), (function(e) {
+	})(JY ||= {}), (function(e) {
 		e.Type = 1, e.Parameter = 2;
 		function t(e) {
 			return e === 1 || e === 2;
 		}
 		e.is = t;
-	})(KY ||= {}), (function(e) {
+	})(YY ||= {}), (function(e) {
 		function t(e) {
 			return { value: e };
 		}
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return $.objectLiteral(t) && (t.tooltip === void 0 || $.string(t.tooltip) || dY.is(t.tooltip)) && (t.location === void 0 || FJ.is(t.location)) && (t.command === void 0 || qJ.is(t.command));
+			return $.objectLiteral(t) && (t.tooltip === void 0 || $.string(t.tooltip) || mY.is(t.tooltip)) && (t.location === void 0 || RJ.is(t.location)) && (t.command === void 0 || XJ.is(t.command));
 		}
 		e.is = n;
-	})(qY ||= {}), (function(e) {
+	})(XY ||= {}), (function(e) {
 		function t(e, t, n) {
 			let r = {
 				position: e,
@@ -36003,10 +36003,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		e.create = t;
 		function n(e) {
 			let t = e;
-			return $.objectLiteral(t) && NJ.is(t.position) && ($.string(t.label) || $.typedArray(t.label, qY.is)) && (t.kind === void 0 || KY.is(t.kind)) && t.textEdits === void 0 || $.typedArray(t.textEdits, JJ.is) && (t.tooltip === void 0 || $.string(t.tooltip) || dY.is(t.tooltip)) && (t.paddingLeft === void 0 || $.boolean(t.paddingLeft)) && (t.paddingRight === void 0 || $.boolean(t.paddingRight));
+			return $.objectLiteral(t) && IJ.is(t.position) && ($.string(t.label) || $.typedArray(t.label, XY.is)) && (t.kind === void 0 || YY.is(t.kind)) && t.textEdits === void 0 || $.typedArray(t.textEdits, ZJ.is) && (t.tooltip === void 0 || $.string(t.tooltip) || mY.is(t.tooltip)) && (t.paddingLeft === void 0 || $.boolean(t.paddingLeft)) && (t.paddingRight === void 0 || $.boolean(t.paddingRight));
 		}
 		e.is = n;
-	})(JY ||= {}), (function(e) {
+	})(ZY ||= {}), (function(e) {
 		function t(e) {
 			return {
 				kind: "snippet",
@@ -36014,7 +36014,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			};
 		}
 		e.createSnippet = t;
-	})(YY ||= {}), (function(e) {
+	})(QY ||= {}), (function(e) {
 		function t(e, t, n, r) {
 			return {
 				insertText: e,
@@ -36024,14 +36024,14 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			};
 		}
 		e.create = t;
-	})(XY ||= {}), (function(e) {
+	})($Y ||= {}), (function(e) {
 		function t(e) {
 			return { items: e };
 		}
 		e.create = t;
-	})(ZY ||= {}), (function(e) {
+	})(eX ||= {}), (function(e) {
 		e.Invoked = 0, e.Automatic = 1;
-	})(QY ||= {}), (function(e) {
+	})(tX ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				range: e,
@@ -36039,7 +36039,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			};
 		}
 		e.create = t;
-	})($Y ||= {}), (function(e) {
+	})(nX ||= {}), (function(e) {
 		function t(e, t) {
 			return {
 				triggerKind: e,
@@ -36047,19 +36047,19 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			};
 		}
 		e.create = t;
-	})(eX ||= {}), (function(e) {
+	})(rX ||= {}), (function(e) {
 		function t(e) {
 			let t = e;
-			return $.objectLiteral(t) && AJ.is(t.uri) && $.string(t.name);
+			return $.objectLiteral(t) && NJ.is(t.uri) && $.string(t.name);
 		}
 		e.is = t;
-	})(tX ||= {}), nX = [
+	})(iX ||= {}), aX = [
 		"\n",
 		"\r\n",
 		"\r"
 	], (function(e) {
 		function t(e, t, n, r) {
-			return new iX(e, t, n, r);
+			return new sX(e, t, n, r);
 		}
 		e.create = t;
 		function n(e) {
@@ -36091,7 +36091,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			for (; s < a.length;) e[c++] = a[s++];
 			return e;
 		}
-	})(rX ||= {}), iX = class {
+	})(oX ||= {}), sX = class {
 		constructor(e, t, n, r) {
 			this._uri = e, this._languageId = t, this._version = n, this._content = r, this._lineOffsets = void 0;
 		}
@@ -36129,13 +36129,13 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		positionAt(e) {
 			e = Math.max(Math.min(e, this._content.length), 0);
 			let t = this.getLineOffsets(), n = 0, r = t.length;
-			if (r === 0) return NJ.create(0, e);
+			if (r === 0) return IJ.create(0, e);
 			for (; n < r;) {
 				let i = Math.floor((n + r) / 2);
 				t[i] > e ? r = i : n = i + 1;
 			}
 			let i = n - 1;
-			return NJ.create(i, e - t[i]);
+			return IJ.create(i, e - t[i]);
 		}
 		offsetAt(e) {
 			let t = this.getLineOffsets();
@@ -36194,9 +36194,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}
 		e.typedArray = f;
 	})($ ||= {});
-})), oX = /* @__PURE__ */ r(((e) => {
+})), lX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ProtocolNotificationType = e.ProtocolNotificationType0 = e.ProtocolRequestType = e.ProtocolRequestType0 = e.RegistrationType = e.MessageDirection = void 0;
-	var t = EJ(), n;
+	var t = kJ(), n;
 	(function(e) {
 		e.clientToServer = "clientToServer", e.serverToClient = "serverToClient", e.both = "both";
 	})(n || (e.MessageDirection = n = {})), e.RegistrationType = class {
@@ -36220,7 +36220,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			super(e, t.ParameterStructures.byName);
 		}
 	};
-})), sX = /* @__PURE__ */ r(((e) => {
+})), uX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.objectLiteral = e.typedArray = e.stringArray = e.array = e.func = e.error = e.number = e.string = e.boolean = void 0;
 	function t(e) {
 		return e === !0 || e === !1;
@@ -36258,21 +36258,21 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		return typeof e == "object" && !!e;
 	}
 	e.objectLiteral = l;
-})), cX = /* @__PURE__ */ r(((e) => {
+})), dX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ImplementationRequest = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.method = "textDocument/implementation", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.ImplementationRequest = n = {}));
-})), lX = /* @__PURE__ */ r(((e) => {
+})), fX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.TypeDefinitionRequest = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.method = "textDocument/typeDefinition", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.TypeDefinitionRequest = n = {}));
-})), uX = /* @__PURE__ */ r(((e) => {
+})), pX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.DidChangeWorkspaceFoldersNotification = e.WorkspaceFoldersRequest = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.method = "workspace/workspaceFolders", e.messageDirection = t.MessageDirection.serverToClient, e.type = new t.ProtocolRequestType0(e.method);
 	})(n || (e.WorkspaceFoldersRequest = n = {}));
@@ -36280,15 +36280,15 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	(function(e) {
 		e.method = "workspace/didChangeWorkspaceFolders", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolNotificationType(e.method);
 	})(r || (e.DidChangeWorkspaceFoldersNotification = r = {}));
-})), dX = /* @__PURE__ */ r(((e) => {
+})), mX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ConfigurationRequest = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.method = "workspace/configuration", e.messageDirection = t.MessageDirection.serverToClient, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.ConfigurationRequest = n = {}));
-})), fX = /* @__PURE__ */ r(((e) => {
+})), hX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ColorPresentationRequest = e.DocumentColorRequest = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.method = "textDocument/documentColor", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.DocumentColorRequest = n = {}));
@@ -36296,9 +36296,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	(function(e) {
 		e.method = "textDocument/colorPresentation", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(r || (e.ColorPresentationRequest = r = {}));
-})), pX = /* @__PURE__ */ r(((e) => {
+})), gX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.FoldingRangeRefreshRequest = e.FoldingRangeRequest = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.method = "textDocument/foldingRange", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.FoldingRangeRequest = n = {}));
@@ -36306,21 +36306,21 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	(function(e) {
 		e.method = "workspace/foldingRange/refresh", e.messageDirection = t.MessageDirection.serverToClient, e.type = new t.ProtocolRequestType0(e.method);
 	})(r || (e.FoldingRangeRefreshRequest = r = {}));
-})), mX = /* @__PURE__ */ r(((e) => {
+})), _X = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.DeclarationRequest = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.method = "textDocument/declaration", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.DeclarationRequest = n = {}));
-})), hX = /* @__PURE__ */ r(((e) => {
+})), vX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.SelectionRangeRequest = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.method = "textDocument/selectionRange", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.SelectionRangeRequest = n = {}));
-})), gX = /* @__PURE__ */ r(((e) => {
+})), yX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.WorkDoneProgressCancelNotification = e.WorkDoneProgressCreateRequest = e.WorkDoneProgress = void 0;
-	var t = EJ(), n = oX(), r;
+	var t = kJ(), n = lX(), r;
 	(function(e) {
 		e.type = new t.ProgressType();
 		function n(t) {
@@ -36336,9 +36336,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	(function(e) {
 		e.method = "window/workDoneProgress/cancel", e.messageDirection = n.MessageDirection.clientToServer, e.type = new n.ProtocolNotificationType(e.method);
 	})(a || (e.WorkDoneProgressCancelNotification = a = {}));
-})), _X = /* @__PURE__ */ r(((e) => {
+})), bX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.CallHierarchyOutgoingCallsRequest = e.CallHierarchyIncomingCallsRequest = e.CallHierarchyPrepareRequest = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.method = "textDocument/prepareCallHierarchy", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.CallHierarchyPrepareRequest = n = {}));
@@ -36350,9 +36350,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	(function(e) {
 		e.method = "callHierarchy/outgoingCalls", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(i || (e.CallHierarchyOutgoingCallsRequest = i = {}));
-})), vX = /* @__PURE__ */ r(((e) => {
+})), xX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.SemanticTokensRefreshRequest = e.SemanticTokensRangeRequest = e.SemanticTokensDeltaRequest = e.SemanticTokensRequest = e.SemanticTokensRegistrationType = e.TokenFormat = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.Relative = "relative";
 	})(n || (e.TokenFormat = n = {}));
@@ -36376,21 +36376,21 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	(function(e) {
 		e.method = "workspace/semanticTokens/refresh", e.messageDirection = t.MessageDirection.serverToClient, e.type = new t.ProtocolRequestType0(e.method);
 	})(s || (e.SemanticTokensRefreshRequest = s = {}));
-})), yX = /* @__PURE__ */ r(((e) => {
+})), SX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ShowDocumentRequest = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.method = "window/showDocument", e.messageDirection = t.MessageDirection.serverToClient, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.ShowDocumentRequest = n = {}));
-})), bX = /* @__PURE__ */ r(((e) => {
+})), CX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.LinkedEditingRangeRequest = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.method = "textDocument/linkedEditingRange", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.LinkedEditingRangeRequest = n = {}));
-})), xX = /* @__PURE__ */ r(((e) => {
+})), wX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.WillDeleteFilesRequest = e.DidDeleteFilesNotification = e.DidRenameFilesNotification = e.WillRenameFilesRequest = e.DidCreateFilesNotification = e.WillCreateFilesRequest = e.FileOperationPatternKind = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.file = "file", e.folder = "folder";
 	})(n || (e.FileOperationPatternKind = n = {}));
@@ -36418,9 +36418,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	(function(e) {
 		e.method = "workspace/willDeleteFiles", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(c || (e.WillDeleteFilesRequest = c = {}));
-})), SX = /* @__PURE__ */ r(((e) => {
+})), TX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.MonikerRequest = e.MonikerKind = e.UniquenessLevel = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.document = "document", e.project = "project", e.group = "group", e.scheme = "scheme", e.global = "global";
 	})(n || (e.UniquenessLevel = n = {}));
@@ -36432,9 +36432,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	(function(e) {
 		e.method = "textDocument/moniker", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(i || (e.MonikerRequest = i = {}));
-})), CX = /* @__PURE__ */ r(((e) => {
+})), EX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.TypeHierarchySubtypesRequest = e.TypeHierarchySupertypesRequest = e.TypeHierarchyPrepareRequest = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.method = "textDocument/prepareTypeHierarchy", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.TypeHierarchyPrepareRequest = n = {}));
@@ -36446,9 +36446,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	(function(e) {
 		e.method = "typeHierarchy/subtypes", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(i || (e.TypeHierarchySubtypesRequest = i = {}));
-})), wX = /* @__PURE__ */ r(((e) => {
+})), DX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.InlineValueRefreshRequest = e.InlineValueRequest = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.method = "textDocument/inlineValue", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.InlineValueRequest = n = {}));
@@ -36456,9 +36456,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	(function(e) {
 		e.method = "workspace/inlineValue/refresh", e.messageDirection = t.MessageDirection.serverToClient, e.type = new t.ProtocolRequestType0(e.method);
 	})(r || (e.InlineValueRefreshRequest = r = {}));
-})), TX = /* @__PURE__ */ r(((e) => {
+})), OX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.InlayHintRefreshRequest = e.InlayHintResolveRequest = e.InlayHintRequest = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.method = "textDocument/inlayHint", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.InlayHintRequest = n = {}));
@@ -36470,9 +36470,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	(function(e) {
 		e.method = "workspace/inlayHint/refresh", e.messageDirection = t.MessageDirection.serverToClient, e.type = new t.ProtocolRequestType0(e.method);
 	})(i || (e.InlayHintRefreshRequest = i = {}));
-})), EX = /* @__PURE__ */ r(((e) => {
+})), kX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.DiagnosticRefreshRequest = e.WorkspaceDiagnosticRequest = e.DocumentDiagnosticRequest = e.DocumentDiagnosticReportKind = e.DiagnosticServerCancellationData = void 0;
-	var t = EJ(), n = sX(), r = oX(), i;
+	var t = kJ(), n = uX(), r = lX(), i;
 	(function(e) {
 		function t(e) {
 			let t = e;
@@ -36496,9 +36496,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	(function(e) {
 		e.method = "workspace/diagnostic/refresh", e.messageDirection = r.MessageDirection.serverToClient, e.type = new r.ProtocolRequestType0(e.method);
 	})(c || (e.DiagnosticRefreshRequest = c = {}));
-})), DX = /* @__PURE__ */ r(((t) => {
+})), AX = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.DidCloseNotebookDocumentNotification = t.DidSaveNotebookDocumentNotification = t.DidChangeNotebookDocumentNotification = t.NotebookCellArrayChange = t.DidOpenNotebookDocumentNotification = t.NotebookDocumentSyncRegistrationType = t.NotebookDocument = t.NotebookCell = t.ExecutionSummary = t.NotebookCellKind = void 0;
-	var n = (aX(), e(OJ)), r = sX(), i = oX(), a;
+	var n = (cX(), e(jJ)), r = uX(), i = lX(), a;
 	(function(e) {
 		e.Markup = 1, e.Code = 2;
 		function t(e) {
@@ -36615,29 +36615,29 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	(function(e) {
 		e.method = "notebookDocument/didClose", e.messageDirection = i.MessageDirection.clientToServer, e.type = new i.ProtocolNotificationType(e.method), e.registrationMethod = l.method;
 	})(m || (t.DidCloseNotebookDocumentNotification = m = {}));
-})), OX = /* @__PURE__ */ r(((e) => {
+})), jX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.InlineCompletionRequest = void 0;
-	var t = oX(), n;
+	var t = lX(), n;
 	(function(e) {
 		e.method = "textDocument/inlineCompletion", e.messageDirection = t.MessageDirection.clientToServer, e.type = new t.ProtocolRequestType(e.method);
 	})(n || (e.InlineCompletionRequest = n = {}));
-})), kX = /* @__PURE__ */ r(((t) => {
+})), MX = /* @__PURE__ */ r(((t) => {
 	Object.defineProperty(t, "__esModule", { value: !0 }), t.WorkspaceSymbolRequest = t.CodeActionResolveRequest = t.CodeActionRequest = t.DocumentSymbolRequest = t.DocumentHighlightRequest = t.ReferencesRequest = t.DefinitionRequest = t.SignatureHelpRequest = t.SignatureHelpTriggerKind = t.HoverRequest = t.CompletionResolveRequest = t.CompletionRequest = t.CompletionTriggerKind = t.PublishDiagnosticsNotification = t.WatchKind = t.RelativePattern = t.FileChangeType = t.DidChangeWatchedFilesNotification = t.WillSaveTextDocumentWaitUntilRequest = t.WillSaveTextDocumentNotification = t.TextDocumentSaveReason = t.DidSaveTextDocumentNotification = t.DidCloseTextDocumentNotification = t.DidChangeTextDocumentNotification = t.TextDocumentContentChangeEvent = t.DidOpenTextDocumentNotification = t.TextDocumentSyncKind = t.TelemetryEventNotification = t.LogMessageNotification = t.ShowMessageRequest = t.ShowMessageNotification = t.MessageType = t.DidChangeConfigurationNotification = t.ExitNotification = t.ShutdownRequest = t.InitializedNotification = t.InitializeErrorCodes = t.InitializeRequest = t.WorkDoneProgressOptions = t.TextDocumentRegistrationOptions = t.StaticRegistrationOptions = t.PositionEncodingKind = t.FailureHandlingKind = t.ResourceOperationKind = t.UnregistrationRequest = t.RegistrationRequest = t.DocumentSelector = t.NotebookCellTextDocumentFilter = t.NotebookDocumentFilter = t.TextDocumentFilter = void 0, t.MonikerRequest = t.MonikerKind = t.UniquenessLevel = t.WillDeleteFilesRequest = t.DidDeleteFilesNotification = t.WillRenameFilesRequest = t.DidRenameFilesNotification = t.WillCreateFilesRequest = t.DidCreateFilesNotification = t.FileOperationPatternKind = t.LinkedEditingRangeRequest = t.ShowDocumentRequest = t.SemanticTokensRegistrationType = t.SemanticTokensRefreshRequest = t.SemanticTokensRangeRequest = t.SemanticTokensDeltaRequest = t.SemanticTokensRequest = t.TokenFormat = t.CallHierarchyPrepareRequest = t.CallHierarchyOutgoingCallsRequest = t.CallHierarchyIncomingCallsRequest = t.WorkDoneProgressCancelNotification = t.WorkDoneProgressCreateRequest = t.WorkDoneProgress = t.SelectionRangeRequest = t.DeclarationRequest = t.FoldingRangeRefreshRequest = t.FoldingRangeRequest = t.ColorPresentationRequest = t.DocumentColorRequest = t.ConfigurationRequest = t.DidChangeWorkspaceFoldersNotification = t.WorkspaceFoldersRequest = t.TypeDefinitionRequest = t.ImplementationRequest = t.ApplyWorkspaceEditRequest = t.ExecuteCommandRequest = t.PrepareRenameRequest = t.RenameRequest = t.PrepareSupportDefaultBehavior = t.DocumentOnTypeFormattingRequest = t.DocumentRangesFormattingRequest = t.DocumentRangeFormattingRequest = t.DocumentFormattingRequest = t.DocumentLinkResolveRequest = t.DocumentLinkRequest = t.CodeLensRefreshRequest = t.CodeLensResolveRequest = t.CodeLensRequest = t.WorkspaceSymbolResolveRequest = void 0, t.InlineCompletionRequest = t.DidCloseNotebookDocumentNotification = t.DidSaveNotebookDocumentNotification = t.DidChangeNotebookDocumentNotification = t.NotebookCellArrayChange = t.DidOpenNotebookDocumentNotification = t.NotebookDocumentSyncRegistrationType = t.NotebookDocument = t.NotebookCell = t.ExecutionSummary = t.NotebookCellKind = t.DiagnosticRefreshRequest = t.WorkspaceDiagnosticRequest = t.DocumentDiagnosticRequest = t.DocumentDiagnosticReportKind = t.DiagnosticServerCancellationData = t.InlayHintRefreshRequest = t.InlayHintResolveRequest = t.InlayHintRequest = t.InlineValueRefreshRequest = t.InlineValueRequest = t.TypeHierarchySupertypesRequest = t.TypeHierarchySubtypesRequest = t.TypeHierarchyPrepareRequest = void 0;
-	var n = oX(), r = (aX(), e(OJ)), i = sX(), a = cX();
+	var n = lX(), r = (cX(), e(jJ)), i = uX(), a = dX();
 	Object.defineProperty(t, "ImplementationRequest", {
 		enumerable: !0,
 		get: function() {
 			return a.ImplementationRequest;
 		}
 	});
-	var o = lX();
+	var o = fX();
 	Object.defineProperty(t, "TypeDefinitionRequest", {
 		enumerable: !0,
 		get: function() {
 			return o.TypeDefinitionRequest;
 		}
 	});
-	var s = uX();
+	var s = pX();
 	Object.defineProperty(t, "WorkspaceFoldersRequest", {
 		enumerable: !0,
 		get: function() {
@@ -36649,14 +36649,14 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return s.DidChangeWorkspaceFoldersNotification;
 		}
 	});
-	var c = dX();
+	var c = mX();
 	Object.defineProperty(t, "ConfigurationRequest", {
 		enumerable: !0,
 		get: function() {
 			return c.ConfigurationRequest;
 		}
 	});
-	var l = fX();
+	var l = hX();
 	Object.defineProperty(t, "DocumentColorRequest", {
 		enumerable: !0,
 		get: function() {
@@ -36668,7 +36668,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return l.ColorPresentationRequest;
 		}
 	});
-	var u = pX();
+	var u = gX();
 	Object.defineProperty(t, "FoldingRangeRequest", {
 		enumerable: !0,
 		get: function() {
@@ -36680,21 +36680,21 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return u.FoldingRangeRefreshRequest;
 		}
 	});
-	var d = mX();
+	var d = _X();
 	Object.defineProperty(t, "DeclarationRequest", {
 		enumerable: !0,
 		get: function() {
 			return d.DeclarationRequest;
 		}
 	});
-	var f = hX();
+	var f = vX();
 	Object.defineProperty(t, "SelectionRangeRequest", {
 		enumerable: !0,
 		get: function() {
 			return f.SelectionRangeRequest;
 		}
 	});
-	var p = gX();
+	var p = yX();
 	Object.defineProperty(t, "WorkDoneProgress", {
 		enumerable: !0,
 		get: function() {
@@ -36711,7 +36711,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return p.WorkDoneProgressCancelNotification;
 		}
 	});
-	var m = _X();
+	var m = bX();
 	Object.defineProperty(t, "CallHierarchyIncomingCallsRequest", {
 		enumerable: !0,
 		get: function() {
@@ -36728,7 +36728,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return m.CallHierarchyPrepareRequest;
 		}
 	});
-	var h = vX();
+	var h = xX();
 	Object.defineProperty(t, "TokenFormat", {
 		enumerable: !0,
 		get: function() {
@@ -36760,21 +36760,21 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return h.SemanticTokensRegistrationType;
 		}
 	});
-	var g = yX();
+	var g = SX();
 	Object.defineProperty(t, "ShowDocumentRequest", {
 		enumerable: !0,
 		get: function() {
 			return g.ShowDocumentRequest;
 		}
 	});
-	var _ = bX();
+	var _ = CX();
 	Object.defineProperty(t, "LinkedEditingRangeRequest", {
 		enumerable: !0,
 		get: function() {
 			return _.LinkedEditingRangeRequest;
 		}
 	});
-	var v = xX();
+	var v = wX();
 	Object.defineProperty(t, "FileOperationPatternKind", {
 		enumerable: !0,
 		get: function() {
@@ -36811,7 +36811,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return v.WillDeleteFilesRequest;
 		}
 	});
-	var y = SX();
+	var y = TX();
 	Object.defineProperty(t, "UniquenessLevel", {
 		enumerable: !0,
 		get: function() {
@@ -36828,7 +36828,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return y.MonikerRequest;
 		}
 	});
-	var b = CX();
+	var b = EX();
 	Object.defineProperty(t, "TypeHierarchyPrepareRequest", {
 		enumerable: !0,
 		get: function() {
@@ -36845,7 +36845,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return b.TypeHierarchySupertypesRequest;
 		}
 	});
-	var ee = wX();
+	var ee = DX();
 	Object.defineProperty(t, "InlineValueRequest", {
 		enumerable: !0,
 		get: function() {
@@ -36857,7 +36857,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return ee.InlineValueRefreshRequest;
 		}
 	});
-	var x = TX();
+	var x = OX();
 	Object.defineProperty(t, "InlayHintRequest", {
 		enumerable: !0,
 		get: function() {
@@ -36874,7 +36874,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return x.InlayHintRefreshRequest;
 		}
 	});
-	var te = EX();
+	var te = kX();
 	Object.defineProperty(t, "DiagnosticServerCancellationData", {
 		enumerable: !0,
 		get: function() {
@@ -36901,7 +36901,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return te.DiagnosticRefreshRequest;
 		}
 	});
-	var S = DX();
+	var S = AX();
 	Object.defineProperty(t, "NotebookCellKind", {
 		enumerable: !0,
 		get: function() {
@@ -36953,7 +36953,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return S.DidCloseNotebookDocumentNotification;
 		}
 	});
-	var ne = OX();
+	var ne = jX();
 	Object.defineProperty(t, "InlineCompletionRequest", {
 		enumerable: !0,
 		get: function() {
@@ -37267,14 +37267,14 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	(function(e) {
 		e.method = "workspace/applyEdit", e.messageDirection = n.MessageDirection.serverToClient, e.type = new n.ProtocolRequestType("workspace/applyEdit");
 	})(rt || (t.ApplyWorkspaceEditRequest = rt = {}));
-})), AX = /* @__PURE__ */ r(((e) => {
+})), NX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.createProtocolConnection = void 0;
-	var t = EJ();
+	var t = kJ();
 	function n(e, n, r, i) {
 		return t.ConnectionStrategy.is(i) && (i = { connectionStrategy: i }), (0, t.createMessageConnection)(e, n, r, i);
 	}
 	e.createProtocolConnection = n;
-})), jX = /* @__PURE__ */ r(((t) => {
+})), PX = /* @__PURE__ */ r(((t) => {
 	var n = t && t.__createBinding || (Object.create ? (function(e, t, n, r) {
 		r === void 0 && (r = n);
 		var i = Object.getOwnPropertyDescriptor(t, n);
@@ -37289,8 +37289,8 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	})), r = t && t.__exportStar || function(e, t) {
 		for (var r in e) r !== "default" && !Object.prototype.hasOwnProperty.call(t, r) && n(t, e, r);
 	};
-	Object.defineProperty(t, "__esModule", { value: !0 }), t.LSPErrorCodes = t.createProtocolConnection = void 0, r(EJ(), t), r((aX(), e(OJ)), t), r(oX(), t), r(kX(), t);
-	var i = AX();
+	Object.defineProperty(t, "__esModule", { value: !0 }), t.LSPErrorCodes = t.createProtocolConnection = void 0, r(kJ(), t), r((cX(), e(jJ)), t), r(lX(), t), r(MX(), t);
+	var i = NX();
 	Object.defineProperty(t, "createProtocolConnection", {
 		enumerable: !0,
 		get: function() {
@@ -37301,7 +37301,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	(function(e) {
 		e.lspReservedErrorRangeStart = -32899, e.RequestFailed = -32803, e.ServerCancelled = -32802, e.ContentModified = -32801, e.RequestCancelled = -32800, e.lspReservedErrorRangeEnd = -32800;
 	})(a || (t.LSPErrorCodes = a = {}));
-})), MX = /* @__PURE__ */ r(((e) => {
+})), FX = /* @__PURE__ */ r(((e) => {
 	var t = e && e.__createBinding || (Object.create ? (function(e, t, n, r) {
 		r === void 0 && (r = n);
 		var i = Object.getOwnPropertyDescriptor(t, n);
@@ -37317,15 +37317,15 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		for (var r in e) r !== "default" && !Object.prototype.hasOwnProperty.call(n, r) && t(n, e, r);
 	};
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.createProtocolConnection = void 0;
-	var r = DJ();
-	n(DJ(), e), n(jX(), e);
+	var r = AJ();
+	n(AJ(), e), n(PX(), e);
 	function i(e, t, n, i) {
 		return (0, r.createMessageConnection)(e, t, n, i);
 	}
 	e.createProtocolConnection = i;
-})), NX = /* @__PURE__ */ r(((e, t) => {
-	t.exports = MX();
-})), PX = /* @__PURE__ */ r(((e) => {
+})), IX = /* @__PURE__ */ r(((e, t) => {
+	t.exports = FX();
+})), LX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.stringArray = e.array = e.func = e.error = e.number = e.string = e.boolean = void 0;
 	function t(e) {
 		return e === !0 || e === !1;
@@ -37355,9 +37355,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		return o(e) && e.every((e) => n(e));
 	}
 	e.stringArray = s;
-})), FX = /* @__PURE__ */ r(((e) => {
+})), RX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.Message = e.NotificationType9 = e.NotificationType8 = e.NotificationType7 = e.NotificationType6 = e.NotificationType5 = e.NotificationType4 = e.NotificationType3 = e.NotificationType2 = e.NotificationType1 = e.NotificationType0 = e.NotificationType = e.RequestType9 = e.RequestType8 = e.RequestType7 = e.RequestType6 = e.RequestType5 = e.RequestType4 = e.RequestType3 = e.RequestType2 = e.RequestType1 = e.RequestType = e.RequestType0 = e.AbstractMessageSignature = e.ParameterStructures = e.ResponseError = e.ErrorCodes = void 0;
-	var t = PX(), n;
+	var t = LX(), n;
 	(function(e) {
 		e.ParseError = -32700, e.InvalidRequest = -32600, e.MethodNotFound = -32601, e.InvalidParams = -32602, e.InternalError = -32603, e.jsonrpcReservedErrorRangeStart = -32099, e.serverErrorStart = -32099, e.MessageWriteError = -32099, e.MessageReadError = -32098, e.PendingResponseRejected = -32097, e.ConnectionInactive = -32096, e.ServerNotInitialized = -32002, e.UnknownErrorCode = -32001, e.jsonrpcReservedErrorRangeEnd = -32e3, e.serverErrorEnd = -32e3;
 	})(n || (e.ErrorCodes = n = {})), e.ResponseError = class e extends Error {
@@ -37511,7 +37511,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}
 		e.isResponse = i;
 	})(a || (e.Message = a = {}));
-})), IX = /* @__PURE__ */ r(((e) => {
+})), zX = /* @__PURE__ */ r(((e) => {
 	var t;
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.LRUCache = e.LinkedMap = e.Touch = void 0;
 	var n;
@@ -37742,7 +37742,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			this.size > this._limit && this.trimOld(Math.round(this._limit * this._ratio));
 		}
 	};
-})), LX = /* @__PURE__ */ r(((e) => {
+})), BX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.Disposable = void 0;
 	var t;
 	(function(e) {
@@ -37751,7 +37751,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}
 		e.create = t;
 	})(t || (e.Disposable = t = {}));
-})), RX = /* @__PURE__ */ r(((e) => {
+})), VX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 });
 	var t;
 	function n() {
@@ -37765,9 +37765,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}
 		e.install = n;
 	})(n ||= {}), e.default = n;
-})), zX = /* @__PURE__ */ r(((e) => {
+})), HX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.Emitter = e.Event = void 0;
-	var t = RX(), n;
+	var t = VX(), n;
 	(function(e) {
 		let t = { dispose() {} };
 		e.None = function() {
@@ -37824,9 +37824,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}
 	};
 	e.Emitter = i, i._noop = function() {};
-})), BX = /* @__PURE__ */ r(((e) => {
+})), UX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.CancellationTokenSource = e.CancellationToken = void 0;
-	var t = RX(), n = PX(), r = zX(), i;
+	var t = VX(), n = LX(), r = HX(), i;
 	(function(e) {
 		e.None = Object.freeze({
 			isCancellationRequested: !1,
@@ -37874,9 +37874,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			this._token ? this._token instanceof o && this._token.dispose() : this._token = i.None;
 		}
 	};
-})), VX = /* @__PURE__ */ r(((e) => {
+})), WX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.SharedArrayReceiverStrategy = e.SharedArraySenderStrategy = void 0;
-	var t = BX(), n;
+	var t = UX(), n;
 	(function(e) {
 		e.Continue = 0, e.Cancelled = 1;
 	})(n ||= {}), e.SharedArraySenderStrategy = class {
@@ -37927,9 +37927,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return n === void 0 ? new t.CancellationTokenSource() : new i(n);
 		}
 	};
-})), HX = /* @__PURE__ */ r(((e) => {
+})), GX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.Semaphore = void 0;
-	var t = RX();
+	var t = VX();
 	e.Semaphore = class {
 		constructor(e = 1) {
 			if (e <= 0) throw Error("Capacity must be greater than 0");
@@ -37966,9 +37966,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			}
 		}
 	};
-})), UX = /* @__PURE__ */ r(((e) => {
+})), KX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ReadableStreamMessageReader = e.AbstractMessageReader = e.MessageReader = void 0;
-	var t = RX(), n = PX(), r = zX(), i = HX(), a;
+	var t = VX(), n = LX(), r = HX(), i = GX(), a;
 	(function(e) {
 		function t(e) {
 			let t = e;
@@ -38087,9 +38087,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			}, this._partialMessageTimeout, this.messageToken, this._partialMessageTimeout));
 		}
 	};
-})), WX = /* @__PURE__ */ r(((e) => {
+})), qX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.WriteableStreamMessageWriter = e.AbstractMessageWriter = e.MessageWriter = void 0;
-	var t = RX(), n = PX(), r = HX(), i = zX(), a = "Content-Length: ", o = "\r\n", s;
+	var t = VX(), n = LX(), r = GX(), i = HX(), a = "Content-Length: ", o = "\r\n", s;
 	(function(e) {
 		function t(e) {
 			let t = e;
@@ -38164,7 +38164,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			this.writable.end();
 		}
 	};
-})), GX = /* @__PURE__ */ r(((e) => {
+})), JX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.AbstractMessageBuffer = void 0;
 	var t = 13, n = 10, r = "\r\n";
 	e.AbstractMessageBuffer = class {
@@ -38253,9 +38253,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return t;
 		}
 	};
-})), KX = /* @__PURE__ */ r(((e) => {
+})), YX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.createMessageConnection = e.ConnectionOptions = e.MessageStrategy = e.CancellationStrategy = e.CancellationSenderStrategy = e.CancellationReceiverStrategy = e.RequestCancellationReceiverStrategy = e.IdCancellationReceiverStrategy = e.ConnectionStrategy = e.ConnectionError = e.ConnectionErrors = e.LogTraceNotification = e.SetTraceNotification = e.TraceFormat = e.TraceValues = e.Trace = e.NullLogger = e.ProgressType = e.ProgressToken = void 0;
-	var t = RX(), n = PX(), r = FX(), i = IX(), a = zX(), o = BX(), s;
+	var t = VX(), n = LX(), r = RX(), i = zX(), a = HX(), o = UX(), s;
 	(function(e) {
 		e.type = new r.NotificationType("$/cancelRequest");
 	})(s ||= {});
@@ -38890,9 +38890,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}), Ze;
 	}
 	e.createMessageConnection = re;
-})), qX = /* @__PURE__ */ r(((e) => {
+})), XX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.ProgressType = e.ProgressToken = e.createMessageConnection = e.NullLogger = e.ConnectionOptions = e.ConnectionStrategy = e.AbstractMessageBuffer = e.WriteableStreamMessageWriter = e.AbstractMessageWriter = e.MessageWriter = e.ReadableStreamMessageReader = e.AbstractMessageReader = e.MessageReader = e.SharedArrayReceiverStrategy = e.SharedArraySenderStrategy = e.CancellationToken = e.CancellationTokenSource = e.Emitter = e.Event = e.Disposable = e.LRUCache = e.Touch = e.LinkedMap = e.ParameterStructures = e.NotificationType9 = e.NotificationType8 = e.NotificationType7 = e.NotificationType6 = e.NotificationType5 = e.NotificationType4 = e.NotificationType3 = e.NotificationType2 = e.NotificationType1 = e.NotificationType0 = e.NotificationType = e.ErrorCodes = e.ResponseError = e.RequestType9 = e.RequestType8 = e.RequestType7 = e.RequestType6 = e.RequestType5 = e.RequestType4 = e.RequestType3 = e.RequestType2 = e.RequestType1 = e.RequestType0 = e.RequestType = e.Message = e.RAL = void 0, e.MessageStrategy = e.CancellationStrategy = e.CancellationSenderStrategy = e.CancellationReceiverStrategy = e.ConnectionError = e.ConnectionErrors = e.LogTraceNotification = e.SetTraceNotification = e.TraceFormat = e.TraceValues = e.Trace = void 0;
-	var t = FX();
+	var t = RX();
 	Object.defineProperty(e, "Message", {
 		enumerable: !0,
 		get: function() {
@@ -39024,7 +39024,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return t.ParameterStructures;
 		}
 	});
-	var n = IX();
+	var n = zX();
 	Object.defineProperty(e, "LinkedMap", {
 		enumerable: !0,
 		get: function() {
@@ -39041,14 +39041,14 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return n.Touch;
 		}
 	});
-	var r = LX();
+	var r = BX();
 	Object.defineProperty(e, "Disposable", {
 		enumerable: !0,
 		get: function() {
 			return r.Disposable;
 		}
 	});
-	var i = zX();
+	var i = HX();
 	Object.defineProperty(e, "Event", {
 		enumerable: !0,
 		get: function() {
@@ -39060,7 +39060,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return i.Emitter;
 		}
 	});
-	var a = BX();
+	var a = UX();
 	Object.defineProperty(e, "CancellationTokenSource", {
 		enumerable: !0,
 		get: function() {
@@ -39072,7 +39072,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return a.CancellationToken;
 		}
 	});
-	var o = VX();
+	var o = WX();
 	Object.defineProperty(e, "SharedArraySenderStrategy", {
 		enumerable: !0,
 		get: function() {
@@ -39084,7 +39084,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return o.SharedArrayReceiverStrategy;
 		}
 	});
-	var s = UX();
+	var s = KX();
 	Object.defineProperty(e, "MessageReader", {
 		enumerable: !0,
 		get: function() {
@@ -39101,7 +39101,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return s.ReadableStreamMessageReader;
 		}
 	});
-	var c = WX();
+	var c = qX();
 	Object.defineProperty(e, "MessageWriter", {
 		enumerable: !0,
 		get: function() {
@@ -39118,14 +39118,14 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 			return c.WriteableStreamMessageWriter;
 		}
 	});
-	var l = GX();
+	var l = JX();
 	Object.defineProperty(e, "AbstractMessageBuffer", {
 		enumerable: !0,
 		get: function() {
 			return l.AbstractMessageBuffer;
 		}
 	});
-	var u = KX();
+	var u = YX();
 	Object.defineProperty(e, "ConnectionStrategy", {
 		enumerable: !0,
 		get: function() {
@@ -39211,10 +39211,10 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		get: function() {
 			return u.MessageStrategy;
 		}
-	}), e.RAL = RX().default;
-})), JX = /* @__PURE__ */ r(((e) => {
+	}), e.RAL = VX().default;
+})), ZX = /* @__PURE__ */ r(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 });
-	var t = qX(), n = class e extends t.AbstractMessageBuffer {
+	var t = XX(), n = class e extends t.AbstractMessageBuffer {
 		constructor(e = "utf-8") {
 			super(e), this.asciiDecoder = new TextDecoder("ascii");
 		}
@@ -39327,7 +39327,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		}
 		e.install = n;
 	})(s ||= {}), e.default = s;
-})), YX = /* @__PURE__ */ r(((e) => {
+})), QX = /* @__PURE__ */ r(((e) => {
 	var t = e && e.__createBinding || (Object.create ? (function(e, t, n, r) {
 		r === void 0 && (r = n);
 		var i = Object.getOwnPropertyDescriptor(t, n);
@@ -39342,9 +39342,9 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	})), n = e && e.__exportStar || function(e, n) {
 		for (var r in e) r !== "default" && !Object.prototype.hasOwnProperty.call(n, r) && t(n, e, r);
 	};
-	Object.defineProperty(e, "__esModule", { value: !0 }), e.createMessageConnection = e.BrowserMessageWriter = e.BrowserMessageReader = void 0, JX().default.install();
-	var r = qX();
-	n(qX(), e), e.BrowserMessageReader = class extends r.AbstractMessageReader {
+	Object.defineProperty(e, "__esModule", { value: !0 }), e.createMessageConnection = e.BrowserMessageWriter = e.BrowserMessageReader = void 0, ZX().default.install();
+	var r = XX();
+	n(XX(), e), e.BrowserMessageReader = class extends r.AbstractMessageReader {
 		constructor(e) {
 			super(), this._onData = new r.Emitter(), this._messageListener = (e) => {
 				this._onData.fire(e.data);
@@ -39373,7 +39373,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 		return n === void 0 && (n = r.NullLogger), r.ConnectionStrategy.is(i) && (i = { connectionStrategy: i }), (0, r.createMessageConnection)(e, t, n, i);
 	}
 	e.createMessageConnection = i;
-})), XX = NX(), ZX = YX(), QX = class extends ZX.AbstractMessageReader {
+})), $X = IX(), eZ = QX(), tZ = class extends eZ.AbstractMessageReader {
 	socket;
 	state = "initial";
 	callback;
@@ -39421,7 +39421,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 	fireClose() {
 		this.state === "initial" ? this.events.splice(0, 0, {}) : this.state === "listening" && super.fireClose(), this.state = "closed";
 	}
-}, $X = class extends ZX.AbstractMessageWriter {
+}, nZ = class extends eZ.AbstractMessageWriter {
 	errorCount = 0;
 	socket;
 	constructor(e) {
@@ -39439,7 +39439,7 @@ var yV, bV, xV, SV, CV, wV, TV, EV, DV, OV, kV, AV, jV, MV, NV, PV, FV, IV, LV, 
 };
 //#endregion
 //#region node_modules/vscode-ws-jsonrpc/lib/connection.js
-function eZ(e) {
+function rZ(e) {
 	return {
 		send: (t) => e.send(t),
 		onMessage: (t) => {
@@ -39459,7 +39459,7 @@ function eZ(e) {
 //#endregion
 //#region node_modules/monaco-languageclient/lib/wrapper/lcwrapper.js
 pe();
-var tZ = class {
+var iZ = class {
 	languageClient;
 	languageClientConfig;
 	worker;
@@ -39485,7 +39485,7 @@ var tZ = class {
 		return this.languageClient?.isRunning() ?? !1 ? (this.logger?.info("startLanguageClientConnection: monaco-languageclient already running!"), Promise.resolve()) : new Promise((e, t) => {
 			let n = this.languageClientConfig.connection.options;
 			if (n.$type === "WebSocketDirect" || n.$type === "WebSocketParams" || n.$type === "WebSocketUrl") {
-				let r = n.$type === "WebSocketDirect" ? n.webSocket : new WebSocket(GD(n));
+				let r = n.$type === "WebSocketDirect" ? n.webSocket : new WebSocket(JD(n));
 				this.initMessageTransportWebSocket(r, e, t);
 			} else this.initMessageTransportWorker(n, e, t);
 		});
@@ -39496,10 +39496,10 @@ var tZ = class {
 	async initMessageTransportWebSocket(e, t, n) {
 		let r = this.languageClientConfig.connection.messageTransports;
 		if (r === void 0) {
-			let t = eZ(e);
+			let t = rZ(e);
 			r = {
-				reader: new QX(t),
-				writer: new $X(t)
+				reader: new tZ(t),
+				writer: new nZ(t)
 			};
 		}
 		e.readyState === WebSocket.OPEN && await this.performLanguageClientStart(r, t, n), e.onopen = async () => {
@@ -39532,8 +39532,8 @@ var tZ = class {
 		}
 		let r = this.port ? this.port : this.worker, i = this.languageClientConfig.connection.messageTransports;
 		i === void 0 && (i = {
-			reader: new XX.BrowserMessageReader(r),
-			writer: new XX.BrowserMessageWriter(r)
+			reader: new $X.BrowserMessageReader(r),
+			writer: new $X.BrowserMessageWriter(r)
 		}), await this.performLanguageClientStart(i, t, n);
 	}
 	async performLanguageClientStart(e, t, n) {
@@ -39544,8 +39544,8 @@ var tZ = class {
 			name: "Monaco Wrapper Language Client",
 			clientOptions: {
 				errorHandler: {
-					error: (e) => r ? (n(`Error occurred in language client: ${e}`), { action: cJ.ErrorAction.Shutdown }) : { action: cJ.ErrorAction.Continue },
-					closed: () => ({ action: cJ.CloseAction.DoNotRestart })
+					error: (e) => r ? (n(`Error occurred in language client: ${e}`), { action: dJ.ErrorAction.Shutdown }) : { action: dJ.ErrorAction.Continue },
+					closed: () => ({ action: dJ.CloseAction.DoNotRestart })
 				},
 				...this.languageClientConfig.clientOptions
 			},
@@ -39560,7 +39560,7 @@ var tZ = class {
 			}
 		});
 		try {
-			if (this.languageClient = this.languageClientConfig.useClientWithProposedFeatures === !0 ? new uJ(i) : new lJ(i), this.languageClientConfig.registerFeatures !== void 0 && this.languageClient.registerFeatures(this.languageClientConfig.registerFeatures), await this.languageClient.start(), o && a.startOptions !== void 0) {
+			if (this.languageClient = this.languageClientConfig.useClientWithProposedFeatures === !0 ? new pJ(i) : new fJ(i), this.languageClientConfig.registerFeatures !== void 0 && this.languageClient.registerFeatures(this.languageClientConfig.registerFeatures), await this.languageClient.start(), o && a.startOptions !== void 0) {
 				let e = a.startOptions;
 				e.onCall(this.getLanguageClient()), e.reportStatus !== void 0 && this.logger?.info(this.reportStatus().join("\n"));
 			}
@@ -39603,9 +39603,9 @@ var tZ = class {
 	}
 	reportStatus() {
 		let e = [], t = this.getLanguageClient();
-		return e.push("LanguageClientWrapper status:"), e.push(`LanguageClient: ${t?.name ?? "Language Client"} is in a '${cJ.State[t?.state ?? 1]}' state`), e;
+		return e.push("LanguageClientWrapper status:"), e.push(`LanguageClient: ${t?.name ?? "Language Client"} is in a '${dJ.State[t?.state ?? 1]}' state`), e;
 	}
-}, nZ = class {
+}, aZ = class {
 	createSession;
 	onStateChange;
 	session;
@@ -39662,8 +39662,8 @@ var tZ = class {
 };
 //#endregion
 //#region src/grammar-language-service.ts
-function rZ(e, t) {
-	return new nZ(() => {
+function oZ(e, t) {
+	return new aZ(() => {
 		let e = new Worker(new URL(
 			/* @vite-ignore */
 			"/itlingo_website_portal/static/dist/grammar-editor/langium-grammar-server.worker.js",
@@ -39671,7 +39671,7 @@ function rZ(e, t) {
 		), {
 			type: "module",
 			name: "ITLingo Langium Grammar language server"
-		}), n = new tZ({
+		}), n = new iZ({
 			languageId: "langium",
 			connection: { options: {
 				$type: "WorkerDirect",
@@ -39704,7 +39704,7 @@ function rZ(e, t) {
 	}, e);
 }
 b(), $s(), P(), mi(), Zs(), Pn(), Dt(), pc();
-var iZ = class extends z {
+var sZ = class extends z {
 	constructor(e, t, n) {
 		super(), this.configurationService = e, this.modelService = t, this.languageService = n, this._onDidChangeConfiguration = this._register(new V()), this.onDidChangeConfiguration = this._onDidChangeConfiguration.event, this._register(this.configurationService.onDidChangeConfiguration((e) => this._onDidChangeConfiguration.fire(this.toResourceConfigurationChangeEvent(e))));
 	}
@@ -39767,24 +39767,13 @@ var iZ = class extends z {
 		};
 	}
 };
-iZ = N([
+sZ = N([
 	R(0, ba),
 	R(1, an),
 	R(2, ps)
-], iZ), fS(), cT(), y();
-var aZ = ".vscode", oZ = "settings", sZ = `${aZ}/${oZ}.json`, cZ = "vscode://schemas/settings/default", lZ = "vscode://schemas/settings/user", uZ = "vscode://schemas/settings/profile", dZ = "vscode://schemas/settings/machine", fZ = "vscode://schemas/settings/workspace", pZ = "vscode://schemas/settings/folder", mZ = "vscode://schemas/launch", hZ = "vscode://schemas/tasks", gZ = "vscode://schemas/mcp", _Z = [Ac.APPLICATION, Ac.APPLICATION_MACHINE], vZ = [
+], sZ), fS(), dT(), y();
+var cZ = ".vscode", lZ = "settings", uZ = `${cZ}/${lZ}.json`, dZ = "vscode://schemas/settings/default", fZ = "vscode://schemas/settings/user", pZ = "vscode://schemas/settings/profile", mZ = "vscode://schemas/settings/machine", hZ = "vscode://schemas/settings/workspace", gZ = "vscode://schemas/settings/folder", _Z = "vscode://schemas/launch", vZ = "vscode://schemas/tasks", yZ = "vscode://schemas/mcp", bZ = [Ac.APPLICATION, Ac.APPLICATION_MACHINE], xZ = [
 	Ac.MACHINE,
-	Ac.WINDOW,
-	Ac.RESOURCE,
-	Ac.LANGUAGE_OVERRIDABLE,
-	Ac.MACHINE_OVERRIDABLE
-], yZ = [
-	Ac.WINDOW,
-	Ac.RESOURCE,
-	Ac.LANGUAGE_OVERRIDABLE
-], bZ = [Ac.APPLICATION, ...yZ], xZ = [
-	Ac.MACHINE,
-	Ac.APPLICATION_MACHINE,
 	Ac.WINDOW,
 	Ac.RESOURCE,
 	Ac.LANGUAGE_OVERRIDABLE,
@@ -39792,19 +39781,30 @@ var aZ = ".vscode", oZ = "settings", sZ = `${aZ}/${oZ}.json`, cZ = "vscode://sch
 ], SZ = [
 	Ac.WINDOW,
 	Ac.RESOURCE,
-	Ac.LANGUAGE_OVERRIDABLE,
-	Ac.MACHINE_OVERRIDABLE
-], CZ = [
+	Ac.LANGUAGE_OVERRIDABLE
+], CZ = [Ac.APPLICATION, ...SZ], wZ = [
+	Ac.MACHINE,
+	Ac.APPLICATION_MACHINE,
+	Ac.WINDOW,
 	Ac.RESOURCE,
 	Ac.LANGUAGE_OVERRIDABLE,
 	Ac.MACHINE_OVERRIDABLE
-], wZ = "tasks", TZ = "launch", EZ = Object.create(null);
-EZ[wZ] = `${aZ}/${wZ}.json`, EZ[TZ] = `${aZ}/${TZ}.json`, EZ.mcp = `${aZ}/mcp.json`;
-var DZ = Object.create(null);
-DZ[wZ] = `${wZ}.json`, DZ.mcp = "mcp.json";
-var OZ = "{\n	\"version\": \"2.0.0\",\n	\"tasks\": []\n}", kZ = "workbench.settings.applyToAllProfiles";
-fr(), zt(), Pa(), y(), kt(), wC(), uT(), P(), gc(), Co(), T();
-var AZ = oa.as(Qe.JSONContribution), jZ = oa.as(Ii.Configuration), MZ = {
+], TZ = [
+	Ac.WINDOW,
+	Ac.RESOURCE,
+	Ac.LANGUAGE_OVERRIDABLE,
+	Ac.MACHINE_OVERRIDABLE
+], EZ = [
+	Ac.RESOURCE,
+	Ac.LANGUAGE_OVERRIDABLE,
+	Ac.MACHINE_OVERRIDABLE
+], DZ = "tasks", OZ = "launch", kZ = Object.create(null);
+kZ[DZ] = `${cZ}/${DZ}.json`, kZ[OZ] = `${cZ}/${OZ}.json`, kZ.mcp = `${cZ}/mcp.json`;
+var AZ = Object.create(null);
+AZ[DZ] = `${DZ}.json`, AZ.mcp = "mcp.json";
+var jZ = "{\n	\"version\": \"2.0.0\",\n	\"tasks\": []\n}", MZ = "workbench.settings.applyToAllProfiles";
+fr(), zt(), Pa(), y(), kt(), GC(), pT(), P(), gc(), Co(), T();
+var NZ = oa.as(Qe.JSONContribution), PZ = oa.as(Ii.Configuration), FZ = {
 	type: "object",
 	defaultSnippets: [{ body: {
 		title: "",
@@ -39922,16 +39922,16 @@ var AZ = oa.as(Qe.JSONContribution), jZ = oa.as(Ii.Configuration), MZ = {
 			}] }
 		}
 	}
-}, NZ, PZ = lT.registerExtensionPoint({
+}, IZ, LZ = fT.registerExtensionPoint({
 	extensionPoint: "configurationDefaults",
 	jsonSchema: { $ref: Te },
 	canHandleResolver: !0
 });
-PZ.setHandler((e, { added: t, removed: n }) => {
-	NZ && jZ.deltaConfiguration(NZ);
-	let r = NZ = {};
+LZ.setHandler((e, { added: t, removed: n }) => {
+	IZ && PZ.deltaConfiguration(IZ);
+	let r = IZ = {};
 	if (queueMicrotask(() => {
-		NZ === r && (jZ.deltaConfiguration(NZ), NZ = void 0);
+		IZ === r && (PZ.deltaConfiguration(IZ), IZ = void 0);
 	}), n.length) {
 		let e = n.map((e) => ({
 			overrides: Yt(e.value),
@@ -39940,10 +39940,10 @@ PZ.setHandler((e, { added: t, removed: n }) => {
 				displayName: e.description.displayName
 			}
 		}));
-		NZ.removedDefaults = e;
+		IZ.removedDefaults = e;
 	}
 	if (t.length) {
-		let e = jZ.getConfigurationProperties(), n = [
+		let e = PZ.getConfigurationProperties(), n = [
 			Ac.MACHINE_OVERRIDABLE,
 			Ac.WINDOW,
 			Ac.RESOURCE,
@@ -39969,26 +39969,26 @@ PZ.setHandler((e, { added: t, removed: n }) => {
 				}
 			};
 		});
-		NZ.addedDefaults = r;
+		IZ.addedDefaults = r;
 	}
 });
-var FZ = lT.registerExtensionPoint({
+var RZ = fT.registerExtensionPoint({
 	extensionPoint: "configuration",
-	deps: [PZ],
+	deps: [LZ],
 	jsonSchema: {
 		description: M(2658, "Contributes configuration settings."),
-		oneOf: [MZ, {
+		oneOf: [FZ, {
 			type: "array",
-			items: MZ
+			items: FZ
 		}]
 	},
 	canHandleResolver: !0
-}), IZ = new VC();
-FZ.setHandler((e, { added: t, removed: n }) => {
-	if (NZ ??= {}, n.length) {
+}), zZ = new NC();
+RZ.setHandler((e, { added: t, removed: n }) => {
+	if (IZ ??= {}, n.length) {
 		let e = [];
-		for (let t of n) e.push(...IZ.get(t.description.identifier) || []), IZ.delete(t.description.identifier);
-		NZ.removedConfigurations = e;
+		for (let t of n) e.push(...zZ.get(t.description.identifier) || []), zZ.delete(t.description.identifier);
+		IZ.removedConfigurations = e;
 	}
 	let r = /* @__PURE__ */ new Set();
 	function i(e, t) {
@@ -40029,12 +40029,12 @@ FZ.setHandler((e, { added: t, removed: n }) => {
 		let e = [];
 		for (let n of t) {
 			let t = [], r = n.value;
-			Array.isArray(r) ? r.forEach((e) => t.push(i(e, n))) : t.push(i(r, n)), IZ.set(n.description.identifier, t), e.push(...t);
+			Array.isArray(r) ? r.forEach((e) => t.push(i(e, n))) : t.push(i(r, n)), zZ.set(n.description.identifier, t), e.push(...t);
 		}
-		NZ.addedConfigurations = e;
+		IZ.addedConfigurations = e;
 	}
-	jZ.deltaConfiguration(NZ), NZ = void 0;
-}), AZ.registerSchema("vscode://schemas/workspaceConfig", {
+	PZ.deltaConfiguration(IZ), IZ = void 0;
+}), NZ.registerSchema("vscode://schemas/workspaceConfig", {
 	allowComments: !0,
 	allowTrailingCommas: !0,
 	default: {
@@ -40081,7 +40081,7 @@ FZ.setHandler((e, { added: t, removed: n }) => {
 			type: "object",
 			default: {},
 			description: M(2668, "Workspace settings"),
-			$ref: fZ
+			$ref: hZ
 		},
 		launch: {
 			type: "object",
@@ -40090,7 +40090,7 @@ FZ.setHandler((e, { added: t, removed: n }) => {
 				compounds: []
 			},
 			description: M(2669, "Workspace launch configurations"),
-			$ref: mZ
+			$ref: _Z
 		},
 		tasks: {
 			type: "object",
@@ -40099,7 +40099,7 @@ FZ.setHandler((e, { added: t, removed: n }) => {
 				tasks: []
 			},
 			description: M(2670, "Workspace task configurations"),
-			$ref: hZ
+			$ref: vZ
 		},
 		mcp: {
 			type: "object",
@@ -40111,7 +40111,7 @@ FZ.setHandler((e, { added: t, removed: n }) => {
 				} }
 			},
 			description: M(2671, "Model Context Protocol server configurations"),
-			$ref: gZ
+			$ref: yZ
 		},
 		extensions: {
 			type: "object",
@@ -40132,7 +40132,7 @@ FZ.setHandler((e, { added: t, removed: n }) => {
 	},
 	errorMessage: M(2675, "Unknown workspace configuration property")
 });
-var LZ = class extends z {
+var BZ = class extends z {
 	constructor() {
 		super(...arguments), this.type = "table";
 	}
@@ -40158,13 +40158,13 @@ var LZ = class extends z {
 		};
 	}
 };
-oa.as(dT.ExtensionFeaturesRegistry).registerExtensionFeature({
+oa.as(mT.ExtensionFeaturesRegistry).registerExtensionFeature({
 	id: "configuration",
 	label: M(2679, "Settings"),
 	access: { canToggle: !1 },
-	renderer: new Ta(LZ)
+	renderer: new Ta(BZ)
 });
-var RZ = class extends z {
+var VZ = class extends z {
 	constructor() {
 		super(...arguments), this.type = "table";
 	}
@@ -40199,19 +40199,19 @@ var RZ = class extends z {
 		};
 	}
 };
-oa.as(dT.ExtensionFeaturesRegistry).registerExtensionFeature({
+oa.as(mT.ExtensionFeaturesRegistry).registerExtensionFeature({
 	id: "configurationDefaults",
 	label: M(2683, "Settings Default Overrides"),
 	access: { canToggle: !1 },
-	renderer: new Ta(RZ)
-}), b(), fr(), Pa(), gw(), ZC(), Xs(), Fe(), P(), qa(), Rt(), Gn(), hd(), bi(), Br(), oC(), Di(), OC(), No(), Ar();
-var zZ = class extends z {
+	renderer: new Ta(VZ)
+}), b(), fr(), Pa(), yw(), ew(), Xs(), Fe(), P(), qa(), Rt(), Gn(), hd(), bi(), Br(), fC(), Di(), LC(), No(), Ar();
+var HZ = class extends z {
 	constructor(e, t, n, r, i, a) {
 		super(), this.contextService = e, this.notificationService = t, this.fileService = n, this.quickInputService = r, this.hostService = i, this.storageService = a, this.findWorkspaces();
 	}
 	async findWorkspaces() {
 		let e = this.contextService.getWorkspace().folders[0];
-		if (!e || this.contextService.getWorkbenchState() !== f.FOLDER || hC(this.contextService.getWorkspace())) return;
+		if (!e || this.contextService.getWorkbenchState() !== f.FOLDER || rC(this.contextService.getWorkspace())) return;
 		let t = (await this.fileService.resolve(e.uri)).children?.map((e) => e.name);
 		if (Array.isArray(t)) {
 			let n = t.filter(fs);
@@ -40246,14 +40246,14 @@ var zZ = class extends z {
 		});
 	}
 };
-zZ = N([
+HZ = N([
 	R(0, Nn),
 	R(1, wo),
 	R(2, ao),
 	R(3, Ga),
 	R(4, Sd),
 	R(5, wl)
-], zZ), oa.as(iw.Workbench).registerWorkbenchContribution(zZ, lw.Eventually), ic(class extends Sa {
+], HZ), oa.as(sw.Workbench).registerWorkbenchContribution(HZ, fw.Eventually), ic(class extends Sa {
 	constructor() {
 		super({
 			id: "workbench.action.openWorkspaceFromEditor",
@@ -40261,7 +40261,7 @@ zZ = N([
 			f1: !1,
 			menu: {
 				id: mc.EditorContent,
-				when: ye.and(mC.Extension.isEqualTo(Un), lC.isEqualTo(tC), sC.toNegated())
+				when: ye.and(dC.Extension.isEqualTo(Un), RC.isEqualTo(tC), pC.toNegated())
 			}
 		});
 	}
@@ -40277,7 +40277,7 @@ zZ = N([
 		return n.openWindow([{ workspaceUri: t }]);
 	}
 }), zt(), Dt(), ua(), kt(), An();
-var BZ = class extends Wo {
+var UZ = class extends Wo {
 	constructor(e, t) {
 		super(e, t), this._folders = [], this._transient = !1, this._settingsModelParser = new Wo(e, t), this._launchModel = Zi.createEmptyModel(t), this._tasksModel = Zi.createEmptyModel(t);
 	}
@@ -40313,7 +40313,7 @@ var BZ = class extends Wo {
 		}
 		return Zi.createEmptyModel(this.logService);
 	}
-}, VZ = class extends Wo {
+}, WZ = class extends Wo {
 	constructor(e, t, n) {
 		super(e, n), this.scope = t;
 	}
@@ -40325,7 +40325,7 @@ var BZ = class extends Wo {
 			overrides: []
 		};
 	}
-}, HZ = class extends xs {
+}, GZ = class extends xs {
 	constructor(e, t, n, r, i, a, o, s, c, l, u) {
 		super(e, t, n, r, i, a, o, s, c, u), this._workspace = l;
 	}
@@ -40365,20 +40365,20 @@ var BZ = class extends Wo {
 		};
 	}
 };
-b(), fr(), pl(), S(), Pa(), Xs(), Fe(), Ca(), qa(), y(), dw(), Rt(), qt(), oT(), xt(), Qa(), Ts(), Ff(), Qw(), ia(), Ar();
-var UZ;
+b(), fr(), pl(), S(), Pa(), Xs(), Fe(), Ca(), qa(), y(), mw(), Rt(), qt(), lT(), xt(), Qa(), Ts(), Ff(), tT(), ia(), Ar();
+var KZ;
 (function(e) {
 	e[e.ERROR_UNKNOWN_KEY = 0] = "ERROR_UNKNOWN_KEY", e[e.ERROR_INVALID_WORKSPACE_CONFIGURATION_APPLICATION = 1] = "ERROR_INVALID_WORKSPACE_CONFIGURATION_APPLICATION", e[e.ERROR_INVALID_WORKSPACE_CONFIGURATION_MACHINE = 2] = "ERROR_INVALID_WORKSPACE_CONFIGURATION_MACHINE", e[e.ERROR_INVALID_FOLDER_CONFIGURATION = 3] = "ERROR_INVALID_FOLDER_CONFIGURATION", e[e.ERROR_INVALID_USER_TARGET = 4] = "ERROR_INVALID_USER_TARGET", e[e.ERROR_INVALID_WORKSPACE_TARGET = 5] = "ERROR_INVALID_WORKSPACE_TARGET", e[e.ERROR_INVALID_FOLDER_TARGET = 6] = "ERROR_INVALID_FOLDER_TARGET", e[e.ERROR_INVALID_RESOURCE_LANGUAGE_CONFIGURATION = 7] = "ERROR_INVALID_RESOURCE_LANGUAGE_CONFIGURATION", e[e.ERROR_NO_WORKSPACE_OPENED = 8] = "ERROR_NO_WORKSPACE_OPENED", e[e.ERROR_CONFIGURATION_FILE_DIRTY = 9] = "ERROR_CONFIGURATION_FILE_DIRTY", e[e.ERROR_CONFIGURATION_FILE_MODIFIED_SINCE = 10] = "ERROR_CONFIGURATION_FILE_MODIFIED_SINCE", e[e.ERROR_INVALID_CONFIGURATION = 11] = "ERROR_INVALID_CONFIGURATION", e[e.ERROR_POLICY_CONFIGURATION = 12] = "ERROR_POLICY_CONFIGURATION", e[e.ERROR_INTERNAL = 13] = "ERROR_INTERNAL";
-})(UZ ||= {});
-var WZ = class extends fc {
+})(KZ ||= {});
+var qZ = class extends fc {
 	constructor(e, t) {
 		super(e), this.code = t;
 	}
-}, GZ;
+}, JZ;
 (function(e) {
 	e[e.USER_LOCAL = 1] = "USER_LOCAL", e[e.USER_REMOTE = 2] = "USER_REMOTE", e[e.WORKSPACE = 3] = "WORKSPACE", e[e.WORKSPACE_FOLDER = 4] = "WORKSPACE_FOLDER";
-})(GZ ||= {});
-var KZ = class {
+})(JZ ||= {});
+var YZ = class {
 	constructor(e, t, n, r, i, a, o, s, c, l, u, d, f) {
 		this.remoteSettingsResource = e, this.configurationService = t, this.contextService = n, this.userDataProfileService = r, this.userDataProfilesService = i, this.fileService = a, this.textModelResolverService = o, this.textFileService = s, this.notificationService = c, this.preferencesService = l, this.editorService = u, this.uriIdentityService = d, this.filesConfigurationService = f, this.queue = new rs();
 	}
@@ -40404,7 +40404,7 @@ var KZ = class {
 		}
 	}
 	async updateConfiguration(e, t, n, r) {
-		if (this.hasParseErrors(t.getValue(), e)) throw this.toConfigurationEditingError(UZ.ERROR_INVALID_CONFIGURATION, e.target, e);
+		if (this.hasParseErrors(t.getValue(), e)) throw this.toConfigurationEditingError(KZ.ERROR_INVALID_CONFIGURATION, e.target, e);
 		if (this.textFileService.isDirty(t.uri) && r.handleDirtyFile) switch (r.handleDirtyFile) {
 			case "save":
 				await this.save(t, e);
@@ -40427,7 +40427,7 @@ var KZ = class {
 		try {
 			await this.textFileService.save(e.uri, { ignoreErrorHandler: !0 });
 		} catch (e) {
-			throw e.fileOperationResult === Oo.FILE_MODIFIED_SINCE ? this.toConfigurationEditingError(UZ.ERROR_CONFIGURATION_FILE_MODIFIED_SINCE, t.target, t) : new WZ(M(13758, "Error while writing to {0}. {1}", this.stringifyTarget(t.target), e.message), UZ.ERROR_INTERNAL);
+			throw e.fileOperationResult === Oo.FILE_MODIFIED_SINCE ? this.toConfigurationEditingError(KZ.ERROR_CONFIGURATION_FILE_MODIFIED_SINCE, t.target, t) : new qZ(M(13758, "Error while writing to {0}. {1}", this.stringifyTarget(t.target), e.message), KZ.ERROR_INTERNAL);
 		}
 	}
 	applyEditsToBuffer(e, t) {
@@ -40455,13 +40455,13 @@ var KZ = class {
 	}
 	async onError(e, t, n) {
 		switch (e.code) {
-			case UZ.ERROR_INVALID_CONFIGURATION:
+			case KZ.ERROR_INVALID_CONFIGURATION:
 				this.onInvalidConfigurationError(e, t);
 				break;
-			case UZ.ERROR_CONFIGURATION_FILE_DIRTY:
+			case KZ.ERROR_CONFIGURATION_FILE_DIRTY:
 				this.onConfigurationFileDirtyError(e, t, n);
 				break;
-			case UZ.ERROR_CONFIGURATION_FILE_MODIFIED_SINCE: return this.doWriteConfiguration(t, {
+			case KZ.ERROR_CONFIGURATION_FILE_MODIFIED_SINCE: return this.doWriteConfiguration(t, {
 				scopes: n,
 				handleDirtyFile: "revert"
 			});
@@ -40512,16 +40512,16 @@ var KZ = class {
 	openSettings(e) {
 		let t = { jsonEditor: !0 };
 		switch (e.target) {
-			case GZ.USER_LOCAL:
+			case JZ.USER_LOCAL:
 				this.preferencesService.openUserSettings(t);
 				break;
-			case GZ.USER_REMOTE:
+			case JZ.USER_REMOTE:
 				this.preferencesService.openRemoteSettings(t);
 				break;
-			case GZ.WORKSPACE:
+			case JZ.WORKSPACE:
 				this.preferencesService.openWorkspaceSettings(t);
 				break;
-			case GZ.WORKSPACE_FOLDER:
+			case JZ.WORKSPACE_FOLDER:
 				if (e.resource) {
 					let t = this.contextService.getWorkspaceFolder(e.resource);
 					t && this.preferencesService.openFolderSettings({
@@ -40539,29 +40539,29 @@ var KZ = class {
 		});
 	}
 	toConfigurationEditingError(e, t, n) {
-		return new WZ(this.toErrorMessage(e, t, n), e);
+		return new qZ(this.toErrorMessage(e, t, n), e);
 	}
 	toErrorMessage(e, t, n) {
 		switch (e) {
-			case UZ.ERROR_POLICY_CONFIGURATION: return M(13764, "Unable to write {0} because it is configured in system policy.", n.key);
-			case UZ.ERROR_UNKNOWN_KEY: return M(13765, "Unable to write to {0} because {1} is not a registered configuration.", this.stringifyTarget(t), n.key);
-			case UZ.ERROR_INVALID_WORKSPACE_CONFIGURATION_APPLICATION: return M(13766, "Unable to write {0} to Workspace Settings. This setting can be written only into User settings.", n.key);
-			case UZ.ERROR_INVALID_WORKSPACE_CONFIGURATION_MACHINE: return M(13767, "Unable to write {0} to Workspace Settings. This setting can be written only into User settings.", n.key);
-			case UZ.ERROR_INVALID_FOLDER_CONFIGURATION: return M(13768, "Unable to write to Folder Settings because {0} does not support the folder resource scope.", n.key);
-			case UZ.ERROR_INVALID_USER_TARGET: return M(13769, "Unable to write to User Settings because {0} does not support for global scope.", n.key);
-			case UZ.ERROR_INVALID_WORKSPACE_TARGET: return M(13770, "Unable to write to Workspace Settings because {0} does not support for workspace scope in a multi folder workspace.", n.key);
-			case UZ.ERROR_INVALID_FOLDER_TARGET: return M(13771, "Unable to write to Folder Settings because no resource is provided.");
-			case UZ.ERROR_INVALID_RESOURCE_LANGUAGE_CONFIGURATION: return M(13772, "Unable to write to Language Settings because {0} is not a resource language setting.", n.key);
-			case UZ.ERROR_NO_WORKSPACE_OPENED: return M(13773, "Unable to write to {0} because no workspace is opened. Please open a workspace first and try again.", this.stringifyTarget(t));
-			case UZ.ERROR_INVALID_CONFIGURATION:
+			case KZ.ERROR_POLICY_CONFIGURATION: return M(13764, "Unable to write {0} because it is configured in system policy.", n.key);
+			case KZ.ERROR_UNKNOWN_KEY: return M(13765, "Unable to write to {0} because {1} is not a registered configuration.", this.stringifyTarget(t), n.key);
+			case KZ.ERROR_INVALID_WORKSPACE_CONFIGURATION_APPLICATION: return M(13766, "Unable to write {0} to Workspace Settings. This setting can be written only into User settings.", n.key);
+			case KZ.ERROR_INVALID_WORKSPACE_CONFIGURATION_MACHINE: return M(13767, "Unable to write {0} to Workspace Settings. This setting can be written only into User settings.", n.key);
+			case KZ.ERROR_INVALID_FOLDER_CONFIGURATION: return M(13768, "Unable to write to Folder Settings because {0} does not support the folder resource scope.", n.key);
+			case KZ.ERROR_INVALID_USER_TARGET: return M(13769, "Unable to write to User Settings because {0} does not support for global scope.", n.key);
+			case KZ.ERROR_INVALID_WORKSPACE_TARGET: return M(13770, "Unable to write to Workspace Settings because {0} does not support for workspace scope in a multi folder workspace.", n.key);
+			case KZ.ERROR_INVALID_FOLDER_TARGET: return M(13771, "Unable to write to Folder Settings because no resource is provided.");
+			case KZ.ERROR_INVALID_RESOURCE_LANGUAGE_CONFIGURATION: return M(13772, "Unable to write to Language Settings because {0} is not a resource language setting.", n.key);
+			case KZ.ERROR_NO_WORKSPACE_OPENED: return M(13773, "Unable to write to {0} because no workspace is opened. Please open a workspace first and try again.", this.stringifyTarget(t));
+			case KZ.ERROR_INVALID_CONFIGURATION:
 				if (n.workspaceStandAloneConfigurationKey === "tasks") return M(13774, "Unable to write into the tasks configuration file. Please open it to correct errors/warnings in it and try again.");
 				if (n.workspaceStandAloneConfigurationKey === "launch") return M(13775, "Unable to write into the launch configuration file. Please open it to correct errors/warnings in it and try again.");
 				if (n.workspaceStandAloneConfigurationKey === "mcp") return M(13776, "Unable to write into the MCP configuration file. Please open it to correct errors/warnings in it and try again.");
 				switch (t) {
-					case GZ.USER_LOCAL: return M(13777, "Unable to write into user settings. Please open the user settings to correct errors/warnings in it and try again.");
-					case GZ.USER_REMOTE: return M(13778, "Unable to write into remote user settings. Please open the remote user settings to correct errors/warnings in it and try again.");
-					case GZ.WORKSPACE: return M(13779, "Unable to write into workspace settings. Please open the workspace settings to correct errors/warnings in the file and try again.");
-					case GZ.WORKSPACE_FOLDER: {
+					case JZ.USER_LOCAL: return M(13777, "Unable to write into user settings. Please open the user settings to correct errors/warnings in it and try again.");
+					case JZ.USER_REMOTE: return M(13778, "Unable to write into remote user settings. Please open the remote user settings to correct errors/warnings in it and try again.");
+					case JZ.WORKSPACE: return M(13779, "Unable to write into workspace settings. Please open the workspace settings to correct errors/warnings in the file and try again.");
+					case JZ.WORKSPACE_FOLDER: {
 						let e = "<<unknown>>";
 						if (n.resource) {
 							let t = this.contextService.getWorkspaceFolder(n.resource);
@@ -40571,15 +40571,15 @@ var KZ = class {
 					}
 					default: return "";
 				}
-			case UZ.ERROR_CONFIGURATION_FILE_DIRTY:
+			case KZ.ERROR_CONFIGURATION_FILE_DIRTY:
 				if (n.workspaceStandAloneConfigurationKey === "tasks") return M(13781, "Unable to write into tasks configuration file because the file has unsaved changes. Please save it first and then try again.");
 				if (n.workspaceStandAloneConfigurationKey === "launch") return M(13782, "Unable to write into launch configuration file because the file has unsaved changes. Please save it first and then try again.");
 				if (n.workspaceStandAloneConfigurationKey === "mcp") return M(13783, "Unable to write into MCP configuration file because the file has unsaved changes. Please save it first and then try again.");
 				switch (t) {
-					case GZ.USER_LOCAL: return M(13784, "Unable to write into user settings because the file has unsaved changes. Please save the user settings file first and then try again.");
-					case GZ.USER_REMOTE: return M(13785, "Unable to write into remote user settings because the file has unsaved changes. Please save the remote user settings file first and then try again.");
-					case GZ.WORKSPACE: return M(13786, "Unable to write into workspace settings because the file has unsaved changes. Please save the workspace settings file first and then try again.");
-					case GZ.WORKSPACE_FOLDER: {
+					case JZ.USER_LOCAL: return M(13784, "Unable to write into user settings because the file has unsaved changes. Please save the user settings file first and then try again.");
+					case JZ.USER_REMOTE: return M(13785, "Unable to write into remote user settings because the file has unsaved changes. Please save the remote user settings file first and then try again.");
+					case JZ.WORKSPACE: return M(13786, "Unable to write into workspace settings because the file has unsaved changes. Please save the workspace settings file first and then try again.");
+					case JZ.WORKSPACE_FOLDER: {
 						let e = "<<unknown>>";
 						if (n.resource) {
 							let t = this.contextService.getWorkspaceFolder(n.resource);
@@ -40589,32 +40589,32 @@ var KZ = class {
 					}
 					default: return "";
 				}
-			case UZ.ERROR_CONFIGURATION_FILE_MODIFIED_SINCE:
+			case KZ.ERROR_CONFIGURATION_FILE_MODIFIED_SINCE:
 				if (n.workspaceStandAloneConfigurationKey === "tasks") return M(13788, "Unable to write into tasks configuration file because the content of the file is newer.");
 				if (n.workspaceStandAloneConfigurationKey === "launch") return M(13789, "Unable to write into launch configuration file because the content of the file is newer.");
 				if (n.workspaceStandAloneConfigurationKey === "mcp") return M(13790, "Unable to write into MCP configuration file because the content of the file is newer.");
 				switch (t) {
-					case GZ.USER_LOCAL: return M(13791, "Unable to write into user settings because the content of the file is newer.");
-					case GZ.USER_REMOTE: return M(13792, "Unable to write into remote user settings because the content of the file is newer.");
-					case GZ.WORKSPACE: return M(13793, "Unable to write into workspace settings because the content of the file is newer.");
-					case GZ.WORKSPACE_FOLDER: return M(13794, "Unable to write into folder settings because the content of the file is newer.");
+					case JZ.USER_LOCAL: return M(13791, "Unable to write into user settings because the content of the file is newer.");
+					case JZ.USER_REMOTE: return M(13792, "Unable to write into remote user settings because the content of the file is newer.");
+					case JZ.WORKSPACE: return M(13793, "Unable to write into workspace settings because the content of the file is newer.");
+					case JZ.WORKSPACE_FOLDER: return M(13794, "Unable to write into folder settings because the content of the file is newer.");
 				}
-			case UZ.ERROR_INTERNAL: return M(13795, "Unable to write to {0} because of an internal error.", this.stringifyTarget(t));
+			case KZ.ERROR_INTERNAL: return M(13795, "Unable to write to {0} because of an internal error.", this.stringifyTarget(t));
 		}
 	}
 	stringifyTarget(e) {
 		switch (e) {
-			case GZ.USER_LOCAL: return M(13796, "User Settings");
-			case GZ.USER_REMOTE: return M(13797, "Remote User Settings");
-			case GZ.WORKSPACE: return M(13798, "Workspace Settings");
-			case GZ.WORKSPACE_FOLDER: return M(13799, "Folder Settings");
+			case JZ.USER_LOCAL: return M(13796, "User Settings");
+			case JZ.USER_REMOTE: return M(13797, "Remote User Settings");
+			case JZ.WORKSPACE: return M(13798, "Workspace Settings");
+			case JZ.WORKSPACE_FOLDER: return M(13799, "Folder Settings");
 			default: return "";
 		}
 	}
 	defaultResourceValue(e) {
 		let t = this.uriIdentityService.extUri.basename(e);
 		switch (t.substr(0, t.length - this.uriIdentityService.extUri.extname(e).length)) {
-			case wZ: return OZ;
+			case DZ: return jZ;
 			default: return "{}";
 		}
 	}
@@ -40630,26 +40630,26 @@ var KZ = class {
 		}), n.length > 0;
 	}
 	async validate(e, t, n, r) {
-		if (this.configurationService.inspect(t.key).policyValue !== void 0) throw this.toConfigurationEditingError(UZ.ERROR_POLICY_CONFIGURATION, e, t);
+		if (this.configurationService.inspect(t.key).policyValue !== void 0) throw this.toConfigurationEditingError(KZ.ERROR_POLICY_CONFIGURATION, e, t);
 		let i = oa.as(Ii.Configuration).getConfigurationProperties()[t.key]?.scope;
-		if (!t.workspaceStandAloneConfigurationKey && this.configurationService.keys().default.indexOf(t.key) < 0 && !rr.test(t.key) && t.value !== void 0) throw this.toConfigurationEditingError(UZ.ERROR_UNKNOWN_KEY, e, t);
-		if (t.workspaceStandAloneConfigurationKey && t.workspaceStandAloneConfigurationKey !== "tasks" && t.workspaceStandAloneConfigurationKey !== "mcp" && (e === GZ.USER_LOCAL || e === GZ.USER_REMOTE)) throw this.toConfigurationEditingError(UZ.ERROR_INVALID_USER_TARGET, e, t);
-		if ((e === GZ.WORKSPACE || e === GZ.WORKSPACE_FOLDER) && this.contextService.getWorkbenchState() === f.EMPTY) throw this.toConfigurationEditingError(UZ.ERROR_NO_WORKSPACE_OPENED, e, t);
-		if (e === GZ.WORKSPACE && !t.workspaceStandAloneConfigurationKey && !rr.test(t.key)) {
-			if (i && _Z.includes(i)) throw this.toConfigurationEditingError(UZ.ERROR_INVALID_WORKSPACE_CONFIGURATION_APPLICATION, e, t);
-			if (i === Ac.MACHINE) throw this.toConfigurationEditingError(UZ.ERROR_INVALID_WORKSPACE_CONFIGURATION_MACHINE, e, t);
+		if (!t.workspaceStandAloneConfigurationKey && this.configurationService.keys().default.indexOf(t.key) < 0 && !rr.test(t.key) && t.value !== void 0) throw this.toConfigurationEditingError(KZ.ERROR_UNKNOWN_KEY, e, t);
+		if (t.workspaceStandAloneConfigurationKey && t.workspaceStandAloneConfigurationKey !== "tasks" && t.workspaceStandAloneConfigurationKey !== "mcp" && (e === JZ.USER_LOCAL || e === JZ.USER_REMOTE)) throw this.toConfigurationEditingError(KZ.ERROR_INVALID_USER_TARGET, e, t);
+		if ((e === JZ.WORKSPACE || e === JZ.WORKSPACE_FOLDER) && this.contextService.getWorkbenchState() === f.EMPTY) throw this.toConfigurationEditingError(KZ.ERROR_NO_WORKSPACE_OPENED, e, t);
+		if (e === JZ.WORKSPACE && !t.workspaceStandAloneConfigurationKey && !rr.test(t.key)) {
+			if (i && bZ.includes(i)) throw this.toConfigurationEditingError(KZ.ERROR_INVALID_WORKSPACE_CONFIGURATION_APPLICATION, e, t);
+			if (i === Ac.MACHINE) throw this.toConfigurationEditingError(KZ.ERROR_INVALID_WORKSPACE_CONFIGURATION_MACHINE, e, t);
 		}
-		if (e === GZ.WORKSPACE_FOLDER) {
-			if (!t.resource) throw this.toConfigurationEditingError(UZ.ERROR_INVALID_FOLDER_TARGET, e, t);
-			if (!t.workspaceStandAloneConfigurationKey && !rr.test(t.key) && i !== void 0 && !CZ.includes(i)) throw this.toConfigurationEditingError(UZ.ERROR_INVALID_FOLDER_CONFIGURATION, e, t);
+		if (e === JZ.WORKSPACE_FOLDER) {
+			if (!t.resource) throw this.toConfigurationEditingError(KZ.ERROR_INVALID_FOLDER_TARGET, e, t);
+			if (!t.workspaceStandAloneConfigurationKey && !rr.test(t.key) && i !== void 0 && !EZ.includes(i)) throw this.toConfigurationEditingError(KZ.ERROR_INVALID_FOLDER_CONFIGURATION, e, t);
 		}
-		if (r.overrideIdentifiers?.length && i !== Ac.LANGUAGE_OVERRIDABLE) throw this.toConfigurationEditingError(UZ.ERROR_INVALID_RESOURCE_LANGUAGE_CONFIGURATION, e, t);
-		if (!t.resource) throw this.toConfigurationEditingError(UZ.ERROR_INVALID_FOLDER_TARGET, e, t);
-		if (n && this.textFileService.isDirty(t.resource)) throw this.toConfigurationEditingError(UZ.ERROR_CONFIGURATION_FILE_DIRTY, e, t);
+		if (r.overrideIdentifiers?.length && i !== Ac.LANGUAGE_OVERRIDABLE) throw this.toConfigurationEditingError(KZ.ERROR_INVALID_RESOURCE_LANGUAGE_CONFIGURATION, e, t);
+		if (!t.resource) throw this.toConfigurationEditingError(KZ.ERROR_INVALID_FOLDER_TARGET, e, t);
+		if (n && this.textFileService.isDirty(t.resource)) throw this.toConfigurationEditingError(KZ.ERROR_CONFIGURATION_FILE_DIRTY, e, t);
 	}
 	getConfigurationEditOperation(e, t, n) {
 		if (t.key) {
-			let r = e === GZ.USER_LOCAL ? DZ : EZ, i = Object.keys(r);
+			let r = e === JZ.USER_LOCAL ? AZ : kZ, i = Object.keys(r);
 			for (let a of i) {
 				let i = this.getConfigurationFileResource(e, a, r[a], n.resource, void 0);
 				if (t.key === a) {
@@ -40678,14 +40678,14 @@ var KZ = class {
 			}
 		}
 		let r = t.key, i = oa.as(Ii.Configuration).getConfigurationProperties()[r]?.scope, a = n.overrideIdentifiers?.length ? [xo(n.overrideIdentifiers), r] : [r];
-		if (e === GZ.USER_LOCAL || e === GZ.USER_REMOTE) return {
+		if (e === JZ.USER_LOCAL || e === JZ.USER_REMOTE) return {
 			key: r,
 			jsonPath: a,
 			value: t.value,
 			resource: this.getConfigurationFileResource(e, r, "", null, i) ?? void 0,
 			target: e
 		};
-		let o = this.getConfigurationFileResource(e, r, sZ, n.resource, i);
+		let o = this.getConfigurationFileResource(e, r, uZ, n.resource, i);
 		return this.isWorkspaceConfigurationResource(o) && (a = ["settings", ...a]), {
 			key: r,
 			jsonPath: a,
@@ -40699,16 +40699,16 @@ var KZ = class {
 		return !!(t.configuration && e && t.configuration.fsPath === e.fsPath);
 	}
 	getConfigurationFileResource(e, t, n, r, i) {
-		if (e === GZ.USER_LOCAL) return t === "tasks" ? this.userDataProfileService.currentProfile.tasksResource : t === "mcp" ? this.userDataProfileService.currentProfile.mcpResource : !this.userDataProfileService.currentProfile.isDefault && this.configurationService.isSettingAppliedForAllProfiles(t) ? this.userDataProfilesService.defaultProfile.settingsResource : this.userDataProfileService.currentProfile.settingsResource;
-		if (e === GZ.USER_REMOTE) return this.remoteSettingsResource;
+		if (e === JZ.USER_LOCAL) return t === "tasks" ? this.userDataProfileService.currentProfile.tasksResource : t === "mcp" ? this.userDataProfileService.currentProfile.mcpResource : !this.userDataProfileService.currentProfile.isDefault && this.configurationService.isSettingAppliedForAllProfiles(t) ? this.userDataProfilesService.defaultProfile.settingsResource : this.userDataProfileService.currentProfile.settingsResource;
+		if (e === JZ.USER_REMOTE) return this.remoteSettingsResource;
 		let a = this.contextService.getWorkbenchState();
 		if (a !== f.EMPTY) {
 			let t = this.contextService.getWorkspace();
-			if (e === GZ.WORKSPACE) {
+			if (e === JZ.WORKSPACE) {
 				if (a === f.WORKSPACE) return t.configuration ?? null;
 				if (a === f.FOLDER) return t.folders[0].toResource(n);
 			}
-			if (e === GZ.WORKSPACE_FOLDER && r) {
+			if (e === JZ.WORKSPACE_FOLDER && r) {
 				let e = this.contextService.getWorkspaceFolder(r);
 				if (e) return e.toResource(n);
 			}
@@ -40716,21 +40716,21 @@ var KZ = class {
 		return null;
 	}
 };
-KZ = N([
+YZ = N([
 	R(1, ad),
 	R(2, Nn),
 	R(3, qf),
-	R(4, Yw),
+	R(4, Qw),
 	R(5, ao),
 	R(6, So),
-	R(7, nw),
+	R(7, aw),
 	R(8, wo),
-	R(9, sT),
-	R(10, ew),
+	R(9, uT),
+	R(10, rw),
 	R(11, Rs),
-	R(12, _w)
-], KZ), $s(), ia(), P(), S(), Ca(), ua(), Xs(), y(), zt(), Dn(), Gn(), Pa(), kt();
-var qZ = class e extends Xa {
+	R(12, bw)
+], YZ), $s(), ia(), P(), S(), Ca(), ua(), Xs(), y(), zt(), Dn(), Gn(), Pa(), kt();
+var XZ = class e extends Xa {
 	static {
 		this.DEFAULT_OVERRIDES_CACHE_EXISTS_KEY = "DefaultOverridesCacheExists";
 	}
@@ -40773,10 +40773,10 @@ var qZ = class e extends Xa {
 			Object.keys(t).length ? (localStorage.setItem(e.DEFAULT_OVERRIDES_CACHE_EXISTS_KEY, "yes"), await this.configurationCache.write(this.cacheKey, JSON.stringify(t))) : (localStorage.removeItem(e.DEFAULT_OVERRIDES_CACHE_EXISTS_KEY), await this.configurationCache.remove(this.cacheKey));
 		} catch {}
 	}
-}, JZ = class extends Ec {
+}, ZZ = class extends Ec {
 	constructor(e, t, n, r) {
 		super(e.defaultProfile.settingsResource, {
-			scopes: _Z,
+			scopes: bZ,
 			skipUnregistered: !0
 		}, n.extUri, t, r), this._onDidChangeConfiguration = this._register(new V()), this.onDidChangeConfiguration = this._onDidChangeConfiguration.event, this._register(this.onDidChange(() => this.reloadConfigurationScheduler.schedule())), this.reloadConfigurationScheduler = this._register(new Ya(() => this.loadConfiguration().then((e) => this._onDidChangeConfiguration.fire(e)), 50));
 	}
@@ -40784,15 +40784,15 @@ var qZ = class e extends Xa {
 		return this.loadConfiguration();
 	}
 	async loadConfiguration() {
-		let e = await super.loadConfiguration(), t = e.getValue(kZ), n = Array.isArray(t) ? t : [];
+		let e = await super.loadConfiguration(), t = e.getValue(MZ), n = Array.isArray(t) ? t : [];
 		return this.parseOptions.include || n.length ? this.reparse({
 			...this.parseOptions,
 			include: n
 		}) : e;
 	}
-}, YZ = class extends z {
+}, QZ = class extends z {
 	get hasTasksLoaded() {
-		return this.userConfiguration.value instanceof XZ;
+		return this.userConfiguration.value instanceof $Z;
 	}
 	constructor(e, t, n, r, i, a, o) {
 		super(), this.settingsResource = e, this.tasksResource = t, this.mcpResource = n, this.configurationParseOptions = r, this.fileService = i, this.uriIdentityService = a, this.logService = o, this._onDidChangeConfiguration = this._register(new V()), this.onDidChangeConfiguration = this._onDidChangeConfiguration.event, this.userConfiguration = this._register(new ol()), this.userConfigurationChangeDisposable = this._register(new ol()), this.userConfiguration.value = new Ec(e, this.configurationParseOptions, a.extUri, this.fileService, o), this.userConfigurationChangeDisposable.value = this.userConfiguration.value.onDidChange(() => this.reloadConfigurationScheduler.schedule()), this.reloadConfigurationScheduler = this._register(new Ya(() => this.userConfiguration.value.loadConfiguration().then((e) => this._onDidChangeConfiguration.fire(e)), 50));
@@ -40802,8 +40802,8 @@ var qZ = class e extends Xa {
 	}
 	async doReset(e) {
 		let t = this.uriIdentityService.extUri.dirname(this.settingsResource), n = [];
-		this.tasksResource && n.push([wZ, this.tasksResource]), this.mcpResource && n.push(["mcp", this.mcpResource]);
-		let r = new XZ(t.toString(), this.settingsResource, n, this.configurationParseOptions, this.fileService, this.uriIdentityService, this.logService), i = await r.loadConfiguration(e);
+		this.tasksResource && n.push([DZ, this.tasksResource]), this.mcpResource && n.push(["mcp", this.mcpResource]);
+		let r = new $Z(t.toString(), this.settingsResource, n, this.configurationParseOptions, this.fileService, this.uriIdentityService, this.logService), i = await r.loadConfiguration(e);
 		return this.userConfiguration.value = r, this.userConfigurationChangeDisposable.value && (this.userConfigurationChangeDisposable.value = this.userConfiguration.value.onDidChange(() => this.reloadConfigurationScheduler.schedule())), i;
 	}
 	async initialize() {
@@ -40821,7 +40821,7 @@ var qZ = class e extends Xa {
 	getRestrictedSettings() {
 		return this.userConfiguration.value.getRestrictedSettings();
 	}
-}, XZ = class extends z {
+}, $Z = class extends z {
 	constructor(e, t, n, r, i, a, o) {
 		super(), this.settingsResource = t, this.standAloneConfigurationResources = n, this.fileService = i, this.uriIdentityService = a, this.logService = o, this._onDidChange = this._register(new V()), this.onDidChange = this._onDidChange.event, this.allResources = [this.settingsResource, ...this.standAloneConfigurationResources.map(([, e]) => e)], this._register(tr(...this.allResources.map((e) => tr(this.fileService.watch(a.extUri.dirname(e)), this.fileService.watch(e))))), this._folderSettingsModelParser = new Wo(e, o), this._folderSettingsParseOptions = r, this._standAloneConfigurations = [], this._cache = Zi.createEmptyModel(this.logService), this._register(is.debounce(is.any(is.filter(this.fileService.onDidFilesChange, (e) => this.handleFileChangesEvent(e)), is.filter(this.fileService.onDidRunOperation, (e) => this.handleFileOperationEvent(e))), () => void 0, 100)(() => this._onDidChange.fire()));
 	}
@@ -40842,7 +40842,7 @@ var qZ = class e extends Xa {
 		for (let e = 0; e < n.length; e++) {
 			let t = n[e][1];
 			if (t !== void 0) {
-				let n = new VZ(this.standAloneConfigurationResources[e][1].toString(), this.standAloneConfigurationResources[e][0], this.logService);
+				let n = new WZ(this.standAloneConfigurationResources[e][1].toString(), this.standAloneConfigurationResources[e][0], this.logService);
 				n.parse(t), this._standAloneConfigurations.push(n.configurationModel);
 			}
 		}
@@ -40864,11 +40864,11 @@ var qZ = class e extends Xa {
 	handleFileOperationEvent(e) {
 		return !!((e.isOperation(wn.CREATE) || e.isOperation(wn.COPY) || e.isOperation(wn.DELETE) || e.isOperation(wn.WRITE)) && this.allResources.some((t) => this.uriIdentityService.extUri.isEqual(e.resource, t)) || e.isOperation(wn.DELETE) && this.allResources.some((t) => this.uriIdentityService.extUri.isEqual(e.resource, this.uriIdentityService.extUri.dirname(t))));
 	}
-}, ZZ = class extends z {
+}, eQ = class extends z {
 	constructor(e, t, n, r, i, a) {
-		super(), this._userConfigurationInitializationPromise = null, this._onDidChangeConfiguration = this._register(new V()), this.onDidChangeConfiguration = this._onDidChangeConfiguration.event, this._onDidInitialize = this._register(new V()), this.onDidInitialize = this._onDidInitialize.event, this._fileService = n, this._userConfiguration = this._cachedConfiguration = new $Z(e, t, { scopes: xZ }, a), i.getEnvironment().then(async (e) => {
+		super(), this._userConfigurationInitializationPromise = null, this._onDidChangeConfiguration = this._register(new V()), this.onDidChangeConfiguration = this._onDidChangeConfiguration.event, this._onDidInitialize = this._register(new V()), this.onDidInitialize = this._onDidInitialize.event, this._fileService = n, this._userConfiguration = this._cachedConfiguration = new nQ(e, t, { scopes: wZ }, a), i.getEnvironment().then(async (e) => {
 			if (e) {
-				let t = this._register(new QZ(e.settingsPath, { scopes: xZ }, this._fileService, r, a));
+				let t = this._register(new tQ(e.settingsPath, { scopes: wZ }, this._fileService, r, a));
 				this._register(t.onDidChangeConfiguration((e) => this.onDidUserConfigurationChange(e))), this._userConfigurationInitializationPromise = t.initialize();
 				let n = await this._userConfigurationInitializationPromise;
 				this._userConfiguration.dispose(), this._userConfiguration = t, this.onDidUserConfigurationChange(n), this._onDidInitialize.fire(n);
@@ -40876,7 +40876,7 @@ var qZ = class e extends Xa {
 		});
 	}
 	async initialize() {
-		if (this._userConfiguration instanceof QZ) return this._userConfiguration.initialize();
+		if (this._userConfiguration instanceof tQ) return this._userConfiguration.initialize();
 		let e = await this._userConfiguration.initialize();
 		return this._userConfigurationInitializationPromise &&= (e = await this._userConfigurationInitializationPromise, null), e;
 	}
@@ -40884,7 +40884,7 @@ var qZ = class e extends Xa {
 		return this._userConfiguration.reload();
 	}
 	reparse() {
-		return this._userConfiguration.reparse({ scopes: xZ });
+		return this._userConfiguration.reparse({ scopes: wZ });
 	}
 	getRestrictedSettings() {
 		return this._userConfiguration.getRestrictedSettings();
@@ -40893,7 +40893,7 @@ var qZ = class e extends Xa {
 		this.updateCache(), this._onDidChangeConfiguration.fire(e);
 	}
 	async updateCache() {
-		if (this._userConfiguration instanceof QZ) {
+		if (this._userConfiguration instanceof tQ) {
 			let e;
 			try {
 				e = await this._userConfiguration.resolveContent();
@@ -40903,7 +40903,7 @@ var qZ = class e extends Xa {
 			await this._cachedConfiguration.updateConfiguration(e);
 		}
 	}
-}, QZ = class extends z {
+}, tQ = class extends z {
 	constructor(e, t, n, r, i) {
 		super(), this.configurationResource = e, this.fileService = n, this.uriIdentityService = r, this.logService = i, this._onDidChangeConfiguration = this._register(new V()), this.onDidChangeConfiguration = this._onDidChangeConfiguration.event, this.fileWatcherDisposable = this._register(new ol()), this.directoryWatcherDisposable = this._register(new ol()), this.parser = new Wo(this.configurationResource.toString(), i), this.parseOptions = t, this._register(n.onDidFilesChange((e) => this.handleFileChangesEvent(e))), this._register(n.onDidRunOperation((e) => this.handleFileOperationEvent(e))), this.reloadConfigurationScheduler = this._register(new Ya(() => this.reload().then((e) => this._onDidChangeConfiguration.fire(e)), 50)), this._register(g(() => {
 			this.stopWatchingResource(), this.stopWatchingDirectory();
@@ -40953,7 +40953,7 @@ var qZ = class e extends Xa {
 	onResourceExists(e) {
 		e ? (this.stopWatchingDirectory(), this.watchResource()) : (this.stopWatchingResource(), this.watchDirectory());
 	}
-}, $Z = class extends z {
+}, nQ = class extends z {
 	constructor(e, t, n, r) {
 		super(), this.configurationCache = t, this._onDidChange = this._register(new V()), this.onDidChange = this._onDidChange.event, this.key = {
 			type: "user",
@@ -40982,19 +40982,19 @@ var qZ = class e extends Xa {
 	async updateConfiguration(e) {
 		return e ? this.configurationCache.write(this.key, JSON.stringify({ content: e })) : this.configurationCache.remove(this.key);
 	}
-}, eQ = class extends z {
+}, rQ = class extends z {
 	get initialized() {
 		return this._initialized;
 	}
 	constructor(e, t, n, r) {
-		super(), this.configurationCache = e, this.fileService = t, this.uriIdentityService = n, this.logService = r, this._workspaceConfigurationDisposables = this._register(new I()), this._workspaceIdentifier = null, this._isWorkspaceTrusted = !1, this._onDidUpdateConfiguration = this._register(new V()), this.onDidUpdateConfiguration = this._onDidUpdateConfiguration.event, this._initialized = !1, this.fileService = t, this._workspaceConfiguration = this._cachedConfiguration = new nQ(e, r);
+		super(), this.configurationCache = e, this.fileService = t, this.uriIdentityService = n, this.logService = r, this._workspaceConfigurationDisposables = this._register(new I()), this._workspaceIdentifier = null, this._isWorkspaceTrusted = !1, this._onDidUpdateConfiguration = this._register(new V()), this.onDidUpdateConfiguration = this._onDidUpdateConfiguration.event, this._initialized = !1, this.fileService = t, this._workspaceConfiguration = this._cachedConfiguration = new aQ(e, r);
 	}
 	async initialize(e, t) {
-		this._workspaceIdentifier = e, this._isWorkspaceTrusted = t, this._initialized || (this.configurationCache.needsCaching(this._workspaceIdentifier.configPath) ? (this._workspaceConfiguration = this._cachedConfiguration, this.waitAndInitialize(this._workspaceIdentifier)) : this.doInitialize(new tQ(this.fileService, this.uriIdentityService, this.logService))), await this.reload();
+		this._workspaceIdentifier = e, this._isWorkspaceTrusted = t, this._initialized || (this.configurationCache.needsCaching(this._workspaceIdentifier.configPath) ? (this._workspaceConfiguration = this._cachedConfiguration, this.waitAndInitialize(this._workspaceIdentifier)) : this.doInitialize(new iQ(this.fileService, this.uriIdentityService, this.logService))), await this.reload();
 	}
 	async reload() {
 		this._workspaceIdentifier && await this._workspaceConfiguration.load(this._workspaceIdentifier, {
-			scopes: SZ,
+			scopes: TZ,
 			skipRestricted: this.isUntrusted()
 		});
 	}
@@ -41018,7 +41018,7 @@ var qZ = class e extends Xa {
 	}
 	reparseWorkspaceSettings() {
 		return this._workspaceConfiguration.reparseWorkspaceSettings({
-			scopes: SZ,
+			scopes: TZ,
 			skipRestricted: this.isUntrusted()
 		}), this.getConfiguration();
 	}
@@ -41026,10 +41026,10 @@ var qZ = class e extends Xa {
 		return this._workspaceConfiguration.getRestrictedSettings();
 	}
 	async waitAndInitialize(e) {
-		if (await fo(e.configPath, this.fileService), !(this._workspaceConfiguration instanceof tQ)) {
-			let t = this._register(new tQ(this.fileService, this.uriIdentityService, this.logService));
+		if (await fo(e.configPath, this.fileService), !(this._workspaceConfiguration instanceof iQ)) {
+			let t = this._register(new iQ(this.fileService, this.uriIdentityService, this.logService));
 			await t.load(e, {
-				scopes: SZ,
+				scopes: TZ,
 				skipRestricted: this.isUntrusted()
 			}), this.doInitialize(t), this.onDidWorkspaceConfigurationChange(!1, !0);
 		}
@@ -41044,14 +41044,14 @@ var qZ = class e extends Xa {
 		e && await this.reload(), this.updateCache(), this._onDidUpdateConfiguration.fire(t);
 	}
 	async updateCache() {
-		if (this._workspaceIdentifier && this.configurationCache.needsCaching(this._workspaceIdentifier.configPath) && this._workspaceConfiguration instanceof tQ) {
+		if (this._workspaceIdentifier && this.configurationCache.needsCaching(this._workspaceIdentifier.configPath) && this._workspaceConfiguration instanceof iQ) {
 			let e = await this._workspaceConfiguration.resolveContent(this._workspaceIdentifier);
 			await this._cachedConfiguration.updateWorkspace(this._workspaceIdentifier, e);
 		}
 	}
-}, tQ = class extends z {
+}, iQ = class extends z {
 	constructor(e, t, n) {
-		super(), this.fileService = e, this.logService = n, this._workspaceIdentifier = null, this._onDidChange = this._register(new V()), this.onDidChange = this._onDidChange.event, this.workspaceConfigurationModelParser = new BZ("", n), this.workspaceSettings = Zi.createEmptyModel(n), this._register(is.any(is.filter(this.fileService.onDidFilesChange, (e) => !!this._workspaceIdentifier && e.contains(this._workspaceIdentifier.configPath)), is.filter(this.fileService.onDidRunOperation, (e) => !!this._workspaceIdentifier && (e.isOperation(wn.CREATE) || e.isOperation(wn.COPY) || e.isOperation(wn.DELETE) || e.isOperation(wn.WRITE)) && t.extUri.isEqual(e.resource, this._workspaceIdentifier.configPath)))(() => this.reloadConfigurationScheduler.schedule())), this.reloadConfigurationScheduler = this._register(new Ya(() => this._onDidChange.fire(), 50)), this.workspaceConfigWatcher = this._register(this.watchWorkspaceConfigurationFile());
+		super(), this.fileService = e, this.logService = n, this._workspaceIdentifier = null, this._onDidChange = this._register(new V()), this.onDidChange = this._onDidChange.event, this.workspaceConfigurationModelParser = new UZ("", n), this.workspaceSettings = Zi.createEmptyModel(n), this._register(is.any(is.filter(this.fileService.onDidFilesChange, (e) => !!this._workspaceIdentifier && e.contains(this._workspaceIdentifier.configPath)), is.filter(this.fileService.onDidRunOperation, (e) => !!this._workspaceIdentifier && (e.isOperation(wn.CREATE) || e.isOperation(wn.COPY) || e.isOperation(wn.DELETE) || e.isOperation(wn.WRITE)) && t.extUri.isEqual(e.resource, this._workspaceIdentifier.configPath)))(() => this.reloadConfigurationScheduler.schedule())), this.reloadConfigurationScheduler = this._register(new Ya(() => this._onDidChange.fire(), 50)), this.workspaceConfigWatcher = this._register(this.watchWorkspaceConfigurationFile());
 	}
 	get workspaceIdentifier() {
 		return this._workspaceIdentifier;
@@ -41060,7 +41060,7 @@ var qZ = class e extends Xa {
 		return (await this.fileService.readFile(e.configPath, { atomic: !0 })).value.toString();
 	}
 	async load(e, t) {
-		(!this._workspaceIdentifier || this._workspaceIdentifier.id !== e.id) && (this._workspaceIdentifier = e, this.workspaceConfigurationModelParser = new BZ(this._workspaceIdentifier.id, this.logService), ce(this.workspaceConfigWatcher), this.workspaceConfigWatcher = this._register(this.watchWorkspaceConfigurationFile()));
+		(!this._workspaceIdentifier || this._workspaceIdentifier.id !== e.id) && (this._workspaceIdentifier = e, this.workspaceConfigurationModelParser = new UZ(this._workspaceIdentifier.id, this.logService), ce(this.workspaceConfigWatcher), this.workspaceConfigWatcher = this._register(this.watchWorkspaceConfigurationFile()));
 		let n = "";
 		try {
 			n = await this.resolveContent(this._workspaceIdentifier);
@@ -41093,14 +41093,14 @@ var qZ = class e extends Xa {
 	watchWorkspaceConfigurationFile() {
 		return this._workspaceIdentifier ? this.fileService.watch(this._workspaceIdentifier.configPath) : z.None;
 	}
-}, nQ = class {
+}, aQ = class {
 	constructor(e, t) {
-		this.configurationCache = e, this.logService = t, this.onDidChange = is.None, this.workspaceConfigurationModelParser = new BZ("", t), this.workspaceSettings = Zi.createEmptyModel(t);
+		this.configurationCache = e, this.logService = t, this.onDidChange = is.None, this.workspaceConfigurationModelParser = new UZ("", t), this.workspaceSettings = Zi.createEmptyModel(t);
 	}
 	async load(e, t) {
 		try {
 			let n = this.getKey(e), r = await this.configurationCache.read(n), i = JSON.parse(r);
-			i.content && (this.workspaceConfigurationModelParser = new BZ(n.key, this.logService), this.workspaceConfigurationModelParser.parse(i.content, t), this.consolidate());
+			i.content && (this.workspaceConfigurationModelParser = new UZ(n.key, this.logService), this.workspaceConfigurationModelParser.parse(i.content, t), this.consolidate());
 		} catch {}
 	}
 	get workspaceIdentifier() {
@@ -41139,7 +41139,7 @@ var qZ = class e extends Xa {
 			key: e.id
 		};
 	}
-}, rQ = class {
+}, oQ = class {
 	constructor(e, t, n, r, i) {
 		this.configurationCache = r, this.logService = i, this.onDidChange = is.None, this.key = {
 			type: "folder",
@@ -41151,7 +41151,7 @@ var qZ = class e extends Xa {
 			let e = await this.configurationCache.read(this.key), { content: t } = JSON.parse(e.toString());
 			if (t) for (let e of Object.keys(t)) if (e === "settings") this._folderSettingsModelParser.parse(t[e], this._folderSettingsParseOptions);
 			else {
-				let n = new VZ(e, e, this.logService);
+				let n = new WZ(e, e, this.logService);
 				n.parse(t[e]), this._standAloneConfigurations.push(n.configurationModel);
 			}
 			this.consolidate();
@@ -41160,7 +41160,7 @@ var qZ = class e extends Xa {
 	}
 	async updateConfiguration(e, t) {
 		let n = {};
-		e && (n[oZ] = e), t.forEach(([e, t]) => {
+		e && (n[lZ] = e), t.forEach(([e, t]) => {
 			t && (n[e] = t);
 		}), Object.keys(n).length ? await this.configurationCache.write(this.key, JSON.stringify({ content: n })) : await this.configurationCache.remove(this.key);
 	}
@@ -41176,9 +41176,9 @@ var qZ = class e extends Xa {
 	getUnsupportedKeys() {
 		return [];
 	}
-}, iQ = class extends z {
+}, sQ = class extends z {
 	constructor(e, t, n, r, i, a, o, s, c) {
-		super(), this.workspaceFolder = t, this.workbenchState = r, this.workspaceTrusted = i, this.configurationCache = c, this._onDidChange = this._register(new V()), this.onDidChange = this._onDidChange.event, this.scopes = f.WORKSPACE === this.workbenchState ? CZ : SZ, this.configurationFolder = o.extUri.joinPath(t.uri, n), this.cachedFolderConfiguration = new rQ(t.uri, n, {
+		super(), this.workspaceFolder = t, this.workbenchState = r, this.workspaceTrusted = i, this.configurationCache = c, this._onDidChange = this._register(new V()), this.onDidChange = this._onDidChange.event, this.scopes = f.WORKSPACE === this.workbenchState ? EZ : TZ, this.configurationFolder = o.extUri.joinPath(t.uri, n), this.cachedFolderConfiguration = new oQ(t.uri, n, {
 			scopes: this.scopes,
 			skipRestricted: this.isUntrusted()
 		}, c, s), e && this.configurationCache.needsCaching(t.uri) ? (this.folderConfiguration = this.cachedFolderConfiguration, fo(t.uri, a).then(() => {
@@ -41208,50 +41208,50 @@ var qZ = class e extends Xa {
 		this.updateCache(), this._onDidChange.fire();
 	}
 	createFileServiceBasedConfiguration(e, t, n) {
-		let r = t.extUri.joinPath(this.configurationFolder, `${oZ}.json`), i = [
-			wZ,
-			TZ,
+		let r = t.extUri.joinPath(this.configurationFolder, `${lZ}.json`), i = [
+			DZ,
+			OZ,
 			"mcp"
 		].map((e) => [e, t.extUri.joinPath(this.configurationFolder, `${e}.json`)]);
-		return new XZ(this.configurationFolder.toString(), r, i, {
+		return new $Z(this.configurationFolder.toString(), r, i, {
 			scopes: this.scopes,
 			skipRestricted: this.isUntrusted()
 		}, e, t, n);
 	}
 	async updateCache() {
-		if (this.configurationCache.needsCaching(this.configurationFolder) && this.folderConfiguration instanceof XZ) {
+		if (this.configurationCache.needsCaching(this.configurationFolder) && this.folderConfiguration instanceof $Z) {
 			let [e, t] = await this.folderConfiguration.resolveContents();
 			this.cachedFolderConfiguration.updateConfiguration(e, t);
 		}
 	}
 };
-b(), U(), $s(), _r(), zt(), P(), S(), br(), Xs(), Fe(), ua(), Dt(), pc(), Oc(), Pa(), y(), $o(), $C(), gw(), ZC(), Xr(), Cn(), An(), cC(), wu(), kt(), fr(), xu(), kl(), xd(), xc(), Nr();
-function aQ(e, t) {
-	return e.isDefault || e.useDefaultFlags?.settings ? t ? bZ : void 0 : t ? yZ : vZ;
+b(), U(), $s(), _r(), zt(), P(), S(), br(), Xs(), Fe(), ua(), Dt(), pc(), Oc(), Pa(), y(), $o(), nw(), yw(), ew(), Xr(), Cn(), An(), TC(), wu(), kt(), fr(), xu(), kl(), xd(), xc(), Nr();
+function cQ(e, t) {
+	return e.isDefault || e.useDefaultFlags?.settings ? t ? CZ : void 0 : t ? SZ : xZ;
 }
-var oQ = class extends Ea {
+var lQ = class extends Ea {
 	constructor() {
 		super(...arguments), this.initialized = !1;
 	}
-}, sQ = class extends z {
+}, uQ = class extends z {
 	get restrictedSettings() {
 		return this._restrictedSettings;
 	}
 	constructor({ remoteAuthority: e, configurationCache: t }, n, r, i, a, o, s, c, l) {
-		if (super(), this.userDataProfileService = r, this.userDataProfilesService = i, this.fileService = a, this.remoteAgentService = o, this.uriIdentityService = s, this.logService = c, this.initialized = !1, this.applicationConfiguration = null, this.remoteUserConfiguration = null, this._onDidChangeConfiguration = this._register(new V()), this.onDidChangeConfiguration = this._onDidChangeConfiguration.event, this._onWillChangeWorkspaceFolders = this._register(new V()), this.onWillChangeWorkspaceFolders = this._onWillChangeWorkspaceFolders.event, this._onDidChangeWorkspaceFolders = this._register(new V()), this.onDidChangeWorkspaceFolders = this._onDidChangeWorkspaceFolders.event, this._onDidChangeWorkspaceName = this._register(new V()), this.onDidChangeWorkspaceName = this._onDidChangeWorkspaceName.event, this._onDidChangeWorkbenchState = this._register(new V()), this.onDidChangeWorkbenchState = this._onDidChangeWorkbenchState.event, this.isWorkspaceTrusted = !0, this._restrictedSettings = { default: [] }, this._onDidChangeRestrictedSettings = this._register(new V()), this.onDidChangeRestrictedSettings = this._onDidChangeRestrictedSettings.event, this.configurationRegistry = oa.as(Ii.Configuration), this.initRemoteUserConfigurationBarrier = new Cs(), this.completeWorkspaceBarrier = new Cs(), this.defaultConfiguration = this._register(new qZ(t, n, c)), this.policyConfiguration = l instanceof Fu ? new za() : this._register(new pi(this.defaultConfiguration, l, c)), this.configurationCache = t, this._configuration = new HZ(this.defaultConfiguration.configurationModel, this.policyConfiguration.configurationModel, Zi.createEmptyModel(c), Zi.createEmptyModel(c), Zi.createEmptyModel(c), Zi.createEmptyModel(c), new qn(), Zi.createEmptyModel(c), new qn(), this.workspace, c), this.applicationConfigurationDisposables = this._register(new I()), this.createApplicationConfiguration(), this.localUserConfiguration = this._register(new YZ(r.currentProfile.settingsResource, r.currentProfile.tasksResource, r.currentProfile.mcpResource, { scopes: aQ(r.currentProfile, !!e) }, a, s, c)), this.cachedFolderConfigs = new qn(), this._register(this.localUserConfiguration.onDidChangeConfiguration((e) => this.onLocalUserConfigurationChanged(e))), e) {
-			let n = this.remoteUserConfiguration = this._register(new ZZ(e, t, a, s, o, c));
+		if (super(), this.userDataProfileService = r, this.userDataProfilesService = i, this.fileService = a, this.remoteAgentService = o, this.uriIdentityService = s, this.logService = c, this.initialized = !1, this.applicationConfiguration = null, this.remoteUserConfiguration = null, this._onDidChangeConfiguration = this._register(new V()), this.onDidChangeConfiguration = this._onDidChangeConfiguration.event, this._onWillChangeWorkspaceFolders = this._register(new V()), this.onWillChangeWorkspaceFolders = this._onWillChangeWorkspaceFolders.event, this._onDidChangeWorkspaceFolders = this._register(new V()), this.onDidChangeWorkspaceFolders = this._onDidChangeWorkspaceFolders.event, this._onDidChangeWorkspaceName = this._register(new V()), this.onDidChangeWorkspaceName = this._onDidChangeWorkspaceName.event, this._onDidChangeWorkbenchState = this._register(new V()), this.onDidChangeWorkbenchState = this._onDidChangeWorkbenchState.event, this.isWorkspaceTrusted = !0, this._restrictedSettings = { default: [] }, this._onDidChangeRestrictedSettings = this._register(new V()), this.onDidChangeRestrictedSettings = this._onDidChangeRestrictedSettings.event, this.configurationRegistry = oa.as(Ii.Configuration), this.initRemoteUserConfigurationBarrier = new Cs(), this.completeWorkspaceBarrier = new Cs(), this.defaultConfiguration = this._register(new XZ(t, n, c)), this.policyConfiguration = l instanceof Fu ? new za() : this._register(new pi(this.defaultConfiguration, l, c)), this.configurationCache = t, this._configuration = new GZ(this.defaultConfiguration.configurationModel, this.policyConfiguration.configurationModel, Zi.createEmptyModel(c), Zi.createEmptyModel(c), Zi.createEmptyModel(c), Zi.createEmptyModel(c), new qn(), Zi.createEmptyModel(c), new qn(), this.workspace, c), this.applicationConfigurationDisposables = this._register(new I()), this.createApplicationConfiguration(), this.localUserConfiguration = this._register(new QZ(r.currentProfile.settingsResource, r.currentProfile.tasksResource, r.currentProfile.mcpResource, { scopes: cQ(r.currentProfile, !!e) }, a, s, c)), this.cachedFolderConfigs = new qn(), this._register(this.localUserConfiguration.onDidChangeConfiguration((e) => this.onLocalUserConfigurationChanged(e))), e) {
+			let n = this.remoteUserConfiguration = this._register(new eQ(e, t, a, s, o, c));
 			this._register(n.onDidInitialize((e) => {
 				this._register(n.onDidChangeConfiguration((e) => this.onRemoteUserConfigurationChanged(e))), this.onRemoteUserConfigurationChanged(e), this.initRemoteUserConfigurationBarrier.open();
 			}));
 		} else this.initRemoteUserConfigurationBarrier.open();
-		this.workspaceConfiguration = this._register(new eQ(t, a, s, c)), this._register(this.workspaceConfiguration.onDidUpdateConfiguration((e) => {
+		this.workspaceConfiguration = this._register(new rQ(t, a, s, c)), this._register(this.workspaceConfiguration.onDidUpdateConfiguration((e) => {
 			this.onWorkspaceConfigurationChanged(e).then(() => {
 				this.workspace.initialized = this.workspaceConfiguration.initialized, this.checkAndMarkWorkspaceComplete(e);
 			});
 		})), this._register(this.defaultConfiguration.onDidChangeConfiguration(({ properties: e, defaults: t }) => this.onDefaultConfigurationChanged(t, e))), this._register(this.policyConfiguration.onDidChangeConfiguration((e) => this.onPolicyConfigurationChanged(e))), this._register(r.onDidChangeCurrentProfile((e) => this.onUserDataProfileChanged(e))), this.workspaceEditingQueue = new rs();
 	}
 	createApplicationConfiguration() {
-		this.applicationConfigurationDisposables.clear(), this.userDataProfileService.currentProfile.isDefault || this.userDataProfileService.currentProfile.useDefaultFlags?.settings ? this.applicationConfiguration = null : (this.applicationConfiguration = this.applicationConfigurationDisposables.add(this._register(new JZ(this.userDataProfilesService, this.fileService, this.uriIdentityService, this.logService))), this.applicationConfigurationDisposables.add(this.applicationConfiguration.onDidChangeConfiguration((e) => this.onApplicationConfigurationChanged(e))));
+		this.applicationConfigurationDisposables.clear(), this.userDataProfileService.currentProfile.isDefault || this.userDataProfileService.currentProfile.useDefaultFlags?.settings ? this.applicationConfiguration = null : (this.applicationConfiguration = this.applicationConfigurationDisposables.add(this._register(new ZZ(this.userDataProfilesService, this.fileService, this.uriIdentityService, this.logService))), this.applicationConfigurationDisposables.add(this.applicationConfiguration.onDidChangeConfiguration((e) => this.onApplicationConfigurationChanged(e))));
 	}
 	async getCompleteWorkspace() {
 		return await this.completeWorkspaceBarrier.wait(), this.getWorkspace();
@@ -41411,7 +41411,7 @@ var oQ = class extends Ea {
 	}
 	isSettingAppliedForAllProfiles(e) {
 		let t = this.configurationRegistry.getConfigurationProperties()[e]?.scope;
-		if (t && _Z.includes(t)) return !0;
+		if (t && bZ.includes(t)) return !0;
 		let n = this.getValue("workbench.settings.applyToAllProfiles") ?? [];
 		return Array.isArray(n) && n.includes(e);
 	}
@@ -41423,15 +41423,15 @@ var oQ = class extends Ea {
 			id: e.id,
 			configPath: e.configPath
 		}, this.isWorkspaceTrusted);
-		let t = e.configPath, n = $l(this.workspaceConfiguration.getFolders(), t, this.uriIdentityService.extUri), r = e.id, i = new oQ(r, n, this.workspaceConfiguration.isTransient(), t, (e) => this.uriIdentityService.extUri.ignorePathCasing(e));
+		let t = e.configPath, n = $l(this.workspaceConfiguration.getFolders(), t, this.uriIdentityService.extUri), r = e.id, i = new lQ(r, n, this.workspaceConfiguration.isTransient(), t, (e) => this.uriIdentityService.extUri.ignorePathCasing(e));
 		return i.initialized = this.workspaceConfiguration.initialized, i;
 	}
 	createSingleFolderWorkspace(e) {
-		let t = new oQ(e.id, [Ms(e.uri)], !1, null, (e) => this.uriIdentityService.extUri.ignorePathCasing(e));
+		let t = new lQ(e.id, [Ms(e.uri)], !1, null, (e) => this.uriIdentityService.extUri.ignorePathCasing(e));
 		return t.initialized = !0, t;
 	}
 	createEmptyWorkspace(e) {
-		let t = new oQ(e.id, [], !1, null, (e) => this.uriIdentityService.extUri.ignorePathCasing(e));
+		let t = new lQ(e.id, [], !1, null, (e) => this.uriIdentityService.extUri.ignorePathCasing(e));
 		return t.initialized = !0, Promise.resolve(t);
 	}
 	checkAndMarkWorkspaceComplete(e) {
@@ -41473,7 +41473,7 @@ var oQ = class extends Ea {
 				let e = await Promise.all([this.localUserConfiguration.initialize(), this.remoteUserConfiguration ? this.remoteUserConfiguration.initialize() : Promise.resolve(Zi.createEmptyModel(this.logService))]);
 				if (this.applicationConfiguration) {
 					let t = await n;
-					e[0] = this.localUserConfiguration.reparse({ exclude: t.getValue(kZ) });
+					e[0] = this.localUserConfiguration.reparse({ exclude: t.getValue(MZ) });
 				}
 				return ro("code/didInitUserConfiguration"), e;
 			})()
@@ -41519,7 +41519,7 @@ var oQ = class extends Ea {
 		let i = this.workspace.folders, a = await this.loadFolderConfigurations(i), o = this.getWorkspaceConfigurationModel(a), s = new qn();
 		a.forEach((e, t) => s.set(i[t].uri, e));
 		let c = this._configuration;
-		if (this._configuration = new HZ(this.defaultConfiguration.configurationModel, this.policyConfiguration.configurationModel, e, t, n, o, s, Zi.createEmptyModel(this.logService), new qn(), this.workspace, this.logService), this.initialized = !0, r) {
+		if (this._configuration = new GZ(this.defaultConfiguration.configurationModel, this.policyConfiguration.configurationModel, e, t, n, o, s, Zi.createEmptyModel(this.logService), new qn(), this.workspace, this.logService), this.initialized = !0, r) {
 			let e = this._configuration.compare(c);
 			this.triggerConfigurationChange(e, {
 				data: c.toData(),
@@ -41538,9 +41538,9 @@ var oQ = class extends Ea {
 	onUserDataProfileChanged(e) {
 		e.join((async () => {
 			let t = [];
-			t.push(this.localUserConfiguration.reset(e.profile.settingsResource, e.profile.tasksResource, e.profile.mcpResource, { scopes: aQ(e.profile, !!this.remoteUserConfiguration) })), (e.previous.isDefault !== e.profile.isDefault || !!e.previous.useDefaultFlags?.settings != !!e.profile.useDefaultFlags?.settings) && (this.createApplicationConfiguration(), this.applicationConfiguration && t.push(this.reloadApplicationConfiguration(!0)));
+			t.push(this.localUserConfiguration.reset(e.profile.settingsResource, e.profile.tasksResource, e.profile.mcpResource, { scopes: cQ(e.profile, !!this.remoteUserConfiguration) })), (e.previous.isDefault !== e.profile.isDefault || !!e.previous.useDefaultFlags?.settings != !!e.profile.useDefaultFlags?.settings) && (this.createApplicationConfiguration(), this.applicationConfiguration && t.push(this.reloadApplicationConfiguration(!0)));
 			let [n, r] = await Promise.all(t);
-			r ??= this._configuration.applicationConfiguration, this.applicationConfiguration && (n = this.localUserConfiguration.reparse({ exclude: r.getValue(kZ) })), await this.loadConfiguration(r, n, this._configuration.remoteUserConfiguration, !0);
+			r ??= this._configuration.applicationConfiguration, this.applicationConfiguration && (n = this.localUserConfiguration.reparse({ exclude: r.getValue(MZ) })), await this.loadConfiguration(r, n, this._configuration.remoteUserConfiguration, !0);
 		})());
 	}
 	onDefaultConfigurationChanged(e, t) {
@@ -41576,7 +41576,7 @@ var oQ = class extends Ea {
 		}, n = this._configuration.applicationConfiguration.getValue("workbench.settings.applyToAllProfiles") ?? [], r = this._configuration.compareAndUpdateApplicationConfiguration(e), i = this.getValue("workbench.settings.applyToAllProfiles") ?? [], a = this.configurationRegistry.getConfigurationProperties(), o = [];
 		for (let e of r.keys) {
 			let t = a[e]?.scope;
-			if (t && _Z.includes(t)) {
+			if (t && bZ.includes(t)) {
 				if (o.push(e), e === "workbench.settings.applyToAllProfiles") {
 					for (let e of n) i.includes(e) || o.push(e);
 					for (let e of i) n.includes(e) || o.push(e);
@@ -41682,7 +41682,7 @@ var oQ = class extends Ea {
 	loadFolderConfigurations(e) {
 		return Promise.all([...e.map((e) => {
 			let t = this.cachedFolderConfigs.get(e.uri);
-			return t || (t = new iQ(!this.initialized, e, aZ, this.getWorkbenchState(), this.isWorkspaceTrusted, this.fileService, this.uriIdentityService, this.logService, this.configurationCache), this._register(t.onDidChange(() => this.onWorkspaceFolderConfigurationChanged(e))), this.cachedFolderConfigs.set(e.uri, this._register(t))), t.loadConfiguration();
+			return t || (t = new sQ(!this.initialized, e, cZ, this.getWorkbenchState(), this.isWorkspaceTrusted, this.fileService, this.uriIdentityService, this.logService, this.configurationCache), this._register(t.onDidChange(() => this.onWorkspaceFolderConfigurationChanged(e))), this.cachedFolderConfigs.set(e.uri, this._register(t))), t.loadConfiguration();
 		})]);
 	}
 	async validateWorkspaceFoldersAndReload(e) {
@@ -41716,7 +41716,7 @@ var oQ = class extends Ea {
 			return;
 		}
 		let a = this.toEditableConfigurationTarget(n, e);
-		if (!a || a === GZ.USER_REMOTE && !this.remoteUserConfiguration) throw Error("Invalid configuration target");
+		if (!a || a === JZ.USER_REMOTE && !this.remoteUserConfiguration) throw Error("Invalid configuration target");
 		if (r?.overrideIdentifiers?.length && r.overrideIdentifiers.length > 1) {
 			let e = this.getConfigurationModelForEditableConfigurationTarget(a, r.resource);
 			if (e) {
@@ -41731,12 +41731,12 @@ var oQ = class extends Ea {
 			scopes: r,
 			...i
 		}), a) {
-			case GZ.USER_LOCAL:
+			case JZ.USER_LOCAL:
 				this.applicationConfiguration && this.isSettingAppliedForAllProfiles(e) ? await this.reloadApplicationConfiguration() : await this.reloadLocalUserConfiguration();
 				return;
-			case GZ.USER_REMOTE: return this.reloadRemoteUserConfiguration().then(() => void 0);
-			case GZ.WORKSPACE: return this.reloadWorkspaceConfiguration();
-			case GZ.WORKSPACE_FOLDER: {
+			case JZ.USER_REMOTE: return this.reloadRemoteUserConfiguration().then(() => void 0);
+			case JZ.WORKSPACE: return this.reloadWorkspaceConfiguration();
+			case JZ.WORKSPACE_FOLDER: {
 				let e = r && r.resource ? this.workspace.getFolder(r.resource) : null;
 				if (e) return this.reloadWorkspaceFolderConfiguration(e);
 			}
@@ -41744,14 +41744,14 @@ var oQ = class extends Ea {
 	}
 	async createConfigurationEditingService(e) {
 		let t = (await this.remoteAgentService.getEnvironment())?.settingsPath ?? null;
-		return e.createInstance(KZ, t);
+		return e.createInstance(YZ, t);
 	}
 	getConfigurationModelForEditableConfigurationTarget(e, t) {
 		switch (e) {
-			case GZ.USER_LOCAL: return this._configuration.localUserConfiguration;
-			case GZ.USER_REMOTE: return this._configuration.remoteUserConfiguration;
-			case GZ.WORKSPACE: return this._configuration.workspaceConfiguration;
-			case GZ.WORKSPACE_FOLDER: return t ? this._configuration.folderConfigurations.get(t) : void 0;
+			case JZ.USER_LOCAL: return this._configuration.localUserConfiguration;
+			case JZ.USER_REMOTE: return this._configuration.remoteUserConfiguration;
+			case JZ.WORKSPACE: return this._configuration.workspaceConfiguration;
+			case JZ.WORKSPACE_FOLDER: return t ? this._configuration.folderConfigurations.get(t) : void 0;
 		}
 	}
 	getConfigurationModel(e, t) {
@@ -41776,22 +41776,22 @@ var oQ = class extends Ea {
 		}
 	}
 	toEditableConfigurationTarget(e, t) {
-		if (e === F.APPLICATION) return GZ.USER_LOCAL;
+		if (e === F.APPLICATION) return JZ.USER_LOCAL;
 		if (e === F.USER) {
 			if (this.remoteUserConfiguration) {
 				let e = this.configurationRegistry.getConfigurationProperties()[t]?.scope;
-				if (e === Ac.MACHINE || e === Ac.MACHINE_OVERRIDABLE || e === Ac.APPLICATION_MACHINE || this.inspect(t).userRemoteValue !== void 0) return GZ.USER_REMOTE;
+				if (e === Ac.MACHINE || e === Ac.MACHINE_OVERRIDABLE || e === Ac.APPLICATION_MACHINE || this.inspect(t).userRemoteValue !== void 0) return JZ.USER_REMOTE;
 			}
-			return GZ.USER_LOCAL;
+			return JZ.USER_LOCAL;
 		}
-		return e === F.USER_LOCAL ? GZ.USER_LOCAL : e === F.USER_REMOTE ? GZ.USER_REMOTE : e === F.WORKSPACE ? GZ.WORKSPACE : e === F.WORKSPACE_FOLDER ? GZ.WORKSPACE_FOLDER : null;
+		return e === F.USER_LOCAL ? JZ.USER_LOCAL : e === F.USER_REMOTE ? JZ.USER_REMOTE : e === F.WORKSPACE ? JZ.WORKSPACE : e === F.WORKSPACE_FOLDER ? JZ.WORKSPACE_FOLDER : null;
 	}
-}, cQ = class extends z {
+}, dQ = class extends z {
 	constructor(e, t, n, r, i) {
 		super(), this.workspaceContextService = e, this.environmentService = t, this.workspaceTrustManagementService = n, r.whenInstalledExtensionsRegistered().then(() => {
 			this.registerConfigurationSchemas();
 			let e = oa.as(Ii.Configuration), t = this._register(new ea(50));
-			this._register(is.any(e.onDidUpdateConfiguration, e.onDidSchemaChange, n.onDidChangeTrust)(() => t.trigger(() => this.registerConfigurationSchemas(), i.phase === lw.Eventually ? void 0 : 2500)));
+			this._register(is.any(e.onDidUpdateConfiguration, e.onDidSchemaChange, n.onDidChangeTrust)(() => t.trigger(() => this.registerConfigurationSchemas(), i.phase === fw.Eventually ? void 0 : 2500)));
 		});
 	}
 	registerConfigurationSchemas() {
@@ -41860,7 +41860,7 @@ var oQ = class extends Ea {
 	}
 	registerSchemas(e) {
 		let t = oa.as(Qe.JSONContribution);
-		t.registerSchema(cZ, e.defaultSettingsSchema), t.registerSchema(lZ, e.userSettingsSchema), t.registerSchema(uZ, e.profileSettingsSchema), t.registerSchema(dZ, e.machineSettingsSchema), t.registerSchema(fZ, e.workspaceSettingsSchema), t.registerSchema(pZ, e.folderSettingsSchema), t.registerSchema(Te, e.configDefaultsSchema);
+		t.registerSchema(dZ, e.defaultSettingsSchema), t.registerSchema(fZ, e.userSettingsSchema), t.registerSchema(pZ, e.profileSettingsSchema), t.registerSchema(mZ, e.machineSettingsSchema), t.registerSchema(hZ, e.workspaceSettingsSchema), t.registerSchema(gZ, e.folderSettingsSchema), t.registerSchema(Te, e.configDefaultsSchema);
 	}
 	checkAndFilterPropertiesRequiringTrust(e) {
 		if (this.workspaceTrustManagementService.isWorkspaceTrusted()) return e;
@@ -41876,14 +41876,14 @@ var oQ = class extends Ea {
 		}), t;
 	}
 };
-cQ = N([
+dQ = N([
 	R(0, Nn),
-	R(1, JC),
+	R(1, ZC),
 	R(2, Ee),
-	R(3, rC),
-	R(4, QC)
-], cQ);
-var lQ = class extends z {
+	R(3, iC),
+	R(4, tw)
+], dQ);
+var fQ = class extends z {
 	static {
 		this.ID = "workbench.contrib.configurationDefaultOverridesContribution";
 	}
@@ -41913,14 +41913,14 @@ var lQ = class extends z {
 		Object.keys(n).length && this.configurationRegistry.registerDefaultConfigurations([{ overrides: n }]);
 	}
 };
-lQ = N([
+fQ = N([
 	R(0, zu),
-	R(1, rC),
+	R(1, iC),
 	R(2, ba),
 	R(3, Ct)
-], lQ), oa.as(iw.Workbench).registerWorkbenchContribution(cQ, lw.Restored), ow(lQ.ID, lQ, hw.BlockRestore), oa.as(Ii.Configuration).registerConfiguration({
+], fQ), oa.as(sw.Workbench).registerWorkbenchContribution(dQ, fw.Restored), lw(fQ.ID, fQ, vw.BlockRestore), oa.as(Ii.Configuration).registerConfiguration({
 	...Pd,
-	properties: { [kZ]: {
+	properties: { [MZ]: {
 		type: "array",
 		description: M(13757, "Configure settings to be applied for all profiles."),
 		default: [],
@@ -41929,7 +41929,7 @@ lQ = N([
 		uniqueItems: !0
 	} }
 }), bd(), Ca(), Gn(), Pr(), S();
-var uQ = class {
+var pQ = class {
 	constructor(e, t, n) {
 		this.donotCacheResourcesWithSchemes = e, this.fileService = n, this.cachedConfigurations = /* @__PURE__ */ new Map(), this.cacheHome = t.cacheHome;
 	}
@@ -41947,12 +41947,12 @@ var uQ = class {
 	}
 	getCachedConfiguration({ type: e, key: t }) {
 		let n = `${e}:${t}`, r = this.cachedConfigurations.get(n);
-		return r || (r = new dQ({
+		return r || (r = new mQ({
 			type: e,
 			key: t
 		}, this.cacheHome, this.fileService), this.cachedConfigurations.set(n, r)), r;
 	}
-}, dQ = class {
+}, mQ = class {
 	constructor({ type: e, key: t }, n, r) {
 		this.fileService = r, this.cachedConfigurationFolderResource = Gs(n, "CachedConfigurations", e, t), this.cachedConfigurationFileResource = Gs(this.cachedConfigurationFolderResource, e === "workspaces" ? "workspace.json" : "configuration.json"), this.queue = new rs();
 	}
@@ -41987,8 +41987,8 @@ var uQ = class {
 		}
 	}
 };
-b(), pc(), E(), mo(), Ds(), Br(), oe(), $C(), Wn();
-var fQ = class {
+b(), pc(), E(), mo(), Ds(), Br(), oe(), nw(), Wn();
+var hQ = class {
 	constructor(e, t, n, r) {
 		this.configurationService = e, this.environmentService = n, this.storageService = r, this.remoteEnvironment = null, t.getEnvironment().then((e) => this.remoteEnvironment = e);
 	}
@@ -42010,13 +42010,13 @@ var fQ = class {
 		return t;
 	}
 };
-fQ = N([
+hQ = N([
 	R(0, ba),
 	R(1, yd),
-	R(2, JC),
+	R(2, ZC),
 	R(3, wl)
-], fQ), b(), fr(), Xs(), Fe(), kl(), y(), Pa(), An(), Gn(), Rt(), qt(), qa(), $C(), YC(), hd(), Ds(), xt(), yn(), Qw(), Ff(), P(), Ar();
-var pQ = class extends z {
+], hQ), b(), fr(), Xs(), Fe(), kl(), y(), Pa(), An(), Gn(), Rt(), qt(), qa(), nw(), QC(), hd(), Ds(), xt(), yn(), tT(), Ff(), P(), Ar();
+var gQ = class extends z {
 	constructor(e, t, n, r, i, a, o, s, c, l, u, d, f, p, m, h) {
 		super(), this.jsonEditingService = e, this.contextService = t, this.configurationService = n, this.notificationService = r, this.commandService = i, this.fileService = a, this.textFileService = o, this.workspacesService = s, this.environmentService = c, this.fileDialogService = l, this.dialogService = u, this.hostService = d, this.uriIdentityService = f, this.workspaceTrustManagementService = p, this.userDataProfilesService = m, this.userDataProfileService = h;
 	}
@@ -42133,7 +42133,7 @@ var pQ = class extends z {
 		if (n) {
 			await n.save({
 				force: !0,
-				reason: XC.EXPLICIT
+				reason: $C.EXPLICIT
 			});
 			return;
 		}
@@ -42192,27 +42192,27 @@ var pQ = class extends z {
 		if (Ra(e)) return e;
 	}
 };
-pQ = N([
+gQ = N([
 	R(0, su),
 	R(1, Nn),
 	R(2, ad),
 	R(3, wo),
 	R(4, yi),
 	R(5, ao),
-	R(6, nw),
+	R(6, aw),
 	R(7, Nf),
-	R(8, JC),
+	R(8, ZC),
 	R(9, Do),
 	R(10, ee),
 	R(11, Sd),
 	R(12, Rs),
 	R(13, Ee),
-	R(14, Yw),
+	R(14, Qw),
 	R(15, qf)
-], pQ), b(), Wn(), E(), $s(), Br(), oe(), Xs(), Fe(), Xr(), P(), Ca(), qa(), $C(), Gn(), Pr(), xt(), Ds();
-var mQ, hQ = class extends z {
+], gQ), b(), Wn(), E(), $s(), Br(), oe(), Xs(), Fe(), Xr(), P(), Ca(), qa(), nw(), Gn(), Pr(), xt(), Ds();
+var _Q, vQ = class extends z {
 	static {
-		mQ = this;
+		_Q = this;
 	}
 	static {
 		this.RECENTLY_OPENED_KEY = "recently.opened";
@@ -42221,7 +42221,7 @@ var mQ, hQ = class extends z {
 		super(), this.storageService = e, this.contextService = t, this.logService = n, this.fileService = r, this.environmentService = i, this.uriIdentityService = a, this._onRecentlyOpenedChange = this._register(new V()), this.onDidChangeRecentlyOpened = this._onRecentlyOpenedChange.event, this.addWorkspaceToRecentlyOpened(), this.registerListeners();
 	}
 	registerListeners() {
-		this._register(this.storageService.onDidChangeValue(Mr.APPLICATION, mQ.RECENTLY_OPENED_KEY, this._store)(() => this._onRecentlyOpenedChange.fire())), this._register(this.contextService.onDidChangeWorkspaceFolders((e) => this.onDidChangeWorkspaceFolders(e)));
+		this._register(this.storageService.onDidChangeValue(Mr.APPLICATION, _Q.RECENTLY_OPENED_KEY, this._store)(() => this._onRecentlyOpenedChange.fire())), this._register(this.contextService.onDidChangeWorkspaceFolders((e) => this.onDidChangeWorkspaceFolders(e)));
 	}
 	onDidChangeWorkspaceFolders(e) {
 		if ($i(this.contextService.getWorkspace())) for (let t of e.added) this.addRecentlyOpened([{ folderUri: t.uri }]);
@@ -42247,7 +42247,7 @@ var mQ, hQ = class extends z {
 		}
 	}
 	async getRecentlyOpened() {
-		let e = this.storageService.get(mQ.RECENTLY_OPENED_KEY, Mr.APPLICATION);
+		let e = this.storageService.get(_Q.RECENTLY_OPENED_KEY, Mr.APPLICATION);
 		if (e) {
 			let t = Al(JSON.parse(e), this.logService);
 			return t.workspaces = t.workspaces.filter((e) => !(Fl(e) && e.folderUri.scheme === Ma.file && !$i(this.contextService.getWorkspace()) || tu(e) && $i(e.workspace.configPath))), t;
@@ -42270,10 +42270,10 @@ var mQ, hQ = class extends z {
 		e.files = e.files.filter((e) => !t.some((t) => t.toString() === e.fileUri.toString())), e.workspaces = e.workspaces.filter((e) => !t.some((t) => t.toString() === (Fl(e) ? e.folderUri.toString() : e.workspace.configPath.toString())));
 	}
 	async saveRecentlyOpened(e) {
-		return this.storageService.store(mQ.RECENTLY_OPENED_KEY, JSON.stringify(Zl(e)), Mr.APPLICATION, tt.USER);
+		return this.storageService.store(_Q.RECENTLY_OPENED_KEY, JSON.stringify(Zl(e)), Mr.APPLICATION, tt.USER);
 	}
 	async clearRecentlyOpened() {
-		this.storageService.remove(mQ.RECENTLY_OPENED_KEY, Mr.APPLICATION);
+		this.storageService.remove(_Q.RECENTLY_OPENED_KEY, Mr.APPLICATION);
 	}
 	async enterWorkspace(e) {
 		return { workspace: await this.getWorkspaceIdentifier(e) };
@@ -42295,21 +42295,21 @@ var mQ, hQ = class extends z {
 		}
 	}
 	async getWorkspaceIdentifier(e) {
-		return NC(e);
+		return DC(e);
 	}
 	async getDirtyWorkspaces() {
 		return [];
 	}
 };
-hQ = mQ = N([
+vQ = _Q = N([
 	R(0, wl),
 	R(1, Nn),
 	R(2, Ct),
 	R(3, ao),
-	R(4, JC),
+	R(4, ZC),
 	R(5, Rs)
-], hQ), TS(), S(), Ut(), _r(), Ds(), kt(), fr(), Dt(), Br(), GC(), vP(), My(), bP();
-var gQ = "configResolveInputLru", _Q = 5, vQ = class extends yP {
+], vQ), TS(), S(), Ut(), _r(), Ds(), kt(), fr(), Dt(), Br(), JC(), xP(), My(), CP();
+var yQ = "configResolveInputLru", bQ = 5, xQ = class extends SP {
 	static {
 		this.INPUT_OR_COMMAND_VARIABLES_PATTERN = /\${((input|command):(.*?))}/g;
 	}
@@ -42324,8 +42324,8 @@ var gQ = "configResolveInputLru", _Q = 5, vQ = class extends yP {
 			getAppRoot: () => e.getAppRoot(),
 			getExecPath: () => e.getExecPath(),
 			getFilePath: () => {
-				let e = rw.getOriginalUri(n.activeEditor, {
-					supportSideBySide: mw.PRIMARY,
+				let e = ow.getOriginalUri(n.activeEditor, {
+					supportSideBySide: _w.PRIMARY,
 					filterByScheme: [
 						Ma.file,
 						Ma.vscodeUserData,
@@ -42335,8 +42335,8 @@ var gQ = "configResolveInputLru", _Q = 5, vQ = class extends yP {
 				if (e) return this.labelService.getUriLabel(e, { noPrefix: !0 });
 			},
 			getWorkspaceFolderPathForFile: () => {
-				let e = rw.getOriginalUri(n.activeEditor, {
-					supportSideBySide: mw.PRIMARY,
+				let e = ow.getOriginalUri(n.activeEditor, {
+					supportSideBySide: _w.PRIMARY,
 					filterByScheme: [
 						Ma.file,
 						Ma.vscodeUserData,
@@ -42391,7 +42391,7 @@ var gQ = "configResolveInputLru", _Q = 5, vQ = class extends yP {
 			if (t.name === "command") {
 				let e = (r ? r[t.arg] : void 0) || t.arg, n = await this.commandService.executeCommand(e, a.toObject());
 				if (!Us(n)) {
-					if (typeof n != "string") throw new _P(hP.Command, M(13801, "Cannot substitute command variable '{0}' because command did not return a result of type string.", e));
+					if (typeof n != "string") throw new bP(vP.Command, M(13801, "Cannot substitute command variable '{0}' because command did not return a result of type string.", e));
 					o = { value: n };
 				}
 			} else if (t.name === "input") o = await this.showUserInput(n, t.arg, await this.resolveInputs(e, n, i), r);
@@ -42439,21 +42439,21 @@ var gQ = "configResolveInputLru", _Q = 5, vQ = class extends yP {
 		return r ??= this.configurationService.getValue(t, i)?.inputs, r;
 	}
 	readInputLru() {
-		let e = this.storageService.get(gQ, Mr.WORKSPACE), t = new En(_Q);
+		let e = this.storageService.get(yQ, Mr.WORKSPACE), t = new En(bQ);
 		try {
 			e && t.fromJSON(JSON.parse(e));
 		} catch {}
 		return t;
 	}
 	storeInputLru(e) {
-		this.storageService.store(gQ, JSON.stringify(e.toJSON()), Mr.WORKSPACE, tt.MACHINE);
+		this.storageService.store(yQ, JSON.stringify(e.toJSON()), Mr.WORKSPACE, tt.MACHINE);
 	}
 	async showUserInput(e, t, n, r) {
-		if (!n) throw new _P(hP.Input, M(13802, "Variable '{0}' must be defined in an '{1}' section of the debug or task configuration.", t, "inputs"));
+		if (!n) throw new bP(vP.Input, M(13802, "Variable '{0}' must be defined in an '{1}' section of the debug or task configuration.", t, "inputs"));
 		let i = n.filter((e) => e.id === t).pop();
 		if (i) {
 			let n = (e) => {
-				throw new _P(hP.Input, M(13803, "Input variable '{0}' is of type '{1}' and must include '{2}'.", t, i.type, e));
+				throw new bP(vP.Input, M(13803, "Input variable '{0}' is of type '{1}' and must include '{2}'.", t, i.type, e));
 			}, a = this.readInputLru(), o = `${e}.${t}`, s = a.get(o);
 			switch (i.type) {
 				case "promptString": {
@@ -42499,16 +42499,16 @@ var gQ = "configResolveInputLru", _Q = 5, vQ = class extends yP {
 						value: e,
 						input: i
 					};
-					throw new _P(hP.Input, M(13805, "Cannot substitute input variable '{0}' because command '{1}' did not return a result of type string.", t, i.command));
+					throw new bP(vP.Input, M(13805, "Cannot substitute input variable '{0}' because command '{1}' did not return a result of type string.", t, i.command));
 				});
-				default: throw new _P(hP.Input, M(13806, "Input variable '{0}' can only be of type 'promptString', 'pickString', or 'command'.", t));
+				default: throw new bP(vP.Input, M(13806, "Input variable '{0}' can only be of type 'promptString', 'pickString', or 'command'.", t));
 			}
 		}
-		throw new _P(hP.Input, M(13807, "Undefined input variable '{0}' encountered. Remove or define '{0}' to continue.", t));
+		throw new bP(vP.Input, M(13807, "Undefined input variable '{0}' encountered. Remove or define '{0}' to continue.", t));
 	}
 };
-b(), jc(), pc(), Wn(), Ot(), bi(), oe(), Fe(), E(), dw(), cC(), KC();
-var yQ = class extends vQ {
+b(), jc(), pc(), Wn(), Ot(), bi(), oe(), Fe(), E(), mw(), TC(), YC();
+var SQ = class extends xQ {
 	constructor(e, t, n, r, i, a, o, s, c) {
 		super({
 			getAppRoot: () => void 0,
@@ -42516,57 +42516,57 @@ var yQ = class extends vQ {
 		}, Promise.resolve(Object.create(null)), e, t, n, r, i, a, o, s, c);
 	}
 };
-yQ = N([
-	R(0, ew),
+SQ = N([
+	R(0, rw),
 	R(1, ba),
 	R(2, yi),
 	R(3, Nn),
 	R(4, Ga),
 	R(5, We),
-	R(6, uw),
-	R(7, rC),
+	R(6, pw),
+	R(7, iC),
 	R(8, wl)
-], yQ), b(), Pr(), Ds(), U(), Go(), pc(), y(), qa(), gc(), E(), Xr(), Pa(), xt(), Qw(), Fe(), fS(), $C(), bd(), Ff(), dS(), UC(), $w(), LC();
-var bQ = H.from({
+], SQ), b(), Pr(), Ds(), U(), Go(), pc(), y(), qa(), gc(), E(), Xr(), Pa(), xt(), tT(), Fe(), fS(), nw(), bd(), Ff(), dS(), HC(), nT(), jC();
+var CQ = H.from({
 	scheme: Ma.vscodeUserData,
 	path: "/User/settings.json"
 });
-async function xQ(e, t, n = bQ) {
-	await DC(n, e, t);
+async function wQ(e, t, n = CQ) {
+	await AC(n, e, t);
 }
 oa.as(Ii.Configuration);
-var SQ = class extends sQ {
+var TQ = class extends uQ {
 	constructor(e, t, n, r, i, a, o, s) {
-		let c = new uQ([
+		let c = new pQ([
 			Ma.file,
 			Ma.vscodeUserData,
 			Ma.tmp
 		], e, r);
 		super({
 			configurationCache: c,
-			remoteAuthority: SC().remoteAuthority
+			remoteAuthority: FC().remoteAuthority
 		}, e, t, n, r, i, a, o, s);
 	}
 };
-SQ = N([
-	R(0, JC),
+TQ = N([
+	R(0, ZC),
 	R(1, qf),
-	R(2, Yw),
+	R(2, Qw),
 	R(3, ao),
 	R(4, yd),
 	R(5, Rs),
 	R(6, Ct),
 	R(7, al)
-], SQ);
-var CQ = class extends pQ {
+], TQ);
+var EQ = class extends gQ {
 	constructor() {
-		super(...arguments), this.enterWorkspace = Xw;
+		super(...arguments), this.enterWorkspace = $w;
 	}
-}, wQ;
-fC(async (e) => {
+}, DQ;
+cC(async (e) => {
 	let t = e.get(Nn);
 	t.acquireInstantiationService(e.get(It));
-	let n = wQ ?? MC();
+	let n = DQ ?? gC();
 	if (H.isUri(n)) {
 		let r = n.with({ path: "/workspace.code-workspace" });
 		try {
@@ -42579,27 +42579,27 @@ fC(async (e) => {
 		});
 	} else await t.initialize(n);
 });
-var TQ = Zw(SQ);
-function EQ(e) {
-	return wQ = e, {
-		...IC(),
-		[ba.toString()]: new Ta(TQ, [], !0),
-		[Nn.toString()]: new Ta(TQ, [], !0),
-		[qo.toString()]: new Ta(iZ, [], !0),
-		[Ux.toString()]: new Ta(CQ, [], !0),
-		[Nf.toString()]: new Ta(hQ, [], !0),
-		[Dc.toString()]: new Ta(fQ, [], !0),
-		[Mf.toString()]: new Ta(yQ, [], !0)
+var OQ = eT(TQ);
+function kQ(e) {
+	return DQ = e, {
+		...hC(),
+		[ba.toString()]: new Ta(OQ, [], !0),
+		[Nn.toString()]: new Ta(OQ, [], !0),
+		[qo.toString()]: new Ta(sZ, [], !0),
+		[Ux.toString()]: new Ta(EQ, [], !0),
+		[Nf.toString()]: new Ta(vQ, [], !0),
+		[Dc.toString()]: new Ta(hQ, [], !0),
+		[Mf.toString()]: new Ta(SQ, [], !0)
 	};
 }
 //#endregion
 //#region node_modules/@codingame/monaco-vscode-model-service-override/vscode/src/vs/editor/common/services/resolverService.js
 Vd();
-function DQ(e) {
+function AQ(e) {
 	return !!e.textEditorModel;
 }
 yC(), b(), Pn(), Kt(), P(), Fa(), dn();
-var OQ = class extends z {
+var jQ = class extends z {
 	constructor(e, t, n) {
 		super(), this._modelService = e, this._textModelService = t, this._undoRedoService = n, this._register(this._modelService.onModelRemoved((e) => {
 			let t = this._undoRedoService.getElements(e.uri);
@@ -42622,12 +42622,12 @@ var OQ = class extends z {
 		return Promise.all(n).then((e) => ({ dispose: () => ce(e) }));
 	}
 };
-OQ = N([
+jQ = N([
 	R(0, an),
 	R(1, So),
 	R(2, ca)
-], OQ), b(), U(), E(), P(), Pn(), fw(), YC(), Ds(), qa(), Wn(), Fa(), xt(), BC();
-var kQ = class extends Xc {
+], jQ), b(), U(), E(), P(), Pn(), hw(), QC(), Ds(), qa(), Wn(), Fa(), xt(), MC();
+var MQ = class extends Xc {
 	constructor(e, t, n, r) {
 		super(), this.instantiationService = e, this.textFileService = t, this.fileService = n, this.modelService = r, this.providers = /* @__PURE__ */ new Map(), this.modelsToDispose = /* @__PURE__ */ new Set();
 	}
@@ -42647,7 +42647,7 @@ var kQ = class extends Xc {
 			if (this.ensureResolvedModel(t, e)) return t;
 		}
 		if (this.fileService.hasProvider(n)) {
-			let t = await this.textFileService.files.resolve(n, { reason: pw.REFERENCE });
+			let t = await this.textFileService.files.resolve(n, { reason: gw.REFERENCE });
 			if (this.ensureResolvedModel(t, e)) return t;
 		}
 		if (this.providers.has(n.scheme)) {
@@ -42659,14 +42659,14 @@ var kQ = class extends Xc {
 		throw Error(`Unable to resolve resource ${e}`);
 	}
 	ensureResolvedModel(e, t) {
-		if (DQ(e)) return !0;
+		if (AQ(e)) return !0;
 		throw Error(`Unable to resolve resource ${t}`);
 	}
 	destroyReferencedObject(e, t) {
 		H.parse(e).scheme !== Ma.inMemory && (this.modelsToDispose.add(e), (async () => {
 			try {
 				let n = await t;
-				if (!this.modelsToDispose.has(e) || (n instanceof RC ? await this.textFileService.files.canDispose(n) : n instanceof kC && await this.textFileService.untitled.canDispose(n), !this.modelsToDispose.has(e))) return;
+				if (!this.modelsToDispose.has(e) || (n instanceof zC ? await this.textFileService.files.canDispose(n) : n instanceof xC && await this.textFileService.untitled.canDispose(n), !this.modelsToDispose.has(e))) return;
 				n.dispose();
 			} catch {} finally {
 				this.modelsToDispose.delete(e);
@@ -42694,21 +42694,21 @@ var kQ = class extends Xc {
 		throw Error(`Unable to resolve text model content for resource ${e}`);
 	}
 };
-kQ = N([
+MQ = N([
 	R(0, It),
-	R(1, nw),
+	R(1, aw),
 	R(2, ao),
 	R(3, an)
-], kQ);
-var AQ = class extends z {
+], MQ);
+var NQ = class extends z {
 	get resourceModelCollection() {
-		return this._resourceModelCollection ||= this.instantiationService.createInstance(kQ), this._resourceModelCollection;
+		return this._resourceModelCollection ||= this.instantiationService.createInstance(MQ), this._resourceModelCollection;
 	}
 	get asyncModelCollection() {
 		return this._asyncModelCollection ||= new ws(this.resourceModelCollection), this._asyncModelCollection;
 	}
 	constructor(e, t, n, r, i) {
-		super(), this.instantiationService = e, this.fileService = t, this.undoRedoService = n, this.modelService = r, this.uriIdentityService = i, this._resourceModelCollection = void 0, this._asyncModelCollection = void 0, this._register(new OQ(this.modelService, this, this.undoRedoService));
+		super(), this.instantiationService = e, this.fileService = t, this.undoRedoService = n, this.modelService = r, this.uriIdentityService = i, this._resourceModelCollection = void 0, this._asyncModelCollection = void 0, this._register(new jQ(this.modelService, this, this.undoRedoService));
 	}
 	async createModelReference(e) {
 		return e = this.uriIdentityService.asCanonicalUri(e), await this.asyncModelCollection.acquire(e.toString());
@@ -42720,44 +42720,44 @@ var AQ = class extends z {
 		return this.fileService.hasProvider(e) || e.scheme === Ma.untitled || e.scheme === Ma.inMemory ? !0 : this.resourceModelCollection.hasTextModelContentProvider(e.scheme);
 	}
 };
-AQ = N([
+NQ = N([
 	R(0, It),
 	R(1, ao),
 	R(2, ca),
 	R(3, an),
 	R(4, Rs)
-], AQ), Vs(), Kt(), gc();
-function jQ() {
-	return { [So.toString()]: new Ta(AQ, [], !0) };
+], NQ), Vs(), Kt(), gc();
+function PQ() {
+	return { [So.toString()]: new Ta(NQ, [], !0) };
 }
 //#endregion
 //#region node_modules/monaco-languageclient/lib/worker/index.js
-var MQ = class {
+var FQ = class {
 	url;
 	options;
 	constructor(e, t) {
 		this.url = e, this.options = t;
 	}
-}, NQ = (e) => {
-	let t = PQ();
+}, IQ = (e) => {
+	let t = LQ();
 	t.getWorkerUrl = (t, n) => (e.logger?.info(`getWorkerUrl: workerId: ${t} label: ${n}`), e.workerLoaders?.[n]?.().url.toString()), t.getWorkerOptions = (t, n) => (e.logger?.info(`getWorkerOptions: moduleId: ${t} label: ${n}`), e.workerLoaders?.[n]?.().options);
 };
 //#endregion
 //#region node_modules/monaco-languageclient/lib/vscode/utils.js
-nq();
-var PQ = () => {
+aq();
+var LQ = () => {
 	typeof MonacoEnvironment > "u" && (globalThis.MonacoEnvironment = {});
 	let e = MonacoEnvironment;
 	return e.vscodeApiInitialising === void 0 && (e.vscodeApiInitialising = !1), e.vscodeApiInitialised === void 0 && (e.vscodeApiInitialised = !1), e.viewServiceType === void 0 && (e.viewServiceType = "EditorService"), e;
-}, FQ = (e, t) => {
+}, RQ = (e, t) => {
 	for (let n of Object.keys(e)) t?.debug(`Loading service: ${n}`);
-}, IQ = (e, t) => {
+}, zQ = (e, t) => {
 	if (t !== void 0) for (let [n, r] of Object.entries(t)) e[n] = r;
-}, LQ = async (e, t, n, r) => {
+}, BQ = async (e, t, n, r) => {
 	r?.info("Received open editor call with parameters: ", e, t, n);
 };
-pe(), Gw(), P(), ia(), gV();
-var RQ = class {
+pe(), Jw(), P(), ia(), yV();
+var VQ = class {
 	logger = new io();
 	extensionRegisterResults = /* @__PURE__ */ new Map();
 	disposableStore = new I();
@@ -42776,37 +42776,37 @@ var RQ = class {
 		return this.apiConfig;
 	}
 	configureMonacoWorkers() {
-		typeof this.apiConfig.monacoWorkerFactory == "function" ? this.apiConfig.monacoWorkerFactory(this.logger) : NQ({ logger: this.logger });
+		typeof this.apiConfig.monacoWorkerFactory == "function" ? this.apiConfig.monacoWorkerFactory(this.logger) : IQ({ logger: this.logger });
 	}
 	performErrorHandling = (e) => {
-		throw PQ().vscodeApiInitialising = !1, Error(e);
+		throw LQ().vscodeApiInitialising = !1, Error(e);
 	};
 	async configureHighlightingServices() {
 		if (this.apiConfig.$type === "extended") {
-			let e = (await import("./monaco-vscode-textmate-service-override-Bpzp3A2s.js")).default, t = (await import("./monaco-vscode-theme-service-override-D81Wbdb1.js")).default, n = (await import("./monaco-vscode-languages-service-override-R2LKGpd2.js")).default;
-			IQ(this.apiConfig.serviceOverrides, {
+			let e = (await import("./monaco-vscode-textmate-service-override-BjSLn9lF.js")).default, t = (await import("./monaco-vscode-theme-service-override-CTP9qAY-.js")).default, n = (await import("./monaco-vscode-languages-service-override-Kdw9t6xb.js")).default;
+			zQ(this.apiConfig.serviceOverrides, {
 				...n(),
 				...e(),
 				...t()
 			});
 		} else {
 			let e = (await import("./monaco-vscode-monarch-service-override-H6NUNmPM.js")).default;
-			IQ(this.apiConfig.serviceOverrides, { ...e() });
+			zQ(this.apiConfig.serviceOverrides, { ...e() });
 		}
 	}
 	async configureViewsServices() {
 		let e = this.apiConfig.viewsConfig.$type;
 		(e === "ViewsService" || e === "WorkbenchService") && (this.apiConfig.$type === "classic" && this.performErrorHandling(`View Service Type "${e}" cannot be used with classic configuration.`), this.apiConfig.viewsConfig.htmlContainer === void 0 && this.performErrorHandling(`View Service Type "${e}" requires a HTMLElement.`));
-		let t = PQ();
+		let t = LQ();
 		if (e === "ViewsService") {
-			let e = (await import("./monaco-vscode-views-service-override-Dzr-uGnV.js")).default;
-			IQ(this.apiConfig.serviceOverrides, { ...e(this.apiConfig.viewsConfig.openEditorFunc ?? LQ) }), t.viewServiceType = "ViewsService";
+			let e = (await import("./monaco-vscode-views-service-override-BmSfxxzU.js")).default;
+			zQ(this.apiConfig.serviceOverrides, { ...e(this.apiConfig.viewsConfig.openEditorFunc ?? BQ) }), t.viewServiceType = "ViewsService";
 		} else if (e === "WorkbenchService") {
-			let e = (await import("./monaco-vscode-workbench-service-override-BTZhZqQD.js")).default;
-			IQ(this.apiConfig.serviceOverrides, { ...e() }), t.viewServiceType = "WorkbenchService";
+			let e = (await import("./monaco-vscode-workbench-service-override-BQjBrUTh.js")).default;
+			zQ(this.apiConfig.serviceOverrides, { ...e() }), t.viewServiceType = "WorkbenchService";
 		} else {
 			let e = (await import("./monaco-vscode-editor-service-override-DRK25eRd.js")).default;
-			IQ(this.apiConfig.serviceOverrides, { ...e(this.apiConfig.viewsConfig.openEditorFunc ?? LQ) }), t.viewServiceType = "EditorService";
+			zQ(this.apiConfig.serviceOverrides, { ...e(this.apiConfig.viewsConfig.openEditorFunc ?? BQ) }), t.viewServiceType = "EditorService";
 		}
 	}
 	async applyViewsPostConfig() {
@@ -42816,7 +42816,7 @@ var RQ = class {
 	configureWorkspaceConfig() {
 		this.apiConfig.workspaceConfig === void 0 && (this.apiConfig.workspaceConfig = { workspaceProvider: {
 			trusted: !0,
-			workspace: { workspaceUri: fW.file("/workspace.code-workspace") },
+			workspace: { workspaceUri: hW.file("/workspace.code-workspace") },
 			async open() {
 				return window.open(window.location.href), !0;
 			}
@@ -42836,13 +42836,13 @@ var RQ = class {
 		}
 	}
 	async initUserConfiguration() {
-		this.apiConfig.userConfiguration?.json !== void 0 && await xQ(this.apiConfig.userConfiguration.json);
+		this.apiConfig.userConfiguration?.json !== void 0 && await wQ(this.apiConfig.userConfiguration.json);
 	}
 	async supplyRequiredServices() {
 		return {
-			...EQ(),
-			...rO(),
-			...jQ()
+			...kQ(),
+			...oO(),
+			...PQ()
 		};
 	}
 	checkServiceConsistency() {
@@ -42851,20 +42851,20 @@ var RQ = class {
 	}
 	async initAllServices(e) {
 		let t = await this.supplyRequiredServices();
-		if (IQ(t, this.apiConfig.serviceOverrides), this.apiConfig.advanced?.loadExtensionServices === void 0 || this.apiConfig.advanced.loadExtensionServices === !0) {
-			let { default: e } = await import("./monaco-vscode-extensions-service-override-B4FJQig8.js").then((e) => (e.n(), e.r));
-			IQ(t, { ...e({ enableWorkerExtensionHost: this.apiConfig.advanced?.enableExtHostWorker === !0 }) });
+		if (zQ(t, this.apiConfig.serviceOverrides), this.apiConfig.advanced?.loadExtensionServices === void 0 || this.apiConfig.advanced.loadExtensionServices === !0) {
+			let { default: e } = await import("./monaco-vscode-extensions-service-override-CcXiXb-p.js").then((e) => (e.n(), e.r));
+			zQ(t, { ...e({ enableWorkerExtensionHost: this.apiConfig.advanced?.enableExtHostWorker === !0 }) });
 		}
-		FQ(t, this.logger), (e ?? !0) && this.checkServiceConsistency(), this.apiConfig.viewsConfig.$type === "ViewsService" || this.apiConfig.viewsConfig.$type === "WorkbenchService" ? await Ou(t, this.apiConfig.viewsConfig.htmlContainer, this.apiConfig.workspaceConfig, this.apiConfig.envOptions) : await Ou(t, void 0, this.apiConfig.workspaceConfig, this.apiConfig.envOptions), $a((e) => {
+		RQ(t, this.logger), (e ?? !0) && this.checkServiceConsistency(), this.apiConfig.viewsConfig.$type === "ViewsService" || this.apiConfig.viewsConfig.$type === "WorkbenchService" ? await Ou(t, this.apiConfig.viewsConfig.htmlContainer, this.apiConfig.workspaceConfig, this.apiConfig.envOptions) : await Ou(t, void 0, this.apiConfig.workspaceConfig, this.apiConfig.envOptions), $a((e) => {
 			this.logger.getLevel() !== L.Off && this.logger.error("Unexpected error", e);
 		});
 	}
 	async initExtensions() {
-		this.apiConfig.$type === "extended" && (this.apiConfig.advanced?.loadThemes === void 0 || this.apiConfig.advanced.loadThemes === !0) && await import("./monaco-vscode-theme-defaults-default-extension-DOU5_qMQ.js");
+		this.apiConfig.$type === "extended" && (this.apiConfig.advanced?.loadThemes === void 0 || this.apiConfig.advanced.loadThemes === !0) && await import("./monaco-vscode-theme-defaults-default-extension-BTMVvvMC.js");
 		let e = this.apiConfig.extensions;
 		if (this.apiConfig.extensions) {
 			let t = [], n = [];
-			qw().forEach((e) => {
+			Xw().forEach((e) => {
 				n.push(e.identifier.id);
 			});
 			for (let r of e ?? []) n.includes(`${r.config.publisher}.${r.config.name}`) || t.push(this.initExtension(r, n));
@@ -42874,32 +42874,32 @@ var RQ = class {
 	initExtension(e, t) {
 		if (t.includes(`${e.config.publisher}.${e.config.name}`)) return Promise.resolve();
 		{
-			let t = e.config, n = Fw(t, Pw.LocalProcess);
-			if (this.extensionRegisterResults.set(t.name, n), e.filesOrContents && Object.hasOwn(n, "registerFileUrl")) for (let t of e.filesOrContents) this.disposableStore.add(n.registerFileUrl(t[0], KD(t[1])));
+			let t = e.config, n = Rw(t, Lw.LocalProcess);
+			if (this.extensionRegisterResults.set(t.name, n), e.filesOrContents && Object.hasOwn(n, "registerFileUrl")) for (let t of e.filesOrContents) this.disposableStore.add(n.registerFileUrl(t[0], YD(t[1])));
 			return n.whenReady();
 		}
 	}
 	markGlobalInit() {
 		this.logger.debug("markGlobalInit");
-		let e = PQ();
+		let e = LQ();
 		e.vscodeApiGlobalInitAwait = new Promise((t) => {
 			e.vscodeApiGlobalInitResolve = t;
 		});
 	}
 	markGlobalInitDone() {
-		let e = PQ();
+		let e = LQ();
 		e.vscodeApiGlobalInitResolve?.(), e.vscodeApiInitialised = !0, e.vscodeApiGlobalInitAwait = void 0, e.vscodeApiGlobalInitResolve = void 0, this.logger.debug("markGlobalInitDone");
 	}
 	async start(e) {
-		let t = PQ();
+		let t = LQ();
 		t.vscodeApiInitialised === !0 ? this.logger.warn("Initialization of monaco-vscode api can only performed once!") : t.vscodeApiInitialising === !0 ? this.logger.debug("Initialization of monaco-vscode api is already ongoing.") : (t.vscodeApiInitialising = !0, this.markGlobalInit(), this.configureWorkspaceConfig(), this.configureDevLogLevel(), this.logger.info(`Initializing monaco-vscode api. Caller: ${e?.caller ?? "unknown"}`), await this.configureMonacoWorkers(), await this.configureHighlightingServices(), await this.configureViewsServices(), this.configureSemanticHighlighting(), await this.initUserConfiguration(), await this.initAllServices(e?.performServiceConsistencyChecks), await this.applyViewsPostConfig(), await this.initExtensions(), this.markGlobalInitDone(), this.logger.debug("Initialization of monaco-vscode api completed successfully."));
 	}
 	dispose() {
 		this.extensionRegisterResults.forEach((e) => e.dispose()), this.disposableStore.dispose(), this.disposableStore = new I();
 	}
-}, zQ;
-function BQ() {
-	return zQ ||= new RQ({
+}, HQ;
+function UQ() {
+	return HQ ||= new VQ({
 		$type: "classic",
 		viewsConfig: { $type: "EditorService" },
 		advanced: {
@@ -42907,41 +42907,51 @@ function BQ() {
 			loadThemes: !1
 		},
 		monacoWorkerFactory: (e) => {
-			NQ({
+			IQ({
 				logger: e,
-				workerLoaders: { editorWorkerService: () => new MQ(new URL("data:text/javascript;base64,ZXhwb3J0ICogZnJvbSAnQGNvZGluZ2FtZS9tb25hY28tdnNjb2RlLWFwaS93b3JrZXJzL2VkaXRvci53b3JrZXIn", "" + import.meta.url), {
+				workerLoaders: { editorWorkerService: () => new FQ(new URL("data:text/javascript;base64,ZXhwb3J0ICogZnJvbSAnQGNvZGluZ2FtZS9tb25hY28tdnNjb2RlLWFwaS93b3JrZXJzL2VkaXRvci53b3JrZXIn", "" + import.meta.url), {
 					type: "module",
 					name: "ITLingo Monaco editor worker"
 				}) }
 			});
 		}
-	}).start({ caller: "ITLingo Grammar Editor" }), zQ;
+	}).start({ caller: "ITLingo Grammar Editor" }), HQ;
 }
 //#endregion
 //#region src/problems.ts
-var VQ = 8, HQ = 4, UQ = 2;
-function WQ(e) {
-	return e === VQ ? "error" : e === HQ ? "warning" : e === UQ ? "info" : "hint";
+var WQ = 8, GQ = 4, KQ = 2;
+function qQ(e) {
+	return e === WQ ? "error" : e === GQ ? "warning" : e === KQ ? "info" : "hint";
 }
-var GQ = {
+var JQ = {
 	error: 0,
 	warning: 1,
 	info: 2,
 	hint: 3
 };
-function KQ(e) {
+function YQ(e, t = {}) {
 	return e.map((e) => ({
-		severity: WQ(e.severity),
+		severity: qQ(e.severity),
 		message: e.message,
 		startLineNumber: e.startLineNumber,
 		startColumn: e.startColumn,
 		endLineNumber: e.endLineNumber,
 		endColumn: e.endColumn,
 		source: e.source || "",
-		code: typeof e.code == "object" ? e.code?.value || "" : e.code || ""
-	})).sort((e, t) => GQ[e.severity] - GQ[t.severity] || e.startLineNumber - t.startLineNumber || e.startColumn - t.startColumn || e.message.localeCompare(t.message));
+		code: typeof e.code == "object" ? e.code?.value || "" : e.code || "",
+		resource: t.resource || e.resource?.toString() || "",
+		path: t.path || ""
+	})).sort((e, t) => JQ[e.severity] - JQ[t.severity] || e.startLineNumber - t.startLineNumber || e.startColumn - t.startColumn || e.message.localeCompare(t.message));
 }
-function qQ(e) {
+function XQ(e) {
+	let t = /* @__PURE__ */ new Map();
+	for (let n of e) {
+		let e = n.path || n.resource || "Grammar", r = t.get(e) || [];
+		r.push(n), t.set(e, r);
+	}
+	return t;
+}
+function ZQ(e) {
 	let t = e.filter((e) => e.severity === "error").length, n = e.filter((e) => e.severity === "warning").length;
 	return {
 		errors: t,
@@ -42950,12 +42960,12 @@ function qQ(e) {
 		total: e.length
 	};
 }
-function JQ(e) {
+function QQ(e) {
 	if (e.total === 0) return "No problems";
 	let t = [];
 	return e.errors && t.push(`${e.errors} ${e.errors === 1 ? "error" : "errors"}`), e.warnings && t.push(`${e.warnings} ${e.warnings === 1 ? "warning" : "warnings"}`), e.others && t.push(`${e.others} ${e.others === 1 ? "hint" : "hints"}`), t.join(", ");
 }
-async function YQ(e, t, n = Date.now, r = (e) => new Promise((t) => setTimeout(t, e))) {
+async function $Q(e, t, n = Date.now, r = (e) => new Promise((t) => setTimeout(t, e))) {
 	let i = n() + t.timeoutMs;
 	for (;;) {
 		let a = n() - e();
@@ -42965,9 +42975,67 @@ async function YQ(e, t, n = Date.now, r = (e) => new Promise((t) => setTimeout(t
 	}
 }
 //#endregion
+//#region src/workspace-files.ts
+function e$(e, t) {
+	return `file:///itlingo-dsl/${e}/${t.split("/").map((e) => encodeURIComponent(e)).join("/")}`;
+}
+function t$(e) {
+	let t = e.trim(), n = t.split("/");
+	if (!t || t.includes("\0") || t.includes("\\") || t.startsWith("/")) throw Error("Use a non-empty relative path with forward slashes.");
+	if (n.some((e) => !e || e === "." || e === "..")) throw Error("Grammar paths cannot contain empty, '.' or '..' segments.");
+	if (!t.endsWith(".langium")) throw Error("Grammar paths must end in .langium.");
+	return t;
+}
+var n$ = class {
+	files = /* @__PURE__ */ new Map();
+	add(e) {
+		if (this.files.has(e.path)) throw Error(`The grammar workspace already contains '${e.path}'.`);
+		return this.files.set(e.path, e), e;
+	}
+	get(e) {
+		return this.files.get(e);
+	}
+	sorted() {
+		return [...this.files.values()].sort((e, t) => e.path.localeCompare(t.path));
+	}
+	refreshDirty(e) {
+		let t = this.required(e);
+		return t.dirty = t.model.getAlternativeVersionId() !== t.savedVersionId, t.dirty;
+	}
+	markSaved(e, t) {
+		let n = this.required(e);
+		n.savedVersionId = t ?? n.model.getAlternativeVersionId(), this.refreshDirty(e);
+	}
+	hasDirty() {
+		return [...this.files.values()].some((e) => e.dirty);
+	}
+	rename(e, t, n) {
+		let r = this.required(e);
+		if (e !== t && this.files.has(t)) throw Error(`The grammar workspace already contains '${t}'.`);
+		this.files.delete(e);
+		let i = n.getAlternativeVersionId(), a = {
+			...r,
+			path: t,
+			model: n,
+			savedVersionId: r.dirty ? i - 1 : i,
+			dirty: r.dirty
+		};
+		return this.files.set(t, a), a;
+	}
+	delete(e) {
+		let t = this.required(e);
+		return this.files.delete(e), t;
+	}
+	required(e) {
+		let t = this.files.get(e);
+		if (!t) throw Error(`Grammar file '${e}' is not registered.`);
+		return t;
+	}
+};
+//#endregion
 //#region src/main.ts
-_C();
-async function XQ(e, t = {}) {
+IC();
+async function r$(e, t = {}) {
 	let n = await fetch(e, {
 		method: "POST",
 		credentials: "same-origin",
@@ -42985,17 +43053,17 @@ async function XQ(e, t = {}) {
 	if (r.result === void 0) throw Error("The grammar server returned an empty response.");
 	return r.result;
 }
-function ZQ(e, t) {
+function i$(e, t) {
 	let n = e.querySelector(t);
 	if (!n) throw Error(`Grammar Editor element is missing: ${t}`);
 	return n;
 }
-function QQ() {
-	BD.getLanguages().some((e) => e.id === "langium") || (BD.register({
+function a$() {
+	UD.getLanguages().some((e) => e.id === "langium") || (UD.register({
 		id: "langium",
 		extensions: [".langium"],
 		aliases: ["Langium Grammar", "langium"]
-	}), BD.setMonarchTokensProvider("langium", {
+	}), UD.setMonarchTokensProvider("langium", {
 		keywords: [
 			"grammar",
 			"entry",
@@ -43043,10 +43111,12 @@ function QQ() {
 		}
 	}));
 }
-var $Q = class {
+var o$ = class {
 	root;
 	dslId;
 	editorHost;
+	filesHost;
+	createButton;
 	saveButton;
 	validateButton;
 	restartButton;
@@ -43057,13 +43127,18 @@ var $Q = class {
 	filename;
 	problemsSummary;
 	problemsList;
+	files = new n$();
+	viewStates = /* @__PURE__ */ new Map();
+	modelListeners = /* @__PURE__ */ new Map();
+	fileNodes = /* @__PURE__ */ new Map();
+	fileRegistrations = /* @__PURE__ */ new Map();
+	fileProvider = new kC(!1);
 	editor;
-	model;
 	languageService;
-	fileId;
-	path = "";
+	overlayRegistration;
+	markerListener;
+	activePath = "";
 	canEdit = !1;
-	dirty = !1;
 	saving = !1;
 	validating = !1;
 	validatedClean = !1;
@@ -43071,29 +43146,34 @@ var $Q = class {
 	disposed = !1;
 	problems = [];
 	lastActivityAt = Date.now();
-	changeListener;
-	markerListener;
 	constructor(e) {
 		if (this.root = e, this.dslId = Number(e.dataset.dslId), !Number.isInteger(this.dslId) || this.dslId <= 0) throw Error("The Grammar Editor has an invalid DSL identifier.");
-		this.editorHost = ZQ(e, "[data-grammar-editor]"), this.saveButton = e.querySelector("[data-grammar-save]"), this.validateButton = ZQ(e, "[data-grammar-validate]"), this.restartButton = ZQ(e, "[data-grammar-server-restart]"), this.status = ZQ(e, "[data-grammar-status]"), this.validity = ZQ(e, "[data-grammar-validity]"), this.serverStatus = ZQ(e, "[data-grammar-server-status]"), this.error = ZQ(e, "[data-grammar-error]"), this.filename = ZQ(e, "[data-grammar-filename]"), this.problemsSummary = ZQ(e, "[data-grammar-problems-summary]"), this.problemsList = ZQ(e, "[data-grammar-problems]");
+		this.editorHost = i$(e, "[data-grammar-editor]"), this.filesHost = i$(e, "[data-grammar-files]"), this.createButton = e.querySelector("[data-grammar-file-create]"), this.saveButton = e.querySelector("[data-grammar-save]"), this.validateButton = i$(e, "[data-grammar-validate]"), this.restartButton = i$(e, "[data-grammar-server-restart]"), this.status = i$(e, "[data-grammar-status]"), this.validity = i$(e, "[data-grammar-validity]"), this.serverStatus = i$(e, "[data-grammar-server-status]"), this.error = i$(e, "[data-grammar-error]"), this.filename = i$(e, "[data-grammar-filename]"), this.problemsSummary = i$(e, "[data-grammar-problems-summary]"), this.problemsList = i$(e, "[data-grammar-problems]");
 	}
 	async start() {
-		this.setState("Loading…"), this.setValidity("not-validated", "Not validated"), this.saveButton?.addEventListener("click", this.onSaveClick), this.validateButton.addEventListener("click", this.onValidateClick), this.restartButton.addEventListener("click", this.onRestartClick), this.problemsList.addEventListener("click", this.onProblemsClick), this.problemsList.addEventListener("keydown", this.onProblemsKeydown), window.addEventListener("beforeunload", this.onBeforeUnload), window.addEventListener("pagehide", this.onPageHide);
+		this.setState("Loading…"), this.setValidity("not-validated", "Not validated"), this.saveButton?.addEventListener("click", this.onSaveClick), this.validateButton.addEventListener("click", this.onValidateClick), this.restartButton.addEventListener("click", this.onRestartClick), this.createButton?.addEventListener("click", this.onCreateClick), this.filesHost.addEventListener("click", this.onFilesClick), this.problemsList.addEventListener("click", this.onProblemsClick), this.problemsList.addEventListener("keydown", this.onProblemsKeydown), window.addEventListener("beforeunload", this.onBeforeUnload), window.addEventListener("pagehide", this.onPageHide);
 		try {
-			let e = await XQ(`/dsl/${this.dslId}/grammar/load`), t = e.files[0]?.path || e.suggestedPath, n = RD.parse(`file:///itlingo-dsl/${this.dslId}/${encodeURIComponent(t)}`);
-			await DC(n, this.initialContent(e)), await BQ(), this.mount(e, n);
+			let e = await r$(`/dsl/${this.dslId}/grammar/load`);
+			this.canEdit = e.permissions.canEdit;
+			let t = e.files.length ? e.files : this.canEdit ? [{
+				path: e.suggestedPath,
+				content: e.suggestedContent,
+				isEntry: !0,
+				initiallyDirty: !0
+			}] : [];
+			this.overlayRegistration = EC(1, this.fileProvider);
+			for (let e of t) this.registerOverlayFile(e.path, e.content);
+			await UQ(), this.mount(t);
 		} catch (e) {
 			this.fail(e, "Could not load the grammar editor.");
 		}
 	}
-	initialContent(e) {
-		let t = e.files[0];
-		return t ? t.content : e.permissions.canEdit ? e.suggestedContent : "";
-	}
-	mount(e, t) {
-		let n = e.files[0];
-		this.canEdit = e.permissions.canEdit, this.fileId = n?.id, this.path = n?.path || e.suggestedPath, this.filename.textContent = this.path, QQ(), this.model = zD.createModel(this.initialContent(e), "langium", t), this.editor = zD.create(this.editorHost, {
-			model: this.model,
+	mount(e) {
+		a$();
+		for (let t of e) this.addModel(t);
+		let t = e.find((e) => e.isEntry) || e[0];
+		this.editor = HD.create(this.editorHost, {
+			model: t ? this.files.get(t.path)?.model : null,
 			automaticLayout: !0,
 			readOnly: !this.canEdit,
 			domReadOnly: !this.canEdit,
@@ -43103,17 +43183,171 @@ var $Q = class {
 			tabSize: 4,
 			insertSpaces: !0,
 			ariaLabel: "Langium grammar source editor"
-		}), this.editor.addCommand(ID.CtrlCmd | FD.KeyS, () => {
+		}), this.editor.addCommand(zD.CtrlCmd | RD.KeyS, () => {
 			this.save();
-		}), this.changeListener = this.model.onDidChangeContent(() => {
-			this.lastActivityAt = Date.now(), this.validatedClean = !1, this.refreshValidity(), this.canEdit && (this.dirty = !0, this.saving || this.setState("Unsaved changes"));
-		}), this.markerListener = zD.onDidChangeMarkers((e) => {
-			e.some((e) => e.toString() === this.model?.uri.toString()) && (this.lastActivityAt = Date.now(), this.updateDiagnosticMetadata());
-		}), this.languageService = rZ(this.onLanguageServiceState, (e) => {
+		}), t && (this.activePath = t.path), this.markerListener = HD.onDidChangeMarkers((e) => {
+			let t = new Set(this.files.sorted().map((e) => e.model.uri.toString()));
+			e.some((e) => t.has(e.toString())) && (this.lastActivityAt = Date.now(), this.updateDiagnosticMetadata());
+		}), this.languageService = oZ(this.onLanguageServiceState, (e) => {
 			this.root.dataset.grammarServerCapabilities = e.join(",");
 		}), this.languageService.start().catch((e) => {
 			this.fail(e, "The Langium grammar service failed to start.", "server");
-		}), this.canEdit ? n ? this.setState("Saved") : (this.dirty = !0, this.setState("Unsaved changes")) : this.setState("Read-only"), this.updateDiagnosticMetadata(), this.editor.focus();
+		}), this.renderFiles(), this.updateDiagnosticMetadata(), this.refreshSaveState(), this.editor.focus();
+	}
+	addModel(e) {
+		let t = VD.parse(e$(this.dslId, e.path)), n = HD.createModel(e.content, "langium", t), r = n.getAlternativeVersionId(), i = this.files.add({
+			id: e.id,
+			path: e.path,
+			isEntry: e.isEntry,
+			model: n,
+			savedVersionId: e.initiallyDirty ? r - 1 : r,
+			dirty: !!e.initiallyDirty
+		});
+		return this.attachModelListener(i), i;
+	}
+	attachModelListener(e) {
+		this.modelListeners.set(e.path, e.model.onDidChangeContent(() => {
+			this.lastActivityAt = Date.now(), this.validatedClean = !1, this.files.refreshDirty(e.path);
+			let t = this.fileNodes.get(e.path);
+			t && t.write(new TextEncoder().encode(e.model.getValue())), this.refreshValidity(), this.refreshSaveState(), this.renderFiles();
+		}));
+	}
+	registerOverlayFile(e, t) {
+		let n = new PC(VD.parse(e$(this.dslId, e)), t);
+		this.fileNodes.set(e, n), this.fileRegistrations.set(e, this.fileProvider.registerFile(n));
+	}
+	unregisterOverlayFile(e) {
+		this.fileRegistrations.get(e)?.dispose(), this.fileRegistrations.delete(e), this.fileNodes.delete(e);
+	}
+	switchTo(e, t = !0) {
+		let n = this.files.get(e);
+		if (!n || !this.editor || e === this.activePath) {
+			t && this.editor?.focus();
+			return;
+		}
+		this.activePath && this.viewStates.set(this.activePath, this.editor.saveViewState()), this.activePath = e, this.editor.setModel(n.model), this.editor.restoreViewState(this.viewStates.get(e) || null), this.filename.textContent = e, this.root.dataset.grammarActiveFile = e, this.renderFiles(), t && this.editor.focus();
+	}
+	renderFiles() {
+		let e = this.fileErrorCounts();
+		this.root.dataset.grammarFileErrors = JSON.stringify(e);
+		let t = this.files.sorted().map((t) => {
+			let n = document.createElement("div");
+			n.className = "itlingo-grammar-file-row", n.classList.toggle("active", t.path === this.activePath), n.dataset.grammarFilePath = t.path;
+			let r = document.createElement("button");
+			r.type = "button", r.className = "itlingo-grammar-file-select", r.dataset.grammarFileSelect = t.path, r.title = t.path;
+			let i = document.createElement("i");
+			i.className = t.isEntry ? "fa fa-star text-warning" : "fa fa-file-code-o", i.setAttribute("aria-hidden", "true");
+			let a = document.createElement("span");
+			if (a.className = "itlingo-grammar-file-label", a.textContent = t.path, r.append(i, a), t.dirty) {
+				let e = document.createElement("span");
+				e.className = "itlingo-grammar-file-dirty", e.title = "Unsaved changes", e.textContent = "●", r.append(e);
+			}
+			let o = e[t.path] || 0;
+			if (o) {
+				let e = document.createElement("span");
+				e.className = "badge rounded-pill bg-danger", e.dataset.grammarFileErrorCount = String(o), e.textContent = String(o), r.append(e);
+			}
+			if (n.append(r), this.canEdit && t.id) {
+				let e = document.createElement("div");
+				e.className = "itlingo-grammar-file-actions", t.isEntry || e.append(this.fileAction("star", "Set as entry file", "set-entry", t.path)), e.append(this.fileAction("pencil", "Rename file", "rename", t.path), this.fileAction("trash", "Delete file", "delete", t.path)), n.append(e);
+			}
+			return n;
+		});
+		this.filesHost.replaceChildren(...t), this.filesHost.classList.toggle("itlingo-grammar-files-empty", t.length === 0), t.length || (this.filesHost.textContent = this.canEdit ? "No grammar files. Create one to begin." : "This DSL has no grammar files.");
+		let n = this.files.get(this.activePath);
+		this.filename.textContent = n?.path || "No grammar file selected", this.root.dataset.grammarActiveFile = n?.path || "";
+	}
+	fileAction(e, t, n, r) {
+		let i = document.createElement("button");
+		i.type = "button", i.className = "btn btn-sm btn-link", i.dataset.grammarFileAction = n, i.dataset.grammarFilePath = r, i.title = t, i.setAttribute("aria-label", `${t}: ${r}`);
+		let a = document.createElement("i");
+		return a.className = `fa fa-${e}`, a.setAttribute("aria-hidden", "true"), i.append(a), i;
+	}
+	fileErrorCounts() {
+		let e = {};
+		for (let t of this.problems) t.severity === "error" && (e[t.path] = (e[t.path] || 0) + 1);
+		return e;
+	}
+	onFilesClick = (e) => {
+		let t = e.target, n = t.closest("[data-grammar-file-action]");
+		if (n) {
+			let e = n.dataset.grammarFilePath || "", t = n.dataset.grammarFileAction;
+			t === "rename" ? this.renameFile(e) : t === "delete" ? this.deleteFile(e) : t === "set-entry" && this.setEntry(e);
+			return;
+		}
+		let r = t.closest("[data-grammar-file-select]");
+		r?.dataset.grammarFileSelect && this.switchTo(r.dataset.grammarFileSelect);
+	};
+	onCreateClick = () => {
+		let e = window.prompt("Relative path for the new .langium file:");
+		e !== null && this.createFile(e);
+	};
+	async createFile(e) {
+		try {
+			let t = t$(e);
+			this.hideError();
+			let n = await r$(`/dsl/${this.dslId}/grammar/file/create`, {
+				path: t,
+				content: ""
+			});
+			this.registerOverlayFile(n.path, n.content), this.addModel(n), this.switchTo(n.path), this.renderFiles(), this.refreshSaveState();
+		} catch (e) {
+			this.fail(e, "Could not create the grammar file.", "file");
+		}
+	}
+	async renameFile(e) {
+		let t = this.files.get(e);
+		if (!t?.id) return;
+		let n = window.prompt("New relative .langium path:", e);
+		if (n !== null) try {
+			let r = t$(n);
+			if (r === e) return;
+			this.hideError();
+			let i = await r$(`/dsl/${this.dslId}/grammar/file/rename`, {
+				file_id: t.id,
+				path: r
+			}), a = t.model.getValue(), o = this.activePath === e;
+			o && this.editor && this.viewStates.set(e, this.editor.saveViewState()), this.registerOverlayFile(r, a);
+			let s = HD.createModel(a, "langium", VD.parse(e$(this.dslId, r))), c = this.files.rename(e, r, s);
+			c.id = i.id, c.isEntry = i.isEntry, this.modelListeners.get(e)?.dispose(), this.modelListeners.delete(e), this.attachModelListener(c);
+			let l = this.viewStates.get(e) || null;
+			this.viewStates.delete(e), this.viewStates.set(r, l), o && this.editor && (this.activePath = r, this.editor.setModel(s), this.editor.restoreViewState(l)), t.model.dispose(), this.unregisterOverlayFile(e), this.renderFiles(), this.updateDiagnosticMetadata(), this.refreshSaveState();
+		} catch (e) {
+			this.fail(e, "Could not rename the grammar file.", "file");
+		}
+	}
+	async deleteFile(e) {
+		let t = this.files.get(e);
+		if (!(!t?.id || !window.confirm(`Delete ${e}?`))) try {
+			this.hideError(), await r$(`/dsl/${this.dslId}/grammar/file/delete`, { file_id: t.id });
+			let n = this.activePath === e;
+			if (this.modelListeners.get(e)?.dispose(), this.modelListeners.delete(e), this.files.delete(e), this.viewStates.delete(e), this.unregisterOverlayFile(e), n) {
+				let e = this.files.sorted()[0];
+				this.activePath = e?.path || "", this.editor?.setModel(e?.model || null);
+			}
+			t.model.dispose(), this.renderFiles(), this.updateDiagnosticMetadata(), this.refreshSaveState();
+		} catch (e) {
+			this.fail(e, "Could not delete the grammar file.", "file");
+		}
+	}
+	async setEntry(e) {
+		let t = this.files.get(e);
+		if (t?.id) try {
+			this.hideError();
+			let e = await r$(`/dsl/${this.dslId}/grammar/file/set-entry`, { file_id: t.id });
+			for (let t of e.files) {
+				let e = this.files.get(t.path);
+				e && (e.isEntry = t.isEntry);
+			}
+			this.renderFiles();
+		} catch (e) {
+			this.fail(e, "Could not change the entry grammar.", "file");
+		}
+	}
+	setFileContent(e, t) {
+		let n = this.files.get(e);
+		if (!n) throw Error(`Grammar file '${e}' is not registered.`);
+		n.model.setValue(t), this.switchTo(e, !1);
 	}
 	onLanguageServiceState = (e) => {
 		this.root.dataset.grammarServerState = e.state, this.root.dataset.grammarServerGeneration = String(e.generation), this.serverReady = e.state === "ready", this.updateValidateButton();
@@ -43131,31 +43365,41 @@ var $Q = class {
 		}));
 	};
 	clearDiagnosticMarkers() {
-		if (!this.model) return;
-		let e = new Set(zD.getModelMarkers({ resource: this.model.uri }).map((e) => e.owner));
-		for (let t of e) zD.setModelMarkers(this.model, t, []);
+		for (let e of this.files.sorted()) {
+			let t = new Set(HD.getModelMarkers({ resource: e.model.uri }).map((e) => e.owner));
+			for (let n of t) HD.setModelMarkers(e.model, n, []);
+		}
 		this.updateDiagnosticMetadata();
 	}
 	updateDiagnosticMetadata() {
-		let e = this.model ? zD.getModelMarkers({ resource: this.model.uri }) : [];
-		this.problems = KQ(e);
-		let t = qQ(this.problems);
-		this.root.dataset.grammarDiagnostics = String(t.total), this.root.dataset.grammarDiagnosticErrors = String(t.errors), this.root.dataset.grammarDiagnosticWarnings = String(t.warnings), this.root.dataset.grammarDiagnosticMessages = JSON.stringify(this.problems.map((e) => e.message)), this.renderProblems(), this.refreshValidity();
+		this.problems = this.files.sorted().flatMap((e) => YQ(HD.getModelMarkers({ resource: e.model.uri }), {
+			resource: e.model.uri.toString(),
+			path: e.path
+		}));
+		let e = ZQ(this.problems);
+		this.root.dataset.grammarDiagnostics = String(e.total), this.root.dataset.grammarDiagnosticErrors = String(e.errors), this.root.dataset.grammarDiagnosticWarnings = String(e.warnings), this.root.dataset.grammarDiagnosticMessages = JSON.stringify(this.problems.map((e) => e.message)), this.renderProblems(), this.renderFiles(), this.refreshValidity();
 	}
 	renderProblems() {
-		let e = qQ(this.problems);
-		this.problemsSummary.textContent = `Problems: ${JQ(e)}`, this.problemsList.replaceChildren(...this.problems.map((e, t) => {
-			let n = document.createElement("button");
-			n.type = "button", n.className = `itlingo-grammar-problem itlingo-grammar-problem-${e.severity}`, n.setAttribute("role", "listitem"), n.dataset.grammarProblemIndex = String(t), n.setAttribute("aria-label", `${e.severity} at line ${e.startLineNumber}, column ${e.startColumn}: ${e.message}`);
-			let r = document.createElement("span");
-			r.className = "itlingo-grammar-problem-severity", r.textContent = e.severity;
-			let i = document.createElement("span");
-			i.className = "itlingo-grammar-problem-message", i.textContent = e.message;
-			let a = document.createElement("span");
-			a.className = "itlingo-grammar-problem-origin text-muted", a.textContent = [e.source, e.code ? `(${e.code})` : ""].filter(Boolean).join(" ");
-			let o = document.createElement("span");
-			return o.className = "itlingo-grammar-problem-position text-muted", o.textContent = `Ln ${e.startLineNumber}, Col ${e.startColumn}`, n.append(r, i, a, o), n;
-		}));
+		let e = ZQ(this.problems);
+		this.problemsSummary.textContent = `Problems: ${QQ(e)}`;
+		let t = [], n = 0;
+		for (let [e, r] of XQ(this.problems)) {
+			let i = document.createElement("div");
+			i.className = "itlingo-grammar-problem-file", i.textContent = e, t.push(i);
+			for (let i of r) {
+				let r = n++, a = document.createElement("button");
+				a.type = "button", a.className = `itlingo-grammar-problem itlingo-grammar-problem-${i.severity}`, a.setAttribute("role", "listitem"), a.dataset.grammarProblemIndex = String(r), a.setAttribute("aria-label", `${i.severity} in ${e} at line ${i.startLineNumber}, column ${i.startColumn}: ${i.message}`);
+				let o = document.createElement("span");
+				o.className = "itlingo-grammar-problem-severity", o.textContent = i.severity;
+				let s = document.createElement("span");
+				s.className = "itlingo-grammar-problem-message", s.textContent = i.message;
+				let c = document.createElement("span");
+				c.className = "itlingo-grammar-problem-origin text-muted", c.textContent = [i.source, i.code ? `(${i.code})` : ""].filter(Boolean).join(" ");
+				let l = document.createElement("span");
+				l.className = "itlingo-grammar-problem-position text-muted", l.textContent = `Ln ${i.startLineNumber}, Col ${i.startColumn}`, a.append(o, s, c, l), t.push(a);
+			}
+		}
+		this.problemsList.replaceChildren(...t);
 	}
 	onProblemsClick = (e) => {
 		let t = e.target.closest("[data-grammar-problem-index]");
@@ -43176,7 +43420,8 @@ var $Q = class {
 	revealProblem(e) {
 		let t = this.problems[e];
 		if (!t || !this.editor) return;
-		let n = new LD(t.startLineNumber, t.startColumn, t.endLineNumber, t.endColumn);
+		this.switchTo(t.path, !1);
+		let n = new BD(t.startLineNumber, t.startColumn, t.endLineNumber, t.endColumn);
 		this.editor.setSelection(n), this.editor.revealRangeInCenterIfOutsideViewport(n), this.editor.focus(), this.root.dataset.grammarFocusedProblem = String(e);
 	}
 	onSaveClick = () => {
@@ -43186,14 +43431,14 @@ var $Q = class {
 		this.validate();
 	};
 	async validate() {
-		if (!(this.validating || !this.model)) {
+		if (!(this.validating || this.files.sorted().length === 0)) {
 			if (!this.serverReady) {
 				this.fail(/* @__PURE__ */ Error("The language service is not ready. Wait for \"Server: Ready\" or restart the language service."), "Validation is unavailable.", "validate");
 				return;
 			}
 			this.validating = !0, this.setValidity("validating", "Validating…"), this.updateValidateButton();
 			try {
-				let e = await YQ(() => this.lastActivityAt, {
+				let e = await $Q(() => this.lastActivityAt, {
 					quietMs: 600,
 					timeoutMs: 15e3
 				});
@@ -43203,8 +43448,8 @@ var $Q = class {
 					return;
 				}
 				this.updateDiagnosticMetadata();
-				let t = qQ(this.problems);
-				t.errors === 0 ? (this.validatedClean = !0, this.setValidity("valid", "Valid")) : (this.validatedClean = !1, this.setValidity("invalid", JQ(t))), this.root.dataset.grammarErrorKind === "validate" && this.hideError();
+				let t = ZQ(this.problems);
+				this.validatedClean = t.errors === 0, this.setValidity(t.errors === 0 ? "valid" : "invalid", t.errors === 0 ? "Valid" : QQ(t)), this.root.dataset.grammarErrorKind === "validate" && this.hideError();
 			} finally {
 				this.validating = !1, this.updateValidateButton();
 			}
@@ -43215,35 +43460,44 @@ var $Q = class {
 	}
 	refreshValidity() {
 		if (this.validating) return;
-		let e = qQ(this.problems);
-		e.errors > 0 ? (this.validatedClean = !1, this.setValidity("invalid", JQ(e))) : this.validatedClean ? this.setValidity("valid", "Valid") : this.setValidity("not-validated", "Not validated");
+		let e = ZQ(this.problems);
+		e.errors > 0 ? (this.validatedClean = !1, this.setValidity("invalid", QQ(e))) : this.validatedClean ? this.setValidity("valid", "Valid") : this.setValidity("not-validated", "Not validated");
 	}
 	updateValidateButton() {
-		this.validateButton.disabled = this.validating || !this.serverReady;
+		this.validateButton.disabled = this.validating || !this.serverReady || this.files.sorted().length === 0;
 	}
 	async save() {
-		if (!this.canEdit || !this.model || this.saving || !this.dirty) return;
-		this.saving = !0;
-		let e = this.model.getAlternativeVersionId();
-		this.hideError(), this.setState("Saving…");
+		if (!this.canEdit || this.saving || !this.files.hasDirty()) return;
+		this.saving = !0, this.hideError();
+		let e = this.files.sorted().filter((e) => e.dirty);
 		try {
-			let t = await XQ(`/dsl/${this.dslId}/grammar/save`, {
-				file_id: this.fileId || !1,
-				path: this.path,
-				content: this.model.getValue()
-			});
-			this.fileId = t.id, this.path = t.path, this.filename.textContent = t.path, this.model.getAlternativeVersionId() === e ? (this.dirty = !1, this.setState("Saved")) : (this.dirty = !0, this.setState("Unsaved changes"));
+			for (let [t, n] of e.entries()) {
+				let r = n.model.getAlternativeVersionId();
+				this.setState(`Saving ${t + 1}/${e.length}…`);
+				let i = await r$(`/dsl/${this.dslId}/grammar/save`, {
+					file_id: n.id || !1,
+					path: n.path,
+					content: n.model.getValue()
+				});
+				n.id = i.id, n.isEntry = i.isEntry, n.model.getAlternativeVersionId() === r ? this.files.markSaved(n.path, r) : this.files.refreshDirty(n.path), this.renderFiles();
+			}
 		} catch (e) {
-			this.dirty = !0, this.fail(e, "Save failed.", "save"), this.setState("Save failed");
+			this.fail(e, "Save failed.", "save");
 		} finally {
-			this.saving = !1, this.updateSaveButton();
+			this.saving = !1, this.refreshSaveState();
 		}
 	}
+	refreshSaveState() {
+		let e = this.files.sorted().filter((e) => e.dirty).length;
+		this.root.dataset.grammarDirtyFiles = String(e), this.saving || (this.canEdit ? e ? this.setState(e === 1 ? "Unsaved changes" : `${e} unsaved files`) : this.setState("Saved") : this.setState("Read-only")), this.updateSaveButton();
+	}
 	setState(e) {
-		this.status.textContent = e, this.status.classList.toggle("text-danger", e === "Save failed"), this.status.classList.toggle("text-muted", e !== "Save failed"), this.updateSaveButton();
+		this.status.textContent = e;
+		let t = e === "Save failed";
+		this.status.classList.toggle("text-danger", t), this.status.classList.toggle("text-muted", !t), this.updateSaveButton();
 	}
 	updateSaveButton() {
-		this.saveButton && (this.saveButton.disabled = !this.canEdit || !this.dirty || this.saving);
+		this.saveButton && (this.saveButton.disabled = !this.canEdit || !this.files.hasDirty() || this.saving);
 	}
 	fail(e, t, n = "editor") {
 		let r = e instanceof Error && e.message ? e.message : t;
@@ -43253,14 +43507,22 @@ var $Q = class {
 		this.error.textContent = "", this.error.classList.add("d-none"), delete this.root.dataset.grammarErrorKind;
 	}
 	onBeforeUnload = (e) => {
-		this.dirty && (e.preventDefault(), e.returnValue = "");
+		this.files.hasDirty() && (e.preventDefault(), e.returnValue = "");
 	};
 	onPageHide = () => {
 		this.dispose();
 	};
 	dispose() {
-		this.disposed || (this.disposed = !0, window.removeEventListener("beforeunload", this.onBeforeUnload), window.removeEventListener("pagehide", this.onPageHide), this.saveButton?.removeEventListener("click", this.onSaveClick), this.validateButton.removeEventListener("click", this.onValidateClick), this.restartButton.removeEventListener("click", this.onRestartClick), this.problemsList.removeEventListener("click", this.onProblemsClick), this.problemsList.removeEventListener("keydown", this.onProblemsKeydown), this.changeListener?.dispose(), this.markerListener?.dispose(), this.languageService?.dispose(), this.editor?.dispose(), this.model?.dispose());
+		if (!this.disposed) {
+			this.disposed = !0, window.removeEventListener("beforeunload", this.onBeforeUnload), window.removeEventListener("pagehide", this.onPageHide), this.saveButton?.removeEventListener("click", this.onSaveClick), this.validateButton.removeEventListener("click", this.onValidateClick), this.restartButton.removeEventListener("click", this.onRestartClick), this.createButton?.removeEventListener("click", this.onCreateClick), this.filesHost.removeEventListener("click", this.onFilesClick), this.problemsList.removeEventListener("click", this.onProblemsClick), this.problemsList.removeEventListener("keydown", this.onProblemsKeydown);
+			for (let e of this.modelListeners.values()) e.dispose();
+			this.markerListener?.dispose(), this.languageService?.dispose(), this.editor?.dispose();
+			for (let e of this.files.sorted()) e.model.dispose();
+			for (let e of this.fileRegistrations.values()) e.dispose();
+			this.overlayRegistration?.dispose(), this.fileProvider.dispose();
+		}
 	}
-}, e$ = document.querySelector("#itlingo-grammar-editor");
-e$ && new $Q(e$).start();
+}, s$ = document.querySelector("#itlingo-grammar-editor"), c$ = s$ ? new o$(s$) : void 0;
+c$ && c$.start();
 //#endregion
+export { o$ as GrammarEditorApp, c$ as grammarEditorApp };
