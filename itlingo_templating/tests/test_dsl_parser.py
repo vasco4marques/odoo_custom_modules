@@ -1,9 +1,9 @@
 import hashlib
-import unittest
 
 from odoo.addons.itlingo_templating.services.dsl_parser import (
     parse_dsl,
 )
+from odoo.tests import BaseCase, tagged
 
 
 GRAMMAR = r"""
@@ -55,21 +55,23 @@ class _Dsl:
     name = "Catalog"
     file_extensions = ".cat"
 
-    def __init__(self, grammar=GRAMMAR):
+    def __init__(self, grammar=GRAMMAR, flattened_grammar=None):
         self.grammar = grammar
+        self.flattened_grammar = flattened_grammar or grammar
         self.published_digest = self._grammar_digest()
 
     def _grammar_file(self):
         return _GrammarFile(self.grammar)
 
     def _flattened_grammar_text(self):
-        return self.grammar
+        return self.flattened_grammar
 
     def _grammar_digest(self):
-        return hashlib.sha256(self.grammar.encode()).hexdigest()
+        return hashlib.sha256(self.flattened_grammar.encode()).hexdigest()
 
 
-class TestRecordSourcedDslParser(unittest.TestCase):
+@tagged("post_install", "-at_install")
+class TestRecordSourcedDslParser(BaseCase):
 
     def test_parses_generic_dsl_from_record_grammar(self):
         ast = parse_dsl(
@@ -82,6 +84,7 @@ class TestRecordSourcedDslParser(unittest.TestCase):
     def test_parses_record_sourced_flattened_multifile_grammar(self):
         entry = (
             "grammar Catalog\n"
+            "import './Terminals'\n"
             "entry Catalog: 'catalog' name=ID items+=Item*;\n"
             "Item: 'item' name=ID ('owner' owner=[Item])?;\n"
         )
@@ -89,13 +92,15 @@ class TestRecordSourcedDslParser(unittest.TestCase):
             "hidden terminal WS: /\\s+/;\n"
             "terminal ID: /[a-zA-Z_][a-zA-Z0-9_]*/;\n"
         )
-        dsl = _Dsl(entry + "\n" + terminals)
+        flattened = entry.replace("import './Terminals'\n", "") + "\n" + terminals
+        dsl = _Dsl(entry, flattened_grammar=flattened)
 
         ast = parse_dsl(
             _Env(), dsl, b"catalog demo item ana item review owner ana",
         )
 
         self.assertEqual(ast["$type"], "Catalog")
+        self.assertIn("import './Terminals'", dsl._grammar_file()._read_text_utf8())
         self.assertNotIn("import ", dsl._flattened_grammar_text())
 
     def test_rejects_record_grammar_imports_clearly(self):

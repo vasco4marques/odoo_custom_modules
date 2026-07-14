@@ -376,7 +376,7 @@ class TestDslGrammarPortal(HttpCase):
             const editorModule = await import(script.src);
             editorModule.grammarEditorApp.setFileContent(
                 'shared/Terminals.langium',
-                'hidden terminal WS: /\\s+/;\nterminal OTHER: /x/;\n',
+                'hidden terminal WS: /\\s+/;\\nterminal OTHER: /x/;\\n',
             );
             await waitFor(
                 () => JSON.parse(root.dataset.grammarFileErrors || '{}')[
@@ -387,8 +387,8 @@ class TestDslGrammarPortal(HttpCase):
 
             editorModule.grammarEditorApp.setFileContent(
                 'shared/Terminals.langium',
-                'hidden terminal WS: /\\s+/;\n'
-                    + 'terminal ID: /[_a-zA-Z][\\w_]*/;\n',
+                'hidden terminal WS: /\\s+/;\\n'
+                    + 'terminal ID: /[_a-zA-Z][\\w_]*/;\\n',
             );
             await waitFor(
                 () => Number(root.dataset.grammarDiagnosticErrors) === 0,
