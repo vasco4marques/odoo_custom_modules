@@ -13,91 +13,6 @@ resolve to a stub carrying the name as ``id``/``title``.
 
 SCHEMA_VERSION = "1.0"
 
-# RSL concept $type -> canonical list name.
-_BUCKETS = {
-    "Stakeholder": "stakeholders",
-    "Actor": "actors",
-    "GlossaryTerm": "glossary",
-    "Goal": "goals",
-    "FR": "functional_requirements",
-    "QR": "quality_requirements",
-    "Constraint": "constraints",
-    "UserStory": "user_stories",
-    "UseCase": "use_cases",
-    "DataEntity": "data_entities",
-}
-
-# ASL concept $type -> canonical list name. ASL UI elements can be nested
-# inside containers/components, so ASL collection walks the whole system tree.
-_ASL_BUCKETS = {
-    "ContextDimensionActor": "actors",
-    "UseCase": "use_cases",
-    "DataEntity": "data_entities",
-    "DataEntityCluster": "data_entity_clusters",
-    "DataEnumeration": "data_enumerations",
-    "DataAttribute": "data_attributes",
-    "UIContainer": "ui_containers",
-    "UIComponent": "ui_components",
-    "UIComponentPart": "ui_component_parts",
-    "UIAction": "ui_actions",
-    "UIElementEvent": "ui_events",
-    "UIActionEvent": "ui_events",
-    "UISystemEvent": "ui_events",
-    "UIThrowingEvent": "ui_events",
-    "UIPortDefinition": "ui_ports",
-    "UIParameter": "ui_parameters",
-    "Context": "contexts",
-    "ContextDimensionDevice": "context_devices",
-    "ContextDimensionSensor": "context_sensors",
-    "View": "views",
-    "Theme": "themes",
-}
-
-RSL_PROFILE = {
-    "bucket_aliases": _BUCKETS,
-    "root_path": "packages.0.system",
-    "root_alias": "project",
-    "root_fields": {
-        "code": ["name"],
-        "name": ["nameAlias", "name"],
-        "type": ["type"],
-        "sub_type": ["subType"],
-        "version": ["version"],
-        "vendor": ["vendor"],
-        "description": ["description"],
-    },
-    "ignored_types": ["PackageSystem", "System"],
-    "other_alias": "other",
-}
-
-ASL_PROFILE = {
-    "bucket_aliases": _ASL_BUCKETS,
-    "root_path": "packages.0.system",
-    "root_alias": "system",
-    "tree_alias": "system_concepts",
-    "tree_path": "packages.0.system.systemConcepts",
-    "ignored_types": ["PackageSystem", "System"],
-    "qualified_parent_types": [
-        "DataEntity", "DataEntityCluster", "UIContainer", "UIComponent",
-    ],
-    "other_alias": "other",
-}
-
-BUILTIN_PROFILES = {"RSL": RSL_PROFILE, "ASL": ASL_PROFILE}
-
-
-def profile_for_dsl(dsl_key, custom_profile=None):
-    """Return a built-in profile optionally overlaid by record JSON."""
-    profile = dict(BUILTIN_PROFILES.get(dsl_key, {}))
-    for key, value in (custom_profile or {}).items():
-        if key in ("bucket_aliases", "title_fields", "root_fields"):
-            merged = dict(profile.get(key) or {})
-            merged.update(value or {})
-            profile[key] = merged
-        else:
-            profile[key] = value
-    return profile
-
 
 class Element(dict):
     """A canonical element: attribute access maps to items, renders as its title.
@@ -131,7 +46,7 @@ class Element(dict):
 
 
 def _flatten(value):
-    """Recursively collapse RSL enum wrappers (``{$type, type}``) to their string."""
+    """Recursively collapse enum wrappers (``{$type, type}``) to strings."""
     if isinstance(value, dict):
         if set(value.keys()) <= {"$type", "type"} and isinstance(value.get("type"), str):
             return value["type"]
@@ -290,16 +205,4 @@ def build_generic_model(ast, profile=None):
         model[profile["tree_alias"]] = (
             _path_value(model["root"], profile.get("tree_path")) or []
         )
-    return model
-
-
-def build_canonical_model(ast):
-    """Transform a serialized Langium AST into the canonical template context."""
-    return build_generic_model(ast, RSL_PROFILE)
-
-
-def build_asl_canonical_model(ast):
-    """Transform a serialized ASL AST into the canonical template context."""
-    model = build_generic_model(ast, ASL_PROFILE)
-    model["dsl"] = "ASL"
     return model

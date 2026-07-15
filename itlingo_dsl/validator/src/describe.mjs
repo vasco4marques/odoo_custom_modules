@@ -2,8 +2,7 @@
 //
 // Usage: node describe.mjs <grammarPath>
 // Prints the versioned template-reference schema on stdout. Grammar imports
-// are inlined before parsing so the CLI also works with the bundled RSL/ASL
-// grammars without requiring a Langium workspace.
+// are inlined before parsing so the CLI does not require a Langium workspace.
 
 import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
@@ -255,10 +254,10 @@ export async function describeGrammar(grammarText) {
 
     const diagnostics = diagnosticPayload(document);
     // Langium 4.3.1's grammar validator reports guarded assignments as an
-    // unsupported type-collector feature. The existing ASL grammar uses
-    // those predicates and is successfully consumed by the runtime parser;
-    // collectAst can likewise describe it. Keep all other grammar errors
-    // fatal, especially syntax and unresolved-reference diagnostics.
+    // unsupported type-collector feature even though the runtime grammar
+    // loader consumes those predicates successfully. collectAst can likewise
+    // describe them. Keep every other grammar error fatal, especially syntax
+    // and unresolved-reference diagnostics.
     const errors = diagnostics.filter((diagnostic) => (
         diagnostic.severity === 'error'
         && diagnostic.message !== 'Predicates are currently not supported.'

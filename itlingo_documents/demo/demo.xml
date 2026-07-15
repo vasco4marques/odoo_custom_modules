@@ -6,7 +6,6 @@
         <field name="name">Customer Portal Requirements</field>
         <field name="document_type_id" ref="itlingo_documents.doc_type_specification"/>
         <field name="language">en</field>
-        <field name="dsl_id" ref="itlingo_dsl.dsl_rsl_1_0"/>
         <field name="version">1.0</field>
         <field name="file_name">customer_portal_requirements.rsl</field>
         <field name="status">published</field>
@@ -19,7 +18,6 @@
         <field name="name">RSL Use Case Structure</field>
         <field name="document_type_id" ref="itlingo_documents.doc_type_specification_template"/>
         <field name="language">en</field>
-        <field name="dsl_id" ref="itlingo_dsl.dsl_rsl_1_0"/>
         <field name="version">1.0</field>
         <field name="file_name">rsl_use_case_structure.rsl</field>
         <field name="status">approved</field>
@@ -32,7 +30,6 @@
         <field name="name">Reusable Requirement Fragments</field>
         <field name="document_type_id" ref="itlingo_documents.doc_type_specification_library"/>
         <field name="language">en</field>
-        <field name="dsl_id" ref="itlingo_dsl.dsl_rsl_1_0"/>
         <field name="version">1.0</field>
         <field name="file_name">reusable_requirement_fragments.rsl</field>
         <field name="status">published</field>
@@ -44,7 +41,6 @@
         <field name="name">Requirements Report Layout</field>
         <field name="document_type_id" ref="itlingo_documents.doc_type_template"/>
         <field name="language">en</field>
-        <field name="dsl_id" ref="itlingo_dsl.dsl_rsl_1_0"/>
         <field name="version">1.0</field>
         <field name="file_name">requirements_report_layout.docx</field>
         <field name="status">approved</field>
@@ -80,7 +76,6 @@
         <field name="name">Getting Started with RSL</field>
         <field name="document_type_id" ref="itlingo_documents.doc_type_tutorial"/>
         <field name="language">en</field>
-        <field name="dsl_id" ref="itlingo_dsl.dsl_rsl_1_0"/>
         <field name="version">1.0</field>
         <field name="file_name">getting_started_with_rsl.md</field>
         <field name="status">published</field>
@@ -93,7 +88,6 @@
         <field name="name">Requirements Review Prompt</field>
         <field name="document_type_id" ref="itlingo_documents.doc_type_prompt_template"/>
         <field name="language">en</field>
-        <field name="dsl_id" ref="itlingo_dsl.dsl_rsl_1_0"/>
         <field name="version">1.0</field>
         <field name="file_name">requirements_review_prompt.md</field>
         <field name="status">draft</field>

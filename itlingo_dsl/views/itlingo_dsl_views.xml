@@ -172,8 +172,8 @@
                 Register a new platform DSL
             </p>
             <p>
-                DSLs such as RSL and ASL are defined once at platform level and
-                referenced across organizations and workspaces.
+                Each DSL is defined once at platform level and referenced
+                across organizations and workspaces.
             </p>
         </field>
     </record>

@@ -17,9 +17,8 @@ template .docx/.xlsx or UTF-8 text file (itlingo.document, type = Document Templ
 ## Usage
 
 Set an `itlingo.document`'s **Document Type** to **Document Template**, associate
-it with a DSL, and give it a supported template file. RSL and ASL use their
-bundled compatibility grammars. Every other DSL must be active and have a
-current, valid grammar published through the grammar editor.
+it with a DSL, and give it a supported template file. Every DSL must be active
+and have a current, valid grammar published through the grammar editor.
 Supported formats are `.docx`, `.xlsx`, and UTF-8 text formats including `.txt`,
 `.md`, `.rst`, `.html`, `.htm`, `.json`, `.xml`, `.yaml`, `.yml`, `.toml`,
 `.ini`, `.cfg`, `.properties`, `.sql`, `.csv`, `.tsv`, `.css`, `.js`, `.ts`,
@@ -38,32 +37,33 @@ Templates are excluded from the knowledge pool and the ITOI send list.
 
 ## Grammar compatibility
 
-Record-sourced grammars must be self-contained. The DSL model stores one
-grammar file, so grammar `import` statements cannot currently be resolved and
-generation reports a clear error. RSL and ASL retain their bundled grammars
-because those grammars use imports and require compatibility behavior.
+The DSL record owns a grammar workspace with one entry file and any imported
+`.langium` files. Validation and publication flatten that workspace into the
+self-contained grammar passed to the runtime parser. The module bundles no
+language-specific grammars.
+
+The **Specification Validation** field on the DSL's backend **Templating** tab
+defaults to **Full validation**. Select **Syntax only** when the grammar relies
+on custom editor scoping or validation services that the generic runtime parser
+does not have. This setting is generic and belongs to each DSL record.
 
 ## Template Reference inventory
 
 `itlingo.dsl._template_reference()` returns the schema-v1.1 type inventory
-produced by the bundled grammar describer. Custom DSL inventories are stored in
+produced by the grammar describer. Inventories are stored in
 `template_reference_json` and keyed by the schema version plus
 `template_reference_digest`, so Node is run once per grammar/schema revision.
-RSL and ASL use an in-process cache keyed by that same schema version and the
-content digests of their bundled grammar and all imported grammar files.
 
-`_template_reference_context()` adds the current Template Profile aliases and
-the static RSL/ASL compatibility collections at render time. Profile edits
-therefore appear immediately without invalidating or rebuilding the grammar
-inventory. If Node or the describer bundle is unavailable, this method returns
+`_template_reference_context()` adds the current Template Profile aliases at
+render time. Profile edits therefore appear immediately without invalidating
+or rebuilding the grammar inventory. If Node or the describer bundle is unavailable, this method returns
 a structured degraded payload with `success: false` and `unavailable: true`.
 
 The website exposes this metadata and its authoring tools through these routes:
 
 - `/dsl/template-reference` lists every DSL visible to the current visitor.
 - `/dsl/<id>/template-reference` shows the generic context, profile aliases,
-  named and embedded grammar types, copy-ready Jinja snippets, and RSL/ASL
-  compatibility collections. Named types can be searched by type or field,
+  named and embedded grammar types, and copy-ready Jinja snippets. Named types can be searched by type or field,
   have stable anchors, and primitive fields show bounded grammar-literal
   `values` when available.
 - `GET /dsl/<id>/template-reference/starter.md` downloads a bounded
@@ -108,7 +108,7 @@ DSL. They do not require a specification and do not change or create records.
 ```
 
 Every DSL gets the generic context keys `root`, `elements`, `by_type`, `by_id`,
-and `schema_version`. Each named AST node is an element with `id`, `title`, and
+`schema_version`, and `dsl` (the record acronym). Each named AST node is an element with `id`, `title`, and
 `kind` aliases plus all fields from its grammar. For example:
 
 ```
@@ -126,18 +126,6 @@ a root alias/projection, and per-type title fields. A minimal profile is:
   "title_fields": {"Requirement": "label"}
 }
 ```
-
-RSL keeps: `project`, `stakeholders`, `actors`, `goals`,
-`functional_requirements`, `quality_requirements`, `constraints`,
-`user_stories`, `use_cases`, `glossary`, `data_entities`, `other`, `by_id`,
-`schema_version`. Every element has `id`, `title`, `kind` plus its RSL fields.
-
-ASL keeps: `system`, `actors`, `use_cases`, `data_entities`,
-`data_entity_clusters`, `data_enumerations`, `data_attributes`, `ui_containers`,
-`ui_components`, `ui_component_parts`, `ui_actions`, `ui_events`, `ui_ports`,
-`ui_parameters`, `contexts`, `context_devices`, `context_sensors`, `views`,
-`themes`, `system_concepts`, `other`, `by_id`, `schema_version`. Every element
-has `id`, `title`, `kind` plus its ASL fields.
 
 References resolve to the target element, so navigate them directly:
 
@@ -169,17 +157,25 @@ Optional system parameters (Settings > Technical > System Parameters):
 
 ## Rebuilding the parser bundle (local only)
 
-Only when changing the parser runner or bumping a bundled grammar/Langium:
+Only when changing the parser runner or the shared Langium version:
 
 ```
-cp "../../../languium dsls/rsl.langium" parser/rsl.langium
-cp ../../../itlingoitoi/plugins/asl-langium/src/language-server/asl.langium parser/asl.langium
-cp ../../../itlingoitoi/plugins/asl-langium/src/language-server/Terminals.langium parser/Terminals.langium
 cd parser
 npm install
 npm run build                                   # -> dist/parser.mjs (commit it)
 ```
 
-RSL uses full Langium validation. ASL uses syntax validation in this lightweight
-runtime parser because the ITOI ASL extension has custom scope/linking services
-that are not loaded by `createServicesForGrammar`.
+## Adding RSL or ASL as ordinary records
+
+Neither language is created by this module. On a fresh installation, a platform
+administrator creates the desired DSL record and uploads the grammar workspace
+from the thesis repository's `languium dsls/` directory:
+
+- RSL: `rsl.langium` as the entry grammar.
+- ASL: `asl.langium` as the entry grammar plus `Terminals.langium`.
+
+Validate and publish the record exactly like any other DSL. If ASL documents
+produce unresolved-link diagnostics in the generic runtime, select **Syntax
+only** under **Specification Validation**. Friendly aliases are not supplied;
+templates should use `by_type["TypeName"]`, or an administrator may explicitly
+configure a record-level Template Profile.

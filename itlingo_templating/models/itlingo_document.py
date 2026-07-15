@@ -2,8 +2,6 @@ from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
 
 from odoo.addons.itlingo_templating.services.dsl_parser import (
-    default_dsl_extension,
-    dsl_key_for_record,
     dsl_label,
     is_templatable_dsl,
 )
@@ -76,7 +74,6 @@ class ItlingoDocument(models.Model):
     @api.depends("dsl_id", "dsl_id.file_extensions")
     def _compute_template_source_metadata(self):
         for doc in self:
-            dsl_key = dsl_key_for_record(doc.env, doc.dsl_id)
             extensions = []
             for raw_extension in (doc.dsl_id.file_extensions or "").split(","):
                 extension = raw_extension.strip().lower()
@@ -84,9 +81,11 @@ class ItlingoDocument(models.Model):
                     extension = "." + extension
                 if extension:
                     extensions.append(extension)
-            if not extensions and dsl_key:
-                extensions = [default_dsl_extension(dsl_key)]
-            doc.template_source_label = dsl_label(doc.dsl_id or dsl_key)
+            if doc.dsl_id and not extensions:
+                extensions = [".dsl"]
+            doc.template_source_label = (
+                dsl_label(doc.dsl_id) if doc.dsl_id else "DSL specification"
+            )
             doc.template_source_accept = ",".join(extensions)
 
     @api.depends("dsl_id", "dsl_id.template_profile")

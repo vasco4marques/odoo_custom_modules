@@ -6,10 +6,11 @@ import re
 import zipfile
 
 from .rendering import lenient_env
-from .template_reference import BUILTIN_COMPATIBILITY_COLLECTIONS
 
 
-GENERIC_VARIABLES = {"root", "elements", "by_type", "by_id", "schema_version"}
+GENERIC_VARIABLES = {
+    "root", "elements", "by_type", "by_id", "schema_version", "dsl",
+}
 CATEGORY_ORDER = ("syntax", "filter", "test", "structure", "dsl")
 
 
@@ -135,11 +136,11 @@ def _xlsx_structure_findings(value, sheet_name, coordinate, column):
     )]
 
 
-def lint_template(template_bytes, template_format, reference_context, dsl_key=None):
+def lint_template(template_bytes, template_format, reference_context):
     """Return Jinja and, when available, DSL-inventory findings."""
     extracted = extract_template_sources(template_bytes, template_format)
     dsl_available = bool(reference_context and reference_context.get("success"))
-    inventory = _inventory(reference_context, dsl_key) if dsl_available else None
+    inventory = _inventory(reference_context) if dsl_available else None
     findings = list(extracted.get("findings", ()))
     if inventory:
         for name in sorted(extracted["top_level"]):
@@ -200,7 +201,7 @@ def lint_template(template_bytes, template_format, reference_context, dsl_key=No
     }
 
 
-def _inventory(reference, dsl_key):
+def _inventory(reference):
     type_items = {
         item.get("name"): item
         for item in reference.get("types", []) if item.get("name")
@@ -220,9 +221,6 @@ def _inventory(reference, dsl_key):
     known = set(GENERIC_VARIABLES) | set(aliases)
     profile = reference.get("profile") or {}
     known.update(filter(None, (reference.get("root_alias"), profile.get("other_alias"))))
-    known.update(
-        item["name"] for item in BUILTIN_COMPATIBILITY_COLLECTIONS.get(dsl_key, [])
-    )
     return {"types": types, "aliases": aliases, "known": known}
 
 

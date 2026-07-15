@@ -392,28 +392,6 @@
                                 </div>
                             </details>
 
-                            <div t-if="reference.get('compatibility_collections')"
-                                 class="card border-0 shadow-sm rounded-3 mb-4">
-                                <div class="card-header bg-white p-3">
-                                    <h2 class="h5 mb-1"><t t-out="dsl.acronym"/> compatibility collections</h2>
-                                    <p class="small text-muted mb-0">Built-in collections preserved for existing templates.</p>
-                                </div>
-                                <div class="card-body p-0 table-responsive">
-                                    <table class="table mb-0 align-middle">
-                                        <thead class="table-light"><tr><th>Variable</th><th>Collected types</th></tr></thead>
-                                        <tbody>
-                                            <tr t-foreach="reference['compatibility_collections']" t-as="collection">
-                                                <td><code t-out="collection['name']"/></td>
-                                                <td>
-                                                    <code t-if="collection.get('type_names')"
-                                                          t-out="', '.join(collection['type_names'])"/>
-                                                    <span t-else="" class="text-muted">Other named elements</span>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
                         </t>
                     </div>
                 </section>

@@ -64,7 +64,7 @@ class ItlingoDsl(models.Model):
 
     file_extensions = fields.Char(
         string="File Extensions",
-        help="Comma-separated list of supported file extensions, for example: .rsl,.asl",
+        help="Comma-separated list of supported file extensions, for example: .dsl,.dslx",
     )
 
     grammar_reference = fields.Char(
@@ -398,7 +398,7 @@ class ItlingoDsl(models.Model):
         grammar. It deprecates any previously active version of the same
         acronym, records the audit trail, and is the single event that
         refreshes the chatbot knowledge base. It does not build or deploy
-        templating/ITOI parsers, which bundle their own grammars.
+        templating or ITOI parsers; those consume the published record grammar.
         """
         for dsl in self:
             if dsl.status == "active":

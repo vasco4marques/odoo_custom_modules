@@ -4,7 +4,6 @@ from unittest.mock import patch
 from odoo.tests import TransactionCase, tagged
 
 from odoo.addons.itlingo_dsl.services import grammar_describe
-from odoo.addons.itlingo_templating.services import template_reference
 
 
 GRAMMAR = r"""
@@ -65,10 +64,6 @@ class TestTemplateReference(TransactionCase):
         cls.grammar = cls.env["itlingo.dsl.file"]._create_grammar_text(
             cls.dsl, "TRCT.langium", GRAMMAR,
         )
-
-    def setUp(self):
-        super().setUp()
-        template_reference.clear_builtin_reference_cache()
 
     def _multi_file_dsl(self):
         dsl = self.env["itlingo.dsl"].create({
@@ -168,32 +163,6 @@ class TestTemplateReference(TransactionCase):
         self.assertIn("temporarily unavailable", context["message"])
         self.assertIn("profile", context)
 
-    def test_builtin_rsl_asl_inventory_and_static_collections_are_cached(self):
-        with patch.object(
-            grammar_describe, "describe_grammar_file", return_value=inventory(),
-        ) as describe:
-            references = {}
-            for key, xml_id in (
-                ("RSL", "itlingo_dsl.dsl_rsl_1_0"),
-                ("ASL", "itlingo_dsl.dsl_asl_1_0"),
-            ):
-                dsl = self.env.ref(xml_id)
-                references[key] = dsl._template_reference()
-                dsl._template_reference()
-
-        self.assertEqual(describe.call_count, 2)
-        self.assertEqual(references["RSL"]["types"][0]["name"], "Item")
-        self.assertEqual(references["ASL"]["types"][0]["name"], "Item")
-        rsl_names = {
-            item["name"] for item in references["RSL"]["compatibility_collections"]
-        }
-        asl_names = {
-            item["name"] for item in references["ASL"]["compatibility_collections"]
-        }
-        self.assertIn("functional_requirements", rsl_names)
-        self.assertIn("system_concepts", asl_names)
-        self.assertIn("ui_events", asl_names)
-
     def test_profile_is_merged_at_render_time_without_redescribe(self):
         self.dsl.template_profile = json.dumps({
             "bucket_aliases": {"Item": "things"},
@@ -221,43 +190,10 @@ class TestTemplateReference(TransactionCase):
         self.assertEqual(second["root_alias"], "directory")
         self.assertEqual(second["title_fields"], {"Item": ["display_name"]})
 
-    def test_builtin_cache_invalidates_when_grammar_tree_digest_changes(self):
-        rsl = self.env.ref("itlingo_dsl.dsl_rsl_1_0")
-        with patch.object(
-            template_reference,
-            "_grammar_tree_digest",
-            side_effect=["digest-a", "digest-a", "digest-b"],
-        ), patch.object(
-            grammar_describe, "describe_grammar_file", return_value=inventory(),
-        ) as describe:
-            rsl._template_reference()
-            rsl._template_reference()
-            rsl._template_reference()
-
-        self.assertEqual(describe.call_count, 2)
-
-    def test_builtin_cache_invalidates_when_schema_version_changes(self):
-        rsl = self.env.ref("itlingo_dsl.dsl_rsl_1_0")
-        with patch.object(
-            template_reference, "_grammar_tree_digest", return_value="digest-a",
-        ), patch.object(
-            grammar_describe, "describe_grammar_file", return_value=inventory(),
-        ) as describe:
-            with patch.object(grammar_describe, "SCHEMA_VERSION", "1.0"):
-                rsl._template_reference()
-            with patch.object(grammar_describe, "SCHEMA_VERSION", "1.1"):
-                rsl._template_reference()
-
-        self.assertEqual(describe.call_count, 2)
-
-    def test_actual_bundled_grammars_produce_type_inventories(self):
-        for key, xml_id in (
-            ("RSL", "itlingo_dsl.dsl_rsl_1_0"),
-            ("ASL", "itlingo_dsl.dsl_asl_1_0"),
-        ):
-            reference = self.env.ref(xml_id)._template_reference(refresh=True)
-
-            self.assertTrue(reference["success"], key)
-            self.assertEqual(reference["entry_type"], "Model")
-            self.assertTrue(reference["types"])
-            self.assertTrue(reference["compatibility_collections"])
+    def test_module_does_not_seed_language_records(self):
+        self.assertFalse(self.env.ref(
+            "itlingo_dsl.dsl_rsl_1_0", raise_if_not_found=False,
+        ))
+        self.assertFalse(self.env.ref(
+            "itlingo_dsl.dsl_asl_1_0", raise_if_not_found=False,
+        ))

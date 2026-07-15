@@ -52,16 +52,6 @@ const attributeFields = Object.fromEntries(
 assert.equal(attributeFields.value.kind, 'primitive');
 assert.equal(attributeFields.value.type, 'string | number', 'datatype rule alternatives are preserved');
 
-// These production grammars are the import-inlining acceptance test. ASL
-// imports Terminals.langium; RSL is intentionally also checked for regressions.
-const parserDir = resolve(validatorDir, '../../itlingo_templating/parser');
-for (const fileName of ['rsl.langium', 'asl.langium']) {
-    const result = run(resolve(parserDir, fileName));
-    assert.equal(result.success, true, `${fileName} should describe successfully`);
-    assert.equal(result.entry_type, 'Model');
-    assert.ok(result.types.length > 0);
-}
-
 const broken = spawnSync(process.execPath, [cli, resolve(fixtures, 'broken.langium')], {
     encoding: 'utf-8',
 });

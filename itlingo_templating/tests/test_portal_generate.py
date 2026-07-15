@@ -1,8 +1,25 @@
 import base64
+import json
 import re
 
 from odoo.tests import HttpCase, tagged
 from odoo.tests.common import new_test_user
+
+from odoo.addons.itlingo_templating.controllers.portal_generate import (
+    ItlingoTemplatingPortal,
+)
+from odoo.addons.itlingo_templating.services.text_renderer import render_text
+
+
+SOURCE_GRAMMAR = r"""
+grammar TemplateSource
+entry Specification:
+    'specification' name=ID requirements+=Requirement*;
+Requirement:
+    'requirement' name=ID;
+hidden terminal WS: /\s+/;
+terminal ID: /[a-zA-Z_][a-zA-Z0-9_]*/;
+"""
 
 
 @tagged("post_install", "-at_install")
@@ -25,13 +42,27 @@ class TestPortalGenerate(HttpCase):
             "role": "org_manager",
             "state": "accepted",
         })
+        cls.dsl = cls.env["itlingo.dsl"].create({
+            "name": "Template Source Language",
+            "acronym": "TSL",
+            "version": "test-1.0",
+            "status": "draft",
+            "file_extensions": ".tsl",
+            "template_profile": json.dumps({
+                "bucket_aliases": {"Requirement": "requirements"},
+            }),
+        })
+        cls.env["itlingo.dsl.file"]._create_grammar_text(
+            cls.dsl, "TSL.langium", SOURCE_GRAMMAR,
+        )
+        cls.dsl.action_publish()
         cls.document = cls.env["itlingo.document"].create({
             "name": "Requirements report",
             "organization_id": cls.organization.id,
             "document_type_id": cls.env.ref(
                 "itlingo_documents.doc_type_template"
             ).id,
-            "dsl_id": cls.env.ref("itlingo_dsl.dsl_rsl_1_0").id,
+            "dsl_id": cls.dsl.id,
             "document_file": base64.b64encode(b"{{ specification.name }}"),
             "file_name": "requirements.txt",
             "status": "published",
@@ -56,7 +87,7 @@ class TestPortalGenerate(HttpCase):
             "document_type_id": cls.env.ref(
                 "itlingo_documents.doc_type_template"
             ).id,
-            "dsl_id": cls.env.ref("itlingo_dsl.dsl_rsl_1_0").id,
+            "dsl_id": cls.dsl.id,
             "document_file": base64.b64encode(b"{{ specification.name }}"),
             "file_name": "workspace-report.txt",
             "status": "published",
@@ -79,7 +110,7 @@ class TestPortalGenerate(HttpCase):
         self.assertIn("Generate and download", response.text)
         self.assertIn("Template information", response.text)
         self.assertIn("Check template", response.text)
-        self.assertIn(".rsl", response.text)
+        self.assertIn(".tsl", response.text)
         self.assertIn(
             f"/dsl/{self.document.dsl_id.id}/template-reference",
             response.text,
@@ -97,7 +128,7 @@ class TestPortalGenerate(HttpCase):
         )
 
         self.assertEqual(response.status_code, 200)
-        self.assertIn("Please upload a RSL specification file.", response.text)
+        self.assertIn("Please upload a TSL specification file.", response.text)
         self.assertIn("Template information", response.text)
         self.assertIn("Documents", response.text)
 
@@ -121,13 +152,13 @@ class TestPortalGenerate(HttpCase):
         )
 
         self.assertEqual(response.status_code, 200)
-        self.assertIn("Please upload a RSL specification file.", response.text)
+        self.assertIn("Please upload a TSL specification file.", response.text)
         self.assertIn("Template Workspace Test", response.text)
         self.assertIn("Workspace report", response.text)
 
     def test_template_check_renders_advisory_findings_without_spec(self):
         self.document.document_file = base64.b64encode(
-            b"{% for requirement in functional_requirements %}"
+            b"{% for requirement in requirements %}"
             b"{{ requirement.titel|lenght }}{% endfor %}"
         )
         detail_response = self.url_open(self.detail_url)
@@ -149,3 +180,17 @@ class TestPortalGenerate(HttpCase):
             response.text.index('data-category="dsl"'),
         )
         self.assertIn("Generate and download", response.text)
+
+    def test_record_profile_alias_and_acronym_render_in_context(self):
+        context = ItlingoTemplatingPortal._build_context(self.dsl, {
+            "$type": "Specification",
+            "name": "demo",
+            "requirements": [{"$type": "Requirement", "name": "first"}],
+        })
+
+        output = render_text(
+            b"{{ dsl }}:{% for item in requirements %}{{ item.id }}{% endfor %}",
+            context,
+        )
+
+        self.assertEqual(output, b"TSL:first")

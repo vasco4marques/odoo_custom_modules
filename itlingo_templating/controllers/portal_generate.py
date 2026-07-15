@@ -13,8 +13,6 @@ from odoo.addons.itlingo_templating.services import (
 )
 from odoo.addons.itlingo_templating.services.dsl_parser import (
     DslParseError,
-    default_dsl_extension,
-    dsl_key_for_record,
     dsl_label,
     is_templatable_dsl,
     parse_dsl,
@@ -144,20 +142,16 @@ class ItlingoTemplatingPortal(http.Controller):
         return ext if ext in _FORMATS else None
 
     @staticmethod
-    def _dsl_key(document):
-        return dsl_key_for_record(request.env, document.dsl_id)
+    def _source_extensions(document):
+        return _split_extensions(document.dsl_id.file_extensions) or [".dsl"]
 
     @staticmethod
-    def _source_extensions(document, dsl_key):
-        return _split_extensions(document.dsl_id.file_extensions) or [
-            default_dsl_extension(dsl_key),
-        ]
-
-    @staticmethod
-    def _build_context(dsl, dsl_key, ast):
-        return canonical_model.build_generic_model(
+    def _build_context(dsl, ast):
+        model = canonical_model.build_generic_model(
             ast, dsl._templating_profile(),
-        ) | ({"dsl": "ASL"} if dsl_key == "ASL" else {})
+        )
+        model["dsl"] = dsl.acronym or ""
+        return model
 
     @http.route(
         "/my/workspaces/<int:project_id>/documents/<int:document_id>/generate",
@@ -220,7 +214,6 @@ class ItlingoTemplatingPortal(http.Controller):
             result = template_linter.lint_template(
                 base64.b64decode(document.document_file), fmt,
                 document.dsl_id._template_reference_context(),
-                self._dsl_key(document),
             )
         except (ImportError, UnicodeDecodeError) as err:
             result = {
@@ -255,7 +248,6 @@ class ItlingoTemplatingPortal(http.Controller):
                 ),
             )
 
-        dsl_key = self._dsl_key(document)
         if not document.dsl_id:
             return self._render_detail(
                 document, base_url, project_id=project_id, org_id=org_id,
@@ -267,7 +259,7 @@ class ItlingoTemplatingPortal(http.Controller):
                 error=_("This DSL does not have a current, valid published grammar."),
             )
 
-        source_extensions = self._source_extensions(document, dsl_key)
+        source_extensions = self._source_extensions(document)
 
         if request.httprequest.method != "POST":
             return request.redirect(self._detail_url(base_url, document.id) + "#generate")
@@ -299,13 +291,16 @@ class ItlingoTemplatingPortal(http.Controller):
                 error=str(err), diagnostics=err.diagnostics,
             )
         except RuntimeError as err:
-            _logger.exception("%s parsing failed for document %s", dsl_key, document.id)
+            _logger.exception(
+                "%s parsing failed for document %s",
+                document.dsl_id.acronym or "DSL", document.id,
+            )
             return self._render_detail(
                 document, base_url, project_id=project_id, org_id=org_id,
                 error=str(err),
             )
 
-        context = self._build_context(document.dsl_id, dsl_key, ast)
+        context = self._build_context(document.dsl_id, ast)
 
         renderer, mime = _FORMATS[fmt]
         try:

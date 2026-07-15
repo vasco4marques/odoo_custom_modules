@@ -1,6 +1,5 @@
 import hashlib
 import json
-from pathlib import Path
 from unittest.mock import patch
 
 from odoo.exceptions import UserError, ValidationError
@@ -15,7 +14,6 @@ from ..services.grammar_flattener import GrammarFlattenError, flatten_grammar
 
 ENTRY_TEXT = "grammar Multi\nimport './common/Terms';\nentry Model: name=ID;\n"
 TERMINALS_TEXT = "terminal ID: /[a-z]+/;\n"
-FIXTURES = Path(__file__).with_name("fixtures")
 
 
 @tagged("post_install", "-at_install")
@@ -197,29 +195,3 @@ class TestGrammarFlattener(TransactionCase):
         with self.assertRaisesRegex(UserError, "missing-import"):
             dsl.action_publish()
         self.assertEqual(dsl.status, "draft")
-
-    def test_real_asl_workspace_flattens_validates_and_is_publishable(self):
-        asl_text = (FIXTURES / "asl.langium").read_text(encoding="utf-8")
-        terminals_text = (FIXTURES / "Terminals.langium").read_text(
-            encoding="utf-8",
-        )
-        dsl = self._dsl("MFASL")
-        self.File._create_grammar_text(
-            dsl, "asl.langium", asl_text, is_entry=True,
-        )
-        self.File._create_grammar_text(
-            dsl, "Terminals.langium", terminals_text, is_entry=False,
-        )
-
-        flattened = dsl._flattened_grammar_text()
-        self.assertNotIn("import 'Terminals'", flattened)
-        self.assertIn("entry Model infers Model", flattened)
-        self.assertIn("terminal ANY_OTHER", flattened)
-        try:
-            result = dsl._run_grammar_validation()
-        except UserError as err:
-            if "unavailable" in str(err).lower():
-                self.skipTest(str(err))
-            raise
-        self.assertTrue(result["valid"], result["diagnostics"])
-        dsl._ensure_grammar_publishable()

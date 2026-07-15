@@ -46,9 +46,9 @@ async function main() {
     const diagnostics = (document.diagnostics ?? []).map((diagnostic) => {
         let severity = SEVERITIES[diagnostic.severity] ?? 'error';
         // Langium 4.3.1 reports guarded assignments as unsupported while its
-        // runtime grammar loader still consumes them successfully. ASL uses
-        // this syntax for an optional `else`, so keep the diagnostic visible
-        // but non-fatal. The describer applies the same compatibility rule.
+        // runtime grammar loader still consumes them successfully, so keep
+        // the diagnostic visible but non-fatal. The describer applies the
+        // same compatibility rule.
         if (diagnostic.message === 'Predicates are currently not supported.') {
             severity = 'warning';
         }

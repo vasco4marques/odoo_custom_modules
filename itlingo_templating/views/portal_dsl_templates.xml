@@ -13,8 +13,8 @@
                     Published, self-contained grammars are available to document
                     templates automatically. Every grammar exposes the generic
                     <code>root</code>, <code>elements</code>, <code>by_type</code>,
-                    and <code>by_id</code> context; RSL and ASL also keep their
-                    built-in friendly aliases.
+                    and <code>by_id</code> context. A Template Profile can add
+                    friendly aliases for any DSL.
                 </p>
                 <a t-attf-href="/dsl/#{dsl.id}/template-reference"
                    class="btn btn-sm btn-outline-primary">
@@ -58,12 +58,14 @@
                 <page name="templating" string="Templating">
                     <group>
                         <field name="templating_generation_available"/>
+                        <field name="templating_validation_level"/>
                         <field name="template_profile" widget="text"
                                placeholder='{"bucket_aliases": {"Requirement": "requirements"}}'/>
                     </group>
                     <p class="text-muted">
                         Profiles add friendly aliases without changing the generic
-                        context. Record-sourced grammars must be self-contained.
+                        context. Use syntax-only validation only when the generic
+                        runtime lacks services required by the editor grammar.
                     </p>
                 </page>
             </xpath>

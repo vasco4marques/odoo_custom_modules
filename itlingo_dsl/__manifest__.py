@@ -1,11 +1,11 @@
 {
     'name': 'ITLingo DSL',
-    'version': '19.0.1.4.0',
+    'version': '19.0.1.5.0',
     'category': 'Services',
     'summary': 'Platform-level Domain-Specific Language registry for ITLingo Cloud',
     'description': """
 Registers and manages platform-level Domain-Specific Languages (DSLs)
-supported by the ITLingo Cloud platform, such as RSL and ASL.
+supported by the ITLingo Cloud platform.
 
 This module stores DSL metadata, lifecycle status, and references to
 documentation, grammar definitions, and parser/validator services. It
@@ -28,7 +28,6 @@ resources may be associated with a DSL.
         'views/itlingo_organization_views.xml',
         'views/itlingo_workspace_views.xml',
         'views/itlingo_dsl_menus.xml',
-        'data/itlingo_dsl_data.xml',
     ],
     'installable': True,
     'application': False,

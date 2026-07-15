@@ -8,7 +8,6 @@ from odoo.http import content_disposition, request
 
 from odoo.addons.itlingo_website_portal.controllers.dsl import ITLingoDslPortal
 from odoo.addons.itlingo_templating.services import template_linter
-from odoo.addons.itlingo_templating.services.dsl_parser import dsl_key_for_record
 from odoo.addons.itlingo_templating.services.starter_template import (
     build_starter_template,
 )
@@ -176,7 +175,6 @@ class ItlingoTemplateReferencePortal(http.Controller):
                 template_bytes,
                 template_format,
                 dsl._template_reference_context(),
-                dsl_key_for_record(request.env, dsl),
             )
         except (ImportError, UnicodeDecodeError, ValueError) as err:
             return self._render_detail(

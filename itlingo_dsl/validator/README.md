@@ -111,4 +111,4 @@ npm test
 
 The suite covers imported terminals, cross-references, arrays, optional
 groups, fragment rules, datatype rules, declared interfaces, unions, invalid
-input, and the bundled RSL/ASL grammars.
+input, and multi-file grammar inlining.

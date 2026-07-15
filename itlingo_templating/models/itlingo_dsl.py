@@ -5,9 +5,7 @@ from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
 
 from odoo.addons.itlingo_dsl.services import grammar_describe
-from odoo.addons.itlingo_templating.services import canonical_model
 from odoo.addons.itlingo_templating.services import template_reference as reference_service
-from odoo.addons.itlingo_templating.services.dsl_parser import dsl_key_for_record
 from odoo.addons.itlingo_templating.services.dsl_parser import is_templatable_dsl
 
 _logger = logging.getLogger(__name__)
@@ -16,9 +14,17 @@ _logger = logging.getLogger(__name__)
 class ItlingoDsl(models.Model):
     _inherit = "itlingo.dsl"
 
-    templating_builtin_generation = fields.Boolean(
-        string="Built-in Templating Generation",
-        compute="_compute_templating_builtin_generation",
+    templating_validation_level = fields.Selection(
+        selection=[
+            ("all", "Full validation"),
+            ("syntax", "Syntax only"),
+        ],
+        string="Specification Validation",
+        required=True,
+        default="all",
+        help="Use syntax-only parsing when a grammar depends on custom editor "
+             "scoping or validation services that are unavailable to the "
+             "generic templating runtime parser.",
     )
     template_profile = fields.Text(
         string="Template Profile (JSON)",
@@ -43,13 +49,6 @@ class ItlingoDsl(models.Model):
         copy=False,
         help="Schema version and SHA-256 grammar digest represented by the cached inventory.",
     )
-
-    @api.depends()
-    def _compute_templating_builtin_generation(self):
-        for dsl in self:
-            dsl.templating_builtin_generation = bool(
-                dsl_key_for_record(dsl.env, dsl)
-            )
 
     @api.depends(
         "status", "grammar_validation_result", "grammar_validation_digest",
@@ -78,10 +77,7 @@ class ItlingoDsl(models.Model):
 
     def _templating_profile(self):
         self.ensure_one()
-        custom = json.loads(self.template_profile or "{}")
-        return canonical_model.profile_for_dsl(
-            dsl_key_for_record(self.env, self), custom,
-        )
+        return json.loads(self.template_profile or "{}")
 
     def _templating_variable_groups(self):
         """Small, portal-safe discovery summary for template authors."""
@@ -90,7 +86,9 @@ class ItlingoDsl(models.Model):
         aliases = sorted(set((profile.get("bucket_aliases") or {}).values()))
         root_alias = profile.get("root_alias")
         return {
-            "core": ["root", "elements", "by_type", "by_id", "schema_version"],
+            "core": [
+                "root", "elements", "by_type", "by_id", "schema_version", "dsl",
+            ],
             "aliases": ([root_alias] if root_alias else []) + aliases
                 + ([profile["other_alias"]] if profile.get("other_alias") else []),
         }
@@ -98,18 +96,10 @@ class ItlingoDsl(models.Model):
     def _template_reference(self, refresh=False):
         """Return the raw grammar inventory, cached by grammar revision.
 
-        Built-in RSL/ASL grammars use the module-level file cache because their
-        committed grammar is independent from editable DSL record metadata.
-        Custom DSLs persist the describer payload on the record so a portal
+        The describer payload is persisted on the DSL record so a portal
         request spawns Node at most once per grammar digest.
         """
         self.ensure_one()
-        dsl_key = dsl_key_for_record(self.env, self)
-        if dsl_key:
-            return reference_service.builtin_reference(
-                self.env, dsl_key, refresh=refresh,
-            )
-
         technical_record = self.sudo()
         grammar = technical_record._grammar_file()
         grammar_digest = technical_record._grammar_digest()

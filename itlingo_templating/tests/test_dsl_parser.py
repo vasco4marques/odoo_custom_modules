@@ -1,6 +1,7 @@
 import hashlib
 
 from odoo.addons.itlingo_templating.services.dsl_parser import (
+    DslParseError,
     parse_dsl,
 )
 from odoo.tests import BaseCase, tagged
@@ -54,10 +55,14 @@ class _Dsl:
     acronym = "CAT"
     name = "Catalog"
     file_extensions = ".cat"
+    templating_validation_level = "all"
 
-    def __init__(self, grammar=GRAMMAR, flattened_grammar=None):
+    def __init__(
+        self, grammar=GRAMMAR, flattened_grammar=None, validation_level="all",
+    ):
         self.grammar = grammar
         self.flattened_grammar = flattened_grammar or grammar
+        self.templating_validation_level = validation_level
         self.published_digest = self._grammar_digest()
 
     def _grammar_file(self):
@@ -109,3 +114,14 @@ class TestRecordSourcedDslParser(BaseCase):
                 _Env(), _Dsl("grammar Catalog\nimport './Terminals'"),
                 b"catalog demo",
             )
+
+    def test_record_can_choose_syntax_only_validation(self):
+        source = b"catalog demo item review owner missing"
+        with self.assertRaises(DslParseError):
+            parse_dsl(_Env(), _Dsl(), source)
+
+        ast = parse_dsl(
+            _Env(), _Dsl(validation_level="syntax"), source,
+        )
+
+        self.assertEqual(ast["items"][0]["owner"], {"$ref": "missing"})
