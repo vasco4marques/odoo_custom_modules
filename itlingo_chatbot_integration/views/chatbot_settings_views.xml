@@ -77,6 +77,23 @@
                                         <field name="agentic_generation_phase5_model" nolabel="1" class="w-100"/>
                                     </div>
                                 </div>
+                                <div class="d-flex flex-column gap-2 mt-3">
+                                    <span class="o_form_label mb-0 fw-semibold">System Instructions</span>
+                                    <div class="text-muted small mb-1">
+                                        Platform instructions define the core behavior of the LLM and take
+                                        priority over any organization-level instructions. Organization
+                                        instructions are appended after platform instructions and must not
+                                        contradict them.
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="platform_sys_instruction" class="form-label mb-1">Platform System Instructions (Block 1)</label>
+                                        <field name="platform_sys_instruction" nolabel="1" class="w-100" placeholder="Enter the platform-level system instructions for the LLM..."/>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="organization_sys_instruction" class="form-label mb-1">Organization System Instructions (Block 2)</label>
+                                        <field name="organization_sys_instruction" nolabel="1" class="w-100" placeholder="Enter organization-specific instructions (optional)..."/>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

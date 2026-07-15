@@ -275,6 +275,18 @@ class ItlingoChatbotSettings(models.Model):
     agentic_generation_phase5_model = fields.Char(string='Phase 5 - finalize answer', compute='_compute_running_settings', inverse='_inverse_agentic_phase5')
     attachment_retention_days = fields.Integer(compute='_compute_running_settings', inverse='_inverse_attachment_retention_days')
     last_attachment_cleanup_at = fields.Datetime(compute='_compute_running_settings', inverse='_inverse_last_attachment_cleanup_at')
+    platform_sys_instruction = fields.Text(
+        string='Platform System Instructions',
+        compute='_compute_running_settings',
+        inverse='_inverse_platform_sys_instruction',
+        help='Global system instructions for the LLM. These take priority over organization-level instructions.',
+    )
+    organization_sys_instruction = fields.Text(
+        string='Organization System Instructions',
+        compute='_compute_running_settings',
+        inverse='_inverse_organization_sys_instruction',
+        help='Organization-specific system instructions. Appended after platform instructions. Must not contradict the platform.',
+    )
     active = fields.Boolean(default=True)
 
     @api.model
@@ -298,6 +310,15 @@ class ItlingoChatbotSettings(models.Model):
             'last_attachment_cleanup_at': ops_config.last_attachment_cleanup_at or '',
         }
 
+    @api.model
+    def _get_sys_instruction_values(self):
+        """Return platform and org sys instruction values from the SysInstruction table."""
+        sys_record = self._get_sys_instruction_record(organization_id=False)
+        return {
+            'platform_sys_instruction': sys_record.platform_instruction or '',
+            'organization_sys_instruction': sys_record.organization_instruction or '',
+        }
+
     # Category assignment fields that must start blank on org-scoped ops
     # configuration records so resolution falls back to the platform value.
     _OPS_CATEGORY_FIELDS = (
@@ -309,6 +330,15 @@ class ItlingoChatbotSettings(models.Model):
 
     def _ops_configuration_key(self, organization_id=False):
         return f'org:{organization_id}' if organization_id else 'default'
+
+    def _get_sys_instruction_record(self, organization_id=False):
+        """Return the SysInstruction row for the given scope (platform or org)."""
+        sys_model = self.env['itlingo.sys.instruction'].sudo()
+        key = f'org:{organization_id}' if organization_id else 'default'
+        record = sys_model.search([('key', '=', key)], limit=1)
+        if not record:
+            record = sys_model.create({'key': key, 'organization_id': organization_id or False})
+        return record
 
     def _get_ops_configuration_record(self, organization_id=False):
         ops_config_model = self.env['itlingo.ops.configuration'].sudo()
@@ -543,6 +573,7 @@ class ItlingoChatbotSettings(models.Model):
     @api.depends_context('uid')
     def _compute_running_settings(self):
         values = self._get_running_settings_values()
+        sys_values = self._get_sys_instruction_values()
         for record in self:
             record.chatbot_url = values['chatbot_url']
             record.langium_ai_service_url = values['langium_ai_service_url']
@@ -561,6 +592,8 @@ class ItlingoChatbotSettings(models.Model):
             except Exception:
                 record.attachment_retention_days = 7
             record.last_attachment_cleanup_at = values.get('last_attachment_cleanup_at') or False
+            record.platform_sys_instruction = sys_values.get('platform_sys_instruction') or ''
+            record.organization_sys_instruction = sys_values.get('organization_sys_instruction') or ''
 
     @api.depends('provider_ids', 'provider_ids.option_ids', 'provider_ids.option_ids.sequence', 'provider_ids.sequence')
     def _compute_model_groups(self):
@@ -636,6 +669,16 @@ class ItlingoChatbotSettings(models.Model):
         if hasattr(val, 'isoformat'):
             val = val.isoformat()
         self._get_ops_configuration_record().write({'last_attachment_cleanup_at': val or False})
+
+    def _inverse_platform_sys_instruction(self):
+        self.ensure_one()
+        sys_record = self._get_sys_instruction_record(organization_id=False)
+        sys_record.write({'platform_instruction': self.platform_sys_instruction or ''})
+
+    def _inverse_organization_sys_instruction(self):
+        self.ensure_one()
+        sys_record = self._get_sys_instruction_record(organization_id=False)
+        sys_record.write({'organization_instruction': self.organization_sys_instruction or ''})
 
     @api.model_create_multi
     def create(self, vals_list):

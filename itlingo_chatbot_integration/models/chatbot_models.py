@@ -141,6 +141,18 @@ class ItlingoOpsConfiguration(models.Model):
     updated_at = fields.Datetime(readonly=True)
 
 
+class ItlingoSysInstruction(models.Model):
+    _name = 'itlingo.sys.instruction'
+    _description = 'System Instruction'
+    _table = 'chatbot_sysinstruction'
+
+    key = fields.Char(required=True, default='default')
+    platform_instruction = fields.Text(string='Platform System Instructions', help='Global system instructions. These take priority over organization-level instructions.')
+    organization_instruction = fields.Text(string='Organization System Instructions', help='Organization-specific instructions. Must not contradict platform instructions.')
+    organization_id = fields.Integer(string='Organization ID', index=True)
+    updated_at = fields.Datetime(readonly=True)
+
+
 class ItlingoKBLanguage(models.Model):
     _name = 'itlingo.kb.language'
     _description = 'KB Language'
