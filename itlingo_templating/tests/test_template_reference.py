@@ -15,6 +15,17 @@ hidden terminal WS: /\s+/;
 terminal ID: /[a-zA-Z_][a-zA-Z0-9_]*/;
 """
 
+MULTI_FILE_ENTRY = (
+    "grammar MultiFile\n"
+    "import './common/terms';\n"
+    "entry Model: items+=Item*;\n"
+    "Item: 'item' name=ID;\n"
+)
+MULTI_FILE_TERMS = (
+    "hidden terminal WS: /\\s+/;\n"
+    "terminal ID: /[a-zA-Z_][a-zA-Z0-9_]*/;\n"
+)
+
 
 def inventory(type_name="Item"):
     return {
@@ -58,6 +69,48 @@ class TestTemplateReference(TransactionCase):
     def setUp(self):
         super().setUp()
         template_reference.clear_builtin_reference_cache()
+
+    def _multi_file_dsl(self):
+        dsl = self.env["itlingo.dsl"].create({
+            "name": "Template Reference Multi-file Test",
+            "acronym": "TRMF",
+            "version": "test-1.0",
+            "status": "draft",
+        })
+        files = self.env["itlingo.dsl.file"]
+        files._create_grammar_text(
+            dsl, "Main.langium", MULTI_FILE_ENTRY, is_entry=True,
+        )
+        files._create_grammar_text(
+            dsl, "common/terms.langium", MULTI_FILE_TERMS, is_entry=False,
+        )
+        return dsl
+
+    def test_multi_file_grammar_is_described_from_flattened_text(self):
+        dsl = self._multi_file_dsl()
+        with patch.object(
+            grammar_describe, "describe_grammar_text", return_value=inventory(),
+        ) as describe:
+            dsl._template_reference()
+
+        described_text = describe.call_args.args[1]
+        self.assertEqual(described_text, dsl._flattened_grammar_text())
+        self.assertNotIn("import", described_text)
+        self.assertIn("terminal ID", described_text)
+
+    def test_multi_file_grammar_inventory_succeeds_with_real_describer(self):
+        # Regression: raw entry text used to reach the describer, whose temp
+        # file location broke relative imports (ENOENT /tmp/<name>.langium).
+        dsl = self._multi_file_dsl()
+
+        try:
+            reference = dsl._template_reference(refresh=True)
+        except grammar_describe.GrammarDescribeUnavailable as err:
+            self.skipTest(str(err))
+
+        self.assertTrue(reference["success"], reference.get("message"))
+        self.assertEqual(reference["entry_type"], "Model")
+        self.assertIn("Item", [item["name"] for item in reference["types"]])
 
     def test_custom_inventory_is_cached_until_grammar_changes(self):
         with patch.object(

@@ -134,7 +134,7 @@ class ItlingoDsl(models.Model):
                 return cached
 
         inventory = grammar_describe.describe_grammar_text(
-            self.env, grammar._read_text_utf8(),
+            self.env, technical_record._flattened_grammar_text(),
         )
         technical_record.write({
             "template_reference_json": json.dumps(
