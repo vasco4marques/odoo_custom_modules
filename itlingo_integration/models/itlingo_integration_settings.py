@@ -41,11 +41,13 @@ class ItlingoIntegrationSettings(models.Model):
         default=24,
     )
     importable_extensions = fields.Char(
-        string='Importable File Extensions',
-        default='rsl,asl,txt,md,json,xml,yaml,yml,csv,properties',
-        help='Comma-separated list of file extensions (without the dot) that '
-             'ITOI users are allowed to import from cloud documents. Only '
-             'text-editable formats should be listed.',
+        string='Extra Importable File Extensions',
+        default='txt,md,json,xml,yaml,yml,csv,properties',
+        help='Comma-separated list of additional file extensions (without the '
+             'dot) that ITOI users are allowed to import from cloud documents. '
+             'The extensions of every registered DSL are always importable and '
+             'do not need to be listed here. Only text-editable formats should '
+             'be listed.',
     )
     active = fields.Boolean(default=True)
 
@@ -79,14 +81,21 @@ class ItlingoIntegrationSettings(models.Model):
         }
 
     def _get_importable_extensions(self):
-        """Return the set of allowed import extensions (lowercase, no dot)."""
+        """Return the set of allowed import extensions (lowercase, no dot).
+
+        Every registered DSL's extensions are importable by default: a DSL
+        exists to be authored and exchanged, so requiring an administrator to
+        whitelist each new one would make it unusable until they did. The
+        configured list only adds non-DSL formats on top.
+        """
         self.ensure_one()
         raw = self.importable_extensions or ''
-        return {
+        extra = {
             ext.strip().lower().lstrip('.')
             for ext in raw.split(',')
             if ext.strip()
         }
+        return extra | self.env['itlingo.dsl']._all_extensions()
 
     def _ensure_encryption_key(self):
         self.ensure_one()

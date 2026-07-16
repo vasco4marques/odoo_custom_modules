@@ -428,21 +428,12 @@ class ITLingoIntegrationAPI(http.Controller):
                     dsl.acronym, dsl.version, err,
                 )
                 continue
-            extensions = [
-                ext.strip().lstrip('.').lower()
-                for ext in (dsl.file_extensions or '').split(',')
-                if ext.strip()
-            ]
-            if not extensions:
-                # Sensible default so a DSL without configured extensions
-                # is still usable: lowercased acronym (e.g. PSL -> .psl).
-                extensions = [(dsl.acronym or '').strip().lower()]
             result.append({
                 'acronym': dsl.acronym,
                 'name': dsl.name,
                 'version': dsl.version,
                 'status': dsl.status,
-                'file_extensions': extensions,
+                'file_extensions': dsl._extensions(),
                 'grammar': grammar_text,
                 'digest': dsl._grammar_digest(),
             })

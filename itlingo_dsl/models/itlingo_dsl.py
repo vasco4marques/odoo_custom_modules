@@ -199,6 +199,32 @@ class ItlingoDsl(models.Model):
         return bool(user) and user in self.maintainer_ids
 
     # ------------------------------------------------------------------
+    # File extensions
+    # ------------------------------------------------------------------
+    def _extensions(self):
+        """Return this DSL's file extensions (lowercase, no dot)."""
+        self.ensure_one()
+        extensions = [
+            ext.strip().lstrip(".").lower()
+            for ext in (self.file_extensions or "").split(",")
+            if ext.strip()
+        ]
+        if not extensions:
+            # Sensible default so a DSL without configured extensions is
+            # still usable: lowercased acronym (e.g. PSL -> .psl).
+            acronym = (self.acronym or "").strip().lower()
+            extensions = [acronym] if acronym else []
+        return extensions
+
+    @api.model
+    def _all_extensions(self):
+        """Return the extensions of every registered DSL, as a set."""
+        extensions = set()
+        for dsl in self.sudo().search([]):
+            extensions.update(dsl._extensions())
+        return extensions
+
+    # ------------------------------------------------------------------
     # Constraints
     # ------------------------------------------------------------------
     @api.constrains("file_ids")
