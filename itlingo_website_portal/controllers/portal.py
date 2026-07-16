@@ -1595,6 +1595,18 @@ class ITLingoPortal(CustomerPortal):
             for field_name, label in self.LLM_CATEGORY_FIELDS
         ]
 
+        # System instruction for this organization
+        SysInstruction = request.env['itlingo.sys.instruction'].sudo()
+        org_sys_key = f'org:{org_id}'
+        org_sys = SysInstruction.search([('key', '=', org_sys_key)], limit=1)
+        # Fall back to the platform-level organization_instruction if the org
+        # hasn't set its own yet, so the textarea shows a starting point.
+        if not org_sys or not (org_sys.organization_instruction or '').strip():
+            platform_sys = SysInstruction.search([('key', '=', 'default')], limit=1)
+            org_sys_instruction = (platform_sys.organization_instruction or '').strip() if platform_sys else ''
+        else:
+            org_sys_instruction = (org_sys.organization_instruction or '').strip()
+
         values = self._prepare_portal_layout_values()
         values.update({
             'organization': org,
@@ -1606,6 +1618,7 @@ class ITLingoPortal(CustomerPortal):
             'org_models': org_models,
             'llm_categories': categories,
             'llm_error': None,
+            'org_sys_organization_instruction': org_sys_instruction,
         })
         return values
 
@@ -1733,6 +1746,52 @@ class ITLingoPortal(CustomerPortal):
             selected = (post.get(field_name) or '').strip()
             updates[field_name] = selected if selected in valid_values else ''
         ops_config.write(updates)
+        return request.redirect(f'/my/organizations/{org_id}/llm')
+
+    @route('/my/organizations/<int:org_id>/llm/sys-instruction',
+           type='http', auth='user', website=True, methods=['POST'])
+    def portal_organization_llm_sys_instruction(self, org_id, **post):
+        """Save organization-specific system instructions.
+
+        The platform instruction is global (``key="default"``) and is NOT
+        edited here — it is managed via the Odoo backend LLM Settings UI.
+        Only the organization-specific instruction (``key="org:<id>"``) is
+        saved through this endpoint.
+
+        POST params:
+          organization_instruction  --  org-level system instruction text
+        """
+        self._portal_org_llm_access(org_id)
+
+        org_instruction = (post.get('organization_instruction') or '').strip()
+        org_sys_key = f'org:{org_id}'
+
+        SysInstruction = request.env['itlingo.sys.instruction'].sudo()
+        existing = SysInstruction.search([('key', '=', org_sys_key)], limit=1)
+        if existing:
+            existing.write({'organization_instruction': org_instruction})
+        else:
+            SysInstruction.create({
+                'key': org_sys_key,
+                'organization_id': org_id,
+                'organization_instruction': org_instruction,
+            })
+
+        return request.redirect(f'/my/organizations/{org_id}/llm')
+
+    @route('/my/organizations/<int:org_id>/llm/sys-instruction/revert',
+           type='http', auth='user', website=True, methods=['POST'])
+    def portal_organization_llm_sys_instruction_revert(self, org_id, **post):
+        """Revert the organization's system instruction to the platform default.
+
+        Deletes the ``key="org:<id>"`` row so the next page load falls back
+        to the platform's ``organization_instruction``.
+        """
+        self._portal_org_llm_access(org_id)
+        SysInstruction = request.env['itlingo.sys.instruction'].sudo()
+        org_sys = SysInstruction.search([('key', '=', f'org:{org_id}')], limit=1)
+        if org_sys:
+            org_sys.unlink()
         return request.redirect(f'/my/organizations/{org_id}/llm')
 
     # Bullet-dot colors for the dashboard stats cards: semantic colors for
