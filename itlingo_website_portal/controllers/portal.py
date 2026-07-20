@@ -728,14 +728,14 @@ class ITLingoPortal(CustomerPortal):
         )
 
     def _template_type_id(self):
-        """Id of the 'Document Template' type, or False when unavailable."""
+        """Id of the unified 'Template' type, or False when unavailable."""
         t = request.env.ref(
             'itlingo_documents.doc_type_template', raise_if_not_found=False,
         )
         return t.id if t else False
 
     def _apply_template_vals(self, vals, post):
-        """Set the output pattern when the chosen type is 'Document Template'."""
+        """Set the output pattern when the chosen type is 'Template'."""
         Doc = request.env['itlingo.document']
         if 'output_filename_pattern' not in Doc._fields:
             return

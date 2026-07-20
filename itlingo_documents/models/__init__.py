@@ -1,4 +1,3 @@
-from . import itlingo_document_template
 from . import itlingo_document_type
 from . import itlingo_document
 from . import itlingo_library

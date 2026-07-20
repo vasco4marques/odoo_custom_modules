@@ -61,7 +61,6 @@
                             <field name="dsl_id"/>
                             <field name="language"/>
                             <field name="document_format"/>
-                            <field name="template_id"/>
                             <field name="version"/>
                 <field name="dsl_knowledge"
                                    help="Only published text-like documents can be marked."/>

@@ -9,7 +9,7 @@ from odoo.addons.itlingo_templating.services.rendering import (
     SUPPORTED_TEMPLATE_EXTENSIONS,
 )
 
-TEMPLATE_TYPE_CODE = "document_template"
+TEMPLATE_TYPE_CODE = "template"
 
 
 class ItlingoDocument(models.Model):
@@ -20,7 +20,7 @@ class ItlingoDocument(models.Model):
         compute="_compute_is_template",
         store=True,
         help="Derived from the document type: a document is a template when its "
-             "type is 'Document Template'. Templates are excluded from the "
+             "type is 'Template'. Templates are excluded from the "
              "knowledge pool and cannot be sent to ITOI.",
     )
     output_filename_pattern = fields.Char(
@@ -82,7 +82,9 @@ class ItlingoDocument(models.Model):
                 if extension:
                     extensions.append(extension)
             if doc.dsl_id and not extensions:
-                extensions = [".dsl"]
+                extensions = [
+                    ".%s" % extension for extension in doc.dsl_id._extensions()
+                ]
             doc.template_source_label = (
                 dsl_label(doc.dsl_id) if doc.dsl_id else "DSL specification"
             )
@@ -95,9 +97,25 @@ class ItlingoDocument(models.Model):
                 doc.dsl_id._templating_variable_groups() if doc.dsl_id else {}
             )
 
-    @api.constrains("is_template", "dsl_knowledge")
+    @api.constrains("document_type_id", "dsl_knowledge", "dsl_id")
     def _check_template_not_knowledge(self):
         for doc in self:
+            if doc.is_template and not doc.dsl_id:
+                raise ValidationError(_(
+                    "A template must be associated with exactly one DSL "
+                    "(document: %s).", doc.name,
+                ))
+            if (
+                doc.is_template
+                and doc.document_file
+                and not (doc.file_name or "").lower().endswith(
+                    SUPPORTED_TEMPLATE_EXTENSIONS
+                )
+            ):
+                raise ValidationError(_(
+                    "The template file format is not supported "
+                    "(document: %s).", doc.name,
+                ))
             if doc.is_template and doc.dsl_knowledge:
                 raise ValidationError(_(
                     "A template cannot be part of the knowledge pool "
@@ -105,7 +123,7 @@ class ItlingoDocument(models.Model):
                 ))
 
     def _vals_make_template(self, vals):
-        """True when *vals* set a document type whose code is 'document_template'."""
+        """True when *vals* set a document type whose code is 'template'."""
         dt_id = vals.get("document_type_id")
         if not dt_id:
             return False

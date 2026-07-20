@@ -30,10 +30,4 @@
               action="itlingo_document_type_action"
               sequence="10"/>
 
-    <menuitem id="itlingo_menu_document_templates"
-              name="Templates"
-              parent="itlingo_menu_documents_config"
-              action="itlingo_document_template_action"
-              sequence="20"/>
-
 </odoo>

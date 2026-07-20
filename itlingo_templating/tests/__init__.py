@@ -6,3 +6,4 @@ from . import test_portal_template_reference
 from . import test_starter_template
 from . import test_template_reference
 from . import test_template_linter
+from . import test_template_model

@@ -11,11 +11,11 @@
     </record>
 
     <record id="doc_type_specification_template" model="itlingo.document.type">
-        <field name="type_code">specification_template</field>
+        <field name="type_code">template</field>
         <field name="short_name">SPEC-TPL</field>
-        <field name="name">Specification Template</field>
-        <field name="extension_file">.rsl</field>
-        <field name="active" eval="True"/>
+        <field name="name">Legacy Specification Template</field>
+        <field name="extension_file"></field>
+        <field name="active" eval="False"/>
     </record>
 
     <record id="doc_type_specification_library" model="itlingo.document.type">
@@ -27,10 +27,10 @@
     </record>
 
     <record id="doc_type_template" model="itlingo.document.type">
-        <field name="type_code">document_template</field>
-        <field name="short_name">DOC-TPL</field>
-        <field name="name">Document Template</field>
-        <field name="extension_file">.docx</field>
+        <field name="type_code">template</field>
+        <field name="short_name">TPL</field>
+        <field name="name">Template</field>
+        <field name="extension_file"></field>
         <field name="active" eval="True"/>
     </record>
 

@@ -7,6 +7,9 @@
     <template id="portal_document_template_fields" name="Document Template Fields">
         <t t-if="template_type_id">
             <div id="doc_template_opts" class="mb-3" style="display:none;">
+                <div class="alert alert-info py-2">
+                    Templates require one DSL and a supported template file.
+                </div>
                 <label class="form-label" for="doc_output_pattern">Output filename pattern</label>
                 <input type="text" class="form-control" id="doc_output_pattern"
                        name="output_filename_pattern"
@@ -25,10 +28,21 @@
                 (function(){
                     var sel = document.querySelector('select[name=document_type_id]');
                     var opts = document.getElementById('doc_template_opts');
+                    var dsl = document.querySelector('select[name=dsl_id]');
+                    var files = document.querySelectorAll('input[type=file][name=document_file]');
                     var tplId = '<t t-esc="template_type_id"/>';
+                    var templateAccept = '.docx,.xlsx,.txt,.md,.rst,.html,.htm,.json,.xml,.yaml,.yml,.toml,.ini,.cfg,.properties,.sql,.csv,.tsv,.css,.js,.ts,.sh';
                     function sync(){
                         if(sel &amp;&amp; opts){
-                            opts.style.display = (String(sel.value) === tplId) ? '' : 'none';
+                            var isTemplate = String(sel.value) === tplId;
+                            opts.style.display = isTemplate ? '' : 'none';
+                            if(dsl){ dsl.required = isTemplate; }
+                            files.forEach(function(file){
+                                if(!file.dataset.originalAccept){
+                                    file.dataset.originalAccept = file.getAttribute('accept') || '';
+                                }
+                                file.setAttribute('accept', isTemplate ? templateAccept : file.dataset.originalAccept);
+                            });
                         }
                     }
                     if(sel){ sel.addEventListener('change', sync); }

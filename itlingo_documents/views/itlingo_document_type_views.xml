@@ -11,7 +11,6 @@
                 <field name="type_code"/>
                 <field name="subtype"/>
                 <field name="extension_file"/>
-                <field name="template_id"/>
             </list>
         </field>
     </record>
@@ -31,7 +30,6 @@
                         <group>
                             <field name="subtype"/>
                             <field name="extension_file"/>
-                            <field name="template_id"/>
                             <field name="active"/>
                         </group>
                     </group>

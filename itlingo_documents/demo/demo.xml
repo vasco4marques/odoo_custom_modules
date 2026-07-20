@@ -14,18 +14,6 @@
         <field name="creator_id" ref="base.user_admin"/>
     </record>
 
-    <record id="demo_doc_specification_template" model="itlingo.document">
-        <field name="name">RSL Use Case Structure</field>
-        <field name="document_type_id" ref="itlingo_documents.doc_type_specification_template"/>
-        <field name="language">en</field>
-        <field name="version">1.0</field>
-        <field name="file_name">rsl_use_case_structure.rsl</field>
-        <field name="status">approved</field>
-        <field name="project_id" ref="itlingo_workspace_access.project_itlingo_platform"/>
-        <field name="organization_id" ref="itlingo_organizations.org_techcorp"/>
-        <field name="creator_id" ref="base.user_admin"/>
-    </record>
-
     <record id="demo_doc_specification_library" model="itlingo.document">
         <field name="name">Reusable Requirement Fragments</field>
         <field name="document_type_id" ref="itlingo_documents.doc_type_specification_library"/>
@@ -33,18 +21,6 @@
         <field name="version">1.0</field>
         <field name="file_name">reusable_requirement_fragments.rsl</field>
         <field name="status">published</field>
-        <field name="organization_id" ref="itlingo_organizations.org_techcorp"/>
-        <field name="creator_id" ref="base.user_admin"/>
-    </record>
-
-    <record id="demo_doc_document_template" model="itlingo.document">
-        <field name="name">Requirements Report Layout</field>
-        <field name="document_type_id" ref="itlingo_documents.doc_type_template"/>
-        <field name="language">en</field>
-        <field name="version">1.0</field>
-        <field name="file_name">requirements_report_layout.docx</field>
-        <field name="status">approved</field>
-        <field name="project_id" ref="itlingo_workspace_access.project_itlingo_platform"/>
         <field name="organization_id" ref="itlingo_organizations.org_techcorp"/>
         <field name="creator_id" ref="base.user_admin"/>
     </record>

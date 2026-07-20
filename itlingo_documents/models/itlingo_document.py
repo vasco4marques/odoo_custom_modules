@@ -58,9 +58,6 @@ class ItlingoDocument(models.Model):
              "the organization / workspace knowledge pool the chatbot uses for "
              "grounding. A document must be published before it can be marked.",
     )
-    template_id = fields.Many2one(
-        'itlingo.document.template', string='Template',
-    )
     project_id = fields.Many2one(
         'itlingo.workspace', string='Workspace',
         tracking=True,
