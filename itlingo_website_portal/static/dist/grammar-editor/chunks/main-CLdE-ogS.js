@@ -39666,7 +39666,7 @@ function oZ(e, t) {
 	return new aZ(() => {
 		let e = new Worker(new URL(
 			/* @vite-ignore */
-			"/itlingo_website_portal/static/dist/grammar-editor/workers/langium-grammar-server-Bs-ocheI.worker.js",
+			"/itlingo_website_portal/static/dist/grammar-editor/langium-grammar-server-Bs-ocheI.worker.js",
 			"" + import.meta.url
 		), {
 			type: "module",
@@ -42897,9 +42897,9 @@ var VQ = class {
 	dispose() {
 		this.extensionRegisterResults.forEach((e) => e.dispose()), this.disposableStore.dispose(), this.disposableStore = new H();
 	}
-}, HQ;
-function UQ() {
-	return HQ ||= new VQ({
+}, HQ = "/itlingo_website_portal/static/dist/grammar-editor/editor-CRW9Un3V.worker.js", UQ;
+function WQ() {
+	return UQ ||= new VQ({
 		$type: "classic",
 		viewsConfig: { $type: "EditorService" },
 		advanced: {
@@ -42909,29 +42909,29 @@ function UQ() {
 		monacoWorkerFactory: (e) => {
 			IQ({
 				logger: e,
-				workerLoaders: { editorWorkerService: () => new FQ(new URL("data:text/javascript;base64,ZXhwb3J0ICogZnJvbSAnQGNvZGluZ2FtZS9tb25hY28tdnNjb2RlLWFwaS93b3JrZXJzL2VkaXRvci53b3JrZXIn", "" + import.meta.url), {
+				workerLoaders: { editorWorkerService: () => new FQ(HQ, {
 					type: "module",
 					name: "ITLingo Monaco editor worker"
 				}) }
 			});
 		}
-	}).start({ caller: "ITLingo Grammar Editor" }), HQ;
+	}).start({ caller: "ITLingo Grammar Editor" }), UQ;
 }
 //#endregion
 //#region src/problems.ts
-var WQ = 8, GQ = 4, KQ = 2;
-function qQ(e) {
-	return e === WQ ? "error" : e === GQ ? "warning" : e === KQ ? "info" : "hint";
+var GQ = 8, KQ = 4, qQ = 2;
+function JQ(e) {
+	return e === GQ ? "error" : e === KQ ? "warning" : e === qQ ? "info" : "hint";
 }
-var JQ = {
+var YQ = {
 	error: 0,
 	warning: 1,
 	info: 2,
 	hint: 3
 };
-function YQ(e, t = {}) {
+function XQ(e, t = {}) {
 	return e.map((e) => ({
-		severity: qQ(e.severity),
+		severity: JQ(e.severity),
 		message: e.message,
 		startLineNumber: e.startLineNumber,
 		startColumn: e.startColumn,
@@ -42941,9 +42941,9 @@ function YQ(e, t = {}) {
 		code: typeof e.code == "object" ? e.code?.value || "" : e.code || "",
 		resource: t.resource || e.resource?.toString() || "",
 		path: t.path || ""
-	})).sort((e, t) => JQ[e.severity] - JQ[t.severity] || e.startLineNumber - t.startLineNumber || e.startColumn - t.startColumn || e.message.localeCompare(t.message));
+	})).sort((e, t) => YQ[e.severity] - YQ[t.severity] || e.startLineNumber - t.startLineNumber || e.startColumn - t.startColumn || e.message.localeCompare(t.message));
 }
-function XQ(e) {
+function ZQ(e) {
 	let t = /* @__PURE__ */ new Map();
 	for (let n of e) {
 		let e = n.path || n.resource || "Grammar", r = t.get(e) || [];
@@ -42951,7 +42951,7 @@ function XQ(e) {
 	}
 	return t;
 }
-function ZQ(e) {
+function QQ(e) {
 	let t = e.filter((e) => e.severity === "error").length, n = e.filter((e) => e.severity === "warning").length;
 	return {
 		errors: t,
@@ -42960,12 +42960,12 @@ function ZQ(e) {
 		total: e.length
 	};
 }
-function QQ(e) {
+function $Q(e) {
 	if (e.total === 0) return "No problems";
 	let t = [];
 	return e.errors && t.push(`${e.errors} ${e.errors === 1 ? "error" : "errors"}`), e.warnings && t.push(`${e.warnings} ${e.warnings === 1 ? "warning" : "warnings"}`), e.others && t.push(`${e.others} ${e.others === 1 ? "hint" : "hints"}`), t.join(", ");
 }
-async function $Q(e, t, n = Date.now, r = (e) => new Promise((t) => setTimeout(t, e))) {
+async function e$(e, t, n = Date.now, r = (e) => new Promise((t) => setTimeout(t, e))) {
 	let i = n() + t.timeoutMs;
 	for (;;) {
 		let a = n() - e();
@@ -42976,17 +42976,17 @@ async function $Q(e, t, n = Date.now, r = (e) => new Promise((t) => setTimeout(t
 }
 //#endregion
 //#region src/workspace-files.ts
-function e$(e, t) {
+function t$(e, t) {
 	return `file:///itlingo-dsl/${e}/${t.split("/").map((e) => encodeURIComponent(e)).join("/")}`;
 }
-function t$(e) {
+function n$(e) {
 	let t = e.trim(), n = t.split("/");
 	if (!t || t.includes("\0") || t.includes("\\") || t.startsWith("/")) throw Error("Use a non-empty relative path with forward slashes.");
 	if (n.some((e) => !e || e === "." || e === "..")) throw Error("Grammar paths cannot contain empty, '.' or '..' segments.");
 	if (!t.endsWith(".langium")) throw Error("Grammar paths must end in .langium.");
 	return t;
 }
-var n$ = class {
+var r$ = class {
 	files = /* @__PURE__ */ new Map();
 	add(e) {
 		if (this.files.has(e.path)) throw Error(`The grammar workspace already contains '${e.path}'.`);
@@ -43035,7 +43035,7 @@ var n$ = class {
 //#endregion
 //#region src/main.ts
 Nd();
-async function r$(e, t = {}) {
+async function i$(e, t = {}) {
 	let n = await fetch(e, {
 		method: "POST",
 		credentials: "same-origin",
@@ -43053,12 +43053,12 @@ async function r$(e, t = {}) {
 	if (r.result === void 0) throw Error("The grammar server returned an empty response.");
 	return r.result;
 }
-function i$(e, t) {
+function a$(e, t) {
 	let n = e.querySelector(t);
 	if (!n) throw Error(`Grammar Editor element is missing: ${t}`);
 	return n;
 }
-function a$() {
+function o$() {
 	UD.getLanguages().some((e) => e.id === "langium") || (UD.register({
 		id: "langium",
 		extensions: [".langium"],
@@ -43111,7 +43111,7 @@ function a$() {
 		}
 	}));
 }
-var o$ = class {
+var s$ = class {
 	root;
 	dslId;
 	editorHost;
@@ -43127,7 +43127,7 @@ var o$ = class {
 	filename;
 	problemsSummary;
 	problemsList;
-	files = new n$();
+	files = new r$();
 	viewStates = /* @__PURE__ */ new Map();
 	modelListeners = /* @__PURE__ */ new Map();
 	fileNodes = /* @__PURE__ */ new Map();
@@ -43148,12 +43148,12 @@ var o$ = class {
 	lastActivityAt = Date.now();
 	constructor(e) {
 		if (this.root = e, this.dslId = Number(e.dataset.dslId), !Number.isInteger(this.dslId) || this.dslId <= 0) throw Error("The Grammar Editor has an invalid DSL identifier.");
-		this.editorHost = i$(e, "[data-grammar-editor]"), this.filesHost = i$(e, "[data-grammar-files]"), this.createButton = e.querySelector("[data-grammar-file-create]"), this.saveButton = e.querySelector("[data-grammar-save]"), this.validateButton = i$(e, "[data-grammar-validate]"), this.restartButton = i$(e, "[data-grammar-server-restart]"), this.status = i$(e, "[data-grammar-status]"), this.validity = i$(e, "[data-grammar-validity]"), this.serverStatus = i$(e, "[data-grammar-server-status]"), this.error = i$(e, "[data-grammar-error]"), this.filename = i$(e, "[data-grammar-filename]"), this.problemsSummary = i$(e, "[data-grammar-problems-summary]"), this.problemsList = i$(e, "[data-grammar-problems]");
+		this.editorHost = a$(e, "[data-grammar-editor]"), this.filesHost = a$(e, "[data-grammar-files]"), this.createButton = e.querySelector("[data-grammar-file-create]"), this.saveButton = e.querySelector("[data-grammar-save]"), this.validateButton = a$(e, "[data-grammar-validate]"), this.restartButton = a$(e, "[data-grammar-server-restart]"), this.status = a$(e, "[data-grammar-status]"), this.validity = a$(e, "[data-grammar-validity]"), this.serverStatus = a$(e, "[data-grammar-server-status]"), this.error = a$(e, "[data-grammar-error]"), this.filename = a$(e, "[data-grammar-filename]"), this.problemsSummary = a$(e, "[data-grammar-problems-summary]"), this.problemsList = a$(e, "[data-grammar-problems]");
 	}
 	async start() {
 		this.setState("Loading…"), this.setValidity("not-validated", "Not validated"), this.saveButton?.addEventListener("click", this.onSaveClick), this.validateButton.addEventListener("click", this.onValidateClick), this.restartButton.addEventListener("click", this.onRestartClick), this.createButton?.addEventListener("click", this.onCreateClick), this.filesHost.addEventListener("click", this.onFilesClick), this.problemsList.addEventListener("click", this.onProblemsClick), this.problemsList.addEventListener("keydown", this.onProblemsKeydown), window.addEventListener("beforeunload", this.onBeforeUnload), window.addEventListener("pagehide", this.onPageHide);
 		try {
-			let e = await r$(`/dsl/${this.dslId}/grammar/load`);
+			let e = await i$(`/dsl/${this.dslId}/grammar/load`);
 			this.canEdit = e.permissions.canEdit;
 			let t = e.files.length ? e.files : this.canEdit ? [{
 				path: e.suggestedPath,
@@ -43163,13 +43163,13 @@ var o$ = class {
 			}] : [];
 			this.overlayRegistration = Cd(1, this.fileProvider);
 			for (let e of t) this.registerOverlayFile(e.path, e.content);
-			await UQ(), this.mount(t);
+			await WQ(), this.mount(t);
 		} catch (e) {
 			this.fail(e, "Could not load the grammar editor.");
 		}
 	}
 	mount(e) {
-		a$();
+		o$();
 		for (let t of e) this.addModel(t);
 		let t = e.find((e) => e.isEntry) || e[0];
 		this.editor = HD.create(this.editorHost, {
@@ -43195,7 +43195,7 @@ var o$ = class {
 		}), this.renderFiles(), this.updateDiagnosticMetadata(), this.refreshSaveState(), this.editor.focus();
 	}
 	addModel(e) {
-		let t = VD.parse(e$(this.dslId, e.path)), n = HD.createModel(e.content, "langium", t), r = n.getAlternativeVersionId(), i = this.files.add({
+		let t = VD.parse(t$(this.dslId, e.path)), n = HD.createModel(e.content, "langium", t), r = n.getAlternativeVersionId(), i = this.files.add({
 			id: e.id,
 			path: e.path,
 			isEntry: e.isEntry,
@@ -43213,7 +43213,7 @@ var o$ = class {
 		}));
 	}
 	registerOverlayFile(e, t) {
-		let n = new Md(VD.parse(e$(this.dslId, e)), t);
+		let n = new Md(VD.parse(t$(this.dslId, e)), t);
 		this.fileNodes.set(e, n), this.fileRegistrations.set(e, this.fileProvider.registerFile(n));
 	}
 	unregisterOverlayFile(e) {
@@ -43284,9 +43284,9 @@ var o$ = class {
 	};
 	async createFile(e) {
 		try {
-			let t = t$(e);
+			let t = n$(e);
 			this.hideError();
-			let n = await r$(`/dsl/${this.dslId}/grammar/file/create`, {
+			let n = await i$(`/dsl/${this.dslId}/grammar/file/create`, {
 				path: t,
 				content: ""
 			});
@@ -43300,15 +43300,15 @@ var o$ = class {
 		if (!t?.id) return;
 		let n = window.prompt("New relative .langium path:", e);
 		if (n !== null) try {
-			let r = t$(n);
+			let r = n$(n);
 			if (r === e) return;
 			this.hideError();
-			let i = await r$(`/dsl/${this.dslId}/grammar/file/rename`, {
+			let i = await i$(`/dsl/${this.dslId}/grammar/file/rename`, {
 				file_id: t.id,
 				path: r
 			}), a = t.model.getValue(), o = this.activePath === e;
 			o && this.editor && this.viewStates.set(e, this.editor.saveViewState()), this.registerOverlayFile(r, a);
-			let s = HD.createModel(a, "langium", VD.parse(e$(this.dslId, r))), c = this.files.rename(e, r, s);
+			let s = HD.createModel(a, "langium", VD.parse(t$(this.dslId, r))), c = this.files.rename(e, r, s);
 			c.id = i.id, c.isEntry = i.isEntry, this.modelListeners.get(e)?.dispose(), this.modelListeners.delete(e), this.attachModelListener(c);
 			let l = this.viewStates.get(e) || null;
 			this.viewStates.delete(e), this.viewStates.set(r, l), o && this.editor && (this.activePath = r, this.editor.setModel(s), this.editor.restoreViewState(l)), t.model.dispose(), this.unregisterOverlayFile(e), this.renderFiles(), this.updateDiagnosticMetadata(), this.refreshSaveState();
@@ -43319,7 +43319,7 @@ var o$ = class {
 	async deleteFile(e) {
 		let t = this.files.get(e);
 		if (!(!t?.id || !window.confirm(`Delete ${e}?`))) try {
-			this.hideError(), await r$(`/dsl/${this.dslId}/grammar/file/delete`, { file_id: t.id });
+			this.hideError(), await i$(`/dsl/${this.dslId}/grammar/file/delete`, { file_id: t.id });
 			let n = this.activePath === e;
 			if (this.modelListeners.get(e)?.dispose(), this.modelListeners.delete(e), this.files.delete(e), this.viewStates.delete(e), this.unregisterOverlayFile(e), n) {
 				let e = this.files.sorted()[0];
@@ -43334,7 +43334,7 @@ var o$ = class {
 		let t = this.files.get(e);
 		if (t?.id) try {
 			this.hideError();
-			let e = await r$(`/dsl/${this.dslId}/grammar/file/set-entry`, { file_id: t.id });
+			let e = await i$(`/dsl/${this.dslId}/grammar/file/set-entry`, { file_id: t.id });
 			for (let t of e.files) {
 				let e = this.files.get(t.path);
 				e && (e.isEntry = t.isEntry);
@@ -43372,18 +43372,18 @@ var o$ = class {
 		this.updateDiagnosticMetadata();
 	}
 	updateDiagnosticMetadata() {
-		this.problems = this.files.sorted().flatMap((e) => YQ(HD.getModelMarkers({ resource: e.model.uri }), {
+		this.problems = this.files.sorted().flatMap((e) => XQ(HD.getModelMarkers({ resource: e.model.uri }), {
 			resource: e.model.uri.toString(),
 			path: e.path
 		}));
-		let e = ZQ(this.problems);
+		let e = QQ(this.problems);
 		this.root.dataset.grammarDiagnostics = String(e.total), this.root.dataset.grammarDiagnosticErrors = String(e.errors), this.root.dataset.grammarDiagnosticWarnings = String(e.warnings), this.root.dataset.grammarDiagnosticMessages = JSON.stringify(this.problems.map((e) => e.message)), this.renderProblems(), this.renderFiles(), this.refreshValidity();
 	}
 	renderProblems() {
-		let e = ZQ(this.problems);
-		this.problemsSummary.textContent = `Problems: ${QQ(e)}`;
+		let e = QQ(this.problems);
+		this.problemsSummary.textContent = `Problems: ${$Q(e)}`;
 		let t = [], n = 0;
-		for (let [e, r] of XQ(this.problems)) {
+		for (let [e, r] of ZQ(this.problems)) {
 			let i = document.createElement("div");
 			i.className = "itlingo-grammar-problem-file", i.textContent = e, t.push(i);
 			for (let i of r) {
@@ -43438,7 +43438,7 @@ var o$ = class {
 			}
 			this.validating = !0, this.setValidity("validating", "Validating…"), this.updateValidateButton();
 			try {
-				let e = await $Q(() => this.lastActivityAt, {
+				let e = await e$(() => this.lastActivityAt, {
 					quietMs: 600,
 					timeoutMs: 15e3
 				});
@@ -43448,8 +43448,8 @@ var o$ = class {
 					return;
 				}
 				this.updateDiagnosticMetadata();
-				let t = ZQ(this.problems);
-				this.validatedClean = t.errors === 0, this.setValidity(t.errors === 0 ? "valid" : "invalid", t.errors === 0 ? "Valid" : QQ(t)), this.root.dataset.grammarErrorKind === "validate" && this.hideError();
+				let t = QQ(this.problems);
+				this.validatedClean = t.errors === 0, this.setValidity(t.errors === 0 ? "valid" : "invalid", t.errors === 0 ? "Valid" : $Q(t)), this.root.dataset.grammarErrorKind === "validate" && this.hideError();
 			} finally {
 				this.validating = !1, this.updateValidateButton();
 			}
@@ -43460,8 +43460,8 @@ var o$ = class {
 	}
 	refreshValidity() {
 		if (this.validating) return;
-		let e = ZQ(this.problems);
-		e.errors > 0 ? (this.validatedClean = !1, this.setValidity("invalid", QQ(e))) : this.validatedClean ? this.setValidity("valid", "Valid") : this.setValidity("not-validated", "Not validated");
+		let e = QQ(this.problems);
+		e.errors > 0 ? (this.validatedClean = !1, this.setValidity("invalid", $Q(e))) : this.validatedClean ? this.setValidity("valid", "Valid") : this.setValidity("not-validated", "Not validated");
 	}
 	updateValidateButton() {
 		this.validateButton.disabled = this.validating || !this.serverReady || this.files.sorted().length === 0;
@@ -43474,7 +43474,7 @@ var o$ = class {
 			for (let [t, n] of e.entries()) {
 				let r = n.model.getAlternativeVersionId();
 				this.setState(`Saving ${t + 1}/${e.length}…`);
-				let i = await r$(`/dsl/${this.dslId}/grammar/save`, {
+				let i = await i$(`/dsl/${this.dslId}/grammar/save`, {
 					file_id: n.id || !1,
 					path: n.path,
 					content: n.model.getValue()
@@ -43522,9 +43522,9 @@ var o$ = class {
 			this.overlayRegistration?.dispose(), this.fileProvider.dispose();
 		}
 	}
-}, s$;
-function c$(e) {
-	return s$ = new o$(e), s$;
+}, c$;
+function l$(e) {
+	return c$ = new s$(e), c$;
 }
 //#endregion
-export { c$ as mountGrammarEditor };
+export { l$ as mountGrammarEditor };

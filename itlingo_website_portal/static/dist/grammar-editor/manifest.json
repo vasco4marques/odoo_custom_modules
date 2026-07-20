@@ -506,7 +506,7 @@
     ]
   },
   "src/bootstrap.ts": {
-    "file": "grammar-editor-CWDGYLft.js",
+    "file": "grammar-editor-C_RCR1IN.js",
     "name": "bootstrap",
     "src": "src/bootstrap.ts",
     "isEntry": true,
@@ -515,7 +515,7 @@
     ]
   },
   "src/main.ts": {
-    "file": "chunks/main-CcVlSc5r.js",
+    "file": "chunks/main-CLdE-ogS.js",
     "name": "main",
     "src": "src/main.ts",
     "isDynamicEntry": true,

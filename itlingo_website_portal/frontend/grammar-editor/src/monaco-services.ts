@@ -3,6 +3,7 @@ import {
     useWorkerFactory,
     Worker as WorkerDefinition,
 } from 'monaco-languageclient/workerFactory';
+import editorWorkerUrl from '@codingame/monaco-vscode-editor-api/esm/vs/editor/editor.worker.js?worker&url';
 
 let initialization: Promise<void> | undefined;
 
@@ -21,10 +22,7 @@ export function initializeMonacoServices(): Promise<void> {
                     logger,
                     workerLoaders: {
                         editorWorkerService: () => new WorkerDefinition(
-                            new URL(
-                                '@codingame/monaco-vscode-editor-api/esm/vs/editor/editor.worker.js',
-                                import.meta.url,
-                            ),
+                            editorWorkerUrl,
                             {type: 'module', name: 'ITLingo Monaco editor worker'},
                         ),
                     },

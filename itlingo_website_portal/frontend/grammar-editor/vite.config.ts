@@ -29,12 +29,12 @@ export default defineConfig({
             output: {
                 entryFileNames: (chunk) => (
                     chunk.name.includes('langium-server')
-                        ? 'workers/langium-grammar-server-[hash].worker.js'
+                        ? 'langium-grammar-server-[hash].worker.js'
                         : chunk.name.includes('editor.worker')
-                            ? 'workers/editor-[hash].worker.js'
-                            : 'workers/[name]-[hash].js'
+                            ? 'editor-[hash].worker.js'
+                            : '[name]-[hash].js'
                 ),
-                chunkFileNames: 'workers/chunks/[name]-[hash].js',
+                chunkFileNames: '[name]-[hash].js',
             },
         },
     },
