@@ -34,12 +34,25 @@ function eventError(event: ErrorEvent | PromiseRejectionEvent): unknown {
         : event.error || event.message;
 }
 
+function isBenignResizeObserverError(error: unknown): boolean {
+    return errorMessage(error, String(error || '')).includes('ResizeObserver loop');
+}
+
 function containGlobalEditorError(event: ErrorEvent | PromiseRejectionEvent): void {
     if (!root) {
         return;
     }
+    const error = eventError(event);
+    if (
+        isBenignResizeObserverError(error)
+        || isBenignResizeObserverError(event)
+    ) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        return;
+    }
     showEditorError(
-        eventError(event),
+        error,
         'The Grammar Editor stopped unexpectedly. Reload the page to try again.',
         'uncaught',
     );

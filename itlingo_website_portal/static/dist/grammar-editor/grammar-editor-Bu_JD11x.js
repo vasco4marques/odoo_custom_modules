@@ -11,10 +11,19 @@ function r(t, r, i = "bootstrap") {
 function i(e) {
 	return e instanceof PromiseRejectionEvent ? e.reason : e.error || e.message;
 }
-function a(t) {
-	e && (r(i(t), "The Grammar Editor stopped unexpectedly. Reload the page to try again.", "uncaught"), t.preventDefault(), t.stopImmediatePropagation());
+function a(e) {
+	return n(e, String(e || "")).includes("ResizeObserver loop");
 }
-function o() {
+function o(t) {
+	if (!e) return;
+	let n = i(t);
+	if (a(n) || a(t)) {
+		t.preventDefault(), t.stopImmediatePropagation();
+		return;
+	}
+	r(n, "The Grammar Editor stopped unexpectedly. Reload the page to try again.", "uncaught"), t.preventDefault(), t.stopImmediatePropagation();
+}
+function s() {
 	if (!("Worker" in window)) return !1;
 	let e = !1, t = URL.createObjectURL(new Blob(["export {};"], { type: "text/javascript" }));
 	try {
@@ -28,7 +37,7 @@ function o() {
 	}
 	return e;
 }
-e && (window.addEventListener("error", a, { capture: !0 }), window.addEventListener("unhandledrejection", a, { capture: !0 }), o() ? import("./chunks/main-CLdE-ogS.js").then((n) => (t = n.mountGrammarEditor(e), t?.start())).catch((e) => {
+e && (window.addEventListener("error", o, { capture: !0 }), window.addEventListener("unhandledrejection", o, { capture: !0 }), s() ? import("./chunks/main-CLdE-ogS.js").then((n) => (t = n.mountGrammarEditor(e), t?.start())).catch((e) => {
 	r(e, "Could not start the Grammar Editor.");
 }) : r(/* @__PURE__ */ Error("This browser cannot run module workers. Please use a current version of Firefox, Chrome, Edge, or Safari."), "This browser is not supported by the Grammar Editor.", "unsupported-browser"));
 //#endregion
