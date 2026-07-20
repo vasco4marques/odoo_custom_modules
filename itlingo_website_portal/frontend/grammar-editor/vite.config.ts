@@ -7,12 +7,20 @@ export default defineConfig({
     build: {
         outDir,
         emptyOutDir: true,
+        manifest: 'manifest.json',
         sourcemap: false,
         lib: {
-            entry: 'src/main.ts',
+            entry: 'src/bootstrap.ts',
             formats: ['es'],
-            fileName: () => 'grammar-editor.js',
+            fileName: () => 'grammar-editor',
             cssFileName: 'grammar-editor',
+        },
+        rollupOptions: {
+            output: {
+                entryFileNames: 'grammar-editor-[hash].js',
+                chunkFileNames: 'chunks/[name]-[hash].js',
+                assetFileNames: 'assets/[name]-[hash][extname]',
+            },
         },
     },
     worker: {
@@ -21,11 +29,12 @@ export default defineConfig({
             output: {
                 entryFileNames: (chunk) => (
                     chunk.name.includes('langium-server')
-                        ? 'langium-grammar-server.worker.js'
+                        ? 'workers/langium-grammar-server-[hash].worker.js'
                         : chunk.name.includes('editor.worker')
-                            ? 'editor.worker.js'
-                            : '[name]-[hash].js'
+                            ? 'workers/editor-[hash].worker.js'
+                            : 'workers/[name]-[hash].js'
                 ),
+                chunkFileNames: 'workers/chunks/[name]-[hash].js',
             },
         },
     },

@@ -931,8 +931,9 @@ export class GrammarEditorApp {
     }
 }
 
-const root = document.querySelector<HTMLElement>('#itlingo-grammar-editor');
-export const grammarEditorApp = root ? new GrammarEditorApp(root) : undefined;
-if (grammarEditorApp) {
-    void grammarEditorApp.start();
+export let grammarEditorApp: GrammarEditorApp | undefined;
+
+export function mountGrammarEditor(root: HTMLElement): GrammarEditorApp {
+    grammarEditorApp = new GrammarEditorApp(root);
+    return grammarEditorApp;
 }

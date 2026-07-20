@@ -1,3 +1,4 @@
+import json
 import os
 import re
 
@@ -36,22 +37,29 @@ class ITLingoDslGrammarPortal(ITLingoDslPortal):
             raise MissingError(_('Grammar file not found.'))
         return grammar
 
-    def _grammar_asset_version(self):
-        """Return a cache-busting token that changes on every editor rebuild.
-
-        The built bundle is served from a fixed, unversioned URL with a long
-        max-age, so browsers keep a stale copy after a rebuild. Deriving the
-        token from the built file's size and mtime forces a fresh download
-        whenever the assets are regenerated, without breaking the bundle's
-        sibling-chunk imports (which a relocating Odoo asset bundle would).
-        """
+    def _grammar_assets(self):
+        """Return the content-hashed editor entry and stylesheet paths."""
         module_path = get_module_path('itlingo_website_portal')
-        entry = os.path.join(module_path, _GRAMMAR_ASSET_DIR, 'grammar-editor.js')
+        manifest_path = os.path.join(
+            module_path, _GRAMMAR_ASSET_DIR, 'manifest.json',
+        )
         try:
-            stat = os.stat(entry)
-        except OSError:
-            return '0'
-        return f'{int(stat.st_mtime)}-{stat.st_size}'
+            with open(manifest_path, encoding='utf-8') as manifest_file:
+                manifest = json.load(manifest_file)
+            entry = next(
+                asset for asset in manifest.values() if asset.get('isEntry')
+            )
+            return {
+                'script': entry['file'],
+                'styles': entry.get('css', []),
+            }
+        except (OSError, ValueError, KeyError, StopIteration, TypeError):
+            # Keep a useful page in source-only development checkouts. A
+            # production build always ships the manifest and hashed assets.
+            return {
+                'script': 'grammar-editor.js',
+                'styles': ['grammar-editor.css'],
+            }
 
     def _default_grammar_filename(self, dsl):
         stem = re.sub(r'[^A-Za-z0-9_-]+', '-', dsl.acronym or '').strip('-_')
@@ -91,7 +99,7 @@ class ITLingoDslGrammarPortal(ITLingoDslPortal):
             'dsl': dsl,
             'page_name': 'dsl_grammar_editor',
             'can_edit_grammar': self._can_edit_dsl(dsl) and dsl.status == 'draft',
-            'grammar_asset_version': self._grammar_asset_version(),
+            'grammar_assets': self._grammar_assets(),
         })
         return request.render(
             'itlingo_website_portal.portal_dsl_grammar_editor', values,

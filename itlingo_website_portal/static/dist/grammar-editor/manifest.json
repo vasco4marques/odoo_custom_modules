@@ -1,0 +1,558 @@
+{
+  "__.contribution-Cwrg5iz1.js": {
+    "file": "chunks/_.contribution-Cwrg5iz1.js",
+    "name": "_.contribution"
+  },
+  "__commonjsHelpers-D7enpXDV.js": {
+    "file": "chunks/_commonjsHelpers-D7enpXDV.js",
+    "name": "_commonjsHelpers"
+  },
+  "_configuration.service-BS4UI61Y.js": {
+    "file": "chunks/configuration.service-BS4UI61Y.js",
+    "name": "configuration.service",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js",
+      "_editorBrowser-zJfFG23V.js",
+      "_textfiles-GCUcfhe8.js",
+      "_embeddedCodeEditorWidget-DPX_ivX-.js",
+      "_fileConstants-BXb76arb.js",
+      "_tools-DMW4ALLH.js",
+      "_platformObservableUtils-CuEWfyFX.js",
+      "_monaco-vscode-files-service-override-7u1fRyMX.js",
+      "_extensions-DrlDBGt9.js",
+      "_monaco-vscode-extensions-service-override-DXU-yJ4u.js",
+      "_extensionsRegistry-DZ5POuBG.js",
+      "_extensionManagement.service-CKYvSe93.js",
+      "_getIconClasses-DPZo4f15.js",
+      "_webWorkerDescriptor-D8gBO8t7.js",
+      "_languageStatusService.service-BVRYQpof.js",
+      "_semanticTokensConfig-BYnAydTI.js",
+      "_workbenchThemeService.service-D1dFbXBC.js",
+      "_preferences.service-X3hLFm9w.js"
+    ]
+  },
+  "_editor-BCJxFvSN.js": {
+    "file": "chunks/editor-BCJxFvSN.js",
+    "name": "editor",
+    "imports": [
+      "_standaloneServices-DUdtGggg.js",
+      "_textfiles-GCUcfhe8.js",
+      "_embeddedCodeEditorWidget-DPX_ivX-.js",
+      "_fileConstants-BXb76arb.js",
+      "_fileCommands._save-Cc8V0c-n.js",
+      "_tools-DMW4ALLH.js"
+    ]
+  },
+  "_editorBrowser-zJfFG23V.js": {
+    "file": "chunks/editorBrowser-zJfFG23V.js",
+    "name": "editorBrowser",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js"
+    ]
+  },
+  "_embeddedCodeEditorWidget-DPX_ivX-.js": {
+    "file": "chunks/embeddedCodeEditorWidget-DPX_ivX-.js",
+    "name": "embeddedCodeEditorWidget",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js",
+      "_editorBrowser-zJfFG23V.js",
+      "_textfiles-GCUcfhe8.js",
+      "_tools-DMW4ALLH.js",
+      "_languageConfiguration-iKokxU77.js",
+      "_platformObservableUtils-CuEWfyFX.js"
+    ]
+  },
+  "_extensionManagement.service-CKYvSe93.js": {
+    "file": "chunks/extensionManagement.service-CKYvSe93.js",
+    "name": "extensionManagement.service",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js"
+    ]
+  },
+  "_extensions-DrlDBGt9.js": {
+    "file": "chunks/extensions-DrlDBGt9.js",
+    "name": "extensions",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js",
+      "_textfiles-GCUcfhe8.js",
+      "_tools-DMW4ALLH.js",
+      "_monaco-vscode-files-service-override-7u1fRyMX.js",
+      "_extensionManagement.service-CKYvSe93.js",
+      "_jsonErrorMessages-C1DjKtCD.js"
+    ]
+  },
+  "_extensionsRegistry-DZ5POuBG.js": {
+    "file": "chunks/extensionsRegistry-DZ5POuBG.js",
+    "name": "extensionsRegistry",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js",
+      "_monaco-vscode-files-service-override-7u1fRyMX.js"
+    ]
+  },
+  "_fileCommands._save-Cc8V0c-n.js": {
+    "file": "chunks/fileCommands._save-Cc8V0c-n.js",
+    "name": "fileCommands._save",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js",
+      "_editorBrowser-zJfFG23V.js",
+      "_textfiles-GCUcfhe8.js",
+      "_embeddedCodeEditorWidget-DPX_ivX-.js",
+      "_fileConstants-BXb76arb.js"
+    ]
+  },
+  "_fileConstants-BXb76arb.js": {
+    "file": "chunks/fileConstants-BXb76arb.js",
+    "name": "fileConstants",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js",
+      "_editorBrowser-zJfFG23V.js",
+      "_textfiles-GCUcfhe8.js",
+      "_embeddedCodeEditorWidget-DPX_ivX-.js",
+      "_platformObservableUtils-CuEWfyFX.js"
+    ]
+  },
+  "_getIconClasses-DPZo4f15.js": {
+    "file": "chunks/getIconClasses-DPZo4f15.js",
+    "name": "getIconClasses",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js"
+    ]
+  },
+  "_jsonErrorMessages-C1DjKtCD.js": {
+    "file": "chunks/jsonErrorMessages-C1DjKtCD.js",
+    "name": "jsonErrorMessages",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js"
+    ]
+  },
+  "_languageConfiguration-iKokxU77.js": {
+    "file": "chunks/languageConfiguration-iKokxU77.js",
+    "name": "languageConfiguration",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js"
+    ]
+  },
+  "_languageService-FQpl2-PU.js": {
+    "file": "chunks/languageService-FQpl2-PU.js",
+    "name": "languageService",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js",
+      "_monaco-vscode-files-service-override-7u1fRyMX.js",
+      "_extensionsRegistry-DZ5POuBG.js"
+    ]
+  },
+  "_languageStatusService.service-BVRYQpof.js": {
+    "file": "chunks/languageStatusService.service-BVRYQpof.js",
+    "name": "languageStatusService.service",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js"
+    ]
+  },
+  "_monaco-C0mO576I.js": {
+    "file": "chunks/monaco-C0mO576I.js",
+    "name": "monaco",
+    "imports": [
+      "_standaloneServices-DUdtGggg.js",
+      "_embeddedCodeEditorWidget-DPX_ivX-.js",
+      "_fileConstants-BXb76arb.js",
+      "_monaco-vscode-files-service-override-7u1fRyMX.js",
+      "_monaco-vscode-extensions-service-override-DXU-yJ4u.js",
+      "_configuration.service-BS4UI61Y.js"
+    ]
+  },
+  "_monaco-vscode-extensions-service-override-DXU-yJ4u.js": {
+    "file": "chunks/monaco-vscode-extensions-service-override-DXU-yJ4u.js",
+    "name": "monaco-vscode-extensions-service-override",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js",
+      "_editorBrowser-zJfFG23V.js",
+      "_textfiles-GCUcfhe8.js",
+      "_embeddedCodeEditorWidget-DPX_ivX-.js",
+      "_tools-DMW4ALLH.js",
+      "_languageConfiguration-iKokxU77.js",
+      "_platformObservableUtils-CuEWfyFX.js",
+      "_monaco-vscode-files-service-override-7u1fRyMX.js",
+      "_extensions-DrlDBGt9.js",
+      "_extensionsRegistry-DZ5POuBG.js",
+      "_extensionManagement.service-CKYvSe93.js",
+      "_getIconClasses-DPZo4f15.js",
+      "_webWorkerDescriptor-D8gBO8t7.js",
+      "_languageStatusService.service-BVRYQpof.js",
+      "_languageService-FQpl2-PU.js"
+    ]
+  },
+  "_monaco-vscode-files-service-override-7u1fRyMX.js": {
+    "file": "chunks/monaco-vscode-files-service-override-7u1fRyMX.js",
+    "name": "monaco-vscode-files-service-override",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js",
+      "_textfiles-GCUcfhe8.js"
+    ],
+    "dynamicImports": [
+      "node_modules/@vscode/iconv-lite-umd/lib/iconv-lite-umd.js",
+      "node_modules/jschardet/index.js"
+    ]
+  },
+  "_platformObservableUtils-CuEWfyFX.js": {
+    "file": "chunks/platformObservableUtils-CuEWfyFX.js",
+    "name": "platformObservableUtils",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js"
+    ]
+  },
+  "_preferences.service-X3hLFm9w.js": {
+    "file": "chunks/preferences.service-X3hLFm9w.js",
+    "name": "preferences.service",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js"
+    ]
+  },
+  "_rolldown-runtime-B1bRi_D7.js": {
+    "file": "chunks/rolldown-runtime-B1bRi_D7.js",
+    "name": "rolldown-runtime"
+  },
+  "_semanticTokensConfig-BYnAydTI.js": {
+    "file": "chunks/semanticTokensConfig-BYnAydTI.js",
+    "name": "semanticTokensConfig",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js"
+    ]
+  },
+  "_standaloneServices-DUdtGggg.js": {
+    "file": "chunks/standaloneServices-DUdtGggg.js",
+    "name": "standaloneServices",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js"
+    ]
+  },
+  "_textfiles-GCUcfhe8.js": {
+    "file": "chunks/textfiles-GCUcfhe8.js",
+    "name": "textfiles",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js"
+    ]
+  },
+  "_tokenClassificationRegistry-BCmgkZ7e.js": {
+    "file": "chunks/tokenClassificationRegistry-BCmgkZ7e.js",
+    "name": "tokenClassificationRegistry",
+    "imports": [
+      "_standaloneServices-DUdtGggg.js"
+    ]
+  },
+  "_tools-DMW4ALLH.js": {
+    "file": "chunks/tools-DMW4ALLH.js",
+    "name": "tools",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js"
+    ]
+  },
+  "_views-Ovx0Yryy.js": {
+    "file": "chunks/views-Ovx0Yryy.js",
+    "name": "views",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js",
+      "_editorBrowser-zJfFG23V.js",
+      "_textfiles-GCUcfhe8.js",
+      "_embeddedCodeEditorWidget-DPX_ivX-.js",
+      "_fileConstants-BXb76arb.js",
+      "_fileCommands._save-Cc8V0c-n.js",
+      "_tools-DMW4ALLH.js",
+      "_platformObservableUtils-CuEWfyFX.js",
+      "_monaco-vscode-files-service-override-7u1fRyMX.js",
+      "_extensions-DrlDBGt9.js",
+      "_monaco-vscode-extensions-service-override-DXU-yJ4u.js",
+      "_extensionsRegistry-DZ5POuBG.js",
+      "_extensionManagement.service-CKYvSe93.js",
+      "_getIconClasses-DPZo4f15.js",
+      "_languageStatusService.service-BVRYQpof.js",
+      "_languageService-FQpl2-PU.js",
+      "_workbenchThemeService.service-D1dFbXBC.js",
+      "_preferences.service-X3hLFm9w.js",
+      "_configuration.service-BS4UI61Y.js"
+    ],
+    "dynamicImports": [
+      "node_modules/@codingame/monaco-vscode-keybindings-service-override/vscode/src/vs/workbench/services/keybinding/browser/keyboardLayouts/layout.contribution.darwin.js",
+      "node_modules/@codingame/monaco-vscode-keybindings-service-override/vscode/src/vs/workbench/services/keybinding/browser/keyboardLayouts/layout.contribution.linux.js",
+      "node_modules/@codingame/monaco-vscode-keybindings-service-override/vscode/src/vs/workbench/services/keybinding/browser/keyboardLayouts/layout.contribution.win.js"
+    ]
+  },
+  "_webWorkerDescriptor-D8gBO8t7.js": {
+    "file": "chunks/webWorkerDescriptor-D8gBO8t7.js",
+    "name": "webWorkerDescriptor",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js"
+    ]
+  },
+  "_workbenchThemeService.service-D1dFbXBC.js": {
+    "file": "chunks/workbenchThemeService.service-D1dFbXBC.js",
+    "name": "workbenchThemeService.service",
+    "imports": [
+      "_standaloneServices-DUdtGggg.js"
+    ]
+  },
+  "node_modules/@codingame/monaco-vscode-api/_virtual/main.js": {
+    "file": "chunks/main-CoHaMnVg.js",
+    "name": "main",
+    "src": "node_modules/@codingame/monaco-vscode-api/_virtual/main.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__commonjsHelpers-D7enpXDV.js"
+    ]
+  },
+  "node_modules/@codingame/monaco-vscode-editor-service-override/index.js": {
+    "file": "chunks/monaco-vscode-editor-service-override-DoOMhB40.js",
+    "name": "monaco-vscode-editor-service-override",
+    "src": "node_modules/@codingame/monaco-vscode-editor-service-override/index.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_standaloneServices-DUdtGggg.js",
+      "_textfiles-GCUcfhe8.js",
+      "_embeddedCodeEditorWidget-DPX_ivX-.js",
+      "_fileConstants-BXb76arb.js",
+      "_fileCommands._save-Cc8V0c-n.js",
+      "_tools-DMW4ALLH.js",
+      "_editor-BCJxFvSN.js"
+    ]
+  },
+  "node_modules/@codingame/monaco-vscode-keybindings-service-override/vscode/src/vs/workbench/services/keybinding/browser/keyboardLayouts/layout.contribution.darwin.js": {
+    "file": "chunks/layout.contribution.darwin-Bd2u-glW.js",
+    "name": "layout.contribution.darwin",
+    "src": "node_modules/@codingame/monaco-vscode-keybindings-service-override/vscode/src/vs/workbench/services/keybinding/browser/keyboardLayouts/layout.contribution.darwin.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__.contribution-Cwrg5iz1.js"
+    ]
+  },
+  "node_modules/@codingame/monaco-vscode-keybindings-service-override/vscode/src/vs/workbench/services/keybinding/browser/keyboardLayouts/layout.contribution.linux.js": {
+    "file": "chunks/layout.contribution.linux-Csy3jUSD.js",
+    "name": "layout.contribution.linux",
+    "src": "node_modules/@codingame/monaco-vscode-keybindings-service-override/vscode/src/vs/workbench/services/keybinding/browser/keyboardLayouts/layout.contribution.linux.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__.contribution-Cwrg5iz1.js"
+    ]
+  },
+  "node_modules/@codingame/monaco-vscode-keybindings-service-override/vscode/src/vs/workbench/services/keybinding/browser/keyboardLayouts/layout.contribution.win.js": {
+    "file": "chunks/layout.contribution.win-CXjjIIOc.js",
+    "name": "layout.contribution.win",
+    "src": "node_modules/@codingame/monaco-vscode-keybindings-service-override/vscode/src/vs/workbench/services/keybinding/browser/keyboardLayouts/layout.contribution.win.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__.contribution-Cwrg5iz1.js"
+    ]
+  },
+  "node_modules/@codingame/monaco-vscode-languages-service-override/index.js": {
+    "file": "chunks/monaco-vscode-languages-service-override-CcAFkbOB.js",
+    "name": "monaco-vscode-languages-service-override",
+    "src": "node_modules/@codingame/monaco-vscode-languages-service-override/index.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_standaloneServices-DUdtGggg.js",
+      "_textfiles-GCUcfhe8.js",
+      "_languageConfiguration-iKokxU77.js",
+      "_monaco-vscode-files-service-override-7u1fRyMX.js",
+      "_jsonErrorMessages-C1DjKtCD.js",
+      "_languageStatusService.service-BVRYQpof.js",
+      "_languageService-FQpl2-PU.js"
+    ]
+  },
+  "node_modules/@codingame/monaco-vscode-monarch-service-override/index.js": {
+    "file": "chunks/monaco-vscode-monarch-service-override-DbSdIMOv.js",
+    "name": "monaco-vscode-monarch-service-override",
+    "src": "node_modules/@codingame/monaco-vscode-monarch-service-override/index.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js",
+      "_editorBrowser-zJfFG23V.js"
+    ]
+  },
+  "node_modules/@codingame/monaco-vscode-textmate-service-override/_virtual/main2.js": {
+    "file": "chunks/main2-Dy0q_sbJ.js",
+    "name": "main2",
+    "src": "node_modules/@codingame/monaco-vscode-textmate-service-override/_virtual/main2.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__commonjsHelpers-D7enpXDV.js"
+    ]
+  },
+  "node_modules/@codingame/monaco-vscode-textmate-service-override/index.js": {
+    "file": "chunks/monaco-vscode-textmate-service-override-1NIZWfF7.js",
+    "name": "monaco-vscode-textmate-service-override",
+    "src": "node_modules/@codingame/monaco-vscode-textmate-service-override/index.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js",
+      "_editorBrowser-zJfFG23V.js",
+      "_textfiles-GCUcfhe8.js",
+      "_platformObservableUtils-CuEWfyFX.js",
+      "_monaco-vscode-files-service-override-7u1fRyMX.js",
+      "_extensionsRegistry-DZ5POuBG.js",
+      "_webWorkerDescriptor-D8gBO8t7.js",
+      "_languageService-FQpl2-PU.js",
+      "_semanticTokensConfig-BYnAydTI.js",
+      "_workbenchThemeService.service-D1dFbXBC.js",
+      "_tokenClassificationRegistry-BCmgkZ7e.js"
+    ],
+    "dynamicImports": [
+      "node_modules/@codingame/monaco-vscode-api/_virtual/main.js",
+      "node_modules/@codingame/monaco-vscode-textmate-service-override/_virtual/main2.js"
+    ]
+  },
+  "node_modules/@codingame/monaco-vscode-theme-defaults-default-extension/index.js": {
+    "file": "chunks/monaco-vscode-theme-defaults-default-extension-CAUj7RVy.js",
+    "name": "monaco-vscode-theme-defaults-default-extension",
+    "src": "node_modules/@codingame/monaco-vscode-theme-defaults-default-extension/index.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_extensions-DrlDBGt9.js"
+    ]
+  },
+  "node_modules/@codingame/monaco-vscode-theme-service-override/index.js": {
+    "file": "chunks/monaco-vscode-theme-service-override-C1XiU255.js",
+    "name": "monaco-vscode-theme-service-override",
+    "src": "node_modules/@codingame/monaco-vscode-theme-service-override/index.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_standaloneServices-DUdtGggg.js",
+      "_textfiles-GCUcfhe8.js",
+      "_monaco-vscode-files-service-override-7u1fRyMX.js",
+      "_extensionsRegistry-DZ5POuBG.js",
+      "_extensionManagement.service-CKYvSe93.js",
+      "_getIconClasses-DPZo4f15.js",
+      "_jsonErrorMessages-C1DjKtCD.js",
+      "_workbenchThemeService.service-D1dFbXBC.js",
+      "_tokenClassificationRegistry-BCmgkZ7e.js",
+      "_preferences.service-X3hLFm9w.js"
+    ]
+  },
+  "node_modules/@codingame/monaco-vscode-views-service-override/index.js": {
+    "file": "chunks/monaco-vscode-views-service-override-DvGsRlxa.js",
+    "name": "monaco-vscode-views-service-override",
+    "src": "node_modules/@codingame/monaco-vscode-views-service-override/index.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_standaloneServices-DUdtGggg.js",
+      "_textfiles-GCUcfhe8.js",
+      "_embeddedCodeEditorWidget-DPX_ivX-.js",
+      "_editor-BCJxFvSN.js",
+      "_monaco-vscode-files-service-override-7u1fRyMX.js",
+      "_monaco-vscode-extensions-service-override-DXU-yJ4u.js",
+      "_configuration.service-BS4UI61Y.js",
+      "_views-Ovx0Yryy.js",
+      "_monaco-C0mO576I.js"
+    ]
+  },
+  "node_modules/@codingame/monaco-vscode-workbench-service-override/index.js": {
+    "file": "chunks/monaco-vscode-workbench-service-override-CwSIDqpU.js",
+    "name": "monaco-vscode-workbench-service-override",
+    "src": "node_modules/@codingame/monaco-vscode-workbench-service-override/index.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js",
+      "_editorBrowser-zJfFG23V.js",
+      "_textfiles-GCUcfhe8.js",
+      "_embeddedCodeEditorWidget-DPX_ivX-.js",
+      "_fileConstants-BXb76arb.js",
+      "_fileCommands._save-Cc8V0c-n.js",
+      "_monaco-vscode-files-service-override-7u1fRyMX.js",
+      "_extensions-DrlDBGt9.js",
+      "_monaco-vscode-extensions-service-override-DXU-yJ4u.js",
+      "_extensionsRegistry-DZ5POuBG.js",
+      "_getIconClasses-DPZo4f15.js",
+      "_configuration.service-BS4UI61Y.js",
+      "_views-Ovx0Yryy.js"
+    ]
+  },
+  "node_modules/@vscode/iconv-lite-umd/lib/iconv-lite-umd.js": {
+    "file": "chunks/iconv-lite-umd-1BxRKXrz.js",
+    "name": "iconv-lite-umd",
+    "src": "node_modules/@vscode/iconv-lite-umd/lib/iconv-lite-umd.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js"
+    ]
+  },
+  "node_modules/jschardet/index.js": {
+    "file": "chunks/jschardet-Bzgs_WTs.js",
+    "name": "jschardet",
+    "src": "node_modules/jschardet/index.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js"
+    ]
+  },
+  "src/bootstrap.ts": {
+    "file": "grammar-editor-CWDGYLft.js",
+    "name": "bootstrap",
+    "src": "src/bootstrap.ts",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/main.ts"
+    ]
+  },
+  "src/main.ts": {
+    "file": "chunks/main-CcVlSc5r.js",
+    "name": "main",
+    "src": "src/main.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js",
+      "_editorBrowser-zJfFG23V.js",
+      "_textfiles-GCUcfhe8.js",
+      "_embeddedCodeEditorWidget-DPX_ivX-.js",
+      "_fileConstants-BXb76arb.js",
+      "_tools-DMW4ALLH.js",
+      "_languageConfiguration-iKokxU77.js",
+      "_platformObservableUtils-CuEWfyFX.js",
+      "_monaco-vscode-files-service-override-7u1fRyMX.js",
+      "_extensions-DrlDBGt9.js",
+      "_monaco-vscode-extensions-service-override-DXU-yJ4u.js",
+      "_extensionsRegistry-DZ5POuBG.js",
+      "_getIconClasses-DPZo4f15.js",
+      "_languageStatusService.service-BVRYQpof.js",
+      "_preferences.service-X3hLFm9w.js",
+      "_configuration.service-BS4UI61Y.js",
+      "_monaco-C0mO576I.js"
+    ],
+    "dynamicImports": [
+      "node_modules/@codingame/monaco-vscode-textmate-service-override/index.js",
+      "node_modules/@codingame/monaco-vscode-theme-service-override/index.js",
+      "node_modules/@codingame/monaco-vscode-languages-service-override/index.js",
+      "node_modules/@codingame/monaco-vscode-monarch-service-override/index.js",
+      "node_modules/@codingame/monaco-vscode-views-service-override/index.js",
+      "node_modules/@codingame/monaco-vscode-workbench-service-override/index.js",
+      "node_modules/@codingame/monaco-vscode-editor-service-override/index.js",
+      "_monaco-vscode-extensions-service-override-DXU-yJ4u.js",
+      "node_modules/@codingame/monaco-vscode-theme-defaults-default-extension/index.js"
+    ]
+  },
+  "style.css": {
+    "file": "assets/grammar-editor-nqGPpjg9.css",
+    "src": "style.css"
+  }
+}

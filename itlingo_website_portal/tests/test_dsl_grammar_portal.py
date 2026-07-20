@@ -105,24 +105,24 @@ class TestDslGrammarPortal(HttpCase):
         self.authenticate('grammar_maintainer', 'grammar_maintainer')
         detail = self.url_open(f'/dsl/{self.draft.id}')
         editor = self.url_open(f'/dsl/{self.draft.id}/grammar')
-        langium_worker = self.url_open(
-            '/itlingo_website_portal/static/dist/grammar-editor/'
-            'langium-grammar-server.worker.js'
-        )
-        monaco_worker = self.url_open(
-            '/itlingo_website_portal/static/dist/grammar-editor/'
-            'editor.worker.js'
-        )
 
         self.assertEqual(editor.status_code, 200)
-        self.assertEqual(langium_worker.status_code, 200)
-        self.assertEqual(monaco_worker.status_code, 200)
         self.assertIn('Back to DSL', editor.text)
-        self.assertIn('grammar-editor.js', editor.text)
-        self.assertNotIn('grammar-editor.js', detail.text)
         self.assertIn('Open editor', detail.text)
 
         document = html.fromstring(editor.content)
+        script_urls = document.xpath(
+            '//script[contains(@src, "/grammar-editor-")]/@src'
+        )
+        style_urls = document.xpath(
+            '//link[contains(@href, "/assets/grammar-editor-")]/@href'
+        )
+        self.assertEqual(len(script_urls), 1)
+        self.assertEqual(len(style_urls), 1)
+        self.assertNotIn('/grammar-editor-', detail.text)
+        self.assertEqual(self.url_open(script_urls[0]).status_code, 200)
+        self.assertEqual(self.url_open(style_urls[0]).status_code, 200)
+
         breadcrumbs = document.xpath(
             "//ol[contains(concat(' ', normalize-space(@class), ' '),"
             " ' o_portal_submenu ')]"
@@ -372,7 +372,7 @@ class TestDslGrammarPortal(HttpCase):
                 throw new Error('Explorer switching did not activate Terminals.langium');
             }
 
-            const script = document.querySelector('script[src*="grammar-editor.js"]');
+            const script = document.querySelector('script[src*="/grammar-editor-"]');
             const editorModule = await import(script.src);
             editorModule.grammarEditorApp.setFileContent(
                 'shared/Terminals.langium',

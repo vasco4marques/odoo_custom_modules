@@ -4,8 +4,9 @@
     <template id="portal_dsl_grammar_editor" name="DSL Grammar Editor">
         <t t-call="portal.portal_layout">
             <t t-set="additional_title">Grammar Editor</t>
-            <link rel="stylesheet"
-                  t-attf-href="/itlingo_website_portal/static/dist/grammar-editor/grammar-editor.css?v=#{grammar_asset_version}"/>
+            <link t-foreach="grammar_assets['styles']" t-as="grammar_asset_style"
+                  rel="stylesheet"
+                  t-attf-href="/itlingo_website_portal/static/dist/grammar-editor/#{grammar_asset_style}"/>
             <div id="wrap" class="oe_structure">
                 <section class="itlingo-grammar-page py-3" data-name="Grammar Editor">
                     <div class="container-fluid px-3 px-lg-4">
@@ -116,7 +117,7 @@
                 </section>
             </div>
             <script type="module"
-                    t-attf-src="/itlingo_website_portal/static/dist/grammar-editor/grammar-editor.js?v=#{grammar_asset_version}"></script>
+                    t-attf-src="/itlingo_website_portal/static/dist/grammar-editor/#{grammar_assets['script']}"></script>
         </t>
     </template>
 
