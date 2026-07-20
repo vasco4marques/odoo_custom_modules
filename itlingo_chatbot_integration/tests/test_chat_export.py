@@ -43,6 +43,23 @@ class TestChatExportFilename(TransactionCase):
                 'missing',
             )
 
+    def test_draft_dsl_reference_is_rejected(self):
+        draft = self.env['itlingo.dsl'].create({
+            'name': 'Unpublished Chat Export Language',
+            'acronym': 'XDRAFT',
+            'version': 'test-1',
+            'status': 'draft',
+            'file_extensions': '.xdraft',
+        })
+
+        for reference in (draft.id, draft.acronym):
+            with self.assertRaisesRegex(ValueError, 'No active DSL'):
+                _resolve_dsl_export_filename(
+                    self.env,
+                    'generated-spec.txt',
+                    reference,
+                )
+
     def test_legacy_export_keeps_client_filename_without_dsl(self):
         filename = _resolve_dsl_export_filename(
             self.env,
