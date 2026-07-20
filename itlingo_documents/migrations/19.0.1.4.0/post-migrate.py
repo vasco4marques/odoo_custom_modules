@@ -31,6 +31,22 @@ def migrate(cr, version):
         _logger.warning("Template migration skipped: canonical XML id is missing")
         return
 
+    env = api.Environment(cr, SUPERUSER_ID, {})
+    if legacy_id and legacy_id != canonical_id:
+        # Clear grounding through the ORM while these records still have their
+        # legacy type. This invokes the regular KB cleanup before the unified
+        # Template constraints start applying to them.
+        legacy_grounding_templates = env['itlingo.document'].search([
+            ('document_type_id', '=', legacy_id),
+            ('dsl_knowledge', '=', True),
+        ])
+        if legacy_grounding_templates:
+            legacy_grounding_templates.write({'dsl_knowledge': False})
+            _logger.info(
+                "Removed %s legacy template(s) from grounding knowledge",
+                len(legacy_grounding_templates),
+            )
+
     if legacy_id and legacy_id != canonical_id:
         cr.execute(
             """
@@ -71,7 +87,6 @@ def migrate(cr, version):
             (canonical_id,),
         )
 
-    env = api.Environment(cr, SUPERUSER_ID, {})
     templates_without_dsl = env['itlingo.document'].search([
         ('document_type_id', '=', canonical_id),
         ('dsl_id', '=', False),
