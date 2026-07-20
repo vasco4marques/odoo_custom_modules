@@ -4,6 +4,7 @@ Rendering is lenient: missing fields resolve to blank instead of failing, so
 partial specifications still produce a document.
 """
 
+import json
 import re
 
 
@@ -15,11 +16,27 @@ def lenient_env():
     """
     import jinja2
 
-    return jinja2.Environment(
+    env = jinja2.Environment(
         undefined=jinja2.ChainableUndefined,
         finalize=lambda v: "" if v is None else v,
         keep_trailing_newline=True,
     )
+    default_dumps = env.policies["json.dumps_function"] or json.dumps
+
+    def dumps_json_safe(value, **kwargs):
+        def undefined_as_null(item):
+            if isinstance(item, jinja2.Undefined):
+                return None
+            raise TypeError(
+                "Object of type %s is not JSON serializable"
+                % type(item).__name__
+            )
+
+        kwargs.setdefault("default", undefined_as_null)
+        return default_dumps(value, **kwargs)
+
+    env.policies["json.dumps_function"] = dumps_json_safe
+    return env
 
 
 SUPPORTED_TEMPLATE_EXTENSIONS = (

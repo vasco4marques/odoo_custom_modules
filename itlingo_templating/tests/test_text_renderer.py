@@ -18,6 +18,18 @@ class TestTextRenderer(unittest.TestCase):
         with self.assertRaises(UnicodeDecodeError):
             render_text(b"\xff\xfe", {})
 
+    def test_missing_values_render_as_json_null_with_tojson(self):
+        output = render_text(
+            b'{"known": {{ known | tojson }}, '
+            b'"missing": {{ missing.value | tojson }}}',
+            {"known": "value"},
+        )
+
+        self.assertEqual(
+            output.decode("utf-8"),
+            '{"known": "value", "missing": null}',
+        )
+
     def test_filename_replaces_any_supported_template_extension(self):
         filename = render_filename("output.docx", {}, "generated", ".json")
 
