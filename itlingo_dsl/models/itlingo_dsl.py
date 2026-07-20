@@ -11,6 +11,15 @@ from ..services import grammar_flattener, grammar_validator
 
 _logger = logging.getLogger(__name__)
 
+# Draft DSLs contribute their extension with this suffix (e.g. ".vsl" ->
+# ".vsl-draft") so ITOI serves in-progress specifications with the draft
+# grammar's language server instead of the published one.
+DRAFT_EXTENSION_SUFFIX = "-draft"
+
+# DSL lifecycle states whose files may be exchanged with ITOI. Deprecated DSLs
+# are intentionally excluded.
+IMPORTABLE_DSL_STATES = ("active", "draft")
+
 
 def _read_attachment_base64(env, res_model, res_id, field_name):
     """Read base64 attachment data for an ``attachment=True`` binary field."""
@@ -217,11 +226,50 @@ class ItlingoDsl(models.Model):
 
     @api.model
     def _all_extensions(self):
-        """Return the extensions of every registered DSL, as a set."""
+        """Return the importable extensions of every active or draft DSL.
+
+        Published (``active``) DSLs contribute their extension verbatim.
+        ``draft`` DSLs contribute a ``<ext>-draft`` variant so their
+        in-progress grammar is served by a separate ITOI language server and
+        never clashes with the published language. Deprecated DSLs contribute
+        nothing.
+        """
         extensions = set()
-        for dsl in self.sudo().search([]):
-            extensions.update(dsl._extensions())
+        for dsl in self.sudo().search([('status', 'in', IMPORTABLE_DSL_STATES)]):
+            suffix = DRAFT_EXTENSION_SUFFIX if dsl.status == 'draft' else ''
+            for ext in dsl._extensions():
+                extensions.add(ext + suffix)
         return extensions
+
+    @api.model
+    def _resolve_importable_extension(self, ext):
+        """Map the base extension of an exported file to its importable form.
+
+        Given the extension of a file being exported (case-insensitive, with
+        or without a leading dot or a trailing ``-draft`` suffix), return the
+        extension it must carry to be importable — ``<ext>-draft`` when the
+        matching DSL is a draft, the plain extension when it is active — or
+        ``None`` when *ext* does not belong to any active or draft DSL.
+        """
+        raw = (ext or '').strip().lower().lstrip('.')
+        if not raw:
+            return None
+        wants_draft = raw.endswith(DRAFT_EXTENSION_SUFFIX)
+        base = raw[:-len(DRAFT_EXTENSION_SUFFIX)] if wants_draft else raw
+        matches = [
+            dsl for dsl in self.sudo().search(
+                [('status', 'in', IMPORTABLE_DSL_STATES)])
+            if base in dsl._extensions()
+        ]
+        if not matches:
+            return None
+        has_active = any(dsl.status == 'active' for dsl in matches)
+        has_draft = any(dsl.status == 'draft' for dsl in matches)
+        # An explicit "-draft" request wins when a draft exists; otherwise the
+        # published language is preferred, falling back to draft.
+        if (wants_draft and has_draft) or not has_active:
+            return base + DRAFT_EXTENSION_SUFFIX
+        return base
 
     # ------------------------------------------------------------------
     # Constraints

@@ -45,9 +45,9 @@ class ItlingoIntegrationSettings(models.Model):
         default='txt,md,json,xml,yaml,yml,csv,properties',
         help='Comma-separated list of additional file extensions (without the '
              'dot) that ITOI users are allowed to import from cloud documents. '
-             'The extensions of every registered DSL are always importable and '
-             'do not need to be listed here. Only text-editable formats should '
-             'be listed.',
+             'The extensions of every active or draft DSL are always importable '
+             '(drafts as "<ext>-draft") and must NOT be listed here. Only list '
+             'generic UTF-8, text-editable formats that VS Code can open.',
     )
     active = fields.Boolean(default=True)
 

@@ -390,7 +390,13 @@ class ChatController(http.Controller):
                 {'error': 'You do not have write access to this workspace'}, 403)
 
         settings = request.env['itlingo.integration.settings'].sudo()._get_settings()
-        _base, ext = _split_filename(filename)
+        base_name, ext = _split_filename(filename)
+        # Files of a draft DSL are stored (and pushed to ITOI) with a
+        # "<ext>-draft" extension so ITOI runs the draft grammar's LSP.
+        resolved_ext = request.env['itlingo.dsl'].sudo()._resolve_importable_extension(ext)
+        if resolved_ext and resolved_ext != ext:
+            ext = resolved_ext
+            filename = f'{base_name}.{ext}'
         if ext not in settings._get_importable_extensions():
             return self._json_response(
                 {'error': f'File extension ".{ext}" is not allowed'}, 400)
