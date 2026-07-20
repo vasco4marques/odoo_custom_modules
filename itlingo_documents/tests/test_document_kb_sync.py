@@ -6,6 +6,31 @@ from odoo.tests.common import TransactionCase, tagged
 
 
 @tagged('post_install', '-at_install')
+class TestDocumentFormat(TransactionCase):
+
+    def test_format_tracks_dsl_publication_and_deprecation(self):
+        dsl = self.env['itlingo.dsl'].create({
+            'name': 'Dynamic Format Test',
+            'acronym': 'DFT',
+            'version': 'test-1',
+            'status': 'draft',
+            'file_extensions': '.dynamicformat',
+        })
+        document = self.env['itlingo.document'].create({
+            'name': 'Dynamic Format Source',
+            'file_name': 'source.dynamicformat',
+        })
+
+        self.assertEqual(document.document_format, 'other')
+
+        dsl.write({'status': 'active'})
+        self.assertEqual(document.document_format, 'text')
+
+        dsl.write({'status': 'deprecated'})
+        self.assertEqual(document.document_format, 'other')
+
+
+@tagged('post_install', '-at_install')
 class TestDocumentKbSync(TransactionCase):
 
     def setUp(self):

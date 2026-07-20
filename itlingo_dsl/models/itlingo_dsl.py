@@ -271,6 +271,17 @@ class ItlingoDsl(models.Model):
             return base + DRAFT_EXTENSION_SUFFIX
         return base
 
+    @api.model
+    def _refresh_document_formats(self):
+        """Recompute stored formats after the registered extensions change."""
+        Document = self.env.get("itlingo.document")
+        if Document is None or "document_format" not in Document._fields:
+            return
+        documents = Document.sudo().search([("file_name", "!=", False)])
+        if documents:
+            documents._compute_document_format()
+            documents.flush_recordset(["document_format"])
+
     # ------------------------------------------------------------------
     # Constraints
     # ------------------------------------------------------------------
@@ -568,6 +579,7 @@ class ItlingoDsl(models.Model):
         records = super().create(vals_list)
         records._sync_kb_files()
         records._sync_maintainer_group()
+        records._refresh_document_formats()
         return records
 
     def write(self, vals):
@@ -577,17 +589,22 @@ class ItlingoDsl(models.Model):
             )._ensure_grammar_publishable()
         result = super().write(vals)
         self._sync_kb_files()
+        if {"status", "file_extensions", "acronym"} & set(vals):
+            self._refresh_document_formats()
         if "maintainer_ids" in vals:
             self._sync_maintainer_group()
         return result
 
     def unlink(self):
+        refresh_document_formats = bool(self)
         for dsl in self:
             # A draft or retired version must not clear the KB entry that the
             # acronym's active version still owns.
             if not dsl._active_acronym_sibling():
                 dsl._remove_kb_files()
         result = super().unlink()
+        if refresh_document_formats:
+            self._refresh_document_formats()
         self._sync_maintainer_group()
         return result
 
