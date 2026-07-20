@@ -5,7 +5,7 @@ import logging
 import re
 
 from odoo import api, fields, models, _
-from odoo.exceptions import UserError, ValidationError
+from odoo.exceptions import AccessError, UserError, ValidationError
 
 from ..services import grammar_flattener, grammar_validator
 
@@ -426,6 +426,12 @@ class ItlingoDsl(models.Model):
         refreshes the chatbot knowledge base. It does not build or deploy
         templating or ITOI parsers; those consume the published record grammar.
         """
+        if not self.env.user.has_group(
+            "itlingo_organizations.group_itlingo_admin"
+        ):
+            raise AccessError(_(
+                "Only platform administrators can publish or reactivate DSLs."
+            ))
         for dsl in self:
             if dsl.status == "active":
                 raise UserError(_(

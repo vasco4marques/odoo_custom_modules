@@ -313,7 +313,7 @@ class ITLingoDslPortal(CustomerPortal):
            website=True, methods=['POST'])
     def portal_dsl_publish(self, dsl_id, **post):
         dsl = self._dsl_or_404(dsl_id)
-        self._require_dsl_edit(dsl)
+        self._itlingo_admin_or_raise()
         try:
             # ``dsl`` is sudo'd for access rights but keeps the request user,
             # so the publication audit records the real publisher. The server

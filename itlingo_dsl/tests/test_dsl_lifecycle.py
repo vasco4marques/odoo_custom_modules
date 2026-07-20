@@ -1,8 +1,8 @@
 import json
 from unittest.mock import patch
 
-from odoo.exceptions import UserError, ValidationError
-from odoo.tests import TransactionCase, tagged
+from odoo.exceptions import AccessError, UserError, ValidationError
+from odoo.tests import TransactionCase, new_test_user, tagged
 
 from ..services.grammar_flattener import GrammarFlattenError
 
@@ -27,6 +27,14 @@ class TestDslLifecycle(TransactionCase):
     def setUpClass(cls):
         super().setUpClass()
         cls.File = cls.env['itlingo.dsl.file']
+        cls.maintainer = new_test_user(
+            cls.env,
+            login='lifecycle_model_maintainer',
+            groups=(
+                'base.group_portal,'
+                'itlingo_organizations.group_itlingo_member'
+            ),
+        )
 
     def _make_draft(self, acronym, grammar=VALID_GRAMMAR, version='test-1'):
         dsl = self.env['itlingo.dsl'].create({
@@ -55,6 +63,14 @@ class TestDslLifecycle(TransactionCase):
         self.assertEqual(dsl.published_by_id, self.env.user)
         self.assertTrue(dsl.published_at)
         self.assertEqual(dsl.published_digest, dsl.grammar_validation_digest)
+
+    def test_non_admin_cannot_publish_through_model_api(self):
+        dsl = self._make_draft('LCDENY')
+
+        with self.assertRaisesRegex(AccessError, 'platform administrators'):
+            dsl.with_user(self.maintainer).action_publish()
+
+        self.assertEqual(dsl.status, 'draft')
 
     def test_publish_invalid_grammar_is_rejected(self):
         dsl = self._make_draft('LCBAD', grammar=INVALID_GRAMMAR)

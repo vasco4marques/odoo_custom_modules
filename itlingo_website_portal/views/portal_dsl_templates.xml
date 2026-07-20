@@ -346,20 +346,24 @@
                             </small>
                         </div>
                         <div class="d-flex flex-wrap align-items-center gap-2">
-                            <form t-if="dsl.status == 'draft'" t-attf-action="/dsl/#{dsl.id}/publish" method="post" class="d-inline">
+                            <form t-if="can_manage_dsls and dsl.status == 'draft'" t-attf-action="/dsl/#{dsl.id}/publish" method="post" class="d-inline">
                                 <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                                 <button type="submit" class="btn btn-success"
                                         onclick="return confirm('Publishing validates the grammar on the server, deprecates any previously active version of this acronym, and refreshes the chatbot knowledge base. It does not build or deploy the templating or ITOI parsers. Continue?');">
                                     <i class="fa fa-rocket me-1"/>Validate &amp; Publish
                                 </button>
                             </form>
-                            <form t-if="dsl.status == 'deprecated'" t-attf-action="/dsl/#{dsl.id}/publish" method="post" class="d-inline">
+                            <form t-if="can_manage_dsls and dsl.status == 'deprecated'" t-attf-action="/dsl/#{dsl.id}/publish" method="post" class="d-inline">
                                 <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                                 <button type="submit" class="btn btn-outline-success"
                                         onclick="return confirm('This re-activates this previous version: the grammar is revalidated on the server, the currently active version is deprecated, and the chatbot knowledge base is refreshed with this version. Continue?');">
                                     <i class="fa fa-history me-1"/>Reactivate this version
                                 </button>
                             </form>
+                            <small t-if="not can_manage_dsls and dsl.status in ('draft', 'deprecated')"
+                                   class="text-muted">
+                                Only a Platform Admin can publish or reactivate this version.
+                            </small>
                             <form t-if="dsl.status != 'draft'" t-attf-action="/dsl/#{dsl.id}/create-draft" method="post"
                                   class="d-inline-flex align-items-center gap-2">
                                 <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>

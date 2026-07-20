@@ -880,6 +880,15 @@ class TestDslLifecyclePortal(HttpCase):
                 'itlingo_organizations.group_itlingo_member'
             ),
         )
+        cls.admin = new_test_user(
+            cls.env,
+            login='lifecycle_admin',
+            password='lifecycle_admin',
+            groups=(
+                'base.group_portal,'
+                'itlingo_organizations.group_itlingo_admin'
+            ),
+        )
 
     def _make_draft(self, acronym, grammar_content):
         dsl = self.env['itlingo.dsl'].create({
@@ -900,9 +909,9 @@ class TestDslLifecyclePortal(HttpCase):
         self.assertTrue(match, 'DSL page must expose a CSRF token')
         return match.group(1)
 
-    def test_maintainer_publishes_valid_draft(self):
+    def test_admin_publishes_valid_draft(self):
         dsl = self._make_draft('PLOK', VALID_GRAMMAR.format(name='PLOK'))
-        self.authenticate('lifecycle_maintainer', 'lifecycle_maintainer')
+        self.authenticate('lifecycle_admin', 'lifecycle_admin')
         response = self.url_open(
             f'/dsl/{dsl.id}/publish',
             data={'csrf_token': self._csrf_token(dsl)},
@@ -912,13 +921,13 @@ class TestDslLifecyclePortal(HttpCase):
         self.assertIn('message=published', response.url)
         dsl.invalidate_recordset()
         self.assertEqual(dsl.status, 'active')
-        self.assertEqual(dsl.published_by_id, self.maintainer)
+        self.assertEqual(dsl.published_by_id, self.admin)
 
     def test_invalid_grammar_publication_fails_with_details(self):
         dsl = self._make_draft(
             'PLBAD', 'grammar PLBAD\nentry Model: value=MissingRule;\n',
         )
-        self.authenticate('lifecycle_maintainer', 'lifecycle_maintainer')
+        self.authenticate('lifecycle_admin', 'lifecycle_admin')
         with mute_logger('odoo.http'):
             response = self.url_open(
                 f'/dsl/{dsl.id}/publish',
@@ -927,6 +936,23 @@ class TestDslLifecyclePortal(HttpCase):
 
         self.assertIn('error=publish_failed', response.url)
         self.assertIn('MissingRule', response.text)
+        dsl.invalidate_recordset()
+        self.assertEqual(dsl.status, 'draft')
+
+    def test_maintainer_cannot_publish_and_button_is_hidden(self):
+        dsl = self._make_draft('PLMNT', VALID_GRAMMAR.format(name='PLMNT'))
+        self.authenticate('lifecycle_maintainer', 'lifecycle_maintainer')
+        page = self.url_open(f'/dsl/{dsl.id}')
+
+        self.assertNotIn(f'/dsl/{dsl.id}/publish', page.text)
+        self.assertIn('Only a Platform Admin can publish', page.text)
+        with mute_logger('odoo.http'):
+            response = self.url_open(
+                f'/dsl/{dsl.id}/publish',
+                data={'csrf_token': self._csrf_token(dsl)},
+            )
+
+        self.assertEqual(response.status_code, 403)
         dsl.invalidate_recordset()
         self.assertEqual(dsl.status, 'draft')
 
