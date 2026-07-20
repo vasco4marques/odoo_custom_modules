@@ -49,9 +49,13 @@ class ITLingoDslGrammarPortal(ITLingoDslPortal):
             entry = next(
                 asset for asset in manifest.values() if asset.get('isEntry')
             )
+            styles = list(entry.get('css', []))
+            extracted_style = manifest.get('style.css', {}).get('file')
+            if extracted_style and extracted_style not in styles:
+                styles.append(extracted_style)
             return {
                 'script': entry['file'],
-                'styles': entry.get('css', []),
+                'styles': styles,
             }
         except (OSError, ValueError, KeyError, StopIteration, TypeError):
             # Keep a useful page in source-only development checkouts. A
