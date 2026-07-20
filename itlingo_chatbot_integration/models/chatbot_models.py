@@ -106,6 +106,8 @@ class ItlingoChatMessage(models.Model):
     models_used = fields.Json(string='Models Used')
     tokens = fields.Json(string='Tokens')
     model_auto_switched = fields.Boolean(default=False)
+    agentic_generation = fields.Boolean(default=False)
+    rag_sources = fields.Json(string='RAG Sources')
     file_link_ids = fields.One2many('itlingo.message.file.link', 'message_id', string='File Links')
 
     def _compute_content_preview(self):

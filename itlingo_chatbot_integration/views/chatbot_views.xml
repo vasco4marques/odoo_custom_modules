@@ -201,6 +201,8 @@
                 <field name="role"/>
                 <field name="content_preview" string="Content"/>
                 <field name="model"/>
+                <field name="agentic_generation"/>
+                <field name="rag_sources"/>
                 <field name="timestamp"/>
             </list>
         </field>
@@ -225,6 +227,8 @@
                     <group>
                         <field name="models_used"/>
                         <field name="tokens"/>
+                        <field name="rag_sources"/>
+                        <field name="agentic_generation"/>
                     </group>
                     <group>
                         <field name="timestamp" readonly="1"/>
