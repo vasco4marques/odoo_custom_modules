@@ -173,7 +173,7 @@
                         <div class="col-md-4">
                             <label class="form-label" for="dsl_ext">File extensions</label>
                             <input type="text" class="form-control" name="file_extensions" id="dsl_ext"
-                                   placeholder=".rsl,.asl" t-att-value="form.get('file_extensions') or ''"/>
+                                   placeholder=".ext1,.ext2" t-att-value="form.get('file_extensions') or ''"/>
                         </div>
                         <div class="col-12">
                             <label class="form-label" for="dsl_doc_url">Documentation URL</label>
@@ -442,7 +442,7 @@
                                 <div class="col-md-4">
                                     <label class="form-label" for="e_ext">File extensions</label>
                                     <input type="text" class="form-control" name="file_extensions" id="e_ext"
-                                           placeholder=".rsl,.asl"
+                                           placeholder=".ext1,.ext2"
                                            t-att-value="form.get('file_extensions') if form else (dsl.file_extensions or '')"/>
                                 </div>
                                 <div class="col-12">

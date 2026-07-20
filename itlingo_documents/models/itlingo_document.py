@@ -81,24 +81,34 @@ class ItlingoDocument(models.Model):
         'doc': 'word', 'docx': 'word', 'odt': 'word', 'rtf': 'word',
         'xls': 'excel', 'xlsx': 'excel', 'csv': 'excel', 'ods': 'excel',
         'pdf': 'pdf',
-        'txt': 'text', 'md': 'text', 'rsl': 'text', 'asl': 'text',
-        'psl': 'text', 'tsl': 'text', 'json': 'text', 'xml': 'text',
+        'txt': 'text', 'md': 'text', 'json': 'text', 'xml': 'text',
         'yaml': 'text', 'yml': 'text',
     }
     _KB_TEXT_EXTENSIONS = frozenset({
-        'asl', 'aslx', 'csv', 'json', 'md', 'psl', 'rsl', 'rslx', 'sql',
-        'tsl', 'txt', 'xml', 'yaml', 'yml',
+        'csv', 'json', 'md', 'sql', 'txt', 'xml', 'yaml', 'yml',
     })
 
     @api.depends('file_name')
     def _compute_document_format(self):
+        dsl_extensions = self.env['itlingo.dsl']._all_extensions()
         for doc in self:
             fname = (doc.file_name or '').strip().lower()
             if not fname:
                 doc.document_format = False
                 continue
             ext = fname.rsplit('.', 1)[-1] if '.' in fname else ''
-            doc.document_format = self._FORMAT_BY_EXTENSION.get(ext, 'other')
+            doc.document_format = (
+                'text'
+                if ext in dsl_extensions
+                else self._FORMAT_BY_EXTENSION.get(ext, 'other')
+            )
+
+    @api.model
+    def _kb_text_extensions(self):
+        """Generic text formats plus extensions registered by current DSLs."""
+        return self._KB_TEXT_EXTENSIONS | frozenset(
+            self.env['itlingo.dsl']._all_extensions()
+        )
 
     @api.depends('document_file')
     def _compute_file_size(self):
@@ -137,10 +147,15 @@ class ItlingoDocument(models.Model):
                     'grounding knowledge (document: %s).', doc.name,
                 ))
             if not doc._is_text_like_kb_file():
+                extensions = ', '.join(
+                    '.%s' % ext for ext in sorted(doc._kb_text_extensions())
+                )
                 raise ValidationError(_(
                     'Grounding knowledge currently supports only text-like '
-                    'uploaded files such as .txt, .md, .json, .xml, .yaml, '
-                    '.csv, .rsl or .asl (document: %s).', doc.name,
+                    'uploaded files with these extensions: %(extensions)s '
+                    '(document: %(document)s).',
+                    extensions=extensions,
+                    document=doc.name,
                 ))
 
     @api.model_create_multi
@@ -230,7 +245,7 @@ class ItlingoDocument(models.Model):
             project_id = doc.project_id.id if doc.project_id else None
 
             ext = doc_file_name.rsplit('.', 1)[-1].lower() if '.' in doc_file_name else ''
-            if ext not in self._KB_TEXT_EXTENSIONS:
+            if ext not in doc._kb_text_extensions():
                 _logger.warning(
                     "Skipping document KB sync for non-text file %s (doc id=%s)",
                     doc_file_name, doc.id,
@@ -304,7 +319,7 @@ class ItlingoDocument(models.Model):
         file_name = (self.file_name or '').strip().lower()
         if not file_name or '.' not in file_name:
             return False
-        return file_name.rsplit('.', 1)[-1] in self._KB_TEXT_EXTENSIONS
+        return file_name.rsplit('.', 1)[-1] in self._kb_text_extensions()
 
     def _remove_legacy_kb_files(self, keys):
         if not keys:

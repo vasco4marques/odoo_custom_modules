@@ -67,3 +67,30 @@ class TestDocumentKbSync(TransactionCase):
                 'status': 'published',
                 'dsl_knowledge': True,
             })
+
+    def test_registered_dsl_extension_is_text_and_syncs_to_kb(self):
+        self.env['itlingo.dsl'].create({
+            'name': 'Knowledge Extension Test',
+            'acronym': 'KXT',
+            'version': 'test-1',
+            'status': 'active',
+            'file_extensions': '.kxt',
+        })
+        doc = self.env['itlingo.document'].create({
+            'name': 'Dynamic DSL Source',
+            'document_type_id': self.doc_type.id,
+            'organization_id': self.org.id,
+            'project_id': self.workspace.id,
+            'file_name': 'dynamic_source.kxt',
+            'document_file': base64.b64encode(b'entity Dynamic'),
+            'status': 'published',
+            'dsl_knowledge': True,
+        })
+
+        self.assertEqual(doc.document_format, 'text')
+        kb_file = self.KBFile.search([
+            ('file_type', '=', 'other'),
+            ('source_url', '=', 'odoo://itlingo.document/%s' % doc.id),
+        ])
+        self.assertEqual(len(kb_file), 1)
+        self.assertEqual(kb_file.content, 'entity Dynamic')

@@ -6,7 +6,7 @@
         <field name="type_code">specification</field>
         <field name="short_name">SPEC</field>
         <field name="name">Specification</field>
-        <field name="extension_file">.rsl</field>
+        <field name="extension_file"></field>
         <field name="active" eval="True"/>
     </record>
 
@@ -22,7 +22,7 @@
         <field name="type_code">specification_library</field>
         <field name="short_name">SPEC-LIB</field>
         <field name="name">Specification Library</field>
-        <field name="extension_file">.rsl</field>
+        <field name="extension_file"></field>
         <field name="active" eval="True"/>
     </record>
 
@@ -79,7 +79,7 @@
         <field name="type_code">specification</field>
         <field name="short_name">RSL</field>
         <field name="name">Legacy RSL</field>
-        <field name="extension_file">.rsl</field>
+        <field name="extension_file"></field>
         <field name="active" eval="False"/>
     </record>
 
@@ -87,7 +87,7 @@
         <field name="type_code">specification</field>
         <field name="short_name">PSL</field>
         <field name="name">Legacy PSL</field>
-        <field name="extension_file">.psl</field>
+        <field name="extension_file"></field>
         <field name="active" eval="False"/>
     </record>
 
@@ -95,7 +95,7 @@
         <field name="type_code">specification</field>
         <field name="short_name">TSL</field>
         <field name="name">Legacy TSL</field>
-        <field name="extension_file">.tsl</field>
+        <field name="extension_file"></field>
         <field name="active" eval="False"/>
     </record>
 
