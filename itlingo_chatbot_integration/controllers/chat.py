@@ -133,6 +133,32 @@ def _dedup_filename(filename: str, existing_names: set[str]) -> str:
         n += 1
 
 
+def _resolve_dsl_export_filename(env, filename: str, dsl_reference) -> str:
+    """Derive an exported specification's extension from its active DSL."""
+    raw_reference = str(dsl_reference or '').strip()
+    if not raw_reference:
+        return filename
+
+    Dsl = env['itlingo.dsl'].sudo()
+    if raw_reference.isdigit():
+        dsl = Dsl.browse(int(raw_reference)).exists()
+        if dsl and dsl.status != 'active':
+            dsl = Dsl.browse()
+    else:
+        dsl = Dsl.search([
+            ('acronym', '=ilike', raw_reference),
+            ('status', '=', 'active'),
+        ], limit=1)
+    if not dsl:
+        raise ValueError(
+            f'No active DSL matches "{raw_reference}". Reload the chatbot '
+            'to refresh its available grammars.'
+        )
+
+    base_name, _client_extension = _split_filename(filename)
+    return f'{base_name}.{dsl._extensions()[0]}'
+
+
 class ChatController(http.Controller):
     def _workspace_shell_values(self, project_id: int, chat_url: str, token: str,
                                 public_hub: bool = False) -> dict:
@@ -370,6 +396,14 @@ class ChatController(http.Controller):
         # Keep filenames conservative: no path separators or control chars.
         if not filename or not re.fullmatch(r'[\w][\w .()\-]*', filename):
             return self._json_response({'error': 'Missing or invalid filename'}, 400)
+        try:
+            filename = _resolve_dsl_export_filename(
+                request.env,
+                filename,
+                body.get('dsl'),
+            )
+        except ValueError as err:
+            return self._json_response({'error': str(err)}, 400)
 
         project = request.env['itlingo.workspace'].sudo().browse(workspace_id)
         if not project.exists():
