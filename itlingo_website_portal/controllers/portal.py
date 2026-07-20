@@ -5,6 +5,7 @@ from odoo import _, http
 from odoo.exceptions import AccessError, MissingError, UserError, ValidationError
 from odoo.http import request, route, content_disposition
 from odoo.addons.portal.controllers.portal import CustomerPortal, pager
+from odoo.addons.itlingo_documents.constants import SUPPORTED_TEMPLATE_ACCEPT
 
 # Rows per page on every portal list. Keep a single value so all listing
 # pages paginate the same way.
@@ -892,6 +893,7 @@ class ITLingoPortal(CustomerPortal):
             'dsls': request.env['itlingo.dsl'].sudo().search(
                 [], order='acronym, version desc'),
             'doc_language_selection': Document._fields['language'].selection,
+            'template_file_accept': SUPPORTED_TEMPLATE_ACCEPT,
         }
 
     def _portal_document_meta_vals(self, post):

@@ -6,6 +6,10 @@ import re
 from odoo import http
 from odoo.http import content_disposition, request
 
+from odoo.addons.itlingo_documents.constants import (
+    SUPPORTED_TEMPLATE_ACCEPT,
+    SUPPORTED_TEMPLATE_EXTENSIONS,
+)
 from odoo.addons.itlingo_website_portal.controllers.dsl import ITLingoDslPortal
 from odoo.addons.itlingo_templating.services import template_linter
 from odoo.addons.itlingo_templating.services.starter_template import (
@@ -15,9 +19,7 @@ from odoo.addons.itlingo_templating.services.starter_template import (
 
 MAX_TEMPLATE_CHECK_BYTES = 5 * 1024 * 1024
 SUPPORTED_TEMPLATE_FORMATS = {
-    "docx", "xlsx", "txt", "md", "rst", "html", "htm", "json", "xml",
-    "yaml", "yml", "toml", "ini", "cfg", "properties", "sql", "csv",
-    "tsv", "css", "js", "ts", "sh",
+    extension.lstrip(".") for extension in SUPPORTED_TEMPLATE_EXTENSIONS
 }
 
 
@@ -81,6 +83,7 @@ class ItlingoTemplateReferencePortal(http.Controller):
             "template_lint_result": lint_result,
             "template_check_error": check_error,
             "pasted_template": pasted_template,
+            "template_file_accept": SUPPORTED_TEMPLATE_ACCEPT,
             "max_template_check_mb": MAX_TEMPLATE_CHECK_BYTES // (1024 * 1024),
             **prepare_reference_view(reference),
         })

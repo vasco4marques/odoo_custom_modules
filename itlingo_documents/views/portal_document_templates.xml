@@ -31,7 +31,7 @@
                     var dsl = document.querySelector('select[name=dsl_id]');
                     var files = document.querySelectorAll('input[type=file][name=document_file]');
                     var tplId = '<t t-esc="template_type_id"/>';
-                    var templateAccept = '.docx,.xlsx,.txt,.md,.rst,.html,.htm,.json,.xml,.yaml,.yml,.toml,.ini,.cfg,.properties,.sql,.csv,.tsv,.css,.js,.ts,.sh';
+                    var templateAccept = '<t t-esc="template_file_accept"/>';
                     function sync(){
                         if(sel &amp;&amp; opts){
                             var isTemplate = String(sel.value) === tplId;

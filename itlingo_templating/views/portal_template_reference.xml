@@ -152,7 +152,7 @@
                                             <label for="template-reference-file" class="form-label fw-semibold">Upload a template file</label>
                                             <input id="template-reference-file" class="form-control"
                                                    type="file" name="template_file"
-                                                   accept=".docx,.xlsx,.txt,.md,.rst,.html,.htm,.json,.xml,.yaml,.yml,.toml,.ini,.cfg,.properties,.sql,.csv,.tsv,.css,.js,.ts,.sh"/>
+                                                   t-att-accept="template_file_accept"/>
                                             <p class="form-text mb-0">
                                                 DOCX, XLSX, or a text template; maximum <t t-out="max_template_check_mb"/> MiB.
                                             </p>

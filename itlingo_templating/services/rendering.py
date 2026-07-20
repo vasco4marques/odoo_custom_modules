@@ -7,6 +7,10 @@ partial specifications still produce a document.
 import json
 import re
 
+from odoo.addons.itlingo_documents.constants import (
+    SUPPORTED_TEMPLATE_EXTENSIONS,
+)
+
 
 def lenient_env():
     """Jinja2 environment used by every renderer.
@@ -37,14 +41,6 @@ def lenient_env():
 
     env.policies["json.dumps_function"] = dumps_json_safe
     return env
-
-
-SUPPORTED_TEMPLATE_EXTENSIONS = (
-    ".docx", ".xlsx",
-    ".txt", ".md", ".rst", ".html", ".htm", ".json", ".xml",
-    ".yaml", ".yml", ".toml", ".ini", ".cfg", ".properties",
-    ".sql", ".csv", ".tsv", ".css", ".js", ".ts", ".sh",
-)
 
 
 def render_filename(pattern, context, fallback, extension):
