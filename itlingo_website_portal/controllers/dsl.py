@@ -7,7 +7,7 @@ from odoo.addons.portal.controllers.portal import CustomerPortal
 
 from .portal import paginate
 
-DSL_STATUS = ('draft', 'active', 'deprecated', 'archived')
+DSL_STATUS = ('draft', 'active', 'deprecated')
 DSL_FILE_TYPES = ('grammar', 'validation', 'examples', 'specification')
 
 

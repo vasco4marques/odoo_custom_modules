@@ -44,11 +44,6 @@ class ItlingoWorkspace(models.Model):
             dsl = workspace.default_dsl_id
             if not dsl:
                 continue
-            if dsl.status == "archived":
-                raise ValidationError(_(
-                    "An archived DSL (%s) cannot be set as the default DSL.",
-                    dsl.display_name,
-                ))
             available = workspace._itlingo_available_dsls()
             if available and dsl not in available:
                 raise ValidationError(_(

@@ -55,7 +55,6 @@ class ItlingoDsl(models.Model):
             ("draft", "Draft"),
             ("active", "Active"),
             ("deprecated", "Deprecated"),
-            ("archived", "Archived"),
         ],
         string="Status",
         required=True,

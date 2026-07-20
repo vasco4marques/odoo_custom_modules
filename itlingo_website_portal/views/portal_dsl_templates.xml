@@ -314,7 +314,7 @@
                 <div class="card border-0 shadow-sm rounded-3 mb-4">
                     <div class="card-body">
                         <p class="text-muted small text-uppercase fw-semibold mb-3">Lifecycle &amp; publication</p>
-                        <t t-set="status_badges" t-value="{'draft': 'info', 'active': 'success', 'deprecated': 'warning', 'archived': 'secondary'}"/>
+                        <t t-set="status_badges" t-value="{'draft': 'info', 'active': 'success', 'deprecated': 'warning'}"/>
                         <t t-set="lifecycle_grammar" t-value="dsl.file_ids.filtered(lambda f: f.file_type == 'grammar')"/>
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
                             <span t-attf-class="badge text-capitalize bg-#{status_badges.get(dsl.status, 'secondary')}">

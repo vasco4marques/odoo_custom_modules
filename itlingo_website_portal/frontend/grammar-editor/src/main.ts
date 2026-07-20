@@ -27,7 +27,7 @@ import {
 } from './workspace-files.js';
 import './style.css';
 
-type DslStatus = 'draft' | 'active' | 'deprecated' | 'archived';
+type DslStatus = 'draft' | 'active' | 'deprecated';
 
 interface GrammarFile {
     id: number;

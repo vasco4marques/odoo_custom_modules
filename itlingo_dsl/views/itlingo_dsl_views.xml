@@ -13,8 +13,7 @@
                 <field name="status" widget="badge"
                        decoration-info="status == 'draft'"
                        decoration-success="status == 'active'"
-                       decoration-warning="status == 'deprecated'"
-                       decoration-muted="status == 'archived'"/>
+                       decoration-warning="status == 'deprecated'"/>
                 <field name="file_extensions"/>
                 <field name="active" column_invisible="1"/>
             </list>
@@ -37,7 +36,7 @@
                             invisible="status == 'draft' or not id"
                             help="Copies this DSL's metadata and definition files into a new editable draft version without modifying this version."/>
                     <field name="status" widget="statusbar"
-                           statusbar_visible="draft,active,deprecated,archived"/>
+                           statusbar_visible="draft,active,deprecated"/>
                 </header>
                 <sheet>
                     <widget name="web_ribbon" title="Archived"
@@ -146,9 +145,6 @@
                         domain="[('status', '=', 'draft')]"/>
                 <filter string="Deprecated" name="deprecated_status"
                         domain="[('status', '=', 'deprecated')]"/>
-                <filter string="Archived" name="archived_status"
-                        domain="[('status', '=', 'archived')]"/>
-                <separator/>
                 <filter string="Archived (Inactive)" name="inactive"
                         domain="[('active', '=', False)]"/>
                 <group name="group_by">
