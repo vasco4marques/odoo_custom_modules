@@ -145,8 +145,11 @@ Two dependencies are not delivered by `git pull`:
    ```
    pip install docxtpl
    ```
-2. **Node.js** - already required by Odoo. The parser ships pre-bundled
-   (`parser/dist/parser.mjs`); no install needed on the server.
+2. **Node.js >=22 and Langium 4.3.1** - the parser code ships pre-built
+   (`parser/dist/parser.mjs`), while Langium remains external under
+   `parser/node_modules` so custom DSL services use the same Langium instance.
+   The Docker image installs this dependency and a compatible Node runtime
+   during its build.
 
 Optional system parameters (Settings > Technical > System Parameters):
 
@@ -161,7 +164,7 @@ Only when changing the parser runner or the shared Langium version:
 
 ```
 cd parser
-npm install
+npm ci
 npm run build                                   # -> dist/parser.mjs (commit it)
 ```
 

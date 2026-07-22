@@ -2,18 +2,18 @@
   "name": "itlingo-dsl-parser",
   "version": "1.0.0",
   "private": true,
-  "description": "Self-contained DSL grammar and source to JSON AST CLI.",
+  "description": "Runtime DSL grammar and source to JSON AST CLI.",
   "type": "module",
   "scripts": {
-    "build": "esbuild src/parser.mjs --bundle --platform=node --format=esm --outfile=dist/parser.mjs --banner:js=\"import { createRequire } from 'module'; const require = createRequire(import.meta.url);\""
+    "build": "esbuild src/parser.mjs --bundle --platform=node --format=esm --external:langium --outfile=dist/parser.mjs"
   },
   "dependencies": {
-    "langium": "^3.0.0"
+    "langium": "4.3.1"
   },
   "devDependencies": {
     "esbuild": "^0.21.0"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22.0.0"
   }
 }

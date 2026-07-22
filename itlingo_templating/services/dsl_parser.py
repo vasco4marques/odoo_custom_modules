@@ -1,7 +1,8 @@
 """Parse ITLingo DSL specifications into serialized Langium ASTs.
 
-Runs the self-contained ``parser/dist/parser.mjs`` bundle as a local Node
-subprocess. No network calls and no dependency on the chatbot/ITOI services.
+Runs ``parser/dist/parser.mjs`` as a local Node subprocess. Langium is kept as a
+runtime dependency under ``parser/node_modules`` so author-supplied service
+modules can share the parser's Langium instance.
 """
 
 import json
@@ -14,7 +15,11 @@ import tempfile
 _logger = logging.getLogger(__name__)
 
 _MODULE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-_PARSER_JS = os.path.join(_MODULE_DIR, "parser", "dist", "parser.mjs")
+_PARSER_DIR = os.path.join(_MODULE_DIR, "parser")
+_PARSER_JS = os.path.join(_PARSER_DIR, "dist", "parser.mjs")
+_LANGIUM_PACKAGE = os.path.join(
+    _PARSER_DIR, "node_modules", "langium", "package.json",
+)
 
 _DEFAULT_NODE_PATH = "node"
 _DEFAULT_TIMEOUT = 30
@@ -119,6 +124,12 @@ def parse_dsl(env, dsl, source_bytes):
         raise RuntimeError(
             "DSL parser bundle is missing (%s). Rebuild it with `npm run build` "
             "in the parser/ folder." % _PARSER_JS
+        )
+    if not os.path.exists(_LANGIUM_PACKAGE):
+        raise RuntimeError(
+            "DSL parser runtime dependency Langium is missing (%s). Run "
+            "`npm ci --omit=dev` in the parser/ folder or rebuild the container."
+            % _LANGIUM_PACKAGE
         )
     node_path, timeout = _config(env)
 

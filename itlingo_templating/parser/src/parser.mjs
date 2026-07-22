@@ -4,7 +4,8 @@
 // Builds Langium services from the grammar text at runtime (createServicesForGrammar)
 // and prints {success, ast, error, diagnostics, ast_summary} as JSON on stdout.
 //
-// Self-contained: no network, no dependency on the chatbot/ITOI services.
+// Langium stays external so this parser and author-supplied services modules can
+// resolve the same runtime instance from parser/node_modules.
 
 import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
