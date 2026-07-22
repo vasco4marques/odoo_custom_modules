@@ -100,6 +100,12 @@
                                     <field name="grammar_validation_time"/>
                                     <field name="grammar_validator_version"/>
                                 </group>
+                                <group string="Services Compilation">
+                                    <field name="services_compile_result"/>
+                                    <field name="services_compile_time"/>
+                                    <field name="services_source_digest"/>
+                                    <field name="services_compiled_digest"/>
+                                </group>
                                 <group string="Publication Audit">
                                     <field name="published_by_id"/>
                                     <field name="published_at"/>
@@ -109,13 +115,14 @@
                             </group>
                             <group>
                                 <field name="grammar_validation_diagnostics" readonly="1"/>
+                                <field name="services_compile_diagnostics" readonly="1"/>
                             </group>
                             <p class="text-muted">
                                 Publishing validates the grammar with the bundled
-                                Langium validator and refreshes the chatbot knowledge
-                                base. It does not build or deploy the templating or
-                                ITOI parsers, which bundle their own grammar copies
-                                and are deployed separately.
+                                Langium validator, compiles any services TypeScript
+                                workspace, and refreshes the chatbot knowledge base.
+                                It does not build or deploy the templating or ITOI
+                                parsers, which are deployed separately.
                             </p>
                         </page>
                         <page string="Administration">

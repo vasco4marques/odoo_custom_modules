@@ -340,10 +340,27 @@ class ItlingoDslFile(models.Model):
         records = super().create(vals_list)
         records.dsl_id._check_grammar_files()
         records.dsl_id._sync_kb_files()
+        if not self.env.context.get("skip_services_compile"):
+            for dsl in records.filtered(
+                lambda item: item.file_type == "services"
+            ).dsl_id:
+                dsl._run_services_compilation()
         return records
 
     def write(self, vals):
         vals = dict(vals)
+        services_source_fields = {
+            "dsl_id", "file_type", "file", "file_name", "relative_path",
+            "is_entry",
+        }
+        services_before = self.filtered(
+            lambda item: item.file_type == "services"
+        )
+        compile_services = bool(
+            set(vals) & services_source_fields
+            and (services_before or vals.get("file_type") == "services")
+        )
+        services_dsls_before = services_before.dsl_id
         structural_records = self.filtered(
             lambda item: item.file_type in STRUCTURAL_FILE_TYPES
         )
@@ -383,12 +400,24 @@ class ItlingoDslFile(models.Model):
         affected_dsls = dsls | self.dsl_id
         affected_dsls._check_grammar_files()
         affected_dsls._sync_kb_files()
+        if compile_services and not self.env.context.get("skip_services_compile"):
+            services_after = self.filtered(
+                lambda item: item.file_type == "services"
+            )
+            for dsl in services_dsls_before | services_after.dsl_id:
+                dsl._run_services_compilation()
         return result
 
     def unlink(self):
         self._check_grammar_draft_mutation()
         dsls = self.dsl_id
+        services_dsls = self.filtered(
+            lambda item: item.file_type == "services"
+        ).dsl_id
         result = super().unlink()
         dsls._check_grammar_files()
         dsls._sync_kb_files()
+        if not self.env.context.get("skip_services_compile"):
+            for dsl in services_dsls:
+                dsl._run_services_compilation()
         return result

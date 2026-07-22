@@ -7,7 +7,7 @@ import re
 from odoo import api, fields, models, _
 from odoo.exceptions import AccessError, UserError, ValidationError
 
-from ..services import grammar_flattener, grammar_validator
+from ..services import grammar_flattener, grammar_validator, services_compiler
 
 _logger = logging.getLogger(__name__)
 
@@ -360,8 +360,136 @@ class ItlingoDsl(models.Model):
                     ))
 
     # ------------------------------------------------------------------
-    # Grammar validation and publication lifecycle
+    # Grammar/services validation and publication lifecycle
     # ------------------------------------------------------------------
+    def _services_file(self):
+        """Return this workspace's entry services file."""
+        self.ensure_one()
+        return self.file_ids.filtered(
+            lambda f: f.file_type == "services" and f.is_entry
+        )[:1]
+
+    def _services_files(self):
+        """Return all services files in deterministic path order."""
+        self.ensure_one()
+        return self.file_ids.filtered(
+            lambda f: f.file_type == "services"
+        ).sorted(key=lambda f: (f.relative_path, f.id))
+
+    def _services_source_digest(self):
+        """SHA-256 of the complete services workspace and its entry path."""
+        self.ensure_one()
+        services = self._services_files()
+        entry = self._services_file()
+        if not services or not entry:
+            return False
+        digest = hashlib.sha256()
+        digest.update(b"entry\0")
+        digest.update(entry.relative_path.encode("utf-8"))
+        digest.update(b"\0")
+        for services_file in services:
+            digest.update(b"path\0")
+            digest.update(services_file.relative_path.encode("utf-8"))
+            digest.update(b"\0content\0")
+            digest.update(services_file._read_text_utf8().encode("utf-8"))
+            digest.update(b"\0")
+        return digest.hexdigest()
+
+    def _clear_services_compilation(self):
+        """Clear compiled state when a DSL has no services workspace."""
+        self.write({
+            "services_source_digest": False,
+            "services_compiled": False,
+            "services_compiled_digest": False,
+            "services_compile_result": False,
+            "services_compile_diagnostics": False,
+            "services_compile_time": False,
+        })
+
+    def _run_services_compilation(self):
+        """Compile the current services workspace and store its audited result.
+
+        Compilation errors, including unavailable infrastructure, are stored as
+        diagnostics instead of rejecting a draft save. Publication separately
+        enforces a successful, current artifact.
+        """
+        self.ensure_one()
+        services = self._services_files()
+        if not services:
+            self._clear_services_compilation()
+            return {
+                "ok": True,
+                "js": "",
+                "diagnostics": [],
+                "compiler_version": "none",
+            }
+
+        entry = self._services_file()
+        source_digest = self._services_source_digest()
+        files = {
+            services_file.relative_path: services_file._read_text_utf8()
+            for services_file in services
+        }
+        try:
+            result = services_compiler.compile_services(
+                self.env, files, entry.relative_path if entry else None,
+            )
+        except services_compiler.ServicesCompilationUnavailable as err:
+            result = {
+                "ok": False,
+                "js": "",
+                "diagnostics": [{
+                    "severity": "error",
+                    "message": str(err),
+                    "path": entry.relative_path if entry else "",
+                    "line": 1,
+                    "column": 1,
+                    "code": "services-compiler-unavailable",
+                }],
+                "compiler_version": "unavailable",
+            }
+
+        artifact = (result.get("js") or "") if result.get("ok") else ""
+        artifact_digest = (
+            hashlib.sha256(artifact.encode("utf-8")).hexdigest()
+            if artifact else False
+        )
+        diagnostics = list(result.get("diagnostics") or [])
+        self.write({
+            "services_source_digest": source_digest,
+            "services_compiled": artifact or False,
+            "services_compiled_digest": artifact_digest,
+            "services_compile_result": "ok" if result.get("ok") else "error",
+            "services_compile_diagnostics": diagnostics,
+            "services_compile_time": fields.Datetime.now(),
+        })
+        _logger.info(
+            "Compiled services for DSL %s with %s: %s",
+            self.display_name,
+            result.get("compiler_version") or "unknown compiler",
+            "ok" if result.get("ok") else "error",
+        )
+        return {
+            **result,
+            "js": artifact,
+            "diagnostics": diagnostics,
+        }
+
+    def _services_compile_error_summary(self):
+        self.ensure_one()
+        diagnostics = self.services_compile_diagnostics or []
+        errors = [d for d in diagnostics if d.get("severity") == "error"]
+        lines = [
+            _("%(path)s:%(line)s:%(column)s: %(message)s",
+              path=d.get("path") or _("services"),
+              line=d.get("line", "?"), column=d.get("column", "?"),
+              message=d.get("message", ""))
+            for d in errors[:5]
+        ]
+        if len(errors) > 5:
+            lines.append(_("… and %s more errors.", len(errors) - 5))
+        return "\n".join(lines)
+
     def _grammar_file(self):
         """Return this workspace's entry grammar file."""
         self.ensure_one()
@@ -484,32 +612,63 @@ class ItlingoDsl(models.Model):
         return "\n".join(lines)
 
     def _ensure_grammar_publishable(self):
-        """Block activation while the grammar is unvalidated, stale, or invalid.
+        """Block activation for invalid grammar or services compilation state.
 
         DSLs without a grammar file (metadata-only entries) may activate
-        freely; this guard protects the grammar contract only.
+        freely unless they carry a services workspace.
         """
         for dsl in self:
-            if not dsl._grammar_file():
+            if dsl._grammar_file():
+                if not dsl.grammar_validation_result:
+                    raise ValidationError(_(
+                        "The grammar of %(dsl)s has not been validated. Publish "
+                        "through the Publish action, which runs server-side "
+                        "validation.", dsl=dsl.display_name,
+                    ))
+                if dsl.grammar_validation_digest != dsl._grammar_digest():
+                    raise ValidationError(_(
+                        "The grammar of %(dsl)s changed after its last "
+                        "validation. Publish again to revalidate the current "
+                        "content.", dsl=dsl.display_name,
+                    ))
+                if dsl.grammar_validation_result != "valid":
+                    raise ValidationError(_(
+                        "The grammar of %(dsl)s has validation errors and cannot "
+                        "be published:\n%(errors)s",
+                        dsl=dsl.display_name,
+                        errors=dsl._grammar_validation_error_summary(),
+                    ))
+
+            if not dsl._services_files():
                 continue
-            if not dsl.grammar_validation_result:
+            if not dsl.services_compile_result:
                 raise ValidationError(_(
-                    "The grammar of %(dsl)s has not been validated. Publish "
-                    "through the Publish action, which runs server-side "
-                    "validation.", dsl=dsl.display_name,
-                ))
-            if dsl.grammar_validation_digest != dsl._grammar_digest():
-                raise ValidationError(_(
-                    "The grammar of %(dsl)s changed after its last "
-                    "validation. Publish again to revalidate the current "
-                    "content.", dsl=dsl.display_name,
-                ))
-            if dsl.grammar_validation_result != "valid":
-                raise ValidationError(_(
-                    "The grammar of %(dsl)s has validation errors and cannot "
-                    "be published:\n%(errors)s",
+                    "The services module of %(dsl)s has not been compiled. "
+                    "Publish again to compile the current sources.",
                     dsl=dsl.display_name,
-                    errors=dsl._grammar_validation_error_summary(),
+                ))
+            if dsl.services_source_digest != dsl._services_source_digest():
+                raise ValidationError(_(
+                    "The services module of %(dsl)s changed after its last "
+                    "compilation. Publish again to compile the current sources.",
+                    dsl=dsl.display_name,
+                ))
+            if dsl.services_compile_result != "ok":
+                raise ValidationError(_(
+                    "The services module of %(dsl)s has compilation errors and "
+                    "cannot be published:\n%(errors)s",
+                    dsl=dsl.display_name,
+                    errors=dsl._services_compile_error_summary(),
+                ))
+            artifact = dsl.services_compiled or ""
+            artifact_digest = hashlib.sha256(
+                artifact.encode("utf-8")
+            ).hexdigest() if artifact else False
+            if not artifact or artifact_digest != dsl.services_compiled_digest:
+                raise ValidationError(_(
+                    "The compiled services artifact of %(dsl)s is missing or "
+                    "does not match its recorded digest. Publish again to "
+                    "recompile it.", dsl=dsl.display_name,
                 ))
 
     def _active_acronym_sibling(self):
@@ -548,6 +707,8 @@ class ItlingoDsl(models.Model):
             grammar = dsl._grammar_file()
             if grammar:
                 dsl._run_grammar_validation()
+            if dsl._services_files():
+                dsl._run_services_compilation()
             dsl._ensure_grammar_publishable()
             previous = dsl._active_acronym_sibling()
             previous.write({"status": "deprecated"})

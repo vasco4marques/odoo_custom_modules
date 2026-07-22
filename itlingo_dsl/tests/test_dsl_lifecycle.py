@@ -1,3 +1,4 @@
+import hashlib
 import json
 from unittest.mock import patch
 
@@ -173,14 +174,21 @@ class TestDslLifecycle(TransactionCase):
             draft_services._read_text_utf8(), services._read_text_utf8(),
         )
         # Validation and publication audit fields never travel to the copy.
+        # Services compilation is instead recomputed when the copied services
+        # file is created in the new draft.
         self.assertFalse(draft.grammar_validation_result)
         self.assertFalse(draft.published_at)
-        self.assertFalse(draft.services_source_digest)
-        self.assertFalse(draft.services_compiled)
-        self.assertFalse(draft.services_compiled_digest)
-        self.assertFalse(draft.services_compile_result)
+        self.assertEqual(
+            draft.services_source_digest, draft._services_source_digest(),
+        )
+        self.assertTrue(draft.services_compiled)
+        self.assertEqual(
+            draft.services_compiled_digest,
+            hashlib.sha256(draft.services_compiled.encode()).hexdigest(),
+        )
+        self.assertEqual(draft.services_compile_result, 'ok')
         self.assertFalse(draft.services_compile_diagnostics)
-        self.assertFalse(draft.services_compile_time)
+        self.assertTrue(draft.services_compile_time)
         # The source version is untouched.
         self.assertEqual(dsl.status, 'active')
         self.assertEqual(dsl._grammar_digest(), source_digest)

@@ -1,0 +1,18 @@
+{
+  "name": "itlingo-services-compiler",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bundle author-supplied Langium services modules for ITLingo DSLs.",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/compile.mjs --bundle --platform=node --format=esm --external:esbuild --outfile=dist/compile.mjs",
+    "test": "npm run build && node --test test/compile.test.mjs"
+  },
+  "dependencies": {
+    "esbuild": "0.25.12",
+    "langium": "4.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
