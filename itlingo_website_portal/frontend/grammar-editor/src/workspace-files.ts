@@ -2,9 +2,12 @@ export interface VersionedTextModel {
     getAlternativeVersionId(): number;
 }
 
+export type WorkspaceFileType = 'grammar' | 'services';
+
 export interface WorkspaceFile<TModel extends VersionedTextModel = VersionedTextModel> {
     id?: number;
     path: string;
+    fileType: WorkspaceFileType;
     isEntry: boolean;
     model: TModel;
     savedVersionId: number;
@@ -21,16 +24,33 @@ export function buildFileUri(dslId: number, path: string): string {
     return `file:///itlingo-dsl/${dslId}/${encodedPath}`;
 }
 
-export function validateGrammarPath(value: string): string {
+export function workspaceFileTypeForPath(path: string): WorkspaceFileType {
+    if (path.endsWith('.langium')) {
+        return 'grammar';
+    }
+    if (path.endsWith('.ts')) {
+        return 'services';
+    }
+    throw new Error('Workspace paths must end in .langium or .ts.');
+}
+
+export function validateWorkspacePath(value: string): string {
     const path = value.trim();
     const segments = path.split('/');
     if (!path || path.includes('\0') || path.includes('\\') || path.startsWith('/')) {
         throw new Error('Use a non-empty relative path with forward slashes.');
     }
     if (segments.some((segment) => !segment || segment === '.' || segment === '..')) {
-        throw new Error("Grammar paths cannot contain empty, '.' or '..' segments.");
+        throw new Error("Workspace paths cannot contain empty, '.' or '..' segments.");
     }
-    if (!path.endsWith('.langium')) {
+    workspaceFileTypeForPath(path);
+    return path;
+}
+
+/** Backward-compatible grammar-only validator used by existing callers. */
+export function validateGrammarPath(value: string): string {
+    const path = validateWorkspacePath(value);
+    if (workspaceFileTypeForPath(path) !== 'grammar') {
         throw new Error('Grammar paths must end in .langium.');
     }
     return path;
@@ -44,7 +64,7 @@ export class WorkspaceFileRegistry<
 
     add(file: WorkspaceFile<TModel>): WorkspaceFile<TModel> {
         if (this.files.has(file.path)) {
-            throw new Error(`The grammar workspace already contains '${file.path}'.`);
+            throw new Error(`The DSL workspace already contains '${file.path}'.`);
         }
         this.files.set(file.path, file);
         return file;
@@ -79,7 +99,7 @@ export class WorkspaceFileRegistry<
     rename(oldPath: string, newPath: string, model: TModel): WorkspaceFile<TModel> {
         const oldFile = this.required(oldPath);
         if (oldPath !== newPath && this.files.has(newPath)) {
-            throw new Error(`The grammar workspace already contains '${newPath}'.`);
+            throw new Error(`The DSL workspace already contains '${newPath}'.`);
         }
         this.files.delete(oldPath);
         const version = model.getAlternativeVersionId();
@@ -103,7 +123,7 @@ export class WorkspaceFileRegistry<
     private required(path: string): WorkspaceFile<TModel> {
         const file = this.files.get(path);
         if (!file) {
-            throw new Error(`Grammar file '${path}' is not registered.`);
+            throw new Error(`Workspace file '${path}' is not registered.`);
         }
         return file;
     }

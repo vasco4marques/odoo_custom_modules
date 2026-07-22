@@ -12,8 +12,10 @@ import type {
 } from './language-service-lifecycle.js';
 import {initializeMonacoServices} from './monaco-services.js';
 import {
+    compilerDiagnosticsToProblemItems,
     countProblems,
     groupProblemsByPath,
+    type CompilerDiagnosticLike,
     type ProblemItem,
     summarizeProblems,
     toProblemItems,
@@ -21,10 +23,13 @@ import {
 } from './problems.js';
 import {
     buildFileUri,
-    validateGrammarPath,
+    validateWorkspacePath,
+    workspaceFileTypeForPath,
     type WorkspaceFile,
+    type WorkspaceFileType,
     WorkspaceFileRegistry,
 } from './workspace-files.js';
+import '@codingame/monaco-vscode-standalone-typescript-language-features';
 import './style.css';
 
 type DslStatus = 'draft' | 'active' | 'deprecated';
@@ -34,6 +39,13 @@ interface GrammarFile {
     path: string;
     content: string;
     isEntry: boolean;
+    fileType: WorkspaceFileType;
+    servicesCompilation?: ServicesCompilation;
+}
+
+interface ServicesCompilation {
+    result: '' | 'ok' | 'error';
+    diagnostics: CompilerDiagnosticLike[];
 }
 
 interface GrammarWorkspace {
@@ -42,6 +54,9 @@ interface GrammarWorkspace {
     files: GrammarFile[];
     suggestedPath: string;
     suggestedContent: string;
+    suggestedServicesPath: string;
+    suggestedServicesContent: string;
+    servicesCompilation: ServicesCompilation;
 }
 
 interface JsonRpcError {
@@ -59,6 +74,7 @@ interface SourceFile {
     path: string;
     content: string;
     isEntry: boolean;
+    fileType: WorkspaceFileType;
     initiallyDirty?: boolean;
 }
 
@@ -166,6 +182,8 @@ export class GrammarEditorApp {
     private serverReady = false;
     private disposed = false;
     private problems: ProblemItem[] = [];
+    private compileProblems: ProblemItem[] = [];
+    private suggestedServicesContent = '';
     private lastActivityAt = Date.now();
 
     constructor(private readonly root: HTMLElement) {
@@ -204,12 +222,14 @@ export class GrammarEditorApp {
         try {
             const workspace = await rpc<GrammarWorkspace>(`/dsl/${this.dslId}/grammar/load`);
             this.canEdit = workspace.permissions.canEdit;
+            this.suggestedServicesContent = workspace.suggestedServicesContent;
             const sources: SourceFile[] = workspace.files.length
                 ? workspace.files
                 : this.canEdit ? [{
                     path: workspace.suggestedPath,
                     content: workspace.suggestedContent,
                     isEntry: true,
+                    fileType: 'grammar',
                     initiallyDirty: true,
                 }] : [];
 
@@ -220,6 +240,7 @@ export class GrammarEditorApp {
                 this.registerOverlayFile(source.path, source.content);
             }
             await initializeMonacoServices();
+            this.setServicesCompilation(workspace.servicesCompilation);
             this.mount(sources);
         } catch (error) {
             this.fail(error, 'Could not load the grammar editor.');
@@ -242,7 +263,7 @@ export class GrammarEditorApp {
             fontSize: 14,
             tabSize: 4,
             insertSpaces: true,
-            ariaLabel: 'Langium grammar source editor',
+            ariaLabel: 'DSL grammar and services source editor',
         });
         this.editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyS, () => {
             void this.save();
@@ -276,11 +297,16 @@ export class GrammarEditorApp {
 
     private addModel(source: SourceFile): WorkspaceFile<monaco.editor.ITextModel> {
         const uri = monaco.Uri.parse(buildFileUri(this.dslId, source.path));
-        const model = monaco.editor.createModel(source.content, 'langium', uri);
+        const model = monaco.editor.createModel(
+            source.content,
+            source.fileType === 'services' ? 'typescript' : 'langium',
+            uri,
+        );
         const version = model.getAlternativeVersionId();
         const file = this.files.add({
             id: source.id,
             path: source.path,
+            fileType: source.fileType,
             isEntry: source.isEntry,
             model,
             savedVersionId: source.initiallyDirty ? version - 1 : version,
@@ -295,6 +321,15 @@ export class GrammarEditorApp {
             this.lastActivityAt = Date.now();
             this.validatedClean = false;
             this.files.refreshDirty(file.path);
+            if (
+                file.fileType === 'services'
+                && (this.compileProblems.length || this.root.dataset.servicesCompileResult)
+            ) {
+                this.compileProblems = [];
+                this.root.dataset.servicesCompileResult = '';
+                this.root.dataset.servicesCompileDiagnostics = '0';
+                this.updateDiagnosticMetadata();
+            }
             const node = this.fileNodes.get(file.path);
             if (node) {
                 void node.write(new TextEncoder().encode(file.model.getValue()));
@@ -356,7 +391,9 @@ export class GrammarEditorApp {
             select.title = file.path;
 
             const icon = document.createElement('i');
-            icon.className = file.isEntry ? 'fa fa-star text-warning' : 'fa fa-file-code-o';
+            icon.className = file.isEntry
+                ? 'fa fa-star text-warning'
+                : file.fileType === 'services' ? 'fa fa-code' : 'fa fa-file-code-o';
             icon.setAttribute('aria-hidden', 'true');
             const label = document.createElement('span');
             label.className = 'itlingo-grammar-file-label';
@@ -397,11 +434,11 @@ export class GrammarEditorApp {
         this.filesHost.classList.toggle('itlingo-grammar-files-empty', nodes.length === 0);
         if (!nodes.length) {
             this.filesHost.textContent = this.canEdit
-                ? 'No grammar files. Create one to begin.'
-                : 'This DSL has no grammar files.';
+                ? 'No grammar or services files. Create one to begin.'
+                : 'This DSL has no grammar or services files.';
         }
         const active = this.files.get(this.activePath);
-        this.filename.textContent = active?.path || 'No grammar file selected';
+        this.filename.textContent = active?.path || 'No workspace file selected';
         this.root.dataset.grammarActiveFile = active?.path || '';
     }
 
@@ -452,7 +489,9 @@ export class GrammarEditorApp {
     };
 
     private readonly onCreateClick = (): void => {
-        const value = window.prompt('Relative path for the new .langium file:');
+        const value = window.prompt(
+            'Relative path for a new .langium grammar or .ts services file:',
+        );
         if (value !== null) {
             void this.createFile(value);
         }
@@ -460,18 +499,26 @@ export class GrammarEditorApp {
 
     private async createFile(value: string): Promise<void> {
         try {
-            const path = validateGrammarPath(value);
+            const path = validateWorkspacePath(value);
+            const fileType = workspaceFileTypeForPath(path);
+            const hasServices = this.files.sorted().some(
+                (file) => file.fileType === 'services',
+            );
+            const content = fileType === 'services' && !hasServices
+                ? this.suggestedServicesContent : '';
             this.hideError();
             const created = await rpc<GrammarFile>(
-                `/dsl/${this.dslId}/grammar/file/create`, {path, content: ''},
+                `/dsl/${this.dslId}/grammar/file/create`,
+                {path, content, file_type: fileType},
             );
+            this.setServicesCompilation(created.servicesCompilation);
             this.registerOverlayFile(created.path, created.content);
             this.addModel(created);
             this.switchTo(created.path);
             this.renderFiles();
             this.refreshSaveState();
         } catch (error) {
-            this.fail(error, 'Could not create the grammar file.', 'file');
+            this.fail(error, 'Could not create the workspace file.', 'file');
         }
     }
 
@@ -480,20 +527,25 @@ export class GrammarEditorApp {
         if (!file?.id) {
             return;
         }
-        const value = window.prompt('New relative .langium path:', oldPath);
+        const extension = file.fileType === 'services' ? '.ts' : '.langium';
+        const value = window.prompt(`New relative ${extension} path:`, oldPath);
         if (value === null) {
             return;
         }
         try {
-            const newPath = validateGrammarPath(value);
+            const newPath = validateWorkspacePath(value);
+            if (workspaceFileTypeForPath(newPath) !== file.fileType) {
+                throw new Error('Renaming cannot change a file between grammar and services.');
+            }
             if (newPath === oldPath) {
                 return;
             }
             this.hideError();
             const renamed = await rpc<GrammarFile>(
                 `/dsl/${this.dslId}/grammar/file/rename`,
-                {file_id: file.id, path: newPath},
+                {file_id: file.id, path: newPath, file_type: file.fileType},
             );
+            this.setServicesCompilation(renamed.servicesCompilation);
             const content = file.model.getValue();
             const wasActive = this.activePath === oldPath;
             if (wasActive && this.editor) {
@@ -501,7 +553,9 @@ export class GrammarEditorApp {
             }
             this.registerOverlayFile(newPath, content);
             const model = monaco.editor.createModel(
-                content, 'langium', monaco.Uri.parse(buildFileUri(this.dslId, newPath)),
+                content,
+                file.fileType === 'services' ? 'typescript' : 'langium',
+                monaco.Uri.parse(buildFileUri(this.dslId, newPath)),
             );
             const migrated = this.files.rename(oldPath, newPath, model);
             migrated.id = renamed.id;
@@ -523,7 +577,7 @@ export class GrammarEditorApp {
             this.updateDiagnosticMetadata();
             this.refreshSaveState();
         } catch (error) {
-            this.fail(error, 'Could not rename the grammar file.', 'file');
+            this.fail(error, 'Could not rename the workspace file.', 'file');
         }
     }
 
@@ -534,7 +588,11 @@ export class GrammarEditorApp {
         }
         try {
             this.hideError();
-            await rpc(`/dsl/${this.dslId}/grammar/file/delete`, {file_id: file.id});
+            const deleted = await rpc<{servicesCompilation?: ServicesCompilation}>(
+                `/dsl/${this.dslId}/grammar/file/delete`,
+                {file_id: file.id, file_type: file.fileType},
+            );
+            this.setServicesCompilation(deleted.servicesCompilation);
             const wasActive = this.activePath === path;
             this.modelListeners.get(path)?.dispose();
             this.modelListeners.delete(path);
@@ -551,7 +609,7 @@ export class GrammarEditorApp {
             this.updateDiagnosticMetadata();
             this.refreshSaveState();
         } catch (error) {
-            this.fail(error, 'Could not delete the grammar file.', 'file');
+            this.fail(error, 'Could not delete the workspace file.', 'file');
         }
     }
 
@@ -562,9 +620,14 @@ export class GrammarEditorApp {
         }
         try {
             this.hideError();
-            const result = await rpc<{files: GrammarFile[]}>(
-                `/dsl/${this.dslId}/grammar/file/set-entry`, {file_id: file.id},
+            const result = await rpc<{
+                files: GrammarFile[];
+                servicesCompilation?: ServicesCompilation;
+            }>(
+                `/dsl/${this.dslId}/grammar/file/set-entry`,
+                {file_id: file.id, file_type: file.fileType},
             );
+            this.setServicesCompilation(result.servicesCompilation);
             for (const payload of result.files) {
                 const current = this.files.get(payload.path);
                 if (current) {
@@ -573,7 +636,7 @@ export class GrammarEditorApp {
             }
             this.renderFiles();
         } catch (error) {
-            this.fail(error, 'Could not change the entry grammar.', 'file');
+            this.fail(error, 'Could not change the entry file.', 'file');
         }
     }
 
@@ -581,7 +644,7 @@ export class GrammarEditorApp {
     setFileContent(path: string, content: string): void {
         const file = this.files.get(path);
         if (!file) {
-            throw new Error(`Grammar file '${path}' is not registered.`);
+            throw new Error(`Workspace file '${path}' is not registered.`);
         }
         file.model.setValue(content);
         this.switchTo(path, false);
@@ -632,11 +695,31 @@ export class GrammarEditorApp {
         this.updateDiagnosticMetadata();
     }
 
+    private setServicesCompilation(compilation?: ServicesCompilation): void {
+        if (!compilation) {
+            return;
+        }
+        this.compileProblems = compilerDiagnosticsToProblemItems(
+            compilation.diagnostics || [],
+            (path) => this.files.get(path)?.model.uri.toString() || '',
+        );
+        this.root.dataset.servicesCompileResult = compilation.result || '';
+        this.root.dataset.servicesCompileDiagnostics = String(
+            this.compileProblems.length,
+        );
+        if (this.editor) {
+            this.updateDiagnosticMetadata();
+        }
+    }
+
     private updateDiagnosticMetadata(): void {
-        this.problems = this.files.sorted().flatMap((file) => toProblemItems(
-            monaco.editor.getModelMarkers({resource: file.model.uri}),
-            {resource: file.model.uri.toString(), path: file.path},
-        ));
+        this.problems = [
+            ...this.files.sorted().flatMap((file) => toProblemItems(
+                monaco.editor.getModelMarkers({resource: file.model.uri}),
+                {resource: file.model.uri.toString(), path: file.path},
+            )),
+            ...this.compileProblems,
+        ];
         const counts = countProblems(this.problems);
         this.root.dataset.grammarDiagnostics = String(counts.total);
         this.root.dataset.grammarDiagnosticErrors = String(counts.errors);
@@ -720,6 +803,9 @@ export class GrammarEditorApp {
     private revealProblem(index: number): void {
         const problem = this.problems[index];
         if (!problem || !this.editor) {
+            return;
+        }
+        if (!this.files.get(problem.path)) {
             return;
         }
         this.switchTo(problem.path, false);
@@ -827,10 +913,12 @@ export class GrammarEditorApp {
                         file_id: file.id || false,
                         path: file.path,
                         content: file.model.getValue(),
+                        file_type: file.fileType,
                     },
                 );
                 file.id = saved.id;
                 file.isEntry = saved.isEntry;
+                this.setServicesCompilation(saved.servicesCompilation);
                 if (file.model.getAlternativeVersionId() === savingVersion) {
                     this.files.markSaved(file.path, savingVersion);
                 } else {

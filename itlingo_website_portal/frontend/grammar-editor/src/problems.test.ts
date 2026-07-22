@@ -1,6 +1,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {
+    compilerDiagnosticsToProblemItems,
     countProblems,
     groupProblemsByPath,
     summarizeProblems,
@@ -88,6 +89,31 @@ describe('countProblems and summarizeProblems', () => {
         ]));
         expect(counts).toEqual({errors: 2, warnings: 1, others: 1, total: 4});
         expect(summarizeProblems(counts)).toBe('2 errors, 1 warning, 1 hint');
+    });
+});
+
+describe('compilerDiagnosticsToProblemItems', () => {
+    it('maps esbuild locations into clickable services problems', () => {
+        const items = compilerDiagnosticsToProblemItems([{
+            severity: 'error',
+            message: 'Expected identifier',
+            path: 'runtime/services.ts',
+            line: 7,
+            column: 12,
+            length: 3,
+            code: 'expected-identifier',
+        }], (path) => `file:///workspace/${path}`);
+
+        expect(items[0]).toMatchObject({
+            severity: 'error',
+            path: 'runtime/services.ts',
+            resource: 'file:///workspace/runtime/services.ts',
+            startLineNumber: 7,
+            startColumn: 12,
+            endColumn: 15,
+            source: 'services compiler',
+            code: 'expected-identifier',
+        });
     });
 });
 

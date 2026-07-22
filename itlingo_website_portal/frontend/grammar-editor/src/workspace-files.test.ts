@@ -3,6 +3,8 @@ import {describe, expect, it} from 'vitest';
 import {
     buildFileUri,
     validateGrammarPath,
+    validateWorkspacePath,
+    workspaceFileTypeForPath,
     WorkspaceFileRegistry,
 } from './workspace-files.js';
 
@@ -50,17 +52,30 @@ describe('validateGrammarPath', () => {
     });
 });
 
+describe('validateWorkspacePath', () => {
+    it('accepts services TypeScript paths and identifies both file types', () => {
+        expect(validateWorkspacePath(' runtime/services.ts ')).toBe('runtime/services.ts');
+        expect(workspaceFileTypeForPath('runtime/services.ts')).toBe('services');
+        expect(workspaceFileTypeForPath('Main.langium')).toBe('grammar');
+    });
+
+    it('rejects unsupported extensions and unsafe services paths', () => {
+        expect(() => validateWorkspacePath('services.js')).toThrow();
+        expect(() => validateWorkspacePath('../services.ts')).toThrow();
+    });
+});
+
 describe('WorkspaceFileRegistry', () => {
     it('tracks per-file and aggregate dirty state', () => {
         const registry = new WorkspaceFileRegistry<ModelStub>();
         const first = new ModelStub();
         const second = new ModelStub();
         registry.add({
-            id: 1, path: 'Main.langium', isEntry: true, model: first,
+            id: 1, path: 'Main.langium', fileType: 'grammar', isEntry: true, model: first,
             savedVersionId: 1, dirty: false,
         });
         registry.add({
-            id: 2, path: 'lib/Types.langium', isEntry: false, model: second,
+            id: 2, path: 'lib/Types.langium', fileType: 'grammar', isEntry: false, model: second,
             savedVersionId: 1, dirty: false,
         });
 
@@ -76,7 +91,7 @@ describe('WorkspaceFileRegistry', () => {
         const oldModel = new ModelStub();
         oldModel.edit();
         registry.add({
-            id: 9, path: 'Old.langium', isEntry: true, model: oldModel,
+            id: 9, path: 'Old.langium', fileType: 'grammar', isEntry: true, model: oldModel,
             savedVersionId: 1, dirty: true,
         });
         const newModel = new ModelStub();
@@ -87,6 +102,7 @@ describe('WorkspaceFileRegistry', () => {
         expect(registry.get('nested/New.langium')).toBe(renamed);
         expect(renamed.id).toBe(9);
         expect(renamed.isEntry).toBe(true);
+        expect(renamed.fileType).toBe('grammar');
         expect(renamed.dirty).toBe(true);
         expect(registry.sorted().map((file) => file.path)).toEqual([
             'nested/New.langium',

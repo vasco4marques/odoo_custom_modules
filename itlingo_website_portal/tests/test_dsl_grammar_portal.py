@@ -1,4 +1,5 @@
 import re
+from unittest.mock import patch
 
 from lxml import html
 
@@ -317,6 +318,98 @@ class TestDslGrammarPortal(HttpCase):
             timeout=60,
         )
 
+    @patch(
+        'odoo.addons.itlingo_dsl.services.services_compiler.compile_services'
+    )
+    def test_services_compile_and_typescript_problems_in_browser(
+        self, compile_services,
+    ):
+        browser_dsl = self.env['itlingo.dsl'].create({
+            'name': 'Services Browser Smoke',
+            'acronym': 'SBS',
+            'version': 'test-1.0',
+            'status': 'draft',
+            'maintainer_ids': [(6, 0, self.maintainer.ids)],
+        })
+        self.env['itlingo.dsl.file']._create_grammar_text(
+            browser_dsl,
+            'SBS.langium',
+            VALID_GRAMMAR.format(name='SBS'),
+        )
+        compile_services.return_value = {
+            'ok': False,
+            'js': '',
+            'diagnostics': [{
+                'severity': 'error',
+                'message': 'Persisted services compiler failure',
+                'path': 'services.ts',
+                'line': 1,
+                'column': 1,
+                'length': 6,
+                'code': 'services-test',
+            }],
+            'compiler_version': 'test',
+        }
+        self.env['itlingo.dsl.file']._create_services_text(
+            browser_dsl,
+            'services.ts',
+            'export default function createDslModule() { return {}; }\n',
+        )
+
+        code = """
+        (async () => {
+            const root = document.querySelector('#itlingo-grammar-editor');
+            const waitFor = async (predicate, message) => {
+                const deadline = Date.now() + 30000;
+                while (!predicate()) {
+                    if (Date.now() > deadline) {
+                        throw new Error(message);
+                    }
+                    await new Promise((resolve) => setTimeout(resolve, 100));
+                }
+            };
+            await waitFor(
+                () => root.dataset.grammarServerState === 'ready',
+                'Langium grammar server did not become ready',
+            );
+            await waitFor(
+                () => JSON.parse(root.dataset.grammarDiagnosticMessages || '[]')
+                    .includes('Persisted services compiler failure'),
+                'Persisted services compilation diagnostics were not shown',
+            );
+            if (root.dataset.servicesCompileResult !== 'error') {
+                throw new Error('Services compilation result was not exposed');
+            }
+
+            root.querySelector('[data-grammar-file-select="services.ts"]').click();
+            const script = document.querySelector('script[src*="/grammar-editor-"]');
+            const editorModule = await import(script.src);
+            editorModule.grammarEditorApp.setFileContent(
+                'services.ts',
+                'export default function () { return { broken: ; }; }',
+            );
+            await waitFor(
+                () => !JSON.parse(root.dataset.grammarDiagnosticMessages || '[]')
+                    .includes('Persisted services compiler failure'),
+                'Editing services did not clear stale compiler diagnostics',
+            );
+            await waitFor(
+                () => (JSON.parse(root.dataset.grammarFileErrors || '{}')[
+                    'services.ts'
+                ] || 0) > 0,
+                'Monaco TypeScript diagnostics were not shown for services.ts',
+            );
+            console.log('test successful');
+        })();
+        """
+        self.browser_js(
+            f'/dsl/{browser_dsl.id}/grammar',
+            code,
+            ready="Boolean(document.querySelector('#itlingo-grammar-editor'))",
+            login='grammar_maintainer',
+            timeout=60,
+        )
+
     def test_multifile_imports_revalidate_and_survive_restart_in_browser(self):
         browser_dsl = self.env['itlingo.dsl'].create({
             'name': 'Grammar Multi-file Browser',
@@ -469,6 +562,123 @@ class TestDslGrammarPortal(HttpCase):
         self.assertEqual(
             by_id[nested.id]['content'],
             'grammar Inventory\ninterface Item { name: string }\n',
+        )
+
+    @patch(
+        'odoo.addons.itlingo_dsl.services.services_compiler.compile_services'
+    )
+    def test_services_typescript_round_trips_with_compile_diagnostics(
+        self, compile_services,
+    ):
+        compile_services.return_value = {
+            'ok': True,
+            'js': 'export default function(){return {}}',
+            'diagnostics': [],
+            'compiler_version': 'test',
+        }
+        self.authenticate('grammar_maintainer', 'grammar_maintainer')
+
+        workspace = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/load',
+        )
+        self.assertEqual(workspace['suggestedServicesPath'], 'services.ts')
+        self.assertIn('node.$type', workspace['suggestedServicesContent'])
+        self.assertIn('return {}', workspace['suggestedServicesContent'])
+
+        created = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/file/create',
+            {
+                'path': 'runtime/services.ts',
+                'file_type': 'services',
+                'content': workspace['suggestedServicesContent'],
+            },
+        )
+        self.assertEqual(created['fileType'], 'services')
+        self.assertTrue(created['isEntry'])
+        self.assertEqual(created['servicesCompilation']['result'], 'ok')
+
+        compile_services.return_value = {
+            'ok': False,
+            'js': '',
+            'diagnostics': [{
+                'severity': 'error',
+                'message': 'Expected identifier',
+                'path': 'runtime/services.ts',
+                'line': 3,
+                'column': 7,
+                'length': 2,
+                'code': 'expected-identifier',
+            }],
+            'compiler_version': 'test',
+        }
+        saved = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/save',
+            {
+                'file_id': created['id'],
+                'file_type': 'services',
+                'path': 'runtime/services.ts',
+                'content': 'export default function () { return { broken: ; }; }',
+            },
+        )
+        diagnostics = saved['servicesCompilation']['diagnostics']
+        self.assertEqual(saved['fileType'], 'services')
+        self.assertEqual(saved['servicesCompilation']['result'], 'error')
+        self.assertEqual(diagnostics[0]['path'], 'runtime/services.ts')
+        self.assertEqual(diagnostics[0]['line'], 3)
+
+        loaded = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/load',
+        )
+        by_path = {item['path']: item for item in loaded['files']}
+        self.assertEqual(by_path['PGD.langium']['fileType'], 'grammar')
+        self.assertEqual(by_path['runtime/services.ts']['fileType'], 'services')
+        self.assertEqual(loaded['servicesCompilation']['diagnostics'], diagnostics)
+
+        compile_services.return_value = {
+            'ok': True,
+            'js': 'export default function(){return {}}',
+            'diagnostics': [],
+            'compiler_version': 'test',
+        }
+        supporting = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/file/create',
+            {
+                'path': 'runtime/helpers.ts',
+                'file_type': 'services',
+                'content': 'export const helper = true;\n',
+            },
+        )
+        self.assertFalse(supporting['isEntry'])
+        renamed = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/file/rename',
+            {
+                'file_id': supporting['id'],
+                'file_type': 'services',
+                'path': 'shared/helpers.ts',
+            },
+        )
+        self.assertEqual(renamed['fileType'], 'services')
+        entry_result = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/file/set-entry',
+            {'file_id': supporting['id'], 'file_type': 'services'},
+        )
+        entries = {item['id']: item['isEntry'] for item in entry_result['files']}
+        self.assertFalse(entries[created['id']])
+        self.assertTrue(entries[supporting['id']])
+        self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/file/delete',
+            {'file_id': created['id'], 'file_type': 'services'},
+        )
+        final_workspace = self.make_jsonrpc_request(
+            f'/dsl/{self.draft.id}/grammar/load',
+        )
+        services_files = [
+            item for item in final_workspace['files']
+            if item['fileType'] == 'services'
+        ]
+        self.assertEqual(
+            [(item['path'], item['isEntry']) for item in services_files],
+            [('shared/helpers.ts', True)],
         )
 
     def test_save_is_content_only_for_existing_file(self):
@@ -627,7 +837,10 @@ class TestDslGrammarPortal(HttpCase):
             f'/dsl/{self.draft.id}/grammar/import', exported,
         )
         round_trip = [
-            {key: item[key] for key in ('path', 'content', 'isEntry')}
+            {
+                key: item[key]
+                for key in ('path', 'content', 'isEntry', 'fileType')
+            }
             for item in restored['files']
         ]
         self.assertEqual(round_trip, exported['files'])

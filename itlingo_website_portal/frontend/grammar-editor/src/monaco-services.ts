@@ -4,6 +4,7 @@ import {
     Worker as WorkerDefinition,
 } from 'monaco-languageclient/workerFactory';
 import editorWorkerUrl from '@codingame/monaco-vscode-editor-api/esm/vs/editor/editor.worker.js?worker&url';
+import typescriptWorkerUrl from '@codingame/monaco-vscode-standalone-typescript-language-features/worker?worker&url';
 
 let initialization: Promise<void> | undefined;
 
@@ -24,6 +25,14 @@ export function initializeMonacoServices(): Promise<void> {
                         editorWorkerService: () => new WorkerDefinition(
                             editorWorkerUrl,
                             {type: 'module', name: 'ITLingo Monaco editor worker'},
+                        ),
+                        typescript: () => new WorkerDefinition(
+                            typescriptWorkerUrl,
+                            {type: 'module', name: 'ITLingo TypeScript worker'},
+                        ),
+                        javascript: () => new WorkerDefinition(
+                            typescriptWorkerUrl,
+                            {type: 'module', name: 'ITLingo JavaScript worker'},
                         ),
                     },
                 });

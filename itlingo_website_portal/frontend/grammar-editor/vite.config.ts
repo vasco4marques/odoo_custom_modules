@@ -4,6 +4,14 @@ const outDir = new URL('../../static/dist/grammar-editor', import.meta.url).path
 
 export default defineConfig({
     base: '/itlingo_website_portal/static/dist/grammar-editor/',
+    // The standalone TypeScript contribution imports `monaco-editor`. Point
+    // that name at the editor API already used by the application so language
+    // registration and models share one Monaco service instance.
+    resolve: {
+        alias: {
+            'monaco-editor': '@codingame/monaco-vscode-editor-api',
+        },
+    },
     build: {
         outDir,
         emptyOutDir: true,

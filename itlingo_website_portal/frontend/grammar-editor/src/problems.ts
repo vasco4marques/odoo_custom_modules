@@ -43,6 +43,16 @@ export interface ProblemCounts {
     total: number;
 }
 
+export interface CompilerDiagnosticLike {
+    severity?: string;
+    message?: string;
+    path?: string;
+    line?: number;
+    column?: number;
+    length?: number;
+    code?: string;
+}
+
 function toSeverity(severity: number): ProblemSeverity {
     if (severity === MARKER_SEVERITY_ERROR) {
         return 'error';
@@ -88,6 +98,39 @@ export function toProblemItems(
             || left.startColumn - right.startColumn
             || left.message.localeCompare(right.message)
         ));
+}
+
+/** Convert persisted esbuild diagnostics into the same shape as Monaco markers. */
+export function compilerDiagnosticsToProblemItems(
+    diagnostics: readonly CompilerDiagnosticLike[],
+    resourceForPath: (path: string) => string = () => '',
+): ProblemItem[] {
+    return diagnostics.map((diagnostic) => {
+        const severity: ProblemSeverity = diagnostic.severity === 'warning' ? 'warning'
+            : diagnostic.severity === 'info' ? 'info'
+                : diagnostic.severity === 'hint' ? 'hint' : 'error';
+        const path = diagnostic.path || 'Services';
+        const line = Math.max(1, diagnostic.line || 1);
+        const column = Math.max(1, diagnostic.column || 1);
+        return {
+            severity,
+            message: diagnostic.message || 'Services compilation failed.',
+            startLineNumber: line,
+            startColumn: column,
+            endLineNumber: line,
+            endColumn: column + Math.max(1, diagnostic.length || 0),
+            source: 'services compiler',
+            code: diagnostic.code || '',
+            resource: resourceForPath(path),
+            path,
+        };
+    }).sort((left, right) => (
+        SEVERITY_ORDER[left.severity] - SEVERITY_ORDER[right.severity]
+        || left.path.localeCompare(right.path)
+        || left.startLineNumber - right.startLineNumber
+        || left.startColumn - right.startColumn
+        || left.message.localeCompare(right.message)
+    ));
 }
 
 export function groupProblemsByPath(

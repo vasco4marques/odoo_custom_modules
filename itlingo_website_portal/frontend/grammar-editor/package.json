@@ -11,6 +11,7 @@
   "dependencies": {
     "@codingame/monaco-vscode-editor-api": "25.1.2",
     "@codingame/monaco-vscode-files-service-override": "25.1.2",
+    "@codingame/monaco-vscode-standalone-typescript-language-features": "25.1.2",
     "langium": "4.3.1",
     "monaco-languageclient": "10.7.0",
     "vscode-languageserver": "10.0.1",

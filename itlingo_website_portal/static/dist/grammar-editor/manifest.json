@@ -7,40 +7,23 @@
     "file": "chunks/_commonjsHelpers-D7enpXDV.js",
     "name": "_commonjsHelpers"
   },
-  "_configuration.service-BS4UI61Y.js": {
-    "file": "chunks/configuration.service-BS4UI61Y.js",
+  "_configuration.service-B0ZHeYKB.js": {
+    "file": "chunks/configuration.service-B0ZHeYKB.js",
     "name": "configuration.service",
     "imports": [
       "_rolldown-runtime-B1bRi_D7.js",
-      "_standaloneServices-DUdtGggg.js",
-      "_editorBrowser-zJfFG23V.js",
-      "_textfiles-GCUcfhe8.js",
-      "_embeddedCodeEditorWidget-DPX_ivX-.js",
-      "_fileConstants-BXb76arb.js",
-      "_tools-DMW4ALLH.js",
-      "_platformObservableUtils-CuEWfyFX.js",
-      "_monaco-vscode-files-service-override-7u1fRyMX.js",
-      "_extensions-DrlDBGt9.js",
-      "_monaco-vscode-extensions-service-override-DXU-yJ4u.js",
-      "_extensionsRegistry-DZ5POuBG.js",
-      "_extensionManagement.service-CKYvSe93.js",
-      "_getIconClasses-DPZo4f15.js",
-      "_webWorkerDescriptor-D8gBO8t7.js",
-      "_languageStatusService.service-BVRYQpof.js",
-      "_semanticTokensConfig-BYnAydTI.js",
-      "_workbenchThemeService.service-D1dFbXBC.js",
-      "_preferences.service-X3hLFm9w.js"
+      "_standaloneServices-DUdtGggg.js"
     ]
   },
-  "_editor-BCJxFvSN.js": {
-    "file": "chunks/editor-BCJxFvSN.js",
+  "_editor-CUnbW-4h.js": {
+    "file": "chunks/editor-CUnbW-4h.js",
     "name": "editor",
     "imports": [
       "_standaloneServices-DUdtGggg.js",
       "_textfiles-GCUcfhe8.js",
       "_embeddedCodeEditorWidget-DPX_ivX-.js",
-      "_fileConstants-BXb76arb.js",
-      "_fileCommands._save-Cc8V0c-n.js",
+      "_fileConstants-3FE16HF_.js",
+      "_fileCommands._save-VHL9yLNO.js",
       "_tools-DMW4ALLH.js"
     ]
   },
@@ -95,8 +78,8 @@
       "_monaco-vscode-files-service-override-7u1fRyMX.js"
     ]
   },
-  "_fileCommands._save-Cc8V0c-n.js": {
-    "file": "chunks/fileCommands._save-Cc8V0c-n.js",
+  "_fileCommands._save-VHL9yLNO.js": {
+    "file": "chunks/fileCommands._save-VHL9yLNO.js",
     "name": "fileCommands._save",
     "imports": [
       "_rolldown-runtime-B1bRi_D7.js",
@@ -104,11 +87,12 @@
       "_editorBrowser-zJfFG23V.js",
       "_textfiles-GCUcfhe8.js",
       "_embeddedCodeEditorWidget-DPX_ivX-.js",
-      "_fileConstants-BXb76arb.js"
+      "_fileConstants-3FE16HF_.js",
+      "_files-Cnl248xB.js"
     ]
   },
-  "_fileConstants-BXb76arb.js": {
-    "file": "chunks/fileConstants-BXb76arb.js",
+  "_fileConstants-3FE16HF_.js": {
+    "file": "chunks/fileConstants-3FE16HF_.js",
     "name": "fileConstants",
     "imports": [
       "_rolldown-runtime-B1bRi_D7.js",
@@ -119,9 +103,25 @@
       "_platformObservableUtils-CuEWfyFX.js"
     ]
   },
+  "_files-Cnl248xB.js": {
+    "file": "chunks/files-Cnl248xB.js",
+    "name": "files",
+    "imports": [
+      "_standaloneServices-DUdtGggg.js",
+      "_textfiles-GCUcfhe8.js"
+    ]
+  },
   "_getIconClasses-DPZo4f15.js": {
     "file": "chunks/getIconClasses-DPZo4f15.js",
     "name": "getIconClasses",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js"
+    ]
+  },
+  "_hostColorSchemeService.service-Bc4Eux2e.js": {
+    "file": "chunks/hostColorSchemeService.service-Bc4Eux2e.js",
+    "name": "hostColorSchemeService.service",
     "imports": [
       "_rolldown-runtime-B1bRi_D7.js",
       "_standaloneServices-DUdtGggg.js"
@@ -161,16 +161,16 @@
       "_standaloneServices-DUdtGggg.js"
     ]
   },
-  "_monaco-C0mO576I.js": {
-    "file": "chunks/monaco-C0mO576I.js",
+  "_monaco-BhqF1Hm6.js": {
+    "file": "chunks/monaco-BhqF1Hm6.js",
     "name": "monaco",
     "imports": [
       "_standaloneServices-DUdtGggg.js",
       "_embeddedCodeEditorWidget-DPX_ivX-.js",
-      "_fileConstants-BXb76arb.js",
+      "_fileConstants-3FE16HF_.js",
       "_monaco-vscode-files-service-override-7u1fRyMX.js",
       "_monaco-vscode-extensions-service-override-DXU-yJ4u.js",
-      "_configuration.service-BS4UI61Y.js"
+      "_services-Bnks5LpF.js"
     ]
   },
   "_monaco-vscode-extensions-service-override-DXU-yJ4u.js": {
@@ -208,17 +208,26 @@
       "node_modules/jschardet/index.js"
     ]
   },
+  "_monaco.contribution-Vkef_mmh.js": {
+    "file": "chunks/monaco.contribution-Vkef_mmh.js",
+    "name": "monaco.contribution",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js",
+      "_embeddedCodeEditorWidget-DPX_ivX-.js",
+      "_fileConstants-3FE16HF_.js",
+      "_platformObservableUtils-CuEWfyFX.js",
+      "_monaco-vscode-extensions-service-override-DXU-yJ4u.js",
+      "_services-Bnks5LpF.js",
+      "_monaco-BhqF1Hm6.js"
+    ],
+    "dynamicImports": [
+      "node_modules/@codingame/monaco-vscode-standalone-typescript-language-features/language/typescript/tsMode.js"
+    ]
+  },
   "_platformObservableUtils-CuEWfyFX.js": {
     "file": "chunks/platformObservableUtils-CuEWfyFX.js",
     "name": "platformObservableUtils",
-    "imports": [
-      "_rolldown-runtime-B1bRi_D7.js",
-      "_standaloneServices-DUdtGggg.js"
-    ]
-  },
-  "_preferences.service-X3hLFm9w.js": {
-    "file": "chunks/preferences.service-X3hLFm9w.js",
-    "name": "preferences.service",
     "imports": [
       "_rolldown-runtime-B1bRi_D7.js",
       "_standaloneServices-DUdtGggg.js"
@@ -234,6 +243,31 @@
     "imports": [
       "_rolldown-runtime-B1bRi_D7.js",
       "_standaloneServices-DUdtGggg.js"
+    ]
+  },
+  "_services-Bnks5LpF.js": {
+    "file": "chunks/services-Bnks5LpF.js",
+    "name": "services",
+    "imports": [
+      "_rolldown-runtime-B1bRi_D7.js",
+      "_standaloneServices-DUdtGggg.js",
+      "_editorBrowser-zJfFG23V.js",
+      "_textfiles-GCUcfhe8.js",
+      "_embeddedCodeEditorWidget-DPX_ivX-.js",
+      "_fileConstants-3FE16HF_.js",
+      "_tools-DMW4ALLH.js",
+      "_platformObservableUtils-CuEWfyFX.js",
+      "_monaco-vscode-files-service-override-7u1fRyMX.js",
+      "_extensions-DrlDBGt9.js",
+      "_monaco-vscode-extensions-service-override-DXU-yJ4u.js",
+      "_extensionsRegistry-DZ5POuBG.js",
+      "_extensionManagement.service-CKYvSe93.js",
+      "_getIconClasses-DPZo4f15.js",
+      "_webWorkerDescriptor-D8gBO8t7.js",
+      "_languageStatusService.service-BVRYQpof.js",
+      "_hostColorSchemeService.service-Bc4Eux2e.js",
+      "_semanticTokensConfig-BYnAydTI.js",
+      "_workbenchThemeService.service-D1dFbXBC.js"
     ]
   },
   "_standaloneServices-DUdtGggg.js": {
@@ -266,8 +300,8 @@
       "_standaloneServices-DUdtGggg.js"
     ]
   },
-  "_views-Ovx0Yryy.js": {
-    "file": "chunks/views-Ovx0Yryy.js",
+  "_views-pKotJpJG.js": {
+    "file": "chunks/views-pKotJpJG.js",
     "name": "views",
     "imports": [
       "_rolldown-runtime-B1bRi_D7.js",
@@ -275,10 +309,11 @@
       "_editorBrowser-zJfFG23V.js",
       "_textfiles-GCUcfhe8.js",
       "_embeddedCodeEditorWidget-DPX_ivX-.js",
-      "_fileConstants-BXb76arb.js",
-      "_fileCommands._save-Cc8V0c-n.js",
+      "_fileConstants-3FE16HF_.js",
+      "_fileCommands._save-VHL9yLNO.js",
       "_tools-DMW4ALLH.js",
       "_platformObservableUtils-CuEWfyFX.js",
+      "_files-Cnl248xB.js",
       "_monaco-vscode-files-service-override-7u1fRyMX.js",
       "_extensions-DrlDBGt9.js",
       "_monaco-vscode-extensions-service-override-DXU-yJ4u.js",
@@ -287,9 +322,10 @@
       "_getIconClasses-DPZo4f15.js",
       "_languageStatusService.service-BVRYQpof.js",
       "_languageService-FQpl2-PU.js",
+      "_services-Bnks5LpF.js",
+      "_hostColorSchemeService.service-Bc4Eux2e.js",
       "_workbenchThemeService.service-D1dFbXBC.js",
-      "_preferences.service-X3hLFm9w.js",
-      "_configuration.service-BS4UI61Y.js"
+      "_configuration.service-B0ZHeYKB.js"
     ],
     "dynamicImports": [
       "node_modules/@codingame/monaco-vscode-keybindings-service-override/vscode/src/vs/workbench/services/keybinding/browser/keyboardLayouts/layout.contribution.darwin.js",
@@ -321,7 +357,7 @@
     ]
   },
   "node_modules/@codingame/monaco-vscode-editor-service-override/index.js": {
-    "file": "chunks/monaco-vscode-editor-service-override-DoOMhB40.js",
+    "file": "chunks/monaco-vscode-editor-service-override-C4LBharX.js",
     "name": "monaco-vscode-editor-service-override",
     "src": "node_modules/@codingame/monaco-vscode-editor-service-override/index.js",
     "isDynamicEntry": true,
@@ -329,10 +365,10 @@
       "_standaloneServices-DUdtGggg.js",
       "_textfiles-GCUcfhe8.js",
       "_embeddedCodeEditorWidget-DPX_ivX-.js",
-      "_fileConstants-BXb76arb.js",
-      "_fileCommands._save-Cc8V0c-n.js",
+      "_fileConstants-3FE16HF_.js",
+      "_fileCommands._save-VHL9yLNO.js",
       "_tools-DMW4ALLH.js",
-      "_editor-BCJxFvSN.js"
+      "_editor-CUnbW-4h.js"
     ]
   },
   "node_modules/@codingame/monaco-vscode-keybindings-service-override/vscode/src/vs/workbench/services/keybinding/browser/keyboardLayouts/layout.contribution.darwin.js": {
@@ -388,6 +424,15 @@
       "_editorBrowser-zJfFG23V.js"
     ]
   },
+  "node_modules/@codingame/monaco-vscode-standalone-typescript-language-features/language/typescript/tsMode.js": {
+    "file": "chunks/tsMode-BkECqHP-.js",
+    "name": "tsMode",
+    "src": "node_modules/@codingame/monaco-vscode-standalone-typescript-language-features/language/typescript/tsMode.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_monaco.contribution-Vkef_mmh.js"
+    ]
+  },
   "node_modules/@codingame/monaco-vscode-textmate-service-override/_virtual/main2.js": {
     "file": "chunks/main2-Dy0q_sbJ.js",
     "name": "main2",
@@ -431,7 +476,7 @@
     ]
   },
   "node_modules/@codingame/monaco-vscode-theme-service-override/index.js": {
-    "file": "chunks/monaco-vscode-theme-service-override-C1XiU255.js",
+    "file": "chunks/monaco-vscode-theme-service-override-CLwPU5ru.js",
     "name": "monaco-vscode-theme-service-override",
     "src": "node_modules/@codingame/monaco-vscode-theme-service-override/index.js",
     "isDynamicEntry": true,
@@ -443,13 +488,13 @@
       "_extensionManagement.service-CKYvSe93.js",
       "_getIconClasses-DPZo4f15.js",
       "_jsonErrorMessages-C1DjKtCD.js",
+      "_hostColorSchemeService.service-Bc4Eux2e.js",
       "_workbenchThemeService.service-D1dFbXBC.js",
-      "_tokenClassificationRegistry-BCmgkZ7e.js",
-      "_preferences.service-X3hLFm9w.js"
+      "_tokenClassificationRegistry-BCmgkZ7e.js"
     ]
   },
   "node_modules/@codingame/monaco-vscode-views-service-override/index.js": {
-    "file": "chunks/monaco-vscode-views-service-override-DvGsRlxa.js",
+    "file": "chunks/monaco-vscode-views-service-override-DY_SGNA7.js",
     "name": "monaco-vscode-views-service-override",
     "src": "node_modules/@codingame/monaco-vscode-views-service-override/index.js",
     "isDynamicEntry": true,
@@ -457,16 +502,16 @@
       "_standaloneServices-DUdtGggg.js",
       "_textfiles-GCUcfhe8.js",
       "_embeddedCodeEditorWidget-DPX_ivX-.js",
-      "_editor-BCJxFvSN.js",
+      "_editor-CUnbW-4h.js",
       "_monaco-vscode-files-service-override-7u1fRyMX.js",
       "_monaco-vscode-extensions-service-override-DXU-yJ4u.js",
-      "_configuration.service-BS4UI61Y.js",
-      "_views-Ovx0Yryy.js",
-      "_monaco-C0mO576I.js"
+      "_services-Bnks5LpF.js",
+      "_monaco-BhqF1Hm6.js",
+      "_views-pKotJpJG.js"
     ]
   },
   "node_modules/@codingame/monaco-vscode-workbench-service-override/index.js": {
-    "file": "chunks/monaco-vscode-workbench-service-override-CwSIDqpU.js",
+    "file": "chunks/monaco-vscode-workbench-service-override-Tci58slJ.js",
     "name": "monaco-vscode-workbench-service-override",
     "src": "node_modules/@codingame/monaco-vscode-workbench-service-override/index.js",
     "isDynamicEntry": true,
@@ -476,15 +521,15 @@
       "_editorBrowser-zJfFG23V.js",
       "_textfiles-GCUcfhe8.js",
       "_embeddedCodeEditorWidget-DPX_ivX-.js",
-      "_fileConstants-BXb76arb.js",
-      "_fileCommands._save-Cc8V0c-n.js",
+      "_fileConstants-3FE16HF_.js",
+      "_fileCommands._save-VHL9yLNO.js",
       "_monaco-vscode-files-service-override-7u1fRyMX.js",
       "_extensions-DrlDBGt9.js",
       "_monaco-vscode-extensions-service-override-DXU-yJ4u.js",
       "_extensionsRegistry-DZ5POuBG.js",
       "_getIconClasses-DPZo4f15.js",
-      "_configuration.service-BS4UI61Y.js",
-      "_views-Ovx0Yryy.js"
+      "_services-Bnks5LpF.js",
+      "_views-pKotJpJG.js"
     ]
   },
   "node_modules/@vscode/iconv-lite-umd/lib/iconv-lite-umd.js": {
@@ -506,7 +551,7 @@
     ]
   },
   "src/bootstrap.ts": {
-    "file": "grammar-editor-Bu_JD11x.js",
+    "file": "grammar-editor-FK6WO4eY.js",
     "name": "bootstrap",
     "src": "src/bootstrap.ts",
     "isEntry": true,
@@ -515,7 +560,7 @@
     ]
   },
   "src/main.ts": {
-    "file": "chunks/main-CLdE-ogS.js",
+    "file": "chunks/main-DFD7papu.js",
     "name": "main",
     "src": "src/main.ts",
     "isDynamicEntry": true,
@@ -525,19 +570,20 @@
       "_editorBrowser-zJfFG23V.js",
       "_textfiles-GCUcfhe8.js",
       "_embeddedCodeEditorWidget-DPX_ivX-.js",
-      "_fileConstants-BXb76arb.js",
       "_tools-DMW4ALLH.js",
       "_languageConfiguration-iKokxU77.js",
-      "_platformObservableUtils-CuEWfyFX.js",
+      "_files-Cnl248xB.js",
       "_monaco-vscode-files-service-override-7u1fRyMX.js",
       "_extensions-DrlDBGt9.js",
       "_monaco-vscode-extensions-service-override-DXU-yJ4u.js",
       "_extensionsRegistry-DZ5POuBG.js",
       "_getIconClasses-DPZo4f15.js",
       "_languageStatusService.service-BVRYQpof.js",
-      "_preferences.service-X3hLFm9w.js",
-      "_configuration.service-BS4UI61Y.js",
-      "_monaco-C0mO576I.js"
+      "_services-Bnks5LpF.js",
+      "_monaco.contribution-Vkef_mmh.js",
+      "_monaco-BhqF1Hm6.js",
+      "_hostColorSchemeService.service-Bc4Eux2e.js",
+      "_configuration.service-B0ZHeYKB.js"
     ],
     "dynamicImports": [
       "node_modules/@codingame/monaco-vscode-textmate-service-override/index.js",
@@ -552,7 +598,7 @@
     ]
   },
   "style.css": {
-    "file": "assets/grammar-editor-nqGPpjg9.css",
+    "file": "assets/grammar-editor-sRYL__B5.css",
     "src": "style.css"
   }
 }
