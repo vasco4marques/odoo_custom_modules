@@ -8,7 +8,7 @@ from odoo.addons.portal.controllers.portal import CustomerPortal
 from .portal import paginate
 
 DSL_STATUS = ('draft', 'active', 'deprecated')
-DSL_FILE_TYPES = ('grammar', 'validation', 'examples', 'specification')
+DSL_FILE_TYPES = ('grammar', 'services', 'validation', 'examples', 'specification')
 
 
 class ITLingoDslPortal(CustomerPortal):
@@ -71,12 +71,17 @@ class ITLingoDslPortal(CustomerPortal):
         if not self._can_edit_dsl(dsl):
             raise AccessError(_('You can only edit DSLs you maintain.'))
 
-    def _require_grammar_edit(self, dsl):
+    def _require_structural_file_edit(self, dsl):
         self._require_dsl_edit(dsl)
         if dsl.status != 'draft':
             raise AccessError(_(
-                'Grammar files can only be changed while the DSL is in draft status.',
+                'Grammar and services files can only be changed while the DSL '
+                'is in draft status.',
             ))
+
+    def _require_grammar_edit(self, dsl):
+        """Backward-compatible gate used by the grammar editor routes."""
+        self._require_structural_file_edit(dsl)
 
     def _can_view_dsl_files(self, dsl):
         return self._can_edit_dsl(dsl)
@@ -349,8 +354,8 @@ class ITLingoDslPortal(CustomerPortal):
         file_type = post.get('file_type')
         if file_type not in DSL_FILE_TYPES:
             return request.redirect(f'/dsl/{dsl.id}?error=bad_type')
-        if file_type == 'grammar':
-            self._require_grammar_edit(dsl)
+        if file_type in ('grammar', 'services'):
+            self._require_structural_file_edit(dsl)
         upload = request.httprequest.files.get('file')
         if not upload or not upload.filename:
             return request.redirect(f'/dsl/{dsl.id}?error=no_file')
@@ -371,8 +376,8 @@ class ITLingoDslPortal(CustomerPortal):
         dsl = self._dsl_or_404(dsl_id)
         self._require_dsl_edit(dsl)
         line = self._dsl_file_or_404(dsl, file_id)
-        if line.file_type == 'grammar':
-            self._require_grammar_edit(dsl)
+        if line.file_type in ('grammar', 'services'):
+            self._require_structural_file_edit(dsl)
         line.unlink()
         return request.redirect(f'/dsl/{dsl.id}?message=file_removed')
 
@@ -382,8 +387,8 @@ class ITLingoDslPortal(CustomerPortal):
         dsl = self._dsl_or_404(dsl_id)
         self._require_dsl_edit(dsl)
         line = self._dsl_file_or_404(dsl, file_id)
-        if line.file_type == 'grammar':
-            self._require_grammar_edit(dsl)
+        if line.file_type in ('grammar', 'services'):
+            self._require_structural_file_edit(dsl)
         line.write({'is_enabled': not line.is_enabled})
         return request.redirect(f'/dsl/{dsl.id}?message=file_updated')
 

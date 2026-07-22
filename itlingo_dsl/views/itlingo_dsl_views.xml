@@ -69,8 +69,9 @@
                             <p class="text-muted">
                                 Files that define this DSL and are pushed to the
                                 chatbot knowledge base when the DSL is Active.
-                                Grammar workspaces may contain multiple .langium
-                                files and must identify exactly one entry file.
+                                Grammar and services workspaces may contain
+                                multiple files and must identify exactly one
+                                entry file per type.
                                 Validation and Examples files are concatenated;
                                 Specifications are kept as separate files.
                             </p>
@@ -81,9 +82,9 @@
                                     <field name="file" filename="file_name"/>
                                     <field name="file_name"/>
                                     <field name="relative_path"
-                                           invisible="file_type != 'grammar'"/>
+                                           invisible="file_type not in ['grammar', 'services']"/>
                                     <field name="is_entry"
-                                           invisible="file_type != 'grammar'"/>
+                                           invisible="file_type not in ['grammar', 'services']"/>
                                     <field name="is_enabled"/>
                                 </list>
                             </field>

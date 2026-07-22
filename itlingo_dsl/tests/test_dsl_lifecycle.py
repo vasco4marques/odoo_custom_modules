@@ -133,6 +133,17 @@ class TestDslLifecycle(TransactionCase):
 
     def test_create_draft_version_copies_without_modifying_source(self):
         dsl = self._make_draft('LCCOPY')
+        services = self.File._create_services_text(
+            dsl, 'services.ts', 'export default () => ({});\n',
+        )
+        dsl.write({
+            'services_source_digest': 'source-digest',
+            'services_compiled': 'export default()=>({});',
+            'services_compiled_digest': 'compiled-digest',
+            'services_compile_result': 'ok',
+            'services_compile_diagnostics': [],
+            'services_compile_time': '2026-07-22 12:00:00',
+        })
         self.File.create({
             'dsl_id': dsl.id,
             'file_type': 'examples',
@@ -152,9 +163,24 @@ class TestDslLifecycle(TransactionCase):
             sorted(dsl.file_ids.mapped('file_name')),
         )
         self.assertEqual(draft._grammar_digest(), source_digest)
+        draft_services = draft.file_ids.filtered(
+            lambda item: item.file_type == 'services'
+        )
+        self.assertEqual(len(draft_services), 1)
+        self.assertEqual(draft_services.relative_path, services.relative_path)
+        self.assertTrue(draft_services.is_entry)
+        self.assertEqual(
+            draft_services._read_text_utf8(), services._read_text_utf8(),
+        )
         # Validation and publication audit fields never travel to the copy.
         self.assertFalse(draft.grammar_validation_result)
         self.assertFalse(draft.published_at)
+        self.assertFalse(draft.services_source_digest)
+        self.assertFalse(draft.services_compiled)
+        self.assertFalse(draft.services_compiled_digest)
+        self.assertFalse(draft.services_compile_result)
+        self.assertFalse(draft.services_compile_diagnostics)
+        self.assertFalse(draft.services_compile_time)
         # The source version is untouched.
         self.assertEqual(dsl.status, 'active')
         self.assertEqual(dsl._grammar_digest(), source_digest)

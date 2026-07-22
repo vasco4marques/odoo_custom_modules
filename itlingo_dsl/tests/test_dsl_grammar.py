@@ -54,6 +54,73 @@ class TestDslGrammar(TransactionCase):
                 self.dsl, 'GTL.langium', 'x' * (GRAMMAR_MAX_BYTES + 1),
             )
 
+    def test_unicode_services_text_round_trip(self):
+        content = (
+            "// Português 日本語 🚀\n"
+            "export default function createDslModule() { return {}; }\n"
+        )
+        services = self.File._create_services_text(
+            self.dsl, 'runtime/services.ts', content,
+        )
+
+        self.assertEqual(services.file_type, 'services')
+        self.assertEqual(services.relative_path, 'runtime/services.ts')
+        self.assertEqual(services.file_name, 'services.ts')
+        self.assertTrue(services.is_entry)
+        self.assertEqual(services._read_text_utf8(), content)
+
+        updated = content.replace('return {};', 'return { references: {} };')
+        services._write_text_utf8(updated)
+        services.invalidate_recordset(['file'])
+        self.assertEqual(services._read_text_utf8(), updated)
+
+    def test_services_path_content_and_size_are_validated(self):
+        with self.assertRaisesRegex(ValidationError, r"'\.\.' segments"):
+            self.File._create_services_text(self.dsl, '../services.ts', '')
+        with self.assertRaisesRegex(ValidationError, 'end in .ts'):
+            self.File._create_services_text(self.dsl, 'services.js', '')
+        with self.assertRaisesRegex(ValidationError, 'NUL'):
+            self.File._create_services_text(
+                self.dsl, 'services.ts', 'export const bad = "\x00";',
+            )
+        with self.assertRaisesRegex(ValidationError, 'too large'):
+            self.File._create_services_text(
+                self.dsl, 'services.ts', 'x' * (GRAMMAR_MAX_BYTES + 1),
+            )
+        with self.assertRaisesRegex(ValidationError, 'valid UTF-8'):
+            self.File.create({
+                'dsl_id': self.dsl.id,
+                'file_type': 'services',
+                'file_name': 'services.ts',
+                'file': base64.b64encode(b'\xff\xfe'),
+            })
+
+    def test_grammar_and_services_have_independent_entry_files(self):
+        grammar = self.File._create_grammar_text(
+            self.dsl, 'GTL.langium', 'grammar GTL\nentry Model: name=ID;\n',
+        )
+        services = self.File._create_services_text(
+            self.dsl, 'services.ts', 'export default () => ({});\n',
+        )
+        supporting = self.File._create_services_text(
+            self.dsl, 'lib/scope.ts', 'export const scope = {};\n',
+        )
+
+        self.assertTrue(grammar.is_entry)
+        self.assertTrue(services.is_entry)
+        self.assertFalse(supporting.is_entry)
+        with self.assertRaisesRegex(ValidationError, 'exactly one entry services'):
+            supporting.is_entry = True
+
+    def test_services_paths_are_unique_ignoring_case(self):
+        self.File._create_services_text(
+            self.dsl, 'runtime/Services.ts', 'export default () => ({});\n',
+        )
+        with self.assertRaisesRegex(ValidationError, 'unique'):
+            self.File._create_services_text(
+                self.dsl, 'RUNTIME/services.ts', 'export const helper = {};\n',
+            )
+
     def test_non_draft_grammar_is_immutable(self):
         grammar = self.File._create_grammar_text(
             self.dsl, 'GTL.langium', 'grammar GTL\nentry Model: name=ID;\n',
@@ -68,6 +135,23 @@ class TestDslGrammar(TransactionCase):
             grammar.unlink()
         with self.assertRaisesRegex(ValidationError, 'draft status'):
             grammar.is_enabled = False
+
+    def test_non_draft_services_are_immutable(self):
+        services = self.File._create_services_text(
+            self.dsl, 'services.ts', 'export default () => ({});\n',
+        )
+        self.dsl.status = 'deprecated'
+
+        with self.assertRaisesRegex(ValidationError, 'draft status'):
+            services._write_text_utf8('export default () => ({ changed: true });')
+        with self.assertRaisesRegex(ValidationError, 'draft status'):
+            services.unlink()
+        with self.assertRaisesRegex(ValidationError, 'draft status'):
+            services.is_enabled = False
+        with self.assertRaisesRegex(ValidationError, 'draft status'):
+            self.File._create_services_text(
+                self.dsl, 'other.ts', 'export const other = true;\n',
+            )
 
     def test_only_admin_acl_can_create_dsl(self):
         manager = new_test_user(

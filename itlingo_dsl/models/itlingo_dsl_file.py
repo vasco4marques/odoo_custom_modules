@@ -7,6 +7,7 @@ from odoo.exceptions import ValidationError
 
 DSL_FILE_TYPES = [
     ("grammar", "Grammar"),
+    ("services", "Services"),
     ("validation", "Validation"),
     ("examples", "Examples"),
     ("specification", "Specification"),
@@ -15,6 +16,15 @@ DSL_FILE_TYPES = [
 GRAMMAR_MAX_BYTES = 1024 * 1024
 GRAMMAR_PATH_MAX_LENGTH = 512
 GRAMMAR_PATH_MAX_DEPTH = 32
+STRUCTURAL_FILE_TYPES = ("grammar", "services")
+STRUCTURAL_FILE_EXTENSIONS = {
+    "grammar": ".langium",
+    "services": ".ts",
+}
+STRUCTURAL_FILE_LABELS = {
+    "grammar": "grammar",
+    "services": "services",
+}
 
 
 class ItlingoDslFile(models.Model):
@@ -34,9 +44,9 @@ class ItlingoDslFile(models.Model):
         string="File Type",
         required=True,
         default="specification",
-        help="Maps directly to the chatbot knowledge-base file types. The "
-             "grammar (.langium) defines the language; validation, examples "
-             "and specifications are optional supporting material.",
+        help="Grammar (.langium) and services (.ts) files define the language "
+             "runtime. Validation, examples and specifications are optional "
+             "supporting material.",
     )
 
     file = fields.Binary(
@@ -51,17 +61,16 @@ class ItlingoDslFile(models.Model):
     )
 
     relative_path = fields.Char(
-        string="Grammar Path",
+        string="Workspace Path",
         size=GRAMMAR_PATH_MAX_LENGTH,
-        help="Normalized POSIX path inside the DSL grammar workspace. This "
-             "field is meaningful only for grammar files.",
+        help="Normalized POSIX path inside a DSL grammar or services workspace.",
     )
 
     is_entry = fields.Boolean(
-        string="Entry Grammar",
+        string="Entry File",
         default=False,
-        help="The entry grammar from which imports are resolved. Exactly one "
-             "grammar file must be the entry whenever a DSL has grammar files.",
+        help="The entry file from which imports are resolved. Grammar and "
+             "services workspaces each require exactly one entry file.",
     )
 
     is_enabled = fields.Boolean(
@@ -84,33 +93,48 @@ class ItlingoDslFile(models.Model):
     # ------------------------------------------------------------------
 
     @api.model
-    def _normalize_grammar_path(self, path):
-        """Validate and return a grammar workspace path without rewriting it."""
+    def _normalize_grammar_path(self, path, file_type="grammar"):
+        """Validate a grammar/services workspace path without rewriting it.
+
+        The historical method name is retained because grammar callers already
+        use it. Services callers select the TypeScript contract with
+        ``file_type='services'``.
+        """
+        if file_type not in STRUCTURAL_FILE_TYPES:
+            raise ValidationError(_("Unsupported structural file type: %s", file_type))
+        label = STRUCTURAL_FILE_LABELS[file_type]
+        extension = STRUCTURAL_FILE_EXTENSIONS[file_type]
         path = (path or "").strip()
         if not path:
-            raise ValidationError(_("A grammar path is required."))
+            raise ValidationError(_("A %s path is required.", label))
         if "\x00" in path:
-            raise ValidationError(_("A grammar path cannot contain NUL characters."))
+            raise ValidationError(_("A %s path cannot contain NUL characters.", label))
         if "\\" in path:
-            raise ValidationError(_("A grammar path must use POSIX '/' separators."))
+            raise ValidationError(_("A %s path must use POSIX '/' separators.", label))
         if path.startswith("/"):
-            raise ValidationError(_("A grammar path must be relative."))
+            raise ValidationError(_("A %s path must be relative.", label))
         segments = path.split("/")
         if any(segment in {"", ".", ".."} for segment in segments):
             raise ValidationError(_(
-                "A grammar path cannot contain empty, '.' or '..' segments."
+                "A %(label)s path cannot contain empty, '.' or '..' segments.",
+                label=label,
             ))
-        if not path.endswith(".langium"):
-            raise ValidationError(_("A grammar path must end in .langium."))
+        if not path.endswith(extension):
+            raise ValidationError(_(
+                "A %(label)s path must end in %(extension)s.",
+                label=label, extension=extension,
+            ))
         if len(path) > GRAMMAR_PATH_MAX_LENGTH:
             raise ValidationError(_(
-                "A grammar path is too long. The maximum length is %(length)s characters.",
-                length=GRAMMAR_PATH_MAX_LENGTH,
+                "A %(label)s path is too long. The maximum length is "
+                "%(length)s characters.",
+                label=label, length=GRAMMAR_PATH_MAX_LENGTH,
             ))
         if len(segments) > GRAMMAR_PATH_MAX_DEPTH:
             raise ValidationError(_(
-                "A grammar path is too deep. The maximum depth is %(depth)s segments.",
-                depth=GRAMMAR_PATH_MAX_DEPTH,
+                "A %(label)s path is too deep. The maximum depth is "
+                "%(depth)s segments.",
+                label=label, depth=GRAMMAR_PATH_MAX_DEPTH,
             ))
         return path
 
@@ -120,20 +144,27 @@ class ItlingoDslFile(models.Model):
         return self._normalize_grammar_path(file_name)
 
     @api.model
-    def _validate_text_content(self, content, max_bytes=GRAMMAR_MAX_BYTES):
+    def _validate_text_content(
+        self, content, max_bytes=GRAMMAR_MAX_BYTES, file_type="grammar",
+    ):
         """Return UTF-8 bytes for safe textual attachment content."""
+        label = STRUCTURAL_FILE_LABELS.get(file_type, _("text"))
         if not isinstance(content, str):
-            raise ValidationError(_("Grammar content must be text."))
+            raise ValidationError(_("%s content must be text.", label.capitalize()))
         if "\x00" in content:
-            raise ValidationError(_("Grammar content cannot contain NUL characters."))
+            raise ValidationError(_(
+                "%s content cannot contain NUL characters.", label.capitalize(),
+            ))
         try:
             raw = content.encode("utf-8")
         except UnicodeEncodeError as err:
-            raise ValidationError(_("Grammar content must be valid UTF-8 text.")) from err
+            raise ValidationError(_(
+                "%s content must be valid UTF-8 text.", label.capitalize(),
+            )) from err
         if len(raw) > max_bytes:
             raise ValidationError(_(
-                "Grammar content is too large. The maximum size is %(size)s bytes.",
-                size=max_bytes,
+                "%(label)s content is too large. The maximum size is %(size)s bytes.",
+                label=label.capitalize(), size=max_bytes,
             ))
         return raw
 
@@ -160,18 +191,23 @@ class ItlingoDslFile(models.Model):
     def _read_text_utf8(self, max_bytes=GRAMMAR_MAX_BYTES):
         """Decode an attachment as strict UTF-8 text."""
         self.ensure_one()
+        label = STRUCTURAL_FILE_LABELS.get(self.file_type, _("text"))
         raw = self._read_binary_bytes()
         if len(raw) > max_bytes:
             raise ValidationError(_(
-                "Grammar content is too large. The maximum size is %(size)s bytes.",
-                size=max_bytes,
+                "%(label)s content is too large. The maximum size is %(size)s bytes.",
+                label=label.capitalize(), size=max_bytes,
             ))
         try:
             content = raw.decode("utf-8")
         except UnicodeDecodeError as err:
-            raise ValidationError(_("The stored grammar is not valid UTF-8 text.")) from err
+            raise ValidationError(_(
+                "The stored %s file is not valid UTF-8 text.", label,
+            )) from err
         if "\x00" in content:
-            raise ValidationError(_("Grammar content cannot contain NUL characters."))
+            raise ValidationError(_(
+                "%s content cannot contain NUL characters.", label.capitalize(),
+            ))
         return content
 
     def _write_text_utf8(
@@ -179,12 +215,15 @@ class ItlingoDslFile(models.Model):
     ):
         """Validate and store UTF-8 text in the current attachment record."""
         self.ensure_one()
-        if self.file_type != "grammar":
-            raise ValidationError(_("Only grammar files can be edited as grammar text."))
+        if self.file_type not in STRUCTURAL_FILE_TYPES:
+            raise ValidationError(_(
+                "Only grammar and services files can be edited as workspace text."
+            ))
         target_path = self._normalize_grammar_path(
             relative_path or file_name or self.relative_path or self.file_name,
+            file_type=self.file_type,
         )
-        raw = self._validate_text_content(content)
+        raw = self._validate_text_content(content, file_type=self.file_type)
         vals = {
             "file": base64.b64encode(raw),
             "relative_path": target_path,
@@ -214,28 +253,57 @@ class ItlingoDslFile(models.Model):
             vals["is_entry"] = is_entry
         return self.create(vals)
 
+    @api.model
+    def _create_services_text(
+        self, dsl, file_name, content, relative_path=None, is_entry=None,
+    ):
+        """Create a services workspace file from validated UTF-8 text."""
+        dsl.ensure_one()
+        target_path = self._normalize_grammar_path(
+            relative_path or file_name, file_type="services",
+        )
+        raw = self._validate_text_content(content, file_type="services")
+        vals = {
+            "dsl_id": dsl.id,
+            "file_type": "services",
+            "relative_path": target_path,
+            "file_name": posixpath.basename(target_path),
+            "file": base64.b64encode(raw),
+        }
+        if is_entry is not None:
+            vals["is_entry"] = is_entry
+        return self.create(vals)
+
     # ------------------------------------------------------------------
-    # Grammar invariants
+    # Structural workspace invariants
     # ------------------------------------------------------------------
 
     def _check_grammar_draft_mutation(self):
         for record in self:
-            if record.file_type == "grammar" and record.dsl_id.status != "draft":
+            if (
+                record.file_type in STRUCTURAL_FILE_TYPES
+                and record.dsl_id.status != "draft"
+            ):
                 raise ValidationError(_(
-                    "Grammar files can only be changed while the DSL is in draft status."
+                    "Grammar and services files can only be changed while the "
+                    "DSL is in draft status."
                 ))
 
     @api.constrains(
         "dsl_id", "file_type", "file_name", "file", "relative_path", "is_entry",
     )
     def _check_grammar_file(self):
-        for record in self.filtered(lambda item: item.file_type == "grammar"):
-            path = record._normalize_grammar_path(record.relative_path)
+        for record in self.filtered(
+            lambda item: item.file_type in STRUCTURAL_FILE_TYPES
+        ):
+            path = record._normalize_grammar_path(
+                record.relative_path, file_type=record.file_type,
+            )
             if record.file_name != posixpath.basename(path):
                 raise ValidationError(_(
-                    "A grammar filename must match the basename of its grammar path."
+                    "A workspace filename must match the basename of its path."
                 ))
-            # Uploaded grammar files must meet the same text contract as editor saves.
+            # Uploaded workspace files meet the same contract as editor saves.
             record._read_text_utf8()
 
     @api.model_create_multi
@@ -244,26 +312,31 @@ class ItlingoDslFile(models.Model):
         dsl_ids = {vals.get("dsl_id") for vals in vals_list if vals.get("dsl_id")}
         dsls = self.env["itlingo.dsl"].browse(dsl_ids)
         dsl_by_id = {dsl.id: dsl for dsl in dsls}
-        dsl_has_grammar = {
-            dsl.id: bool(dsl.file_ids.filtered(lambda item: item.file_type == "grammar"))
-            for dsl in dsls
+        dsl_has_file_type = {
+            (dsl.id, file_type): bool(dsl.file_ids.filtered(
+                lambda item, candidate=file_type: item.file_type == candidate
+            ))
+            for dsl in dsls for file_type in STRUCTURAL_FILE_TYPES
         }
         for vals in vals_list:
-            if vals.get("file_type", "specification") == "grammar":
+            file_type = vals.get("file_type", "specification")
+            if file_type in STRUCTURAL_FILE_TYPES:
                 dsl = dsl_by_id.get(vals.get("dsl_id"))
                 if dsl and dsl.status != "draft":
                     raise ValidationError(_(
-                        "Grammar files can only be created while the DSL is in draft status."
+                        "Grammar and services files can only be created while "
+                        "the DSL is in draft status."
                     ))
                 path = self._normalize_grammar_path(
                     vals.get("relative_path") or vals.get("file_name"),
+                    file_type=file_type,
                 )
                 vals["relative_path"] = path
                 vals["file_name"] = posixpath.basename(path)
                 if "is_entry" not in vals and dsl:
-                    vals["is_entry"] = not dsl_has_grammar[dsl.id]
+                    vals["is_entry"] = not dsl_has_file_type[(dsl.id, file_type)]
                 if dsl:
-                    dsl_has_grammar[dsl.id] = True
+                    dsl_has_file_type[(dsl.id, file_type)] = True
         records = super().create(vals_list)
         records.dsl_id._check_grammar_files()
         records.dsl_id._sync_kb_files()
@@ -271,32 +344,37 @@ class ItlingoDslFile(models.Model):
 
     def write(self, vals):
         vals = dict(vals)
-        grammar_records = self.filtered(lambda item: item.file_type == "grammar")
-        if vals.get("file_type") == "grammar":
-            grammar_records |= self
-        if grammar_records and set(vals) & {
+        structural_records = self.filtered(
+            lambda item: item.file_type in STRUCTURAL_FILE_TYPES
+        )
+        if vals.get("file_type") in STRUCTURAL_FILE_TYPES:
+            structural_records |= self
+        if structural_records and set(vals) & {
             "dsl_id", "file_type", "file", "file_name", "relative_path",
             "is_entry", "is_enabled", "sequence",
         }:
             target_dsl = self.env["itlingo.dsl"].browse(vals.get("dsl_id")) \
                 if vals.get("dsl_id") else False
-            for record in grammar_records:
+            for record in structural_records:
                 dsl = target_dsl or record.dsl_id
                 if dsl.status != "draft":
                     raise ValidationError(_(
-                        "Grammar files can only be changed while the DSL is in draft status."
+                        "Grammar and services files can only be changed while "
+                        "the DSL is in draft status."
                     ))
-        if grammar_records and (
+        if structural_records and (
             "relative_path" in vals or "file_name" in vals
-            or vals.get("file_type") == "grammar"
+            or vals.get("file_type") in STRUCTURAL_FILE_TYPES
         ):
             if len(self) != 1:
                 raise ValidationError(_(
-                    "Grammar paths must be changed one file at a time."
+                    "Workspace paths must be changed one file at a time."
                 ))
+            target_file_type = vals.get("file_type") or self.file_type
             path = self._normalize_grammar_path(
                 vals.get("relative_path") or self.relative_path
                 or vals.get("file_name") or self.file_name,
+                file_type=target_file_type,
             )
             vals["relative_path"] = path
             vals["file_name"] = posixpath.basename(path)

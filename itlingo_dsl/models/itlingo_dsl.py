@@ -109,9 +109,53 @@ class ItlingoDsl(models.Model):
         "itlingo.dsl.file",
         "dsl_id",
         string="Definition Files",
-        help="Grammar (.langium), validation rules, examples and "
-             "specifications that define this DSL and are pushed to the "
-             "chatbot knowledge base.",
+        help="Grammar (.langium), services (.ts), validation rules, examples "
+             "and specifications that define this DSL.",
+    )
+
+    # ------------------------------------------------------------------
+    # Author-supplied Langium services compilation audit
+    # ------------------------------------------------------------------
+    services_source_digest = fields.Char(
+        string="Services Source Digest",
+        readonly=True,
+        copy=False,
+        help="SHA-256 of the services TypeScript source set used for the last "
+             "compilation attempt.",
+    )
+
+    services_compiled = fields.Text(
+        string="Compiled Services",
+        readonly=True,
+        copy=False,
+        help="Bundled ESM JavaScript produced from the DSL services sources.",
+    )
+
+    services_compiled_digest = fields.Char(
+        string="Compiled Services Digest",
+        readonly=True,
+        copy=False,
+        help="SHA-256 of the compiled services JavaScript artifact.",
+    )
+
+    services_compile_result = fields.Selection(
+        selection=[("ok", "OK"), ("error", "Error")],
+        string="Services Compile Result",
+        readonly=True,
+        copy=False,
+    )
+
+    services_compile_diagnostics = fields.Json(
+        string="Services Compile Diagnostics",
+        readonly=True,
+        copy=False,
+        help="Structured diagnostics from the last services compilation attempt.",
+    )
+
+    services_compile_time = fields.Datetime(
+        string="Services Compiled On",
+        readonly=True,
+        copy=False,
     )
 
     # ------------------------------------------------------------------
@@ -288,27 +332,32 @@ class ItlingoDsl(models.Model):
     @api.constrains("file_ids")
     def _check_grammar_files(self):
         for dsl in self:
-            grammars = dsl.file_ids.filtered(
-                lambda f: f.file_type == "grammar"
-            )
-            paths = {}
-            for grammar in grammars:
-                path = grammar._normalize_grammar_path(grammar.relative_path)
-                folded_path = path.casefold()
-                if folded_path in paths:
+            for file_type, label in (("grammar", _("grammar")),
+                                     ("services", _("services"))):
+                workspace_files = dsl.file_ids.filtered(
+                    lambda f, candidate=file_type: f.file_type == candidate
+                )
+                paths = {}
+                for workspace_file in workspace_files:
+                    path = workspace_file._normalize_grammar_path(
+                        workspace_file.relative_path, file_type=file_type,
+                    )
+                    folded_path = path.casefold()
+                    if folded_path in paths:
+                        raise ValidationError(_(
+                            "%(label)s paths must be unique within a DSL, "
+                            "ignoring case ('%(first)s' and '%(second)s').",
+                            label=label.capitalize(),
+                            first=paths[folded_path], second=path,
+                        ))
+                    paths[folded_path] = path
+                entries = workspace_files.filtered("is_entry")
+                if workspace_files and len(entries) != 1:
                     raise ValidationError(_(
-                        "Grammar paths must be unique within a DSL, ignoring "
-                        "case ('%(first)s' and '%(second)s').",
-                        first=paths[folded_path], second=path,
+                        "A DSL with %(label)s files must have exactly one "
+                        "entry %(label)s file (DSL: %(dsl)s).",
+                        label=label, dsl=dsl.display_name,
                     ))
-                paths[folded_path] = path
-            entries = grammars.filtered("is_entry")
-            if grammars and len(entries) != 1:
-                raise ValidationError(_(
-                    "A DSL with grammar files must have exactly one entry "
-                    "grammar (DSL: %s).",
-                    dsl.display_name,
-                ))
 
     # ------------------------------------------------------------------
     # Grammar validation and publication lifecycle
