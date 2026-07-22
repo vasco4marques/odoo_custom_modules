@@ -400,7 +400,7 @@ class ITLingoIntegrationAPI(http.Controller):
     @http.route('/token_api/get-dsls', type='http', auth='none',
                 methods=['GET'], csrf=False)
     def token_api_get_dsls(self, **kw):
-        """List DSLs (with their Langium grammar) for the ITOI LSP service.
+        """List DSLs (with grammar and optional services) for the ITOI LSP.
 
         Returns every ``active`` and ``draft`` DSL that has a grammar file.
         Drafts are included on purpose so maintainers can test unpublished
@@ -436,6 +436,8 @@ class ITLingoIntegrationAPI(http.Controller):
                 'file_extensions': dsl._extensions(),
                 'grammar': grammar_text,
                 'digest': dsl._grammar_digest(),
+                'services': dsl.services_compiled or '',
+                'services_digest': dsl.services_compiled_digest or '',
             })
 
         _logger.info(

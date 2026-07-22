@@ -33,6 +33,27 @@ class TestGetDsls(HttpCase):
             "terminal ID: /[_a-zA-Z][\\w_]*/;\n",
             is_entry=False,
         )
+        cls.services_compiled = "export default function () { return {}; }\n"
+        cls.services_digest = hashlib.sha256(
+            cls.services_compiled.encode("utf-8")
+        ).hexdigest()
+        cls.dsl.write({
+            "services_compiled": cls.services_compiled,
+            "services_compiled_digest": cls.services_digest,
+        })
+        cls.plain_dsl = cls.env["itlingo.dsl"].create({
+            "name": "ITOI grammar without custom services",
+            "acronym": "ITOINOSERVICES",
+            "version": "test-1",
+            "status": "draft",
+            "file_extensions": ".ins",
+        })
+        cls.File._create_grammar_text(
+            cls.plain_dsl,
+            "Main.langium",
+            "grammar ITOINOSERVICES\nentry Model: 'model';\n",
+            is_entry=True,
+        )
         cls.broken_dsl = cls.env["itlingo.dsl"].create({
             "name": "ITOI broken grammar",
             "acronym": "ITOIBROKEN",
@@ -73,6 +94,16 @@ class TestGetDsls(HttpCase):
         self.assertEqual(
             result["digest"], hashlib.sha256(expected.encode("utf-8")).hexdigest(),
         )
+        self.assertEqual(result["services"], self.services_compiled)
+        self.assertEqual(result["services_digest"], self.services_digest)
+
+        plain_result = next(
+            item
+            for item in payload["dsls"]
+            if item["acronym"] == "ITOINOSERVICES"
+        )
+        self.assertEqual(plain_result["services"], "")
+        self.assertEqual(plain_result["services_digest"], "")
         self.assertNotIn(
             "ITOIBROKEN", {item["acronym"] for item in payload["dsls"]},
         )
