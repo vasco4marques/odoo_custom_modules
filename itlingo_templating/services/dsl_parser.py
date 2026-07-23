@@ -5,12 +5,23 @@ runtime dependency under ``parser/node_modules`` so author-supplied service
 modules can share the parser's Langium instance.
 """
 
+import hashlib
 import json
 import logging
 import os
 import re
 import subprocess
 import tempfile
+
+from odoo.addons.itlingo_dsl.services.node_sandbox import (
+    DEFAULT_BWRAP_PATH,
+    DEFAULT_CPU_LIMIT_SECONDS,
+    DEFAULT_MEMORY_LIMIT_MB,
+    DEFAULT_NODE_HEAP_MB,
+    NodeSandboxUnavailable,
+    build_node_sandbox_command,
+    run_node_sandbox,
+)
 
 _logger = logging.getLogger(__name__)
 
@@ -44,13 +55,39 @@ def is_templatable_dsl(env, dsl):
         technical_dsl._grammar_file()
         if hasattr(technical_dsl, "_grammar_file") else False
     )
-    return bool(
+    grammar_is_ready = bool(
         technical_dsl.status == "active"
         and grammar
         and technical_dsl.grammar_validation_result == "valid"
         and technical_dsl.grammar_validation_is_current
         and technical_dsl.published_digest
         and technical_dsl.published_digest == technical_dsl._grammar_digest()
+    )
+    if not grammar_is_ready:
+        return False
+
+    services_files = (
+        technical_dsl._services_files()
+        if hasattr(technical_dsl, "_services_files") else False
+    )
+    if not services_files:
+        return True
+
+    artifact = technical_dsl.services_compiled or ""
+    artifact_digest = (
+        hashlib.sha256(artifact.encode("utf-8")).hexdigest()
+        if artifact else False
+    )
+    source_digest = (
+        technical_dsl._services_source_digest()
+        if hasattr(technical_dsl, "_services_source_digest") else False
+    )
+    return bool(
+        technical_dsl.services_compile_result == "ok"
+        and source_digest
+        and technical_dsl.services_source_digest == source_digest
+        and artifact
+        and technical_dsl.services_compiled_digest == artifact_digest
     )
 
 
@@ -63,11 +100,24 @@ def dsl_label(dsl):
 def _config(env):
     params = env["ir.config_parameter"].sudo()
     node_path = params.get_param("itlingo_templating.node_path", _DEFAULT_NODE_PATH)
+    bwrap_path = params.get_param(
+        "itlingo_templating.sandbox_path", DEFAULT_BWRAP_PATH,
+    )
     try:
         timeout = int(params.get_param("itlingo_templating.parse_timeout", _DEFAULT_TIMEOUT))
     except (TypeError, ValueError):
         timeout = _DEFAULT_TIMEOUT
-    return node_path, timeout
+    memory_mb = params.get_param(
+        "itlingo_templating.parse_memory_limit_mb", DEFAULT_MEMORY_LIMIT_MB,
+    )
+    heap_mb = params.get_param(
+        "itlingo_templating.parse_node_heap_mb", DEFAULT_NODE_HEAP_MB,
+    )
+    cpu_seconds = params.get_param(
+        "itlingo_templating.parse_cpu_limit_seconds",
+        min(timeout, DEFAULT_CPU_LIMIT_SECONDS),
+    )
+    return node_path, bwrap_path, timeout, memory_mb, heap_mb, cpu_seconds
 
 
 _GRAMMAR_IMPORT_RE = re.compile(
@@ -97,6 +147,7 @@ def _record_parser_config(dsl):
         "suffix": suffix,
         "label": dsl_label(dsl),
         "validation": dsl.templating_validation_level or "all",
+        "services_module": dsl.services_compiled or "",
     }
 
 
@@ -113,7 +164,7 @@ def parse_dsl(env, dsl, source_bytes):
     if not dsl or isinstance(dsl, str) or not is_templatable_dsl(env, dsl):
         raise RuntimeError(
             "Template generation requires an active DSL with a current, "
-            "valid published grammar."
+            "valid published grammar and current compiled services module."
         )
     technical_dsl = dsl.sudo() if hasattr(dsl, "sudo") else dsl
     config = _record_parser_config(technical_dsl)
@@ -131,42 +182,74 @@ def parse_dsl(env, dsl, source_bytes):
             "`npm ci --omit=dev` in the parser/ folder or rebuild the container."
             % _LANGIUM_PACKAGE
         )
-    node_path, timeout = _config(env)
+    (
+        node_path, bwrap_path, timeout, memory_mb, heap_mb, cpu_seconds,
+    ) = _config(env)
 
-    grammar_path = None
-    if config.get("grammar_text") is not None:
-        with tempfile.NamedTemporaryFile(suffix=".langium", delete=False) as tmp:
-            tmp.write(config["grammar_text"].encode("utf-8"))
-            grammar_path = tmp.name
-        grammar = grammar_path
+    with tempfile.TemporaryDirectory(prefix="itlingo-dsl-parser-") as temp_dir:
+        grammar = os.path.join(temp_dir, "grammar.langium")
+        with open(grammar, "wb") as grammar_file:
+            grammar_file.write(config["grammar_text"].encode("utf-8"))
 
-    with tempfile.NamedTemporaryFile(suffix=config["suffix"], delete=False) as tmp:
-        tmp.write(source_bytes)
-        source_path = tmp.name
+        source_path = os.path.join(temp_dir, "source%s" % config["suffix"])
+        with open(source_path, "wb") as source_file:
+            source_file.write(source_bytes)
 
-    try:
-        proc = subprocess.run(
-            [node_path, _PARSER_JS, grammar, source_path, label, config["validation"]],
-            capture_output=True,
-            timeout=timeout,
-        )
-    except FileNotFoundError as err:
-        raise RuntimeError(
-            "Node.js executable '%s' not found. Set the "
-            "'itlingo_templating.node_path' system parameter." % node_path
-        ) from err
-    except subprocess.TimeoutExpired as err:
-        raise RuntimeError("%s parsing timed out after %ss." % (dsl_name, timeout)) from err
-    finally:
+        args = [
+            node_path,
+            _PARSER_JS,
+            grammar,
+            source_path,
+            label,
+            config["validation"],
+        ]
+        services_module = config["services_module"]
+        if services_module:
+            services_path = os.path.join(temp_dir, "services.mjs")
+            with open(services_path, "wb") as services_file:
+                services_file.write(services_module.encode("utf-8"))
+            # ESM package imports resolve from the author module's location.
+            # Link the parser's dependencies into the temporary workspace so
+            # `import ... from "langium"` shares this process's Langium copy.
+            os.symlink(
+                os.path.join(_PARSER_DIR, "node_modules"),
+                os.path.join(temp_dir, "node_modules"),
+                target_is_directory=True,
+            )
+            args.append(services_path)
+
+        # Inputs are complete before launch. Bubblewrap exposes them read-only
+        # to an unmapped low-privilege UID, with no host environment or network.
+        os.chmod(temp_dir, 0o755)
         try:
-            os.unlink(source_path)
-        except OSError:
-            pass
-        if grammar_path:
-            try:
-                os.unlink(grammar_path)
-            except OSError:
-                pass
+            sandbox_args = build_node_sandbox_command(
+                node_path,
+                _PARSER_DIR,
+                temp_dir,
+                _PARSER_JS,
+                args[2:],
+                bwrap_path=bwrap_path,
+                memory_limit_mb=memory_mb,
+                node_heap_mb=heap_mb,
+                cpu_limit_seconds=cpu_seconds,
+            )
+            proc = run_node_sandbox(
+                sandbox_args,
+                timeout=timeout,
+                cwd=temp_dir,
+            )
+        except NodeSandboxUnavailable as err:
+            raise RuntimeError(
+                "The mandatory DSL parser sandbox is unavailable: %s" % err
+            ) from err
+        except FileNotFoundError as err:
+            raise RuntimeError(
+                "The DSL parser sandbox executable was not found: %s" % err
+            ) from err
+        except subprocess.TimeoutExpired as err:
+            raise RuntimeError(
+                "%s parsing timed out after %ss." % (dsl_name, timeout)
+            ) from err
 
     stdout = (proc.stdout or b"").decode("utf-8", "replace").strip()
     try:

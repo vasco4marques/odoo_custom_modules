@@ -113,6 +113,14 @@ class ItlingoDsl(models.Model):
              "and specifications that define this DSL.",
     )
 
+    services_audit_ids = fields.One2many(
+        "itlingo.dsl.services.audit",
+        "dsl_id",
+        string="Services Edit Audit",
+        readonly=True,
+        copy=False,
+    )
+
     # ------------------------------------------------------------------
     # Author-supplied Langium services compilation audit
     # ------------------------------------------------------------------

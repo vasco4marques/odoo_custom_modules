@@ -278,6 +278,31 @@ class ItlingoDslFile(models.Model):
     # Structural workspace invariants
     # ------------------------------------------------------------------
 
+    @api.model
+    def _record_services_audit(self, events):
+        """Create immutable audit rows for completed services mutations."""
+        if not events:
+            return
+        actor_id = self.env.user.id
+        Audit = self.env["itlingo.dsl.services.audit"].sudo().with_context(
+            allow_services_audit_create=True,
+        )
+        vals_list = []
+        for event in events:
+            dsl = self.env["itlingo.dsl"].browse(event["dsl_id"]).exists()
+            if not dsl:
+                continue
+            vals_list.append({
+                "dsl_id": dsl.id,
+                "file_record_id": event["file_record_id"],
+                "operation": event["operation"],
+                "relative_path": event["relative_path"],
+                "source_digest": dsl._services_source_digest() or False,
+                "actor_id": actor_id,
+            })
+        if vals_list:
+            Audit.create(vals_list)
+
     def _check_grammar_draft_mutation(self):
         for record in self:
             if (
@@ -345,6 +370,12 @@ class ItlingoDslFile(models.Model):
                 lambda item: item.file_type == "services"
             ).dsl_id:
                 dsl._run_services_compilation()
+        self._record_services_audit([{
+            "dsl_id": record.dsl_id.id,
+            "file_record_id": record.id,
+            "operation": "create",
+            "relative_path": record.relative_path,
+        } for record in records if record.file_type == "services"])
         return records
 
     def write(self, vals):
@@ -360,6 +391,15 @@ class ItlingoDslFile(models.Model):
             set(vals) & services_source_fields
             and (services_before or vals.get("file_type") == "services")
         )
+        audit_before = {
+            (record.dsl_id.id, record.id): {
+                "dsl_id": record.dsl_id.id,
+                "file_record_id": record.id,
+                "operation": "update",
+                "relative_path": record.relative_path,
+            }
+            for record in services_before
+        } if compile_services else {}
         services_dsls_before = services_before.dsl_id
         structural_records = self.filtered(
             lambda item: item.file_type in STRUCTURAL_FILE_TYPES
@@ -406,18 +446,38 @@ class ItlingoDslFile(models.Model):
             )
             for dsl in services_dsls_before | services_after.dsl_id:
                 dsl._run_services_compilation()
+        if compile_services:
+            audit_events = dict(audit_before)
+            for record in self.filtered(
+                lambda item: item.file_type == "services"
+            ):
+                audit_events[(record.dsl_id.id, record.id)] = {
+                    "dsl_id": record.dsl_id.id,
+                    "file_record_id": record.id,
+                    "operation": "update",
+                    "relative_path": record.relative_path,
+                }
+            self._record_services_audit(list(audit_events.values()))
         return result
 
     def unlink(self):
         self._check_grammar_draft_mutation()
         dsls = self.dsl_id
-        services_dsls = self.filtered(
+        services_records = self.filtered(
             lambda item: item.file_type == "services"
-        ).dsl_id
+        )
+        services_dsls = services_records.dsl_id
+        audit_events = [{
+            "dsl_id": record.dsl_id.id,
+            "file_record_id": record.id,
+            "operation": "delete",
+            "relative_path": record.relative_path,
+        } for record in services_records]
         result = super().unlink()
         dsls._check_grammar_files()
         dsls._sync_kb_files()
         if not self.env.context.get("skip_services_compile"):
             for dsl in services_dsls:
                 dsl._run_services_compilation()
+        self._record_services_audit(audit_events)
         return result

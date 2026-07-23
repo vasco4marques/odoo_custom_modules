@@ -43,9 +43,11 @@ self-contained grammar passed to the runtime parser. The module bundles no
 language-specific grammars.
 
 The **Specification Validation** field on the DSL's backend **Templating** tab
-defaults to **Full validation**. Select **Syntax only** when the grammar relies
-on custom editor scoping or validation services that the generic runtime parser
-does not have. This setting is generic and belongs to each DSL record.
+defaults to **Full validation**. The runtime injects the DSL's published custom
+Langium services module, when present, so its scoping and validation behavior
+matches the editor. Select **Syntax only** only when template generation should
+deliberately skip semantic validation, including the module's custom validation
+registry. This setting is generic and belongs to each DSL record.
 
 ## Template Reference inventory
 
@@ -150,11 +152,21 @@ Two dependencies are not delivered by `git pull`:
    `parser/node_modules` so custom DSL services use the same Langium instance.
    The Docker image installs this dependency and a compatible Node runtime
    during its build.
+3. **Bubblewrap and unprivileged user namespaces** - parsing runs fail-closed
+   in a networkless user/mount/PID namespace with a cleared environment,
+   read-only parser/input mounts, a private `/tmp`, and CPU, memory, process,
+   file, and wall-clock limits. The production image installs setuid
+   Bubblewrap, and the deployed Compose file supplies its required namespace
+   capability/security options while Odoo remains a non-root process.
 
 Optional system parameters (Settings > Technical > System Parameters):
 
 - `itlingo_templating.node_path` (default `node`)
 - `itlingo_templating.parse_timeout` seconds (default `30`)
+- `itlingo_templating.sandbox_path` (default `/usr/bin/bwrap`)
+- `itlingo_templating.parse_memory_limit_mb` (default `2048`, address-space limit)
+- `itlingo_templating.parse_node_heap_mb` (default `384`)
+- `itlingo_templating.parse_cpu_limit_seconds` (default `20`)
 - `itlingo_dsl.node_path` (default `node`; shared by grammar validation and description)
 - `itlingo_dsl.describe_timeout` seconds (default `30`)
 

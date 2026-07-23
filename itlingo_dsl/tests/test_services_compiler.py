@@ -1,7 +1,7 @@
 import hashlib
 from unittest.mock import patch
 
-from odoo.exceptions import ValidationError
+from odoo.exceptions import AccessError, ValidationError
 from odoo.tests import TransactionCase, tagged
 
 from ..services.services_compiler import ServicesCompilationUnavailable
@@ -142,3 +142,29 @@ class TestServicesCompilation(TransactionCase):
         self.assertFalse(self.dsl.services_compile_result)
         self.assertFalse(self.dsl.services_compile_diagnostics)
         self.assertFalse(self.dsl.services_compile_time)
+
+    @patch(
+        "odoo.addons.itlingo_dsl.services.services_compiler.compile_services",
+        return_value=OK_RESULT,
+    )
+    def test_services_edits_create_immutable_audit_rows(self, _compile_mock):
+        services = self._create_services()
+        services._write_text_utf8("export default () => ({ updated: true });\n")
+        services.unlink()
+
+        audits = self.env["itlingo.dsl.services.audit"].sudo().search(
+            [("dsl_id", "=", self.dsl.id)],
+            order="id",
+        )
+        self.assertEqual(audits.mapped("operation"), [
+            "create", "update", "delete",
+        ])
+        self.assertTrue(audits[0].source_digest)
+        self.assertTrue(audits[1].source_digest)
+        self.assertFalse(audits[2].source_digest)
+        self.assertEqual(audits.mapped("actor_id"), self.env.user)
+        self.assertEqual(
+            set(audits.mapped("relative_path")), {"services.ts"},
+        )
+        with self.assertRaises(AccessError):
+            audits[0].write({"relative_path": "rewritten.ts"})
