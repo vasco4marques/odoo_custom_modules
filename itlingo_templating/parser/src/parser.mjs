@@ -1,6 +1,6 @@
 // DSL -> JSON AST CLI.
 //
-// Usage: node parser.mjs <grammarPath> <sourcePath> [label] [validationMode]
+// Usage: node parser.mjs <grammarPath> <sourcePath> [label] [validationMode] [servicesModulePath]
 // Builds Langium services from the grammar text at runtime (createServicesForGrammar)
 // and prints {success, ast, error, diagnostics, ast_summary} as JSON on stdout.
 //
@@ -9,6 +9,7 @@
 
 import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { URI } from 'langium';
 import { createServicesForGrammar } from 'langium/grammar';
 
@@ -119,12 +120,40 @@ function emit(result) {
   process.stdout.write(JSON.stringify(result));
 }
 
+async function loadServicesModule(servicesModulePath) {
+  const imported = await import(pathToFileURL(resolve(servicesModulePath)).href);
+  const module = typeof imported.default === 'function'
+    ? imported.default()
+    : imported.default;
+  if (
+    typeof module !== 'object'
+    || module === null
+    || Array.isArray(module)
+    || typeof module.then === 'function'
+  ) {
+    throw new TypeError(
+      'The services module default export must be a synchronous Langium module object or factory',
+    );
+  }
+  return module;
+}
+
 async function main() {
-  const [grammarPath, sourcePath, labelArg, validationModeArg] = process.argv.slice(2);
+  const [
+    grammarPath,
+    sourcePath,
+    labelArg,
+    validationModeArg,
+    servicesModulePath,
+  ] = process.argv.slice(2);
   const label = labelArg || 'DSL specification';
   const validationMode = validationModeArg || 'all';
   if (!grammarPath || !sourcePath) {
-    emit({ success: false, error: 'Usage: parser.mjs <grammarPath> <sourcePath> [label] [validationMode]', diagnostics: [] });
+    emit({
+      success: false,
+      error: 'Usage: parser.mjs <grammarPath> <sourcePath> [label] [validationMode] [servicesModulePath]',
+      diagnostics: [],
+    });
     process.exit(2);
     return;
   }
@@ -147,7 +176,10 @@ async function main() {
   }
 
   try {
-    const services = await createServicesForGrammar({ grammar });
+    const module = servicesModulePath
+      ? await loadServicesModule(servicesModulePath)
+      : undefined;
+    const services = await createServicesForGrammar({ grammar, module });
     const fileExtension = String(services.LanguageMetaData?.fileExtensions?.[0] || 'dsl').replace(/^\./, '');
     const factory = services.shared.workspace.LangiumDocumentFactory;
     const document = factory.fromString(dslText, URI.parse(`memory:///input.${fileExtension}`));

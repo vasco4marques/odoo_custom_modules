@@ -5,7 +5,8 @@
   "description": "Runtime DSL grammar and source to JSON AST CLI.",
   "type": "module",
   "scripts": {
-    "build": "esbuild src/parser.mjs --bundle --platform=node --format=esm --external:langium --outfile=dist/parser.mjs"
+    "build": "esbuild src/parser.mjs --bundle --platform=node --format=esm --external:langium --outfile=dist/parser.mjs",
+    "test": "npm run build && node --test test/parser.test.mjs"
   },
   "dependencies": {
     "langium": "4.3.1"
