@@ -5,11 +5,18 @@
 // module shares those packages with the runtime that eventually loads it.
 
 import path from 'node:path';
+import {mkdtemp, rm, symlink, writeFile} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {fileURLToPath, pathToFileURL} from 'node:url';
 import {build, version as esbuildVersion} from 'esbuild';
 
 const LANGIUM_VERSION = '4.3.1';
-const BUNDLE_VERSION = '1.0.0';
+const BUNDLE_VERSION = '1.1.0';
 const COMPILER_VERSION = `esbuild ${esbuildVersion} / langium ${LANGIUM_VERSION} / compiler ${BUNDLE_VERSION}`;
+const COMPILER_DIRECTORY = path.resolve(
+    path.dirname(fileURLToPath(import.meta.url)),
+    '..',
+);
 
 function output(payload) {
     process.stdout.write(JSON.stringify(payload));
@@ -44,6 +51,50 @@ function normalizeDiagnostic(message, severity, workspacePath) {
         ...diagnosticLocation(message.location, workspacePath),
         code: message.id || 'esbuild',
     };
+}
+
+async function smokeLoad(javascript) {
+    const smokeDirectory = await mkdtemp(
+        path.join(tmpdir(), 'itlingo-services-smoke-'),
+    );
+    const consoleMethods = ['debug', 'error', 'info', 'log', 'warn'];
+    const originalConsole = new Map(
+        consoleMethods.map((method) => [method, console[method]]),
+    );
+    try {
+        // Author logging must not corrupt the compiler's JSON stdout protocol.
+        for (const method of consoleMethods) {
+            console[method] = () => {};
+        }
+        const modulePath = path.join(smokeDirectory, 'services.mjs');
+        await writeFile(modulePath, javascript, 'utf8');
+        // The artifact keeps Langium external. Resolve it from this compiler's
+        // pinned node_modules so the smoke test uses the production version.
+        await symlink(
+            path.join(COMPILER_DIRECTORY, 'node_modules'),
+            path.join(smokeDirectory, 'node_modules'),
+            'dir',
+        );
+        const imported = await import(pathToFileURL(modulePath).href);
+        const module = typeof imported.default === 'function'
+            ? imported.default()
+            : imported.default;
+        if (
+            typeof module !== 'object'
+            || module === null
+            || Array.isArray(module)
+            || typeof module.then === 'function'
+        ) {
+            throw new TypeError(
+                'The default export must be a synchronous Langium module object or factory',
+            );
+        }
+    } finally {
+        for (const [method, implementation] of originalConsole) {
+            console[method] = implementation;
+        }
+        await rm(smokeDirectory, {recursive: true, force: true});
+    }
 }
 
 async function main() {
@@ -95,7 +146,7 @@ async function main() {
             bundle: true,
             platform: 'node',
             format: 'esm',
-            target: 'node18',
+            target: 'node22',
             external: ['langium', 'vscode-languageserver-types'],
             write: false,
             logLevel: 'silent',
@@ -108,9 +159,32 @@ async function main() {
         const diagnostics = result.warnings.map(
             (warning) => normalizeDiagnostic(warning, 'warning', absoluteWorkspace),
         );
+        const artifact = javascript?.text || '';
+        try {
+            await smokeLoad(artifact);
+        } catch (error) {
+            diagnostics.push({
+                severity: 'error',
+                message: `Compiled services module failed its load check: ${
+                    error?.message || String(error)
+                }`,
+                path: entryRelativePath.split(path.sep).join('/'),
+                line: 1,
+                column: 1,
+                code: 'services-smoke-load',
+            });
+            output({
+                ok: false,
+                js: '',
+                diagnostics,
+                compilerVersion: COMPILER_VERSION,
+            });
+            process.exitCode = 1;
+            return;
+        }
         output({
             ok: true,
-            js: javascript?.text || '',
+            js: artifact,
             diagnostics,
             compilerVersion: COMPILER_VERSION,
         });
