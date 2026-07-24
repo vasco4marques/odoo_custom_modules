@@ -12,16 +12,6 @@ import os
 import subprocess
 import tempfile
 
-from .node_sandbox import (
-    DEFAULT_BWRAP_PATH,
-    DEFAULT_CPU_LIMIT_SECONDS,
-    DEFAULT_MEMORY_LIMIT_MB,
-    DEFAULT_NODE_HEAP_MB,
-    NodeSandboxUnavailable,
-    build_node_sandbox_command,
-    run_node_sandbox,
-)
-
 
 _logger = logging.getLogger(__name__)
 
@@ -41,26 +31,13 @@ class ServicesCompilationUnavailable(Exception):
 def _config(env):
     params = env["ir.config_parameter"].sudo()
     node_path = params.get_param("itlingo_dsl.node_path", _DEFAULT_NODE_PATH)
-    bwrap_path = params.get_param(
-        "itlingo_dsl.services_sandbox_path", DEFAULT_BWRAP_PATH,
-    )
     try:
         timeout = int(params.get_param(
             "itlingo_dsl.services_compile_timeout", _DEFAULT_TIMEOUT,
         ))
     except (TypeError, ValueError):
         timeout = _DEFAULT_TIMEOUT
-    memory_mb = params.get_param(
-        "itlingo_dsl.services_memory_limit_mb", DEFAULT_MEMORY_LIMIT_MB,
-    )
-    heap_mb = params.get_param(
-        "itlingo_dsl.services_node_heap_mb", DEFAULT_NODE_HEAP_MB,
-    )
-    cpu_seconds = params.get_param(
-        "itlingo_dsl.services_cpu_limit_seconds",
-        min(timeout, DEFAULT_CPU_LIMIT_SECONDS),
-    )
-    return node_path, bwrap_path, timeout, memory_mb, heap_mb, cpu_seconds
+    return node_path, timeout
 
 
 def _write_workspace(root, files):
@@ -90,38 +67,21 @@ def compile_services(env, files, entry_path):
             "The services workspace has no valid entry file."
         )
 
-    (
-        node_path, bwrap_path, timeout, memory_mb, heap_mb, cpu_seconds,
-    ) = _config(env)
+    node_path, timeout = _config(env)
     try:
         with tempfile.TemporaryDirectory(prefix="itlingo-services-") as workspace:
             _write_workspace(workspace, files)
-            # The sandbox runs as an unmapped low-privilege UID. Inputs are
-            # complete before launch and are mounted read-only in the namespace.
-            os.chmod(workspace, 0o755)
-            args = build_node_sandbox_command(
-                node_path,
-                os.path.dirname(os.path.dirname(_COMPILER_JS)),
-                workspace,
-                _COMPILER_JS,
-                [workspace, entry_path],
-                bwrap_path=bwrap_path,
-                memory_limit_mb=memory_mb,
-                node_heap_mb=heap_mb,
-                cpu_limit_seconds=cpu_seconds,
-            )
-            proc = run_node_sandbox(
-                args,
-                timeout=timeout,
+            proc = subprocess.run(
+                [node_path, _COMPILER_JS, workspace, entry_path],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                stdin=subprocess.DEVNULL,
                 cwd=workspace,
+                timeout=timeout,
             )
-    except NodeSandboxUnavailable as err:
-        raise ServicesCompilationUnavailable(
-            "The mandatory services compiler sandbox is unavailable: %s" % err
-        ) from err
     except FileNotFoundError as err:
         raise ServicesCompilationUnavailable(
-            "The services compiler sandbox executable was not found: %s" % err
+            "The services compiler Node executable was not found: %s" % err
         ) from err
     except subprocess.TimeoutExpired as err:
         raise ServicesCompilationUnavailable(

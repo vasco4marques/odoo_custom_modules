@@ -77,6 +77,40 @@ class ItlingoDocument(models.Model):
         'itlingo.document.library', 'document_id', string='Libraries',
     )
 
+    @api.model
+    def _scoped_dsl_source_documents(
+        self, dsl, project=None, organization=None,
+    ):
+        """Return the trusted spec corpus shared by templating and ITOI.
+
+        The explicit workspace/organization domain is applied before ``sudo``
+        results are returned. This prevents either runtime from using documents
+        outside the launch/template scope while allowing organization-level
+        specifications to be shared by all of its workspaces.
+        """
+        if not dsl or (not project and not organization):
+            return self.browse()
+        scope = []
+        if project:
+            scope.append(('project_id', '=', project.id))
+            organization = organization or project.organization_id
+        if organization:
+            scope.append(('organization_id', '=', organization.id))
+        domain = [
+            ('dsl_id', '=', dsl.id),
+            ('document_file', '!=', False),
+        ]
+        if len(scope) == 1:
+            domain += scope
+        elif len(scope) > 1:
+            domain += ['|', *scope]
+        documents = self.sudo().search(domain, order='id')
+        # ``is_template`` is supplied by itlingo_templating, so keep the base
+        # document module independent from that optional extension.
+        if 'is_template' in self._fields:
+            documents = documents.filtered(lambda document: not document.is_template)
+        return documents
+
     _FORMAT_BY_EXTENSION = {
         'doc': 'word', 'docx': 'word', 'odt': 'word', 'rtf': 'word',
         'xls': 'excel', 'xlsx': 'excel', 'csv': 'excel', 'ods': 'excel',

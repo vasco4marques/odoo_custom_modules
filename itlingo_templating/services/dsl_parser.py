@@ -6,6 +6,7 @@ modules can share the parser's Langium instance.
 """
 
 import hashlib
+import base64
 import json
 import logging
 import os
@@ -13,15 +14,7 @@ import re
 import subprocess
 import tempfile
 
-from odoo.addons.itlingo_dsl.services.node_sandbox import (
-    DEFAULT_BWRAP_PATH,
-    DEFAULT_CPU_LIMIT_SECONDS,
-    DEFAULT_MEMORY_LIMIT_MB,
-    DEFAULT_NODE_HEAP_MB,
-    NodeSandboxUnavailable,
-    build_node_sandbox_command,
-    run_node_sandbox,
-)
+from .spec_flattener import SpecFlattenError, SpecSource, flatten_spec
 
 _logger = logging.getLogger(__name__)
 
@@ -100,24 +93,11 @@ def dsl_label(dsl):
 def _config(env):
     params = env["ir.config_parameter"].sudo()
     node_path = params.get_param("itlingo_templating.node_path", _DEFAULT_NODE_PATH)
-    bwrap_path = params.get_param(
-        "itlingo_templating.sandbox_path", DEFAULT_BWRAP_PATH,
-    )
     try:
         timeout = int(params.get_param("itlingo_templating.parse_timeout", _DEFAULT_TIMEOUT))
     except (TypeError, ValueError):
         timeout = _DEFAULT_TIMEOUT
-    memory_mb = params.get_param(
-        "itlingo_templating.parse_memory_limit_mb", DEFAULT_MEMORY_LIMIT_MB,
-    )
-    heap_mb = params.get_param(
-        "itlingo_templating.parse_node_heap_mb", DEFAULT_NODE_HEAP_MB,
-    )
-    cpu_seconds = params.get_param(
-        "itlingo_templating.parse_cpu_limit_seconds",
-        min(timeout, DEFAULT_CPU_LIMIT_SECONDS),
-    )
-    return node_path, bwrap_path, timeout, memory_mb, heap_mb, cpu_seconds
+    return node_path, timeout
 
 
 _GRAMMAR_IMPORT_RE = re.compile(
@@ -151,7 +131,37 @@ def _record_parser_config(dsl):
     }
 
 
-def parse_dsl(env, dsl, source_bytes):
+def scoped_spec_sources(env, dsl, scope_document):
+    """Load the exact workspace/organization corpus exposed to ITOI."""
+    if not scope_document:
+        return []
+    project = getattr(scope_document, "project_id", False)
+    organization = getattr(scope_document, "organization_id", False)
+    documents = env["itlingo.document"]._scoped_dsl_source_documents(
+        dsl, project=project, organization=organization,
+    )
+    sources = []
+    for document in documents:
+        raw = base64.b64decode(document.document_file)
+        try:
+            text = raw.decode("utf-8")
+        except UnicodeDecodeError as err:
+            raise DslParseError(
+                "Imported specification %s must be encoded as UTF-8."
+                % (document.file_name or document.name)
+            ) from err
+        sources.append(SpecSource(
+            identifier="itlingo.document:%s" % document.id,
+            name=document.file_name or document.name or "document-%s" % document.id,
+            text=text,
+        ))
+    return sources
+
+
+def parse_dsl(
+    env, dsl, source_bytes, *, import_sources=None, scope_document=None,
+    source_name="<uploaded specification>",
+):
     """Parse DSL source bytes and return the serialized AST dict.
 
     The ``itlingo.dsl`` record supplies the published, validated grammar and
@@ -170,6 +180,32 @@ def parse_dsl(env, dsl, source_bytes):
     config = _record_parser_config(technical_dsl)
     dsl_name = technical_dsl.acronym or technical_dsl.name or "DSL"
 
+    try:
+        source_text = source_bytes.decode("utf-8")
+    except UnicodeDecodeError as err:
+        raise DslParseError(
+            "%s must be encoded as UTF-8." % config["label"]
+        ) from err
+    if import_sources is None:
+        import_sources = (
+            scoped_spec_sources(env, technical_dsl, scope_document)
+            if scope_document else []
+        )
+    try:
+        flattened_source = flatten_spec(
+            source_text,
+            import_sources,
+            entry_name=source_name,
+        ).encode("utf-8")
+    except SpecFlattenError as err:
+        diagnostic = {
+            "severity": 1,
+            "message": str(err),
+            "line": err.line or 1,
+            "column": 1,
+        }
+        raise DslParseError(str(err), diagnostics=[diagnostic]) from err
+
     label = config["label"]
     if not os.path.exists(_PARSER_JS):
         raise RuntimeError(
@@ -182,9 +218,7 @@ def parse_dsl(env, dsl, source_bytes):
             "`npm ci --omit=dev` in the parser/ folder or rebuild the container."
             % _LANGIUM_PACKAGE
         )
-    (
-        node_path, bwrap_path, timeout, memory_mb, heap_mb, cpu_seconds,
-    ) = _config(env)
+    node_path, timeout = _config(env)
 
     with tempfile.TemporaryDirectory(prefix="itlingo-dsl-parser-") as temp_dir:
         grammar = os.path.join(temp_dir, "grammar.langium")
@@ -193,7 +227,7 @@ def parse_dsl(env, dsl, source_bytes):
 
         source_path = os.path.join(temp_dir, "source%s" % config["suffix"])
         with open(source_path, "wb") as source_file:
-            source_file.write(source_bytes)
+            source_file.write(flattened_source)
 
         args = [
             node_path,
@@ -218,33 +252,18 @@ def parse_dsl(env, dsl, source_bytes):
             )
             args.append(services_path)
 
-        # Inputs are complete before launch. Bubblewrap exposes them read-only
-        # to an unmapped low-privilege UID, with no host environment or network.
-        os.chmod(temp_dir, 0o755)
         try:
-            sandbox_args = build_node_sandbox_command(
-                node_path,
-                _PARSER_DIR,
-                temp_dir,
-                _PARSER_JS,
-                args[2:],
-                bwrap_path=bwrap_path,
-                memory_limit_mb=memory_mb,
-                node_heap_mb=heap_mb,
-                cpu_limit_seconds=cpu_seconds,
-            )
-            proc = run_node_sandbox(
-                sandbox_args,
-                timeout=timeout,
+            proc = subprocess.run(
+                args,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                stdin=subprocess.DEVNULL,
                 cwd=temp_dir,
+                timeout=timeout,
             )
-        except NodeSandboxUnavailable as err:
-            raise RuntimeError(
-                "The mandatory DSL parser sandbox is unavailable: %s" % err
-            ) from err
         except FileNotFoundError as err:
             raise RuntimeError(
-                "The DSL parser sandbox executable was not found: %s" % err
+                "The DSL parser Node executable was not found: %s" % err
             ) from err
         except subprocess.TimeoutExpired as err:
             raise RuntimeError(

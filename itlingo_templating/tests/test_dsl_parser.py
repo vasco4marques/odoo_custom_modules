@@ -4,6 +4,7 @@ from odoo.addons.itlingo_templating.services.dsl_parser import (
     DslParseError,
     parse_dsl,
 )
+from odoo.addons.itlingo_templating.services.spec_flattener import SpecSource
 from odoo.tests import BaseCase, tagged
 
 
@@ -75,6 +76,134 @@ export default function createDslModule() {
         },
     };
 }
+"""
+
+CROSS_FILE_GRAMMAR = r"""
+grammar CrossFile
+
+entry Model:
+    packages+=PackageSystem*;
+
+PackageSystem:
+    'Package' name=QualifiedName imports+=Import* system=System;
+
+Import:
+    'Import' importedNamespace=QualifiedNameWithWildcard;
+
+System:
+    'System' name=ID concepts+=(Entity | Derived)*;
+
+Entity:
+    'Entity' name=ID '{' attributes+=Attribute* '}';
+
+Attribute:
+    'attribute' name=ID;
+
+Derived:
+    'derived' from=[Attribute:QualifiedName];
+
+QualifiedName returns string:
+    ID ('.' ID)*;
+
+QualifiedNameWithWildcard returns string:
+    QualifiedName '.*'?;
+
+hidden terminal WS: /\s+/;
+terminal ID: /[a-zA-Z_][a-zA-Z0-9_]*/;
+"""
+
+CROSS_FILE_SCOPE_SERVICES = r"""
+import {
+    AstUtils, DefaultNameProvider, DefaultScopeComputation,
+    DefaultScopeProvider, EMPTY_SCOPE, interruptAndCheck, isNamed, stream,
+    StreamScope,
+} from 'langium';
+const { getContainerOfType, getDocument, streamAllContents } = AstUtils;
+
+class QualifiedNames extends DefaultNameProvider {
+    getQualifiedName(node) {
+        if (!node.$container) return '';
+        const parent = this.getQualifiedName(node.$container);
+        const name = this.getName(node);
+        return name ? (parent ? parent + '.' + name : name) : parent;
+    }
+}
+
+class QualifiedExports extends DefaultScopeComputation {
+    async collectExportedSymbols(document, token) {
+        const result = [];
+        for (const node of streamAllContents(document.parseResult.value)) {
+            if (token) await interruptAndCheck(token);
+            if (!isNamed(node)) continue;
+            const name = this.nameProvider.getQualifiedName(node);
+            if (name) {
+                result.push(this.descriptions.createDescription(node, name, document));
+            }
+        }
+        return result;
+    }
+}
+
+function matches(imp, name) {
+    const imported = String(imp.importedNamespace).split('.');
+    const qualified = name.split('.');
+    return imported.every(
+        (part, index) => part === '*' || part === qualified[index]
+    );
+}
+
+function normalize(imp, name) {
+    const parts = String(imp.importedNamespace).split('.');
+    if (parts.at(-1) === '*') parts.pop();
+    return name.replace(parts.join('.') + '.', '');
+}
+
+class ImportScopes extends DefaultScopeProvider {
+    getGlobalScope(type, context) {
+        const system = getContainerOfType(
+            context.container, node => node.$type === 'System'
+        );
+        const pkg = getContainerOfType(
+            context.container, node => node.$type === 'PackageSystem'
+        );
+        if (!pkg) return EMPTY_SCOPE;
+        const contextUri = getDocument(context.container).uri.toString();
+        const local = system ? this.nameProvider.getQualifiedName(system) : '';
+        const elements = this.indexManager.allElements(type).map(description => {
+            const imp = pkg.imports.find(item => matches(item, description.name));
+            let name = imp ? normalize(imp, description.name) : description.name;
+            const targetSystem = getContainerOfType(
+                description.node, node => node.$type === 'System'
+            );
+            if (imp && targetSystem) {
+                const systemName = normalize(
+                    imp, this.nameProvider.getQualifiedName(targetSystem)
+                );
+                if (systemName && name.startsWith(systemName + '.')) {
+                    name = name.slice(systemName.length + 1);
+                }
+            }
+            if (
+                !imp
+                && description.documentUri.toString() === contextUri
+                && local
+                && name.startsWith(local + '.')
+            ) {
+                name = name.slice(local.length + 1);
+            } else if (!imp) {
+                return undefined;
+            }
+            return { ...description, name };
+        }).filter(Boolean).toArray();
+        return elements.length ? new StreamScope(stream(elements)) : EMPTY_SCOPE;
+    }
+}
+
+export default () => ({ references: {
+    NameProvider: () => new QualifiedNames(),
+    ScopeComputation: services => new QualifiedExports(services),
+    ScopeProvider: services => new ImportScopes(services),
+}});
 """
 
 
@@ -272,6 +401,66 @@ export default function createDslModule() {
             in diagnostic["message"]
             for diagnostic in raised.exception.diagnostics
         ))
+
+    def test_flattens_imported_spec_and_resolves_cross_file_reference(self):
+        dsl = _Dsl(
+            grammar=CROSS_FILE_GRAMMAR,
+            services=CROSS_FILE_SCOPE_SERVICES,
+        )
+        billing = SpecSource(
+            identifier="billing",
+            name="billing.cat",
+            text=(
+                "Package p_Billing System Billing "
+                "Entity e_VAT { attribute VATValue }"
+            ),
+        )
+        source = (
+            b"Package p_Ordering Import p_Billing.* System Ordering "
+            b"derived e_VAT.VATValue"
+        )
+
+        ast = parse_dsl(
+            _Env(), dsl, source, import_sources=[billing],
+            source_name="ordering.cat",
+        )
+
+        self.assertEqual(len(ast["packages"]), 2)
+        self.assertEqual(
+            ast["packages"][0]["system"]["concepts"][0]["from"],
+            {"$ref": "e_VAT.VATValue"},
+        )
+
+        with self.assertRaises(DslParseError) as raised:
+            parse_dsl(
+                _Env(),
+                dsl,
+                source.replace(b"VATValue", b"Nope"),
+                import_sources=[billing],
+                source_name="ordering.cat",
+            )
+        self.assertTrue(any(
+            "Could not resolve reference to Attribute named 'e_VAT.Nope'"
+            in diagnostic["message"]
+            for diagnostic in raised.exception.diagnostics
+        ))
+
+    def test_reports_missing_spec_import_before_parsing(self):
+        dsl = _Dsl(
+            grammar=CROSS_FILE_GRAMMAR,
+            services=CROSS_FILE_SCOPE_SERVICES,
+        )
+        with self.assertRaisesRegex(
+            DslParseError, "cannot be resolved from specifications",
+        ) as raised:
+            parse_dsl(
+                _Env(),
+                dsl,
+                b"Package p_Ordering Import p_Missing.* System Ordering",
+                import_sources=[],
+                source_name="ordering.cat",
+            )
+        self.assertEqual(raised.exception.diagnostics[0]["line"], 1)
 
     def test_rejects_services_with_non_current_compile_result(self):
         dsl = _Dsl(services="export default () => ({});")

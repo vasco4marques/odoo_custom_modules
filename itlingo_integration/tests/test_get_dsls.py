@@ -1,3 +1,4 @@
+import base64
 import hashlib
 import json
 
@@ -70,11 +71,59 @@ class TestGetDsls(HttpCase):
             cls.env["itlingo.integration.settings"].sudo()._get_settings()
         )
         cls.settings.write({"encryption_key": "test-key-for-itoi-boundary-00001"})
+        cls.organization = cls.env["itlingo.organization"].create({
+            "name": "ITOI DSL source test organization",
+        })
+        cls.workspace = cls.env["itlingo.workspace"].create({
+            "name": "ITOI DSL source test workspace",
+            "organization_id": cls.organization.id,
+        })
+        cls.env["itlingo.project.role"].create({
+            "user_id": cls.env.user.id,
+            "project_id": cls.workspace.id,
+            "role": "ws_member",
+            "state": "accepted",
+        })
+        doc_type = cls.env.ref("itlingo_documents.doc_type_specification")
+        cls.workspace_source = cls.env["itlingo.document"].create({
+            "name": "Billing ASL",
+            "document_type_id": doc_type.id,
+            "organization_id": cls.organization.id,
+            "project_id": cls.workspace.id,
+            "dsl_id": cls.dsl.id,
+            "file_name": "billing.imf",
+            "document_file": base64.b64encode(
+                b"Package p_Billing System Billing"
+            ),
+        })
+        cls.organization_source = cls.env["itlingo.document"].create({
+            "name": "Shared ASL",
+            "document_type_id": doc_type.id,
+            "organization_id": cls.organization.id,
+            "dsl_id": cls.dsl.id,
+            "file_name": "shared.imf",
+            "document_file": base64.b64encode(
+                b"Package p_Shared System Shared"
+            ),
+        })
+        foreign_org = cls.env["itlingo.organization"].create({
+            "name": "Foreign DSL source organization",
+        })
+        cls.foreign_source = cls.env["itlingo.document"].create({
+            "name": "Foreign ASL",
+            "document_type_id": doc_type.id,
+            "organization_id": foreign_org.id,
+            "dsl_id": cls.dsl.id,
+            "file_name": "foreign.imf",
+            "document_file": base64.b64encode(
+                b"Package p_Foreign System Foreign"
+            ),
+        })
 
-    def _authorization_headers(self):
-        iv, ciphertext = self.settings._aes_encrypt(json.dumps({
-            "user": "itoi-boundary-test",
-        }))
+    def _authorization_headers(self, payload=None):
+        iv, ciphertext = self.settings._aes_encrypt(json.dumps(
+            payload or {"user": "itoi-boundary-test"}
+        ))
         return {"Authorization": "Bearer %s:%s" % (iv, ciphertext)}
 
     def test_get_dsls_emits_flattened_grammar_and_matching_digest(self):
@@ -96,6 +145,7 @@ class TestGetDsls(HttpCase):
         )
         self.assertEqual(result["services"], self.services_compiled)
         self.assertEqual(result["services_digest"], self.services_digest)
+        self.assertEqual(result["id"], self.dsl.id)
 
         plain_result = next(
             item
@@ -107,3 +157,30 @@ class TestGetDsls(HttpCase):
         self.assertNotIn(
             "ITOIBROKEN", {item["acronym"] for item in payload["dsls"]},
         )
+
+    def test_get_dsl_sources_is_limited_to_launch_workspace_and_organization(self):
+        response = self.url_open(
+            "/token_api/get-dsl-sources/%s" % self.dsl.id,
+            headers=self._authorization_headers({
+                "user": self.env.user.login,
+                "wsid": self.workspace.id,
+            }),
+        )
+
+        self.assertEqual(response.status_code, 200)
+        payload = json.loads(response.text)
+        source_ids = {item["id"] for item in payload["sources"]}
+        self.assertEqual(source_ids, {
+            self.workspace_source.id,
+            self.organization_source.id,
+        })
+        self.assertNotIn(self.foreign_source.id, source_ids)
+        billing = next(
+            item for item in payload["sources"]
+            if item["id"] == self.workspace_source.id
+        )
+        self.assertEqual(
+            billing["content"], "Package p_Billing System Billing",
+        )
+        self.assertEqual(billing["packages"], ["p_Billing"])
+        self.assertEqual(payload["conflicting_packages"], [])

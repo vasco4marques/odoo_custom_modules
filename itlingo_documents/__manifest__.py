@@ -1,6 +1,6 @@
 {
     'name': 'ITLingo Documents',
-    'version': '19.0.1.4.0',
+    'version': '19.0.1.5.0',
     'category': 'Services',
     'summary': 'Structured document management for ITLingo Cloud',
     'description': """

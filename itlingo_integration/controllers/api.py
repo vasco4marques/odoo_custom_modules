@@ -1,7 +1,9 @@
 import base64
+import hashlib
 import json
 import logging
 import os
+import re
 from urllib.parse import urlencode
 
 from werkzeug.utils import redirect as wz_redirect
@@ -14,6 +16,11 @@ from odoo.http import request, Response
 _logger = logging.getLogger(__name__)
 
 WRITE_ROLES = ('ws_manager', 'doc_manager')
+_PACKAGE_NAMESPACE_RE = re.compile(
+    r'^[ \t]*Package[ \t]+'
+    r'([A-Za-z_][A-Za-z0-9_]*(?:\.[A-Za-z_][A-Za-z0-9_]*)*)\b',
+    re.MULTILINE,
+)
 
 
 class ITLingoIntegrationAPI(http.Controller):
@@ -343,6 +350,83 @@ class ITLingoIntegrationAPI(http.Controller):
             content_type='application/json',
         )
 
+    @http.route('/token_api/get-dsl-sources/<int:dsl_id>', type='http',
+                auth='none', methods=['GET'], csrf=False)
+    def token_api_get_dsl_sources(self, dsl_id, **kw):
+        """Return the scoped spec corpus used for cross-file DSL imports.
+
+        This is deliberately narrower than a generic file API: only text from
+        documents assigned to this exact DSL and to the launch token's
+        workspace/organization is exposed.
+        """
+        payload, error_resp = self._validate_launch_token()
+        if error_resp:
+            return error_resp
+        try:
+            workspace_id = int(payload.get('wsid'))
+        except (TypeError, ValueError):
+            return Response(
+                json.dumps({'error': 'Token does not carry a workspace id'}),
+                status=401, content_type='application/json',
+            )
+        project, error_resp = self._check_workspace_access(
+            payload, workspace_id,
+        )
+        if error_resp:
+            return error_resp
+
+        dsl = request.env['itlingo.dsl'].sudo().browse(dsl_id)
+        if not dsl.exists() or dsl.status not in ('active', 'draft'):
+            return Response(
+                json.dumps({'error': 'DSL not found'}),
+                status=404, content_type='application/json',
+            )
+        documents = request.env[
+            'itlingo.document'
+        ]._scoped_dsl_source_documents(
+            dsl,
+            project=project,
+            organization=project.organization_id,
+        )
+        sources = []
+        for document in documents:
+            raw = base64.b64decode(document.document_file)
+            try:
+                text = raw.decode('utf-8')
+            except UnicodeDecodeError:
+                return Response(
+                    json.dumps({
+                        'error': 'DSL source %s is not UTF-8'
+                        % (document.file_name or document.name),
+                    }),
+                    status=422, content_type='application/json',
+                )
+            sources.append({
+                'id': document.id,
+                'name': document.file_name or document.name,
+                'content': text,
+                'digest': hashlib.sha256(raw).hexdigest(),
+                'packages': _PACKAGE_NAMESPACE_RE.findall(text),
+            })
+
+        package_owners = {}
+        for source in sources:
+            for package in source['packages']:
+                package_owners.setdefault(package, set()).add(source['id'])
+        conflicts = sorted(
+            package for package, owners in package_owners.items()
+            if len(owners) > 1
+        )
+
+        _logger.info(
+            'ITOI get-dsl-sources: workspace=%s user=%s dsl=%s sources=%d',
+            project.id, payload.get('user'), dsl.id, len(sources),
+        )
+        return Response(
+            json.dumps({'sources': sources, 'conflicting_packages': conflicts}),
+            content_type='application/json',
+        )
+
     @http.route('/token_api/download-file/<int:workspace_id>/<int:file_id>',
                 type='http', auth='none', methods=['GET'], csrf=False)
     def token_api_download_file(self, workspace_id, file_id, **kw):
@@ -429,6 +513,7 @@ class ITLingoIntegrationAPI(http.Controller):
                 )
                 continue
             result.append({
+                'id': dsl.id,
                 'acronym': dsl.acronym,
                 'name': dsl.name,
                 'version': dsl.version,

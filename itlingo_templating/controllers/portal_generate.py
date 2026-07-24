@@ -284,7 +284,13 @@ class ItlingoTemplatingPortal(http.Controller):
 
         source_bytes = upload.read()
         try:
-            ast = parse_dsl(request.env, document.dsl_id, source_bytes)
+            ast = parse_dsl(
+                request.env,
+                document.dsl_id,
+                source_bytes,
+                scope_document=document,
+                source_name=upload.filename,
+            )
         except DslParseError as err:
             return self._render_detail(
                 document, base_url, project_id=project_id, org_id=org_id,
